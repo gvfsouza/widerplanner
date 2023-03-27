@@ -11,7 +11,7 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
-        server: ftp.agsete.com.br
+        server: ftp.web267.uni5.net
         server-dir: /
         username: agsete02
         password: ${{ secrets.SENHA_FTP }}

@@ -52,6 +52,7 @@
         justify-content: center;
     }
 
+    
     .container,
     section:not(.page-header),
     .page-header>hgroup {

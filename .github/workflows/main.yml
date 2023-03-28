@@ -14,5 +14,6 @@ jobs:
         server: ftp.web267.uni5.net
         server-dir: /
         username: agsete02
-        exclude: widerplanner/public/
+        exclude: /public/
+        dry-run: true
         password: ${{ secrets.SENHA_FTP }}

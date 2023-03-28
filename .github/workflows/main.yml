@@ -14,5 +14,5 @@ jobs:
         server: ftp.web267.uni5.net
         server-dir: /
         username: agsete02
-        timeout: 100000
+        exclude: widerplanner/public/
         password: ${{ secrets.SENHA_FTP }}

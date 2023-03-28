@@ -13,6 +13,6 @@ jobs:
       with:
         server: ftp.web267.uni5.net
         server-dir: /
-        protocol: smtp
+        protocol: ftps
         username: agsete02
         password: ${{ secrets.SENHA_FTP }}

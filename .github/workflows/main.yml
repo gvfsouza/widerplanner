@@ -22,3 +22,6 @@ jobs:
           **/system/**
           **/vendor/**
           **login_membro.php
+          **index.html
+          **index.html
+          **/css

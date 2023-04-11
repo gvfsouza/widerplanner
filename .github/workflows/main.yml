@@ -15,3 +15,7 @@ jobs:
         server-dir: /
         username: agsete02
         password: ${{ secrets.SENHA_FTP }}
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/public/**

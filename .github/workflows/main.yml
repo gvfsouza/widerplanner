@@ -21,3 +21,4 @@ jobs:
           **/public/**
           **/system/**
           **/vendor/**
+          **login_membro.php

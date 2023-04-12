@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/bootstrap/bootstrap-select.min.css">
     <link rel="stylesheet" href="fontawesome-free-5.15.4-web/fontawesome-free-5.15.4-web/css/fontawesome.min.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <title>Wider Planner</title>
+    <title>Wider Plannere</title>
 </head>
 
 <style> 

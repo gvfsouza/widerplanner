@@ -19,7 +19,7 @@
 
 <style> 
     .alert {
-        margin: 10px;
+        margin: 15px;
     }
 
     html {

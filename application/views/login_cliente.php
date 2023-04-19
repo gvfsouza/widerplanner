@@ -19,12 +19,6 @@
 		src: url('../fonts/montserrat/Montserrat-SemiBold.ttf');
 	}
 
-	body,
-	html {
-		height: 100%;
-		font-family: Poppins-Regular, sans-serif;
-	}
-
 	a {
 		font-family: Poppins-Regular;
 		font-size: 14px;

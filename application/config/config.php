@@ -35,7 +35,9 @@ $config['base_url'] = '';
 | variable so that it is blank.
 |
 */
+$config['base_url'] = 'http://'.$_SERVER['SERVER_NAME'].'/Your Ci folder_name';
 $config['index_page'] = '';
+$config['uri_protocol'] = 'AUTO';
 
 /*
 |--------------------------------------------------------------------------

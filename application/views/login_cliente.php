@@ -365,7 +365,6 @@
 		transform: scale(1);
 	}
 
-
 	/* Button */
 	.container-login100-form-btn {
 		width: 100%;
@@ -549,7 +548,6 @@
 			</div>
 		</div>
 	</div>
-
 
 	<div id="dropDownSelect1"></div>
 

@@ -1,19 +1,3 @@
-<head>
-	<title>Login V1</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" type="image/png" href="images/icons/favicon.ico" />
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
-	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
-	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
-	<link rel="stylesheet" type="text/css" href="css/util.css">
-</head>
-
 <style>
 	@font-face {
 		font-family: Poppins-Regular;
@@ -35,9 +19,6 @@
 		src: url('../fonts/montserrat/Montserrat-Bold.ttf');
 	}
 
-	/*//////////////////////////////////////////////////////////////////
-[ RESTYLE TAG ]*/
-	/*---------------------------------------------*/
 	a {
 		font-family: Poppins-Regular;
 		font-size: 14px;
@@ -59,7 +40,6 @@
 		color: #B98F56;
 	}
 
-	/*---------------------------------------------*/
 	h1,
 	h2,
 	h3,
@@ -83,8 +63,6 @@
 		list-style-type: none;
 	}
 
-
-	/*---------------------------------------------*/
 	input {
 		outline: none;
 		border: none;
@@ -164,7 +142,6 @@
 		color: #999999;
 	}
 
-	/*---------------------------------------------*/
 	button {
 		outline: none !important;
 		border: none;
@@ -179,7 +156,6 @@
 		border: none !important;
 	}
 
-	/*Utility */
 	.txt1 {
 		font-family: Poppins-Regular;
 		font-size: 13px;

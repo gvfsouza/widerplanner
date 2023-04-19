@@ -10,7 +10,6 @@ class Login_membro extends CI_Controller {
 		if (!empty($_POST)) {
 		  anti_injection($_POST);
 		}
-		
 	  }
 	}
 	

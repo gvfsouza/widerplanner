@@ -138,7 +138,7 @@
                 </div>
                 <div class="card" style="max-width: 270px;width: 270px;">
                     <header class="card-header header-img">
-                        <img src="img/corte-masculino.jpg" alt="">
+                        <img src="img/corte_feminino.jpg" alt="">
                         <p class="header-title">Corte Masculino + Barba</p>
                     </header>
                     <div class="card-body"><i class="fas fa-dollar-sign"></i> R$65,00</div>

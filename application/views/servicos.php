@@ -126,7 +126,7 @@
     <div class="row justify-content-center d-flex align-items-center h-100 w-100">
         <div class="col-xl-6 col-lg-12 col-md-9" style="display: contents">
             <div class="card-container d-flex justify-content-around">
-                <div class="card" style="max-width: 270px;width: 270px; border-color:#B98F56">
+                <div class="card" style="max-width: 270px;width: 270px; border: 2px solid #B98F56">
                     <header class="card-header header-img">
                         <img src="img/pintar-cabelo.jpg" alt="">
                         <p class="header-title">Pintar o cabelo</p>

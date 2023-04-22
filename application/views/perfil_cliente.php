@@ -31,7 +31,7 @@
                                                     <input style="font-size:14px" type="text" class="form-control"
                                                         id="nome" name="nome" value="" disabled="">
                                                 </div>
-                                                <div class="dados-cliente form-group col-md-4">
+                                                <div class="dados-cliente form-group col-md-6">
                                                     <label for="">CPF:</label>
                                                     <br>
                                                     <input type="text" class="form-control" id="cpd" name="cpf"
@@ -106,3 +106,146 @@
                 </form>
             </div>
         </div>
+
+
+
+
+
+<style>
+    .wrapper {
+        width: 600px;
+        min-width: 300px;
+        max-width: 100%;
+        margin: auto;
+    }
+
+    form {
+        margin: 10px;
+    }
+
+    form legend:hover {
+        cursor: pointer;
+    }
+
+    form legend:hover i.edit {
+        display: inline-block;
+    }
+
+    form i.edit {
+        display: none;
+    }
+
+    form .inline label,
+    form .inline input {
+        float: left;
+        width: 100px;
+    }
+
+    form .inline input {
+        padding: 0;
+        border: 0;
+        height: auto;
+        box-shadow: none;
+        background-color: inherit !important;
+    }
+
+    form .inline:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    form button {
+        font-size: 15px;
+        color: white;
+        padding: 10px 20px;
+        float: right;
+        background-color: #19438d;
+    }
+
+    fieldset.collapse div,
+    fieldset.collapse .row,
+    fieldset.collapse .columns,
+    fieldset.collapse label {
+        display: inline;
+        width: auto;
+        float: left;
+        padding: 0;
+    }
+
+    fieldset.collapse .row:after {
+        clear: none;
+    }
+
+    fieldset.collapse label {
+        margin-left: 10px;
+    }
+
+    fieldset.collapse input,
+    fieldset.collapse .collapsable {
+        display: none;
+    }
+
+    fieldset.collapse .inline * {
+        float: none;
+    }
+
+    legend a {
+        color: inherit;
+    }
+
+    div.success:not(.empty) label {
+        color: green;
+    }
+
+    div.success:not(.empty) label:after {
+        content: " \2714";
+    }
+
+    div.error label {
+        color: red;
+    }
+
+    div.error label:after {
+        content: " \2718";
+    }
+</style>
+
+        <form id="form">
+  <div class="input-box">
+    <label class="input-label">Username</label>
+    <input type="text" class="input-1" onfocus="setFocus(true)" onblur="setFocus(false)" />
+  </div>
+  <div class="input-box">
+    <label class="input-label">Password</label>
+    <input type="password" class="input-1" onfocus="setFocus(true)" onblur="setFocus(false)" />
+  </div>
+  <div class="input-box">
+    <label class="input-label">Some other</label>
+    <input type="text" class="input-1" onfocus="setFocus(true)" onblur="setFocus(false)" />
+  </div>
+  <div class="input-box active">
+    <label class="input-label">Always active</label>
+    <input type="text" class="input-1" onfocus="setFocus(true)" onblur="setFocus(false)" />
+  </div>
+  <div class="input-box active-grey">
+    <label class="input-label">Always active-grey</label>
+    <input type="text" class="input-1" onfocus="setFocus(true)" onblur="setFocus(false)" />
+  </div>
+  <div class="input-box active-grey">
+    <label class="input-label">Dropdown/select list</label>
+    <select class="input-1" onfocus="setFocus(true)" onblur="setFocus(false)">
+      <option value="-1"></option>
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+    </select>
+  </div>
+  <div class="input-box error">
+    <label class="input-label">Error input</label>
+    <input type="text" class="input-1" onfocus="setFocus(true)" onblur="setFocus(false)" />
+  </div>
+
+  <button type="button" class="btn btn-primary pull-right">Button</button>
+  <div class="clear"></div>
+</form>

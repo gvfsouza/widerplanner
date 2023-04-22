@@ -120,8 +120,6 @@
             filter: brightness(0.9);
         } */
     </style>
-    <h1>Teste</h1><i class="fa-solid fa-key"></i>
-
 
     <div class="row justify-content-center d-flex align-items-center h-100 w-100">
         <div class="col-xl-6 col-lg-12 col-md-9" style="display: contents">

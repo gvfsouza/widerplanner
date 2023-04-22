@@ -59,17 +59,17 @@
                                                 <div class="dados-cliente col-md-3">
                                                     <label for="">CEP:</label>
                                                     <input style="font-size:14px" type="text" class="form-control"
-                                                        id="cep" name="cep" value="" disabled="">
+                                                        id="cep" name="cep" value="">
                                                 </div>
                                                 <div class="dados-cliente col-md-7">
                                                     <label for="">Logradouro:</label>
                                                     <input style="font-size:14px" type="text" class="form-control"
-                                                        id="logradouro" name="logradouro" value="" disabled="">
+                                                        id="logradouro" name="logradouro" value="">
                                                 </div>
                                                 <div class="dados-cliente col-md-2">
                                                     <label for="">N°:</label>
                                                     <input style="font-size:14px" type="text" class="form-control"
-                                                        id="numero" name="numero" value="" disabled="">
+                                                        id="numero" name="numero" value="">
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -93,7 +93,7 @@
                                                 <div class="dados-cliente col-md-5">
                                                     <label for="">UF:</label>
                                                     <input style="font-size:14px" type="text" class="form-control"
-                                                        id="uf" name="uf" value="" disabled="">
+                                                        id="uf" name="uf" value="">
                                                 </div>
                                             </div>
                                         </div>

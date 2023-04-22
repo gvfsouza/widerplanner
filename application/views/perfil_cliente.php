@@ -1,14 +1,3 @@
-<style>
-    legend {
-        padding: 0 var(--padding);
-        font-size: 1.5rem;
-        font-weight: bold;
-        margin-bottom: 1rem;
-        margin-top: 1rem;
-    }
-
-</style>
-
 <div class="card shadow mb-4">
     <div class="card-header py-3" style="background-color: white;">
 
@@ -26,7 +15,7 @@
                             <div class="col-12">
                                 <fieldset class="form-group"
                                     style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #B98F56;">
-                                    <div style="background-color:#B98F56;color:black">
+                                    <div>
                                         <legend class="form-group col-md-4" style="font-size: 18px; color: #B98F56">
                                             <strong>Dados Pessoais</strong>
                                         </legend>

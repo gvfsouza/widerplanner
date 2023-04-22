@@ -14,7 +14,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <fieldset class="form-group"
-                                    style="border: 1px solid #ddd; border-radius: 4px; padding: 15px;">
+                                    style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #B98F56;">
                                     <div>
                                         <legend class="form-group col-md-4" style="font-size: 18px; color: #B98F56">
                                             <strong>Dados Pessoais</strong>

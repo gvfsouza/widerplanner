@@ -13,14 +13,13 @@
                     <div class="p-3 bg-white">
                         <div class="row">
                             <div class="col-12">
-                            <fieldset class="form-group">
-
+                            <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #B98F56;">
                             <div>
-                                        <legend class="form-group" style="font-size: 18px; color: #B98F56">
-                                            <strong>Dados Pessoais</strong>
-                                        </legend>
-                                    </div>
-</fieldset>
+                                <legend class="form-group" style="font-size: 18px; color: #B98F56">
+                                    <strong>Dados Pessoais</strong>
+                                </legend>
+                            </div>
+                            </fieldset>
                                 <fieldset class="form-group"
                                     style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #B98F56;">
                                     <div class="row">

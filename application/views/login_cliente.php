@@ -544,8 +544,8 @@
   cursor: pointer;
 }
 
-.form-group{
-	max-width: 400px;
+.form-group, .botao-logar{
+	max-width: 350px;
     margin: 0 auto;
 }
 </style>
@@ -589,7 +589,7 @@
 					</div>
 
 					<div class="container-login100-form-btn m-t-17">
-						<button class="login100-form-btn">
+						<button class="login100-form-btn botao-logar">
 							Logar
 						</button>
 					</div>

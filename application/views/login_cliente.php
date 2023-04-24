@@ -568,6 +568,7 @@ label{
 						<label>Usuário</label>
 						<input type="text" name="usuario" class="form-control" required>
 					</div>
+					<br>
 					<div class="form-group">
 						<label>Senha</label>
 						<input type="text" name="senha" class="form-control" required>

@@ -581,6 +581,8 @@ label{
 						</button>
 					</div>
 
+					<br>
+					
 					<div class="w-full text-center p-t-55">
 						<span class="txt2">
 							Não tem cadastro?

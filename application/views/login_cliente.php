@@ -555,7 +555,7 @@ label{
 		<div class="container-login100" style="background-color: #4c4d4f;">
 			<div class="wrap-login100 p-l-110 p-r-110 p-t-62 p-b-33">
 				<form class="login100-form validate-form flex-sb flex-w" style="padding:60px">
-					<span class="login100-form-title p-b-53" style="font-size:24px">
+					<span class="login100-form-title p-b-53" style="font-size:34px">
 						Login Cliente
 					</span>
 					<br>
@@ -582,7 +582,7 @@ label{
 					</div>
 
 					<br>
-					
+
 					<div class="w-full text-center p-t-55">
 						<span class="txt2">
 							Não tem cadastro?

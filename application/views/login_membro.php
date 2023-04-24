@@ -5,18 +5,18 @@
 	}
 
 	@font-face {
+		font-family: Poppins-Bold;
+		src: url('../fonts/poppins/Poppins-Bold.ttf');
+	}
+
+	@font-face {
 		font-family: Poppins-Medium;
 		src: url('../fonts/poppins/Poppins-Medium.ttf');
 	}
 
 	@font-face {
-		font-family: Montserrat-Medium;
-		src: url('../fonts/montserrat/Montserrat-Medium.ttf');
-	}
-
-	@font-face {
-		font-family: Montserrat-SemiBold;
-		src: url('../fonts/montserrat/Montserrat-SemiBold.ttf');
+		font-family: Montserrat-Bold;
+		src: url('../fonts/montserrat/Montserrat-Bold.ttf');
 	}
 
 	a {
@@ -33,6 +33,11 @@
 
 	a:focus {
 		outline: none !important;
+	}
+
+	a:hover {
+		text-decoration: none;
+		color: #B98F56;
 	}
 
 	h1,
@@ -106,40 +111,35 @@
 	}
 
 	input::-webkit-input-placeholder {
-		color: #555555;
+		color: #999999;
 	}
 
 	input:-moz-placeholder {
-		color: #555555;
+		color: #999999;
 	}
 
 	input::-moz-placeholder {
-		color: #555555;
+		color: #999999;
 	}
 
 	input:-ms-input-placeholder {
-		color: #555555;
+		color: #999999;
 	}
 
 	textarea::-webkit-input-placeholder {
-		color: #555555;
+		color: #999999;
 	}
 
 	textarea:-moz-placeholder {
-		color: #555555;
+		color: #999999;
 	}
 
 	textarea::-moz-placeholder {
-		color: #555555;
+		color: #999999;
 	}
 
 	textarea:-ms-input-placeholder {
-		color: #555555;
-	}
-
-	label {
-		display: block;
-		margin: 0;
+		color: #999999;
 	}
 
 	button {
@@ -156,26 +156,21 @@
 		border: none !important;
 	}
 
-	/* Utilidades */
 	.txt1 {
-		font-family: Montserrat-SemiBold;
-		font-size: 16px;
-		color: #555555;
+		font-family: Poppins-Regular;
+		font-size: 13px;
 		line-height: 1.5;
+		color: #999999;
 	}
 
 	.txt2 {
 		font-family: Poppins-Regular;
-		font-size: 14px;
-		color: #999999;
+		font-size: 13px;
 		line-height: 1.5;
+		color: #666666;
 	}
 
-	.bo1 {
-		border-bottom: 1px solid #999999;
-	}
-
-	/* Login */
+	/* login */
 	.limiter {
 		width: 100%;
 		margin: 0 auto;
@@ -193,170 +188,131 @@
 		justify-content: center;
 		align-items: center;
 		padding: 15px;
-
-		background-position: center;
-		background-size: cover;
-		background-repeat: no-repeat;
-		;
+		background: #4C4D4F;
 	}
 
 	.wrap-login100 {
-		width: 680px;
+		width: 960px;
 		background: #fff;
 		border-radius: 10px;
-		position: relative;
-	}
-
-	/* Forms */
-	.login100-form {
-		width: 100%;
-	}
-
-	.login100-form-title {
-		width: 100%;
-		display: block;
-		font-family: Montserrat-Medium;
-		font-size: 39px;
-		color: #555555;
-		line-height: 1.2;
-		text-align: center;
-	}
-
-	/* Button logar com ... */
-	.btn-face,
-	.btn-google {
-		font-family: Montserrat-SemiBold;
-		font-size: 18px;
-		line-height: 1.2;
+		overflow: hidden;
 
 		display: -webkit-box;
 		display: -webkit-flex;
 		display: -moz-box;
 		display: -ms-flexbox;
 		display: flex;
-		justify-content: center;
-		align-items: center;
-		padding: 15px;
-		width: calc((100% - 20px) / 2);
-		height: 70px;
-		border-radius: 10px;
-		box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.2);
-		-moz-box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.2);
-		-webkit-box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.2);
-		-o-box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.2);
-		-ms-box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.2);
-		-webkit-transition: all 0.4s;
-		-o-transition: all 0.4s;
-		-moz-transition: all 0.4s;
-		transition: all 0.4s;
-		position: relative;
-		z-index: 1;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		padding: 177px 130px 33px 95px;
 	}
 
-	.btn-face {
-		color: #fff;
-		background-color: #3b5998;
+	.login100-pic {
+		width: 316px;
 	}
 
-	.btn-face i {
-		font-size: 30px;
-		margin-right: 17px;
-		padding-bottom: 3px;
+	.login100-pic img {
+		max-width: 100%;
 	}
 
-	.btn-google {
-		color: #555555;
-		background-color: #fff;
+	.login100-form {
+		width: 290px;
 	}
 
-	.btn-google img {
-		width: 30px;
-		margin-right: 15px;
-		padding-bottom: 3px;
-	}
+	.login100-form-title {
+		font-family: Poppins-Bold;
+		font-size: 24px;
+		color: #333333;
+		line-height: 1.2;
+		text-align: center;
 
-	.btn-face:hover:before,
-	.btn-google:hover:before {
-		opacity: 1;
-	}
-
-	.btn-face:hover {
-		color: #fff;
-	}
-
-	.btn-google:hover {
-		color: #39556B;
-	}
-
-	/* Input */
-	.wrap-input100 {
 		width: 100%;
+		display: block;
+		padding-bottom: 54px;
+	}
+
+	.wrap-input100 {
 		position: relative;
-		background-color: #f7f7f7;
-		border: 1px solid #e6e6e6;
-		border-radius: 10px;
+		width: 100%;
+		z-index: 1;
+		margin-bottom: 10px;
 	}
 
 	.input100 {
-		font-family: Poppins-Regular;
-		color: #333333;
-		line-height: 1.2;
-		font-size: 18px;
+		font-family: Poppins-Medium;
+		font-size: 15px;
+		line-height: 1.5;
+		color: #666666;
 
 		display: block;
 		width: 100%;
-		background: transparent;
-		height: 60px;
-		padding: 0 20px;
+		background: #e6e6e6;
+		height: 50px;
+		border-radius: 25px;
+		padding: 0 30px 0 68px;
 	}
 
-	/* Focus Input */
+	/* Focus */
 	.focus-input100 {
-		position: absolute;
 		display: block;
-		width: calc(100% + 2px);
-		height: calc(100% + 2px);
-		top: -1px;
-		left: -1px;
-		pointer-events: none;
-		border: 1px solid #ab8755;
-		border-radius: 10px;
+		position: absolute;
+		border-radius: 25px;
+		bottom: 0;
+		left: 0;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		box-shadow: 0px 0px 0px 0px;
+		color: rgba(87, 184, 70, 0.8);
+	}
 
-		visibility: hidden;
-		opacity: 0;
+	.input100:focus+.focus-input100 {
+		-webkit-animation: anim-shadow 0.5s ease-in-out forwards;
+		animation: anim-shadow 0.5s ease-in-out forwards;
+	}
+
+	@-webkit-keyframes anim-shadow {
+		to {
+			box-shadow: 0px 0px 70px 25px;
+			opacity: 0;
+		}
+	}
+
+	@keyframes anim-shadow {
+		to {
+			box-shadow: 0px 0px 70px 25px;
+			opacity: 0;
+		}
+	}
+
+	.symbol-input100 {
+		font-size: 15px;
+
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: flex;
+		align-items: center;
+		position: absolute;
+		border-radius: 25px;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		padding-left: 35px;
+		pointer-events: none;
+		color: #666666;
 
 		-webkit-transition: all 0.4s;
 		-o-transition: all 0.4s;
 		-moz-transition: all 0.4s;
 		transition: all 0.4s;
-
-		-webkit-transform: scaleX(1.1) scaleY(1.3);
-		-moz-transform: scaleX(1.1) scaleY(1.3);
-		-ms-transform: scaleX(1.1) scaleY(1.3);
-		-o-transform: scaleX(1.1) scaleY(1.3);
-		transform: scaleX(1.1) scaleY(1.3);
 	}
 
-	.input100:focus+.focus-input100 {
-		visibility: visible;
-		opacity: 1;
-
-		-webkit-transform: scale(1);
-		-moz-transform: scale(1);
-		-ms-transform: scale(1);
-		-o-transform: scale(1);
-		transform: scale(1);
-	}
-
-	.eff-focus-selection {
-		visibility: visible;
-		opacity: 1;
-
-		-webkit-transform: scale(1);
-		-moz-transform: scale(1);
-		-ms-transform: scale(1);
-		-o-transform: scale(1);
-		transform: scale(1);
+	.input100:focus+.focus-input100+.symbol-input100 {
+		color: #B98F56;
+		padding-left: 28px;
 	}
 
 	/* Button */
@@ -368,9 +324,21 @@
 		display: -ms-flexbox;
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: center;
+		padding-top: 20px;
 	}
 
 	.login100-form-btn {
+		font-family: Montserrat-Bold;
+		font-size: 15px;
+		line-height: 1.5;
+		color: #fff;
+		text-transform: uppercase;
+
+		width: 100%;
+		height: 50px;
+		border-radius: 25px;
+		background: #B98F56;
 		display: -webkit-box;
 		display: -webkit-flex;
 		display: -moz-box;
@@ -378,31 +346,54 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		padding: 0 20px;
-		width: 100%;
-		height: 60px;
-		background-color: #B98F56;
-		border-radius: 10px;
-
-		font-family: Poppins-Medium;
-		font-size: 16px;
-		color: #fff;
-		line-height: 1.2;
+		padding: 0 25px;
 
 		-webkit-transition: all 0.4s;
 		-o-transition: all 0.4s;
 		-moz-transition: all 0.4s;
 		transition: all 0.4s;
-		position: relative;
-		z-index: 1;
 	}
 
-	.login100-form-btn:hover:before {
-		opacity: 1;
+	.login100-form-btn:hover {
+		background: #333333;
+	}
+
+	/* Responsive */
+	@media (max-width: 992px) {
+		.wrap-login100 {
+			padding: 177px 90px 33px 85px;
+		}
+
+		.login100-pic {
+			width: 35%;
+		}
+
+		.login100-form {
+			width: 50%;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.wrap-login100 {
+			padding: 100px 80px 33px 80px;
+		}
+
+		.login100-pic {
+			display: none;
+		}
+
+		.login100-form {
+			width: 100%;
+		}
+	}
+
+	@media (max-width: 576px) {
+		.wrap-login100 {
+			padding: 100px 15px 33px 15px;
+		}
 	}
 
 	/* Alert validate */
-
 	.validate-input {
 		position: relative;
 	}
@@ -411,22 +402,22 @@
 		content: attr(data-validate);
 		position: absolute;
 		max-width: 70%;
-		background-color: #fff;
+		background-color: white;
 		border: 1px solid #c80000;
-		border-radius: 2px;
-		padding: 4px 25px 5px 10px;
+		border-radius: 13px;
+		padding: 4px 25px 4px 10px;
 		top: 50%;
 		-webkit-transform: translateY(-50%);
 		-moz-transform: translateY(-50%);
 		-ms-transform: translateY(-50%);
 		-o-transform: translateY(-50%);
 		transform: translateY(-50%);
-		right: 12px;
+		right: 8px;
 		pointer-events: none;
 
-		font-family: Poppins-Regular;
+		font-family: Poppins-Medium;
 		color: #c80000;
-		font-size: 14px;
+		font-size: 13px;
 		line-height: 1.4;
 		text-align: left;
 
@@ -440,19 +431,19 @@
 	}
 
 	.alert-validate::after {
-		content: "\f12a";
+		content: "\f06a";
 		font-family: FontAwesome;
 		display: block;
 		position: absolute;
 		color: #c80000;
-		font-size: 18px;
+		font-size: 15px;
 		top: 50%;
 		-webkit-transform: translateY(-50%);
 		-moz-transform: translateY(-50%);
 		-ms-transform: translateY(-50%);
 		-o-transform: translateY(-50%);
 		transform: translateY(-50%);
-		right: 18px;
+		right: 13px;
 	}
 
 	.alert-validate:hover:before {
@@ -466,76 +457,57 @@
 			opacity: 1;
 		}
 	}
-
-	/* Responsive */
-	@media (max-width: 768px) {
-		.wrap-login100 {
-			padding-left: 60px;
-			padding-right: 60px;
-		}
-	}
-
-	@media (max-width: 576px) {
-		.wrap-login100 {
-			padding-left: 15px;
-			padding-right: 15px;
-		}
-	}
 </style>
 
 <body>
 
 	<div class="limiter">
-		<div class="container-login100" style="background-color: #4c4d4f;">
-			<div class="wrap-login100 p-l-110 p-r-110 p-t-62 p-b-33">
-				<form class="login100-form validate-form flex-sb flex-w">
-					<span class="login100-form-title p-b-53">
-						Login Cliente
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-pic js-tilt" data-tilt>
+					<img src="" alt="IMG">
+				</div>
+
+				<form class="login100-form validate-form">
+					<span class="login100-form-title">
+						Login - Membro
 					</span>
 
-					<a href="#" class="btn-face m-b-20">
-						<i class="fa fa-facebook-official"></i>
-						Facebook
-					</a>
-
-					<a href="#" class="btn-google">
-						<img src="images/icons/icon-google.png" alt="GOOGLE">
-						Google
-					</a>
-
-					<div class="p-t-31 p-b-9">
-						<span class="txt1">
-							Usuário
+					<div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+						<input class="input100" type="text" name="email" placeholder="Email">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
 						</span>
 					</div>
-					<div class="wrap-input100 validate-input" data-validate="Required">
-						<input class="input100" type="text" name="username">
-						<span class="focus-input100"></span>
-					</div>
 
-					<div class="p-t-13 p-b-9">
-						<span class="txt1">
-							Senha
+					<div class="wrap-input100 validate-input" data-validate="Password is required">
+						<input class="input100" type="password" name="pass" placeholder="Password">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-lock" aria-hidden="true"></i>
 						</span>
 					</div>
-					<div class="wrap-input100 validate-input" data-validate="Required">
-						<input class="input100" type="password" name="pass">
-						<span class="focus-input100"></span>
-					</div>
 
-					<div class="container-login100-form-btn m-t-17">
+					<div class="container-login100-form-btn">
 						<button class="login100-form-btn">
-							Logar
+							Login
 						</button>
 					</div>
 
-					<div class="w-full text-center p-t-55">
-						<span class="txt2">
-							Não é conta?
+					<div class="text-center p-t-12">
+						<span class="txt1">
+							Forgot
 						</span>
+						<a class="txt2" href="#">
+							Username / Password?
+						</a>
+					</div>
 
-						<a href="#" class="cadastrar">
-							Cadastrar
+					<div class="text-center p-t-136">
+						<a class="txt2" href="#">
+							Create your Account
+							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
 						</a>
 					</div>
 				</form>
@@ -543,21 +515,19 @@
 		</div>
 	</div>
 
-	<div id="dropDownSelect1"></div>
-
 	<!--===============================================================================================-->
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-	<!--===============================================================================================-->
-	<script src="vendor/animsition/js/animsition.min.js"></script>
 	<!--===============================================================================================-->
 	<script src="vendor/bootstrap/js/popper.js"></script>
 	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 	<!--===============================================================================================-->
 	<script src="vendor/select2/select2.min.js"></script>
 	<!--===============================================================================================-->
-	<script src="vendor/daterangepicker/moment.min.js"></script>
-	<script src="vendor/daterangepicker/daterangepicker.js"></script>
-	<!--===============================================================================================-->
-	<script src="vendor/countdowntime/countdowntime.js"></script>
+	<script src="vendor/tilt/tilt.jquery.min.js"></script>
+	<script>
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
 	<!--===============================================================================================-->
 	<script src="js/main.js"></script>

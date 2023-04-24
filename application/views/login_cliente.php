@@ -207,7 +207,7 @@
 		position: relative;
 	}
 
-	/* Form */
+	/* Forms */
 	.login100-form {
 		width: 100%;
 	}

@@ -543,10 +543,11 @@
   color: #000;
   cursor: pointer;
 }
-img {
-  border-radius: 50%;
-}
 
+.folm-control{
+	max-width: 400px;
+    margin: 0 auto;
+}
 </style>
 
 <body>
@@ -582,11 +583,6 @@ img {
 						<input type="text" name="senha" class="form-control" required>
 					</div>
 
-					<div class="p-t-13 p-b-9">
-						<span class="txt1">
-							Senha
-						</span>
-					</div> 
 					<div class="wrap-input100 validate-input" data-validate="Required">
 						<input class="input100" type="password" name="pass">
 						<span class="focus-input100"></span>

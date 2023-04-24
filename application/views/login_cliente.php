@@ -544,7 +544,7 @@
   cursor: pointer;
 }
 
-.folm-control{
+.form-group{
 	max-width: 400px;
     margin: 0 auto;
 }
@@ -556,10 +556,10 @@
 		<div class="container-login100" style="background-color: #4c4d4f;">
 			<div class="wrap-login100 p-l-110 p-r-110 p-t-62 p-b-33">
 				<form class="login100-form validate-form flex-sb flex-w">
-					<span class="login100-form-title p-b-53" style="font-size:18px">
+					<span class="login100-form-title p-b-53" style="font-size:24px">
 						Login Cliente
 					</span>
-
+					<br>
 					<!-- <a href="#" class="btn-face m-b-20">
 						<i class="fa fa-facebook-official"></i>
 						Facebook

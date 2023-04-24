@@ -16,7 +16,6 @@ class Login_cliente extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('layout/header');
-		$this->load->view('layout/navbar');
 		$this->load->view('login_cliente');
 	}
 }

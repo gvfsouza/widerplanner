@@ -562,7 +562,7 @@ label{
 
 					<div class="social-login">
 						<button class="facebook-btn" style="width:346px; border-radius:5px"><i class="fab fa-facebook"></i> Facebook</button>
-						<button class="google-btn" style="width:346px; border-radius:5px"><i class="fab fa-google"></i> Google</button>
+						<button class="google-btn" style="width:346px; border-radius:5px"><i class="fab fa-google"></i>&nbsp; Google</button>
 					</div>
 					<div class="form-group">
 						<label>Usuário</label>

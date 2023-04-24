@@ -564,15 +564,19 @@ label{
 						<button class="facebook-btn" style="width:346px; border-radius:5px"><i class="fab fa-facebook"></i> Facebook</button>
 						<button class="google-btn" style="width:346px; border-radius:5px"><i class="fab fa-google"></i>&nbsp; Google</button>
 					</div>
+
 					<div class="form-group">
 						<label>Usuário</label>
 						<input type="text" name="usuario" class="form-control" required>
 					</div>
+
 					<br>
+					
 					<div class="form-group">
 						<label>Senha</label>
 						<input type="text" name="senha" class="form-control" required>
 					</div>
+					
 					<br>
 
 					<div class="container-login100-form-btn m-t-17">

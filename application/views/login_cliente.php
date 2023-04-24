@@ -573,21 +573,20 @@ img {
 						<button class="facebook-btn" style="width:350px; border-radius:5px"><i class="fab fa-facebook"></i> Facebook</button>
 						<button class="google-btn" style="width:350px; border-radius:5px"><i class="fab fa-google"></i> Google</button>
 					</div>
-					<div class="p-t-31 p-b-9">
-						<span class="txt1">
-							Usuário
-						</span>
+					<div class="form-group">
+						<label>Usuário</label>
+						<input type="text" name="usuario" class="form-control" required>
 					</div>
-					<div class="wrap-input100 validate-input" data-validate="Required">
-						<input class="input100" type="text" name="username">
-						<span class="focus-input100"></span>
+					<div class="form-group">
+						<label>Senha</label>
+						<input type="text" name="senha" class="form-control" required>
 					</div>
 
 					<div class="p-t-13 p-b-9">
 						<span class="txt1">
 							Senha
 						</span>
-					</div>
+					</div> 
 					<div class="wrap-input100 validate-input" data-validate="Required">
 						<input class="input100" type="password" name="pass">
 						<span class="focus-input100"></span>

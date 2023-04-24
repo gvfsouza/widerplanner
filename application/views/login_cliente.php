@@ -481,6 +481,72 @@
 			padding-right: 15px;
 		}
 	}
+
+	.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.social-login,
+.manual-login {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.facebook-btn,
+.google-btn {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #3b5998;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.google-btn {
+  background-color: #dd4b39;
+}
+
+.manual-login input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+}
+.manual-login input[type="password"] {
+  width: 76%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+}
+
+.manual-login button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#toggle-password {
+  background-color: transparent;
+  border: none;
+  color: #000;
+  cursor: pointer;
+}
+img {
+  border-radius: 50%;
+}
+
 </style>
 
 <body>
@@ -493,7 +559,7 @@
 						Login Cliente
 					</span>
 
-					<a href="#" class="btn-face m-b-20">
+					<!-- <a href="#" class="btn-face m-b-20">
 						<i class="fa fa-facebook-official"></i>
 						Facebook
 					</a>
@@ -501,8 +567,12 @@
 					<a href="#" class="btn-google">
 						<img src="images/icons/icon-google.png" alt="GOOGLE">
 						Google
-					</a>
+					</a> -->
 
+					<div class="social-login">
+						<button class="facebook-btn">Login with Facebook</button>
+						<button class="google-btn">Login with Google</button>
+					</div>
 					<div class="p-t-31 p-b-9">
 						<span class="txt1">
 							Usuário

@@ -176,11 +176,6 @@
 	}
 
 	/* Login */
-	.limiter {
-		width: 100%;
-		margin: 0 auto;
-	}
-
 	.container-login100 {
 		width: 100%;
 		min-height: 100vh;
@@ -552,7 +547,6 @@
 
 <body>
 
-	<div class="limiter">
 		<div class="container-login100" style="background-color: #4c4d4f;">
 			<div class="wrap-login100 p-l-110 p-r-110 p-t-62 p-b-33">
 				<form class="login100-form validate-form flex-sb flex-w">
@@ -573,9 +567,10 @@
 						<label>Senha</label>
 						<input type="text" name="senha" class="form-control" required>
 					</div>
+					<br>
 
 					<div class="container-login100-form-btn m-t-17">
-						<button class="login100-form-btn botao-logar">
+						<button class="login100-form-btn botao-logar" style="font-size:18px">
 							Logar
 						</button>
 					</div>
@@ -592,7 +587,6 @@
 				</form>
 			</div>
 		</div>
-	</div>
 
 	<div id="dropDownSelect1"></div>
 

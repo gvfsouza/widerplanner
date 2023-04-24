@@ -196,7 +196,8 @@
 	}
 
 	.wrap-login100 {
-		width: 680px;
+		width: 465px;
+    	/* height: 517px; */
 		background: #fff;
 		border-radius: 10px;
 		position: relative;
@@ -549,7 +550,7 @@
 
 		<div class="container-login100" style="background-color: #4c4d4f;">
 			<div class="wrap-login100 p-l-110 p-r-110 p-t-62 p-b-33">
-				<form class="login100-form validate-form flex-sb flex-w">
+				<form class="login100-form validate-form flex-sb flex-w" style="padding:5px">
 					<span class="login100-form-title p-b-53" style="font-size:24px">
 						Login Cliente
 					</span>

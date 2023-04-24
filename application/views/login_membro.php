@@ -231,14 +231,14 @@
 		padding-bottom: 54px;
 	}
 
-	.wrap-input100 {
+	.form-control-wrap {
 		position: relative;
 		width: 100%;
 		z-index: 1;
 		margin-bottom: 10px;
 	}
 
-	.input100 {
+	.form-control {
 		font-family: Poppins-Medium;
 		font-size: 15px;
 		line-height: 1.5;
@@ -473,16 +473,16 @@
 						Login - Membro
 					</span>
 
-					<div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-						<input class="input100" type="text" name="email" placeholder="Email">
+					<div class="form-control-wrap validate-input" data-validate="Valid email is required: ex@abc.xyz">
+						<input class="form-control" type="text" name="email" placeholder="Email">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
 						</span>
 					</div>
 
-					<div class="wrap-input100 validate-input" data-validate="Password is required">
-						<input class="input100" type="password" name="pass" placeholder="Password">
+					<div class="form-control wrap validate-input" data-validate="Password is required">
+						<input class="form-control" type="password" name="pass" placeholder="Password">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>

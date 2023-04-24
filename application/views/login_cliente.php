@@ -560,15 +560,6 @@
 						Login Cliente
 					</span>
 					<br>
-					<!-- <a href="#" class="btn-face m-b-20">
-						<i class="fa fa-facebook-official"></i>
-						Facebook
-					</a>
-
-					<a href="#" class="btn-google">
-						<img src="images/icons/icon-google.png" alt="GOOGLE">
-						Google
-					</a> -->
 
 					<div class="social-login">
 						<button class="facebook-btn" style="width:350px; border-radius:5px"><i class="fab fa-facebook"></i> Facebook</button>
@@ -583,11 +574,6 @@
 						<input type="text" name="senha" class="form-control" required>
 					</div>
 
-					<div class="wrap-input100 validate-input" data-validate="Required">
-						<input class="input100" type="password" name="pass">
-						<span class="focus-input100"></span>
-					</div>
-
 					<div class="container-login100-form-btn m-t-17">
 						<button class="login100-form-btn botao-logar">
 							Logar
@@ -596,7 +582,7 @@
 
 					<div class="w-full text-center p-t-55">
 						<span class="txt2">
-							Não é conta?
+							Não tem cadastro?
 						</span>
 
 						<a href="#" class="cadastrar">

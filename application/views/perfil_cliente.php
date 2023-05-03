@@ -8,7 +8,7 @@ label{
     <div class="card-header py-3" style="background-color: white;">
 
         <div>
-            <h3 id="dados-cleinte" style="font-size: 25px;font-weight:bold">Perfil</h3>
+            <h3 id="dados-cleinte" style="font-size: 25px;font-weight:bold">Perfil Cliente</h3>
             <br>
         </div>
 
@@ -19,8 +19,7 @@ label{
                     <div class="p-3 bg-white">
                         <div class="row">
                             <div class="col-12">
-                            <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 7px; border: 1px solid #B98F56;background: #B98F56;
-    color: black;">
+                            <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 7px; border: 1px solid #B98F56;background: #B98F56;color: black;">
                             <div>
                                 <legend class="form-group" style="font-size: 18px;">
                                     <strong>Dados Pessoais</strong>

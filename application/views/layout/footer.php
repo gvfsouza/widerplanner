@@ -7,7 +7,7 @@
         bottom: 0;
         width: 100%;
         background-color: #4c4d4f;
-        color: #ffff;
+        color: white;
     }
 </style>
 

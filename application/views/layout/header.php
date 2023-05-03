@@ -19,7 +19,7 @@
     <script src="public/js/funcoes.js"></script>
     <script type="text/javascript" src="public/js/bootstrap-select.min.js"></script>
     <script src="public/js/apexcharts.js"></script>
-    <!-- ARQUIVOS DO FOOTER -->
+    <!-- ARQUIVOS DO FOOTER
     <script src="public/vendor/jquery/jquery.min.js"></script>
     <script src="public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="public/vendor/jquery-easing/jquery.easing.min.js"></script>
@@ -32,6 +32,6 @@
 	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
 	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
 	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
-	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/util.css"> -->
     <title>WiderPlanner </title>
 </head>

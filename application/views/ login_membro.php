@@ -17,7 +17,6 @@
         min-width: 340px;
     }
 
-
     .main {
         width: 340px;
         height: 400px;

@@ -1,6 +1,4 @@
 <!-- Footer -->
-</body>
-
 <style>
     footer {
         position: absolute;

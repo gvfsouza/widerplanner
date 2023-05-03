@@ -24,5 +24,8 @@
         <div class="copyright text-center my-1 mt-1 mb-2 text-muted">
             <span>Centro Universitário Nossa Senhora do Patrocínio</span>
         </div>
+        <div class="copyright text-center my-1 mt-1 mb-2 text-muted">
+            <span>Endereço: R. José Weissohn, 153 - Centro, Salto - SP, 13328-300</span>
+        </div>
     </div>
 </footer>

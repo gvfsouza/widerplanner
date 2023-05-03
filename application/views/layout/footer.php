@@ -17,7 +17,7 @@
             <span>Sistema desenvolvido para cunho estudantil.</span>
         </div>
         <div class="copyright text-center my-1 mt-1 mb-2 text-muted">
-            <span>Projeto de Conclusão de Curso - Superior de Tecnologia em <br> Análise e Deselvolvimento de Sistemas</span>
+            <span>Projeto de Conclusão de Curso - Superior de Tecnologia em Análise e Deselvolvimento de Sistemas</span>
         </div>
         <div class="copyright text-center my-1 mt-1 mb-2 text-muted">
             <span>Centro Universitário Nossa Senhora do Patrocínio</span>

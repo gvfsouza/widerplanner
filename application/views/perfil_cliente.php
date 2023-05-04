@@ -70,7 +70,7 @@ label{
                               <label for="">N°:</label>
                               <input style="font-size:14px" type="text" class="form-control" id="numero" name="numero" value="">
                             </div>
-                          </div>
+                          </div><br>
                           <div class="row">
                             <div class="dados-cliente col-md-5">
                               <label for="">Complemento:</label>

@@ -80,7 +80,7 @@ label{
                               <label for="">Bairro:</label>
                               <input style="font-size:14px" type="text" class="form-control" id="bairro" name="bairro" value="">
                             </div>
-                          </div>
+                          </div><br>
                           <div class="row">
                             <div class="dados-cliente col-md-7">
                               <label for="">Cidade:</label>

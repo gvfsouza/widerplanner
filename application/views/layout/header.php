@@ -62,7 +62,7 @@
     <script src="js/sb-admin-2.min.js"></script>
     <script src="js/mascaras.js"></script>
     <script src="js/funcoes.js"></script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Select com opções e filtro -->
     <script type="text/javascript" src="js/bootstrap-select.min.js"></script>
 

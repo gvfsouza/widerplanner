@@ -1,54 +1,119 @@
-<style>
-    span {
-        font-size: 12px;
-    }
-
-    @media (max-width: 300px) {
-        strong {
-            font-size: 10px;
-        }
-
-        span {
-            font-size: 9px;
-        }
-    }
-
-    @media (max-width: 780px) {
-        .titulo-projeto {
-            display: none;
-        }
-    }
-</style>
-
-<!-- Topbar -->
-<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-    <p style="color: #135A93; margin-top: 10px; font-weight: bold; font-size: 13px" class="titulo-projeto"></p>
-
-    <!-- Sidebar Toggle (Topbar) -->
-    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-        <i class="fa fa-bars"></i>
-    </button>
-
-    <!-- Topbar Navbar -->
-    <ul class="navbar-nav ml-auto">
-
-        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-        <li class="nav-item dropdown no-arrow d-sm-none">
-
-            <!-- Dropdown - Messages -->
-            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
-                <form class="form-inline mr-auto w-100 navbar-search">
-                    <div class="input-group">
-                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary" type="button">
-
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </li>
+<div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bxs-pyramid'></i>
+      <span class="logo_name">DashBoard</span>
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a href="#">
+          <i class='bx bx-grid-alt'></i>
+          <span class="link_name">Dashboard</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Category</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="icon-link">
+          <a href="#">
+            <i class='bx bx-collection'></i>
+            <span class="link_name">Category</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow'></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Category</a></li>
+          <li><a href="#">HTML & CSS</a></li>
+          <li><a href="#">JavaScript</a></li>
+          <li><a href="#">PHP & MySQL</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="icon-link">
+          <a href="#">
+            <i class='bx bx-book-alt'></i>
+            <span class="link_name">Posts</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow'></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Posts</a></li>
+          <li><a href="#">Web Design</a></li>
+          <li><a href="#">Login Form</a></li>
+          <li><a href="#">Card Design</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-pie-chart-alt-2'></i>
+          <span class="link_name">Analytics</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Analytics</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-line-chart'></i>
+          <span class="link_name">Chart</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Chart</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="icon-link">
+          <a href="#">
+            <i class='bx bx-plug'></i>
+            <span class="link_name">Plugins</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow'></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Plugins</a></li>
+          <li><a href="#">UI Face</a></li>
+          <li><a href="#">Pigments</a></li>
+          <li><a href="#">Box Icons</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-compass'></i>
+          <span class="link_name">Explore</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Explore</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-history'></i>
+          <span class="link_name">History</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">History</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-cog'></i>
+          <span class="link_name">Setting</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Setting</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="profile-details">
+          <div class="profile-content">
+            <img src="http://placebeard.it/250/250" alt="profileImg">
+          </div>
+          <div class="name-job">
+            <div class="profile_name">Farid Vatani</div>
+            <div class="job">Software Engineer</div>
+          </div>
+          <i class='bx bx-log-out'></i>
+        </div>
+      </li>
     </ul>
-</nav>
+  </div>

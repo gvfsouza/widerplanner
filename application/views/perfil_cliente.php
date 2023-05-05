@@ -38,56 +38,56 @@ label{
                               <input style="font-size:14px" type="text" class="form-control" id="nome" name="nome" value="" disabled="">
                             </div>
                             <div class="dados-cliente form-group col-md-6">
-                              <label for="">CPF:</label>
+                              <label for="" style="color: #77787a;">CPF:</label>
                               <br>
                               <input type="text" class="form-control" id="cpd" name="cpf" disabled="">
                             </div>
                             <div class="dados-cliente form-group col-md-4">
-                              <label for="">Data Nasc.:</label>
+                              <label for="" style="color: #77787a;">Data Nasc.:</label>
                               <br>
                               <input type="date" class="form-control" id="dt_nascimento" name="dt_nascimento" value="" disabled="">
                             </div>
                             <div class="dados-cliente form-group col-md-2">
-                              <label for="">Sexo:</label>
+                              <label for="" style="color: #77787a;">Sexo:</label>
                               <br>
                               <input style="font-size:14px" type="text" class="form-control" id="sexo" name="sexo" value="" disabled="">
                             </div>
                             <div class="dados-cliente col-md-6">
-                              <label for="">Celular:</label>
+                              <label for="" style="color: #77787a;">Celular:</label>
                               <input style="font-size:14px" type="text" class="form-control" id="celular" name="celular" value="">
                             </div>
                           </div>
                           <div class="row">
                             <div class="dados-cliente col-md-3">
-                              <label for="">CEP:</label>
+                              <label for="" style="color: #77787a;">CEP:</label>
                               <input style="font-size:14px" type="text" class="form-control" id="cep" name="cep" value="">
                             </div>
                             <div class="dados-cliente col-md-7">
-                              <label for="">Logradouro:</label>
+                              <label for="" style="color: #77787a;">Logradouro:</label>
                               <input style="font-size:14px" type="text" class="form-control" id="logradouro" name="logradouro" value="">
                             </div>
                             <div class="dados-cliente col-md-2">
-                              <label for="">N°:</label>
+                              <label for="" style="color: #77787a;">N°:</label>
                               <input style="font-size:14px" type="text" class="form-control" id="numero" name="numero" value="">
                             </div>
                           </div><br>
                           <div class="row">
                             <div class="dados-cliente col-md-5">
-                              <label for="">Complemento:</label>
+                              <label for="" style="color: #77787a;">Complemento:</label>
                               <input style="font-size:14px" type="text" class="form-control" id="complemento" name="complemento" value="">
                             </div>
                             <div class="dados-cliente col-md-7">
-                              <label for="">Bairro:</label>
+                              <label for="" style="color: #77787a;">Bairro:</label>
                               <input style="font-size:14px" type="text" class="form-control" id="bairro" name="bairro" value="">
                             </div>
                           </div><br>
                           <div class="row">
                             <div class="dados-cliente col-md-7">
-                              <label for="">Cidade:</label>
+                              <label for="" style="color: #77787a;">Cidade:</label>
                               <input style="font-size:14px" type="text" class="form-control" id="cidade" name="cidade" value="">
                             </div>
                             <div class="dados-cliente col-md-5">
-                              <label for="">UF:</label>
+                              <label for="" style="color: #77787a;">UF:</label>
                               <input style="font-size:14px" type="text" class="form-control" id="uf" name="uf" value="">
                             </div>
                           </div>

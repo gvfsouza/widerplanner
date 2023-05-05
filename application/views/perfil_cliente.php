@@ -21,7 +21,7 @@ label{
                   <div class="col-12">
                     <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 7px; border: 1px solid #B98F56;background: #B98F56;color: black;">
                       <div>
-                        <legend class="form-group" style="font-size: 18px;">
+                        <legend class="form-group" style="color: white; font-size: 18px;">
                           <strong>Dados Pessoais</strong>
                         </legend>
                       </div>
@@ -33,7 +33,7 @@ label{
                         <div class="col">
                           <div class="row">
                             <div class="form-group col-md-6">
-                              <label for="">Nome:</label>
+                              <label for="" style="color: #77787a;">Nome:</label>
                               <br>
                               <input style="font-size:14px" type="text" class="form-control" id="nome" name="nome" value="" disabled="">
                             </div>

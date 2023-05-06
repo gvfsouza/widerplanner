@@ -1,26 +1,14 @@
-<head>
+<!-- <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!----======== CSS ======== -->
     <link rel="stylesheet" href="style.css">
-
-    <!----===== Boxicons CSS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-
-    <!--<title>Dashboard Sidebar Menu</title>-->
-</head>
+</head> -->
 
 <style>
-    /* Google Font Import - Poppins */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
 
 :root{
     /* ===== Colors ===== */
@@ -407,7 +395,7 @@ body.dark .home .text{
     <section class="home">
         <div class="text">Dashboard Sidebar</div>
     </section>
-    <script>
+    <!-- <script>
         const body = document.querySelector('body'),
             sidebar = body.querySelector('nav'),
             toggle = body.querySelector(".toggle"),
@@ -430,4 +418,4 @@ body.dark .home .text{
 
             }
         });
-    </script>
+    </script> -->

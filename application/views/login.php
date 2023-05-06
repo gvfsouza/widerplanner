@@ -20,7 +20,7 @@ body {
   background-color: whitesmoke;
   padding: 6px;
   width: 350px;
-  height: 450px;
+  height: 650px;
   display: flex;
   flex-direction: column;
   align-items: center;

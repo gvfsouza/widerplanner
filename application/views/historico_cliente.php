@@ -5,239 +5,477 @@
   <li class="list-group-item">A fourth item</li>
   <li class="list-group-item">And a fifth one</li>
 </ul>
+
 <style>
-  @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
- @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
- body {
-	 font-family: "Open Sans", sans-serif;
-	 background: #eee;
+  :root{
+  --primary-color:#0D6FFA;
+  --accent-color:#49CE95;
+  --danger-color:#EC3582;
+  --fore-color:rgba(0,0,0,0.65);
+  --main-cast-shadow: 0px 3px 12px rgba(0, 0, 0, 0.08), 0px 3px 6px rgba(0, 0, 0, 0.12);
 }
- .container {
-	 margin: 0 auto;
-	 margin-top: 50px;
-	 width: 980px;
+*{
+  box-sizing:border-box;
 }
- header {
-	 display: flex;
-	 align-items: center;
-	 font-size: 1em;
-	 font-weight: 600;
-	 color: #bdbdbd;
-	 padding: 20px;
-	 box-sizing: border-box;
-	 user-select: none;
-	 text-align: center;
+body, html{
+  margin:0;
+  color: var(--fore-color);
 }
- header .button-col {
-	 width: 240px;
-	 text-align: left;
+body{
+  font-family: "Roboto";
+  font-size:14px;
+  background-color: var(--accent-color);
 }
- header .status-col {
-	 width: 145px;
+button,a{
+  cursor: pointer;
 }
- header .progress-col {
-	 width: 190px;
+.sc-box{
+  position:relative;
+  width:375px;
+  margin:36px auto;
+  
+  background-color: #F6F8FA;
+  border-radius:35px;
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.08), 
+    0px 6px 16px rgba(0,0,0,0.12);
+  
+  overflow:hidden;
 }
- header .dates-col {
-	 width: 150px;
+.sc-container{
+  padding:36px;
 }
- header .priority-col {
-	 width: 170px;
+
+.sc-main-title{
+  --fore-color: #000000;
+  
+  margin-bottom:42px;
+  
+  color:var(--fore-color);
+  text-align:center;
 }
- header .icon-col {
-	 width: 30px;
-	 text-align: right;
+.sc-searchbox{
+  position:relative;
 }
- header button {
-	 color: #bdbdbd;
-	 outline: none;
-	 border: none;
-	 background: #d5d5d5;
-	 padding: 10px 20px;
-	 border-radius: 2.5px;
-	 margin-right: 20px;
-	 font-size: 1em;
-	 font-weight: 600;
+.sc-searchbox-field{
+  height:42px;
+  width:100%;
+  padding:16px 16px 16px 48px;
+  
+  background-color:rgba(0,0,0,0.05);
+  border-radius:40px;
+  border:0;
+  outline:none;
 }
- header button:hover {
-	 cursor: pointer;
-	 background: #3d3d44;
+.sc-searchbox-placeholder{
+  position:absolute;
+  display:flex;
+  
+  height:100%;
+  width:100%;
+  align-items:center;
+  justify-content:center;
+  top:0;
+  left:0;
+  
+  color:rgba(0,0,0,0.6);
+  
+  pointer-events:none;
+  transition:ease-in-out .2s;
 }
- header label {
-	 display: inline-block;
-	 margin: 0 20px;
-	 text-align: center;
+.sc-searchbox-placeholder-text{
+  margin:0;
+  transition:ease-in-out .2s;
 }
- header .icon-col {
-	 padding-right: 20px;
+.sc-searchbox-placeholder-icon{
+  margin-right:12px;
 }
- ul.task-items li.item {
-	 display: flex;
-	 align-items: center;
-	 margin: 20px 0;
-	 padding: 20px;
-	 background: #fff;
-	 border-radius: 5px;
-	 box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
+
+.sc-searchbox-field:focus ~ .sc-searchbox-placeholder, .sc-searchbox-field:valid ~ .sc-searchbox-placeholder{
+  transform: translate3d(-22%, 0px, 0px);
 }
- ul.task-items li.item.type1 .task .icon {
-	 background: #9575cd;
+.sc-searchbox-field:focus ~ .sc-searchbox-placeholder .sc-searchbox-placeholder-text,
+.sc-searchbox-field:valid ~ .sc-searchbox-placeholder .sc-searchbox-placeholder-text{
+  opacity:0;
 }
- ul.task-items li.item.type2 .task .icon {
-	 background: #f48fb1;
+
+.sc-timeline{
+  padding-top:0;
+  padding-bottom:64px;
 }
- ul.task-items li.item.type3 .task .icon {
-	 background: #9575cd;
+.sc-timeline-item{
+  display:flex;
+  
+  width:100%;
+  align-items:flex-start;
+  margin-bottom: 60px;
+  
+  cursor:pointer;
 }
- ul.task-items li.item.type4 .task .icon {
-	 background: #4fc3f7;
+.sc-timeline-item:after{
+  content:url("data:image/svg+xml,%3Csvg width='15' height='26' viewBox='0 0 15 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.2' d='M1 1L13 13L1 25' stroke='black' stroke-width='2'/%3E%3C/svg%3E%0A");
+  align-self:center;
+  margin-left:16px;
 }
- ul.task-items li.item .task {
-	 display: flex;
-	 align-items: center;
-	 width: 240px;
+.sc-timeline-item:last-child{
+  margin-bottom:0;
 }
- ul.task-items li.item .task .icon {
-	 background: #bdbdbd;
-	 width: 50px;
-	 height: 50px;
-	 border-radius: 5px;
+.sc-timeline-icon{
+  display:flex;
+  position:relative;
+  
+  align-items:center;
+  justify-content:center;
+  width:60px;
+  height:60px;
+  
+  font-size: 24px;
+  color:#ffffff;
+  background-color:var(--primary-color);
+  border-radius:50%;
+  box-shadow: var(--main-cast-shadow);
+  
+  z-index:2;
 }
- ul.task-items li.item .task .name {
-	 background: #eee;
-	 margin-left: 20px;
-	 width: 180px;
-	 height: 25px;
-	 border-radius: 15px;
+.sc-timeline .sc-timeline-icon{
+  margin-right:16px;
+  flex:none;
 }
- ul.task-items li.item .status {
-	 display: flex;
-	 align-items: center;
-	 font-size: 1em;
-	 color: #2e7d32;
-	 width: 145px;
-	 margin-left: 30px;
+.sc-timeline .sc-timeline-icon:after{
+  content:'';
+  position:absolute;
+  
+  top:100%;
+  height:100%;
+  width:2px;
+  
+  background-color:#DBE0E8;
+  
+  z-index:-1;
 }
- ul.task-items li.item .status .icon {
-	 background: #2e7d32;
-	 margin-right: 10px;
-	 width: 14px;
-	 height: 14px;
-	 border-radius: 50%;
+.sc-timeline-item:last-child .sc-timeline-icon:after{
+  display:none;
 }
- ul.task-items li.item .status .icon.risk {
-	 background: red;
+.sc-timeline-item[event*="launch"] .sc-timeline-icon{
+  background-color: var(--accent-color);
 }
- ul.task-items li.item .status .icon.warning {
-	 background: #ffa000;
+.sc-timeline-info{
+  padding-top:8px;
+  flex-grow:1;
 }
- ul.task-items li.item .status .icon.off {
-	 background: #bf360c;
+.sc-timeline-title{
+  --fore-color:#000000;
+  
+  margin:0;
+  
+  color:var(--fore-color);
+  font-weight:600;
 }
- ul.task-items li.item .progress {
-	 width: 190px;
+.sc-timeline-details{
+  display:flex;
+  
+  justify-content:space-between;
 }
- ul.task-items li.item .progress progress {
-	 display: block;
-	 margin-left: 0;
-	 -webkit-appearance: none;
-	 height: 12.5px;
-	 width: 142.5px;
+.sc-timeline-time{
+  line-height:1.6;
 }
- ul.task-items li.item .progress progress::-webkit-progress-bar {
-	 background-color: #eee;
-	 border-radius: 5px;
+
+.sc-timeline-duration{
+  line-height:1.6;
 }
- ul.task-items li.item .progress ::-webkit-progress-value {
-	 background-color: #4dd0e1;
-	 border-radius: 5px;
+
+.sc-bottom-bar{
+  display:flex;
+  
+  padding: 16px 36px;
+  justify-content:space-between;
+  
+  font-size:26px;
+  background-image:radial-gradient(circle at center 6px,transparent 36px, #ffffff 36px);
+  filter: drop-shadow(0px -1px 6px  rgba(0, 0, 0, 0.08)) drop-shadow(0px -2px 12px  rgba(0, 0, 0, 0.12));
 }
- ul.task-items li.item .dates {
-	 width: 150px;
+
+.sc-fab{
+  position:absolute;
+  display:flex;
+  
+  justify-content:center;
+  align-items:center;
+  width: 56px;
+  height: 56px;
+  bottom:28px;
+  margin:auto;
+  left:0;
+  right:0;
+  
+  color:#ffffff;
+  background-color: #000000;
+  box-shadow: var(--main-cast-shadow);
+  border-radius:50%;
 }
- ul.task-items li.item .dates .bar, ul.task-items li.item .priority .bar {
-	 background: #eee;
-	 width: 100px;
-	 height: 25px;
-	 border-radius: 15px;
+.sc-menu-item{
+  opacity:0.6;
 }
- ul.task-items li.item .priority {
-	 width: 144.5px;
+.sc-current{
+  opacity:1;
 }
- ul.task-items li.item .priority .bar {
-	 background: #ffcdd2;
+.sc-actionsheet-container{
+  position:absolute;
+  
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  
+  z-index:9;
+    pointer-events:none;
 }
- ul.task-items li.item .user {
-	 width: 30px;
+.sc-actionsheet{
+  position:absolute;
+
+  width:100%;
+  bottom:0;
+  
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  border-radius: 40px 40px 0px 0px;
+  
+  transition:ease-in-out .3s;
+  transform:translate3d(0px, 100%, 0px);
+  
+  z-index:9;
+
 }
- ul.task-items li.item .user img {
-	 border-radius: 50%;
+.sc-actionsheet-container.sc-show .sc-overlay{
+  opacity:1;
+  pointer-events: all;
 }
- 
+.sc-actionsheet-container.sc-show .sc-actionsheet{
+  transform:translate3d(0px,0px,0px);
+  pointer-events: all;
+}
+.sc-overlay{
+  position:absolute;
+  
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  
+  background-color:rgba(0,0,0,0.25);
+  opacity:0;
+  
+  transition:ease-in-out .3s;
+  pointer-events:none;
+}
+
+.sc-actionsheet-title{
+  display:grid;
+  
+  padding:16px 36px;
+  margin-top:24px;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas: '. title close';
+  align-items:center;
+}
+.sc-actionsheet[type*="event"] .sc-actionsheet-title{
+  grid-template-areas: 'duration title close';
+  
+}
+.sc-actionsheet-info{
+  grid-area:duration;
+}
+.sc-actionsheet-title-text{
+  display:flex;
+  
+  width:100%;
+  justify-content:center;
+  grid-area:title;
+  margin:0;
+}
+.sc-actionsheet-close{
+  display:inline-flex;
+  
+  justify-content:center;
+  align-items:center;
+  grid-area: close;
+  width:34px;
+  height:34px;
+  
+  color:var(--fore-color);
+  text-decoration:none;
+  justify-self:end;
+  border-radius:50%;
+  background: rgba(0,0,0,0.1);
+}
+.sc-event-details{
+  display:flex;
+  
+  justify-content:center;
+  margin-top:24px;
+}
+.sc-event-details-items{
+  display:inline-flex;
+  flex-direction:column;
+}
+.sc-event-details-items > span{
+  margin-bottom:8px;
+}
+
+
+.sc-flex-row{
+  display:flex;
+  flex-wrap:wrap;
+}
+.sc-justify-center{
+  justify-content:center;
+}
+
+button{
+  padding:12px 16px;
+  
+  text-align:center;
+  border-radius:40px;
+}
+button[sc-style*="secondary"]{
+  background-color:transparent;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+button[sc-style*="flat"]{
+  padding:8px 16px;
+  
+  background-color:transparent;
+  color:var(--fore-color);
+  border:none;
+}
+button[sc-style*="danger"]{
+  --fore-color: var(--danger-color);
+}
+button[sc-style*="block"]{
+  width:100%;
+}
 </style>
-<section class="container">
-
-	<!-- Header Bar -->
-	<header>
-		<div class="button-col">
-			<button class="btn" name="Add Task"> Add Task </button>
-		</div>
-
-		<div class="status-col">
-			<label> Status </label>
-		</div>
-
-		<div class="progress-col">
-			<label> Progress </label>
-		</div>
-		
-		<div class="dates-col">
-			<label> Dates </label>
-		</div>
-
-		<div class="priority-col">
-			<label> Priority </label>
-		</div>
-		
-		<div class="icon-col">
-			<i class="icon fa fa-user-o"> </i>
-		</div>
-
-	</header>
-
-	<!-- List Items -->
-	<ul class="task-items">
-		
-		<!-- List Item -->
-		<li class="item type1">
-			<div class="task">
-				<div class="icon"> </div>
-				<div class="name" style="width:150px"> </div>
-			</div>
-
-			<div class="status">
-				<div class="icon off"> </div>
-				<div class="text"> Off Track </div>
-			</div>
-
-			<div class="progress">
-				<progress value="15" max="100" />
-			</div>
-
-			<div class="dates">
-				<div class="bar"> </div>
-			</div>
-
-			<div class="priority">
-				<div class="bar"> </div>
-			</div>
-
-			<div class="user">
-				<img src="https://source.unsplash.com/40x40/?indian" alt="Image 001" class="owner-img" />
-			</div>
-		</li>
-		
-		
-	</ul>
-
-</section>
+<div class="sc-box">
+  <div class="sc-container">
+    <h1 class="sc-main-title">Today's Events</h1>
+    <div class="sc-searchbox">
+      <input required type="text" 
+             class="sc-searchbox-field"/>
+      <div class="sc-searchbox-placeholder">
+        
+        <i class="sc-searchbox-placeholder-icon fas fa-search"></i>
+        <p class="sc-searchbox-placeholder-text">Search an event</p>
+      </div>
+      
+    </div>
+  </div>
+    <div class="sc-container sc-timeline">
+      <div class="sc-timeline-item" event="launch">
+        <i class="sc-timeline-icon fas fa-utensils"></i> 
+        <div class="sc-timeline-info">
+          <div class="sc-timeline-details">
+            <span class="sc-timeline-time">12:00 PM</span>
+            <span class="sc-timeline-duration">1 hour<span>
+          </div>
+          <h3 class="sc-timeline-title">Launch</h3>
+        </div>
+      </div>
+      <div class="sc-timeline-item sc-actionsheet-trigger" event="meeting" goto="meeting">
+        <i class="sc-timeline-icon fas fa-comments"></i> 
+        <div class="sc-timeline-info">
+          <div class="sc-timeline-details">
+            <span class="sc-timeline-time">13:00 PM</span>
+            <span class="sc-timeline-duration">30 minutes<span>
+          </div>
+          <h3 class="sc-timeline-title">Design Feedback</h3>
+        </div>
+      </div>
+      <div class="sc-timeline-item" event="meeting">
+        <i class="sc-timeline-icon fas fa-comments"></i> 
+        <div class="sc-timeline-info">
+          <div class="sc-timeline-details">
+            <span class="sc-timeline-time">14:30 PM</span>
+            <span class="sc-timeline-duration">1 hour<span>
+          </div>
+          
+          <h3 class="sc-timeline-title">Front-End 
+Implementation Details</h3>
+        </div>
+      </div>
+  </div>
+  <div class="sc-bottom-bar">
+    <a class="sc-menu-item sc-current">
+      <i class="fas fa-list"></i>
+      
+    </a>
+    <a class="sc-fab">
+      <i class="fas fa-plus"></i>
+    </a>
+    <a class="sc-menu-item">
+      <i class="fas fa-calendar-alt"></i>
+    </a>
+  </div>
+  <div class="sc-actionsheet-container" id="meeting">
+    <div class="sc-overlay"></div>
+      <div type="event" class="sc-actionsheet">
+        <div class="sc-actionsheet-title">
+          <span class="sc-actionsheet-info">30 minutes</span>
+   
+          <div class="sc-actionsheet-title-text">
+            <i class="sc-timeline-icon fas fa-comments"></i>
+          </div>
+          <a href="#" class="sc-actionsheet-close">
+            <i class="fas fa-times"></i>
+          </a>
+        </div>
+        <div class="sc-event-details">
+           <div class="sc-event-details-items">
+             <span>
+               <i class="fas fa-clock"></i> 
+               Starts in 1 hour
+             </span>
+             <span>
+               <i class="fas fa-map-marker-alt"></i>                          Meeting Room 13
+             </span>
+          </div>
+        </div>
+        <div class="sc-container">
+          <h3>Design Feedback</h3>
+          <p>We need to gather to talk about the latest iteration
+over the main flow for adding users. Still having
+            a couple of concerns.</p>
+        </div>
+        <div class="sc-container sc-flex-row sc-justify-center">
+          <button class="sc-actionsheet-trigger" goto="meeting-actions" sc-style="secondary block">
+            
+            Accepted
+          </button>
+        </div>
+      </div>
+   </div>
+        <div class="sc-actionsheet-container" id="meeting-actions">
+          <div class="sc-overlay"></div>
+          <div class="sc-actionsheet">
+            <div class="sc-actionsheet-title">
+              <h3 class="sc-actionsheet-title-text">
+                Meeting Accepted
+              </h3>
+              <a class="sc-actionsheet-close">
+                <i class="fas fa-times"></i>
+              </a>
+            </div>
+            <div class="sc-container">
+              <div class="sc-flex-row sc-justify-center">
+                <p>Change Response</p>
+              </div>
+              <div class="sc-flex-row sc-justify-center">
+                <button sc-style="flat danger">Decline</button>
+              </div>
+              <div class="sc-flex-row sc-justify-center">
+                <button sc-style="flat">Tentative</button>
+              </div>
+            </div>
+          </div>
+        </div>
+</div>
+          

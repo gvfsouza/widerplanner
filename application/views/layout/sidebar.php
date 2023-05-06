@@ -416,27 +416,27 @@ body.dark .home .text {
         </div>
     </section>
     <script> 
-        const body = document.querySelector('body'); 
-        barra lateral const = body.querySelector('nav'); 
-        const alternar = body.querySelector(".toggle"); 
-        const searchBtn = body.querySelector(".caixa de pesquisa"); 
-        const modeSwitch = body.querySelector(".toggle-switch"); 
-        const modeText = body.querySelector(".mode-text");
-        toggle.addEventListener("click", () => {
-            sidebar.classList.toggle("close");
-            });
+const body = document.querySelector('body'); 
+barra lateral const = body.querySelector('nav'); 
+const alternar = body.querySelector(".toggle"); 
+const searchBtn = body.querySelector(".caixa de pesquisa"); 
+const modeSwitch = body.querySelector(".toggle-switch"); 
+const modeText = body.querySelector(".mode-text");
+toggle.addEventListener("click", () => {
+        sidebar.classList.toggle("close");
+    });
 
-        searchBtn.addEventListener("click", () => {
-            sidebar.classList.remove("close");
-            });
+    searchBtn.addEventListener("click", () => {
+        sidebar.classList.remove("close");
+    });
 
-        modeSwitch.addEventListener("click", () => {
-            body.classList.toggle("dark");
+    modeSwitch.addEventListener("click", () => {
+        body.classList.toggle("dark");
 
-            if (body.classList.contains("dark")) {
-                modeText.innerText = "Modo Claro";
-            } else {
-                modeText.innerText = "Modo Escuro";
-            }
-        });
-    </script>
+        if (body.classList.contains("dark")) {
+            modeText.innerText = "Modo Claro";
+        } else {
+            modeText.innerText = "Modo Escuro";
+        }
+    });
+</script>

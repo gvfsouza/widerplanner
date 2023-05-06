@@ -19,7 +19,7 @@ body {
 .container {
   background-color: whitesmoke;
   padding: 6px;
-  width: 350px;
+  width: 450px;
   height: 450px;
   display: flex;
   flex-direction: column;

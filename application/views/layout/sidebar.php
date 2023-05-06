@@ -7,7 +7,7 @@
 </head> -->
 
 <style>
-
+    
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root{
@@ -395,7 +395,7 @@ body.dark .home .text{
     <section class="home">
         <div class="text">Dashboard Sidebar</div>
     </section>
-    <!-- <script>
+    <script>
         const body = document.querySelector('body'),
             sidebar = body.querySelector('nav'),
             toggle = body.querySelector(".toggle"),
@@ -418,4 +418,4 @@ body.dark .home .text{
 
             }
         });
-    </script> -->
+    </script>

@@ -5,477 +5,360 @@
   <li class="list-group-item">A fourth item</li>
   <li class="list-group-item">And a fifth one</li>
 </ul>
-
 <style>
-  :root{
-  --primary-color:#0D6FFA;
-  --accent-color:#49CE95;
-  --danger-color:#EC3582;
-  --fore-color:rgba(0,0,0,0.65);
-  --main-cast-shadow: 0px 3px 12px rgba(0, 0, 0, 0.08), 0px 3px 6px rgba(0, 0, 0, 0.12);
+  /* Please ❤ this if you like it! 😊 */
+
+//SCSS Variables:
+$bg-color: #f2f6f9;
+$active-color: #25be64;
+$inactive-color: #dadde4;
+$new-color: #febf02;
+$text-color: #141a4e;
+$table-bg-color: #fefefe;
+$table-head-bg-color: #e1e8f2;
+$table-border-color: #edeef2;
+$hover-bg-color: #fb4f83;
+$hover-text-color: #ffffff;
+
+//Responsive Breakpoint SCSS Mixin:
+
+//xxs
+@mixin mobile-xxs {
+	@media (max-width: 400px) {
+		@content;
+	}
 }
-*{
-  box-sizing:border-box;
+//min-sm
+@mixin min-tablet {
+	@media (min-width: 768px) {
+		@content;
+	}
 }
-body, html{
-  margin:0;
-  color: var(--fore-color);
+//md
+@mixin desktop {
+	@media (max-width: 991px) {
+		@content;
+	}
 }
-body{
-  font-family: "Roboto";
-  font-size:14px;
-  background-color: var(--accent-color);
-}
-button,a{
-  cursor: pointer;
-}
-.sc-box{
-  position:relative;
-  width:375px;
-  margin:36px auto;
-  
-  background-color: #F6F8FA;
-  border-radius:35px;
-  box-shadow: 0px 3px 6px rgba(0,0,0,0.08), 
-    0px 6px 16px rgba(0,0,0,0.12);
-  
-  overflow:hidden;
-}
-.sc-container{
-  padding:36px;
+//sm to md
+@mixin tablet-to-desktop {
+	@media (min-width: 768px) and (max-width: 991px) {
+		@content;
+	}
 }
 
-.sc-main-title{
-  --fore-color: #000000;
-  
-  margin-bottom:42px;
-  
-  color:var(--fore-color);
-  text-align:center;
-}
-.sc-searchbox{
-  position:relative;
-}
-.sc-searchbox-field{
-  height:42px;
-  width:100%;
-  padding:16px 16px 16px 48px;
-  
-  background-color:rgba(0,0,0,0.05);
-  border-radius:40px;
-  border:0;
-  outline:none;
-}
-.sc-searchbox-placeholder{
-  position:absolute;
-  display:flex;
-  
-  height:100%;
-  width:100%;
-  align-items:center;
-  justify-content:center;
-  top:0;
-  left:0;
-  
-  color:rgba(0,0,0,0.6);
-  
-  pointer-events:none;
-  transition:ease-in-out .2s;
-}
-.sc-searchbox-placeholder-text{
-  margin:0;
-  transition:ease-in-out .2s;
-}
-.sc-searchbox-placeholder-icon{
-  margin-right:12px;
+/* Googles Font Link */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/* Reset Style */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-.sc-searchbox-field:focus ~ .sc-searchbox-placeholder, .sc-searchbox-field:valid ~ .sc-searchbox-placeholder{
-  transform: translate3d(-22%, 0px, 0px);
-}
-.sc-searchbox-field:focus ~ .sc-searchbox-placeholder .sc-searchbox-placeholder-text,
-.sc-searchbox-field:valid ~ .sc-searchbox-placeholder .sc-searchbox-placeholder-text{
-  opacity:0;
+html {
+	font-size: 10px;
 }
 
-.sc-timeline{
-  padding-top:0;
-  padding-bottom:64px;
-}
-.sc-timeline-item{
-  display:flex;
-  
-  width:100%;
-  align-items:flex-start;
-  margin-bottom: 60px;
-  
-  cursor:pointer;
-}
-.sc-timeline-item:after{
-  content:url("data:image/svg+xml,%3Csvg width='15' height='26' viewBox='0 0 15 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.2' d='M1 1L13 13L1 25' stroke='black' stroke-width='2'/%3E%3C/svg%3E%0A");
-  align-self:center;
-  margin-left:16px;
-}
-.sc-timeline-item:last-child{
-  margin-bottom:0;
-}
-.sc-timeline-icon{
-  display:flex;
-  position:relative;
-  
-  align-items:center;
-  justify-content:center;
-  width:60px;
-  height:60px;
-  
-  font-size: 24px;
-  color:#ffffff;
-  background-color:var(--primary-color);
-  border-radius:50%;
-  box-shadow: var(--main-cast-shadow);
-  
-  z-index:2;
-}
-.sc-timeline .sc-timeline-icon{
-  margin-right:16px;
-  flex:none;
-}
-.sc-timeline .sc-timeline-icon:after{
-  content:'';
-  position:absolute;
-  
-  top:100%;
-  height:100%;
-  width:2px;
-  
-  background-color:#DBE0E8;
-  
-  z-index:-1;
-}
-.sc-timeline-item:last-child .sc-timeline-icon:after{
-  display:none;
-}
-.sc-timeline-item[event*="launch"] .sc-timeline-icon{
-  background-color: var(--accent-color);
-}
-.sc-timeline-info{
-  padding-top:8px;
-  flex-grow:1;
-}
-.sc-timeline-title{
-  --fore-color:#000000;
-  
-  margin:0;
-  
-  color:var(--fore-color);
-  font-weight:600;
-}
-.sc-timeline-details{
-  display:flex;
-  
-  justify-content:space-between;
-}
-.sc-timeline-time{
-  line-height:1.6;
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	font-family: "Poppins", sans-serif;
+	color: $text-color;
+	background-color: $bg-color;
+	font-size: 1.6rem;
 }
 
-.sc-timeline-duration{
-  line-height:1.6;
+/* Page Wrapper/Container Style */
+.container {
+	width: 100%;
+	max-width: 1140px;
+	margin: 0 auto;
+	padding: 0 15px;
 }
 
-.sc-bottom-bar{
-  display:flex;
-  
-  padding: 16px 36px;
-  justify-content:space-between;
-  
-  font-size:26px;
-  background-image:radial-gradient(circle at center 6px,transparent 36px, #ffffff 36px);
-  filter: drop-shadow(0px -1px 6px  rgba(0, 0, 0, 0.08)) drop-shadow(0px -2px 12px  rgba(0, 0, 0, 0.12));
+/* Responsive Table Style */
+.responsive-table {
+	background-color: $table-bg-color;
+	border-collapse: collapse;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.02);
+	width: 100%;
+	margin: 2rem 0;
+	overflow: hidden;
+	&__row {
+		display: grid;
+		border-bottom: 1px solid $table-border-color;
+		padding: 0 1.5rem;
+		@include min-tablet {
+			grid-template-columns: 2fr 1fr 2fr 2fr 1fr;
+		}
+		@include tablet-to-desktop {
+			grid-template-columns: 1fr 2fr 1fr;
+		}
+		th,
+		td {
+			padding: 1rem;
+		}
+	}
+	&__head {
+		background-color: $table-head-bg-color;
+		@include desktop {
+			display: none;
+		}
+		&__title {
+			display: flex;
+			align-items: center;
+			font-weight: 500;
+			text-transform: capitalize;
+		}
+	}
+	&__body {
+		.responsive-table__row {
+			transition: 0.1s linear;
+			transition-property: color, background;
+			&:last-child {
+				border-bottom: none;
+			}
+			&:hover {
+				color: $hover-text-color;
+				background-color: $hover-bg-color;
+			}
+		}
+		&__text {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			&::before {
+				margin-right: 1rem;
+				font-weight: 600;
+				text-transform: capitalize;
+			}
+			@include desktop {
+				&::before {
+					content: attr(data-title) " :";
+				}
+			}
+			@include mobile-xxs {
+				&::before {
+					width: 100%;
+					margin-bottom: 1rem;
+				}
+			}
+			&--name {
+				font-weight: 600;
+				@include min-tablet {
+					&::before {
+						display: none;
+					}
+				}
+				@include tablet-to-desktop {
+					grid-column: 1 / 2;
+					flex-direction: column;
+				}
+			}
+			&--status,
+			&--types,
+			&--update {
+				@include tablet-to-desktop {
+					grid-column: 2/ 3;
+				}
+			}
+			&--country {
+				@include tablet-to-desktop {
+					grid-column: 3/ -1;
+				}
+			}
+			&--name,
+			&--country {
+				@include tablet-to-desktop {
+					grid-row: 2;
+				}
+			}
+		}
+	}
 }
 
-.sc-fab{
-  position:absolute;
-  display:flex;
-  
-  justify-content:center;
-  align-items:center;
-  width: 56px;
-  height: 56px;
-  bottom:28px;
-  margin:auto;
-  left:0;
-  right:0;
-  
-  color:#ffffff;
-  background-color: #000000;
-  box-shadow: var(--main-cast-shadow);
-  border-radius:50%;
-}
-.sc-menu-item{
-  opacity:0.6;
-}
-.sc-current{
-  opacity:1;
-}
-.sc-actionsheet-container{
-  position:absolute;
-  
-  width:100%;
-  height:100%;
-  top:0;
-  left:0;
-  
-  z-index:9;
-    pointer-events:none;
-}
-.sc-actionsheet{
-  position:absolute;
-
-  width:100%;
-  bottom:0;
-  
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(20px);
-  border-radius: 40px 40px 0px 0px;
-  
-  transition:ease-in-out .3s;
-  transform:translate3d(0px, 100%, 0px);
-  
-  z-index:9;
-
-}
-.sc-actionsheet-container.sc-show .sc-overlay{
-  opacity:1;
-  pointer-events: all;
-}
-.sc-actionsheet-container.sc-show .sc-actionsheet{
-  transform:translate3d(0px,0px,0px);
-  pointer-events: all;
-}
-.sc-overlay{
-  position:absolute;
-  
-  width:100%;
-  height:100%;
-  top:0;
-  left:0;
-  
-  background-color:rgba(0,0,0,0.25);
-  opacity:0;
-  
-  transition:ease-in-out .3s;
-  pointer-events:none;
+/* SVG Up Arrow Style */
+.up-arrow {
+	height: 100%;
+	max-height: 1.8rem;
+	margin-left: 1rem;
 }
 
-.sc-actionsheet-title{
-  display:grid;
-  
-  padding:16px 36px;
-  margin-top:24px;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-areas: '. title close';
-  align-items:center;
-}
-.sc-actionsheet[type*="event"] .sc-actionsheet-title{
-  grid-template-areas: 'duration title close';
-  
-}
-.sc-actionsheet-info{
-  grid-area:duration;
-}
-.sc-actionsheet-title-text{
-  display:flex;
-  
-  width:100%;
-  justify-content:center;
-  grid-area:title;
-  margin:0;
-}
-.sc-actionsheet-close{
-  display:inline-flex;
-  
-  justify-content:center;
-  align-items:center;
-  grid-area: close;
-  width:34px;
-  height:34px;
-  
-  color:var(--fore-color);
-  text-decoration:none;
-  justify-self:end;
-  border-radius:50%;
-  background: rgba(0,0,0,0.1);
-}
-.sc-event-details{
-  display:flex;
-  
-  justify-content:center;
-  margin-top:24px;
-}
-.sc-event-details-items{
-  display:inline-flex;
-  flex-direction:column;
-}
-.sc-event-details-items > span{
-  margin-bottom:8px;
+/* SVG User Icon Style */
+.user-icon {
+	width: 100%;
+	max-width: 4rem;
+	height: auto;
+	margin-right: 1rem;
 }
 
+/* Status Indicator Style */
+.status-indicator {
+	display: inline-block;
+	width: 1.8rem;
+	height: 1.8rem;
+	border-radius: 50%;
+	background: #222222;
+	margin-right: 0.5rem;
+	&--active {
+		background: $active-color;
+	}
+	&--inactive {
+		background: $inactive-color;
+	}
+	&--new {
+		background: $new-color;
+	}
+}
 
-.sc-flex-row{
-  display:flex;
-  flex-wrap:wrap;
-}
-.sc-justify-center{
-  justify-content:center;
-}
-
-button{
-  padding:12px 16px;
-  
-  text-align:center;
-  border-radius:40px;
-}
-button[sc-style*="secondary"]{
-  background-color:transparent;
-  border: 1px solid var(--primary-color);
-  color: var(--primary-color);
-}
-button[sc-style*="flat"]{
-  padding:8px 16px;
-  
-  background-color:transparent;
-  color:var(--fore-color);
-  border:none;
-}
-button[sc-style*="danger"]{
-  --fore-color: var(--danger-color);
-}
-button[sc-style*="block"]{
-  width:100%;
-}
 </style>
-<div class="sc-box">
-  <div class="sc-container">
-    <h1 class="sc-main-title">Today's Events</h1>
-    <div class="sc-searchbox">
-      <input required type="text" 
-             class="sc-searchbox-field"/>
-      <div class="sc-searchbox-placeholder">
-        
-        <i class="sc-searchbox-placeholder-icon fas fa-search"></i>
-        <p class="sc-searchbox-placeholder-text">Search an event</p>
-      </div>
-      
-    </div>
-  </div>
-    <div class="sc-container sc-timeline">
-      <div class="sc-timeline-item" event="launch">
-        <i class="sc-timeline-icon fas fa-utensils"></i> 
-        <div class="sc-timeline-info">
-          <div class="sc-timeline-details">
-            <span class="sc-timeline-time">12:00 PM</span>
-            <span class="sc-timeline-duration">1 hour<span>
-          </div>
-          <h3 class="sc-timeline-title">Launch</h3>
-        </div>
-      </div>
-      <div class="sc-timeline-item sc-actionsheet-trigger" event="meeting" goto="meeting">
-        <i class="sc-timeline-icon fas fa-comments"></i> 
-        <div class="sc-timeline-info">
-          <div class="sc-timeline-details">
-            <span class="sc-timeline-time">13:00 PM</span>
-            <span class="sc-timeline-duration">30 minutes<span>
-          </div>
-          <h3 class="sc-timeline-title">Design Feedback</h3>
-        </div>
-      </div>
-      <div class="sc-timeline-item" event="meeting">
-        <i class="sc-timeline-icon fas fa-comments"></i> 
-        <div class="sc-timeline-info">
-          <div class="sc-timeline-details">
-            <span class="sc-timeline-time">14:30 PM</span>
-            <span class="sc-timeline-duration">1 hour<span>
-          </div>
-          
-          <h3 class="sc-timeline-title">Front-End 
-Implementation Details</h3>
-        </div>
-      </div>
-  </div>
-  <div class="sc-bottom-bar">
-    <a class="sc-menu-item sc-current">
-      <i class="fas fa-list"></i>
-      
-    </a>
-    <a class="sc-fab">
-      <i class="fas fa-plus"></i>
-    </a>
-    <a class="sc-menu-item">
-      <i class="fas fa-calendar-alt"></i>
-    </a>
-  </div>
-  <div class="sc-actionsheet-container" id="meeting">
-    <div class="sc-overlay"></div>
-      <div type="event" class="sc-actionsheet">
-        <div class="sc-actionsheet-title">
-          <span class="sc-actionsheet-info">30 minutes</span>
-   
-          <div class="sc-actionsheet-title-text">
-            <i class="sc-timeline-icon fas fa-comments"></i>
-          </div>
-          <a href="#" class="sc-actionsheet-close">
-            <i class="fas fa-times"></i>
-          </a>
-        </div>
-        <div class="sc-event-details">
-           <div class="sc-event-details-items">
-             <span>
-               <i class="fas fa-clock"></i> 
-               Starts in 1 hour
-             </span>
-             <span>
-               <i class="fas fa-map-marker-alt"></i>                          Meeting Room 13
-             </span>
-          </div>
-        </div>
-        <div class="sc-container">
-          <h3>Design Feedback</h3>
-          <p>We need to gather to talk about the latest iteration
-over the main flow for adding users. Still having
-            a couple of concerns.</p>
-        </div>
-        <div class="sc-container sc-flex-row sc-justify-center">
-          <button class="sc-actionsheet-trigger" goto="meeting-actions" sc-style="secondary block">
-            
-            Accepted
-          </button>
-        </div>
-      </div>
-   </div>
-        <div class="sc-actionsheet-container" id="meeting-actions">
-          <div class="sc-overlay"></div>
-          <div class="sc-actionsheet">
-            <div class="sc-actionsheet-title">
-              <h3 class="sc-actionsheet-title-text">
-                Meeting Accepted
-              </h3>
-              <a class="sc-actionsheet-close">
-                <i class="fas fa-times"></i>
-              </a>
-            </div>
-            <div class="sc-container">
-              <div class="sc-flex-row sc-justify-center">
-                <p>Change Response</p>
-              </div>
-              <div class="sc-flex-row sc-justify-center">
-                <button sc-style="flat danger">Decline</button>
-              </div>
-              <div class="sc-flex-row sc-justify-center">
-                <button sc-style="flat">Tentative</button>
-              </div>
-            </div>
-          </div>
-        </div>
+<!-- /* Please ❤ this if you like it! 😊 */ -->
+
+<!-- Page wrapper/Container Section -->
+<div class="container">
+	<!-- Responsive Table Section -->
+	<table class="responsive-table">
+		<!-- Responsive Table Header Section -->
+		<thead class="responsive-table__head">
+			<tr class="responsive-table__row">
+				<th class="responsive-table__head__title responsive-table__head__title--name">Name
+					<svg version="1.1" class="up-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+						<path d="M374.176,110.386l-104-104.504c-0.006-0.006-0.013-0.011-0.019-0.018c-7.818-7.832-20.522-7.807-28.314,0.002c-0.006,0.006-0.013,0.011-0.019,0.018l-104,104.504c-7.791,7.829-7.762,20.493,0.068,28.285    c7.829,7.792,20.492,7.762,28.284-0.067L236,68.442V492c0,11.046,8.954,20,20,20c11.046,0,20-8.954,20-20V68.442l69.824,70.162c7.792,7.829,20.455,7.859,28.284,0.067C381.939,130.878,381.966,118.214,374.176,110.386z" />
+					</svg>
+				</th>
+				<th class="responsive-table__head__title responsive-table__head__title--status">Status</th>
+				<th class="responsive-table__head__title responsive-table__head__title--types">Types</th>
+				<th class="responsive-table__head__title responsive-table__head__title--update">Last updated at</th>
+				<th class="responsive-table__head__title responsive-table__head__title--country">Country</th>
+			</tr>
+		</thead>
+		<!-- Responsive Table Body Section -->
+		<tbody class="responsive-table__body">
+			<tr class="responsive-table__row">
+				<td class="responsive-table__body__text responsive-table__body__text--name">
+					<svg class="user-icon" enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg">
+						<path d="m256.025 483.334 101.429-25.614c57.895-48.074 94.771-120.586 94.771-201.719 0-125.144-87.711-229.801-205.012-255.852-137.316 4.631-247.213 117.407-247.213 255.851 0 71.112 29 135.446 75.812 181.836z" fill="#cbe2ff" />
+						<path d="m446.914 256c0 83.915-40.381 158.391-102.765 205.079l92.031-23.241c46.815-46.39 75.82-110.724 75.82-181.838 0-141.385-114.615-256-256-256-11.024 0-21.886.698-32.543 2.05 126.019 15.988 223.457 123.59 223.457 253.95z" fill="#bed8fb" />
+						<path d="m319.621 96.952c0-13.075-10.599-23.674-23.674-23.674h-81.582c-30.091 0-54.485 24.394-54.485 54.485v60.493h192.209v-59.635c0-13.075-10.599-23.674-23.674-23.674h-.798c-4.416 0-7.996-3.579-7.996-7.995z" fill="#365e7d" />
+						<path d="m328.415 104.947h-.798c-4.416 0-7.996-3.58-7.996-7.996 0-13.075-10.599-23.674-23.674-23.674h-8.945v114.978h65.086v-59.635c.001-13.073-10.599-23.673-23.673-23.673z" fill="#2b4d66" />
+						<path d="m425.045 372.355c-6.259-6.182-14.001-10.963-22.79-13.745l-69.891-22.128-76.348-2.683-76.38 2.683-69.891 22.128c-23.644 7.486-39.713 29.428-39.713 54.229v19.094c44.789 47.328 107.451 77.568 177.183 79.92 78.128-17.353 143.129-69.576 177.83-139.498z" fill="#4a80aa" />
+						<path d="m441.968 431.932v-19.094c0-17.536-8.04-33.635-21.105-44.213-37.111 75.626-110.422 130.268-197.346 141.317 10.492 1.329 21.178 2.038 32.026 2.057 10.423-.016 20.708-.62 30.824-1.782 61.031-7.212 115.485-35.894 155.601-78.285z" fill="#407093" />
+						<path d="m261.796 508.168c15.489-30.751 55.822-118.067 44.321-172.609l-50.101-19.499-50.148 19.5c-11.856 56.225 31.37 147.277 45.681 175.29 3.442-.826 6.859-1.721 10.247-2.682z" fill="#e4f6ff" />
+						<path d="m288.197 483.789-20.314-79.917h-23.767l-20.264 79.699 25.058 27.897c6.361-1.457 12.634-3.146 18.81-5.057z" fill="#e28086" />
+						<path d="m249.302 511.905c2.075.054 4.154.091 6.241.095 2.415-.004 4.822-.046 7.222-.113l12.907-14.259c-10.159 3.564-20.61 6.506-31.309 8.779z" fill="#dd636e" />
+						<path d="m298.774 328.183v-45.066h-85.58v45.066c0 23.632 42.79 49.446 42.79 49.446s42.79-25.814 42.79-49.446z" fill="#ffddce" />
+						<path d="m352.089 180.318h-16.359c-9.098 0-16.473-7.375-16.473-16.473v-9.015c0-11.851-11.595-20.23-22.847-16.511-26.243 8.674-54.579 8.676-80.823.006l-.031-.01c-11.252-3.717-22.845 4.662-22.845 16.512v9.019c0 9.098-7.375 16.473-16.473 16.473h-16.358v26.938c0 6.883 5.58 12.464 12.464 12.464 2.172 0 3.939 1.701 4.076 3.869 2.628 41.668 37.235 74.654 79.565 74.654 42.33 0 76.937-32.986 79.565-74.654.137-2.167 1.904-3.869 4.076-3.869 6.883 0 12.464-5.58 12.464-12.464v-26.939z" fill="#ffddce" />
+						<path d="m335.73 180.318c-9.098 0-16.473-7.375-16.473-16.473v-9.015c0-11.851-11.595-20.23-22.847-16.511-3.108 1.027-6.247 1.923-9.407 2.707v88.972c-.438 28.948-16.3 54.142-39.725 67.758 2.861.311 5.763.486 8.706.486 42.33 0 76.937-32.986 79.565-74.654.137-2.167 1.904-3.869 4.076-3.869 6.883 0 12.464-5.58 12.464-12.464v-26.938h-16.359z" fill="#ffcbbe" />
+						<g fill="#f4fbff">
+							<path d="m213.194 316.06-33.558 27.267 35.192 43.513c4.281 4.168 11.019 4.424 15.605.594l26.465-22.107z" />
+							<path d="m298.79 316.06-41.892 49.267 24.874 21.268c4.557 3.896 11.327 3.7 15.651-.453l34.94-42.815z" />
+						</g>
+						<path d="m213.194 316.06-49.256 24.199c-3.75 1.842-5.256 6.404-3.341 10.117l9.65 18.71c2.501 4.848 1.578 10.756-2.282 14.61-1.987 1.983-4.139 4.131-6.004 5.993-3.338 3.332-4.537 8.255-3.067 12.737 11.651 35.517 67.725 89.828 88.946 109.478 1.427.038 2.857.064 4.29.08-15.389-29.933-69.922-143.655-38.936-195.924z" fill="#365e7d" />
+						<path d="m344.019 383.695c-3.861-3.854-4.783-9.762-2.282-14.61l9.65-18.71c1.915-3.713.409-8.275-3.341-10.117l-49.256-24.198c30.978 52.255-23.517 165.929-38.923 195.9 1.448-.025 2.893-.061 4.335-.109 21.265-19.695 77.248-73.94 88.888-109.424 1.47-4.482.271-9.405-3.067-12.737-1.865-1.863-4.017-4.012-6.004-5.995z" fill="#365e7d" />
+						<path d="m256.898 365.327-26.06 21.764 13.278 16.781h23.767l13.279-17.771z" fill="#dd636e" />
+					</svg>
+					Developer Zahid
+				</td>
+				<td class="responsive-table__body__text responsive-table__body__text--status"><span class="status-indicator status-indicator--active"></span>Active</td>
+				<td class="responsive-table__body__text responsive-table__body__text--types">Attendee, F1</td>
+				<td class="responsive-table__body__text responsive-table__body__text--update">Jul 17, 2021, 01:14 PM</td>
+				<td class="responsive-table__body__text responsive-table__body__text--country">Bangladesh</td>
+			</tr>
+			<tr class="responsive-table__row">
+				<td class="responsive-table__body__text responsive-table__body__text--name">
+					<svg class="user-icon" enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg">
+						<path d="m256.025 483.334 101.429-25.614c57.895-48.074 94.771-120.586 94.771-201.719 0-125.144-87.711-229.801-205.012-255.852-137.316 4.631-247.213 117.407-247.213 255.851 0 71.112 29 135.446 75.812 181.836z" fill="#cbe2ff" />
+						<path d="m446.914 256c0 83.915-40.381 158.391-102.765 205.079l92.031-23.241c46.815-46.39 75.82-110.724 75.82-181.838 0-141.385-114.615-256-256-256-11.024 0-21.886.698-32.543 2.05 126.019 15.988 223.457 123.59 223.457 253.95z" fill="#bed8fb" />
+						<path d="m319.621 96.952c0-13.075-10.599-23.674-23.674-23.674h-81.582c-30.091 0-54.485 24.394-54.485 54.485v60.493h192.209v-59.635c0-13.075-10.599-23.674-23.674-23.674h-.798c-4.416 0-7.996-3.579-7.996-7.995z" fill="#365e7d" />
+						<path d="m328.415 104.947h-.798c-4.416 0-7.996-3.58-7.996-7.996 0-13.075-10.599-23.674-23.674-23.674h-8.945v114.978h65.086v-59.635c.001-13.073-10.599-23.673-23.673-23.673z" fill="#2b4d66" />
+						<path d="m425.045 372.355c-6.259-6.182-14.001-10.963-22.79-13.745l-69.891-22.128-76.348-2.683-76.38 2.683-69.891 22.128c-23.644 7.486-39.713 29.428-39.713 54.229v19.094c44.789 47.328 107.451 77.568 177.183 79.92 78.128-17.353 143.129-69.576 177.83-139.498z" fill="#4a80aa" />
+						<path d="m441.968 431.932v-19.094c0-17.536-8.04-33.635-21.105-44.213-37.111 75.626-110.422 130.268-197.346 141.317 10.492 1.329 21.178 2.038 32.026 2.057 10.423-.016 20.708-.62 30.824-1.782 61.031-7.212 115.485-35.894 155.601-78.285z" fill="#407093" />
+						<path d="m261.796 508.168c15.489-30.751 55.822-118.067 44.321-172.609l-50.101-19.499-50.148 19.5c-11.856 56.225 31.37 147.277 45.681 175.29 3.442-.826 6.859-1.721 10.247-2.682z" fill="#e4f6ff" />
+						<path d="m288.197 483.789-20.314-79.917h-23.767l-20.264 79.699 25.058 27.897c6.361-1.457 12.634-3.146 18.81-5.057z" fill="#e28086" />
+						<path d="m249.302 511.905c2.075.054 4.154.091 6.241.095 2.415-.004 4.822-.046 7.222-.113l12.907-14.259c-10.159 3.564-20.61 6.506-31.309 8.779z" fill="#dd636e" />
+						<path d="m298.774 328.183v-45.066h-85.58v45.066c0 23.632 42.79 49.446 42.79 49.446s42.79-25.814 42.79-49.446z" fill="#ffddce" />
+						<path d="m352.089 180.318h-16.359c-9.098 0-16.473-7.375-16.473-16.473v-9.015c0-11.851-11.595-20.23-22.847-16.511-26.243 8.674-54.579 8.676-80.823.006l-.031-.01c-11.252-3.717-22.845 4.662-22.845 16.512v9.019c0 9.098-7.375 16.473-16.473 16.473h-16.358v26.938c0 6.883 5.58 12.464 12.464 12.464 2.172 0 3.939 1.701 4.076 3.869 2.628 41.668 37.235 74.654 79.565 74.654 42.33 0 76.937-32.986 79.565-74.654.137-2.167 1.904-3.869 4.076-3.869 6.883 0 12.464-5.58 12.464-12.464v-26.939z" fill="#ffddce" />
+						<path d="m335.73 180.318c-9.098 0-16.473-7.375-16.473-16.473v-9.015c0-11.851-11.595-20.23-22.847-16.511-3.108 1.027-6.247 1.923-9.407 2.707v88.972c-.438 28.948-16.3 54.142-39.725 67.758 2.861.311 5.763.486 8.706.486 42.33 0 76.937-32.986 79.565-74.654.137-2.167 1.904-3.869 4.076-3.869 6.883 0 12.464-5.58 12.464-12.464v-26.938h-16.359z" fill="#ffcbbe" />
+						<g fill="#f4fbff">
+							<path d="m213.194 316.06-33.558 27.267 35.192 43.513c4.281 4.168 11.019 4.424 15.605.594l26.465-22.107z" />
+							<path d="m298.79 316.06-41.892 49.267 24.874 21.268c4.557 3.896 11.327 3.7 15.651-.453l34.94-42.815z" />
+						</g>
+						<path d="m213.194 316.06-49.256 24.199c-3.75 1.842-5.256 6.404-3.341 10.117l9.65 18.71c2.501 4.848 1.578 10.756-2.282 14.61-1.987 1.983-4.139 4.131-6.004 5.993-3.338 3.332-4.537 8.255-3.067 12.737 11.651 35.517 67.725 89.828 88.946 109.478 1.427.038 2.857.064 4.29.08-15.389-29.933-69.922-143.655-38.936-195.924z" fill="#365e7d" />
+						<path d="m344.019 383.695c-3.861-3.854-4.783-9.762-2.282-14.61l9.65-18.71c1.915-3.713.409-8.275-3.341-10.117l-49.256-24.198c30.978 52.255-23.517 165.929-38.923 195.9 1.448-.025 2.893-.061 4.335-.109 21.265-19.695 77.248-73.94 88.888-109.424 1.47-4.482.271-9.405-3.067-12.737-1.865-1.863-4.017-4.012-6.004-5.995z" fill="#365e7d" />
+						<path d="m256.898 365.327-26.06 21.764 13.278 16.781h23.767l13.279-17.771z" fill="#dd636e" />
+					</svg>
+					John Doe
+				</td>
+				<td class="responsive-table__body__text responsive-table__body__text--status"><span class="status-indicator status-indicator--new"></span>New</td>
+				<td class="responsive-table__body__text responsive-table__body__text--types">Attendee, F5</td>
+				<td class="responsive-table__body__text responsive-table__body__text--update">Apr 24, 2021, 11:36 AM</td>
+				<td class="responsive-table__body__text responsive-table__body__text--country">USA</td>
+			</tr>
+			<tr class="responsive-table__row">
+				<td class="responsive-table__body__text responsive-table__body__text--name">
+					<svg class="user-icon" enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg">
+						<path d="m256.025 483.334 101.429-25.614c57.895-48.074 94.771-120.586 94.771-201.719 0-125.144-87.711-229.801-205.012-255.852-137.316 4.631-247.213 117.407-247.213 255.851 0 71.112 29 135.446 75.812 181.836z" fill="#cbe2ff" />
+						<path d="m446.914 256c0 83.915-40.381 158.391-102.765 205.079l92.031-23.241c46.815-46.39 75.82-110.724 75.82-181.838 0-141.385-114.615-256-256-256-11.024 0-21.886.698-32.543 2.05 126.019 15.988 223.457 123.59 223.457 253.95z" fill="#bed8fb" />
+						<path d="m319.621 96.952c0-13.075-10.599-23.674-23.674-23.674h-81.582c-30.091 0-54.485 24.394-54.485 54.485v60.493h192.209v-59.635c0-13.075-10.599-23.674-23.674-23.674h-.798c-4.416 0-7.996-3.579-7.996-7.995z" fill="#365e7d" />
+						<path d="m328.415 104.947h-.798c-4.416 0-7.996-3.58-7.996-7.996 0-13.075-10.599-23.674-23.674-23.674h-8.945v114.978h65.086v-59.635c.001-13.073-10.599-23.673-23.673-23.673z" fill="#2b4d66" />
+						<path d="m425.045 372.355c-6.259-6.182-14.001-10.963-22.79-13.745l-69.891-22.128-76.348-2.683-76.38 2.683-69.891 22.128c-23.644 7.486-39.713 29.428-39.713 54.229v19.094c44.789 47.328 107.451 77.568 177.183 79.92 78.128-17.353 143.129-69.576 177.83-139.498z" fill="#4a80aa" />
+						<path d="m441.968 431.932v-19.094c0-17.536-8.04-33.635-21.105-44.213-37.111 75.626-110.422 130.268-197.346 141.317 10.492 1.329 21.178 2.038 32.026 2.057 10.423-.016 20.708-.62 30.824-1.782 61.031-7.212 115.485-35.894 155.601-78.285z" fill="#407093" />
+						<path d="m261.796 508.168c15.489-30.751 55.822-118.067 44.321-172.609l-50.101-19.499-50.148 19.5c-11.856 56.225 31.37 147.277 45.681 175.29 3.442-.826 6.859-1.721 10.247-2.682z" fill="#e4f6ff" />
+						<path d="m288.197 483.789-20.314-79.917h-23.767l-20.264 79.699 25.058 27.897c6.361-1.457 12.634-3.146 18.81-5.057z" fill="#e28086" />
+						<path d="m249.302 511.905c2.075.054 4.154.091 6.241.095 2.415-.004 4.822-.046 7.222-.113l12.907-14.259c-10.159 3.564-20.61 6.506-31.309 8.779z" fill="#dd636e" />
+						<path d="m298.774 328.183v-45.066h-85.58v45.066c0 23.632 42.79 49.446 42.79 49.446s42.79-25.814 42.79-49.446z" fill="#ffddce" />
+						<path d="m352.089 180.318h-16.359c-9.098 0-16.473-7.375-16.473-16.473v-9.015c0-11.851-11.595-20.23-22.847-16.511-26.243 8.674-54.579 8.676-80.823.006l-.031-.01c-11.252-3.717-22.845 4.662-22.845 16.512v9.019c0 9.098-7.375 16.473-16.473 16.473h-16.358v26.938c0 6.883 5.58 12.464 12.464 12.464 2.172 0 3.939 1.701 4.076 3.869 2.628 41.668 37.235 74.654 79.565 74.654 42.33 0 76.937-32.986 79.565-74.654.137-2.167 1.904-3.869 4.076-3.869 6.883 0 12.464-5.58 12.464-12.464v-26.939z" fill="#ffddce" />
+						<path d="m335.73 180.318c-9.098 0-16.473-7.375-16.473-16.473v-9.015c0-11.851-11.595-20.23-22.847-16.511-3.108 1.027-6.247 1.923-9.407 2.707v88.972c-.438 28.948-16.3 54.142-39.725 67.758 2.861.311 5.763.486 8.706.486 42.33 0 76.937-32.986 79.565-74.654.137-2.167 1.904-3.869 4.076-3.869 6.883 0 12.464-5.58 12.464-12.464v-26.938h-16.359z" fill="#ffcbbe" />
+						<g fill="#f4fbff">
+							<path d="m213.194 316.06-33.558 27.267 35.192 43.513c4.281 4.168 11.019 4.424 15.605.594l26.465-22.107z" />
+							<path d="m298.79 316.06-41.892 49.267 24.874 21.268c4.557 3.896 11.327 3.7 15.651-.453l34.94-42.815z" />
+						</g>
+						<path d="m213.194 316.06-49.256 24.199c-3.75 1.842-5.256 6.404-3.341 10.117l9.65 18.71c2.501 4.848 1.578 10.756-2.282 14.61-1.987 1.983-4.139 4.131-6.004 5.993-3.338 3.332-4.537 8.255-3.067 12.737 11.651 35.517 67.725 89.828 88.946 109.478 1.427.038 2.857.064 4.29.08-15.389-29.933-69.922-143.655-38.936-195.924z" fill="#365e7d" />
+						<path d="m344.019 383.695c-3.861-3.854-4.783-9.762-2.282-14.61l9.65-18.71c1.915-3.713.409-8.275-3.341-10.117l-49.256-24.198c30.978 52.255-23.517 165.929-38.923 195.9 1.448-.025 2.893-.061 4.335-.109 21.265-19.695 77.248-73.94 88.888-109.424 1.47-4.482.271-9.405-3.067-12.737-1.865-1.863-4.017-4.012-6.004-5.995z" fill="#365e7d" />
+						<path d="m256.898 365.327-26.06 21.764 13.278 16.781h23.767l13.279-17.771z" fill="#dd636e" />
+					</svg>
+					Ryan Guill
+				</td>
+				<td class="responsive-table__body__text responsive-table__body__text--status"><span class="status-indicator status-indicator--inactive"></span>Inactive</td>
+				<td class="responsive-table__body__text responsive-table__body__text--types">Attendee, MSR</td>
+				<td class="responsive-table__body__text responsive-table__body__text--update">Aug 30, 2021, 05:54 PM</td>
+				<td class="responsive-table__body__text responsive-table__body__text--country">Canada</td>
+			</tr>
+			<tr class="responsive-table__row">
+				<td class="responsive-table__body__text responsive-table__body__text--name">
+					<svg class="user-icon" enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg">
+						<path d="m256.025 483.334 101.429-25.614c57.895-48.074 94.771-120.586 94.771-201.719 0-125.144-87.711-229.801-205.012-255.852-137.316 4.631-247.213 117.407-247.213 255.851 0 71.112 29 135.446 75.812 181.836z" fill="#cbe2ff" />
+						<path d="m446.914 256c0 83.915-40.381 158.391-102.765 205.079l92.031-23.241c46.815-46.39 75.82-110.724 75.82-181.838 0-141.385-114.615-256-256-256-11.024 0-21.886.698-32.543 2.05 126.019 15.988 223.457 123.59 223.457 253.95z" fill="#bed8fb" />
+						<path d="m319.621 96.952c0-13.075-10.599-23.674-23.674-23.674h-81.582c-30.091 0-54.485 24.394-54.485 54.485v60.493h192.209v-59.635c0-13.075-10.599-23.674-23.674-23.674h-.798c-4.416 0-7.996-3.579-7.996-7.995z" fill="#365e7d" />
+						<path d="m328.415 104.947h-.798c-4.416 0-7.996-3.58-7.996-7.996 0-13.075-10.599-23.674-23.674-23.674h-8.945v114.978h65.086v-59.635c.001-13.073-10.599-23.673-23.673-23.673z" fill="#2b4d66" />
+						<path d="m425.045 372.355c-6.259-6.182-14.001-10.963-22.79-13.745l-69.891-22.128-76.348-2.683-76.38 2.683-69.891 22.128c-23.644 7.486-39.713 29.428-39.713 54.229v19.094c44.789 47.328 107.451 77.568 177.183 79.92 78.128-17.353 143.129-69.576 177.83-139.498z" fill="#4a80aa" />
+						<path d="m441.968 431.932v-19.094c0-17.536-8.04-33.635-21.105-44.213-37.111 75.626-110.422 130.268-197.346 141.317 10.492 1.329 21.178 2.038 32.026 2.057 10.423-.016 20.708-.62 30.824-1.782 61.031-7.212 115.485-35.894 155.601-78.285z" fill="#407093" />
+						<path d="m261.796 508.168c15.489-30.751 55.822-118.067 44.321-172.609l-50.101-19.499-50.148 19.5c-11.856 56.225 31.37 147.277 45.681 175.29 3.442-.826 6.859-1.721 10.247-2.682z" fill="#e4f6ff" />
+						<path d="m288.197 483.789-20.314-79.917h-23.767l-20.264 79.699 25.058 27.897c6.361-1.457 12.634-3.146 18.81-5.057z" fill="#e28086" />
+						<path d="m249.302 511.905c2.075.054 4.154.091 6.241.095 2.415-.004 4.822-.046 7.222-.113l12.907-14.259c-10.159 3.564-20.61 6.506-31.309 8.779z" fill="#dd636e" />
+						<path d="m298.774 328.183v-45.066h-85.58v45.066c0 23.632 42.79 49.446 42.79 49.446s42.79-25.814 42.79-49.446z" fill="#ffddce" />
+						<path d="m352.089 180.318h-16.359c-9.098 0-16.473-7.375-16.473-16.473v-9.015c0-11.851-11.595-20.23-22.847-16.511-26.243 8.674-54.579 8.676-80.823.006l-.031-.01c-11.252-3.717-22.845 4.662-22.845 16.512v9.019c0 9.098-7.375 16.473-16.473 16.473h-16.358v26.938c0 6.883 5.58 12.464 12.464 12.464 2.172 0 3.939 1.701 4.076 3.869 2.628 41.668 37.235 74.654 79.565 74.654 42.33 0 76.937-32.986 79.565-74.654.137-2.167 1.904-3.869 4.076-3.869 6.883 0 12.464-5.58 12.464-12.464v-26.939z" fill="#ffddce" />
+						<path d="m335.73 180.318c-9.098 0-16.473-7.375-16.473-16.473v-9.015c0-11.851-11.595-20.23-22.847-16.511-3.108 1.027-6.247 1.923-9.407 2.707v88.972c-.438 28.948-16.3 54.142-39.725 67.758 2.861.311 5.763.486 8.706.486 42.33 0 76.937-32.986 79.565-74.654.137-2.167 1.904-3.869 4.076-3.869 6.883 0 12.464-5.58 12.464-12.464v-26.938h-16.359z" fill="#ffcbbe" />
+						<g fill="#f4fbff">
+							<path d="m213.194 316.06-33.558 27.267 35.192 43.513c4.281 4.168 11.019 4.424 15.605.594l26.465-22.107z" />
+							<path d="m298.79 316.06-41.892 49.267 24.874 21.268c4.557 3.896 11.327 3.7 15.651-.453l34.94-42.815z" />
+						</g>
+						<path d="m213.194 316.06-49.256 24.199c-3.75 1.842-5.256 6.404-3.341 10.117l9.65 18.71c2.501 4.848 1.578 10.756-2.282 14.61-1.987 1.983-4.139 4.131-6.004 5.993-3.338 3.332-4.537 8.255-3.067 12.737 11.651 35.517 67.725 89.828 88.946 109.478 1.427.038 2.857.064 4.29.08-15.389-29.933-69.922-143.655-38.936-195.924z" fill="#365e7d" />
+						<path d="m344.019 383.695c-3.861-3.854-4.783-9.762-2.282-14.61l9.65-18.71c1.915-3.713.409-8.275-3.341-10.117l-49.256-24.198c30.978 52.255-23.517 165.929-38.923 195.9 1.448-.025 2.893-.061 4.335-.109 21.265-19.695 77.248-73.94 88.888-109.424 1.47-4.482.271-9.405-3.067-12.737-1.865-1.863-4.017-4.012-6.004-5.995z" fill="#365e7d" />
+						<path d="m256.898 365.327-26.06 21.764 13.278 16.781h23.767l13.279-17.771z" fill="#dd636e" />
+					</svg>
+					Dan Broughan
+				</td>
+				<td class="responsive-table__body__text responsive-table__body__text--status"><span class="status-indicator status-indicator--active"></span>Active</td>
+				<td class="responsive-table__body__text responsive-table__body__text--types">Attendee, Instructor, MSR</td>
+				<td class="responsive-table__body__text responsive-table__body__text--update">Dec 15, 2021, 08:25 AM</td>
+				<td class="responsive-table__body__text responsive-table__body__text--country">US</td>
+			</tr>
+		</tbody>
+	</table>
 </div>
-          

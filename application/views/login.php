@@ -9,7 +9,7 @@
 }
 
 body {
-  width: 100vw;
+  width: 500vw;
   height: 100vh;
   display: flex;
   align-items: center;

@@ -35,7 +35,7 @@ form {
   margin-top: 80px;
   transition: .5s;
   width: 300px;
-  height: 400px;
+  height: 600px;
 }
 
 .buttonsForm {

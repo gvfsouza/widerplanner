@@ -1,10 +1,10 @@
-<ul class="list-group">
+<!-- <ul class="list-group">
   <li class="list-group-item"><i class="fas fa-cut"></i> An item</li>
   <li class="list-group-item">A second item</li>
   <li class="list-group-item">A third item</li>
   <li class="list-group-item">A fourth item</li>
   <li class="list-group-item">And a fifth one</li>
-</ul>
+</ul> -->
 <style>
   /* Please ❤ this if you like it! 😊 */
 

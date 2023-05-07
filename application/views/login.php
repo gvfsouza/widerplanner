@@ -10,7 +10,7 @@
 
 body {
   width: 100vw;
-  height: 100vh;
+  height: 150vh;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -71,17 +71,18 @@ input[type="text"], input[type="password"] {
   width: 100%;
 }
 
+
 button[type="submit"] {
-  background: #879bc9;
-  color: white;
-  border-radius: 30px;
-  width: 100%;
-  border: none;
-  outline: none;
-  padding: 8px 0 8px 15px;
-  font-size: 15px;
-  margin-top: 40px;
-  cursor: pointer;
+    background: #879bc9;
+    color: white;
+    border-radius: 30px;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 8px 0 8px 15px;
+    font-size: 15px;
+    margin-top: 40px;
+    cursor: pointer;
 }
 
 .divCheck {

@@ -72,7 +72,7 @@ input[type="text"], input[type="password"] {
 }
 
 button[type="submit"] {
-  background: #660fc8;
+  background: #879bc9;
   color: white;
   border-radius: 30px;
   width: 100%;
@@ -96,6 +96,7 @@ button[type="submit"] {
 
 #signup {
   left: 450px;
+  background:#879bc9;
 }
 
 i {

@@ -16,7 +16,6 @@
 
 :root {
   /* ===== Colors ===== */
-  --body-color: #ACCFE7;
   --sidebar-color: #FFF;
   --primary-color: #2B90F0;
   --primary-color-light: #F6F5FF;

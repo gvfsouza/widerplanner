@@ -57,7 +57,7 @@ form {
   position: absolute;
   width: 108px;
   height: 100%;
-  background: linear-gradient(to right, #5956e9, #a963f8);
+  background: #879bc9;
   border-radius: 30px;
   transition: .3s;
 }
@@ -97,7 +97,6 @@ button[type="submit"] {
 
 #signup {
   left: 450px;
-  background:#879bc9;
 }
 
 i {

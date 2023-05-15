@@ -18,7 +18,7 @@
   /* ===== Colors ===== */
   --sidebar-color: #FFF;
   --primary-color: #2B90F0;
-  --primary-color-light: #F6F5FF;
+  --primary-color-light: #879bc9;
   --toggle-color: #DDD;
   --text-color: #4c4d4f;
 

@@ -14,19 +14,20 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/* 
 :root {
-  --body-color: #E4E9F7;
+  /* ===== Colors ===== */
+  --body-color: #ACCFE7;
   --sidebar-color: #FFF;
-  --primary-color: #695CFE;
+  --primary-color: #2B90F0;
   --primary-color-light: #F6F5FF;
   --toggle-color: #DDD;
-  --text-color: #707070;
+  --text-color: #4c4d4f;
 
+  /* ===== Transition ===== */
   --tran-03: all 0.2s ease;
   --tran-04: all 0.3s ease;
   --tran-05: all 0.3s ease;
-} */
+}
 
 body {
   min-height: 100vh;

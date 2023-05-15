@@ -17,8 +17,8 @@
 :root {
   /* ===== Colors ===== */
   --sidebar-color: #FFF;
-  --primary-color: #2B90F0;
-  --primary-color-light: #879bc9;
+  --primary-color: #879bc9;
+  --primary-color-light: #F6F5FF;
   --toggle-color: #DDD;
   --text-color: #4c4d4f;
 

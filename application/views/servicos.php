@@ -21,6 +21,57 @@
 
 <body>
     <style>
+        @import "animate.css";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.testimonial {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: #f6f1f1;
+  padding-top: 0px;
+}
+
+.testimonial-cards {
+  max-width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 28px;
+  background-color: white;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
+  border-radius: 10px;
+}
+.testimonial-cards img {
+  width: 150px;
+  height: 150px;
+  padding: 10px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.review {
+  font-size: 15px;
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 20px;
+}
+
+.testimonial-cards:hover {
+  background: black;
+  color: white;
+  border: 5px solid white;
+  transform: scale(1.1);
+  transition: all 0.5s ease;
+}
+
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
 
         * {
@@ -226,6 +277,37 @@
 
     </div>
 
+
+    <div class="testimonial">
+
+  <div class="testimonial-cards">
+    <img src="https://images.unsplash.com/photo-1528892952291-009c663ce843?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTR8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=400&q=60">
+    <div class="review">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pretium fusce id velit ut tortor.
+      </p>
+
+    </div>
+  </div>
+  <div class="testimonial-cards">
+    <img src="https://images.unsplash.com/photo-1528892952291-009c663ce843?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTR8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=400&q=60">
+    <div class="review">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pretium fusce id velit ut tortor.
+      </p>
+
+    </div>
+  </div>
+  <div class="testimonial-cards">
+    <img src="https://images.unsplash.com/photo-1528892952291-009c663ce843?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTR8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=400&q=60">
+    <div class="review">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pretium fusce id velit ut tortor.
+      </p>
+
+    </div>
+  </div>
+</div>
 </body>
 
 </html>

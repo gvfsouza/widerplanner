@@ -49,7 +49,7 @@
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
   border-radius: 10px;
 }
-.testimonial-cards img {
+.testimonial-cards .circulo {
   width: 150px;
   height: 150px;
   padding: 10px;
@@ -136,12 +136,12 @@
             background-color: hsl(257, 100%, 72%);
         }
 
-        .card-header.header-img {
+        .card-header.header-,circulo {
             padding: 0;
             overflow: hidden;
         }
 
-        .card-header.header-img>img {
+        .card-header.header-.circulo>.circulo {
             display: block;
             width: 100%;
             max-height: 200px;
@@ -281,7 +281,7 @@
     <div class="testimonial">
 
   <div class="testimonial-cards">
-    <img src="https://images.unsplash.com/photo-1528892952291-009c663ce843?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTR8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=400&q=60">
+    <div class="circulo"></div>
     <div class="review">
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pretium fusce id velit ut tortor.
@@ -289,24 +289,7 @@
 
     </div>
   </div>
-  <div class="testimonial-cards">
-    <img src="https://images.unsplash.com/photo-1528892952291-009c663ce843?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTR8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=400&q=60">
-    <div class="review">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pretium fusce id velit ut tortor.
-      </p>
-
-    </div>
-  </div>
-  <div class="testimonial-cards">
-    <img src="https://images.unsplash.com/photo-1528892952291-009c663ce843?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTR8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=400&q=60">
-    <div class="review">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pretium fusce id velit ut tortor.
-      </p>
-
-    </div>
-  </div>
+  
 </div>
 </body>
 

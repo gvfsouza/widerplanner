@@ -42,7 +42,7 @@ form {
   margin-top: 40px;
   position: relative;
   border-radius: 30px;
-  box-shadow: 0 0 7px 0 blueviolet;
+  box-shadow: 0 0 7px 0 #879bc9;
 }
 
 .buttonsForm button {
@@ -58,14 +58,14 @@ form {
   width: 108px;
   height: 100%;
   background: #879bc9;
-  border-radius: 30px;
+  border-radius: 5px;
   transition: .3s;
 }
 
 input[type="text"], input[type="password"] {
   border: none;
   margin-top: 40px;
-  border-radius: 60px;
+  border-radius: 5px;
   padding: 8px 0 8px 35px;
   outline: none;
   width: 100%;
@@ -75,7 +75,7 @@ input[type="text"], input[type="password"] {
 button[type="submit"] {
     background: #879bc9;
     color: white;
-    border-radius: 30px;
+    border-radius: 5px;
     width: 100%;
     border: none;
     outline: none;
@@ -121,7 +121,7 @@ i {
   <div class="container">
     <div class="buttonsForm">
       <div class="btnColor"></div>
-      <button id="btnSignin">Sign in</button>
+      <button id="btnSignin" style="border-radius:5px">Sign in</button>
       <button id="btnSignup">Sign up</button>
     </div>
 

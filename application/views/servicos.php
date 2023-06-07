@@ -213,6 +213,8 @@
         /* box-shadow: 0px 0px 10px #879bc9; */
         border-radius: 5px;
         background-color: #879bc9;
+        font-size:22px;
+        color:black;
     }
 
     .profile-info>.profile-desc {

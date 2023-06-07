@@ -280,199 +280,118 @@
     }
     </style>
 
-    <!-- <div class="row justify-content-center d-flex align-items-center h-100 w-100"> -->
-        <div class="col-xl-6 col-lg-12 col-md-9" style="display: contents">
-            <div class="card-container d-flex justify-content-around">
-                <div class="card" style="max-width: 270px;width: 270px; border: 2px solid #B98F56">
-                    <header class="card-header header-img">
-                        <img src="img/pintar-cabelo.jpg" alt="">
-                        <p class="header-title">Mechas</p>
-                    </header>
-                    <div class="card-body"><i class="fas fa-dollar-sign"></i> R$250,00</div>
-                    <div class="card-body"><i class="fas fa-clock"></i> 02h00</div>
-                </div>
-                <div class="card" style="max-width: 270px;width: 270px;">
-                    <header class="card-header header-img">
-                        <img src="img/corte_feminino.jpg" alt="">
-                        <p class="header-title">Corte</p>
-                    </header>
-                    <div class="card-body"><i class="fas fa-dollar-sign"></i> R$40,00</div>
-                    <div class="card-body"><i class="fas fa-clock"></i> 30min</div>
-                </div>
-                <div class="card" style="max-width: 270px;width: 270px;">
-                    <header class="card-header header-img">
-                        <img src="img/selagem.jpg" alt="">
-                        <p class="header-title">Manicure</p>
-                    </header>
-                    <div class="card-body"><i class="fas fa-dollar-sign"></i> R$35,00</div>
-                    <div class="card-body"><i class="fas fa-clock"></i> 01h</div>
-                </div>
-                <div class="card" style="max-width: 270px;width: 270px;">
-                    <header class="card-header header-img">
-                        <img src="img/progressiva.jpg" alt="">
-                        <p class="header-title">Progressiva</p>
-                    </header>
-                    <div class="card-body"><i class="fas fa-dollar-sign"></i> R$320,00</div>
-                    <div class="card-body"><i class="fas fa-clock"></i> 03h 30min</div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- <div class="row justify-content-center d-flex align-items-center h-100 w-100"> -->
-        <div class="col-xl-6 col-lg-12 col-md-9" style="display: contents">
-            <div class="card-container d-flex justify-content-around">
-                <div class="card" style="max-width: 270px;width: 270px;">
-                    <header class="card-header header-img">
-                        <img src="img/hidratacao.jpg" alt="">
-                        <p class="header-title">Hidratação Capilar</p>
-                    </header>
-                    <div class="card-body"><i class="fas fa-dollar-sign"></i> R$60,00</div>
-                    <div class="card-body"><i class="fas fa-clock"></i> 45min</div>
-                </div>
-                <div class="card" style="max-width: 270px;width: 270px;">
-                    <header class="card-header header-img">
-                        <img src="img/coloracao-barba.jpg" alt="">
-                        <p class="header-title">Designer de Sobrancelha</p>
-                    </header>
-                    <div class="card-body"><i class="fas fa-dollar-sign"></i> R$50,00</div>
-                    <div class="card-body"><i class="fas fa-clock"></i> 40min</div>
-                </div>
-                
-                <div class="card" style="max-width: 270px;width: 270px;">
-                    <header class="card-header header-img">
-                        <img src="img/corte-infantil.jpg" alt="">
-                        <p class="header-title">Maquiagem</p>
-                    </header>
-                    <div class="card-body"><i class="fas fa-dollar-sign"></i> R$85,00</div>
-                    <div class="card-body"><i class="fas fa-clock"></i> 50min</div>
-                </div>
-                <div class="card" style="max-width: 270px;width: 270px;">
-                    <header class="card-header header-img">
-                        <img src="img/design-sobrancelha.jpg" alt="">
-                        <p class="header-title">Botox</p>
-                    </header>
-                    <div class="card-body"><i class="fas fa-dollar-sign"></i> R$70,00</div>
-                    <div class="card-body"><i class="fas fa-clock"></i> 40min</div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
     <div class="card-container">
-    <div class="card-profile">
-        <div class="card-header-profile">
-            <div class="profile-image"></div>
-            <div class="profile-info">
-                <h3 class="profile-name">Mechas</h3>
-                <br>
-                <p class="profile-desc">Descrição (se tiver)</p>
+        <div class="card-profile">
+            <div class="card-header-profile">
+                <div class="profile-image"></div>
+                <div class="profile-info">
+                    <h3 class="profile-name">Mechas</h3>
+                    <br>
+                    <p class="profile-desc">Descrição (se tiver)</p>
+                </div>
+            </div>
+            <div class="profile-card-body">
+                <ul class="status">
+                    <li>
+                        <span class="status-value">R$</span>
+                        <span class="status-text">250,00</span>
+                    </li>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <li>
+                        <span class="status-value"><i class="fas fa-clock"></i></span>
+                        <span class="status-text">02h00</span>
+                    </li>
+                </ul>
+
+                <div class="action">
+                    <button class="btn btn-success" style="width: 100%;">Select</button>
+                </div>
             </div>
         </div>
-        <div class="profile-card-body">
-            <ul class="status">
-                <li>
-                    <span class="status-value">R$</span>
-                    <span class="status-text">250,00</span>
-                </li>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <li>
-                    <span class="status-value"><i class="fas fa-clock"></i></span>
-                    <span class="status-text">02h00</span>
-                </li>
-            </ul>
+        <div class="card-profile">
+            <div class="card-header-profile">
+                <div class="profile-image"></div>
+                <div class="profile-info">
+                    <h3 class="profile-name">Corte</h3>
+                    <br>
+                    <p class="profile-desc">Descrição (se tiver)</p>
+                </div>
+            </div>
+            <div class="profile-card-body">
+                <ul class="status">
+                    <li>
+                        <span class="status-value">R$</span>
+                        <span class="status-text">40,00</span>
+                    </li>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <li>
+                        <span class="status-value"><i class="fas fa-clock"></i></span>
+                        <span class="status-text">30min</span>
+                    </li>
+                </ul>
 
-            <div class="action">
-                <button class="btn btn-success" style="width: 100%;">Select</button>
+                <div class="action">
+                    <button class="btn btn-success" style="width: 100%;">Select</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="card-profile">
+            <div class="card-header-profile">
+                <div class="profile-image"></div>
+                <div class="profile-info">
+                    <h3 class="profile-name">Manicure</h3>
+                    <br>
+                    <p class="profile-desc">Descrição (se tiver)</p>
+                </div>
+            </div>
+            <div class="profile-card-body">
+                <ul class="status">
+                    <li>
+                        <span class="status-value">R$</span>
+                        <span class="status-text">35,00</span>
+                    </li>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <li>
+                        <span class="status-value"><i class="fas fa-clock"></i></span>
+                        <span class="status-text">01h00</span>
+                    </li>
+                </ul>
+
+                <div class="action">
+                    <button class="btn btn-success" style="width: 100%;">Select</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-profile">
+            <div class="card-header-profile">
+                <div class="profile-image"></div>
+                <div class="profile-info">
+                    <h3 class="profile-name">Progressiva</h3>
+                    <br>
+                    <p class="profile-desc">Descrição (se tiver)</p>
+                </div>
+            </div>
+            <div class="profile-card-body">
+                <ul class="status">
+                    <li>
+                        <span class="status-value">R$</span>
+                        <span class="status-text">310,00</span>
+                    </li>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <li>
+                        <span class="status-value"><i class="fas fa-clock"></i></span>
+                        <span class="status-text">03h30</span>
+                    </li>
+                </ul>
+
+                <div class="action">
+                    <button class="btn btn-success" style="width: 100%;">Select</button>
+                </div>
             </div>
         </div>
     </div>
-    <div class="card-profile">
-        <div class="card-header-profile">
-            <div class="profile-image"></div>
-            <div class="profile-info">
-                <h3 class="profile-name">Corte</h3>
-                <br>
-                <p class="profile-desc">Descrição (se tiver)</p>
-            </div>
-        </div>
-        <div class="profile-card-body">
-            <ul class="status">
-                <li>
-                    <span class="status-value">R$</span>
-                    <span class="status-text">40,00</span>
-                </li>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <li>
-                    <span class="status-value"><i class="fas fa-clock"></i></span>
-                    <span class="status-text">30min</span>
-                </li>
-            </ul>
-
-            <div class="action">
-                <button class="btn btn-success" style="width: 100%;">Select</button>
-            </div>
-        </div>
-
-    </div>
-    <div class="card-profile">
-        <div class="card-header-profile">
-            <div class="profile-image"></div>
-            <div class="profile-info">
-                <h3 class="profile-name">Manicure</h3>
-                <br>
-                <p class="profile-desc">Descrição (se tiver)</p>
-            </div>
-        </div>
-        <div class="profile-card-body">
-            <ul class="status">
-                <li>
-                    <span class="status-value">R$</span>
-                    <span class="status-text">35,00</span>
-                </li>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <li>
-                    <span class="status-value"><i class="fas fa-clock"></i></span>
-                    <span class="status-text">01h00</span>
-                </li>
-            </ul>
-
-            <div class="action">
-                <button class="btn btn-success" style="width: 100%;">Select</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="card-profile">
-        <div class="card-header-profile">
-            <div class="profile-image"></div>
-            <div class="profile-info">
-                <h3 class="profile-name">Progressiva</h3>
-                <br>
-                <p class="profile-desc">Descrição (se tiver)</p>
-            </div>
-        </div>
-        <div class="profile-card-body">
-            <ul class="status">
-                <li>
-                    <span class="status-value">R$</span>
-                    <span class="status-text">310,00</span>
-                </li>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <li>
-                    <span class="status-value"><i class="fas fa-clock"></i></span>
-                    <span class="status-text">03h30</span>
-                </li>
-            </ul>
-
-            <div class="action">
-                <button class="btn btn-success" style="width: 100%;">Select</button>
-            </div>
-        </div>
-    </div>
-</div>
 </body>
 
 </html>

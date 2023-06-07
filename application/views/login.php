@@ -14,6 +14,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #879bc942
 }
 
 .container {
@@ -69,6 +70,7 @@ input[type="text"], input[type="password"] {
   padding: 8px 0 8px 35px;
   outline: none;
   width: 100%;
+  box-shadow: 0 0 7px 0 #879bc9;
 }
 
 

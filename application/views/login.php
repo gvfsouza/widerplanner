@@ -41,7 +41,7 @@ form {
 .buttonsForm {
   margin-top: 40px;
   position: relative;
-  border-radius: 30px;
+  border-radius: 5px;
   box-shadow: 0 0 7px 0 #879bc9;
 }
 

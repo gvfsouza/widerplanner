@@ -18,7 +18,7 @@ body {
 }
 
 .container {
-  background-color: whitesmoke;
+  background-color: white;
   padding: 6px;
   width: 350px;
   height: 450px;

@@ -267,7 +267,8 @@ body {
 					Dan Broughan
 				</td>
 				<td class="responsive-table__body__text responsive-table__body__text--update">Jul 17, 2021, 01:14 PM</td>
-				<td class="responsive-table__body__text responsive-table__body__text--status"><span class="status-indicator status-indicator--active"></span>Active</td>
+				<td class="responsive-table__body__text responsive-table__body__text--update">Apr 24, 2021, 11:36 AM</td>
+
 				<td class="responsive-table__body__text responsive-table__body__text--types">Attendee, Instructor, MSR</td>
 				<td class="responsive-table__body__text responsive-table__body__text--update">Dec 15, 2021, 08:25 AM</td>
 
@@ -328,7 +329,6 @@ body {
 				</td>
 				<td class="responsive-table__body__text responsive-table__body__text--status"><span class="status-indicator status-indicator--new"></span>New</td>
 				<td class="responsive-table__body__text responsive-table__body__text--types">Attendee, F5</td>
-				<td class="responsive-table__body__text responsive-table__body__text--update">Apr 24, 2021, 11:36 AM</td>
 
 			</tr>
 		</tbody>

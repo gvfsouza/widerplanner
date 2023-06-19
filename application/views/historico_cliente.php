@@ -217,11 +217,11 @@ body {
 }
 
 th{
-	font-size:15px;
+	font-size: 15px;
 }
 
 td{
-	font-size:12px
+	font-size: 12px;
 }
 
 </style>
@@ -262,14 +262,14 @@ td{
 							<tr>
 								<th scope="row">Pigmetação</th>
 								<td>12/02/23</td>
-								<td>17h</td>
+								<td>17h00</td>
 								<td>Thiago</td>
 								<td>Barbearia do Oreia</td>
 							</tr>
 							<tr>
 								<th scope="row">Luzes</th>
 								<td>07/01/23</td>
-								<td>15h</td>
+								<td>15h00</td>
 								<td>Giovane</td>
 								<td>Barber Men</td>
 							</tr>

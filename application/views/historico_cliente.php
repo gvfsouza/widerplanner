@@ -275,7 +275,7 @@ body {
 				</td>
 				<td class="responsive-table__body__text responsive-table__body__text--status"><span class="status-indicator status-indicator--active"></span>Active</td>
 				<td class="responsive-table__body__text responsive-table__body__text--types">Attendee, F1</td>
-
+				<td class="responsive-table__body__text responsive-table__body__text--update">Apr 24, 2021, 11:36 AM</td>
 			</tr>
 			<tr class="responsive-table__row">
 				<td class="responsive-table__body__text responsive-table__body__text--name">
@@ -328,7 +328,6 @@ body {
 				</td>
 				<td class="responsive-table__body__text responsive-table__body__text--status"><span class="status-indicator status-indicator--new"></span>New</td>
 				<td class="responsive-table__body__text responsive-table__body__text--types">Attendee, F5</td>
-				<td class="responsive-table__body__text responsive-table__body__text--update">Apr 24, 2021, 11:36 AM</td>
 			</tr>
 		</tbody>
 	</table>

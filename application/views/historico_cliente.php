@@ -254,21 +254,21 @@ td{
 										</thead>
 										<tbody>
 											<tr>
-												<th scope="row" style="font-size: 11px;">Corte Masculino</th>
+												<td style="font-size: 11px;">Corte Masculino</td>
 												<td style="font-size: 11px;">05/03/23</td>
 												<td style="font-size: 11px;">14h 30min</td>
 												<td style="font-size: 11px;">Cristian</td>
 												<td style="font-size: 11px;">Barbearia Gava`s</td>
 											</tr>
 											<tr> 
-												<th scope="row" style="font-size: 11px;">Pigmetação</th>
+												<td style="font-size: 11px;">Pigmetação</td>
 												<td style="font-size: 11px;">12/02/23</td>
 												<td style="font-size: 11px;">17h00</td>
 												<td style="font-size: 11px;">Thiago</td>
 												<td style="font-size: 11px;">Barbearia do Oreia</td>
 											</tr>
 											<tr>
-												<th scope="row" style="font-size: 11px;">Luzes</th>
+												<td style="font-size: 11px;">Luzes</td>
 												<td style="font-size: 11px;">07/01/23</td>
 												<td style="font-size: 11px;">15h00</td>
 												<td style="font-size: 11px;">Giovane</td>

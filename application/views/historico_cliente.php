@@ -245,11 +245,11 @@ td{
 									<table class="table">
 										<thead>
 											<tr>
-											<th scope="col">Serviço</th>
-											<th scope="col">Data</th>
-											<th scope="col">Hora</th>
-											<th scope="col">Profissional</th>
-											<th scope="col">Estabelecimento</th>
+											<th scope="col" style="font-size: 15px;">Serviço</th>
+											<th scope="col" style="font-size: 15px;">Data</th>
+											<th scope="col" style="font-size: 15px;">Hora</th>
+											<th scope="col" style="font-size: 15px;">Profissional</th>
+											<th scope="col" style="font-size: 15px;">Estabelecimento</th>
 											</tr>
 										</thead>
 										<tbody>

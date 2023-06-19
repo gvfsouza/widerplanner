@@ -216,6 +216,14 @@ body {
 	}
 }
 
+th{
+	font-size:15px;
+}
+
+td{
+	font-size:12px
+}
+
 </style>
 <!-- /* Please ❤ this if you like it! 😊 */ -->
 

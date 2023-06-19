@@ -225,62 +225,63 @@ td{
 }
 
 </style>
-<!-- /* Please ❤ this if you like it! 😊 */ -->
 
-<!-- Page wrapper/Container Section -->
-<div class="container">
-	<div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="" role="tabpanel">
-			<form action="">
-				<div class="p-3 bg-white">
-					<div class="row">
-						<div class="col-12">
-							<fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 7px; border: 1px solid #879bc9;background: #879bc9;color: black;">
-							<div>
-								<legend class="form-group" style="color: white; font-size: 18px;">
-								<strong>Histórico</strong>
-								</legend>
+<div class="card shadow mb-4">
+    <div class="card-header py-3" style="background-color: white;">
+		<div class="container">
+			<div class="tab-content" id="myTabContent">
+				<div class="tab-pane fade show active" id="" role="tabpanel">
+					<form action="">
+						<div class="p-3 bg-white">
+							<div class="row">
+								<div class="col-12">
+									<fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 7px; border: 1px solid #879bc9;background: #879bc9;color: black;">
+									<div>
+										<legend class="form-group" style="color: white; font-size: 18px;">
+										<strong>Histórico</strong>
+										</legend>
+									</div>
+									</fieldset>
+									<table class="table">
+										<thead>
+											<tr>
+											<th scope="col">Serviço</th>
+											<th scope="col">Data</th>
+											<th scope="col">Hora</th>
+											<th scope="col">Profissional</th>
+											<th scope="col">Estabelecimento</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th scope="row">Corte Masculino</th>
+												<td>05/03/23</td>
+												<td>14h 30min</td>
+												<td>Cristian</td>
+												<td>Barbearia Gava`s</td>
+											</tr>
+											<tr>
+												<th scope="row">Pigmetação</th>
+												<td>12/02/23</td>
+												<td>17h00</td>
+												<td>Thiago</td>
+												<td>Barbearia do Oreia</td>
+											</tr>
+											<tr>
+												<th scope="row">Luzes</th>
+												<td>07/01/23</td>
+												<td>15h00</td>
+												<td>Giovane</td>
+												<td>Barber Men</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 							</div>
-							</fieldset>
-							<table class="table">
-								<thead>
-									<tr>
-									<th scope="col">Serviço</th>
-									<th scope="col">Data</th>
-									<th scope="col">Hora</th>
-									<th scope="col">Profissional</th>
-									<th scope="col">Estabelecimento</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<th scope="row">Corte Masculino</th>
-										<td>05/03/23</td>
-										<td>14h 30min</td>
-										<td>Cristian</td>
-										<td>Barbearia Gava`s</td>
-									</tr>
-									<tr>
-										<th scope="row">Pigmetação</th>
-										<td>12/02/23</td>
-										<td>17h00</td>
-										<td>Thiago</td>
-										<td>Barbearia do Oreia</td>
-									</tr>
-									<tr>
-										<th scope="row">Luzes</th>
-										<td>07/01/23</td>
-										<td>15h00</td>
-										<td>Giovane</td>
-										<td>Barber Men</td>
-									</tr>
-								</tbody>
-							</table>
 						</div>
-					</div>
+					</form>
 				</div>
-			</form>
+			</div>
 		</div>
 	</div>
-
 </div>

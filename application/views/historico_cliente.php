@@ -240,6 +240,9 @@ body {
 		<!-- Responsive Table Body Section -->
 		<tbody class="responsive-table__body">
 			<tr class="responsive-table__row">
+				
+				<td class="responsive-table__body__text responsive-table__body__text--update">Dec 15, 2021, 08:25 AM</td>
+				<td class="responsive-table__body__text responsive-table__body__text--status"><span class="status-indicator status-indicator--active"></span>Active</td>
 				<td class="responsive-table__body__text responsive-table__body__text--name">
 					<svg class="user-icon" enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg">
 						<path d="m256.025 483.334 101.429-25.614c57.895-48.074 94.771-120.586 94.771-201.719 0-125.144-87.711-229.801-205.012-255.852-137.316 4.631-247.213 117.407-247.213 255.851 0 71.112 29 135.446 75.812 181.836z" fill="#cbe2ff" />
@@ -263,11 +266,12 @@ body {
 						<path d="m256.898 365.327-26.06 21.764 13.278 16.781h23.767l13.279-17.771z" fill="#dd636e" />
 					</svg>
 					Dan Broughan
-				</td>
-				<td class="responsive-table__body__text responsive-table__body__text--update">Dec 15, 2021, 08:25 AM</td>
-				<td class="responsive-table__body__text responsive-table__body__text--status"><span class="status-indicator status-indicator--active"></span>Active</td>
+				</td>			
 			</tr>
 			<tr class="responsive-table__row">
+				<td class="responsive-table__body__text responsive-table__body__text--update">Jul 17, 2021, 01:14 PM</td>
+				<td class="responsive-table__body__text responsive-table__body__text--status"><span class="status-indicator status-indicator--active"></span>Active</td>
+				<td class="responsive-table__body__text responsive-table__body__text--update">Apr 24, 2021, 11:36 AM</td>
 				<td class="responsive-table__body__text responsive-table__body__text--name">
 					<svg class="user-icon" enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg">
 						<path d="m256.025 483.334 101.429-25.614c57.895-48.074 94.771-120.586 94.771-201.719 0-125.144-87.711-229.801-205.012-255.852-137.316 4.631-247.213 117.407-247.213 255.851 0 71.112 29 135.446 75.812 181.836z" fill="#cbe2ff" />
@@ -292,11 +296,11 @@ body {
 					</svg>
 					Developer Zahid
 				</td>
-				<td class="responsive-table__body__text responsive-table__body__text--update">Jul 17, 2021, 01:14 PM</td>
-				<td class="responsive-table__body__text responsive-table__body__text--status"><span class="status-indicator status-indicator--active"></span>Active</td>
-				<td class="responsive-table__body__text responsive-table__body__text--update">Apr 24, 2021, 11:36 AM</td>
 			</tr>
-			<tr class="responsive-table__row">
+			<tr class="responsive-table__row">				
+				<td class="responsive-table__body__text responsive-table__body__text--status"><span class="status-indicator status-indicator--new"></span>New</td>
+				Apr 24, 2021, 11:36 AM
+				<td class="responsive-table__body__text responsive-table__body__text--types">Attendee, F5</td>
 				<td class="responsive-table__body__text responsive-table__body__text--name">
 					<svg class="user-icon" enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg">
 						<path d="m256.025 483.334 101.429-25.614c57.895-48.074 94.771-120.586 94.771-201.719 0-125.144-87.711-229.801-205.012-255.852-137.316 4.631-247.213 117.407-247.213 255.851 0 71.112 29 135.446 75.812 181.836z" fill="#cbe2ff" />
@@ -321,9 +325,6 @@ body {
 					</svg>
 					John Doe
 				</td>
-				
-				<td class="responsive-table__body__text responsive-table__body__text--status"><span class="status-indicator status-indicator--new"></span>New</td>
-				<td class="responsive-table__body__text responsive-table__body__text--types">Attendee, F5</td>
 			</tr>
 		</tbody>
 	</table>

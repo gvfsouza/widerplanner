@@ -245,34 +245,34 @@ td{
 									<table class="table">
 										<thead>
 											<tr>
-											<th scope="col" style="font-size: 15px;">Serviço</th>
-											<th scope="col" style="font-size: 15px;">Data</th>
-											<th scope="col" style="font-size: 15px;">Hora</th>
-											<th scope="col" style="font-size: 15px;">Profissional</th>
-											<th scope="col" style="font-size: 15px;">Estabelecimento</th>
+											<th scope="col" style="font-size: 13px;">Serviço</th>
+											<th scope="col" style="font-size: 13px;">Data</th>
+											<th scope="col" style="font-size: 13px;">Hora</th>
+											<th scope="col" style="font-size: 13px;">Profissional</th>
+											<th scope="col" style="font-size: 13px;">Estabelecimento</th>
 											</tr>
 										</thead>
 										<tbody>
 											<tr>
-												<th scope="row">Corte Masculino</th>
-												<td>05/03/23</td>
-												<td>14h 30min</td>
-												<td>Cristian</td>
-												<td>Barbearia Gava`s</td>
+												<th scope="row" style="font-size: 11px;">Corte Masculino</th>
+												<td style="font-size: 11px;">05/03/23</td>
+												<td style="font-size: 11px;">14h 30min</td>
+												<td style="font-size: 11px;">Cristian</td>
+												<td style="font-size: 11px;">Barbearia Gava`s</td>
+											</tr>
+											<tr> 
+												<th scope="row" style="font-size: 11px;">Pigmetação</th>
+												<td style="font-size: 11px;">12/02/23</td>
+												<td style="font-size: 11px;">17h00</td>
+												<td style="font-size: 11px;">Thiago</td>
+												<td style="font-size: 11px;">Barbearia do Oreia</td>
 											</tr>
 											<tr>
-												<th scope="row">Pigmetação</th>
-												<td>12/02/23</td>
-												<td>17h00</td>
-												<td>Thiago</td>
-												<td>Barbearia do Oreia</td>
-											</tr>
-											<tr>
-												<th scope="row">Luzes</th>
-												<td>07/01/23</td>
-												<td>15h00</td>
-												<td>Giovane</td>
-												<td>Barber Men</td>
+												<th scope="row" style="font-size: 11px;">Luzes</th>
+												<td style="font-size: 11px;">07/01/23</td>
+												<td style="font-size: 11px;">15h00</td>
+												<td style="font-size: 11px;">Giovane</td>
+												<td style="font-size: 11px;">Barber Men</td>
 											</tr>
 										</tbody>
 									</table>

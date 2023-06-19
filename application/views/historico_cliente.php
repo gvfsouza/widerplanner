@@ -226,7 +226,7 @@ td{
 
 </style>
 
-<div class="card shadow mb-4">
+<div class="card shadow mb-4 w-100">
     <div class="card-header py-3" style="background-color: white;">
 		<div class="container">
 			<div class="tab-content" id="myTabContent">

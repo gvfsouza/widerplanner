@@ -101,6 +101,21 @@ label{
             </form>
           </div>
         </div>
+        <form action="">
+						<div class="p-3 bg-white">
+							<div class="row">
+								<div class="col-12">
+									<fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 7px; border: 1px solid #879bc9;background: #879bc9;color: black;">
+									<div>
+										<legend class="form-group" style="color: white; font-size: 18px;"> <i class="fas fa-clipboard-list"></i> 
+										<strong>Histórico</strong>
+										</legend>
+									</div>
+									</fieldset>
+								</div>
+							</div>
+						</div>
+					</form>
       </div>
     </div>
     

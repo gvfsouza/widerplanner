@@ -11,12 +11,12 @@
 
        /* muda a cor do fundo dos itens quando passa o mouse */
        .nav-item .nav-link:hover {
-           background-color: white;
+           background-color: #4e6cb1;
        }
 
        /* cor do ícone quando passa o mouse */
        .nav-item .nav-link:hover .icon {
-           color: #4e6cb1;
+           color: #879bc9;
        }
 
        /* cor do link quando passa o mouse */

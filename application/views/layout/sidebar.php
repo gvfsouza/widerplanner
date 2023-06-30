@@ -37,7 +37,7 @@
        }
 
    </style><!-- Sidebar -->
-   <ul class="navbar-nav  sidebar " id="accordionSidebar" style="background-color: #55a69fd9;">
+   <ul class="navbar-nav  sidebar " id="accordionSidebar" style="background-color: #879bc9;">
 
        <li class="nav-item">
            <a class="nav-link" href="#">

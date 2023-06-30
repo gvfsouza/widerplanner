@@ -47,14 +47,14 @@
 
        <li class="nav-item">
            <a title="Gerenciar Usuários" class="nav-link" href="#">
-               <i class="fas fa-syringe icon"></i>
+            <i class="fas fa-user icon"></i>
                <span class="link">Perfil </span>
            </a>
        </li>
 
        <li class="nav-item">
            <a title="Gerenciar Usuários" class="nav-link" href="#">
-               <i class="fas fa-users icon"></i>
+               <!-- <i class="fas fa-users icon"></i> -->
                <span class="link">Serviços</span>
            </a>
        </li>

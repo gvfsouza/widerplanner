@@ -16,7 +16,7 @@
 
        /* cor do ícone quando passa o mouse */
        .nav-item .nav-link:hover .icon {
-           color: #879bc9;
+           color: #4e6cb1;
        }
 
        /* cor do link quando passa o mouse */

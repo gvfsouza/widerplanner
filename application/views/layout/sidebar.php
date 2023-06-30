@@ -38,28 +38,22 @@
 
    </style><!-- Sidebar -->
    <ul class="navbar-nav  sidebar " id="accordionSidebar" style="background-color: #55a69fd9;">
-       <!-- Sidebar - Brand -->
-       <!-- <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?php echo base_url('home') ?>">
-           <div class="sidebar-brand-icon ">
-               <img src="https://www.indaiatuba.sp.gov.br/_layout/images/brasao.png" class="img-fluid" style=" margin-top:10px;max-width: 35%; min-width: 35%;">
-           </div>
-       </a> -->
 
        <li class="nav-item">
-           <a class="nav-link" href="<?php base_url('home') ?>home">
+           <a class="nav-link" href="#">
                <i class="fas fa-home icon"></i>
                <span class="link">Home</span></a>
        </li>
 
        <li class="nav-item">
-           <a title="Gerenciar Usuários" class="nav-link" href="<?php base_url(); ?>perfil_cliente">
+           <a title="Gerenciar Usuários" class="nav-link" href="#">
                <i class="fas fa-syringe icon"></i>
                <span class="link">Perfil </span>
            </a>
        </li>
 
        <li class="nav-item">
-           <a title="Gerenciar Usuários" class="nav-link" href="<?php base_url(); ?>servicos">
+           <a title="Gerenciar Usuários" class="nav-link" href="#">
                <i class="fas fa-users icon"></i>
                <span class="link">Serviços</span>
            </a>

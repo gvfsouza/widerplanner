@@ -550,8 +550,6 @@ label{
 }
 </style>
 
-<body>
-
 		<div class="container-login100" style="background-color: #4c4d4f;">
 			<div class="wrap-login100 p-l-110 p-r-110 p-t-62 p-b-33">
 				<form class="login100-form validate-form flex-sb flex-w" style="padding:60px">

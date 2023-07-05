@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -13,13 +13,12 @@
     <link rel="stylesheet" href="css/sb-admin-2.min.css">
     <link rel="stylesheet" href="css/bootstrap-select.min.css">
 
-    <!-- Bootstrap core JavaScript-->
+    <!-- Bootstrap core JavaScript
     <script src="jquery/jquery.min.js"></script>
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
     <title>Teste</title>
-</head>
+</head> -->
 
-<body>
     <style>
         /* @import "animate.css";
 * {
@@ -159,21 +158,21 @@
 
         @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
 
-    *,
+    /* *,
     *::after,
     *::before {
         font-family: "Poppins", sans-serif;
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-    }
-
+    } */
+/* 
     body {
         display: flex;
         height: 100vh;
         justify-content: center;
         align-items: center;
-    }
+    } */
 
     .card-profile {
         width: 300px;

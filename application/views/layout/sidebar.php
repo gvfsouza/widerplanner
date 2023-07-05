@@ -73,4 +73,4 @@
    </ul>
    <!-- End of Sidebar -->
    <!-- Content Wrapper -->
-   <div id="content-wrapper" class="d-flex flex-column" style="background-color: #C3DFFF">
+   <div id="content-wrapper" class="d-flex flex-column" style="background-color: #B7BECD">

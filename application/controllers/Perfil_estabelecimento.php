@@ -17,7 +17,7 @@ class Perfil_estabelecimento extends CI_Controller {
 	{
 		$this->load->view('layout/header');
 		$this->load->view('layout/sidebar');
-		$this->load->view('layout/navbar');
+		// $this->load->view('layout/navbar');
 		$this->load->view('perfil_estabelecimento');
 		$this->load->view('layout/footer');
 	}

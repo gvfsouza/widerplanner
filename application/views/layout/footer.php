@@ -11,7 +11,7 @@
 
 <br><br><br><br><br><br>
 
-<footer class="sticky-footer">
+<footer class="sticky-footer bg-white">
     <div class="container my-auto">
         <div class="copyright text-center my-1 mt-1 mb-2 text-muted">
             <span>Sistema desenvolvido para cunho estudantil.</span>

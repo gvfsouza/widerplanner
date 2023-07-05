@@ -3,6 +3,7 @@ label{
     color:black;
 }
 </style>
+
 <div>
     <div class="container-fluid">
       <div class="card shadow mb-4">
@@ -157,5 +158,3 @@ label{
           </div>
         </div>
       </div>
-        
-    

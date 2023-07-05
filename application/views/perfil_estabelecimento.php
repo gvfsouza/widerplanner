@@ -1,14 +1,16 @@
 <style>
-label{
-    color:black;
-}
+  label {
+    color: black;
+  }
 </style>
 
-<div class="card shadow mb-4">
+<div>
+  <div class="container-fluid">
+    <div class="card shadow mb-4">
       <div class="card-header py-3" style="background-color: white;">
 
         <div>
-          <h3 id="dados-cleinte" style="font-size: 25px;font-weight:bold">Perfil Estabelecimento</h3>
+          <h3 id="dados-cleinte" style="font-size: 25px;font-weight:bold">Perfil Cliente</h3>
           <br>
         </div>
 
@@ -19,14 +21,16 @@ label{
               <div class="p-3 bg-white">
                 <div class="row">
                   <div class="col-12">
-                    <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 7px; border: 1px solid #879bc9;background: #879bc9;color: black;">
+                    <fieldset class="form-group"
+                      style="border: 1px solid #ddd; border-radius: 4px; padding: 7px; border: 1px solid #879bc9;background: #879bc9;color: black;">
                       <div>
                         <legend class="form-group" style="color: white; font-size: 18px;">
                           <strong>Dados Pessoais</strong>
                         </legend>
                       </div>
                     </fieldset>
-                    <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9;">
+                    <fieldset class="form-group"
+                      style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9;">
                       <div class="row">
                         <div style="margin-left:10px;"></div>
 
@@ -101,5 +105,3 @@ label{
             </form>
           </div>
         </div>
-      </div>
-    </div>

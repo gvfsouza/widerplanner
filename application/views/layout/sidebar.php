@@ -39,6 +39,12 @@
    </style><!-- Sidebar -->
    <ul class="navbar-nav  sidebar " id="accordionSidebar" style="background-color: #879bc9;">
 
+        <a class="sidebar-brand d-flex align-items-center justify-content-center">
+           <div class="sidebar-brand-icon ">
+               <img src="public/img/logo1.png" class="img-fluid" style=" margin-top:10px;max-width: 35%; min-width: 35%;">
+           </div>
+        </a>
+
    <!-- Divider -->
    <hr class="sidebar-divider d-none d-md-block">
 

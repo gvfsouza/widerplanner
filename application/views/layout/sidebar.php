@@ -39,6 +39,9 @@
    </style><!-- Sidebar -->
    <ul class="navbar-nav  sidebar " id="accordionSidebar" style="background-color: #879bc9;">
 
+   <!-- Divider -->
+   <hr class="sidebar-divider d-none d-md-block">
+
        <li class="nav-item">
            <a class="nav-link" href="#">
                <i class="fas fa-home icon"></i>

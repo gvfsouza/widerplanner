@@ -4,7 +4,7 @@
 		height: 150px;
 		border-radius: 10px;
 		padding: 1px 48px 48px 450px;
-		/* margin: 84px 0; */
+		margin: 40px 0;
 		width: 40px;
 		min-width: 180px;
 		display: flex;
@@ -44,19 +44,14 @@
 		height: 100%;
 	}
 
-	/* section.card:nth-of-type(odd) {
-		margin: 0 0 0 248px;
-		padding: 1px 250px 48px 68px;
-	} */
-
-	section.card:nth-of-type(odd) .visual {
+	/* section.card:nth-of-type(odd) .visual {
 		right: 24px;
 		left: auto;
 	}
 
 	section.card:nth-of-type(odd) .text-content a {
 		align-self: flex-start;
-	}
+	} */
 </style>
 
 <article>

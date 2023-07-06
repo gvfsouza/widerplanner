@@ -30,7 +30,7 @@
 	}
 
 	section.card .visual {
-		width: 100%;
+		width: 190px;
 		height: 100%;
 		position: absolute;
 		top: -24px;
@@ -42,6 +42,7 @@
 
 	section.card .visual img {
 		height: 100%;
+		width: 100%;
 	}
 </style>
 

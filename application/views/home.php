@@ -30,6 +30,7 @@
     section.card .text-content a:hover {
         background: #344966;
         color: white;
+		
     }
 
     section.card .visual {

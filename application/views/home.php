@@ -46,7 +46,6 @@
 
 	section.card:nth-of-type(odd) {
 		margin: 0 0 0 248px;
-		/* padding: 1px 250px 48px 68px; */
 	}
 
 	section.card:nth-of-type(odd) .visual {

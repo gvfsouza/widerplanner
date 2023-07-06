@@ -30,7 +30,7 @@
 	}
 
 	section.card .visual {
-		width: 290px;
+		width: 100%;
 		height: 100%;
 		position: absolute;
 		top: -24px;

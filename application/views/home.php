@@ -4,7 +4,7 @@
 		height: 150px;
 		border-radius: 10px;
 		padding: 1px 48px 48px 450px;
-		margin: 84px 0;
+		/* margin: 84px 0; */
 		width: 40px;
 		min-width: 180px;
 		display: flex;
@@ -71,7 +71,7 @@
 	</section>
 	<section class="card">
 		<div class="text-content">
-			<h3>Elevate Your Brand with Exceptional Design</h3><br><br>
+			<h3 style="font-size:22px">Elevate Your Brand with Exceptional Design</h3><br><br>
 			<a href="#">Agendar</a>
 		</div>
 		<div class="visual">

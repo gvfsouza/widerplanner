@@ -19,7 +19,7 @@
 		color: #344966;
 		align-self: flex-start;
 		text-decoration: none;
-		padding: 16px 32px;
+		padding: 8px 16px;
 		border-radius: 12px;
 		transition: 400ms all;
 	}

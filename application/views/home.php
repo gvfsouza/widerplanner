@@ -46,7 +46,7 @@
 
 	section.card:nth-of-type(odd) {
 		margin: 0 0 0 248px;
-		padding: 1px 250px 48px 68px;
+		/* padding: 1px 250px 48px 68px; */
 	}
 
 	section.card:nth-of-type(odd) .visual {
@@ -62,7 +62,7 @@
 <article>
 	<section class="card">
 		<div class="text-content">
-			<h3 style="font-size:14px">Elevate Your Brand with Exceptional Design</h3><br><br>
+			<h3 style="font-size:22px">Elevate Your Brand with Exceptional Design</h3><br><br>
 			<a href="#">Agendar</a>
 		</div>
 		<div class="visual">

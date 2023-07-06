@@ -30,7 +30,7 @@
 	}
 
 	section.card .visual {
-		width: 190px;
+		width: 290px;
 		height: 100%;
 		position: absolute;
 		top: -24px;
@@ -43,15 +43,6 @@
 	section.card .visual img {
 		height: 100%;
 	}
-
-	/* section.card:nth-of-type(odd) .visual {
-		right: 24px;
-		left: auto;
-	}
-
-	section.card:nth-of-type(odd) .text-content a {
-		align-self: flex-start;
-	} */
 </style>
 
 <article>

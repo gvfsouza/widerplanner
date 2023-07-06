@@ -62,7 +62,7 @@
 <article>
 	<section class="card">
 		<div class="text-content">
-			<h3>Elevate Your Brand with Exceptional Design</h3><br><br>
+			<h3 style="font-size:14px">Elevate Your Brand with Exceptional Design</h3><br><br>
 			<a href="#">Agendar</a>
 		</div>
 		<div class="visual">

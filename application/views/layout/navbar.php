@@ -21,7 +21,7 @@
 </style>
 
 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-    <p style="color: #135A93 ; margin-top: 10px; font-weight: bold; font-size: 13px" class="titulo-projeto">WiderPlanner</p>
+    <p style="color: #879BC9; margin-top: 10px; font-weight: bold; font-size: 13px" class="titulo-projeto">WiderPlanner</p>
     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
         <i class="fa fa-bars"></i>
     </button>

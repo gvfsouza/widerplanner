@@ -62,7 +62,7 @@
        </li>
 
        <li class="nav-item">
-           <a title="Gerenciar Usuários" class="nav-link" href="<?php base_url(); ?>servicos">
+           <a title="Gerenciar Usuários" class="nav-link" href="<?php echo base_url(); ?>servicos">
                <i class="fas fa-users icon"></i>
                <span class="link">Serviços</span>
            </a>

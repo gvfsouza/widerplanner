@@ -3,12 +3,10 @@
 	section.card {
 		background: #f6f6f6;
 		border-radius: 10px;
-		margin: 20px; /* Reduce margin for spacing between cards */
+		margin: 40px 0;
 		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 		display: flex;
 		flex-direction: column;
-		flex: 1; /* Allow cards to take equal space in a row */
-		max-width: 280px; /* Limit the maximum width of each card */
 	}
 
 	section.card .text-content {
@@ -28,44 +26,39 @@
 		border-radius: 8px;
 		transition: 400ms all;
 		margin-top: 10px;
-		width: 120px; /* Adjusted width to reduce button size */
+		width: 140px; /* Added width to reduce button size */
 		text-align: center; /* Center the button text */
 	}
 
 	/* Responsive styles for card sections */
 	@media screen and (min-width: 768px) {
-		/* To display 3 cards in a row, adjust flex-basis and max-width */
 		section.card {
-			flex-basis: calc(33.3333% - 40px);
-			max-width: calc(33.3333% - 40px);
+			flex-direction: row;
+			align-items: center;
 		}
-	}
 
-	/* For larger screens, display 4 cards in a row */
-	@media screen and (min-width: 992px) {
-		section.card {
-			flex-basis: calc(25% - 40px);
-			max-width: calc(25% - 40px);
+		section.card .text-content {
+			flex: 1;
+			padding: 32px;
 		}
-	}
 
-	/* Styles for the images and buttons remain unchanged */
-	section.card .visual {
-		width: 150px;
-		max-height: 150px;
-		margin-right: 20px;
-	}
+		section.card .visual {
+			width: 150px; /* Adjust the width of the image for larger screens */
+			max-height: 150px; /* Set a maximum height to maintain proportions */
+			margin-right: 20px; /* Added some spacing between the image and text */
+		}
 
-	section.card .visual img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		border-radius: 10px;
-	}
+		section.card .visual img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: 10px; /* Adjust the border-radius for the image */
+		}
 
-	section.card .text-content a {
-		display: inline-block;
-		margin-top: 0;
+		section.card .text-content a {
+			display: inline-block; /* Display the button inline for larger screens */
+			margin-top: 0; /* Remove the top margin for the button */
+		}
 	}
 </style>
 
@@ -87,4 +80,3 @@
 		<a href="#">Ver Estabelecimento</a>
 	</div>
 </section>
-<!-- Add more card sections as needed -->

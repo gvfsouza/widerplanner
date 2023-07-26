@@ -24,10 +24,11 @@
 		border: 3px solid #344966;
 		color: #344966;
 		text-decoration: none;
-		padding: 12px 12px; /* Increased padding for the button */
+		padding: 6px 6px;
 		border-radius: 8px;
 		transition: 400ms all;
 		margin-top: 10px;
+		width: 120px; /* Adjusted width to reduce button size */
 		text-align: center; /* Center the button text */
 	}
 
@@ -48,7 +49,7 @@
 		}
 	}
 
-	/* Styles for the images remain unchanged */
+	/* Styles for the images and buttons remain unchanged */
 	section.card .visual {
 		width: 150px;
 		max-height: 150px;
@@ -60,6 +61,11 @@
 		height: 100%;
 		object-fit: cover;
 		border-radius: 10px;
+	}
+
+	section.card .text-content a {
+		display: inline-block;
+		margin-top: 0;
 	}
 </style>
 

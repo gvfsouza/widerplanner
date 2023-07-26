@@ -30,11 +30,6 @@
 		text-align: center; /* Center the button text */
 	}
 
-	section.card .text-content a:hover {
-		background: #344966;
-		color: white;
-	}
-
 	/* Responsive styles for card sections */
 	@media screen and (min-width: 768px) {
 		section.card {
@@ -48,8 +43,8 @@
 		}
 
 		section.card .visual {
-			width: 200px;
-			height: auto;
+			width: 30%; /* Adjust the width of the image for larger screens */
+			max-height: 200px; /* Set a maximum height to maintain proportions */
 			margin-right: 20px; /* Added some spacing between the image and text */
 		}
 
@@ -58,6 +53,11 @@
 			height: 100%;
 			object-fit: cover;
 			border-radius: 10px; /* Adjust the border-radius for the image */
+		}
+
+		section.card .text-content a {
+			display: inline-block; /* Display the button inline for larger screens */
+			margin-top: 0; /* Remove the top margin for the button */
 		}
 	}
 </style>

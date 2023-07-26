@@ -1,18 +1,14 @@
 <style>
 	/* Common styles for both card sections */
-	.card-container {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-	}
-
 	section.card {
 		background: #f6f6f6;
 		border-radius: 10px;
-		margin: 20px; /* Adjusted margin for spacing between cards */
+		margin: 20px; /* Reduce margin for spacing between cards */
 		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-		flex-basis: calc(33.3333% - 40px); /* To display 3 cards in a row, each card takes 33.33% of the available space */
-		max-width: calc(33.3333% - 40px); /* Limit the maximum width of each card */
+		display: flex;
+		flex-direction: column;
+		flex: 1; /* Allow cards to take equal space in a row */
+		max-width: 280px; /* Limit the maximum width of each card */
 	}
 
 	section.card .text-content {
@@ -36,19 +32,27 @@
 	}
 
 	/* Responsive styles for card sections */
-	@media screen and (max-width: 992px) {
+	@media screen and (min-width: 768px) {
+		/* To display 3 cards in a row, adjust flex-basis and max-width */
 		section.card {
-			flex-basis: calc(50% - 40px); /* On smaller screens, display 2 cards in a row */
-			max-width: calc(50% - 40px);
+			flex-basis: calc(33.3333% - 40px);
+			max-width: calc(33.3333% - 40px);
+		}
+	}
+
+	/* For larger screens, display 4 cards in a row */
+	@media screen and (min-width: 992px) {
+		section.card {
+			flex-basis: calc(25% - 40px);
+			max-width: calc(25% - 40px);
 		}
 	}
 
 	/* Styles for the images remain unchanged */
 	section.card .visual {
-		width: 100%;
-		max-height: 150px; /* Maintain the maximum height of the images */
-		margin-right: 0; /* Remove the right margin */
-		margin-bottom: 10px; /* Add some bottom margin for spacing */
+		width: 150px;
+		max-height: 150px;
+		margin-right: 20px;
 	}
 
 	section.card .visual img {
@@ -59,24 +63,22 @@
 	}
 </style>
 
-<div class="card-container">
-	<section class="card">
-		<div class="visual">
-			<img src="https://images.unsplash.com/photo-1548142813-c348350df52b?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzgzMDU1NDY&ixlib=rb-4.0.3&q=80" alt="" />
-		</div>
-		<div class="text-content">
-			<h3>Elevate Your Brand with Exceptional Design</h3>
-			<a href="perfil_estabelecimento">Ver Estabelecimento</a>
-		</div>
-	</section>
-	<section class="card">
-		<div class="visual">
-			<img src="https://images.unsplash.com/photo-1548142813-c348350df52b?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzgzMDU1NDY&ixlib=rb-4.0.3&q=80" alt="" />
-		</div>
-		<div class="text-content">
-			<h3>Elevate Your Brand with Exceptional Design</h3>
-			<a href="#">Ver Estabelecimento</a>
-		</div>
-	</section>
-	<!-- Add another card section here -->
-</div>
+<section class="card">
+	<div class="visual">
+		<img src="https://images.unsplash.com/photo-1548142813-c348350df52b?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzgzMDU1NDY&ixlib=rb-4.0.3&q=80" alt="" />
+	</div>
+	<div class="text-content">
+		<h3>Elevate Your Brand with Exceptional Design</h3>
+		<a href="perfil_estabelecimento">Ver Estabelecimento</a>
+	</div>
+</section>
+<section class="card">
+	<div class="visual">
+		<img src="https://images.unsplash.com/photo-1548142813-c348350df52b?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzgzMDU1NDY&ixlib=rb-4.0.3&q=80" alt="" />
+	</div>
+	<div class="text-content">
+		<h3>Elevate Your Brand with Exceptional Design</h3>
+		<a href="#">Ver Estabelecimento</a>
+	</div>
+</section>
+<!-- Add more card sections as needed -->

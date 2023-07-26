@@ -43,8 +43,8 @@
 		}
 
 		section.card .visual {
-			width: 30%; /* Adjust the width of the image for larger screens */
-			max-height: 200px; /* Set a maximum height to maintain proportions */
+			width: 150px; /* Adjust the width of the image for larger screens */
+			max-height: 150px; /* Set a maximum height to maintain proportions */
 			margin-right: 20px; /* Added some spacing between the image and text */
 		}
 

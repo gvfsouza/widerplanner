@@ -1,13 +1,17 @@
 <style>
 	/* Common styles for both card sections */
+	.card-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
 	section.card {
 		background: #f6f6f6;
 		border-radius: 10px;
 		margin: 20px; /* Reduce margin for spacing between cards */
 		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-		display: flex;
-		flex-direction: column;
-		flex: 1; /* Allow cards to take equal space in a row */
+		flex: 1; /* Allow cards to take equal space in the row */
 		max-width: 280px; /* Limit the maximum width of each card */
 	}
 
@@ -63,22 +67,24 @@
 	}
 </style>
 
-<section class="card">
-	<div class="visual">
-		<img src="https://images.unsplash.com/photo-1548142813-c348350df52b?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzgzMDU1NDY&ixlib=rb-4.0.3&q=80" alt="" />
-	</div>
-	<div class="text-content">
-		<h3>Elevate Your Brand with Exceptional Design</h3>
-		<a href="perfil_estabelecimento">Ver Estabelecimento</a>
-	</div>
-</section>
-<section class="card">
-	<div class="visual">
-		<img src="https://images.unsplash.com/photo-1548142813-c348350df52b?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzgzMDU1NDY&ixlib=rb-4.0.3&q=80" alt="" />
-	</div>
-	<div class="text-content">
-		<h3>Elevate Your Brand with Exceptional Design</h3>
-		<a href="#">Ver Estabelecimento</a>
-	</div>
-</section>
-<!-- Add more card sections as needed -->
+<div class="card-container">
+	<section class="card">
+		<div class="visual">
+			<img src="https://images.unsplash.com/photo-1548142813-c348350df52b?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzgzMDU1NDY&ixlib=rb-4.0.3&q=80" alt="" />
+		</div>
+		<div class="text-content">
+			<h3>Elevate Your Brand with Exceptional Design</h3>
+			<a href="perfil_estabelecimento">Ver Estabelecimento</a>
+		</div>
+	</section>
+	<section class="card">
+		<div class="visual">
+			<img src="https://images.unsplash.com/photo-1548142813-c348350df52b?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzgzMDU1NDY&ixlib=rb-4.0.3&q=80" alt="" />
+		</div>
+		<div class="text-content">
+			<h3>Elevate Your Brand with Exceptional Design</h3>
+			<a href="#">Ver Estabelecimento</a>
+		</div>
+	</section>
+	<!-- Add more card sections as needed -->
+</div>

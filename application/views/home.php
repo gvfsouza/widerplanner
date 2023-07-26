@@ -9,10 +9,10 @@
 	section.card {
 		background: #f6f6f6;
 		border-radius: 10px;
-		margin: 20px; /* Reduce margin for spacing between cards */
+		margin: 20px; /* Adjusted margin for spacing between cards */
 		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-		flex: 1; /* Allow cards to take equal space in the row */
-		max-width: 280px; /* Limit the maximum width of each card */
+		flex-basis: calc(33.3333% - 40px); /* To display 3 cards in a row, each card takes 33.33% of the available space */
+		max-width: calc(33.3333% - 40px); /* Limit the maximum width of each card */
 	}
 
 	section.card .text-content {
@@ -36,27 +36,19 @@
 	}
 
 	/* Responsive styles for card sections */
-	@media screen and (min-width: 768px) {
-		/* To display 3 cards in a row, adjust flex-basis and max-width */
+	@media screen and (max-width: 992px) {
 		section.card {
-			flex-basis: calc(33.3333% - 40px);
-			max-width: calc(33.3333% - 40px);
-		}
-	}
-
-	/* For larger screens, display 4 cards in a row */
-	@media screen and (min-width: 992px) {
-		section.card {
-			flex-basis: calc(25% - 40px);
-			max-width: calc(25% - 40px);
+			flex-basis: calc(50% - 40px); /* On smaller screens, display 2 cards in a row */
+			max-width: calc(50% - 40px);
 		}
 	}
 
 	/* Styles for the images remain unchanged */
 	section.card .visual {
-		width: 150px;
-		max-height: 150px;
-		margin-right: 20px;
+		width: 100%;
+		max-height: 150px; /* Maintain the maximum height of the images */
+		margin-right: 0; /* Remove the right margin */
+		margin-bottom: 10px; /* Add some bottom margin for spacing */
 	}
 
 	section.card .visual img {
@@ -86,5 +78,5 @@
 			<a href="#">Ver Estabelecimento</a>
 		</div>
 	</section>
-	<!-- Add more card sections as needed -->
+	<!-- Add another card section here -->
 </div>

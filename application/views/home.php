@@ -7,7 +7,7 @@
 		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 		display: flex;
 		flex-direction: column;
-		position: relative; /* Add a relative position to the card */
+		position: relative;
 	}
 
 	section.card .text-content {
@@ -49,6 +49,7 @@
 			position: absolute;
 			top: -75px; /* Position the image above the card */
 			left: 20px; /* Add some left spacing for better alignment */
+			z-index: 1; /* Set a higher z-index for the image to place it on top */
 		}
 
 		section.card .visual img {

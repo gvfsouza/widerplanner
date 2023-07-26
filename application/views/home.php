@@ -22,7 +22,7 @@
 		border: 3px solid #344966;
 		color: #344966;
 		text-decoration: none;
-		padding: 6px 12px;
+		padding: 6px 6px;
 		border-radius: 8px;
 		transition: 400ms all;
 		margin-top: 10px;

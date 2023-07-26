@@ -49,7 +49,7 @@
 <section class="card">
 	<div class="text-content">
 		<h3 style="font-size:22px">Elevate Your Brand with Exceptional Design</h3><br><br>
-		<a href="perfil_estabelecimento">Agendar</a>
+		<a href="perfil_estabelecimento">Visualizar Estabelecimento</a>
 	</div>
 	<div class="visual">
 		<img src="https://images.unsplash.com/photo-1548142813-c348350df52b?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzgzMDU1NDY&ixlib=rb-4.0.3&q=80" alt="" />
@@ -58,7 +58,7 @@
 <section class="card">
 	<div class="text-content">
 		<h3 style="font-size:22px">Elevate Your Brand with Exceptional Design</h3><br><br>
-		<a href="#">Agendar</a>
+		<a href="#">Visualizar Estabelecimento</a>
 	</div>
 	<div class="visual">
 		<img src="https://images.unsplash.com/photo-1548142813-c348350df52b?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzgzMDU1NDY&ixlib=rb-4.0.3&q=80" alt="" />

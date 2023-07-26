@@ -1,27 +1,29 @@
 <style>
+	/* Common styles for both card sections */
 	section.card {
 		background: #f6f6f6;
-		height: 150px;
 		border-radius: 10px;
-		padding: 1px 48px 48px 450px;
 		margin: 40px 0;
-		width: 40px;
-		min-width: 180px;
-		display: flex;
-		flex-direction: row;
-		align-self: flex-start;
-		position: relative;
 		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 	}
 
+	section.card .text-content {
+		padding: 16px;
+	}
+
+	section.card .text-content h3 {
+		font-size: 22px;
+	}
+
 	section.card .text-content a {
+		display: block;
 		border: 3px solid #344966;
 		color: #344966;
-		align-self: flex-start;
 		text-decoration: none;
 		padding: 8px 16px;
 		border-radius: 12px;
 		transition: 400ms all;
+		margin-top: 20px;
 	}
 
 	section.card .text-content a:hover {
@@ -29,26 +31,39 @@
 		color: white;
 	}
 
-	section.card .visual {
-		width: 170px;
-		height: 100%;
-		position: absolute;
-		top: -24px;
-		left: 24px;
-		overflow: hidden;
-		border-radius: 24px;
-		box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-	}
+	/* Responsive styles for card sections */
+	@media screen and (min-width: 768px) {
+		section.card {
+			display: flex;
+			flex-direction: row;
+		}
 
-	section.card .visual img {
-		height: 100%;
-		width: 100%;
+		section.card .text-content {
+			flex: 1;
+			padding: 32px;
+		}
+
+		section.card .visual {
+			width: 170px;
+			height: 100%;
+			position: relative;
+			top: 0;
+			left: 0;
+			overflow: hidden;
+			border-radius: 24px;
+			box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+		}
+
+		section.card .visual img {
+			height: 100%;
+			width: 100%;
+		}
 	}
 </style>
-	
+
 <section class="card">
 	<div class="text-content">
-		<h3 style="font-size:22px">Elevate Your Brand with Exceptional Design</h3><br><br>
+		<h3>Elevate Your Brand with Exceptional Design</h3>
 		<a href="perfil_estabelecimento">Visualizar Estabelecimento</a>
 	</div>
 	<div class="visual">
@@ -57,7 +72,7 @@
 </section>
 <section class="card">
 	<div class="text-content">
-		<h3 style="font-size:22px">Elevate Your Brand with Exceptional Design</h3><br><br>
+		<h3>Elevate Your Brand with Exceptional Design</h3>
 		<a href="#">Visualizar Estabelecimento</a>
 	</div>
 	<div class="visual">

@@ -7,7 +7,6 @@
 		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 		display: flex;
 		flex-direction: column;
-		position: relative;
 	}
 
 	section.card .text-content {
@@ -46,10 +45,9 @@
 		section.card .visual {
 			width: 150px; /* Adjust the width of the image for larger screens */
 			height: 150px; /* Adjust the height of the image for larger screens */
+			margin-right: 20px; /* Added some spacing between the image and text */
 			position: absolute;
-			top: -75px; /* Position the image above the card */
-			left: 20px; /* Add some left spacing for better alignment */
-			z-index: 1; /* Set a higher z-index for the image to place it on top */
+			top: -30px; /* Position the image above the card */
 		}
 
 		section.card .visual img {

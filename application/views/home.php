@@ -5,8 +5,8 @@
 		border-radius: 10px;
 		margin: 40px 0;
 		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-		position: relative;
-		overflow: hidden;
+		display: flex;
+		flex-direction: column;
 	}
 
 	section.card .text-content {
@@ -26,6 +26,8 @@
 		border-radius: 8px;
 		transition: 400ms all;
 		margin-top: 10px;
+		width: 140px; /* Added width to reduce button size */
+		text-align: center; /* Center the button text */
 	}
 
 	section.card .text-content a:hover {
@@ -36,8 +38,8 @@
 	/* Responsive styles for card sections */
 	@media screen and (min-width: 768px) {
 		section.card {
-			display: flex;
 			flex-direction: row;
+			align-items: center;
 		}
 
 		section.card .text-content {
@@ -47,18 +49,15 @@
 
 		section.card .visual {
 			width: 200px;
-			height: 100%;
-			position: absolute;
-			top: -24px;
-			left: -30px; /* Adjust the left positioning as needed */
-			overflow: hidden;
-			border-radius: 24px;
-			box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+			height: auto;
+			margin-right: 20px; /* Added some spacing between the image and text */
 		}
 
 		section.card .visual img {
-			height: 100%;
 			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: 10px; /* Adjust the border-radius for the image */
 		}
 	}
 </style>

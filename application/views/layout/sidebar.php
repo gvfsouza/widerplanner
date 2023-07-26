@@ -55,7 +55,8 @@
        </li>
 
        <li class="nav-item">
-           <a title="Gerenciar Usuários" class="nav-link" href="#">
+           <!-- <a title="Gerenciar Usuários" class="nav-link" href="<//?php echo base_url(); ?>perfil_estabelecimento"> -->
+           <a title="Gerenciar Usuários" class="nav-link" href="">
             <i class="fas fa-user icon"></i>
                <span class="link">Perfil </span>
            </a>

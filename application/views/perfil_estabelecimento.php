@@ -101,7 +101,7 @@
 
         .card-container {
             display: flex;
-            margin-left: 4rem;
+            margin-left: 2.5rem;
         }
     </style>
 

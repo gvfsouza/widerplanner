@@ -101,7 +101,6 @@
 
         .card-container {
             display: flex;
-            margin-left: 2.5rem;
         }
     </style>
 
@@ -146,8 +145,13 @@
                                                                 <br>
                                                                 <input type="text" class="form-control" id="" name="">
                                                             </div>
+                                                            <div class="dados-cliente form-group col-md-3">
+                                                                <label for="" style="color: #77787a;">Horários de Funcionamento:</label>
+                                                                <br>
+                                                                <input type="time" class="form-control" id="horario_estab_inicio" name="horario_estab" value="">
+                                                            </div>
                                                           </div>
-                                                          
+
                                                           <div class="row">
                                                             <div class="dados-cliente form-group col-md-3">
                                                                 <label for="" style="color: #77787a;">Horários de Funcionamento:</label>

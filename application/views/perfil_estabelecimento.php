@@ -101,6 +101,13 @@
 
         .card-container {
             display: flex;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        .card-profile {
+            flex: 0 0 300px;
+            margin-right: 10px;
         }
     </style>
 

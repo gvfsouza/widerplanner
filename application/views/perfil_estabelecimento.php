@@ -101,7 +101,7 @@
         .card-container {
             display: flex;
             overflow-x: auto;
-            white-space: nowrap;
+            /* white-space: nowrap; */
         }
     </style>
 

@@ -12,7 +12,7 @@
             padding: 2rem;
             background-color: white;
             border-radius: 1rem;
-            box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.6);
+            box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
             margin: 12px;
             margin-top: 40px;
         }

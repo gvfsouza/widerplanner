@@ -26,7 +26,6 @@
             height: 6.5rem;
             background-size: cover;
             position: center;
-            box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.4);
         }
 
         .profile-info {
@@ -104,11 +103,6 @@
             overflow-x: auto;
             white-space: nowrap;
         }
-
-        /* .card-profile {
-            flex: 0 0 300px;
-            margin-right: 10px;
-        } */
     </style>
 
     <br>

@@ -136,20 +136,20 @@
                                                     <div style="margin-left:10px;"></div>
                                                     <div class="col">
                                                         <div class="row">
-                                                            <div class="form-group col-md-6">
-                                                                <label for="" style="color: #77787a;"></label>
+                                                            <div class="form-group col-md-4">
+                                                                <label for="" style="color: #77787a;">Nome do Estabelecimento</label>
                                                                 <br>
                                                                 <input style="font-size:14px" type="text" class="form-control" id="" name="" value="">
                                                             </div>
-                                                            <div class="dados-cliente form-group col-md-6">
-                                                                <label for="" style="color: #77787a;">:</label>
+                                                            <div class="dados-cliente form-group col-md-3">
+                                                                <label for="" style="color: #77787a;">CNPJ:</label>
                                                                 <br>
                                                                 <input type="text" class="form-control" id="" name="">
                                                             </div>
-                                                            <div class="dados-cliente form-group col-md-4">
-                                                                <label for="" style="color: #77787a;">:</label>
+                                                            <div class="dados-cliente form-group col-md-3">
+                                                                <label for="" style="color: #77787a;">Horários de Funcionamento:</label>
                                                                 <br>
-                                                                <input type="" class="form-control" id="" name="" value="">
+                                                                <input type="time" class="form-control" id="horario_estab_inicio" name="horario_estab_inicio" value=""><input type="time" class="form-control" id="horario_estab_fim" name="horario_estab_fim" value="">
                                                             </div>
                                                             <div class="dados-cliente form-group col-md-2">
                                                                 <label for="" style="color: #77787a;">:</label>

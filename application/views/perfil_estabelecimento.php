@@ -105,10 +105,10 @@
             white-space: nowrap;
         }
 
-        .card-profile {
+        /* .card-profile {
             flex: 0 0 300px;
             margin-right: 10px;
-        }
+        } */
     </style>
 
     <br>

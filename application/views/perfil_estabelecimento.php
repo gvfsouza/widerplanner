@@ -47,22 +47,13 @@
             font-size: 0.9rem;
         }
 
-        .status {
-            list-style: none;
-            display: flex;
-            text-align: center;
-            line-height: 1rem;
-            margin-bottom: 1.3rem;
-        }
-
         .status-value {
-            color: #212121;
-            font-weight: 700;
+            display: flex;
+            align-items: center;
         }
 
-        .status-text {
-            font-size: 0.8rem;
-            color: #7c7c7d;
+        .status-value i {
+            margin-left: 10px;
         }
 
         .action {
@@ -184,147 +175,99 @@
                                                 <div class="card-container">
                                                     <div class="card-profile">
                                                         <div class="card-header-profile">
-                                                        <center><div class="profile-image"></div></center>
+                                                            <center>
+                                                                <div class="profile-image"></div>
+                                                            </center>
                                                             <div class="profile-info">
                                                                 <h3 class="profile-name"><strong>Mechas</strong></h3>
                                                                 <br>
                                                                 <p class="profile-desc">Descrição (se tiver)</p>
                                                             </div>
                                                         </div>
-                                                        <div class="profile-card-body">
-                                                            <ul class="status">
-                                                                <li>
-                                                                    <span class="status-value">R$</span>
-                                                                    <span class="status-text">250,00</span>
-                                                                </li>
-                                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                                <li>
-                                                                    <span class="status-value"><i class="fas fa-clock"></i></span>
-                                                                    <span class="status-text">02h00</span>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
+                                                        <center>
+                                                            <p class="status-value">R$ &nbsp;310,00 <i class="fas fa-clock"></i> &nbsp;&nbsp;03h30</p>
+                                                        </center>
                                                     </div>
+
                                                     <div class="card-profile">
                                                         <div class="card-header-profile">
-                                                        <center><div class="profile-image"></div></center>
+                                                            <center>
+                                                                <div class="profile-image"></div>
+                                                            </center>
                                                             <div class="profile-info">
                                                                 <h3 class="profile-name"><strong>Corte</strong></h3>
                                                                 <br>
                                                                 <p class="profile-desc">Descrição (se tiver)</p>
                                                             </div>
                                                         </div>
-                                                        <div class="profile-card-body">
-                                                            <ul class="status">
-                                                                <li>
-                                                                    <span class="status-value">R$</span>
-                                                                    <span class="status-text">40,00</span>
-                                                                </li>
-                                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                                <li>
-                                                                    <span class="status-value"><i class="fas fa-clock"></i></span>
-                                                                    <span class="status-text">30min</span>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-
+                                                        <center>
+                                                            <p class="status-value">R$ &nbsp;310,00 <i class="fas fa-clock"></i> &nbsp;&nbsp;03h30</p>
+                                                        </center>
                                                     </div>
+
                                                     <div class="card-profile">
                                                         <div class="card-header-profile">
-                                                        <center><div class="profile-image"></div></center>
+                                                            <center>
+                                                                <div class="profile-image"></div>
+                                                            </center>
                                                             <div class="profile-info">
                                                                 <h3 class="profile-name"><strong>Manicure</strong></h3>
                                                                 <br>
                                                                 <p class="profile-desc">Descrição (se tiver)</p>
                                                             </div>
                                                         </div>
-                                                        <div class="profile-card-body">
-                                                            <ul class="status">
-                                                                <li>
-                                                                    <span class="status-value">R$</span>
-                                                                    <span class="status-text">35,00</span>
-                                                                </li>
-                                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                                <li>
-                                                                    <span class="status-value"><i class="fas fa-clock"></i></span>
-                                                                    <span class="status-text">01h00</span>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
+                                                        <center>
+                                                            <p class="status-value">R$ &nbsp;310,00 <i class="fas fa-clock"></i> &nbsp;&nbsp;03h30</p>
+                                                        </center>
                                                     </div>
 
                                                     <div class="card-profile">
                                                         <div class="card-header-profile">
-                                                        <center><div class="profile-image"></div></center>
+                                                            <center>
+                                                                <div class="profile-image"></div>
+                                                            </center>
                                                             <div class="profile-info">
                                                                 <h3 class="profile-name"><strong>Progressiva</strong></h3>
                                                                 <br>
                                                                 <p class="profile-desc">Descrição (se tiver)</p>
                                                             </div>
                                                         </div>
-                                                        <div class="profile-card-body">
-                                                            <ul class="status">
-                                                                <li>
-                                                                    <span class="status-value">R$</span>
-                                                                    <span class="status-text">310,00</span>
-                                                                </li>
-                                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                                <li>
-                                                                    <span class="status-value"><i class="fas fa-clock"></i></span>
-                                                                    <span class="status-text">03h30</span>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
+                                                        <center>
+                                                            <p class="status-value">R$ &nbsp;310,00 <i class="fas fa-clock"></i> &nbsp;&nbsp;03h30</p>
+                                                        </center>
                                                     </div>
 
                                                     <div class="card-profile">
                                                         <div class="card-header-profile">
-                                                        <center><div class="profile-image"></div></center>
+                                                            <center>
+                                                                <div class="profile-image"></div>
+                                                            </center>
                                                             <div class="profile-info">
                                                                 <h3 class="profile-name"><strong>Pigmentação</strong></h3>
                                                                 <br>
                                                                 <p class="profile-desc">Descrição (se tiver)</p>
                                                             </div>
                                                         </div>
-                                                        <div class="profile-card-body">
-                                                            <ul class="status">
-                                                                <li>
-                                                                    <span class="status-value">R$</span>
-                                                                    <span class="status-text">310,00</span>
-                                                                </li>
-                                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                                <li>
-                                                                    <span class="status-value"><i class="fas fa-clock"></i></span>
-                                                                    <span class="status-text">03h30</span>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
+                                                        <center>
+                                                            <p class="status-value">R$ &nbsp;310,00 <i class="fas fa-clock"></i> &nbsp;&nbsp;03h30</p>
+                                                        </center>
                                                     </div>
 
                                                     <div class="card-profile">
                                                         <div class="card-header-profile">
-                                                            <center><div class="profile-image"></div></center>
+                                                            <center>
+                                                                <div class="profile-image"></div>
+                                                            </center>
                                                             <div class="profile-info">
                                                                 <h3 class="profile-name"><strong>Progressiva</strong></h3>
                                                                 <br>
                                                                 <p class="profile-desc">Descrição (se tiver)</p>
                                                             </div>
                                                         </div>
-                                                        <div class="profile-card-body">
-                                                            <ul class="status">
-                                                                <li>
-                                                                    <span class="status-value">R$</span>
-                                                                    <span class="status-text">310,00</span>
-                                                                </li>
-                                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                                <li>
-                                                                    <span class="status-value"><i class="fas fa-clock"></i></span>
-                                                                    <span class="status-text">03h30</span>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
+                                                        <center>
+                                                            <p class="status-value">R$ &nbsp;310,00 <i class="fas fa-clock"></i> &nbsp;&nbsp;03h30</p>
+                                                        </center>
                                                     </div>
-
                                                 </div>
                                             </fieldset>
 
@@ -358,7 +301,7 @@
 
                                                     <div class="card-profile" style="width: 300px;">
                                                         <div class="card-header-profile">
-                                                        <center><img src="https://images.unsplash.com/photo-1499557354967-2b2d8910bcca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=736&q=80" alt="" style="width: 7.5rem; right: 7.5rem; margin-top: -70px; border-radius: 20px"></center>
+                                                            <center><img src="https://images.unsplash.com/photo-1499557354967-2b2d8910bcca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=736&q=80" alt="" style="width: 7.5rem; right: 7.5rem; margin-top: -70px; border-radius: 20px"></center>
                                                             <br><br><br><br>
                                                             <div class="profile-info">
                                                                 <h3 class="profile-name"><strong>Corte</strong></h3>
@@ -374,7 +317,7 @@
 
                                                     <div class="card-profile" style="width: 300px;">
                                                         <div class="card-header-profile">
-                                                        <center><img src="https://images.unsplash.com/photo-1499557354967-2b2d8910bcca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=736&q=80" alt="" style="width: 7.5rem; right: 7.5rem; margin-top: -70px; border-radius: 20px"></center>
+                                                            <center><img src="https://images.unsplash.com/photo-1499557354967-2b2d8910bcca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=736&q=80" alt="" style="width: 7.5rem; right: 7.5rem; margin-top: -70px; border-radius: 20px"></center>
                                                             <br><br><br><br>
                                                             <div class="profile-info">
                                                                 <h3 class="profile-name"><strong>Corte</strong></h3>
@@ -390,7 +333,7 @@
 
                                                     <div class="card-profile" style="width: 300px;">
                                                         <div class="card-header-profile">
-                                                        <center><img src="https://images.unsplash.com/photo-1499557354967-2b2d8910bcca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=736&q=80" alt="" style="width: 7.5rem; right: 7.5rem; margin-top: -70px; border-radius: 20px"></center>
+                                                            <center><img src="https://images.unsplash.com/photo-1499557354967-2b2d8910bcca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=736&q=80" alt="" style="width: 7.5rem; right: 7.5rem; margin-top: -70px; border-radius: 20px"></center>
                                                             <br><br><br><br>
                                                             <div class="profile-info">
                                                                 <h3 class="profile-name"><strong>Corte</strong></h3>
@@ -406,7 +349,7 @@
 
                                                     <div class="card-profile" style="width: 300px;">
                                                         <div class="card-header-profile">
-                                                        <center><img src="https://images.unsplash.com/photo-1499557354967-2b2d8910bcca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=736&q=80" alt="" style="width: 7.5rem; right: 7.5rem; margin-top: -70px; border-radius: 20px"></center>
+                                                            <center><img src="https://images.unsplash.com/photo-1499557354967-2b2d8910bcca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=736&q=80" alt="" style="width: 7.5rem; right: 7.5rem; margin-top: -70px; border-radius: 20px"></center>
                                                             <br><br><br><br>
                                                             <div class="profile-info">
                                                                 <h3 class="profile-name"><strong>Corte</strong></h3>

@@ -292,7 +292,7 @@
                                                             </div>
                                                         </div>
                                                         <div>
-                                                            <p style="font-size: 14px">Nome Completo: <br>
+                                                            <p style="font-size: 14px">
                                                                 Idade: <br>
                                                                 Profissão: <br>
                                                                 Quanto tempo está na área:</p>
@@ -308,7 +308,7 @@
                                                             </div>
                                                         </div>
                                                         <div>
-                                                            <p style="font-size: 14px">Nome Completo: <br>
+                                                            <p style="font-size: 14px">
                                                                 Idade: <br>
                                                                 Profissão: <br>
                                                                 Quanto tempo está na área:</p>
@@ -324,7 +324,7 @@
                                                             </div>
                                                         </div>
                                                         <div>
-                                                            <p style="font-size: 14px">Nome Completo: <br>
+                                                            <p style="font-size: 14px">
                                                                 Idade: <br>
                                                                 Profissão: <br>
                                                                 Quanto tempo está na área:</p>
@@ -340,7 +340,7 @@
                                                             </div>
                                                         </div>
                                                         <div>
-                                                            <p style="font-size: 14px">Nome Completo: <br>
+                                                            <p style="font-size: 14px">
                                                                 Idade: <br>
                                                                 Profissão: <br>
                                                                 Quanto tempo está na área:</p>
@@ -355,7 +355,7 @@
                                                                 <h3 class="profile-name"><strong>Corte</strong></h3>
                                                             </div>
                                                         </div>
-                                                        <p style="font-size: 14px">Nome Completo: <br>
+                                                        <p style="font-size: 14px">
                                                             Idade: <br>
                                                             Profissão: <br>
                                                             Quanto tempo está na área:

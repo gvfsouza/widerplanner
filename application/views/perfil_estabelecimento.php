@@ -340,7 +340,7 @@
 
                                             <fieldset class="form-group " style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9;">
                                                 <div class="card-container">
-                                                    <div class="card-profile" style="width: 300px;">
+                                                    <div class="card-profile" style="width: 380px;">
                                                         <div class="card-header-profile">
                                                             <img src="https://images.unsplash.com/photo-1499557354967-2b2d8910bcca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=736&q=80" alt="" style="width: 7.5rem; right: 7.5rem; margin-top: -70px; border-radius: 20px">
                                                             <br><br><br><br>

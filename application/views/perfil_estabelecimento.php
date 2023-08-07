@@ -128,30 +128,12 @@
                                                     <div style="margin-left:10px;"></div>
                                                     <div class="col">
                                                         <div class="row">
-                                                            <div class="form-group col-md-4">
-                                                                <label for="" style="color: #77787a;">Nome do Estabelecimento</label>
-                                                                <br>
-                                                                <input style="font-size:14px" type="text" class="form-control" id="" name="" value="">
-                                                            </div>
-
-                                                            <div class="dados-cliente form-group col-md-2">
-                                                                <label for="" style="color: #77787a;">CNPJ:</label>
-                                                                <br>
-                                                                <input type="text" class="form-control" id="" name="">
-                                                            </div>
-
-                                                            <div class="dados-cliente form-group col-md-3">
-                                                                <label for="" style="color: #77787a;">Horários de Func. :</label>
-                                                                <br>
-                                                                <input type="time" class="form-control" id="horario_estab" name="horario_estab" value="">
-                                                            </div>
-
-                                                            <div class="dados-cliente form-group col-md-2">
-                                                                <label for="" style="color: #77787a;">Localicade:</label>
-                                                                <br>
-                                                                <input style="font-size:14px" type="text" class="form-control" id="localidade" name="localidade" value="">
-                                                            </div>
-                                                          </div>
+                                                            <p style="color: #292625; font-size: 20px">Nome do Estabelecimento: (...) <br>
+                                                            Localidade: (...) <br> 
+                                                            Horário de Funcionamento: (...) às (...) <br>
+                                                            CNPJ: (...) <br>
+                                                            </p>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </fieldset>

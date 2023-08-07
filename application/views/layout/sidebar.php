@@ -15,9 +15,9 @@
        } */
 
        /* cor do ícone quando passa o mouse */
-       /* .nav-item .nav-link:hover .icon {
-           color: #879bc9;
-       } */
+       .nav-item .nav-link:hover {
+           font-size: 24px;
+       }
 
        /* cor do link quando passa o mouse */
        /* .nav-item .nav-link:hover .link {

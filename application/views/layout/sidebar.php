@@ -15,14 +15,14 @@
        } */
 
        /* cor do ícone quando passa o mouse */
-       .nav-item .nav-link:hover {
+       .nav-item .nav-link:hover .icon {
            font-size: 24px;
        }
 
        /* cor do link quando passa o mouse */
-       /* .nav-item .nav-link:hover .link {
-           color: #879bc9;
-       } */
+       .nav-item .nav-link:hover .link {
+            font-size: 24px;
+       }
 
        .nav-item .nav-link .icon {
            margin-right: 14px;

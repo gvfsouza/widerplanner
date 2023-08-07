@@ -10,19 +10,19 @@
        }
 
        /* muda a cor do fundo dos itens quando passa o mouse */
-       .nav-item .nav-link:hover {
-           background-color: white;
-       }
+       /* .nav-item .nav-link:hover {
+           background-color: wite;
+       } */
 
        /* cor do ícone quando passa o mouse */
-       .nav-item .nav-link:hover .icon {
+       /* .nav-item .nav-link:hover .icon {
            color: #879bc9;
-       }
+       } */
 
        /* cor do link quando passa o mouse */
-       .nav-item .nav-link:hover .link {
+       /* .nav-item .nav-link:hover .link {
            color: #879bc9;
-       }
+       } */
 
        .nav-item .nav-link .icon {
            margin-right: 14px;

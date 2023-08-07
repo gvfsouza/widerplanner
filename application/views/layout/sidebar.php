@@ -1,6 +1,10 @@
 <style>
         @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
 
+        * {
+            font-family: Quicksand;
+        }
+
        .nav-item .nav-link {
            display: flex;
            align-items: center;

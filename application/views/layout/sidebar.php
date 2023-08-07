@@ -17,6 +17,7 @@
        /* cor do ícone quando passa o mouse */
        .nav-item .nav-link:hover .icon {
            font-size: 18px;
+           transition: 2s;
        }
 
        /* cor do link quando passa o mouse */

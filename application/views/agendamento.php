@@ -4,13 +4,12 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
             height: 100vh;
             margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
         }
 
         h2 {
@@ -24,6 +23,9 @@
             padding: 20px;
             box-sizing: border-box;
             margin-top: 20px;
+            background-color: white;
+            border-radius: 6px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         label {

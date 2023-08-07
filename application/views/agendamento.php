@@ -1,34 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
     <style>
-        input[type="submit"],
-        input[type="reset"] {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-        input[type="submit"]:hover,
-        input[type="reset"]:hover {
-            background-color: #45a049;
-        }
-        
-        /* Resto do estilo */
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             display: flex;
-            flex-direction: column; 
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100vh;
             margin: 0;
         }
+
         h2 {
             font-size: 32px;
             margin: 0;
         }
+
         form {
             max-width: 400px;
             width: 100%;
@@ -36,21 +25,25 @@
             box-sizing: border-box;
             margin-top: 20px;
         }
+
         label {
             display: block;
             margin-top: 10px;
             text-align: left;
         }
+
         .form-row {
             display: flex;
-            justify-content: space-between; 
+            justify-content: space-between;
             align-items: center;
             margin-bottom: 15px;
         }
+
         .form-row label {
             flex-basis: 30%;
             margin: 0;
         }
+
         .form-row input[type="text"],
         .form-row input[type="tel"],
         .form-row input[type="email"],
@@ -63,25 +56,45 @@
             border-radius: 4px;
             box-sizing: border-box;
         }
+
         .form-row textarea {
             resize: vertical;
         }
+
         .date-time-container {
             display: flex;
-            justify-content: space-between; 
+            justify-content: space-between;
             align-items: center;
-            margin-bottom: 10px; 
+            margin-bottom: 10px;
         }
+
         .date-container,
         .time-container {
             flex: 1;
             display: flex;
-            flex-direction: column; 
+            flex-direction: column;
             align-items: center;
         }
+
         .date-container label,
         .time-container label {
             display: block;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
@@ -96,12 +109,12 @@
             <label for="telefone">Telefone:</label>
             <input type="tel" id="telefone" name="telefone" required>
         </div>
-        
+
         <div class="form-row">
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
         </div>
-        
+
         <div class="form-row">
             <label for="servico">Serviço:</label>
             <select id="servico" name="servico" required>
@@ -113,19 +126,19 @@
                 <option value="servico5">Serviço 5</option>
             </select>
         </div>
-        
+
         <div class="form-row date-time-container">
             <div class="date-container">
                 <label for="data">Data:</label>
                 <input type="date" id="data" name="data" required>
             </div>
-            
+
             <div class="time-container">
                 <label for="hora">Hora:</label>
                 <input type="time" id="hora" name="hora" required>
             </div>
         </div>
-        
+
         <input type="submit" value="Agendar" class="submit-button">
         <input type="reset" value="Limpar" class="submit-button">
     </form>

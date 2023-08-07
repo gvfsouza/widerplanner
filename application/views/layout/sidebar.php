@@ -23,6 +23,7 @@
        /* cor do link quando passa o mouse */
        .nav-item .nav-link:hover .link {
             font-size: 18px;
+            transition: 0.5s;
        }
 
        .nav-item .nav-link .icon {

@@ -1,4 +1,4 @@
-<style>
+    <style>
         input[type="submit"],
         input[type="reset"] {
             background-color: #4CAF50;

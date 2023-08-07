@@ -1,70 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            height: 100vh;
-            margin: 0;
+        @font-face {
+            font-family: Poppins-Regular;
+            /* ... */
+        }
+
+        @font-face {
+            font-family: Montserrat-Medium;
+            /* ... */
+        }
+
+        /* Seus estilos anteriores */
+
+        /* Estilos adicionais para a tela de agendamento */
+        .container-agendamento {
+            width: 100%;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             background-color: #f0f0f0;
         }
 
-        h2 {
-            font-size: 32px;
-            margin: 0;
-        }
-
-        form {
-            max-width: 400px;
-            width: 100%;
+        .wrap-agendamento {
+            width: 465px;
+            background: #fff;
+            border-radius: 10px;
             padding: 20px;
-            box-sizing: border-box;
-            margin-top: 20px;
-            background-color: white;
-            border-radius: 6px;
             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        label {
+        .form-agendamento {
+            width: 100%;
+        }
+
+        .form-agendamento-title {
+            width: 100%;
             display: block;
-            margin-top: 10px;
-            text-align: left;
+            font-family: Montserrat-Medium;
+            font-size: 24px;
+            color: #555555;
+            line-height: 1.2;
+            text-align: center;
+            margin-bottom: 20px;
         }
 
-        .form-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-
-        .form-row label {
-            flex-basis: 30%;
-            margin: 0;
-        }
-
-        .form-row input[type="text"],
-        .form-row input[type="tel"],
-        .form-row input[type="email"],
-        .form-row select,
-        .form-row textarea {
-            flex: 1;
-            padding: 8px;
-            margin-top: 5px;
+        .input-agendamento {
+            font-family: Poppins-Regular;
+            color: #333333;
+            line-height: 1.2;
+            font-size: 18px;
+            display: block;
+            width: 100%;
+            background: transparent;
+            height: 50px;
+            padding: 0 20px;
             border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-
-        .form-row textarea {
-            resize: vertical;
+            border-radius: 10px;
+            margin-bottom: 15px;
         }
 
         .date-time-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
         }
 
         .date-container,
@@ -80,66 +82,60 @@
             display: block;
         }
 
-        input[type="submit"],
-        input[type="reset"] {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            margin-top: 20px;
+        .input-agendamento[type="date"],
+        .input-agendamento[type="time"] {
+            width: 100%;
+            height: 50px;
+            padding: 0 20px;
         }
 
-        input[type="submit"]:hover,
-        input[type="reset"]:hover {
-            background-color: #45a049;
+        .btn-agendamento {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #B98F56;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-family: Poppins-Medium;
+            font-size: 16px;
+            line-height: 1.2;
+            text-align: center;
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
-    <h2>Agendamento</h2>
-    <form action="processar_agendamento.php" method="post">
-        <div class="form-row">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
-        </div>
-        <div class="form-row">
-            <label for="telefone">Telefone:</label>
-            <input type="tel" id="telefone" name="telefone" required>
-        </div>
+    <div class="container-agendamento">
+        <div class="wrap-agendamento">
+            <form class="form-agendamento">
+                <span class="form-agendamento-title">Agendamento</span>
 
-        <div class="form-row">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+                <input type="text" class="input-agendamento" placeholder="Nome">
+                <input type="tel" class="input-agendamento" placeholder="Telefone">
+                <input type="email" class="input-agendamento" placeholder="Email">
+
+                <select class="input-agendamento" required>
+                    <option value="" disabled selected>Selecione um serviço</option>
+                    <option value="servico1">Serviço 1</option>
+                    <option value="servico2">Serviço 2</option>
+                    <!-- Mais opções de serviço aqui -->
+                </select>
+
+                <div class="date-time-container">
+                    <div class="date-container">
+                        <label for="data">Data:</label>
+                        <input type="date" id="data" name="data" class="input-agendamento" required>
+                    </div>
+                    <div class="time-container">
+                        <label for="hora">Hora:</label>
+                        <input type="time" id="hora" name="hora" class="input-agendamento" required>
+                    </div>
+                </div>
+
+                <button class="btn-agendamento" type="submit">Agendar</button>
+            </form>
         </div>
-
-        <div class="form-row">
-            <label for="servico">Serviço:</label>
-            <select id="servico" name="servico" required>
-                <option value="" disabled selected>Selecione um serviço</option>
-                <option value="servico1">Serviço 1</option>
-                <option value="servico2">Serviço 2</option>
-                <option value="servico3">Serviço 3</option>
-                <option value="servico4">Serviço 4</option>
-                <option value="servico5">Serviço 5</option>
-            </select>
-        </div>
-
-        <div class="form-row date-time-container">
-            <div class="date-container">
-                <label for="data">Data:</label>
-                <input type="date" id="data" name="data" required>
-            </div>
-
-            <div class="time-container">
-                <label for="hora">Hora:</label>
-                <input type="time" id="hora" name="hora" required>
-            </div>
-        </div>
-
-        <input type="submit" value="Agendar" class="submit-button">
-        <input type="reset" value="Limpar" class="submit-button">
-    </form>
+    </div>
 </body>
 </html>

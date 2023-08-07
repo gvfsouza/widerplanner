@@ -128,7 +128,7 @@
                                                     <div style="margin-left:10px;"></div>
                                                     <div class="col">
                                                         <div class="row">
-                                                            <p style="color: #4A4643; font-size: 16px"><strong>Nome do Estabelecimento: (...)</strong> <br>
+                                                            <p style="color: #4A4643; font-size: 16px"><strong>Nome do Estabelecimento:</strong> (...)<br>
                                                             <strong>Localidade: (...)</strong> <br> 
                                                             <strong>Horário de Funcionamento:</strong> (...) às (...) <br>
                                                             <strong>CNPJ: (...) </strong><br>

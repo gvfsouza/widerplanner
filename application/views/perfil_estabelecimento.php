@@ -128,10 +128,10 @@
                                                     <div style="margin-left:10px;"></div>
                                                     <div class="col">
                                                         <div class="row">
-                                                            <p style="color: #292625; font-size: 16px">Nome do Estabelecimento: (...) <br>
-                                                            Localidade: (...) <br> 
-                                                            Horário de Funcionamento: (...) às (...) <br>
-                                                            CNPJ: (...) <br>
+                                                            <p style="color: #292625; font-size: 16px"><strong>Nome do Estabelecimento: (...)</strong> <br>
+                                                            <strong>Localidade: (...)</strong> <br> 
+                                                            <strong>Horário de Funcionamento:</strong> (...) às (...) <br>
+                                                            <strong>CNPJ: (...) </strong><br>
                                                             </p>
                                                         </div>
                                                     </div>

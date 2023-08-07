@@ -15,13 +15,18 @@
         /* Seus estilos anteriores */
 
         /* Estilos adicionais para a tela de agendamento */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #F0F8FF; /* Cor de fundo da paleta */
+        }
+
         .container-agendamento {
             width: 100%;
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #f0f0f0;
         }
 
         .wrap-agendamento {
@@ -40,11 +45,12 @@
             width: 100%;
             display: block;
             font-family: Montserrat-Medium;
-            font-size: 24px;
+            font-size: 30px; /* Tamanho maior */
             color: #555555;
             line-height: 1.2;
             text-align: center;
             margin-bottom: 20px;
+            font-weight: bold; /* Em negrito */
         }
 
         .input-agendamento {
@@ -93,7 +99,7 @@
             display: block;
             width: 100%;
             padding: 10px;
-            background-color: #B98F56;
+            background-color: #B0C4DE; /* Cor dos botões */
             color: #fff;
             border: none;
             cursor: pointer;
@@ -134,6 +140,7 @@
                 </div>
 
                 <button class="btn-agendamento" type="submit">Agendar</button>
+                <button class="btn-agendamento" type="button">Ver Agendamento</button>
             </form>
         </div>
     </div>

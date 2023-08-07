@@ -16,12 +16,12 @@
 
        /* cor do ícone quando passa o mouse */
        .nav-item .nav-link:hover .icon {
-           font-size: 21px;
+           font-size: 18px;
        }
 
        /* cor do link quando passa o mouse */
        .nav-item .nav-link:hover .link {
-            font-size: 21px;
+            font-size: 18px;
        }
 
        .nav-item .nav-link .icon {

@@ -15,10 +15,12 @@
            transition: all 0.2s ease;
        }
 
-       /* muda a cor do fundo dos itens quando passa o mouse */
-       /* .nav-item .nav-link:hover {
-           background-color: wite;
-       } */
+       .navbar-nav.sidebar {
+        margin: 20px;
+        border-radius: 15px;
+        background-color: #F0F3F9;
+      }
+
 
        /* cor do ícone quando passa o mouse */
        .nav-item .nav-link:hover .icon {

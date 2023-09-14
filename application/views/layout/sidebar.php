@@ -59,7 +59,7 @@
        <li class="nav-item">
            <a class="nav-link" href="#">
                <i class="fas fa-home icon" style="color:#879bc9"></i>
-               <span class="link" style="color:#5e5c5c">Home</span></a>
+               <span class="link" style="color:#858796;font-weight: bold;font-size:17px">Home</span></a>
        </li>
 
        <li class="nav-item">

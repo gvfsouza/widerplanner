@@ -45,7 +45,7 @@
        }
 
    </style><!-- Sidebar -->
-   <ul class="navbar-nav  sidebar " id="accordionSidebar" style="background-color: #879bc9;">
+   <ul class="navbar-nav  sidebar " id="accordionSidebar" style="background-color: #ffffff;">
 
         <a class="sidebar-brand d-flex align-items-center justify-content-center">
            <div class="sidebar-brand-icon ">
@@ -58,29 +58,29 @@
 
        <li class="nav-item">
            <a class="nav-link" href="#">
-               <i class="fas fa-home icon"></i>
-               <span class="link">Home</span></a>
+               <i class="fas fa-home icon" style="color:black"></i>
+               <span class="link" style="color:#879bc9">Home</span></a>
        </li>
 
        <li class="nav-item">
            <!-- <a title="Gerenciar Usuários" class="nav-link" href="<//?php echo base_url(); ?>perfil_estabelecimento"> -->
            <a title="Gerenciar Usuários" class="nav-link" href="">
             <i class="fas fa-user icon"></i>
-               <span class="link">Perfil </span>
+               <span class="link" style="color:#879bc9">Perfil </span>
            </a>
        </li>
 
        <li class="nav-item">
            <a title="Gerenciar Usuários" class="nav-link" href="#">
                <i class="fas fa-users icon"></i>
-               <span class="link">Serviços</span>
+               <span class="link" style="color:#879bc9">Serviços</span>
            </a>
        </li>
 
        <li class="nav-item">
            <a title="Gerenciar Usuários" class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">
                <i class="fas fa-sign-out-alt icon"></i>
-               <span class="link">Sair</span></a>
+               <span class="link" style="color:#879bc9">Sair</span></a>
        </li>
 
        <!-- Divider -->
@@ -88,4 +88,4 @@
    </ul>
    <!-- End of Sidebar -->
    <!-- Content Wrapper -->
-   <div id="content-wrapper" class="d-flex flex-column" style="background-color: #F0F3F9">
+   <div id="content-wrapper" class="d-flex flex-column" style="background-color: #879bc9">

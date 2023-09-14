@@ -65,22 +65,22 @@
        <li class="nav-item">
            <!-- <a title="Gerenciar Usuários" class="nav-link" href="<//?php echo base_url(); ?>perfil_estabelecimento"> -->
            <a title="Gerenciar Usuários" class="nav-link" href="">
-            <i class="fas fa-user icon"></i>
-               <span class="link" style="color:#879bc9">Perfil </span>
+            <i class="fas fa-user icon" style="color:#879bc9"></i>
+               <span class="link" style="color:#858796;font-weight: bold;font-size:17px">Perfil </span>
            </a>
        </li>
 
        <li class="nav-item">
            <a title="Gerenciar Usuários" class="nav-link" href="#">
-               <i class="fas fa-users icon"></i>
-               <span class="link" style="color:#879bc9">Serviços</span>
+               <i class="fas fa-users icon" style="color:#879bc9"></i>
+               <span class="link" style="color:#858796;font-weight: bold;font-size:17px">Serviços</span>
            </a>
        </li>
 
        <li class="nav-item">
            <a title="Gerenciar Usuários" class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">
-               <i class="fas fa-sign-out-alt icon"></i>
-               <span class="link" style="color:#879bc9">Sair</span></a>
+               <i class="fas fa-sign-out-alt icon" style="color:#879bc9"></i>
+               <span class="link" style="color:#858796;font-weight: bold;font-size:17px">Sair</span></a>
        </li>
 
        <!-- Divider -->

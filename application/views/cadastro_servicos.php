@@ -35,14 +35,14 @@ label{
                                     <input style="font-size:14px" type="file" class="form-control" id="foto" name="foto" value="">
                                   </div>
                                   <div class="form-group col-md-6">
-                                    <label for="" style="color: #77787a;">Nome:</label>
+                                    <label for="" style="color: #77787a;">Nome do Serviço:</label>
                                     <br>
                                     <input style="font-size:14px" type="text" class="form-control" id="nome" name="nome" value="">
                                   </div>
                                   <div class="dados-cliente form-group col-md-6">
-                                    <label for="" style="color: #77787a;">CPF:</label>
+                                    <label for="" style="color: #77787a;">Descrição:</label>
                                     <br>
-                                    <input type="text" class="form-control" id="cpd" name="cpf" disabled="">
+                                    <textarea name="descricao" id="descricao" cols="30" rows="10"></textarea>
                                   </div>
                                   <div class="dados-cliente form-group col-md-4">
                                     <label for="" style="color: #77787a;">Data Nasc.:</label>

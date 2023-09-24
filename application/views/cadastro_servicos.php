@@ -42,7 +42,7 @@ label{
                                   <div class="dados-cliente form-group col-md-6">
                                     <label for="" style="color: #77787a;">Descrição:</label>
                                     <br>
-                                    <textarea class="form-control" name="descricao" id="descricao" cols="30" rows="10"></textarea>
+                                    <textarea class="form-control" name="descricao" id="descricao" cols="5" rows="5"></textarea>
                                   </div>
                                   <div class="dados-cliente form-group col-md-4">
                                     <label for="" style="color: #77787a;">Data Nasc.:</label>

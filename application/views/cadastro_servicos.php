@@ -47,12 +47,12 @@ label{
                                   <div class="dados-cliente form-group col-md-6">
                                     <label for="" style="color: #77787a;">Valor :</label>
                                     <br>
-                                    <input type="date" class="form-control" id="valor" name="valor" value="">
+                                    <input type="number" class="form-control" id="valor" name="valor" value="">
                                   </div>
                                   <div class="dados-cliente form-group col-md-6">
                                     <label for="" style="color: #77787a;">Duração:</label>
                                     <br>
-                                    <input style="font-size:14px" type="text" class="form-control" id="duracao" name="duracao" value="">
+                                    <input style="font-size:14px" type="time" class="form-control" id="duracao" name="duracao" value="">
                                   </div>
                 
                                 </div>

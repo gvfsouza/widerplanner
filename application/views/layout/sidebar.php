@@ -78,6 +78,15 @@
        </li>
 
        <li class="nav-item">
+           <a title="Gerenciar Usuários" class="nav-link" href="">
+               <i class="fas fa-users icon" style="color:#879bc9"></i>
+               <span class="link" style="color:#000000d9;font-weight: bold;font-size:17px">Cadastros
+            
+            </span>
+           </a>
+       </li>
+
+       <li class="nav-item">
            <a title="Gerenciar Usuários" class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">
                <i class="fas fa-sign-out-alt icon" style="color:#879bc9"></i>
                <span class="link" style="color:#000000d9;font-weight: bold;font-size:17px">Sair</span></a>

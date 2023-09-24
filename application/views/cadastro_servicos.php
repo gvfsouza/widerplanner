@@ -39,20 +39,20 @@ label{
                                     <br>
                                     <input style="font-size:14px" type="text" class="form-control" id="nome" name="nome" value="">
                                   </div>
-                                  <div class="dados-cliente form-group col-md-6">
+                                  <div class="dados-cliente form-group col-md-12">
                                     <label for="" style="color: #77787a;">Descrição:</label>
                                     <br>
-                                    <textarea class="form-control" name="descricao" id="descricao" cols="5" rows="5"></textarea>
+                                    <textarea class="form-control" name="descricao" id="descricao" cols="5" rows="3"></textarea>
                                   </div>
-                                  <div class="dados-cliente form-group col-md-4">
-                                    <label for="" style="color: #77787a;">Data Nasc.:</label>
+                                  <div class="dados-cliente form-group col-md-6">
+                                    <label for="" style="color: #77787a;">Valor :</label>
                                     <br>
-                                    <input type="date" class="form-control" id="dt_nascimento" name="dt_nascimento" value="">
+                                    <input type="date" class="form-control" id="valor" name="valor" value="">
                                   </div>
-                                  <div class="dados-cliente form-group col-md-2">
-                                    <label for="" style="color: #77787a;">Sexo:</label>
+                                  <div class="dados-cliente form-group col-md-6">
+                                    <label for="" style="color: #77787a;">Duração:</label>
                                     <br>
-                                    <input style="font-size:14px" type="text" class="form-control" id="sexo" name="sexo" value="" disabled="">
+                                    <input style="font-size:14px" type="text" class="form-control" id="duracao" name="duracao" value="">
                                   </div>
                 
                                 </div>

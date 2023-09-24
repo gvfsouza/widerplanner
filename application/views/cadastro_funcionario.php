@@ -46,17 +46,17 @@ label{
                                   <div class="dados-cliente form-group col-md-6">
                                     <label for="" style="color: #77787a;">Profissão:</label>
                                     <br>
-                                    <textarea class="form-control" name="profissao" id="profissao" cols="5" rows="3"></textarea>
+                                    <input type="text" class="form-control" name="profissao" id="profissao" value="">
                                   </div>
                                   <div class="dados-cliente form-group col-md-6">
                                     <label for="" style="color: #77787a;">Quanto tempo está na área :</label>
                                     <br>
-                                    <input type="number" class="form-control" id="tempo_area" name="tempo_area" value="">
+                                    <input type="text" class="form-control" id="tempo_area" name="tempo_area" value="">
                                   </div>
                                   <div class="dados-cliente form-group col-md-6">
                                     <label for="" style="color: #77787a;">Serviços:</label>
                                     <br>
-                                    <input style="font-size:14px" type="time" class="form-control" id="servicos" name="servicos" value="">
+                                    <input style="font-size:14px" type="text" class="form-control" id="servicos" name="servicos" value="">
                                   </div>
                                 </div>
                               </div>

@@ -67,5 +67,5 @@
     <script type="text/javascript" src="js/bootstrap-select.min.js"></script>
 </head>
 <body id="page-top">
-    <div id="wrapper" class="h-100" style="background-color: #879bc9;">
+    <div id="wrapper" class="h-100" style="background-color: #ffffff33;">
 

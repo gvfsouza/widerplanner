@@ -96,4 +96,4 @@
    </ul>
    <!-- End of Sidebar -->
    <!-- Content Wrapper -->
-   <div id="content-wrapper" class="d-flex flex-column" style="background-color: #879bc9">
+   <div id="content-wrapper" class="d-flex flex-column" style="background-color: #ffffff33">

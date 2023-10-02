@@ -78,9 +78,9 @@ $query_builder = TRUE;
 // 	'dsn'	=> '',
 // 	'hostname' => 'localhost',
 // 	'username' => '',
-// 	'password' => '',
-// 	'database' => '',
-// 	'dbdriver' => 'mysqli',
+// 	'password' => '01102023',
+// 	'database' => 'widerplanner',
+// 	'dbdriver' => 'pdo',
 // 	'dbprefix' => '',
 // 	'pconnect' => FALSE,
 // 	'db_debug' => (ENVIRONMENT !== 'production'),
@@ -93,5 +93,6 @@ $query_builder = TRUE;
 // 	'compress' => FALSE,
 // 	'stricton' => FALSE,
 // 	'failover' => array(),
-// 	'save_queries' => TRUE
+// 	'save_queries' => TRUE,
+//     'port' => 5432
 // );

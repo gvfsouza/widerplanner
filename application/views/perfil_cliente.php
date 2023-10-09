@@ -36,10 +36,13 @@ label{
 
                               <div class="col">
                                 <div class="row">
+                                  <?php foreach ($listar_dados_cliente as $value) { ?>
+                                    
+                                  
                                   <div class="form-group col-md-6">
                                     <label for="" style="color: #77787a;">Nome:</label>
                                     <br>
-                                    <input style="font-size:14px" type="text" class="form-control" id="nome" name="nome" value="" disabled="">
+                                    <input style="font-size:14px" type="text" class="form-control" id="nome" name="nome" value="<?php echo $value->nome_cliente; ?>" disabled="">
                                   </div>
                                   <div class="dados-cliente form-group col-md-6">
                                     <label for="" style="color: #77787a;">CPF:</label>
@@ -61,6 +64,7 @@ label{
                                     <input style="font-size:14px" type="text" class="form-control" id="celular" name="celular" value="">
                                   </div>
                                 </div>
+                                <?php } ?>
                                 <div class="row">
                                   <div class="dados-cliente col-md-3">
                                     <label for="" style="color: #77787a;">CEP:</label>

@@ -7,6 +7,6 @@ public function listar_dados_cliente()
         $this->db->select('*');
         $this->db->from('widerplanner.cliente');
         $res = $this->db->get();
-        return $res result;
+        return $res->result();
     }
 }

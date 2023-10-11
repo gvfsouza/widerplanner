@@ -21,7 +21,7 @@ class Perfil_cliente extends CI_Controller {
 		$this->load->view('layout/header');
 		$this->load->view('layout/sidebar');
 		$this->load->view('layout/navbar');
-		$this->load->view('perfil_cliente');
+		$this->load->view('perfil_cliente',$dados);
 		$this->load->view('layout/footer');
 	}
 }

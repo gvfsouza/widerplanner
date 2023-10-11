@@ -1,4 +1,8 @@
 <style>
+    body{
+     height:100%
+    }
+
     label{
         color:black;
     }

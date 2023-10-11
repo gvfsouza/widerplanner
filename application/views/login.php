@@ -92,14 +92,6 @@
     font-size: 13px;
   }
 
-  #signin {
-    left: 25px;
-  }
-
-  #signup {
-    left: 450px;
-  }
-
   i {
     position: absolute;
     left: 0;

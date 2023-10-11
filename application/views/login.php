@@ -128,13 +128,13 @@
     <div class="row">
         <div class="col-md-12">
             <div class="form-group">
-                <label for="cpf"> CPF:</label>
+                <label for="cpf"> <i class="fas fa-lock"></i> CPF:</label>
                 <input type="text" class="form-control" placeholder="Digite o CPF" name="cpf" id="cpf">
             </div>
         </div>
         <br>
         <div class="col-md-12">
-            <label for="senha"> Senha:</label>
+            <label for="senha"> <i class="fas fa-lock"></i> Senha:</label>
             <input type="password" class="form-control" placeholder="Insira sua senha" name="senha" id="senha">
         </div>
     </div>

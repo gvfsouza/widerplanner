@@ -124,8 +124,6 @@
 </style>
 
 <div class="container">
-
-
   <form id="signin">
     <div class="row">
         <div class="col-md-12">

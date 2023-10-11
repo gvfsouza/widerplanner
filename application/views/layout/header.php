@@ -47,7 +47,7 @@
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="jquery-easing/jquery.easing.min.js"></script>
     <script src="js/sb-admin-2.min.js"></script>
-    <script src="<?php echo base_url('js/mascaras.js') ?>"></script>
+    <script src="js/mascaras.js"></script>
     <script src="js/funcoes.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="js/bootstrap-select.min.js"></script>

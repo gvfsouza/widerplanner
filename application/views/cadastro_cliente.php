@@ -23,13 +23,6 @@ label{
                     <div class="p-3 bg-white">
                       <div class="row">
                         <div class="col-12">
-                          <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 7px; border: 1px solid #879bc9;background: #879bc9;color: black;">
-                            <div>
-                              <legend class="form-group" style="color: white; font-size: 18px;">
-                                <strong>Dados Pessoais</strong>
-                              </legend>
-                            </div>
-                          </fieldset>
                           <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9;">
                             <div class="row">
                               <div style="margin-left:10px;"></div>

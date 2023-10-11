@@ -9,7 +9,7 @@
     }
 </style>
 
-<br><br>
+<!-- <br><br>
 
 <footer class="sticky-footer bg-white">
     <div class="container my-auto">
@@ -26,11 +26,11 @@
             <span>Endereço: R. José Weissohn, 153 - Centro, Salto - SP, 13328-300</span>
         </div>
     </div>
-</footer>
+</footer> -->
 </body>
 
 <!-- Logout Modal-->
-<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -46,21 +46,21 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 <!-- Bootstrap core JavaScript-->
-<script src="/public/vendor/jquery/jquery.min.js"></script>
-<script src="/public/vendor/bootstrap/js/bootstrap.bundle.min.js/"></script>
+<!-- <script src="/public/vendor/jquery/jquery.min.js"></script>
+<script src="/public/vendor/bootstrap/js/bootstrap.bundle.min.js/"></script> -->
 
 <!-- Core plugin JavaScript-->
-<script src="/public/vendor/jquery-easing/jquery.easing.min.js/"></script>
+<!-- <script src="/public/vendor/jquery-easing/jquery.easing.min.js/"></script>
 
 <script src="/public/js/sb-admin-2.js/"></script>
 <script src="/public/js/mascaras.js/"></script>
-<script src="/public/js/funcoes.js'/"></script>
+<script src="/public/js/funcoes.js'/"></script> -->
 
 <!-- Select com opções e filtro -->
-<script type="text/javascript" src="/public/js/bootstrap-select.min.js/"></script>
+<!-- <script type="text/javascript" src="/public/js/bootstrap-select.min.js/"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 
 <script>
@@ -76,4 +76,4 @@
 
 <div id="loom-companion-mv3" ext-id="liecbddmkiiihnedobmlmillhodjkdmb">
     <section id="shadow-host-companion"></section>
-</div>
+</div> -->

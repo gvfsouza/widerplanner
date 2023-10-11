@@ -34,22 +34,22 @@ label{
                                   <div class="form-group col-md-6">
                                     <label for="" style="color: #77787a;">Nome:</label>
                                     <br>
-                                    <input style="font-size:14px" type="text" class="form-control" id="nome" name="nome" value="" disabled="">
+                                    <input style="font-size:14px" type="text" class="form-control" id="nome" name="nome" value="">
                                   </div>
                                   <div class="dados-cliente form-group col-md-6">
                                     <label for="" style="color: #77787a;">CPF:</label>
                                     <br>
-                                    <input type="text" class="form-control" id="cpd" name="cpf" disabled="">
+                                    <input type="text" class="form-control" id="cpd" name="cpf">
                                   </div>
                                   <div class="dados-cliente form-group col-md-4">
                                     <label for="" style="color: #77787a;">Data Nasc.:</label>
                                     <br>
-                                    <input type="date" class="form-control" id="dt_nascimento" name="dt_nascimento" value="" disabled="">
+                                    <input type="date" class="form-control" id="dt_nascimento" name="dt_nascimento" value="">
                                   </div>
                                   <div class="dados-cliente form-group col-md-2">
                                     <label for="" style="color: #77787a;">Sexo:</label>
                                     <br>
-                                    <input style="font-size:14px" type="text" class="form-control" id="sexo" name="sexo" value="" disabled="">
+                                    <input style="font-size:14px" type="text" class="form-control" id="sexo" name="sexo" value="">
                                   </div>
                                   <div class="dados-cliente col-md-6">
                                     <label for="" style="color: #77787a;">Celular:</label>

@@ -63,7 +63,6 @@ label{
                                     <input style="font-size:14px" type="text" class="form-control" id="celular" name="celular" value="">
                                   </div>
                                 </div>
-                                <?php } ?>
                                 <div class="row">
                                   <div class="dados-cliente col-md-3">
                                     <label for="" style="color: #77787a;">CEP:</label>

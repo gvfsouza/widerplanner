@@ -143,7 +143,7 @@
       <span><a href="">Esqueci Senha</a></span>
       <br>
       <br>
-      <span><a href=""><strong style="font-size:15px">Clique aqui</strong> para realizar o cadastro</a></span>
+      <span><a href=""><strong style="font-size:14px">Clique aqui</strong> para realizar o cadastro</a></span>
     </div>
     <button type="submit">Entrar</button>
   </form>

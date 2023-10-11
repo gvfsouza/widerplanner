@@ -49,8 +49,8 @@
                         </form>
                     </div>
                 </div>
-                <div class="col-12">
-                    <span class="text-center" style="text-align: center">Sistema desenvolvido para cunho estudantil <br>
+                <div class="col-12 text-center">
+                    <span style="text-align: center">Sistema desenvolvido para cunho estudantil <br>
                         Projeto de Conclusão de Curso - Superior de Tecnologia em Análise e Deselvolvimento de Sistemas
                         <br>
                         Centro Universitário Nossa Senhora do Patrocínio <br>

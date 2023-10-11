@@ -1,42 +1,59 @@
 <style>
+    label {
+        color: black;
+    }
 
-    .container-agendamento {
-        width: 100%;
-        min-height: 100vh;
+    .card-profile {
+        width: 250px;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
+        padding: 2rem;
+        background-color: white;
+        border-radius: 1rem;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        margin: 12px;
+        margin-top: 40px;
     }
 
-    .wrap-agendamento {
-        width: 465px;
-        background: #fff;
-        border-radius: 10px;
-        padding: 20px;
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    .form-agendamento {
-        width: 100%;
-    }
-
-    .form-agendamento-title {
-        width: 100%;
-        display: block;
-        font-family: Montserrat-Medium;
-        font-size: 30px; /* Tamanho maior */
-        color: #555555;
-        line-height: 1.2;
-        text-align: center;
-        margin-bottom: 20px;
-        font-weight: bold; /* Em negrito */
+    .card-container {
+        display: flex;
+        overflow-x: auto;
     }
 </style>
 
-<div class="container-agendamento">
-    <div class="wrap-agendamento">
-        <form class="form-agendamento">
-           
-        </form>
+<br>
+
+<div>
+    <div class="container-fluid">
+        <div class="card shadow mb-4">
+            <div class="card-header py-3" style="background-color: white;">
+
+                <div>
+                    <h3 id="dados-agenda" style="font-size: 25px;font-weight:bold"></h3>
+                    <br>
+                </div>
+
+                <!-- FORMULÁRIO  -->
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="" role="tabpanel">
+                        <form action="">
+                            <div class="p-3 bg-white">
+                                <div class="row">
+                                    <div class="col-12">
+
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <span class="text-center" style="text-align: center">Sistema desenvolvido para cunho estudantil <br>
+                    Projeto de Conclusão de Curso - Superior de Tecnologia em Análise e Deselvolvimento de Sistemas <br> 
+                    Centro Universitário Nossa Senhora do Patrocínio <br> 
+                    Endereço: R. José Weissohn, 153 - Centro, Salto - SP, 13328-300</span>
+            </div>
+        </div>
     </div>
 </div>

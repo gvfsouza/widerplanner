@@ -15,13 +15,13 @@ class Perfil_cliente extends CI_Controller {
 	
 	public function index()
 	{
-		$this->load->model('Cliente_model');
+		// $this->load->model('Cliente_model');
 
-		$dados['listar_dados_cliente'] = $this->Cliente_model->listar_dados_cliente();
+		// $dados['listar_dados_cliente'] = $this->Cliente_model->listar_dados_cliente();
 		$this->load->view('layout/header');
 		$this->load->view('layout/sidebar');
 		$this->load->view('layout/navbar');
-		$this->load->view('perfil_cliente', $dados);
+		$this->load->view('perfil_cliente');
 		$this->load->view('layout/footer');
 	}
 }

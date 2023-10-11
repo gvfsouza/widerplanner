@@ -325,6 +325,12 @@
                         </div>
                     </div>
                 </div>
+                <div class="copyright text-center my-1 mt-1 mb-2 text-muted">
+            <span>Sistema desenvolvido para cunho estudantil.</span>
+        </div>
+        <div class="copyright text-center my-1 mt-1 mb-2 text-muted">
+            <span>Projeto de Conclusão de Curso - Superior de Tecnologia em Análise e Deselvolvimento de Sistemas <br> Centro Universitário Nossa Senhora do Patrocínio <br> Endereço: R. José Weissohn, 153 - Centro, Salto - SP, 13328-300</span>
+        </div>
             </div>
             <a class="btn" href="#" role="button" style="float: right; background-color: #1cc88a; color: white">Agendar </a> <br><br>
         </div>

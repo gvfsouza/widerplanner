@@ -1,148 +1,118 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <style>
-        @font-face {
-            font-family: Poppins-Regular;
-            /* ... */
-        }
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <ui:insert name="preprocessado">
+        <f:metadata>
+            <f:event type="preRenderView" listener="#{UsuarioController.verificaLogin()}"/>
+        </f:metadata>  
+    </ui:insert>
+    <h:head>
+        <h:outputStylesheet name="reset.css" library="css" />
+        <h:outputStylesheet name="bootstrap.css" library="css" />
+        <h:outputStylesheet name="bootstrap-responsive.css" library="css" />
+        <h:outputStylesheet name="jquery_tablesorter/themes/light_gray/style.css" library="js" />
+        <h:outputStylesheet name="principal.css" library="css" />
+        <h:outputScript name="jquery.min.js" library="js" />
+        <ui:insert name="css_adicional">
+        </ui:insert>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta content='Arthur Assunção' name='author'/>
+        <meta content='©2013 Arthur Assunção' name='copyright'/>
+        <title>
+            <ui:insert name="titulo_pagina">
+                Sistema de Agendamento de Exames - AgendaExames
+            </ui:insert>
+        </title>
+    </h:head>
+    <h:body>
+        <div id='wrapper'>
+            <div class='clearfix' id='principal'>
+                <ui:insert name="navbar">
+                    <div class="navbar navbar-inverse navbar-fixed-top">
+                        <div class="navbar-inner">
+                            <div class="container">
+                                <a class='btn btn-navbar' data-target='.nav-collapse' data-toggle='collapse'>
+                                    <span class='icon-bar'></span>
+                                    <span class='icon-bar'></span>
+                                    <span class='icon-bar'></span>
+                                </a>
+                                <h:link styleClass="brand" outcome='/index.xhtml' value="AgendaExames" />
+                                <div class='nav-collapse' id='barra_menu'>
+                                    <ul class='nav' id='nav'>
+                                        <li><h:link outcome='/index.xhtml'><i class="icon-home icon-white"></i> Início</h:link></li>
+                                        <li><h:link outcome='/user/agenda.xhtml'><i class="icon-book icon-white"></i> Agenda</h:link></li>
+                                        <li><h:link outcome='/user/paciente.xhtml'><i class="icon-user icon-white"></i> Paciente</h:link></li>
+                                        <li><h:link outcome='/user/exame.xhtml'><i class="icon-calendar icon-white"></i> Exame</h:link></li>
+                                        <li><h:link outcome='/user/medico.xhtml'><i class="icon-user icon-white"></i> Medico</h:link></li>
+                                        <li><h:link outcome='/user/consulta_relatorio.xhtml'><i class="icon-list-alt icon-white"></i> Relatório</h:link></li>
 
-        @font-face {
-            font-family: Montserrat-Medium;
-            /* ... */
-        }
+                                        <h:form style="margin-top: 10px; margin-bottom: 0px" class="pull-right">
+                                            <h:commandLink action="#{UsuarioController.logout()}" ><i class="icon-off icon-white"></i> Sair</h:commandLink>
+                                        </h:form>
 
-        /* Seus estilos anteriores */
-
-        /* Estilos adicionais para a tela de agendamento */
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #F0F8FF; /* Cor de fundo da paleta */
-        }
-
-        .container-agendamento {
-            width: 100%;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .wrap-agendamento {
-            width: 465px;
-            background: #fff;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .form-agendamento {
-            width: 100%;
-        }
-
-        .form-agendamento-title {
-            width: 100%;
-            display: block;
-            font-family: Montserrat-Medium;
-            font-size: 30px; /* Tamanho maior */
-            color: #555555;
-            line-height: 1.2;
-            text-align: center;
-            margin-bottom: 20px;
-            font-weight: bold; /* Em negrito */
-        }
-
-        .input-agendamento {
-            font-family: Poppins-Regular;
-            color: #333333;
-            line-height: 1.2;
-            font-size: 18px;
-            display: block;
-            width: 100%;
-            background: transparent;
-            height: 50px;
-            padding: 0 20px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            margin-bottom: 15px;
-        }
-
-        .date-time-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .date-container,
-        .time-container {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .date-container label,
-        .time-container label {
-            display: block;
-        }
-
-        .input-agendamento[type="date"],
-        .input-agendamento[type="time"] {
-            width: 100%;
-            height: 50px;
-            padding: 0 20px;
-        }
-
-        .btn-agendamento {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            background-color: #B0C4DE; /* Cor dos botões */
-            color: #fff;
-            border: none;
-            cursor: pointer;
-            font-family: Poppins-Medium;
-            font-size: 16px;
-            line-height: 1.2;
-            text-align: center;
-            border-radius: 10px;
-        }
-    </style>
-</head>
-<body>
-    <div class="container-agendamento">
-        <div class="wrap-agendamento">
-            <form class="form-agendamento">
-                <span class="form-agendamento-title">Agendamento</span>
-
-                <input type="text" class="input-agendamento" placeholder="Nome">
-                <input type="tel" class="input-agendamento" placeholder="Telefone">
-                <input type="email" class="input-agendamento" placeholder="Email">
-
-                <select class="input-agendamento" required>
-                    <option value="" disabled selected>Selecione um serviço</option>
-                    <option value="servico1">Serviço 1</option>
-                    <option value="servico2">Serviço 2</option>
-                    <!-- Mais opções de serviço aqui -->
-                </select>
-
-                <div class="date-time-container">
-                    <div class="date-container">
-                        <label for="data">Data:</label>
-                        <input type="date" id="data" name="data" class="input-agendamento" required>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="time-container">
-                        <label for="hora">Hora:</label>
-                        <input type="time" id="hora" name="hora" class="input-agendamento" required>
+                </ui:insert>
+                <div class='container'>
+                    <br />
+                    <br />
+                    <div id="conteudo">
+                        <ui:insert name="cabecalho">
+
+                        </ui:insert>
+                        <ui:insert name="conteudo">
+                            Sistema de Agendamento de Exames Clínicos com as funções de cadastrar, alterar e excluir médico, exame e paciente, além de permitir o agendamento de exames e salvar o diagnóstico do exame.<br />
+                            Desenvolvido em JSF e Hibernate, utilizando o modelo de desenvolvimento MVC. Apresentado como Trabalho para a disciplina de Desenvolvimento de Aplicações Web.
+                            
+                        </ui:insert>
                     </div>
                 </div>
-
-                <button class="btn-agendamento" type="submit">Agendar</button>
-                <button class="btn-agendamento" type="button">Ver Agendamento</button>
-            </form>
+                <!--/conteudo-->
+                <!-- /div principal -->
+            </div>
+            <!-- /div wrapper -->
         </div>
-    </div>
-</body>
+        <ui:insert name="rodape">
+            <!-- RODAPÉ -->
+            <footer>
+                <div class='container'>
+                    <div class='row'>
+                        <div class='span2 offset1'>
+                            <ul class='unstyled justify'>
+                                <h4>Links</h4>
+                                <small>
+                                    <li><a href='http://blog.arthurassuncao.com'>Blog</a></li>
+                                    <li><a href='http://github.com/arthurassuncao'>Repositórios no Github</a></li>
+                                    <li><a href='http://lattes.cnpq.br/8136835668168874'>Currículo Lattes</a></li>
+                                </small>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class='row links_secundarios'>
+                        <div class='span5'>
+                        </div>
+                        <div class='span4'>
+                            <small>
+                                <span id='copyright'>&#169; Arthur Assunção 2013</span>
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        </ui:insert>
+        <h:outputScript name="bootstrap.min.js" library="js" />
+        <h:outputScript name="jquery_tablesorter/jquery.tablesorter.min.js" library="js" />
+        <h:outputScript name="jquery_tablesorter/jquery.metadata.js" library="js" />
+        <h:outputScript name="jquery.maskedinput.min.js" library="js" />
+        <h:outputScript name="principal.js" library="js" />
+        <ui:insert name="js_adicional">
+        </ui:insert>
+
+    </h:body>
 </html>

@@ -156,6 +156,10 @@
     a:hover {
         color: inherit;
     }
+
+    tr, th{
+        text-align: center;
+    }
 </style>
 
 <br>

@@ -1,7 +1,7 @@
 <style>
-  label {
-    color: black;
-  }
+    label {
+      color: black;
+    }
 </style>
 
 <br>
@@ -31,30 +31,30 @@
                         <div class="col">
                           <div class="row">
                             <div class="form-group col-md-6">
-                              <label for="" style="color: #77787a;">Foto:</label>
+                              <label for="" style="color: #4e4e4e;">Foto:</label>
                               <br>
                               <input style="font-size:14px" type="file" class="form-control" id="foto" name="foto"
                                 value="">
                             </div>
                             <div class="form-group col-md-6">
-                              <label for="" style="color: #77787a;">Nome do Serviço:</label>
+                              <label for="" style="color: #4e4e4e;">Nome do Serviço:</label>
                               <br>
                               <input style="font-size:14px" type="text" class="form-control" id="nome" name="nome"
                                 value="">
                             </div>
                             <div class="dados-cliente form-group col-md-12">
-                              <label for="" style="color: #77787a;">Descrição:</label>
+                              <label for="" style="color: #4e4e4e;">Descrição:</label>
                               <br>
                               <textarea class="form-control" name="descricao" id="descricao" cols="5"
                                 rows="3"></textarea>
                             </div>
                             <div class="dados-cliente form-group col-md-6">
-                              <label for="" style="color: #77787a;">Valor :</label>
+                              <label for="" style="color: #4e4e4e;">Valor :</label>
                               <br>
                               <input type="number" class="form-control" id="valor" name="valor" value="">
                             </div>
                             <div class="dados-cliente form-group col-md-6">
-                              <label for="" style="color: #77787a;">Duração:</label>
+                              <label for="" style="color: #4e4e4e;">Duração:</label>
                               <br>
                               <input style="font-size:14px" type="time" class="form-control" id="duracao" name="duracao"
                                 value="">
@@ -78,7 +78,8 @@
             Projeto de Conclusão de Curso - Superior de Tecnologia em Análise e Deselvolvimento de Sistemas
             <br>
             Centro Universitário Nossa Senhora do Patrocínio <br>
-            Endereço: R. José Weissohn, 153 - Centro, Salto - SP, 13328-300</span>
+            Endereço: R. José Weissohn, 153 - Centro, Salto - SP, 13328-300
+          </span>
         </div>
         <br>
       </div>

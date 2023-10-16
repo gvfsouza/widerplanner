@@ -170,7 +170,7 @@
             <div class="card-header py-3" style="background-color: white;">
 
                 <div>
-                    <h3 style="font-size: 25px;font-weight:bold">Agendamentos</h3>
+                    <h3 style="font-size: 25px;font-weight:bold;color:color: #9daed7;">Agendamentos</h3>
                     <br>
                 </div>
 

@@ -170,14 +170,13 @@
             <div class="card-header py-3" style="background-color: white;">
 
                 <div>
-                    <h3 id="dados-cleinte" style="font-size: 25px;font-weight:bold"></h3>
+                    <h3 style="font-size: 25px;font-weight:bold">Agendamentos</h3>
                     <br>
                 </div>
 
                 <!-- FORMULÁRIO  -->
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="" role="tabpanel">
-                        <p>Agendamentos</p>
                         <table class="table">
                             <thead>
                                 <tr>

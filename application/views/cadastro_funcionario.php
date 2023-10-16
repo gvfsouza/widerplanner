@@ -30,7 +30,7 @@
                         <div class="col">
                           <div class="row">
                             <div class="form-group col-md-6">
-                              <label for="" style="color: #4e4e4e;"><b>>Foto:</b</label>
+                              <label for="" style="color: #4e4e4e;"><b>Foto:</b</label>
                               <br>
                               <input style="font-size:14px" type="file" class="form-control" id="foto" name="foto"
                                 value="">

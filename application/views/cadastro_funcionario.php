@@ -30,35 +30,35 @@
                         <div class="col">
                           <div class="row">
                             <div class="form-group col-md-6">
-                              <label for="" style="color: #4e4e4e;">Foto:</label>
+                              <label for="" style="color: #4e4e4e;"><b>>Foto:</b</label>
                               <br>
                               <input style="font-size:14px" type="file" class="form-control" id="foto" name="foto"
                                 value="">
                             </div>
                             <div class="form-group col-md-6">
-                              <label for="" style="color: #4e4e4e;">Nome Completo do Funcionário:</label>
+                              <label for="" style="color: #4e4e4e;"><b>Nome Completo do Funcionário:</b></label>
                               <br>
                               <input style="font-size:14px" type="text" class="form-control" id="nome_funcionario"
                                 name="nome_funcionario" value="">
                             </div>
                             <div class="form-group col-md-6">
-                              <label for="" style="color: #4e4e4e;">Idade:</label>
+                              <label for="" style="color: #4e4e4e;"><b>Idade:</b></label>
                               <br>
                               <input style="font-size:14px" type="text" class="form-control" id="nome_funcionario"
                                 name="nome_funcionario" value="">
                             </div>
                             <div class="dados-cliente form-group col-md-6">
-                              <label for="" style="color: #4e4e4e;">Profissão:</label>
+                              <label for="" style="color: #4e4e4e;"><b>Profissão:</b></label>
                               <br>
                               <input type="text" class="form-control" name="profissao" id="profissao" value="">
                             </div>
                             <div class="dados-cliente form-group col-md-6">
-                              <label for="" style="color: #4e4e4e;">Quanto tempo está na área :</label>
+                              <label for="" style="color: #4e4e4e;"><b>Quanto tempo está na área:</b></label>
                               <br>
                               <input type="text" class="form-control" id="tempo_area" name="tempo_area" value="">
                             </div>
                             <div class="dados-cliente form-group col-md-6">
-                              <label for="" style="color: #4e4e4e;">Serviços:</label>
+                              <label for="" style="color: #4e4e4e;"><b>Serviços:</b></label>
                               <br>
                               <input style="font-size:14px" type="text" class="form-control" id="servicos"
                                 name="servicos" value="">

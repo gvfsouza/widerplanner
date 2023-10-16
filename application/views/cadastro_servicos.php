@@ -31,30 +31,30 @@
                         <div class="col">
                           <div class="row">
                             <div class="form-group col-md-6">
-                              <label for="" style="color: #4e4e4e;">Foto:</label>
+                              <label for="" style="color: #4e4e4e;"><b>Foto:</b></label>
                               <br>
                               <input style="font-size:14px" type="file" class="form-control" id="foto" name="foto"
                                 value="">
                             </div>
                             <div class="form-group col-md-6">
-                              <label for="" style="color: #4e4e4e;">Nome do Serviço:</label>
+                              <label for="" style="color: #4e4e4e;"><b>Nome do Serviço:</b></label>
                               <br>
                               <input style="font-size:14px" type="text" class="form-control" id="nome" name="nome"
                                 value="">
                             </div>
                             <div class="dados-cliente form-group col-md-12">
-                              <label for="" style="color: #4e4e4e;">Descrição:</label>
+                              <label for="" style="color: #4e4e4e;"><b>Descrição:</b></label>
                               <br>
                               <textarea class="form-control" name="descricao" id="descricao" cols="5"
                                 rows="3"></textarea>
                             </div>
                             <div class="dados-cliente form-group col-md-6">
-                              <label for="" style="color: #4e4e4e;">Valor :</label>
+                              <label for="" style="color: #4e4e4e;"><b>Valor:</b></label>
                               <br>
                               <input type="number" class="form-control" id="valor" name="valor" value="">
                             </div>
                             <div class="dados-cliente form-group col-md-6">
-                              <label for="" style="color: #4e4e4e;">Duração:</label>
+                              <label for="" style="color: #4e4e4e;"><b>Duração:</b></label>
                               <br>
                               <input style="font-size:14px" type="time" class="form-control" id="duracao" name="duracao"
                                 value="">

@@ -219,7 +219,4 @@
             </div>
         </div>
     </div>
-    <a class="btn" href="#" role="button"
-        style="float: right; background-color: #1cc88a; color: white; margin-bottom: 15px; position: fixed;">Agenda
-    </a>
 </div>

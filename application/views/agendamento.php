@@ -43,7 +43,7 @@
                                     <div class="col-12">
                                         <div class="row">
                                             <div class="form-group col-md-6">
-                                                <label for="">Escolha uma Data:</label>
+                                                <label for="" style="color: #4e4e4e;">Escolha uma Data:</label>
                                                 <br>
                                                 <select name="dataDisp" id="dataDisp" class="form-control" style="cursor: pointer;" required>
                                                     <option selected>Choose...</option>
@@ -53,7 +53,7 @@
                                                 </select>
                                             </div>
                                             <div class="form-group col-md-6">
-                                                <label for="">Escolha um Horário:</label>
+                                                <label for="" style="color: #4e4e4e;">Escolha um Horário:</label>
                                                 <br>
                                                 <select name="horaDisp" id="horaDisp" class="form-control" style="cursor: pointer;" required>
                                                     <option selected>Choose...</option>
@@ -66,7 +66,7 @@
                                         <br>
                                         <div class="row">
                                             <div class="form-group col-md-6">
-                                                <label for="">Serviço:</label>
+                                                <label for="" style="color: #4e4e4e;">Serviço:</label>
                                                 <br>
                                                 <select name="horaDisp" id="horaDisp" class="form-control" style="cursor: pointer;" required>
                                                     <option selected>Choose...</option>
@@ -76,7 +76,7 @@
                                                 </select>
                                             </div>
                                             <div class="form-group col-md-6">
-                                                <label for="">Profissional(s) Disponível:</label>
+                                                <label for="" style="color: #4e4e4e;">Profissional(s) Disponível:</label>
                                                 <br>
                                                 <select name="horaDisp" id="horaDisp" class="form-control" style="cursor: pointer;" required>
                                                     <option selected>Choose...</option>

@@ -15,7 +15,7 @@
   <div class="card shadow mb-4">
     <div class="card-header py-3" style="background-color: white;">
       <div>
-        <h3 id="dados-cleinte" style="font-size: 25px;font-weight:bold">Cadastro de Cliente</h3>
+        <h3 id="dados-cleinte" style="font-size: 25px;">Cadastro de Cliente</h3>
         <br>
       </div>
 

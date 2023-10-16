@@ -4,7 +4,7 @@
     }
 
     .card-profile {
-        width: 300px;
+        width: 350px;
         display: flex;
         flex-direction: column;
         align-items: center;

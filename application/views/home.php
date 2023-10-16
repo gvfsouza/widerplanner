@@ -185,41 +185,7 @@
                                                             <div class="profile-image"></div>
                                                         </center>
                                                         <div class="profile-info">
-                                                            <h3 class="profile-name"><strong>Progressiva</strong></h3>
-                                                            <br>
-                                                            <p class="profile-desc">Descrição (se tiver)</p>
-                                                        </div>
-                                                    </div>
-                                                    <center>
-                                                        <p class="status-value">R$ &nbsp;310,00 <i
-                                                                class="fas fa-clock"></i> &nbsp;&nbsp;03h30</p>
-                                                    </center>
-                                                </div>
-
-                                                <div class="card-profile">
-                                                    <div class="card-header-profile">
-                                                        <center>
-                                                            <div class="profile-image"></div>
-                                                        </center>
-                                                        <div class="profile-info">
                                                             <h3 class="profile-name"><strong>Pigmentação</strong></h3>
-                                                            <br>
-                                                            <p class="profile-desc">Descrição (se tiver)</p>
-                                                        </div>
-                                                    </div>
-                                                    <center>
-                                                        <p class="status-value">R$ &nbsp;310,00 <i
-                                                                class="fas fa-clock"></i> &nbsp;&nbsp;03h30</p>
-                                                    </center>
-                                                </div>
-
-                                                <div class="card-profile">
-                                                    <div class="card-header-profile">
-                                                        <center>
-                                                            <div class="profile-image"></div>
-                                                        </center>
-                                                        <div class="profile-info">
-                                                            <h3 class="profile-name"><strong>Progressiva</strong></h3>
                                                             <br>
                                                             <p class="profile-desc">Descrição (se tiver)</p>
                                                         </div>

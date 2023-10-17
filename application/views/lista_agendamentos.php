@@ -180,7 +180,7 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                <th scope="col">Quem Agendou</th>
+                                <th scope="col">Cliente</th>
                                 <th scope="col">Data</th>
                                 <th scope="col">Hora</th>
                                 <th scope="col">Serviço</th>

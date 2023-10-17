@@ -35,6 +35,7 @@ label{
                               <div style="margin-left:10px;"></div>
 
                               <div class="col">
+                                
                                 <div class="row">
                                   <div class="form-group col-md-6">
                                     <label for="" style="color: #77787a;">Nome:</label>

@@ -42,6 +42,7 @@
            margin-right: 14px;
            font-size: 20px;
            color: white;
+           background-color: #879bc9;
        }
 
    </style><!-- Sidebar -->

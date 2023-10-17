@@ -2,6 +2,10 @@
 label{
     color:black;
 }
+
+tr, td, th{
+  text-align:center;
+}
 </style>
 
 <br>
@@ -122,7 +126,7 @@ label{
                     <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 7px; border: 1px solid #879bc9;color: black;">
                   <table class="table table-responsive-lg">
                     <thead>
-                      <tr style="tex-align:center">
+                      <tr>
                       <th scope="col" style="font-size: 13px;">Serviço</th>
                       <th scope="col" style="font-size: 13px;">Data</th>
                       <th scope="col" style="font-size: 13px;">Hora</th>
@@ -130,19 +134,19 @@ label{
                       </tr>
                     </thead>
                       <tbody>
-                        <tr style="tex-align:center">
+                        <tr>
                           <td style="font-size: 11px;">Corte Masculino</td>
                           <td style="font-size: 11px;">05/03/23</td>
                           <td style="font-size: 11px;">14h 30min</td>
                           <td style="font-size: 11px;">Cristian</td>
                         </tr>
-                        <tr style="tex-align:center"> 
+                        <tr> 
                           <td style="font-size: 11px;">Pigmetação</td>
                           <td style="font-size: 11px;">12/02/23</td>
                           <td style="font-size: 11px;">17h00</td>
                           <td style="font-size: 11px;">Thiago</td>
                         </tr>
-                        <tr style="tex-align:center">
+                        <tr>
                           <td style="font-size: 11px;">Luzes</td>
                           <td style="font-size: 11px;">07/01/23</td>
                           <td style="font-size: 11px;">15h00</td>

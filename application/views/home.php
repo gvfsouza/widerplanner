@@ -132,6 +132,7 @@
     .img-placeholder {
         position: relative;
         max-height: 150px;
+        max-width: 250px;
         overflow: hidden;
         border-radius: 15px;
         box-shadow: 1px 1px 16px -6px rgba(0, 0, 0, 0.75);

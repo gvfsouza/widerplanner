@@ -22,7 +22,6 @@
            padding: 14px 12px;
            border-radius: 8px;
            text-decoration: none;
-           transition: all 0.2s ease;
            background-color: #879bc9;
        }
 

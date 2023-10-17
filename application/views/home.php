@@ -100,6 +100,7 @@
         column-gap: 15px;
         max-width: 1200px;
         width: 100%;
+        max-width: 599px;
         margin: 0 auto;
         /* margin-top: 60px; */
     }

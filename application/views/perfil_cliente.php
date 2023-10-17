@@ -153,6 +153,13 @@ label{
                   </fieldset>
                 </div>  
               </form>
+              <div class="col-12 text-center">
+                <span style="text-align: center">Sistema desenvolvido para cunho estudantil <br>
+                  Projeto de Conclusão de Curso - Superior de Tecnologia em Análise e Deselvolvimento de Sistemas
+                  <br>
+                  Centro Universitário Nossa Senhora do Patrocínio <br>
+                  Endereço: R. José Weissohn, 153 - Centro, Salto - SP, 13328-300</span>
+              </div>
             </div>
           </div>
         </div>

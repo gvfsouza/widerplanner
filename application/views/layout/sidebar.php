@@ -15,17 +15,6 @@
            transition: all 0.2s ease;
        }
 
-       .nav-item .nav-link:hover {
-           display: flex;
-           align-items: center;
-           margin: 8px 0;
-           padding: 14px 12px;
-           border-radius: 8px;
-           text-decoration: none;
-           background-color: #879bc9;
-       }
-
-
        .navbar-nav.sidebar {
         margin: 20px;
         border-radius: 15px;
@@ -36,13 +25,11 @@
        /* cor do ícone quando passa o mouse */
        .nav-item .nav-link:hover .icon {
            font-size: 18px;
-           color:white;
        }
 
        /* cor do link quando passa o mouse */
        .nav-item .nav-link:hover .link {
             font-size: 18px;
-            color:white;
        }
 
        .nav-item .nav-link .icon {

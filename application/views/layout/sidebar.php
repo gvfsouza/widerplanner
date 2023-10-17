@@ -15,6 +15,19 @@
            transition: all 0.2s ease;
        }
 
+       .nav-item .nav-link:hover {
+           display: flex;
+           align-items: center;
+           margin: 8px 0;
+           padding: 14px 12px;
+           border-radius: 8px;
+           text-decoration: none;
+           transition: all 0.2s ease;
+           background-color: #879bc9;
+           color:white;
+       }
+
+
        .navbar-nav.sidebar {
         margin: 20px;
         border-radius: 15px;
@@ -42,7 +55,6 @@
            margin-right: 14px;
            font-size: 20px;
            color: white;
-           background-color: #879bc9;
        }
 
    </style><!-- Sidebar -->

@@ -37,6 +37,7 @@
        /* cor do ícone quando passa o mouse */
        .nav-item .nav-link:hover .icon {
            font-size: 18px;
+           color:white;
        }
 
        /* cor do link quando passa o mouse */

@@ -121,7 +121,7 @@ label{
                     </div>
                     <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 7px; border: 1px solid #879bc9;color: black;">
                   <table class="table table-responsive-lg">
-                    <thead>
+                    <thead style="tex-align:center">
                       <tr>
                       <th scope="col" style="font-size: 13px;">Serviço</th>
                       <th scope="col" style="font-size: 13px;">Data</th>
@@ -129,7 +129,7 @@ label{
                       <th scope="col" style="font-size: 13px;">Profissional</th>
                       </tr>
                     </thead>
-                      <tbody>
+                      <tbody style="tex-align:center">
                         <tr>
                           <td style="font-size: 11px;">Corte Masculino</td>
                           <td style="font-size: 11px;">05/03/23</td>

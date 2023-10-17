@@ -24,7 +24,6 @@
            text-decoration: none;
            transition: all 0.2s ease;
            background-color: #879bc9;
-           color:white;
        }
 
 
@@ -43,6 +42,7 @@
        /* cor do link quando passa o mouse */
        .nav-item .nav-link:hover .link {
             font-size: 18px;
+            color:white;
        }
 
        .nav-item .nav-link .icon {

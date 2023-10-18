@@ -63,7 +63,8 @@
                           </div>
                           <div id="campos">
                             <div class="row form-group">
-                              <div class="col-10">
+                              <div class="col-md-10">
+                                <label for="" style="color: #4e4e4e;"><b>Serviço:</b></label>
                                 <select name="fk_servico[]" class="form-control adicionar_servico" style="cursor: pointer;" required>
                                   <option class="text-center" value="">--- Selecione uma Opção ---</option>
                                   <option value="opcao1">Opção 1</option>

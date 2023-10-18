@@ -102,18 +102,18 @@
 </div>
 
 <script>
-  function adicionarCampo() {
-    var divCampos = document.getElementById("campos");
-    var novoCampo = document.querySelector(".row.form-group").cloneNode(true);
-    novoCampo.querySelector("button").style.display = "block";
-    divCampos.appendChild(novoCampo);
+  function adicionarCampo(botaoAdicionar) {
+    var campoPrincipal = botaoAdicionar.closest('.row.form-group');
+    var novoCampo = campoPrincipal.cloneNode(true);
+    novoCampo.querySelector('button').style.display = 'block';
+    campoPrincipal.parentNode.appendChild(novoCampo);
   }
 
   function removerCampo(botaoRemover) {
-    var divCampos = document.getElementById("campos");
-    var campoParaRemover = botaoRemover.closest(".row.form-group");
-    divCampos.removeChild(campoParaRemover);
+    var campoParaRemover = botaoRemover.closest('.row.form-group');
+    campoParaRemover.parentNode.removeChild(campoParaRemover);
   }
 </script>
+
 
 

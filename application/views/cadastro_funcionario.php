@@ -104,8 +104,7 @@
 <script>
   function adicionarCampo() {
     var divCampos = document.getElementById("campos");
-    var campoPrincipal = document.querySelector(".row.form-group");
-    var novoCampo = campoPrincipal.cloneNode(true);
+    var novoCampo = document.querySelector(".row.form-group").cloneNode(true);
     novoCampo.querySelector("button").style.display = "block";
     divCampos.appendChild(novoCampo);
   }
@@ -116,4 +115,5 @@
     divCampos.removeChild(campoParaRemover);
   }
 </script>
+
 

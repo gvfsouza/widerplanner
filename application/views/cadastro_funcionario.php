@@ -71,7 +71,7 @@
                                   <option value="opcao2">Opção 2</option>
                                 </select>
                               </div>
-                              <div class="col-2">
+                              <div class="col-md-2">
                                 <!-- O botão "Remover" está oculto inicialmente -->
                                 <button type="button" class="btn btn-danger" style="display: none;" onclick="removerCampo(this)">Remover</button>
                               </div>
@@ -117,4 +117,4 @@
     var campoParaRemover = botaoRemover.closest(".row.form-group");
     divCampos.removeChild(campoParaRemover);
   }
-  </script>
+</script>

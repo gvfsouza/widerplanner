@@ -104,19 +104,27 @@
 <script>
   function adicionarCampo() {
     var divCampos = document.querySelector('.row');
-    var selectOriginal = divCampos.querySelector('select');
-    var novoSelect = selectOriginal.cloneNode(true);
-    
+    var campoServicoOriginal = divCampos.cloneNode(true);
+
+    // Torna o botão "Remover" visível
+    campoServicoOriginal.querySelector('button').style.display = 'block';
+
+    // Configura a função de remoção
+    campoServicoOriginal.querySelector('button').onclick = function() {
+      removerCampo(campoServicoOriginal);
+    };
+
     // Limpa a seleção do novo campo
-    novoSelect.selectedIndex = 0;
-    
-    divCampos.parentNode.appendChild(novoSelect);
+    campoServicoOriginal.querySelector('select').selectedIndex = 0;
+
+    divCampos.parentNode.appendChild(campoServicoOriginal);
   }
 
   function removerCampo(campoParaRemover) {
     campoParaRemover.parentNode.removeChild(campoParaRemover);
   }
 </script>
+
 
 
 

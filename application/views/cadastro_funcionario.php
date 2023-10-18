@@ -78,7 +78,7 @@
                               </div>
                             </div>
                           </div>
-                          <button type="button" class="btn btn" onclick="adicionarCampo()">Adicionar Serviço</button>
+                          <button type="button" class="btn btn-primary" onclick="adicionarCampo()">Adicionar Serviço</button>
                         </div>
                       </div>
                     </fieldset>

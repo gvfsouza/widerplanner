@@ -41,18 +41,18 @@
                               <input style="font-size:14px" type="text" class="form-control" id="nome_funcionario"
                                 name="nome_funcionario" value="">
                             </div>
-                            <div class="form-group col-md-6">
+                            <div class="form-group col-md-4">
                               <label for="" style="color: #4e4e4e;"><b>Idade:</b></label>
                               <br>
                               <input style="font-size:14px" type="text" class="form-control" id="nome_funcionario"
                                 name="nome_funcionario" value="">
                             </div>
-                            <div class="dados-cliente form-group col-md-6">
+                            <div class="dados-cliente form-group col-md-4">
                               <label for="" style="color: #4e4e4e;"><b>Profissão:</b></label>
                               <br>
                               <input type="text" class="form-control" name="profissao" id="profissao" value="">
                             </div>
-                            <div class="dados-cliente form-group col-md-6">
+                            <div class="dados-cliente form-group col-md-4">
                               <label for="" style="color: #4e4e4e;"><b>Quanto tempo está na área:</b></label>
                               <br>
                               <input type="text" class="form-control" id="tempo_area" name="tempo_area" value="">

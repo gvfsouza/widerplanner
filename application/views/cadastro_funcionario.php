@@ -60,7 +60,7 @@
                               <br>
                               <input type="text" class="form-control" id="tempo_area" name="tempo_area" value="">
                             </div>
-                              <div id="campos">
+                              
                                 <div class="row">
                                   <div class="form-group col-md-10">
                                     <label for="" style="color: #4e4e4e;"><b>Serviço:</b></label>
@@ -75,7 +75,7 @@
                                     <button type="button" class="btn btn-danger" style="display: none;" onclick="removerCampo(this)">Remover</button>
                                   </div>
                                 </div>
-                              </div>
+                             
                               <button type="button" onclick="adicionarCampo()">Adicionar Serviço</button>
                           </div>
                         </div>

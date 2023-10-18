@@ -75,7 +75,7 @@
                               <button type="button" class="btn btn-danger" style="display: none;" onclick="removerCampo(this)">Remover</button>
                             </div>
                           </div>
-                            <button type="button" onclick="adicionarCampo()">Adicionar Serviço</button>
+                              <button type="button" onclick="adicionarCampo()">Adicionar Serviço</button>
                         </div>
                       </div>
                     </fieldset>
@@ -100,33 +100,19 @@
     </div>
   </div>
 </div>
-
 <script>
   function adicionarCampo() {
-    var divCampos = document.querySelector('.row');
-    var campoServicoOriginal = divCampos.cloneNode(true);
-
-    // Torna o botão "Remover" visível
-    campoServicoOriginal.querySelector('button').style.display = 'block';
-
-    // Configura a função de remoção
-    campoServicoOriginal.querySelector('button').onclick = function() {
-      removerCampo(campoServicoOriginal);
-    };
-
-    // Limpa a seleção do novo campo
-    campoServicoOriginal.querySelector('select').selectedIndex = 0;
-
-    divCampos.parentNode.appendChild(campoServicoOriginal);
+    var divCampos = document.getElementById("campos");
+    var campoPrincipal = divCampos.querySelector(".row.form-group");
+    var novoCampo = campoPrincipal.cloneNode(true);
+    // Torna o botão "Remover" visível no campo adicionado
+    novoCampo.querySelector("button").style.display = "block";
+    divCampos.appendChild(novoCampo);
   }
 
-  function removerCampo(campoParaRemover) {
-    campoParaRemover.parentNode.removeChild(campoParaRemover);
+  function removerCampo(botaoRemover) {
+    var divCampos = document.getElementById("campos");
+    var campoParaRemover = botaoRemover.closest(".row.form-group");
+    divCampos.removeChild(campoParaRemover);
   }
-</script>
-
-
-
-
-
-
+  </script>

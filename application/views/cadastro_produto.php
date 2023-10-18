@@ -14,10 +14,13 @@
   <div class="card shadow mb-4">
     <div class="card-header py-3" style="background-color: white;">
     
-      <div>
-        <h3 id="dados-cleinte" style="font-size: 25px;">Cadastro de Produtos</h3>
-        <br>
-      </div>
+        <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 7px; border: 1px solid #879bc9;background: #879bc9;color: black;">
+            <div>
+                <legend class="form-group" style="color: white; font-size: 18px;">
+                    <strong>Cadastro de Produto</strong>
+                </legend>
+            </div>
+        </fieldset>
 
       <!-- FORMULÁRIO  -->
       <div class="tab-content" id="myTabContent">
@@ -32,6 +35,11 @@
                       <div style="margin-left:10px;"></div>
                       <div class="col">
                         <div class="row">
+                          <div class="form-group col-md-6">
+                                <label for="" style="color: #4e4e4e;"><b>Foto:</b></label>
+                            <br>
+                             <input style="font-size:14px" type="file" class="form-control" id="nome_produto" name="nome_produto" value="">
+                          </div>
                           <div class="form-group col-md-6">
                             <label for="" style="color: #4e4e4e;"><b>Nome:</b></label>
                             <br>

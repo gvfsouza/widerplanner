@@ -60,7 +60,6 @@
                               <br>
                               <input type="text" class="form-control" id="tempo_area" name="tempo_area" value="">
                             </div>
-                            <form id="formulario">
                               <div>
                                 <legend class="form-group" style="font-size: 18px; color: #55A69F">Serviços</legend>
                               </div>
@@ -80,7 +79,6 @@
                                 </div>
                               </div>
                               <button type="button" onclick="adicionarCampo()">Adicionar Serviço</button>
-                            </form>
                           </div>
                         </div>
                       </div>

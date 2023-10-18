@@ -64,8 +64,8 @@
                                 <legend class="form-group" style="font-size: 18px; color: #55A69F">Serviços</legend>
                               </div>
                               <div id="campos">
-                                <div class="row form-group">
-                                  <div class="col-md-10">
+                                <div class="row">
+                                  <div class="form-group col-md-10">
                                     <select name="fk_servico[]" class="form-control adicionar_servico" style="cursor: pointer;" required>
                                       <option class="text-center" value="">--- Selecione uma Opção ---</option>
                                       <option value="opcao1">Opção 1</option>

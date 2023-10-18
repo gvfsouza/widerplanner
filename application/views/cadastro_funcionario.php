@@ -101,46 +101,6 @@
   </div>
 </div>
 
-<form id="formulario">
-    <div>
-      <legend class="form-group" style="font-size: 18px; color: #55A69F">Serviços</legend>
-    </div>
-    <div id="campos">
-      <div class="row form-group">
-        <div class="form-group col-md-10">
-          <label for="" style="color: #4e4e4e;"><b>Serviço:</b></label>
-          <select name="fk_servico[]" class="form-control adicionar_servico" style="cursor: pointer;" required>
-            <option class="text-center" value="">--- Selecione uma Opção ---</option>
-            <option value="opcao1">Opção 1</option>
-            <option value="opcao2">Opção 2</option>
-          </select>
-        </div>
-        <div class="col-2">
-          <!-- O botão "Remover" está oculto inicialmente -->
-          <button type="button" class="btn btn-danger" style="display: none;" onclick="removerCampo(this)">Remover</button>
-        </div>
-      </div>
-    </div>
-    <button type="button" onclick="adicionarCampo()">Adicionar Serviço</button>
-    <input type="submit" value="Enviar">
-  </form>
-
-  <script>
-    function adicionarCampo() {
-      var divCampos = document.getElementById("campos");
-      var campoPrincipal = divCampos.querySelector(".row.form-group");
-      var novoCampo = campoPrincipal.cloneNode(true);
-      // Torna o botão "Remover" visível no campo adicionado
-      novoCampo.querySelector("button").style.display = "block";
-      divCampos.appendChild(novoCampo);
-    }
-
-    function removerCampo(botaoRemover) {
-      var divCampos = document.getElementById("campos");
-      var campoParaRemover = botaoRemover.closest(".row.form-group");
-      divCampos.removeChild(campoParaRemover);
-    }
-  </script>
 <script>
     function adicionarCampo() {
       var divCampos = document.getElementById("campos");

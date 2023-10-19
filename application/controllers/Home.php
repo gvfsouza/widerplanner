@@ -13,7 +13,7 @@ class Home extends CI_Controller {
 	  }
 	}
 	
-	public function index()
+	public function index($id)
 	{
 		// Conexão com o Model
 		$this->load->model('Home_model');

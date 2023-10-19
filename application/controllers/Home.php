@@ -17,8 +17,8 @@ class Home extends CI_Controller {
 	{
 		// Conexão com o Model
 		$this->load->model('Home_model');
-		
-		$dados['listar_estabelecimento'] = $this->Home_model->listar_estabelecimento($id_estabelecimento);
+
+		$dados['listar_estabelecimento'] = $this->Home_model->listar_estabelecimento();
 
 		$this->load->view('layout/header');
 		$this->load->view('layout/sidebar');

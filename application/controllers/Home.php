@@ -13,14 +13,14 @@ class Home extends CI_Controller {
 	  }
 	}
 	
-	public function index()
-	{
-		$this->load->view('layout/header');
-		$this->load->view('layout/sidebar');
-		// $this->load->view('layout/navbar');
-		$this->load->view('home');
-		$this->load->view('layout/footer');
-	}
+	// public function index()
+	// {
+	// 	$this->load->view('layout/header');
+	// 	$this->load->view('layout/sidebar');
+	// 	// $this->load->view('layout/navbar');
+	// 	$this->load->view('home');
+	// 	$this->load->view('layout/footer');
+	// }
 
 	// Página de Impressão
 	function listar_estabelecimento($id)

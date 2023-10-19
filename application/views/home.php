@@ -179,7 +179,7 @@
                                 <div class="row">
                                     <div class="col-12">
 
-                                        <?php foreach ($listar_estabelecimento as $value): ?>
+                                        <?php foreach ($listar_estabelecimento as $value) { ?>
                                         <div class="form-group col-md-4">
                                             <label for="nome_estabelecimento" style="color: #787878">Nome
                                                 Estabelecimento:</label>
@@ -188,7 +188,8 @@
                                                 id="nome_estabelecimento" name="nome_estabelecimento"
                                                 value="<?php echo $value->nome_estabelecimento; ?>">
                                         </div>
-                                        <?php endforeach; ?>
+                                        <?php } ?>
+
 
                                         <fieldset class="form-group"
                                             style="border: 1px solid #ddd; border-radius: 4px; padding: 7px; border: 1px solid #879bc9;background: #879bc9;color: black;">

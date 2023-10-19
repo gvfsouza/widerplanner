@@ -182,7 +182,7 @@
                                         <?php if (!empty($listar_estabelecimento)) { ?>
                                             <?php foreach ($listar_estabelecimento as $value) : ?>
                                                 <div class="form-group col-md-4">
-                                                    <label for="nome_estabelecimento" style="color: #787878">Nome
+                                                    <label for="nome_estabelecimento" style="color: black">Nome
                                                         Estabelecimento:</label>
                                                     <br>
                                                     <input style="font-size: 14px" type="text" class="form-control" id="nome_estabelecimento" name="nome_estabelecimento" value="<?php echo $value->nome_estabelecimento; ?>">

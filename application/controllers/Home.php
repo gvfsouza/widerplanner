@@ -22,7 +22,6 @@ class Home extends CI_Controller {
 		$this->load->view('layout/footer');
 	}
 
-	
 	// Página de Impressão
 	function listar_estabelecimento($id)
 	{

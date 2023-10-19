@@ -4,10 +4,10 @@ class Home_model extends CI_Model
 {
     public function listar_estabelecimento()
     {
-        $this->db->select('*');
-        $this->db->from('widerplanner.estabelecimento');
+        $this->select('*');
+        $this->from('widerplanner.estabelecimento');
 
-        $res = $this->get();
+        $res = $this-get();
         return $res->result();
     }
 }

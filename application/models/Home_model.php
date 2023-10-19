@@ -7,7 +7,7 @@ class Home_model extends CI_Model
         $this->db->select('nome_estabelecimento');
         $this->db->from('widerplanner.estabelecimento');
 
-        $res = $this->db->get();
+        $res = $this->db->post();
         return $res->result();
     }
 }

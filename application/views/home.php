@@ -179,20 +179,19 @@
                                 <div class="row">
                                     <div class="col-12">
 
-                                        <?php foreach ($listar_estabelecimento as $value) { ?>
-                                        <div class="form-group col-md-4">
-                                            <label for="nome_estabelecimento" style="color: #787878">Nome
-                                                Estabelecimento:</label>
-                                            <br>
-                                            <input style="font-size: 14px" type="text" class="form-control"
-                                                id="nome_estabelecimento" name="nome_estabelecimento"
-                                                value="<?php echo $value->nome_estabelecimento; ?>">
-                                        </div>
-                                        <?php } ?>
+                                        <?php if (!empty($listar_estabelecimento)) { ?>
+                                            <?php foreach ($listar_estabelecimento as $value) : ?>
+                                                <div class="form-group col-md-4">
+                                                    <label for="nome_estabelecimento" style="color: #787878">Nome
+                                                        Estabelecimento:</label>
+                                                    <br>
+                                                    <input style="font-size: 14px" type="text" class="form-control" id="nome_estabelecimento" name="nome_estabelecimento" value="<?php echo $value->nome_estabelecimento; ?>">
+                                                </div>
+                                        <?php endforeach;
+                                        } ?>
 
 
-                                        <fieldset class="form-group"
-                                            style="border: 1px solid #ddd; border-radius: 4px; padding: 7px; border: 1px solid #879bc9;background: #879bc9;color: black;">
+                                        <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 7px; border: 1px solid #879bc9;background: #879bc9;color: black;">
                                             <div>
                                                 <legend class="form-group" style="color: white; font-size: 18px;">
                                                     <strong>Serviços Oferecidos</strong>
@@ -200,8 +199,7 @@
                                             </div>
                                         </fieldset>
 
-                                        <fieldset class="form-group "
-                                            style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9;">
+                                        <fieldset class="form-group " style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9;">
                                             <div class="card-container">
                                                 <div class="card-profile">
                                                     <div class="card-header-profile">
@@ -216,8 +214,7 @@
                                                         </div>
                                                     </div>
                                                     <center>
-                                                        <p class="status-value">R$ &nbsp;45,00 <i
-                                                                class="fas fa-clock"></i> &nbsp;&nbsp;40 minutos</p>
+                                                        <p class="status-value">R$ &nbsp;45,00 <i class="fas fa-clock"></i> &nbsp;&nbsp;40 minutos</p>
                                                     </center>
                                                 </div>
 
@@ -233,8 +230,7 @@
                                                         </div>
                                                     </div>
                                                     <center>
-                                                        <p class="status-value">R$ &nbsp;45,00 <i
-                                                                class="fas fa-clock"></i> &nbsp;&nbsp;40 minutos</p>
+                                                        <p class="status-value">R$ &nbsp;45,00 <i class="fas fa-clock"></i> &nbsp;&nbsp;40 minutos</p>
                                                     </center>
                                                 </div>
 
@@ -250,8 +246,7 @@
                                                         </div>
                                                     </div>
                                                     <center>
-                                                        <p class="status-value">R$ &nbsp;15,00 <i
-                                                                class="fas fa-clock"></i> &nbsp;&nbsp;10 minutos</p>
+                                                        <p class="status-value">R$ &nbsp;15,00 <i class="fas fa-clock"></i> &nbsp;&nbsp;10 minutos</p>
                                                     </center>
                                                 </div>
 
@@ -268,8 +263,7 @@
                                                         </div>
                                                     </div>
                                                     <center>
-                                                        <p class="status-value">R$ &nbsp;15,00 <i
-                                                                class="fas fa-clock"></i> &nbsp;&nbsp;1 hora</p>
+                                                        <p class="status-value">R$ &nbsp;15,00 <i class="fas fa-clock"></i> &nbsp;&nbsp;1 hora</p>
                                                     </center>
                                                 </div>
                                             </div>
@@ -277,8 +271,7 @@
 
                                         <br>
 
-                                        <fieldset class="form-group"
-                                            style="border: 1px solid #ddd; border-radius: 4px; padding: 7px; border: 1px solid #879bc9;background: #879bc9;color: black;">
+                                        <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 7px; border: 1px solid #879bc9;background: #879bc9;color: black;">
                                             <div>
                                                 <legend class="form-group" style="color: white; font-size: 18px;">
                                                     <strong>Profissionais</strong>
@@ -286,8 +279,7 @@
                                             </div>
                                         </fieldset>
 
-                                        <fieldset class="form-group "
-                                            style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9;">
+                                        <fieldset class="form-group " style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9;">
                                             <div class="card-container">
                                                 <!-- <div class="card-profile" style="width: 300px;">
                                                     <div class="card-header-profile">
@@ -332,33 +324,27 @@
                                                 <div class="flex-container space-between">
                                                     <div class="col card">
                                                         <div class="img-placeholder">
-                                                            <img
-                                                                src="https://images.unsplash.com/photo-1530797195762-6e542a0f1843?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTc5MTY2MjE&ixlib=rb-1.2.1&q=80">
+                                                            <img src="https://images.unsplash.com/photo-1530797195762-6e542a0f1843?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTc5MTY2MjE&ixlib=rb-1.2.1&q=80">
                                                         </div>
                                                         <div>
                                                             <h3>Wafaa</h3>
                                                             <p><i class="fa-solid fa-user"></i> Front End Web Developer
                                                             </p>
-                                                            <p><i class="fa-solid fa-paper-plane"></i> <a
-                                                                    href="mailto:wafaa_cr@outlook.com">Email Me</a></p>
+                                                            <p><i class="fa-solid fa-paper-plane"></i> <a href="mailto:wafaa_cr@outlook.com">Email Me</a></p>
                                                             <p><i class="fa-solid fa-location-dot"></i> Auckland, New
                                                                 Zealand</p>
-                                                            <span style="margin: 1px;" title="Excluir" id="13"
-                                                                class="btn btn-sm btn-danger excluir_usuario"><i
-                                                                    class="fas fa-trash-alt"></i></span>
+                                                            <span style="margin: 1px;" title="Excluir" id="13" class="btn btn-sm btn-danger excluir_usuario"><i class="fas fa-trash-alt"></i></span>
                                                         </div>
                                                     </div>
                                                     <div class="col card">
                                                         <div class="img-placeholder">
-                                                            <img
-                                                                src="https://images.unsplash.com/photo-1614130946015-d5a7a3276fea?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTc5MTY4MTU&ixlib=rb-1.2.1&q=80">
+                                                            <img src="https://images.unsplash.com/photo-1614130946015-d5a7a3276fea?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTc5MTY4MTU&ixlib=rb-1.2.1&q=80">
                                                         </div>
                                                         <div>
                                                             <h3>Wafaa</h3>
                                                             <p><i class="fa-solid fa-user"></i> Front End Web Developer
                                                             </p>
-                                                            <p><i class="fa-solid fa-paper-plane"></i> <a
-                                                                    href="mailto:wafaa_cr@outlook.com">Email Me</a></p>
+                                                            <p><i class="fa-solid fa-paper-plane"></i> <a href="mailto:wafaa_cr@outlook.com">Email Me</a></p>
                                                             <p><i class="fa-solid fa-location-dot"></i> Auckland, New
                                                                 Zealand</p>
                                                         </div>
@@ -383,7 +369,6 @@
             </div>
         </div>
     </div>
-    <a class="btn" href="#" role="button"
-        style="float: right; background-color: #1cc88a; color: white; margin-bottom: 15px; position: fixed;">Agenda
+    <a class="btn" href="#" role="button" style="float: right; background-color: #1cc88a; color: white; margin-bottom: 15px; position: fixed;">Agenda
     </a>
 </div>

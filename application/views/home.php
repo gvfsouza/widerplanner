@@ -187,7 +187,9 @@
                                             </div>
                                         </fieldset>
 
-                                        <?php if (!empty($listar_estabelecimento)) { ?>
+                                        <?php 
+                                        var_dump($listar_estabelecimento);
+                                        if (!empty($listar_estabelecimento)) { ?>
                                             <?php foreach ($listar_estabelecimento as $value) : ?>
                                                 <div class="form-group col-md-4">
                                                     <label for="nome_estabelecimento" style="color: black">Nome

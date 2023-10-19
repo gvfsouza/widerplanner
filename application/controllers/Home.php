@@ -16,8 +16,8 @@ class Home extends CI_Controller {
 	public function index()
 	{
 		// Conexão com o Model
-		$this->load->model('Home_model');
-		$dados['listar_estabelecimento'] = $this->Home_model->listar_estabelecimento($id);
+		$this->load->model('home_model');
+		$dados['listar_estabelecimento'] = $this->home_model->listar_estabelecimento($id);
 
 		$this->load->view('layout/header');
 		$this->load->view('layout/sidebar');

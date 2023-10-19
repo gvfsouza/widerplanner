@@ -10,4 +10,5 @@ class Home_model extends CI_Model
         $res = $this->db->get();
         return $res->result();
     }
+    
 }

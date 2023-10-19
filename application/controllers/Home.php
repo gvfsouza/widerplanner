@@ -22,12 +22,12 @@ class Home extends CI_Controller {
 		$this->load->view('layout/footer');
 	}
 
+	
 	// Página de Impressão
 	function listar_estabelecimento($id)
 	{
-
 		// Conexão com o Model
-		$this->load->model('listar_estabelecimento');
+		$this->load->model('Home_model');
 
 		$dados['listar_estabelecimento'] = $this->Home_model->listar_estabelecimento($id);
 

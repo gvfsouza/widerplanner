@@ -179,6 +179,14 @@
                                 <div class="row">
                                     <div class="col-12">
 
+                                    <?php foreach ($listar_dados_responsaveis as $value) { ?>
+                                        <div class="form-group col-md-4">
+                                            <label for="nome_estabelecimento" style="color: #787878">Nome Estabelecimento:</label>
+                                            <br>
+                                            <input style="font-size:14px" type="text" class="form-control" id="nome_estabelecimento" name="nome_estabelecimento" value="<?php $value->nome_estabelecimento ?>">
+                                        </div>
+                                    <?php } ?>
+
                                         <fieldset class="form-group"
                                             style="border: 1px solid #ddd; border-radius: 4px; padding: 7px; border: 1px solid #879bc9;background: #879bc9;color: black;">
                                             <div>

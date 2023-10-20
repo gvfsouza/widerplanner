@@ -193,7 +193,7 @@
                                                     <label for="nome_estabelecimento" style="color: black">Nome
                                                         Estabelecimento:</label>
                                                     <br>
-                                                    <input style="font-size: 14px" type="text" class="form-control" id="nome_estabelecimento" name="nome_estabelecimento" value="<?php echo $value->nome_estabelecimento; ?>">
+                                                    <input style="font-size: 14px" type="text" class="form-control" id="nome_estabelecimento" name="nome_estabelecimento" value="">
                                                 </div>
                                         <?php endforeach;
                                         // }

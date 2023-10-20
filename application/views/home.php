@@ -168,12 +168,11 @@
 }
 
 
-body
-{
+body {
     font-family: 'Roboto', sans-serif;
 }
-a
-{
+
+a {
     text-decoration: none;
 }
 .product-card {
@@ -181,19 +180,7 @@ a
     position: relative;
     box-shadow: 0 2px 7px #dfdfdf;
     margin: 50px auto;
-    background: #fafafa;
-}
-
-.badge {
-    position: absolute;
-    left: 0;
-    top: 20px;
-    text-transform: uppercase;
-    font-size: 13px;
-    font-weight: 700;
-    background: red;
-    color: #fff;
-    padding: 3px 10px;
+    /* background: #fafafa; */
 }
 
 .product-tumb {

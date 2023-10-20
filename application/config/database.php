@@ -97,6 +97,7 @@ $query_builder = TRUE;
 //   'port' => 5432
 // );
 
+phpinfo();
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'db4free.net',

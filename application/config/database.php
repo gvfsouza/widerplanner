@@ -94,7 +94,7 @@ $query_builder = TRUE;
 // 	'stricton' => FALSE,
 // 	'failover' => array(),
 // 	'save_queries' => TRUE,
-//     'port' => 5432
+//   'port' => 5432
 // );
 
 $db['default'] = array(

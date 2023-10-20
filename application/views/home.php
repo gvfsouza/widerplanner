@@ -479,7 +479,7 @@ a
                                         <fieldset class="form-group " style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9;">
                                             <div class="product-card">
                                                 <div class="product-tumb">
-                                                    <img src="https://i.imgur.com/xdbHo4E.png" alt="">
+                                                    <img src="" alt="">
                                                 </div>
                                                 <div class="product-details">
                                                     <h4><a href="">Título</a></h4>

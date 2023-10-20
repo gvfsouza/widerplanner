@@ -467,7 +467,7 @@ a
                                                 </div>
                                             </div>
                                         </fieldset>
-
+                                        <br>
                                         <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 7px; border: 1px solid #879bc9;background: #879bc9;color: black;">
                                             <div>
                                                 <legend class="form-group" style="color: white; font-size: 18px;">
@@ -483,15 +483,10 @@ a
                                                     <img src="https://i.imgur.com/xdbHo4E.png" alt="">
                                                 </div>
                                                 <div class="product-details">
-                                                    <span class="product-catagory">Women,bag</span>
-                                                    <h4><a href="">Women leather bag</a></h4>
+                                                    <h4><a href="">Título</a></h4>
                                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</p>
                                                     <div class="product-bottom-details">
-                                                    <div class="product-price"><small>$96.00</small>$230.99</div>
-                                                    <div class="product-links">
-                                                        <a href=""><i class="fa fa-heart"></i></a>
-                                                        <a href=""><i class="fa fa-shopping-cart"></i></a>
-                                                    </div>
+                                                        <div class="product-price">R$50,99</div>
                                                     </div>
                                                 </div>
                                             </div>

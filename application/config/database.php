@@ -99,8 +99,8 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'https://www.db4free.net/',
-	'username' => 'gfsouzah',
+	'hostname' => '127.0.0.1',
+	'username' => 'gfsouzah@127.0.0.1',
 	'password' => '01102023',
 	'database' => 'widerplanner',
 	'dbdriver' => 'mysqli',

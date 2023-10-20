@@ -180,6 +180,7 @@ a {
     position: relative;
     box-shadow: 0 2px 7px #dfdfdf;
     margin: 50px auto;
+    border-radius: 19px;
     /* background: #fafafa; */
 }
 

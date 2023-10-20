@@ -5,7 +5,7 @@ class Home extends CI_Controller {
 	{
 	  parent::__construct();
 
-	  $this->load->database();
+	  //$this->load->database();
 		
 	  if (isset($_POST)) {
 		if (!empty($_POST)) {

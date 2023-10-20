@@ -4,8 +4,6 @@ class Home extends CI_Controller {
 	public function __construct()
 	{
 	  parent::__construct();
-
-	  $this->load->database('widerplanner', TRUE);
 		
 	  if (isset($_POST)) {
 		if (!empty($_POST)) {

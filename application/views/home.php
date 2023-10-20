@@ -478,7 +478,6 @@ a
 
                                         <fieldset class="form-group " style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9;">
                                             <div class="product-card">
-                                                <div class="badge">Hot</div>
                                                 <div class="product-tumb">
                                                     <img src="https://i.imgur.com/xdbHo4E.png" alt="">
                                                 </div>

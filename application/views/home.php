@@ -483,7 +483,7 @@ a
                                                 </div>
                                                 <div class="product-details">
                                                     <h4><a href="">Título</a></h4>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</p>
+                                                    <p>Descrição</p>
                                                     <div class="product-bottom-details">
                                                         <div class="product-price">R$50,99</div>
                                                     </div>

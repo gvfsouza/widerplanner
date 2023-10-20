@@ -302,7 +302,7 @@ a {
                                             </div>
                                         </fieldset>
 
-                                        <?php if (!empty($listar_estabelecimento as $value)) { ?>
+                                        <?php foreach ($listar_estabelecimento as $value) { ?>
                                         <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $value[0]->nome_usuario; ?></div>
                                         <?php } ?>
 

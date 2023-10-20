@@ -4,8 +4,6 @@ class Home_model extends CI_Model
 {
     public function listar_estabelecimento()
     {
-        // $this->db = $this->load->database('widerplanner', TRUE);
-
         $this->db->select('*');
         $this->db->from('widerplanner.usuario');
 

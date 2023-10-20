@@ -202,7 +202,7 @@ a
     justify-content: center;
     height: 300px;
     padding: 50px;
-    background: #f0f0f0;
+    /* background: #f0f0f0; */
 }
 
 .product-tumb img {

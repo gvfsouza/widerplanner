@@ -303,7 +303,7 @@ a {
                                         </fieldset>
 
                                         <?php foreach ($listar_estabelecimento as $value) { ?>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $value[0]->nome_usuario; ?></div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $value->nome_usuario; ?></div>
                                         <?php } ?>
 
                                         <fieldset class="form-group " style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9;">

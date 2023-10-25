@@ -31,6 +31,7 @@ class Cadastro_cliente extends CI_Controller
 			$nome_usuario = $this->input->post('nome_usuario');
 			$cpf_usuario = $this->input->post('cpf_usuario');
 			$dt_nasc_usuario = $this->input->post('dt_nasc_usuario');
+			$email_usuario = $this->input->post('email_usuario');
 			$sexo_usuario = $this->input->post('sexo_usuario');
 			$telefone_usuario = $this->input->post('telefone_usuario');
 			$cep_usuario = $this->input->post('cep_usuario');
@@ -42,7 +43,7 @@ class Cadastro_cliente extends CI_Controller
 			$uf_usuario = $this->input->post('uf');
 
 			if (!isset($error)) {
-				$dados['cadastro_cliente'] = $this->Cliente_model->cadastro_cliente($nome_usuario, $cpf_usuario, $dt_nasc_usuario, $sexo_usuario, $telefone_usuario, $cep_usuario, $logradouro_usuario, $numero_usuario, $complemento_usuario, $bairro_usuario, $cidade_usuario, $uf_usuario);
+				$dados['cadastro_cliente'] = $this->Cliente_model->cadastro_cliente($nome_usuario, $cpf_usuario, $dt_nasc_usuario, $email_usuario, $sexo_usuario, $telefone_usuario, $cep_usuario, $logradouro_usuario, $numero_usuario, $complemento_usuario, $bairro_usuario, $cidade_usuario, $uf_usuario);
 
 				//MENSAGEM SUCESSO AO CADASTRAR
 				$this->session->set_flashdata('sucesso', 'Cadastro realizado com sucesso!');

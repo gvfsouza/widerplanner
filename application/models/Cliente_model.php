@@ -10,13 +10,14 @@ class Cliente_model extends CI_Model {
         return $res->result();
     }
 
-    public function cadastro_cliente($nome_usuario,$cpf_usuario,$dt_nasc_usuario,$sexo_usuario,$telefone_usuario,$cep_usuario,$logradouro_usuario,$numero_usuario,$complemento_usuario,$bairro_usuario,$cidade_usuario,$uf_usuario)
+    public function cadastro_cliente($nome_usuario,$cpf_usuario,$dt_nasc_usuario,$email_usuario,$sexo_usuario,$telefone_usuario,$cep_usuario,$logradouro_usuario,$numero_usuario,$complemento_usuario,$bairro_usuario,$cidade_usuario,$uf_usuario)
     {
         $data = array(
             # puxa os campos do banco
             'nome_usuario' => utf8_decode($nome_usuario),
             'cpf_usuario' => $cpf_usuario,
             'dt_nasc_usuario' => $dt_nasc_usuario,
+            'email_usuario' => $email_usuario,
             'sexo_usuario' => $sexo_usuario,
             'telefone_usuario' => $telefone_usuario,
             'cep_usuario' => $cep_usuario,

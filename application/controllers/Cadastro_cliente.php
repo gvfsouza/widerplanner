@@ -4,15 +4,21 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class Cadastro_cliente extends CI_Controller
 {
 	public function __construct()
-	{
-		parent::__construct();
+    {
+        parent::__construct();
 
-		if (isset($_POST)) {
-			if (!empty($_POST)) {
-				anti_injection($_POST);
-			}
-		}
-	}
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $_POST = $this->clean_post_data($_POST);
+        }
+    }
+
+    private function clean_post_data($data)
+    {
+        foreach ($data as $key => $value) {
+            $data[$key] = anti_injection($value);
+        }
+        return $data;
+    }
 
 	public function index()
 	{

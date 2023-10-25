@@ -11,8 +11,6 @@
     <link rel="stylesheet" href="public/css/app.css">
     <link rel="stylesheet" href="public/css/bootstrap-multiselect.css">
     <link rel="stylesheet" href="public/css/bootstrap-multiselect.min.css">
-    <link rel="stylesheet" href="public/css/sb-admin-2.css">
-    <link rel="stylesheet" href="public/css/sb-admin-2.min.css">
     <link rel="stylesheet" href="public/css/bootstrap-select.min.css">
     <script src="public/js/mascaras.js"></script>
     <script src="public/js/funcoes.js"></script>

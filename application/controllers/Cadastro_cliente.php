@@ -17,6 +17,7 @@ class Cadastro_cliente extends CI_Controller
 	public function index()
 	{
 		$this->load->model('Cliente_model');
+		$dados = array();
 
 		if (isset($_POST['salvar'])) {
 			$nome_usuario = $this->input->post('nome_usuario');
@@ -42,9 +43,6 @@ class Cadastro_cliente extends CI_Controller
 				$this->session->set_flashdata('erro', 'Erro ao efetuar cadastro.');
 			}
 		}
-
-
-
 
 		$this->load->view('layout/header');
 		$this->load->view('cadastro_cliente', $dados);

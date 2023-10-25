@@ -30,7 +30,6 @@ class Cliente_model extends CI_Model {
 
 
         $this->db->insert('widerplanner.usuario',$data);
-        $res = $this->db->get();
         return $this->db->insert_id();
     }
 }

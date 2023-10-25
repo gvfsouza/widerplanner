@@ -25,7 +25,7 @@ class Cliente_model extends CI_Model {
             'complemento_usuario' => utf8_decode($complemento_usuario),
             'bairro_usuario' => utf8_decode($bairro_usuario),
             'cidade_usuario' => utf8_decode($cidade_usuario),
-            'uf_usuario' => utf8_decode($uf_usuario),
+            'estado_usuario' => utf8_decode($uf_usuario),
         );
 
 

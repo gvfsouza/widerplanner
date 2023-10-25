@@ -3,9 +3,6 @@
     height: 100%
   }
 
-  label {
-    color: black;
-  }
 </style>
 
 <br>
@@ -33,69 +30,69 @@
                       <div class="col">
                         <div class="row">
                           <div class="form-group col-md-6">
-                            <label for="" style="color: #4e4e4e;"><b>Nome:</b></label>
+                            <label for=""><b>Nome:</b></label>
                             <br>
                             <input style="font-size:14px" type="text" class="form-control" id="nome" name="nome"
                               value="">
                           </div>
                           <div class="dados-cliente form-group col-md-6">
-                            <label for="" style="color: #4e4e4e;"><b>CPF:</b></label>
+                            <label for=""><b>CPF:</b></label>
                             <br>
                             <input type="text" class="form-control" id="cpd" name="cpf">
                           </div>
                           <div class="dados-cliente form-group col-md-4">
-                            <label for="" style="color: #4e4e4e;"><b>Data Nasc.:</b></label>
+                            <label for=""><b>Data Nasc.:</b></label>
                             <br>
                             <input type="date" class="form-control" id="dt_nascimento" name="dt_nascimento" value="">
                           </div>
                           <div class="dados-cliente form-group col-md-2">
-                            <label for="" style="color: #4e4e4e;"><b>Sexo:</b></label>
+                            <label for=""><b>Sexo:</b></label>
                             <br>
                             <input style="font-size:14px" type="text" class="form-control" id="sexo" name="sexo"
                               value="">
                           </div>
                           <div class="dados-cliente col-md-6">
-                            <label for="" style="color: #4e4e4e;"><b>Celular:</b></label>
+                            <label for=""><b>Celular:</b></label>
                             <input style="font-size:14px" type="text" class="form-control" id="celular" name="celular"
                               value="">
                           </div>
                         </div>
                         <div class="row">
                           <div class="dados-cliente col-md-3">
-                            <label for="" style="color: #4e4e4e;"><b>CEP:</b></label>
+                            <label for=""><b>CEP:</b></label>
                             <input style="font-size:14px" type="text" class="form-control" id="cep" name="cep" value="">
                           </div>
                           <div class="dados-cliente col-md-7">
-                            <label for="" style="color: #4e4e4e;"><b>Logradouro:</b></label>
+                            <label for=""><b>Logradouro:</b></label>
                             <input style="font-size:14px" type="text" class="form-control" id="logradouro"
                               name="logradouro" value="">
                           </div>
                           <div class="dados-cliente col-md-2">
-                            <label for="" style="color: #4e4e4e;"><b>N°:</b></label>
+                            <label for=""><b>N°:</b></label>
                             <input style="font-size:14px" type="text" class="form-control" id="numero" name="numero"
                               value="">
                           </div>
                         </div><br>
                         <div class="row">
                           <div class="dados-cliente col-md-5">
-                            <label for="" style="color: #4e4e4e;"><b>Complemento</b></label>
+                            <label for=""><b>Complemento</b></label>
                             <input style="font-size:14px" type="text" class="form-control" id="complemento"
                               name="complemento" value="">
                           </div>
                           <div class="dados-cliente col-md-7">
-                            <label for="" style="color: #4e4e4e;"><b>Bairro</b></label>
+                            <label for=""><b>Bairro</b></label>
                             <input style="font-size:14px" type="text" class="form-control" id="bairro" name="bairro"
                               value="">
                           </div>
                         </div><br>
                         <div class="row">
                           <div class="dados-cliente col-md-7">
-                            <label for="" style="color: #4e4e4e;"><b>Cidade:</b></label>
+                            <label for=""><b>Cidade:</b></label>
                             <input style="font-size:14px" type="text" class="form-control" id="cidade" name="cidade"
                               value="">
                           </div>
                           <div class="dados-cliente col-md-5">
-                            <label for="" style="color: #4e4e4e;"><b>UF:</b></label>
+                            <label for=""><b>UF:</b></label>
                             <input style="font-size:14px" type="text" class="form-control" id="uf" name="uf" value="">
                           </div>
                         </div>

@@ -12,14 +12,14 @@
     <link rel="stylesheet" href="public/css/bootstrap-multiselect.css">
     <link rel="stylesheet" href="public/css/bootstrap-multiselect.min.css">
     <link rel="stylesheet" href="public/css/bootstrap-select.min.css">
-    <script src="public/js/mascaras.js"></script>
-    <script src="public/js/funcoes.js"></script>
-    <script type="text/javascript" src="public/js/bootstrap-select.min.js"></script>
-    <script src="public/js/apexcharts.js"></script>
-    <script src="public/vendor/jquery/jquery.min.js"></script>
-    <script src="public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="public/vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="public/js/sb-admin-2.min.js"></script>
+    <script src="<?php echo base_url('public/js/mascaras.js');?>"></script>
+    <script src="<?php echo base_url('public/js/funcoes.js');?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('public/js/bootstrap-select.min.js');?>"></script>
+    <script src="<?php echo base_url('public/js/apexcharts.js');?>"></script>
+    <script src="<?php echo base_url('public/vendor/jquery/jquery.min.js');?>"></script>
+    <script src="<?php echo base_url('public/vendor/bootstrap/js/bootstrap.bundle.min.js');?>"></script>
+    <script src="<?php echo base_url('public/vendor/jquery-easing/jquery.easing.min.js');?>"></script>
+    <script src="<?php echo base_url('public/js/sb-admin-2.min.js');?>"></script>
 	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
 	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
@@ -41,14 +41,14 @@
     <link rel="stylesheet" href="css/sb-admin-2.css">
     <link rel="stylesheet" href="css/sb-admin-2.min.css">
     <link rel="stylesheet" href="css/bootstrap-select.min.css">
-    <script src="jquery/jquery.min.js"></script>
-    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="jquery-easing/jquery.easing.min.js"></script>
-    <script src="js/sb-admin-2.min.js"></script>
-    <script src="js/mascaras.js"></script>
-    <script src="js/funcoes.js"></script>
+    <script src="<?php echo base_url('jquery/jquery.min.js');?>"></script>
+    <script src="<?php echo base_url('bootstrap/js/bootstrap.bundle.min.js');?>"></script>
+    <script src="<?php echo base_url('jquery-easing/jquery.easing.min.js');?>"></script>
+    <script src="<?php echo base_url('js/sb-admin-2.min.js');?>"></script>
+    <script src="<?php echo base_url('js/mascaras.js');?>"></script>
+    <script src="<?php echo base_url('js/funcoes.js');?>"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url('js/bootstrap-select.min.js');?>"></script>
 </head>
 <body id="page-top">
     <div id="wrapper" class="h-100" style="background-color: #d9e2f7;">

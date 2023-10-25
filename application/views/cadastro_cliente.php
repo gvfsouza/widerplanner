@@ -86,21 +86,21 @@
                           </div>
                         </div><br>
                         <div class="row">
-                          <div class="dados-cliente col-md-5">
+                          <div class="dados-cliente col-md-3">
                             <label for=""><b>Complemento</b></label>
                             <input style="font-size:14px" type="text" class="form-control" id="complemento_usuario" name="complemento_usuario" value="">
                           </div>
-                          <div class="dados-cliente col-md-7">
+                          <div class="dados-cliente col-md-3">
                             <label for=""><b>Bairro</b></label>
                             <input style="font-size:14px" type="text" class="form-control" id="bairro_usuario" name="bairro_usuario" value="">
                           </div>
                         </div><br>
                         <div class="row">
-                          <div class="dados-cliente col-md-7">
+                          <div class="dados-cliente col-md-3">
                             <label for=""><b>Cidade:</b></label>
                             <input style="font-size:14px" type="text" class="form-control" id="cidade_usuario" name="cidade_usuario" value="">
                           </div>
-                          <div class="dados-cliente col-md-5">
+                          <div class="dados-cliente col-md-3">
                             <label for=""><b>UF:</b></label>
                             <input style="font-size:14px" type="text" class="form-control" id="uf" name="uf" value="">
                           </div>

@@ -9,3 +9,14 @@ if (!function_exists('anti_injection')) {
     }
 }
 
+
+
+function gerarSenhaAleatoria($tamanho = 10) {
+    $caracteres = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $senha = '';
+    for ($i = 0; $i < $tamanho; $i++) {
+        $indice = mt_rand(0, strlen($caracteres) - 1);
+        $senha .= $caracteres[$indice];
+    }
+    return $senha;
+}

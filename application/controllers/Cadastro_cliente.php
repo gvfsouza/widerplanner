@@ -32,7 +32,7 @@ class Cadastro_cliente extends CI_Controller
 			$cpf_usuario = $this->input->post('cpf_usuario');
 			$dt_nasc_usuario = $this->input->post('dt_nasc_usuario');
 			$sexo_usuario = $this->input->post('sexo_usuario');
-			$celular_usuario = $this->input->post('celular_usuario');
+			$telefone_usuario = $this->input->post('telefone_usuario');
 			$cep_usuario = $this->input->post('cep_usuario');
 			$logradouro_usuario = $this->input->post('logradouro_usuario');
 			$numero_usuario = $this->input->post('numero_usuario');

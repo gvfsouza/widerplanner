@@ -62,8 +62,8 @@
                             <input style="font-size:14px" type="text" class="form-control" id="sexo_usuario" name="sexo_usuario" value="">
                           </div>
                           <div class="dados-cliente col-md-6">
-                            <label for=""><b>Celular:</b></label>
-                            <input style="font-size:14px" type="text" class="form-control" id="celular_usuario" name="celular_usuario" value="">
+                            <label for=""><b>Telefone:</b></label>
+                            <input style="font-size:14px" type="text" class="form-control" id="telefone_usuario" name="telefone_usuario" value="">
                           </div>
                         </div>
                         <div class="row">

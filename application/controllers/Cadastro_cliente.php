@@ -6,7 +6,8 @@ class Cadastro_cliente extends CI_Controller
 	public function __construct()
     {
         parent::__construct();
-
+		// Carregue o arquivo functions_helper
+		$this->load->helper('functions_helper');
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_POST = $this->clean_post_data($_POST);
         }

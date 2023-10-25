@@ -41,12 +41,12 @@
                       <div style="margin-left:10px;"></div>
                       <div class="col">
                         <div class="row">
-                          <div class="form-group col-md-6">
+                          <div class="form-group col-md-4">
                             <label for=""><b>Nome:</b></label>
                             <br>
                             <input style="font-size:14px" type="text" class="form-control" id="nome_usuario" name="nome_usuario" value="">
                           </div>
-                          <div class="dados-cliente form-group col-md-6">
+                          <div class="dados-cliente form-group col-md-4">
                             <label for=""><b>CPF:</b></label>
                             <br>
                             <input type="text" class="form-control" id="cpf_usuario" name="cpf_usuario">
@@ -56,12 +56,17 @@
                             <br>
                             <input type="date" class="form-control" id="dt_nasc_usuario" name="dt_nasc_usuario" value="">
                           </div>
-                          <div class="dados-cliente form-group col-md-2">
+                          <div class="dados-cliente form-group col-md-4">
                             <label for=""><b>Sexo:</b></label>
                             <br>
                             <input style="font-size:14px" type="text" class="form-control" id="sexo_usuario" name="sexo_usuario" value="">
                           </div>
-                          <div class="dados-cliente col-md-6">
+                          <div class="dados-cliente form-group col-md-4">
+                            <label for=""><b>E-mail:</b></label>
+                            <br>
+                            <input type="email" class="form-control" id="email_usuario" name="email_usuario" value="">
+                          </div>
+                          <div class="dados-cliente col-md-4">
                             <label for=""><b>Telefone:</b></label>
                             <input style="font-size:14px" type="text" class="form-control" id="telefone_usuario" name="telefone_usuario" value="">
                           </div>

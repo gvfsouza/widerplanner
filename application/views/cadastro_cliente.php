@@ -146,22 +146,26 @@
   });
 
 
-// Função para preencher os campos de endereço a partir do CEP
-function preencherEndereco() {
-  var cep = document.getElementById('cep').value;
-  if (cep.length === 8) { // Verifica se o CEP tem 8 dígitos (formato válido)
-      fetch(`https://viacep.com.br/ws/${cep}/json/`)
-          .then(response => response.json())
-          .then(data => {
-              document.getElementById('logradouro_usuario').value = data.logradouro;
-              document.getElementById('bairro_usuario').value = data.bairro;
-              document.getElementById('cidade_usuario').value = data.localidade;
-              document.getElementById('uf').value = data.uf;
-          })
-          .catch(error => console.error('Erro ao consultar o CEP', error));
-  }
-}
+ // Função fictícia para preencher os campos de endereço a partir do CEP
+ function preencherEndereco() {
+            var cep = document.getElementById('cep').value;
+            if (cep.length === 8) { // Verifica se o CEP tem 8 dígitos (formato válido)
+                // Consulta fictícia para obter dados de endereço com base no CEP
+                var enderecoFicticio = {
+                    rua: 'Rua Fictícia',
+                    bairro: 'Bairro Fictício',
+                    cidade: 'Cidade Fictícia',
+                    estado: 'UF'
+                };
 
-// Ouvinte de evento para chamar a função quando o usuário digita o CEP
-document.getElementById('cep').addEventListener('input', preencherEndereco);
+                // Preenche os campos de endereço com os dados fictícios
+                document.getElementById('logradouro_usuario').value = enderecoFicticio.rua;
+                document.getElementById('bairro_usuario').value = enderecoFicticio.bairro;
+                document.getElementById('cidade_usuario').value = enderecoFicticio.cidade;
+                document.getElementById('uf').value = enderecoFicticio.estado;
+            }
+        }
+
+        // Ouvinte de evento para chamar a função quando o usuário digita o CEP
+        document.getElementById('cep').addEventListener('input', preencherEndereco);
 </script>

@@ -128,3 +128,20 @@
     </div>
   </div>
 </div>
+<script>
+  // Função para aplicar a máscara de CPF
+  function mascaraCpf(campo) {
+      campo.value = campo.value.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
+      campo.value = campo.value.replace(/(\d{3})(\d)/, '$1.$2'); // Adiciona o primeiro ponto
+      campo.value = campo.value.replace(/(\d{3})(\d)/, '$1.$2'); // Adiciona o segundo ponto
+      campo.value = campo.value.replace(/(\d{3})(\d{1,2})$/, '$1-$2'); // Adiciona o traço
+  }
+
+  // Obtém o campo de CPF pelo ID
+  var cpfInput = document.getElementById('cpf_usuario');
+
+  // Adiciona um ouvinte de evento para chamar a função de máscara quando o usuário digitar
+  cpfInput.addEventListener('input', function() {
+      mascaraCpf(cpfInput);
+  });
+</script>

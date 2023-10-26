@@ -49,7 +49,7 @@
                           <div class="dados-cliente form-group col-md-4">
                             <label for=""><b>CPF:</b></label>
                             <br>
-                            <input type="text" class="form-control" id="cpf_usuario" name="cpf_usuario" max_length="14">
+                            <input type="text" class="form-control" id="cpf_usuario" name="cpf_usuario" maxlength="14">
                           </div>
                           <div class="dados-cliente form-group col-md-4">
                             <label for=""><b>Data Nasc.:</b></label>

@@ -144,4 +144,24 @@
   cpfInput.addEventListener('input', function() {
       mascaraCpf(cpfInput);
   });
+
+
+// Função para preencher os campos de endereço a partir do CEP
+function preencherEndereco() {
+  var cep = document.getElementById('cep').value;
+  if (cep.length === 8) { // Verifica se o CEP tem 8 dígitos (formato válido)
+      fetch(`https://viacep.com.br/ws/${cep}/json/`)
+          .then(response => response.json())
+          .then(data => {
+              document.getElementById('logradouro_usuario').value = data.logradouro;
+              document.getElementById('bairro_usuario').value = data.bairro;
+              document.getElementById('cidade_usuario').value = data.localidade;
+              document.getElementById('uf').value = data.uf;
+          })
+          .catch(error => console.error('Erro ao consultar o CEP', error));
+  }
+}
+
+// Ouvinte de evento para chamar a função quando o usuário digita o CEP
+document.getElementById('cep').addEventListener('input', preencherEndereco);
 </script>

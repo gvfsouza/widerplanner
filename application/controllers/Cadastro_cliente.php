@@ -47,8 +47,7 @@ class Cadastro_cliente extends CI_Controller
 
 				//MENSAGEM SUCESSO AO CADASTRAR
 				$this->session->set_flashdata('sucesso', 'Cadastro realizado com sucesso!');
-				$this->load->view('layout/header');
-				redirect('cadastro_cliente/');
+				redirect('cadastro_cliente');
 			}else{
 				$this->session->set_flashdata('erro', 'Erro ao efetuar cadastro.');
 			}

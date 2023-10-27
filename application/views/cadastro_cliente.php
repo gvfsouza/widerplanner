@@ -19,19 +19,26 @@
       <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="" role="tabpanel">
 
-          <!-- Mensagem de sucesso cadastro  -->
+          <!-- Mensagem de sucesso cadastro/e-mail  -->
           <?php if ($this->session->flashdata('sucesso')) {    ?>
             <div class="alert alert-success" role="alert">
               <?php echo $this->session->flashdata('sucesso'); ?>
             </div>
           <?php } ?>
 
-          <?php if ($this->session->flashdata('erro')) : ?>
+          <?php if ($this->session->flashdata('success_email')) {    ?>
+            <div class="alert alert-success" role="alert">
+              <?php echo $this->session->flashdata('sucesso'); ?>
+            </div>
+          <?php } ?>
+
+          <!-- Mensagem de erro cadastro/e-mail -->
+          <?php if ($this->session->flashdata('error_email')) : ?>
             <div class="alert alert-danger">
               <?php echo $this->session->flashdata('erro'); ?>
             </div>
           <?php endif; ?>
-          
+
           <form action="" method="POST">
             <div class="p-3 bg-white">
               <div class="row">
@@ -131,10 +138,10 @@
 <script>
   // Função para aplicar a máscara de CPF
   function mascaraCpf(campo) {
-      campo.value = campo.value.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
-      campo.value = campo.value.replace(/(\d{3})(\d)/, '$1.$2'); // Adiciona o primeiro ponto
-      campo.value = campo.value.replace(/(\d{3})(\d)/, '$1.$2'); // Adiciona o segundo ponto
-      campo.value = campo.value.replace(/(\d{3})(\d{1,2})$/, '$1-$2'); // Adiciona o traço
+    campo.value = campo.value.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
+    campo.value = campo.value.replace(/(\d{3})(\d)/, '$1.$2'); // Adiciona o primeiro ponto
+    campo.value = campo.value.replace(/(\d{3})(\d)/, '$1.$2'); // Adiciona o segundo ponto
+    campo.value = campo.value.replace(/(\d{3})(\d{1,2})$/, '$1-$2'); // Adiciona o traço
   }
 
   // Obtém o campo de CPF pelo ID
@@ -142,30 +149,30 @@
 
   // Adiciona um ouvinte de evento para chamar a função de máscara quando o usuário digitar
   cpfInput.addEventListener('input', function() {
-      mascaraCpf(cpfInput);
+    mascaraCpf(cpfInput);
   });
 
 
- // Função fictícia para preencher os campos de endereço a partir do CEP
- function preencherEndereco() {
-            var cep = document.getElementById('cep').value;
-            if (cep.length === 8) { // Verifica se o CEP tem 8 dígitos (formato válido)
-                // Consulta fictícia para obter dados de endereço com base no CEP
-                var enderecoFicticio = {
-                    rua: 'Rua Fictícia',
-                    bairro: 'Bairro Fictício',
-                    cidade: 'Cidade Fictícia',
-                    estado: 'UF'
-                };
+  // Função fictícia para preencher os campos de endereço a partir do CEP
+  function preencherEndereco() {
+    var cep = document.getElementById('cep').value;
+    if (cep.length === 8) { // Verifica se o CEP tem 8 dígitos (formato válido)
+      // Consulta fictícia para obter dados de endereço com base no CEP
+      var enderecoFicticio = {
+        rua: 'Rua Fictícia',
+        bairro: 'Bairro Fictício',
+        cidade: 'Cidade Fictícia',
+        estado: 'UF'
+      };
 
-                // Preenche os campos de endereço com os dados fictícios
-                document.getElementById('logradouro_usuario').value = enderecoFicticio.rua;
-                document.getElementById('bairro_usuario').value = enderecoFicticio.bairro;
-                document.getElementById('cidade_usuario').value = enderecoFicticio.cidade;
-                document.getElementById('uf').value = enderecoFicticio.estado;
-            }
-        }
+      // Preenche os campos de endereço com os dados fictícios
+      document.getElementById('logradouro_usuario').value = enderecoFicticio.rua;
+      document.getElementById('bairro_usuario').value = enderecoFicticio.bairro;
+      document.getElementById('cidade_usuario').value = enderecoFicticio.cidade;
+      document.getElementById('uf').value = enderecoFicticio.estado;
+    }
+  }
 
-        // Ouvinte de evento para chamar a função quando o usuário digita o CEP
-        document.getElementById('cep').addEventListener('input', preencherEndereco);
+  // Ouvinte de evento para chamar a função quando o usuário digita o CEP
+  document.getElementById('cep').addEventListener('input', preencherEndereco);
 </script>

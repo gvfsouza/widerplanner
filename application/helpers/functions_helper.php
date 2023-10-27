@@ -22,14 +22,14 @@ function gerarSenhaAleatoria($tamanho = 10) {
 }
 
 
-function gerarSenhaAleatoria($tamanho = 8) {
-    $caracteres = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    $senha = '';
-    $comprimentoCaracteres = strlen($caracteres);
+// function gerarSenhaAleatoria($tamanho = 8) {
+//     $caracteres = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+//     $senha = '';
+//     $comprimentoCaracteres = strlen($caracteres);
 
-    for ($i = 0; $i < $tamanho; $i++) {
-        $senha .= $caracteres[random_int(0, $comprimentoCaracteres - 1)];
-    }
+//     for ($i = 0; $i < $tamanho; $i++) {
+//         $senha .= $caracteres[random_int(0, $comprimentoCaracteres - 1)];
+//     }
 
-    return $senha;
-}
+//     return $senha;
+// }

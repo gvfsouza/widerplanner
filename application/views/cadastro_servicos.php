@@ -56,8 +56,8 @@
                                                     <div class="dados-cliente form-group col-md-4">
                                                         <label for=""><b>Descrição do Serviço:</b></label>
                                                         <br>
-                                                        <input type="text" class="form-control" id="descricao_servico"
-                                                            name="descricao_servico" maxlength="14">
+                                                        <textarea type="text" class="form-control" id="descricao_servico"
+                                                            name="descricao_servico" maxlength="14" rows="4" cols="50"></textarea>
                                                     </div>
                                                     <div class="dados-cliente form-group col-md-4">
                                                         <label for=""><b>Valor:</b></label>
@@ -68,7 +68,7 @@
                                                     <div class="dados-cliente form-group col-md-4">
                                                         <label for=""><b>Duração:</b></label>
                                                         <br>
-                                                        <input style="font-size:14px" type="text" class="form-control"
+                                                        <input style="font-size:14px" type="tipe" class="form-control"
                                                             id="duracao_servico" name="duracao_servico" value="">
                                                     </div>
                                                 </div>

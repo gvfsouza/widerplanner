@@ -28,14 +28,14 @@ class Cadastro_servicos extends CI_Controller
 		$dados = array();
 
 		if (isset($_POST['salvar'])) {
-			// $foto_servico = $this->input->post('foto_servico');
+			$foto_servico = $this->input->post('foto_servico');
 			$nome_servico = $this->input->post('nome_servico');
 			$descricao_servico = $this->input->post('descricao_servico');
 			$valor_servico = $this->input->post('valor_servico');
 			$duracao_servico = $this->input->post('duracao_servico');
 
 			if (!isset($error)) {
-				$dados['cadastro_servicos'] = $this->Servicos_model->cadastro_servicos($nome_servico, $descricao_servico, $valor_servico, $duracao_servico);
+				$dados['cadastro_servicos'] = $this->Servicos_model->cadastro_servicos($foto_servico, $nome_servico, $descricao_servico, $valor_servico, $duracao_servico);
 
 				//MENSAGEM SUCESSO AO CADASTRAR
 				$this->session->set_flashdata('sucesso', 'Cadastro de Serviços realizado com sucesso!');

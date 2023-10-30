@@ -68,7 +68,7 @@
                                                     <div class="dados-cliente form-group col-md-4">
                                                         <label for=""><b>Duração:</b></label>
                                                         <br>
-                                                        <input style="font-size:14px" type="tipe" class="form-control"
+                                                        <input style="font-size:14px" type="time" class="form-control"
                                                             id="duracao_servico" name="duracao_servico" value="">
                                                     </div>
                                                 </div>

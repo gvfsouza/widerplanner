@@ -3,7 +3,7 @@
         <div class="card-header py-3" style="background-color: white;">
 
             <div>
-                <h3 id="dados-cleinte" style="font-size: 25px;">Cadastro de Cliente</h3>
+                <h3 id="dados-cleinte" style="font-size: 25px;"><b>Cadastro de Serviços</b></h3>
                 <br>
             </div>
 
@@ -93,6 +93,7 @@
                     <br>
                     Centro Universitário Nossa Senhora do Patrocínio <br>
                     Endereço: R. José Weissohn, 153 - Centro, Salto - SP, 13328-300</span>
+                    <br><br>
             </div>
             <br>
         </div>

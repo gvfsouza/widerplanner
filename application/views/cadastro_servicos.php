@@ -41,12 +41,12 @@
                                             <div style="margin-left:10px;"></div>
                                             <div class="col">
                                                 <div class="row">
-                                                    <div class="form-group col-md-4">
+                                                    <!-- <div class="form-group col-md-4">
                                                         <label for=""><b>Foto:</b></label>
                                                         <br>
                                                         <input style="font-size:14px" type="image" class="form-control"
                                                             id="foto_servico" name="foto_servico" value="">
-                                                    </div>
+                                                    </div> -->
                                                     <div class="form-group col-md-4">
                                                         <label for=""><b>Nome:</b></label>
                                                         <br>

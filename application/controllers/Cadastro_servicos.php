@@ -46,6 +46,9 @@ class Cadastro_servicos extends CI_Controller
 		}
 
 		$this->load->view('layout/header');
+		$this->load->view('layout/sidebar');
+		// $this->load->view('layout/navbar');
 		$this->load->view('cadastro_servicos', $dados);
+		// $this->load->view('layout/footer');
 	}
 }

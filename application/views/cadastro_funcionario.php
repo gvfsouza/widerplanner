@@ -11,12 +11,13 @@
     <div class="card shadow mb-4">
       <div class="card-header py-3" style="background-color: white;">
 
-        <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 7px; border: 1px solid #879bc9;background: #879bc9;color: black;">
-          <div>
-            <legend class="form-group" style="color: white; font-size: 18px;">
-              <strong>Cadastro de Profissional</strong>
-            </legend>
-          </div>
+        <legend class="form-group" style="color: white; font-size: 18px;">
+          <strong>Cadastro de Profissional</strong>
+        </legend>
+
+        <fieldset class="form-group"
+          style="border: 1px solid #ddd; border-radius: 4px; padding: 7px; border: 1px solid #879bc9;background: #879bc9;color: black;">
+          <div><br></div>
         </fieldset>
 
         <!-- FORMULÁRIO  -->
@@ -35,20 +36,17 @@
                             <div class="form-group col-md-6">
                               <label for="" style="color: #4e4e4e;"><b>Foto:</b></label>
                               <br>
-                              <input style="font-size:14px" type="file" class="form-control" id="foto" name="foto"
-                                value="">
+                              <input style="font-size:14px" type="file" class="form-control" id="foto" name="foto" value="">
                             </div>
                             <div class="form-group col-md-6">
                               <label for="" style="color: #4e4e4e;"><b>Nome Completo do Funcionário:</b></label>
                               <br>
-                              <input style="font-size:14px" type="text" class="form-control" id="nome_funcionario"
-                                name="nome_funcionario" value="">
+                              <input style="font-size:14px" type="text" class="form-control" id="nome_funcionario" name="nome_funcionario" value="">
                             </div>
                             <div class="form-group col-md-4">
                               <label for="" style="color: #4e4e4e;"><b>Idade:</b></label>
                               <br>
-                              <input style="font-size:14px" type="text" class="form-control" id="nome_funcionario"
-                                name="nome_funcionario" value="">
+                              <input style="font-size:14px" type="text" class="form-control" id="nome_funcionario" name="nome_funcionario" value="">
                             </div>
                             <div class="dados-cliente form-group col-md-4">
                               <label for="" style="color: #4e4e4e;"><b>Profissão:</b></label>
@@ -92,11 +90,7 @@
         <br>
         <br>
         <div class="col-12 text-center">
-          <span style="text-align: center">Sistema desenvolvido para cunho estudantil <br>
-            Projeto de Conclusão de Curso - Superior de Tecnologia em Análise e Deselvolvimento de Sistemas
-            <br>
-            Centro Universitário Nossa Senhora do Patrocínio <br>
-            Endereço: R. José Weissohn, 153 - Centro, Salto - SP, 13328-300</span>
+          <span style="text-align: center">Sistema desenvolvido para cunho estudantil <br> Projeto de Conclusão de Curso - Superior de Tecnologia em Análise e Deselvolvimento de Sistemas <br> Centro Universitário Nossa Senhora do Patrocínio <br> Endereço: R. José Weissohn, 153 - Centro, Salto - SP, 13328-300</span>
         </div>
         <br>
       </div>

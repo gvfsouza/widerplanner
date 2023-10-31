@@ -56,24 +56,20 @@
                                                         <label for=""><b>Telefone:</b></label>
                                                         <input style="font-size:14px" type="text" class="form-control" id="telefone_usuario" name="telefone_usuario" value="">
                                                     </div>
-                                                    <div id="campos">
-                                                        <div class="row form-group">
-                                                            <div class="col-10">
-                                                                <label for="" style="color: #4e4e4e;"><b>Serviço:</b></label>
-                                                                <br>
-                                                                <select name="fk_servico[]" class="form-control adicionar_servico" style="cursor: pointer;" required>
-                                                                    <option class="text-center" value="">--- Selecione uma Opção ---</option>
-                                                                    <option value="opcao1">Opção 1</option>
-                                                                    <option value="opcao2">Opção 2</option>
-                                                                </select>
-                                                            </div>
-                                                            <div class="col-2">
-                                                                <!-- O botão "Remover" está oculto inicialmente -->
-                                                                <button type="button" class="btn btn-danger" style="display: none;" onclick="removerCampo(this)">Remover</button>
-                                                            </div>
-                                                        </div>
-                                                        <button type="button" class="btn btn-primary" onclick="adicionarCampo()">Adicionar Serviço</button>
+                                                    <div class="col-10">
+                                                        <label for="" style="color: #4e4e4e;"><b>Serviço:</b></label>
+                                                        <br>
+                                                        <select name="fk_servico[]" class="form-control adicionar_servico" style="cursor: pointer;" required>
+                                                            <option class="text-center" value="">--- Selecione uma Opção ---</option>
+                                                            <option value="opcao1">Opção 1</option>
+                                                            <option value="opcao2">Opção 2</option>
+                                                        </select>
                                                     </div>
+                                                    <div class="col-2">
+                                                        <!-- O botão "Remover" está oculto inicialmente -->
+                                                        <button type="button" class="btn btn-danger" style="display: none;" onclick="removerCampo(this)">Remover</button>
+                                                    </div>
+                                                    <button type="button" class="btn btn-primary" onclick="adicionarCampo()">Adicionar Serviço</button>
                                                 </div>
                                             </div>
                                         </div>

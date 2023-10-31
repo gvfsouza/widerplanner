@@ -25,12 +25,12 @@
                                                     <div class="form-group col-md-6">
                                                         <label for="" style="color: #4e4e4e;"><b>Foto:</b></label>
                                                         <br>
-                                                        <input style="font-size:14px" type="file" class="form-control" id="foto" name="foto" value="">
+                                                        <input style="font-size:14px" type="file" class="form-control" id="foto" name="foto_usuario" value="">
                                                     </div>
                                                     <div class="form-group col-md-6">
                                                         <label for="" style="color: #4e4e4e;"><b>Nome Completo do Funcionário:</b></label>
                                                         <br>
-                                                        <input style="font-size:14px" type="text" class="form-control" id="nome_funcionario" name="nome_funcionario" value="">
+                                                        <input style="font-size:14px" type="text" class="form-control" id="nome_funcionario" name="nome_usuario" value="">
                                                     </div>
                                                     <div class="dados-cliente form-group col-md-4">
                                                         <label for=""><b>CPF:</b></label>

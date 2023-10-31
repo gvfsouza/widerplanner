@@ -42,21 +42,21 @@
                                                         <br>
                                                         <input type="date" class="form-control" id="dt_nasc_usuario" name="dt_nasc_usuario" value="">
                                                     </div>
-                                                    <div class="form-group col-md-4">
+                                                    <div class="form-group col-md-3">
                                                         <label for=""><b>Sexo:</b></label>
                                                         <br>
                                                         <input style="font-size:14px" type="text" class="form-control" id="sexo_usuario" name="sexo_usuario" value="">
                                                     </div>
-                                                    <div class="form-group col-md-4">
+                                                    <div class="form-group col-md-3">
                                                         <label for=""><b>E-mail:</b></label>
                                                         <br>
                                                         <input type="email" class="form-control" id="email_usuario" name="email_usuario" value="">
                                                     </div>
-                                                    <div class="col-md-4">
+                                                    <div class="col-md-3">
                                                         <label for=""><b>Telefone:</b></label>
                                                         <input style="font-size:14px" type="text" class="form-control" id="telefone_usuario" name="telefone_usuario" value="">
                                                     </div>
-                                                    <div class="col-10">
+                                                    <div class="col-md-3">
                                                         <label for="" style="color: #4e4e4e;"><b>Serviço:</b></label>
                                                         <br>
                                                         <select name="fk_servico[]" class="form-control adicionar_servico" style="cursor: pointer;" required>

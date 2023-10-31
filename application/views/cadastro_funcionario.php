@@ -22,37 +22,37 @@
                                             <div style="margin-left:10px;"></div>
                                             <div class="col">
                                                 <div class="row">
-                                                    <div class="form-group col-md-6">
+                                                    <div class="form-group col-md-3">
                                                         <label for="" style="color: #4e4e4e;"><b>Foto:</b></label>
                                                         <br>
-                                                        <input style="font-size:14px" type="file" class="form-control" id="foto" name="foto_usuario" value="">
+                                                        <input style="font-size:14px" type="file" class="form-control" id="foto" name="foto" value="">
                                                     </div>
-                                                    <div class="form-group col-md-6">
-                                                        <label for="" style="color: #4e4e4e;"><b>Nome Completo do Funcionário:</b></label>
+                                                    <div class="form-group col-md-4">
+                                                        <label for="" style="color: #4e4e4e;"><b>Nome Completo:</b></label>
                                                         <br>
-                                                        <input style="font-size:14px" type="text" class="form-control" id="nome_funcionario" name="nome_usuario" value="">
+                                                        <input style="font-size:14px" type="text" class="form-control" id="nome_funcionario" name="nome_funcionario" value="">
                                                     </div>
-                                                    <div class="dados-cliente form-group col-md-4">
+                                                    <div class="form-group col-md-3">
                                                         <label for=""><b>CPF:</b></label>
                                                         <br>
                                                         <input type="text" class="form-control" id="cpf_usuario" name="cpf_usuario" maxlength="14">
                                                     </div>
-                                                    <div class="dados-cliente form-group col-md-4">
+                                                    <div class="form-group col-md-2">
                                                         <label for=""><b>Data Nasc.:</b></label>
                                                         <br>
                                                         <input type="date" class="form-control" id="dt_nasc_usuario" name="dt_nasc_usuario" value="">
                                                     </div>
-                                                    <div class="dados-cliente form-group col-md-4">
+                                                    <div class="form-group col-md-4">
                                                         <label for=""><b>Sexo:</b></label>
                                                         <br>
                                                         <input style="font-size:14px" type="text" class="form-control" id="sexo_usuario" name="sexo_usuario" value="">
                                                     </div>
-                                                    <div class="dados-cliente form-group col-md-4">
+                                                    <div class="form-group col-md-4">
                                                         <label for=""><b>E-mail:</b></label>
                                                         <br>
                                                         <input type="email" class="form-control" id="email_usuario" name="email_usuario" value="">
                                                     </div>
-                                                    <div class="dados-cliente col-md-4">
+                                                    <div class="col-md-4">
                                                         <label for=""><b>Telefone:</b></label>
                                                         <input style="font-size:14px" type="text" class="form-control" id="telefone_usuario" name="telefone_usuario" value="">
                                                     </div>
@@ -72,6 +72,7 @@
                                                                 <button type="button" class="btn btn-danger" style="display: none;" onclick="removerCampo(this)">Remover</button>
                                                             </div>
                                                         </div>
+                                                        <button type="button" class="btn btn-primary" onclick="adicionarCampo()">Adicionar Serviço</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -82,39 +83,37 @@
                                             <div style="margin-left:10px;"></div>
                                             <div class="col">
                                                 <div class="row">
-                                                    <div class="dados-cliente col-md-3">
+                                                    <div class="col-md-3">
                                                         <label for=""><b>CEP:</b></label>
                                                         <input style="font-size:14px" type="text" class="form-control" id="cep_usuario" name="cep_usuario" value="">
                                                     </div>
-                                                    <div class="dados-cliente col-md-7">
+                                                    <div class="col-md-7">
                                                         <label for=""><b>Logradouro:</b></label>
                                                         <input style="font-size:14px" type="text" class="form-control" id="logradouro_usuario" name="logradouro_usuario" value="">
                                                     </div>
-                                                    <div class="dados-cliente col-md-2">
+                                                    <div class="col-md-2">
                                                         <label for=""><b>N°:</b></label>
                                                         <input style="font-size:14px" type="text" class="form-control" id="numero_usuario" name="numero_usuario" value="">
                                                     </div>
                                                 </div><br>
                                                 <div class="row">
-                                                    <div class="dados-cliente col-md-3">
+                                                    <div class="col-md-3">
                                                         <label for=""><b>Complemento</b></label>
                                                         <input style="font-size:14px" type="text" class="form-control" id="complemento_usuario" name="complemento_usuario" value="">
                                                     </div>
-                                                    <div class="dados-cliente col-md-3">
+                                                    <div class="col-md-3">
                                                         <label for=""><b>Bairro</b></label>
                                                         <input style="font-size:14px" type="text" class="form-control" id="bairro_usuario" name="bairro_usuario" value="">
                                                     </div>
-                                                    <div class="dados-cliente col-md-3">
+                                                    <div class="col-md-3">
                                                         <label for=""><b>Cidade:</b></label>
                                                         <input style="font-size:14px" type="text" class="form-control" id="cidade_usuario" name="cidade_usuario" value="">
                                                     </div>
-                                                    <div class="dados-cliente col-md-3">
+                                                    <div class="col-md-3">
                                                         <label for=""><b>UF:</b></label>
                                                         <input style="font-size:14px" type="text" class="form-control" id="uf" name="uf" value="">
                                                     </div>
                                                 </div>
-                                                <button type="button" class="btn btn-primary" onclick="adicionarCampo()">Adicionar
-                                                    Serviço</button>
                                             </div>
                                         </div>
                                     </fieldset>

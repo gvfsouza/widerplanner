@@ -119,6 +119,8 @@
   <form id="signin">
     <div class="row">
         <div class="col-md-12">
+          <p style="text-align:center;font-size: 31px;color: #879bc9;font-weight: bold;">Login</p>
+          <br>
             <div class="form-group">
                 <label for="cpf"> <i class="fas fa-lock"></i> CPF:</label>
                 <input type="text" class="form-control" placeholder="Digite o CPF" name="cpf" id="cpf">

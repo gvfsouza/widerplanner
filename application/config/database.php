@@ -100,7 +100,7 @@ $query_builder = TRUE;
 // phpinfo();
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'mysql10-farm2.uni5.net',
+	'hostname' => 'localhost',
 	'username' => 'agsete2727_add1',
 	'password' => 'widerplanner2023',
 	'database' => 'agsete27',

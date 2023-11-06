@@ -33,7 +33,7 @@ class Funcionario_model extends CI_Model {
         );
 
 
-        $this->db->insert('widerplanner.usuario',$data);
+        $this->db->insert('widerplanner.usuario', $data);
         return $this->db->insert_id();
     }
 }

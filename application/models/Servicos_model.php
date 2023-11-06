@@ -23,7 +23,7 @@ class Servicos_model extends CI_Model {
         );
 
 
-        $this->db->insert('widerplanner.servicos',$data);
+        $this->db->insert('widerplanner.servicos', $data);
         return $this->db->insert_id();
     }
 }

@@ -5,7 +5,7 @@ class Cliente_model extends CI_Model {
     public function listar_dados_cliente()
     {
         $this->db->select('*');
-        $this->db->from('widerplanner.usuario');
+        $this->db->from('usuario');
         $res = $this->db->get();
         return $res->result();
     }
@@ -31,7 +31,7 @@ class Cliente_model extends CI_Model {
         );
 
 
-        $this->db->insert('widerplanner.usuario',$data);
+        $this->db->insert('usuario',$data);
         return $this->db->insert_id();
     }
 }

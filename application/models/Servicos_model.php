@@ -5,7 +5,7 @@ class Servicos_model extends CI_Model {
     public function listar_servicos()
     {
         $this->db->select('*');
-        $this->db->from('widerplanner.servicos');
+        $this->db->from('servicos');
 
         $res = $this->db->get();
         return $res->result();
@@ -23,7 +23,7 @@ class Servicos_model extends CI_Model {
         );
 
 
-        $this->db->insert('widerplanner.servicos', $data);
+        $this->db->insert('servicos', $data);
         return $this->db->insert_id();
     }
 }

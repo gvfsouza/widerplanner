@@ -39,12 +39,12 @@ tr, td, th{
                                     <br>
                                     <input style="font-size:14px" type="text" class="form-control" id="senha_atual" name="senha_atual" value="">
                                   </div>
-                                  <div class="dados-cliente form-group col-md-12">
+                                  <div class="form-group col-md-12">
                                     <label for="" style="color: #77787a;">Nova senha:</label>
                                     <br>
                                     <input type="text" class="form-control" id="nova_senha" name="nova_senha">
                                   </div>
-                                  <div class="dados-cliente form-group col-md-12">
+                                  <div class="form-group col-md-12">
                                     <label for="" style="color: #77787a;">Confirmação nova senha</label>
                                     <br>
                                     <input type="text" class="form-control" id="conf_senha" name="conf_senha" value="">
@@ -53,7 +53,7 @@ tr, td, th{
                             </div>
                             <br>
                             <div class="row">
-                                <div class="col-md-12 mb-4 form-group" >
+                                <div class="col-md-12 mb-4" >
                                     <a href="#"><button class="btn btn active" style="background-color: #879bc9; color: white; margin-top:20px; height:40px; width:150px; border-radius:5px solid black; cursor:pointer" type="submit" name="salvar">Salvar</button></a>
                                 </div>
                             </div>

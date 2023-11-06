@@ -34,7 +34,7 @@
                         </div>
                     <?php endif; ?>
                     
-                    <form action="">
+                    <form action="" method="POST">
                         <div class="p-3 bg-white">
                             <div class="row">
                                 <div class="col-12">

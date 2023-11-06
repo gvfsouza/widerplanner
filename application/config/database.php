@@ -100,10 +100,10 @@ $query_builder = TRUE;
 // phpinfo();
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'db4free.net',
-	'username' => 'gfsouzah',
-	'password' => '01102023',
-	'database' => 'widerplanner',
+	'hostname' => 'mysql10-farm2.uni5.net',
+	'username' => 'agsete2727_add1',
+	'password' => 'widerplanner2023',
+	'database' => 'agsete27',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

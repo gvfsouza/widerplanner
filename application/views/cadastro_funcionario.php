@@ -65,7 +65,7 @@
                                                         <label for="" style="color: #4e4e4e;"><b>Telefone:</b></label>
                                                         <input style="font-size:14px" type="text" class="form-control" id="telefone_usuario" name="telefone_usuario" value="">
                                                     </div>
-                                                    <div class="col-md-3">
+                                                    <div class="col-md-4">
                                                         <label for="" style="color: #4e4e4e;"><b>Serviço:</b></label>
                                                         <br>
                                                         <select name="fk_servico[]" class="form-control adicionar_servico" style="cursor: pointer;" required>
@@ -74,7 +74,7 @@
                                                             <option value="opcao2">Opção 2</option>
                                                         </select>
                                                     </div>
-                                                    <div class="col-md-2" style="margin-top: 30px;">
+                                                    <div class="col-md-3" style="margin-top: 30px;">
                                                         <span style="width: 160px" title="addServico" class="btn btn-primary" onclick="adicionarCampo()">Adicionar Serviço</span>
                                                         <span style="width: 100px" title="removerServico" class="btn btn-danger" onclick="removerCampo(this) ">Remover</span>
                                                     </div>

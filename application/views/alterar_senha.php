@@ -37,9 +37,7 @@ tr, td, th{
                           <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9;">
                             <div class="row">
                               <div style="margin-left:10px;"></div>
-
                               <div class="col">
-                                
                                 <div class="row">
                                   <div class="form-group col-md-12">
                                     <label for="" style="color: #77787a;">Senha atual:</label>

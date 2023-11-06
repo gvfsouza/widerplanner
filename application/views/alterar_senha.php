@@ -51,13 +51,14 @@ tr, td, th{
                                   </div>
                               </div>
                             </div>
-                            
-                          </fieldset>
-                          <div class="row">
+                            <br>
+                            <div class="row">
                                 <div class="col-md-12 mb-4 form-group" >
-                                    <a href="#"><button class="btn btn active" style="background-color: #1973BD; color: white; margin-top:20px; height:40px; width:150px; border-radius:5px solid black; cursor:pointer" type="submit" name="salvar">Salvar</button></a>
+                                    <a href="#"><button class="btn btn active" style="background-color: #879bc9; color: white; margin-top:20px; height:40px; width:150px; border-radius:5px solid black; cursor:pointer" type="submit" name="salvar">Salvar</button></a>
                                 </div>
                             </div>
+                          </fieldset>
+                          
                           <br>
                         </div>
                       </div>

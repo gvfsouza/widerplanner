@@ -27,12 +27,12 @@
                                                         <br>
                                                         <input style="font-size:14px" type="file" class="form-control" id="foto" name="foto" value="">
                                                     </div>
-                                                    <div class="form-group col-md-4">
+                                                    <div class="form-group col-md-3">
                                                         <label for="" style="color: #4e4e4e;"><b>Nome Completo:</b></label>
                                                         <br>
                                                         <input style="font-size:14px" type="text" class="form-control" id="nome_funcionario" name="nome_funcionario" value="">
                                                     </div>
-                                                    <div class="form-group col-md-3">
+                                                    <div class="form-group col-md-2">
                                                         <label for="" style="color: #4e4e4e;"><b>CPF:</b></label>
                                                         <span id="cpfUsuario"></span>
                                                         <br>
@@ -43,8 +43,6 @@
                                                         <br>
                                                         <input type="date" class="form-control" id="dt_nasc_usuario" name="dt_nasc_usuario" value="">
                                                     </div>
-                                                </div>
-                                                <div class="row">
                                                     <div class="form-group col-md-2">
                                                         <label for="" style="color: #4e4e4e;"><b>Sexo:</b></label>
                                                         <select name="sexo_usuario" id="sexo_usuario" class="form-control" style="cursor: pointer;" required>
@@ -54,6 +52,8 @@
                                                             <option value="Prefiro não dizer">Prefiro não dizer</option>
                                                         </select>
                                                     </div>
+                                                </div>
+                                                <div class="row">
                                                     <div class="form-group col-md-3">
                                                         <label for="" style="color: #4e4e4e;"><b>E-mail:</b></label>
                                                         <span id="emailResponsavel"></span>

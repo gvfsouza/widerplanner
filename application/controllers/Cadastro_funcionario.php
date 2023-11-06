@@ -28,6 +28,7 @@ class Cadastro_funcionario extends CI_Controller
 		$dados = array();
 
 		if (isset($_POST['salvar'])) {
+			$foto_usuario = $this->input->post('foto_usuario');
 			$nome_usuario = $this->input->post('nome_usuario');
 			$cpf_usuario = $this->input->post('cpf_usuario');
 			$dt_nasc_usuario = $this->input->post('dt_nasc_usuario');

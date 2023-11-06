@@ -10,7 +10,7 @@ class Cliente_model extends CI_Model {
         return $res->result();
     }
 
-    public function cadastro_profissional($foto_usuario, $nome_usuario, $cpf_usuario, $dt_nasc_usuario, $email_usuario, $sexo_usuario, $telefone_usuario, $cep_usuario, $logradouro_usuario, $numero_usuario, $complemento_usuario, $bairro_usuario, $cidade_usuario, $uf_usuario, $profissao, $tempo_area)
+    public function cadastro_profissional($foto_usuario, $nome_usuario, $cpf_usuario, $dt_nasc_usuario, $email_usuario, $sexo_usuario, $telefone_usuario, $cep_usuario, $logradouro_usuario, $numero_usuario, $complemento_usuario, $bairro_usuario, $cidade_usuario, $estado_usuario, $profissao)
     {
         $data = array(
             # puxa os campos do banco
@@ -27,8 +27,9 @@ class Cliente_model extends CI_Model {
             'complemento_usuario' => utf8_decode($complemento_usuario),
             'bairro_usuario' => utf8_decode($bairro_usuario),
             'cidade_usuario' => utf8_decode($cidade_usuario),
-            'estado_usuario' => utf8_decode($uf_usuario),
+            'estado_usuario' => utf8_decode($estado_usuario),
             'profissional' => 'sim',
+            'profissao' => utf8_decode($profissao),
         );
 
 

@@ -24,7 +24,7 @@ class Alterar_senha extends CI_Controller
 
 	public function index()
 	{
-		$this->load->model('Login_model');
+		// $this->load->model('Login_model');
 		
 		$this->load->view('layout/header');
 		$this->load->view('layout/sidebar');

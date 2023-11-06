@@ -22,12 +22,12 @@
                                             <div style="margin-left:10px;"></div>
                                             <div class="col">
                                                 <div class="row">
-                                                    <div class="form-group col-md-3">
+                                                    <div class="form-group col-md-2">
                                                         <label for="" style="color: #4e4e4e;"><b>Foto:</b></label>
                                                         <br>
                                                         <input style="font-size:14px" type="file" class="form-control" id="foto" name="foto" value="">
                                                     </div>
-                                                    <div class="form-group col-md-3">
+                                                    <div class="form-group col-md-4">
                                                         <label for="" style="color: #4e4e4e;"><b>Nome Completo:</b></label>
                                                         <br>
                                                         <input style="font-size:14px" type="text" class="form-control" id="nome_funcionario" name="nome_funcionario" value="">

@@ -54,7 +54,7 @@ tr, td, th{
                                   <div class="dados-cliente form-group col-md-12">
                                     <label for="" style="color: #77787a;">Confirmação da senha</label>
                                     <br>
-                                    <input type="date" class="form-control" id="conf_senha" name="conf_senha" value="">
+                                    <input type="text" class="form-control" id="conf_senha" name="conf_senha" value="">
                                   </div>
                               </div>
                             </div>

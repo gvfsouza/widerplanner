@@ -45,7 +45,7 @@ tr, td, th{
                                     <input type="text" class="form-control" id="nova_senha" name="nova_senha">
                                   </div>
                                   <div class="dados-cliente form-group col-md-12">
-                                    <label for="" style="color: #77787a;">Confirmação da senha</label>
+                                    <label for="" style="color: #77787a;">Confirmação nova senha</label>
                                     <br>
                                     <input type="text" class="form-control" id="conf_senha" name="conf_senha" value="">
                                   </div>

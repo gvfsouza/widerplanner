@@ -32,7 +32,7 @@
 
   form {
     position: absolute;
-    margin-top: 80px;
+    /* margin-top: 80px; */
     transition: 0.5s;
     width: 300px;
     height: 400px;

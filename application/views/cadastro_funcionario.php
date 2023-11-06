@@ -115,7 +115,7 @@
                                                     </div>
                                                     <div class="col-md-3">
                                                         <label for="" style="color: #4e4e4e;"><b>UF:</b></label>
-                                                        <input style="font-size:14px" type="text" class="form-control" id="uf_usuario" name="uf_usuario" value="">
+                                                        <input style="font-size:14px" type="text" class="form-control" id="estado_usuario" name="estado_usuario" value="">
                                                     </div>
                                                 </div>
                                             </div>
@@ -268,7 +268,7 @@
                     document.getElementById('logradouro_usuario').value = data.logradouro;
                     document.getElementById('bairro_usuario').value = data.bairro;
                     document.getElementById('cidade_usuario').value = data.localidade;
-                    document.getElementById('uf_usuario').value = data.uf;
+                    document.getElementById('estado_usuario').value = data.uf;
                 }
             });
         }

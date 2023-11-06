@@ -41,20 +41,20 @@ tr, td, th{
                               <div class="col">
                                 
                                 <div class="row">
-                                  <div class="form-group col-md-6">
+                                  <div class="form-group col-md-12">
                                     <label for="" style="color: #77787a;">Senha atual:</label>
                                     <br>
-                                    <input style="font-size:14px" type="text" class="form-control" id="senha_atual" name="senha_atual" value="" disabled="">
+                                    <input style="font-size:14px" type="text" class="form-control" id="senha_atual" name="senha_atual" value="">
                                   </div>
-                                  <div class="dados-cliente form-group col-md-6">
+                                  <div class="dados-cliente form-group col-md-12">
                                     <label for="" style="color: #77787a;">Nova senha:</label>
                                     <br>
-                                    <input type="text" class="form-control" id="nova_senha" name="nova_senha" disabled="">
+                                    <input type="text" class="form-control" id="nova_senha" name="nova_senha">
                                   </div>
-                                  <div class="dados-cliente form-group col-md-4">
+                                  <div class="dados-cliente form-group col-md-12">
                                     <label for="" style="color: #77787a;">Confirmação da senha</label>
                                     <br>
-                                    <input type="date" class="form-control" id="conf_senha" name="conf_senha" value="" disabled="">
+                                    <input type="date" class="form-control" id="conf_senha" name="conf_senha" value="">
                                   </div>
                               </div>
                             </div>

@@ -1,6 +1,6 @@
 <?php if(!defined('BASEPATH')) exit('No direct scripts access allowed');
 
-class Cliente_model extends CI_Model {
+class Funcionario_model extends CI_Model {
 
     public function listar_dados_cliente()
     {

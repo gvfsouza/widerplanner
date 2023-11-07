@@ -1,150 +1,100 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Card</title>
+</head>
 <style>
-  @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
-
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "poppins", sans-serif;
-  }
-
   body {
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #879bc942;
+    background-color: #d7e0f6;
+    background-size: 400% 400%;
   }
 
   .container {
-    background-color: white;
-    padding: 6px;
-    width: 350px;
-    height: 450px;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 0 20px 0 darkgrey;
+    height: 100vh;
   }
 
-  form {
-    position: absolute;
-    /* margin-top: 80px; */
-    transition: 0.5s;
+  .card {
     width: 300px;
-    height: 400px;
-  }
-
-  .buttonsForm {
-    margin-top: 40px;
-    position: relative;
+    border: 1px solid #ddd;
     border-radius: 5px;
-    box-shadow: 0 0 7px 0 #879bc9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
   }
 
-  .buttonsForm button {
-    cursor: pointer;
-    background: transparent;
-    border: none;
-    position: relative;
-    padding: 10px 29px;
+  .card .card-body {
+    padding: 20px;
   }
 
-  .btnColor {
-    position: absolute;
-    width: 108px;
-    height: 100%;
-    background: #879bc9;
-    border-radius: 5px;
-    transition: 0.3s;
+  .card .form-group {
+    margin-bottom: 25px;
   }
 
-  input[type="text"],
-  input[type="password"] {
-    border: none;
-    margin-top: 10px;
-    border-radius: 5px;
-    padding: 8px 0 8px 35px;
-    outline: none;
+  .card .form-group input[type="text"],
+  .card .form-group input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-top: 8px;
+  }
+
+  .card .form-group label {
+    display: block;
+    font-weight: bold;
+  }
+
+  .card button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+
+  .card button[type="submit"] {
     width: 100%;
-    box-shadow: 0 0 7px 0 #879bc994;
-  }
-
-  button[type="submit"] {
-    background: #879bc9;
+    padding: 10px;
+    background-color: #879bc9;
     color: white;
-    border-radius: 5px;
-    width: 100%;
-    border: none;
-    outline: none;
-    padding: 8px 0 8px 15px;
-    font-size: 15px;
-    margin-top: 40px;
+    border-radius: 4px;
+    border: 0;
     cursor: pointer;
-  }
-
-  .divCheck {
-    margin: 10px 0 0 5px;
-    width: 80%;
-    font-size: 13px;
-  }
-
-  i {
-    position: absolute;
-    left: 0;
-    padding: 10px 10px;
-  }
-
-  .iPassword {
-    top: 114px;
-  }
-
-  .iPassword2 {
-    top: 190px;
-  }
-
-  label{
-    color: #879BC9;
-  }
-
-  a{
-    text-decoration: none;
   }
 </style>
 
-<div class="container">
-  <form id="signin">
-    <div class="row">
+<body>
+  <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
+    <div class="container">
+      <div class="card">
         <div class="col-md-12">
-          <p style="text-align:center;font-size: 31px;color: #879bc9;font-weight: bold;">Login</p>
+          <p style="text-align:center;font-size: 31px;color: #879bc9;font-weight: bold;">WiderPlanner</p>
+          <p style="text-align:center;">Login</p>
           <br>
+        </div>
+        
+        <div class="card-body">
+          <form>
             <div class="form-group">
-                <label for="cpf"> <i class="fas fa-lock"></i> CPF:</label>
-                <input type="text" class="form-control" placeholder="Digite o CPF" name="cpf" id="cpf">
+              <label for="cpf">CPF</label>
+              <input type="text" class="form-control" id="cpf" name="cpf" maxlength="14" required>
             </div>
+            <div class="form-group">
+              <label for="senha">Senha</label>
+              <input type="password" class="form-control" id="senha" name="senha" required>
+            </div>
+            <a href="" style="color: #a1a3a8; text-align: right; text-decoration: none">Esqueci senha</a>
+            <br>
+            <br>
+            <a href=""><strong style="font-size:14px">Clique aqui</strong> para realizar o cadastro</a>
+            <br>
+            <br>
+            <button type="submit" id="entrar" name="entrar">Entrar</button>
+          </form>
         </div>
-        <br>
-        <div class="col-md-12">
-            <label for="senha"> <i class="fas fa-lock"></i> Senha:</label>
-            <input type="password" class="form-control" placeholder="Insira sua senha" name="senha" id="senha">
-        </div>
+      </div>
     </div>
-    <div class="divCheck">
-      <br>
-      <span><a href="">Esqueci Senha</a></span>
-      <br>
-      <br>
-      <span><a href=""><strong style="font-size:14px">Clique aqui</strong> para realizar o cadastro</a></span>
-    </div>
-    <button type="submit">Entrar</button>
-  </form>
-  <div class="col-12 text-center">
-    <span class="text-center" style="text-align: center">Sistema desenvolvido para cunho estudantil <br>
-        Projeto de Conclusão de Curso - Superior de
-        Tecnologia em Análise e Deselvolvimento de Sistemas <br> Centro Universitário Nossa Senhora do
-        Patrocínio <br> Endereço: R. José Weissohn, 153 - Centro, Salto - SP, 13328-300</span>
-  </div>
-</div>
+  </nav>
+</body>

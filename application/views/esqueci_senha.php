@@ -76,40 +76,32 @@
   }
 </style>
 
-<body>
   <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
     <div class="container">
       <div class="card">
         <div class="col-md-12">
-          <p style="text-align:center;font-size: 31px;color: #879bc9;font-weight: bold;">WiderPlanner
+          <p style="text-align:center;color:#879ed0">Esqueci Senha</p>
           <br>
-          <span style="text-align:center;font-size:20px;color:#a8aaad">Login</span></p>
         </div>
-        
+
+        <div class="alert alert-warning">
+          Insira as informações abaixo para receber o e-mail e recuperar a senha esquecida.
+        </div>
         <div class="card-body">
           <form>
             <div class="form-group">
-              <label for="cpf" style="color:#a8aaad">CPF:</label>
-              <input type="text" class="form-control" id="cpf" name="cpf" maxlength="14" placeholder="insira seu CPF" required>
+              <label for="cpf">CPF</label>
+              <input type="text" class="form-control" id="cpf" name="cpf" maxlength="14" required>
             </div>
             <div class="form-group">
-              <label for="senha" style="color:#a8aaad">Senha:</label>
-              <input type="password" class="form-control" id="senha" name="senha" placeholder="digite a sua senha" required>
+              <label for="senha">E-mail</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="exemplo@email.com" required>
             </div>
-            <a href="" style="color: #a1a3a8; text-align: right; text-decoration: none">Esqueci senha</a>
-            <br>
-            <br>
-            <a href=""><strong style="font-size:14px">Clique aqui</strong> para realizar o cadastro</a>
-            <br>
-            <br>
-            <button type="submit" id="entrar" name="entrar">Entrar</button>
+           
+            <button type="submit" id="enviar" name="enviar">Enviar</button>
           </form>
-          <br>
-          <div id="rodape" style="text-align:center;color: gray;font-size:12px">
-            <p><small>Sistema desenvolvido para cunho estudantil <br> Projeto de Conclusão de Curso - Superior de Tecnologia em Análise e Deselvolvimento de Sistemas <br> Centro Universitário Nossa Senhora do Patrocínio<br>Endereço: R. José Weissohn, 153 - Centro, Salto - SP, 13328-300</small></p>
-          </div>
+          
         </div>
       </div>
     </div>
   </nav>
-</body>

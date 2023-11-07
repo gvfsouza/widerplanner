@@ -54,7 +54,8 @@ class Cadastro_cliente extends CI_Controller
 				$dados['cadastro_cliente'] = $this->Cliente_model->cadastro_cliente($nome_usuario, $cpf_usuario, $dt_nasc_usuario, $email_usuario, $sexo_usuario, $telefone_usuario, $cep_usuario, $logradouro_usuario, $numero_usuario, $complemento_usuario, $bairro_usuario, $cidade_usuario, $uf_usuario, $senha_criptografada);
 
 				$this->load->library('email');
-				$this->email->set_mailtype('html'); // Defina o tipo de e-mail como HTML
+				$config['mailtype'] = 'html';
+			    $this->email->initialize($config);
 				$this->email->from('contato@agsete.com.br', 'widerplanner');
 				$this->email->to($email_usuario); // Endereço de e-mail do usuário
 				$this->email->subject('WiderPlanner - Dados de acesso ao sistema');

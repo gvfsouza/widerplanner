@@ -89,12 +89,12 @@
         <div class="card-body">
           <form>
             <div class="form-group">
-              <label for="cpf">CPF</label>
-              <input type="text" class="form-control" id="cpf" name="cpf" maxlength="14" required>
+              <label for="cpf" style="color:#a8aaad">CPF:</label>
+              <input type="text" class="form-control" id="cpf" name="cpf" maxlength="14" placeholder="insira seu CPF" required>
             </div>
             <div class="form-group">
-              <label for="senha">Senha</label>
-              <input type="password" class="form-control" id="senha" name="senha" required>
+              <label for="senha" style="color:#a8aaad">Senha:</label>
+              <input type="password" class="form-control" id="senha" name="senha" placehholder="digite a sua senha" required>
             </div>
             <a href="" style="color: #a1a3a8; text-align: right; text-decoration: none">Esqueci senha</a>
             <br>
@@ -104,6 +104,7 @@
             <br>
             <button type="submit" id="entrar" name="entrar">Entrar</button>
           </form>
+          <br>
           <div id="rodape" style="text-align:center;color: gray;font-size:12px">
             <p><small>Sistema desenvolvido para cunho estudantil <br> Projeto de Conclusão de Curso - Superior de Tecnologia em Análise e Deselvolvimento de Sistemas <br> Centro Universitário Nossa Senhora do Patrocínio<br>Endereço: R. José Weissohn, 153 - Centro, Salto - SP, 13328-300</small></p>
           </div>

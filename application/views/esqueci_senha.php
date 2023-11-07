@@ -82,7 +82,7 @@
         <div class="col-md-12">
           <p style="text-align:center;font-size: 31px;color: #879bc9;font-weight: bold;">WiderPlanner
           <br>
-          <p style="text-align:center;color:#879ed0">Esqueci Senha</p>
+          <span style="text-align:center;font-size:20px;color:#a8aaad">Esqueci Senha</span></p>
           <br>
         </div>
 
@@ -97,7 +97,7 @@
             </div>
             <div class="form-group">
               <label for="senha">E-mail</label>
-              <input type="email" class="form-control" id="email" name="email" placeholder="exemplo@email.com" required>
+              <input type="email" class="form-control" id="email" name="email" placeholder="exemplo@gmail.com" required>
             </div>
            
             <button type="submit" id="enviar" name="enviar">Enviar</button>

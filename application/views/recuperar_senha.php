@@ -83,7 +83,7 @@
         <div class="col-md-12">
           <p style="text-align:center;font-size: 31px;color: #879bc9;font-weight: bold;">WiderPlanner
           <br>
-          <p style="text-align:center;color:#879ed0">Recuperar Senha</p>
+          <span style="text-align:center;font-size:20px;color:#a8aaad">Recuperar Senha<span></p>
           <br>
         </div>
 

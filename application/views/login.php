@@ -10,7 +10,7 @@
   font-family: "poppins", sans-serif;
 
   }
-  
+
   body {
     background-color: #d7e0f6;
     background-size: 400% 400%;
@@ -24,7 +24,7 @@
   }
 
   .card {
-    width: 300px;
+    width: 343px;
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -69,6 +69,10 @@
     border-radius: 4px;
     border: 0;
     cursor: pointer;
+  }
+
+  .form-control{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   }
 </style>
 

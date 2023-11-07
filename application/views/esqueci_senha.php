@@ -80,6 +80,8 @@
     <div class="container">
       <div class="card">
         <div class="col-md-12">
+          <p style="text-align:center;font-size: 31px;color: #879bc9;font-weight: bold;">WiderPlanner
+          <br>
           <p style="text-align:center;color:#879ed0">Esqueci Senha</p>
           <br>
         </div>
@@ -100,7 +102,10 @@
            
             <button type="submit" id="enviar" name="enviar">Enviar</button>
           </form>
-          
+          <br>
+          <div id="rodape" style="text-align:center;color: gray;font-size:12px">
+            <p><small>Sistema desenvolvido para cunho estudantil <br> Projeto de Conclusão de Curso - Superior de Tecnologia em Análise e Deselvolvimento de Sistemas <br> Centro Universitário Nossa Senhora do Patrocínio<br>Endereço: R. José Weissohn, 153 - Centro, Salto - SP, 13328-300</small></p>
+          </div>
         </div>
       </div>
     </div>

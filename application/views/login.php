@@ -82,8 +82,8 @@
       <div class="card">
         <div class="col-md-12">
           <p style="text-align:center;font-size: 31px;color: #879bc9;font-weight: bold;">WiderPlanner
-          <span style="text-align:center;font-size:20px;color:#a8aaad">Login</span></p>
           <br>
+          <span style="text-align:center;font-size:20px;color:#a8aaad">Login</span></p>
         </div>
         
         <div class="card-body">

@@ -384,46 +384,6 @@ a {
 
                                         <fieldset class="form-group " style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9;">
                                             <div class="card-container">
-                                                <!-- <div class="card-profile" style="width: 300px;">
-                                                    <div class="card-header-profile">
-                                                        <center><img
-                                                                src="https://images.unsplash.com/photo-1499557354967-2b2d8910bcca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=736&q=80"
-                                                                alt=""
-                                                                style="width: 7.5rem; right: 7.5rem; margin-top: -70px; border-radius: 20px">
-                                                        </center>
-                                                        <br><br><br><br>
-                                                        <div class="profile-info">
-                                                            <h3 class="profile-name"><strong>Nome Completo</strong></h3>
-                                                        </div>
-                                                    </div>
-                                                    <div>
-                                                        <p style="font-size: 14px">
-                                                            Idade: <br>
-                                                            Profissão: <br>
-                                                            Quanto tempo está na área:</p>
-                                                    </div>
-                                                </div> -->
-
-                                                <!-- <div class="card-profile" style="width: 300px;">
-                                                    <div class="card-header-profile">
-                                                        <center><img
-                                                                src="https://images.unsplash.com/photo-1499557354967-2b2d8910bcca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=736&q=80"
-                                                                alt=""
-                                                                style="width: 7.5rem; right: 7.5rem; margin-top: -70px; border-radius: 20px">
-                                                        </center>
-                                                        <br><br><br><br>
-                                                        <div class="profile-info">
-                                                            <h3 class="profile-name"><strong>Nome Completo</strong></h3>
-                                                        </div>
-                                                    </div>
-                                                    <div>
-                                                        <p style="font-size: 14px">
-                                                            Idade: <br>
-                                                            Profissão: <br>
-                                                            Quanto tempo está na área:</p>
-                                                    </div>
-                                                </div> -->
-
                                                 <div class="flex-container space-between">
                                                     <div class="col card">
                                                         <div class="img-placeholder">

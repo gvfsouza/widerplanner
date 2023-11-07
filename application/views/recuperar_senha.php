@@ -86,7 +86,7 @@
         </div>
 
         <div class="alert alert-warning">
-          Insira as informações abaixo para receber o e-mail e recuperar a senha esquecida.
+          Preencha os campos abaixo com a nova senha.
         </div>
         <div class="card-body">
           <form>

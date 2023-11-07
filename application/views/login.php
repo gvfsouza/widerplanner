@@ -4,6 +4,13 @@
   <title>Login Card</title>
 </head>
 <style>
+  @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
+
+  *{
+  font-family: "poppins", sans-serif;
+
+  }
+  
   body {
     background-color: #d7e0f6;
     background-size: 400% 400%;

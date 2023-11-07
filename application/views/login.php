@@ -24,7 +24,7 @@
   }
 
   .card {
-    width: 343px;
+    width: 453px;
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -104,7 +104,7 @@
             <br>
             <button type="submit" id="entrar" name="entrar">Entrar</button>
           </form>
-          <div id="rodape" style="text-align:center">
+          <div id="rodape" style="text-align:center;color: gray;">
             <p><small>Sistema desenvolvido para cunho estudantil <br> Projeto de Conclusão de Curso - Superior de Tecnologia em Análise e Deselvolvimento de Sistemas <br> Centro Universitário Nossa Senhora do Patrocínio<br>Endereço: R. José Weissohn, 153 - Centro, Salto - SP, 13328-300</small></p>
           </div>
         </div>

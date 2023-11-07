@@ -64,7 +64,7 @@
   .card button[type="submit"] {
     width: 100%;
     padding: 10px;
-    background-color: #879bc9;
+    background-color: #72b9b7;
     color: white;
     border-radius: 4px;
     border: 0;
@@ -80,9 +80,9 @@
     <div class="container">
       <div class="card">
         <div class="col-md-12">
-          <p style="text-align:center;font-size: 31px;color: #879bc9;font-weight: bold;">WiderPlanner
+          <p style="text-align:center;font-size: 31px;color: #72b9b7;font-weight: bold;">WiderPlanner
           <br>
-          <span style="text-align:center;font-size:20px;color:#a8aaad">Esqueci Senha</span></p>
+          <span style="text-align:center;font-size:20px;color:#a8aaad;font-weight: normal;">Esqueci Senha</span></p>
           <br>
         </div>
 

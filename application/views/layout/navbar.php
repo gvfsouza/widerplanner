@@ -26,7 +26,7 @@
 </style>
 
 <!-- Topbar -->
-<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow" style="border-radius: 10px; margin-left: 20px; margin-right: 20px;"> 
+<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow" style="border-radius: 1px 1px 10px 10px; margin-left: 20px; margin-right: 20px;"> 
 
     <p style="color: #66afa8; margin-top: 10px; font-weight: bold; font-size: 13px"></p>
 

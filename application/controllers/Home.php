@@ -22,8 +22,8 @@ class Home extends CI_Controller {
 		$dados['listar_estabelecimento'] = $this->Home_model->listar_estabelecimento();
 
 		$this->load->view('layout/header');
-		$this->load->view('layout/navbar');
 		$this->load->view('layout/sidebar');
+		$this->load->view('layout/navbar');
 		$this->load->view('home', $dados);
 		$this->load->view('layout/footer');
 	}

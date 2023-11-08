@@ -45,6 +45,10 @@
        }
 
    </style><!-- Sidebar -->
+   <!-- Sidebar Toggle (Topbar) -->
+   <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+        <i class="fa fa-bars" style="color: #55a69fd9;"></i>
+    </button>
    <ul class="navbar-nav  sidebar " id="accordionSidebar" style="background-color: #ffffff;">
 
         <a class="sidebar-brand d-flex align-items-center justify-content-center">
@@ -104,3 +108,10 @@
    <!-- End of Sidebar -->
    <!-- Content Wrapper -->
    <div id="content-wrapper" class="d-flex flex-column" style="background-color: #d9e2f7">
+   <script>
+       // Adicionar funcionalidade ao botão de toggle
+    document.getElementById('sidebarToggleTop').addEventListener('click', function() {
+        // Adicione aqui o código para exibir/ocultar o sidebar
+        document.getElementById('accordionSidebar').classList.toggle('toggled');
+    });
+    </script>

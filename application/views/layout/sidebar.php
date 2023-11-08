@@ -46,11 +46,11 @@
 
    </style><!-- Sidebar -->
    <!-- Sidebar Toggle (Topbar) -->
+   
+   <ul class="navbar-nav  sidebar " id="accordionSidebar" style="background-color: #ffffff;">
    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
         <i class="fa fa-bars" style="color: #55a69fd9;"></i>
     </button>
-   <ul class="navbar-nav  sidebar " id="accordionSidebar" style="background-color: #ffffff;">
-
         <a class="sidebar-brand d-flex align-items-center justify-content-center">
            <div class="sidebar-brand-icon ">
                <img src="/public/img/logo.png" class="img-fluid" style=" margin-top:10px;max-width: 35%; min-width: 35%;">

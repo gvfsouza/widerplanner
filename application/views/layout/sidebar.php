@@ -104,4 +104,15 @@
    </ul>
    <!-- End of Sidebar -->
    <!-- Content Wrapper -->
+   <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+        <i class="fas fa-bars" style="color: #55a69fd9;"></i>
+    </button>
+
+    <script>
+    $(document).ready(function() {
+        $("#sidebarToggleTop").on("click", function() {
+            $("#accordionSidebar").toggleClass("active");
+        });
+    });
+    </script>
    <div id="content-wrapper" class="d-flex flex-column" style="background-color: #d9e2f7">

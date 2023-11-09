@@ -51,33 +51,11 @@ class Cadastro_funcionario extends CI_Controller
 			if (!isset($error)) {
 				$dados['cadastro_funcionario'] = $this->Funcionario_model->cadastro_profissional($foto_usuario, $nome_usuario, $cpf_usuario, $dt_nasc_usuario, $email_usuario, $sexo_usuario, $telefone_usuario, $cep_usuario, $logradouro_usuario, $numero_usuario, $complemento_usuario, $bairro_usuario, $cidade_usuario, $estado_usuario, $profissao, $senha_criptografada);
 
-				$this->load->library('email');
-				$this->email->from('widerplanner');
-				$this->email->to($email_usuario); // Endereço de e-mail do usuário
-				$this->email->subject('WiderPlanner - Dados de acesso ao sistema');
-				$this->email->message('Sua nova senha de acesso é: ' . $password);
-
-				$linkAcesso = 'https://widerplanner.agsete.com.br/login'; // Link para a página de login
-
-				// Corpo do E-mail
-				$mensagem = 'Olá ' . $nome_usuario . ',<br><br>';
-				$mensagem .= 'Para acessar o sistema, utilize o seu CPF e senha abaixo:<br><br>';
-				$mensagem .= 'Sua senha de acesso ao sistema é: ' . $senha_gerada . '<br><br>';
-				$mensagem .= '*Lembre-se de alterar sua senha após o primeiro login.<br><br>';
-				$mensagem .= 'Você pode acessar o sistema através do seguinte link: <a href="' . $linkAcesso . '">Acessar o Sistema</a><br><br>';
-
-				$this->email->message($mensagem);
-
-				if ($this->email->send(FALSE)) {
-					$this->session->set_flashdata('error', $this->email->print_debugger());
-				} else {
-					$this->session->set_flashdata('success', 'Verifique sua caixa de e-mails para acessar o sistema');
-				}
 				//MENSAGEM SUCESSO AO CADASTRAR
-				// $this->session->set_flashdata('sucesso', 'Cadastro realizado com sucesso!');
+				$this->session->set_flashdata('sucesso', 'Cadastro realizado com sucesso!');
 				redirect('cadastro_funcionario');
 			} else {
-				// $this->session->set_flashdata('erro', 'Erro ao efetuar cadastro.');
+				$this->session->set_flashdata('erro', 'Erro ao efetuar cadastro.');
 			}
 		}
 

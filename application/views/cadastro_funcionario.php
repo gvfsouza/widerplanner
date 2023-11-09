@@ -14,19 +14,20 @@
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="" role="tabpanel">
 
-                    <!-- Mensagem de sucesso cadastro/e-mail  -->
-                    <?php if ($this->session->flashdata('sucess')) { ?>
-                        <div class="alert alert-success" role="alert">
-                            <?php echo $this->session->flashdata('sucess'); ?>
-                        </div>
-                    <?php } ?>
+                <?php if ($this->session->flashdata('sucesso')) {    ?>
+                    <div class="alert alert-success" role="alert">
+                        <?php echo $this->session->flashdata('sucesso'); ?>
+                    </div>
+                <?php } ?>
+                <!----------------FIM-----MENSAGEM DE SUCESSO AO CADASTRAR ---------------->
 
-                    <!-- Mensagem de erro cadastro/e-mail -->
-                    <?php if ($this->session->flashdata('error')) : ?>
-                        <div class="alert alert-danger">
-                            <?php echo $this->session->flashdata('error'); ?>
-                        </div>
-                    <?php endif; ?>
+                <!----------------INICIO-----MENSAGEM DE ERRO AO CADASTRAR ---------------->
+                <?php if ($this->session->flashdata('erro')) : ?>
+                    <div class="alert alert-danger">
+                        <?php echo $this->session->flashdata('erro'); ?>
+                    </div>
+                <?php endif; ?>
+                <!----------------FIM-----MENSAGEM DE ERRO AO CADASTRAR ---------------->
 
                     <form action="" method="POST">
                         <div class="p-3 bg-white">

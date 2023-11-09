@@ -69,9 +69,9 @@ class Cadastro_funcionario extends CI_Controller
 				$this->email->message($mensagem);
 
 				if ($this->email->send(FALSE)) {
-					$this->session->set_flashdata('error_email', $this->email->print_debugger());
+					$this->session->set_flashdata('error', $this->email->print_debugger());
 				} else {
-					$this->session->set_flashdata('success_email', 'Verifique sua caixa de e-mails para acessar o sistema');
+					$this->session->set_flashdata('success', 'Verifique sua caixa de e-mails para acessar o sistema');
 				}
 				//MENSAGEM SUCESSO AO CADASTRAR
 				// $this->session->set_flashdata('sucesso', 'Cadastro realizado com sucesso!');

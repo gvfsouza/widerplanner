@@ -28,14 +28,14 @@
 
           <?php if ($this->session->flashdata('success_email')) {    ?>
             <div class="alert alert-success" role="alert">
-              <?php echo $this->session->flashdata('sucesso'); ?>
+              <?php echo $this->session->flashdata('success_email'); ?>
             </div>
           <?php } ?>
 
           <!-- Mensagem de erro cadastro/e-mail -->
           <?php if ($this->session->flashdata('error_email')) : ?>
             <div class="alert alert-danger">
-              <?php echo $this->session->flashdata('erro'); ?>
+              <?php echo $this->session->flashdata('error_email'); ?>
             </div>
           <?php endif; ?>
 

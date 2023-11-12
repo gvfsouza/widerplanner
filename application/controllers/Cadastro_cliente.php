@@ -67,17 +67,18 @@ class Cadastro_cliente extends CI_Controller
 
 
 				// Carregue a visualização do corpo do e-mail e configure-a como corpo do e-mail
-				$this->email->message($this->load->view('emails/primeiro_acesso', $corpo_email, true));
+				// $this->email->message($this->load->view('emails/primeiro_acesso', $corpo_email, true));
+				// $this->email->message($mensagem);
+
+
+
+				Corpo do E-mail
+				$mensagem = 'Olá ' . $nome_usuario . ',<br><br>';
+				$mensagem .= 'Para acessar o sistema, utilize o seu CPF e senha abaixo:<br><br>';
+				$mensagem .= 'Sua senha de acesso ao sistema é: ' . $senha_gerada . '<br><br>';
+				$mensagem .= '*Lembre-se de alterar sua senha após o primeiro login.<br><br>';
+				$mensagem .= 'Você pode acessar o sistema através do seguinte link: <a href="' . $linkAcesso . '">Acessar o Sistema</a><br><br>';
 				$this->email->message($mensagem);
-
-
-
-				// Corpo do E-mail
-				// $mensagem = 'Olá ' . $nome_usuario . ',<br><br>';
-				// $mensagem .= 'Para acessar o sistema, utilize o seu CPF e senha abaixo:<br><br>';
-				// $mensagem .= 'Sua senha de acesso ao sistema é: ' . $senha_gerada . '<br><br>';
-				// $mensagem .= '*Lembre-se de alterar sua senha após o primeiro login.<br><br>';
-				// $mensagem .= 'Você pode acessar o sistema através do seguinte link: <a href="' . $linkAcesso . '">Acessar o Sistema</a><br><br>';
 
 
 				if ($this->email->send(FALSE)) {

@@ -15,7 +15,7 @@
             Olá, <?php echo $nome_usuario; ?>!<br>
             
             <p style="font-size: 16px;font-weight: bold;">Para acessar o sistema, utilize o seu CPF e a senha abaixo:</p>
-            <p>Sua senha de acesso ao sistema é: <strong><?php echo $senha; ?> </strong>
+            <p>Sua senha de acesso ao sistema é: <strong><?php echo $senha_gerada; ?> </strong>
             *Lembre-se de alterar a senha após o primeiro login.</p>
             <p>Você pode acessar o sistema através do seguinte link:</p><a href="<?php echo $linkAcesso; ?>">link de acesso</a>.            
             <br>

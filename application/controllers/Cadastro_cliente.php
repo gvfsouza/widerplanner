@@ -50,7 +50,7 @@ class Cadastro_cliente extends CI_Controller
 
 			$linkAcesso = 'https://widerplanner.agsete.com.br/login'; // Link para a página de login
 
-			// if (!isset($error)) {
+			if (!isset($error)) {
 				// $dados['cadastro_cliente'] = $this->Cliente_model->cadastro_cliente($nome_usuario, $cpf_usuario, $dt_nasc_usuario, $email_usuario, $sexo_usuario, $telefone_usuario, $cep_usuario, $logradouro_usuario, $numero_usuario, $complemento_usuario, $bairro_usuario, $cidade_usuario, $uf_usuario, $senha_criptografada);
 
 				$this->load->library('email');
@@ -87,22 +87,17 @@ class Cadastro_cliente extends CI_Controller
 
 
 				if ($this->email->send(FALSE)) {
-					log_message('error', 'Erro no envio de email: ' . $this->email->print_debugger());
-					$this->session->set_flashdata('error_email', 'Erro no envio de email. Por favor, tente novamente mais tarde.');
+					$this->session->set_flashdata('error_email', $this->email->print_debugger());
 				} else {
 					$this->session->set_flashdata('success_email', 'Verifique sua caixa de e-mails para acessar o sistema');
 				}
 				//MENSAGEM SUCESSO AO CADASTRAR
-				// Concluir a transação
-				$this->db->trans_complete();
-
-				if ($this->db->trans_status() === FALSE) {
-					$this->session->set_flashdata('erro', 'Erro ao efetuar cadastro.');
-				} else {
-					$this->session->set_flashdata('sucesso', 'Cadastro realizado com sucesso!');
-					redirect('cadastro_cliente');
-				}
+				$this->session->set_flashdata('sucesso', 'Cadastro realizado com sucesso!');
+				redirect('cadastro_cliente');
+			} else {
+				$this->session->set_flashdata('erro', 'Erro ao efetuar cadastro.');
 			}
+		}
 
 		$this->load->view('layout/header');
 		$this->load->view('cadastro_cliente', $dados);

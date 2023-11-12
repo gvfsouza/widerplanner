@@ -72,11 +72,14 @@ class Cadastro_cliente extends CI_Controller
             $this->email->message($mensagem);
 
             if ($this->email->send(FALSE)) {
-                log_message('error', 'Erro no envio de email: ' . $this->email->print_debugger());
-                $this->session->set_flashdata('error_email', 'Erro no envio de email. Por favor, tente novamente mais tarde.');
-            } else {
-                $this->session->set_flashdata('success_email', 'Verifique sua caixa de e-mails para acessar o sistema');
-            }
+				// Mensagem de erro no envio de email
+				if ($this->email->print_debugger() != '') {
+					log_message('error', 'Erro no envio de email: ' . $this->email->print_debugger());
+					$this->session->set_flashdata('error_email', 'Erro no envio de email. Por favor, tente novamente mais tarde.');
+				}
+			} else {
+				$this->session->set_flashdata('success_email', 'Verifique sua caixa de e-mails para acessar o sistema');
+			}
 
             // Concluir a transação
             $this->db->trans_complete();

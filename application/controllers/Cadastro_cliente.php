@@ -72,7 +72,7 @@ class Cadastro_cliente extends CI_Controller
 
 
 
-				Corpo do E-mail
+				// Corpo do E-mail
 				$mensagem = 'Olá ' . $nome_usuario . ',<br><br>';
 				$mensagem .= 'Para acessar o sistema, utilize o seu CPF e senha abaixo:<br><br>';
 				$mensagem .= 'Sua senha de acesso ao sistema é: ' . $senha_gerada . '<br><br>';

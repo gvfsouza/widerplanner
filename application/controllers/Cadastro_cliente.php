@@ -75,7 +75,7 @@ class Cadastro_cliente extends CI_Controller
 				// Corpo do E-mail
 				$mensagem = 'Olá ' . $nome_usuario . ',<br><br>';
 				$mensagem .= 'Para acessar o sistema, utilize o seu CPF e senha abaixo:<br><br>';
-				$mensagem .= 'Sua senha de acesso ao sistema é: ' . $senha_gerada . '<br><br>';
+				$mensagem .= 'Sua senha de acesso ao sistema é: <strong>' . $senha_gerada . '</strong><br><br>';
 				$mensagem .= '*Lembre-se de alterar sua senha após o primeiro login.<br><br>';
 				$mensagem .= 'Você pode acessar o sistema através do seguinte link: <a href="' . $linkAcesso . '">Acessar o Sistema</a><br><br>';
 				$this->email->message($mensagem);

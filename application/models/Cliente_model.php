@@ -31,7 +31,6 @@ class Cliente_model extends CI_Model {
         );
 
         $this->db->insert('usuario',$data);
-        log_message('debug', 'Model: cadastro_cliente foi chamada.');
 
         return $this->db->insert_id();
     }

@@ -306,9 +306,6 @@ a {
                                             <div class="card-container">
                                                 <div class="card-profile">
                                                     <div class="card-header-profile">
-                                                        <center>
-                                                            <div class="profile-image"></div>
-                                                        </center>
                                                         <div class="profile-info">
                                                             <h3 class="profile-name"><strong>Corte de Cabelo</strong>
                                                             </h3>
@@ -323,9 +320,6 @@ a {
 
                                                 <div class="card-profile">
                                                     <div class="card-header-profile">
-                                                        <center>
-                                                            <div class="profile-image"></div>
-                                                        </center>
                                                         <div class="profile-info">
                                                             <h3 class="profile-name"><strong>Barba</strong></h3>
                                                             <br>
@@ -339,9 +333,6 @@ a {
 
                                                 <div class="card-profile">
                                                     <div class="card-header-profile">
-                                                        <center>
-                                                            <div class="profile-image"></div>
-                                                        </center>
                                                         <div class="profile-info">
                                                             <h3 class="profile-name"><strong>Sobrancelhas</strong></h3>
                                                             <br>
@@ -355,9 +346,6 @@ a {
 
                                                 <div class="card-profile">
                                                     <div class="card-header-profile">
-                                                        <center>
-                                                            <div class="profile-image"></div>
-                                                        </center>
                                                         <div class="profile-info">
                                                             <h3 class="profile-name"><strong>Pigmentação em
                                                                     barba</strong></h3>

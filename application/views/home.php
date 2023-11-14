@@ -382,10 +382,8 @@ a {
                                                             <p><i class="fa-solid fa-user"></i> Front End Web Developer
                                                             </p>
                                                             <p><i class="fa-solid fa-paper-plane"></i> <a href="mailto:wafaa_cr@outlook.com">Email Me</a></p>
-                                                            <p><i class="fa-solid fa-location-dot"></i> Auckland, New
-                                                                Zealand</p>
-                                                            <span style="margin: 1px;" title="Excluir" id="13" class="btn btn-sm btn-danger excluir_usuario"><i class="fas fa-trash-alt"></i></span>
-                                                        </div>
+                                                            <p><i class="fa-solid fa-location-dot"></i> Auckland, New Zealand</p>
+                                                           </div>
                                                     </div>
                                                     <div class="col card">
                                                         <div class="img-placeholder">

@@ -425,16 +425,71 @@ a {
                                         </fieldset>
 
                                         <fieldset class="form-group " style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9;">
-                                            <div class="product-card">
-                                                <div class="product-tumb">
-                                                    <img src="" alt="">
-                                                </div>
-                                                <div class="product-details">
-                                                    <h4><a href="">Título</a></h4>
-                                                    <p>Descrição</p>
-                                                    <div class="product-bottom-details">
-                                                        <div class="product-price">R$50,99</div>
+                                            <div class="card-container">
+                                                <div class="card-profile">
+                                                    <div class="card-header-profile">
+                                                        <center>
+                                                            <div class="produto-image"></div>
+                                                        </center>
+                                                        <div class="profile-info">
+                                                            <h3 class="produto"><strong>Corte de Cabelo</strong>
+                                                            </h3>
+                                                            <br>
+                                                            <p class="profile-desc">Descrição (se tiver)</p>
+                                                        </div>
                                                     </div>
+                                                    <center>
+                                                        <p class="status-value">R$ &nbsp;45,00 <i class="fas fa-clock"></i> &nbsp;&nbsp;40 minutos</p>
+                                                    </center>
+                                                </div>
+
+                                                <div class="card-profile">
+                                                    <div class="card-header-profile">
+                                                        <center>
+                                                            <div class="produto-image"></div>
+                                                        </center>
+                                                        <div class="profile-info">
+                                                            <h3 class="profile-name"><strong>Barba</strong></h3>
+                                                            <br>
+                                                            <p class="produto-desc">Descrição (se tiver)</p>
+                                                        </div>
+                                                    </div>
+                                                    <center>
+                                                        <p class="status-value">R$ &nbsp;45,00</p>
+                                                    </center>
+                                                </div>
+
+                                                <div class="card-profile">
+                                                    <div class="card-header-profile">
+                                                        <center>
+                                                            <div class="produto-image"></div>
+                                                        </center>
+                                                        <div class="profile-info">
+                                                            <h3 class="profile-name"><strong>Sobrancelhas</strong></h3>
+                                                            <br>
+                                                            <p class="profile-desc">Descrição (se tiver)</p>
+                                                        </div>
+                                                    </div>
+                                                    <center>
+                                                        <p class="status-value">R$ &nbsp;15,00 <i class="fas fa-clock"></i> &nbsp;&nbsp;10 minutos</p>
+                                                    </center>
+                                                </div>
+
+                                                <div class="card-profile">
+                                                    <div class="card-header-profile">
+                                                        <center>
+                                                            <div class="produto-image"></div>
+                                                        </center>
+                                                        <div class="profile-info">
+                                                            <h3 class="profile-name"><strong>Pigmentação em
+                                                                    barba</strong></h3>
+                                                            <br>
+                                                            <p class="profile-desc">Descrição (se tiver)</p>
+                                                        </div>
+                                                    </div>
+                                                    <center>
+                                                        <p class="status-value">R$ &nbsp;15,00 <i class="fas fa-clock"></i> &nbsp;&nbsp;1 hora</p>
+                                                    </center>
                                                 </div>
                                             </div>
                                         </fieldset>

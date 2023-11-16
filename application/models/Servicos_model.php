@@ -23,7 +23,7 @@ class Servicos_model extends CI_Model {
         );
 
 
-        $this->db->insert('cadastro_servicos', $data);
+        $this->db->insert('servicos', $data);
         return $this->db->insert_id();
     }
 }

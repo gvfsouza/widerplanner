@@ -41,7 +41,7 @@
                                                             <div class="form-group col-md-3">
                                                                 <label for=""><b>Foto:</b></label>
                                                                 <br>
-                                                                <input style="font-size:14px" type="file" class="form-control arquivo" id="arquivo" name="arquivo[]" accept="image/*">
+                                                                <input style="font-size:14px" type="file" class="form-control arquivo" id="arquivo" name="arquivo" accept="image/*">
 
                                                                 <div class="nome-arquivos col mb-3">
                                                                     <div class="arquivo_"></div>

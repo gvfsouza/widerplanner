@@ -42,7 +42,22 @@
                                                                 <label for=""><b>Foto:</b></label>
                                                                 <br>
                                                                 <input style="font-size:14px" type="file" class="form-control arquivo" id="arquivo" name="arquivo[]" accept="image/*">
+
+                                                                <div class="nome-arquivos col mb-3">
+                                                                    <div class="arquivo_"></div>
+                                                                </div>
+
+                                                                <script>
+                                                                    function retornaNomeArquivo() {
+                                                                        $(".arquivo").change(function() {
+                                                                            var filename = $(this).val().replace(/C:\\fakepath\\/i, '')
+                                                                            $(this).parent().parent().parent().next().find('.arquivo_').html('<i class="fas fa-folder-open"></i> ' + filename);
+                                                                        });
+                                                                    }
+                                                                    retornaNomeArquivo()
+                                                                </script>
                                                             </div>
+
                                                             <div class="form-group col-md-3">
                                                                 <label for=""><b>Nome:</b></label>
                                                                 <br>

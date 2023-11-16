@@ -31,6 +31,8 @@ class Cliente_model extends CI_Model {
         );
 
         $this->db->insert('usuario',$data);
+        echo $this->db->last_query();
+        echo $this->db->error();
 
         return $this->db->insert_id();
     }

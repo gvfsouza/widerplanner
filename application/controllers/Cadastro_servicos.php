@@ -45,7 +45,7 @@ class Cadastro_servicos extends CI_Controller
 		
 			for ($i = 0; $i < count($foto_servico['name']); $i++) {
 				if ($foto_servico['size'][$i] == "") {
-					$arquivo_[] = "";
+					$foto_servico[] = "";
 				} else {
 					$_FILES['arquivo']['name'] = $foto_servico['name'][$i];
 					$_FILES['arquivo']['type'] = $foto_servico['type'][$i];
@@ -63,7 +63,7 @@ class Cadastro_servicos extends CI_Controller
 			}
 
 			if (!isset($error)) {
-				$dados['cadastro_servicos'] = $this->Servicos_model->cadastro_servicos($arquivo_, $nome_servico, $descricao_servico, $valor_servico, $duracao_servico);
+				$dados['cadastro_servicos'] = $this->Servicos_model->cadastro_servicos($foto_servico, $nome_servico, $descricao_servico, $valor_servico, $duracao_servico);
 
 				//MENSAGEM SUCESSO AO CADASTRAR
 				$this->session->set_flashdata('sucesso', 'Cadastro de Serviços realizado com sucesso!');

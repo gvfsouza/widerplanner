@@ -70,29 +70,23 @@ class Cadastro_cliente extends CI_Controller
 				$corpo_email['linkAcesso'] = $linkAcesso;
 				$corpo_email['senha_gerada'] = $senha_gerada;
 	
-	
-				// Carregue a visualização do corpo do e-mail e configure-a como corpo do e-mail
-				// $this->email->message($this->load->view('emails/primeiro_acesso', $corpo_email, true));
-				// $this->email->message($mensagem);
-	
-	
-	
 				// Corpo do E-mail
 				$mensagem = 'Olá ' . $nome_usuario . ',<br><br>';
 				$mensagem .= 'Para acessar o sistema, utilize o seu CPF e senha abaixo:<br><br>';
 				$mensagem .= 'Sua senha de acesso ao sistema é: <strong>' . $senha_gerada . '</strong><br><br>';
 				$mensagem .= '*Lembre-se de alterar sua senha após o primeiro login.<br><br>';
 				$mensagem .= 'Você pode acessar o sistema através do seguinte link: <a href="' . $linkAcesso . '">Acessar o Sistema</a><br><br>';
+
 				$this->email->message($mensagem);
 				// $this->db->trans_start();
 
-				if ($this->email->send(FALSE)) {
-					$this->session->set_flashdata('error_email');
-				} else {
+				if ($this->email->send()) {
 					$this->session->set_flashdata('success_email', 'Verifique sua caixa de e-mails para acessar o sistema');
+				} else {
+					$this->session->set_flashdata('error_email', 'Erro ao enviar e-mail');
 				}
+
                 //MENSAGEM SUCESSO AO CADASTRAR
-	
                 $this->session->set_flashdata('sucesso', 'Cadastro realizado com sucesso!');
                 redirect('cadastro_cliente');
             } else {

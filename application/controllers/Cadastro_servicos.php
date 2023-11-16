@@ -28,7 +28,7 @@ class Cadastro_servicos extends CI_Controller
 		$dados = array();
 
 		if (isset($_POST['salvar'])) {
-			$foto_servico = $_FILES['arquivo'];
+			$foto_servico = $_FILES['foto_servico'];
 			$nome_servico = $this->input->post('nome_servico');
 			$descricao_servico = $this->input->post('descricao_servico');
 			$valor_servico = $this->input->post('valor_servico');

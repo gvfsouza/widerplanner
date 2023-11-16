@@ -11,11 +11,11 @@ class Servicos_model extends CI_Model {
         return $res->result();
     }
 
-    public function cadastro_servicos($arquivo, $nome_servico, $descricao_servico, $valor_servico, $duracao_servico)
+    public function cadastro_servicos($arquivo_, $nome_servico, $descricao_servico, $valor_servico, $duracao_servico)
     {
         $data = array(
             # puxa os campos do banco
-            'foto_servico' => $arquivo,
+            'foto_servico' => $arquivo_,
             'nome_servico' => utf8_decode($nome_servico),
             'descricao_servico' => utf8_decode($descricao_servico),
             'valor_servico' => $valor_servico,
@@ -23,7 +23,7 @@ class Servicos_model extends CI_Model {
         );
 
 
-        $this->db->insert('servicos', $data);
+        $this->db->insert('cadastro_servicos', $data);
         return $this->db->insert_id();
     }
 }

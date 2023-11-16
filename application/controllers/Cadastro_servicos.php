@@ -63,7 +63,7 @@ class Cadastro_servicos extends CI_Controller
 			}
 
 			if (!isset($error)) {
-				$dados['cadastro_servicos'] = $this->Servicos_model->cadastro_servicos($$arquivo_, $nome_servico, $descricao_servico, $valor_servico, $duracao_servico);
+				$dados['cadastro_servicos'] = $this->Servicos_model->cadastro_servicos($arquivo_, $nome_servico, $descricao_servico, $valor_servico, $duracao_servico);
 
 				//MENSAGEM SUCESSO AO CADASTRAR
 				$this->session->set_flashdata('sucesso', 'Cadastro de Serviços realizado com sucesso!');

@@ -96,6 +96,6 @@ class Cadastro_cliente extends CI_Controller
         }
 
         $this->load->view('layout/header');
-        $this->load->view('cadastro_cliente', $dados);
+        $this->load->view('cadastro_cliente');
     }
 }

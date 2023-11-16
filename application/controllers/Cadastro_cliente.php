@@ -81,9 +81,9 @@ class Cadastro_cliente extends CI_Controller
 				// $this->db->trans_start();
 
 				if ($this->email->send()) {
-					$this->session->set_flashdata('success_email', 'Verifique sua caixa de e-mails para acessar o sistema');
+					$this->session->set_flashdata('success_email', 'Verifique sua caixa de e-mails para acessar o sistema.');
 				} else {
-					$this->session->set_flashdata('error_email', 'Erro ao enviar e-mail');
+					$this->session->set_flashdata('error_email', 'Erro ao enviar e-mail.');
 				}
 
                 //MENSAGEM SUCESSO AO CADASTRAR

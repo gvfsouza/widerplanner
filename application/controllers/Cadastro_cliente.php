@@ -27,6 +27,7 @@ class Cadastro_cliente extends CI_Controller
         $this->load->model('Cliente_model');
         $dados = array();
 
+
         if (isset($_POST['salvar'])) {
             $nome_usuario = $this->input->post('nome_usuario');
             $cpf_usuario = $this->input->post('cpf_usuario');
@@ -49,44 +50,35 @@ class Cadastro_cliente extends CI_Controller
 
 
             $linkAcesso = 'https://widerplanner.agsete.com.br/login'; // Link para a página de login
-
-            $corpo_email['nome_usuario'] =     $nome_usuario;
-            $corpo_email['linkAcesso'] = $linkAcesso;
-            $corpo_email['senha_gerada'] = $senha_gerada;
-
-             $this->Cliente_model->cadastro_cliente($nome_usuario, $cpf_usuario, $dt_nasc_usuario, $email_usuario, $sexo_usuario, $telefone_usuario, $cep_usuario, $logradouro_usuario, $numero_usuario, $complemento_usuario, $bairro_usuario, $cidade_usuario, $uf_usuario, $senha_criptografada);
-
-            // Carregue a visualização do corpo do e-mail e configure-a como corpo do e-mail
-            $this->email->message($this->load->view('emails/primeiro_acesso', $corpo_email, true));
-            $this->email->message($mensagem);
-
-            // $this->email->message($mensagem);
-            // $this->db->trans_start();
-
-            if ($this->email->send()) {
-            	$this->session->set_flashdata('success_email', 'Verifique sua caixa de e-mails para acessar o sistema.');
-            } else {
-            	$this->session->set_flashdata('error_email', 'Erro ao enviar e-mail.');
-            }
-
-            // Corpo do E-mail
-            $mensagem = 'Olá ' . $nome_usuario . ',<br><br>';
-            $mensagem .= 'Para acessar o sistema, utilize o seu CPF e senha abaixo:<br><br>';
-            $mensagem .= 'Sua senha de acesso ao sistema é: <strong>' . $senha_gerada . '</strong><br><br>';
-            $mensagem .= '*Lembre-se de alterar sua senha após o primeiro login.<br><br>';
-            $mensagem .= 'Você pode acessar o sistema através do seguinte link: <a href="' . $linkAcesso . '">Acessar o Sistema</a><br><br>';
-            $this->email->message($mensagem);
-            $this->db->trans_start();
-
-            if ($this->email->send(FALSE)) {
-                $this->session->set_flashdata('error_email');
-            } else {
-                $this->session->set_flashdata('success_email', 'Verifique sua caixa de e-mails para acessar o sistema');
-            }
-
+          
             if (!isset($error)) {
-                $dados['cadastro_cliente'] = $this->Cliente_model->cadastro_cliente($nome_usuario, $cpf_usuario, $dt_nasc_usuario, $email_usuario, $sexo_usuario, $telefone_usuario, $cep_usuario, $logradouro_usuario, $numero_usuario, $complemento_usuario, $bairro_usuario, $cidade_usuario, $uf_usuario, $senha_criptografada);
+                $this->Cliente_model->cadastro_cliente($nome_usuario, $cpf_usuario, $dt_nasc_usuario, $email_usuario, $sexo_usuario, $telefone_usuario, $cep_usuario, $logradouro_usuario, $numero_usuario, $complemento_usuario, $bairro_usuario, $cidade_usuario, $uf_usuario, $senha_criptografada);
 
+                $this->load->library('email');
+                $config['mailtype'] = 'html';
+                $this->email->initialize($config);
+                $this->email->from('contato@agsete.com.br', 'widerplanner');
+                $this->email->to($email_usuario);
+                $this->email->subject('WiderPlanner - Dados de acesso ao sistema');
+
+                $corpo_email['nome_usuario'] =     $nome_usuario;
+                $corpo_email['linkAcesso'] = $linkAcesso;
+                $corpo_email['senha_gerada'] = $senha_gerada;
+
+                // Corpo do E-mail
+                $mensagem = 'Olá ' . $nome_usuario . ',<br><br>';
+                $mensagem .= 'Para acessar o sistema, utilize o seu CPF e senha abaixo:<br><br>';
+                $mensagem .= 'Sua senha de acesso ao sistema é: <strong>' . $senha_gerada . '</strong><br><br>';
+                $mensagem .= '*Lembre-se de alterar sua senha após o primeiro login.<br><br>';
+                $mensagem .= 'Você pode acessar o sistema através do seguinte link: <a href="' . $linkAcesso . '">Acessar o Sistema</a><br><br>';
+
+                $this->email->message($mensagem);
+
+                if ($this->email->send()) {
+                    $this->session->set_flashdata('success_email', 'Verifique sua caixa de e-mails para acessar o sistema');
+                } else {
+                    $this->session->set_flashdata('error_email', 'Erro ao enviar e-mail');
+                }
                 //MENSAGEM SUCESSO AO CADASTRAR
                 $this->session->set_flashdata('sucesso', 'Cadastro realizado com sucesso!');
                 redirect('cadastro_cliente');

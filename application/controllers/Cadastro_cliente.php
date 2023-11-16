@@ -56,7 +56,7 @@ class Cadastro_cliente extends CI_Controller
             if (!isset($error)) {
                 // $dados['cadastro_cliente'] = $this->Cliente_model->cadastro_cliente($nome_usuario, $cpf_usuario, $dt_nasc_usuario, $email_usuario, $sexo_usuario, $telefone_usuario, $cep_usuario, $logradouro_usuario, $numero_usuario, $complemento_usuario, $bairro_usuario, $cidade_usuario, $uf_usuario, $senha_criptografada);
 
-                $dados['cadastro_cliente'] = $this->Cliente_model->cadastro_cliente($nome_usuario, $cpf_usuario, $dt_nasc_usuario, $email_usuario, $sexo_usuario, $telefone_usuario, $cep_usuario, $logradouro_usuario, $numero_usuario, $complemento_usuario, $bairro_usuario, $cidade_usuario, $uf_usuario, $senha_criptografada);
+                 $this->Cliente_model->cadastro_cliente($nome_usuario, $cpf_usuario, $dt_nasc_usuario, $email_usuario, $sexo_usuario, $telefone_usuario, $cep_usuario, $logradouro_usuario, $numero_usuario, $complemento_usuario, $bairro_usuario, $cidade_usuario, $uf_usuario, $senha_criptografada);
 
 				$this->load->library('email');
 				$config['mailtype'] = 'html';
@@ -84,15 +84,14 @@ class Cadastro_cliente extends CI_Controller
 				$mensagem .= '*Lembre-se de alterar sua senha após o primeiro login.<br><br>';
 				$mensagem .= 'Você pode acessar o sistema através do seguinte link: <a href="' . $linkAcesso . '">Acessar o Sistema</a><br><br>';
 				$this->email->message($mensagem);
-				$this->db->trans_start();
-var_dump($dados['cadastro_cliente']);
-                //MENSAGEM SUCESSO AO CADASTRAR
+				// $this->db->trans_start();
 
 				if ($this->email->send(FALSE)) {
 					$this->session->set_flashdata('error_email');
 				} else {
 					$this->session->set_flashdata('success_email', 'Verifique sua caixa de e-mails para acessar o sistema');
 				}
+                //MENSAGEM SUCESSO AO CADASTRAR
 	
                 $this->session->set_flashdata('sucesso', 'Cadastro realizado com sucesso!');
                 redirect('cadastro_cliente');

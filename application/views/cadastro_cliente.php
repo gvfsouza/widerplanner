@@ -42,6 +42,12 @@
                         </div>
                     <?php endif; ?>
 
+                    <?php if ($this->session->flashdata('error')) : ?>
+                        <div class="alert alert-danger">
+                            <?php echo $this->session->flashdata('error'); ?>
+                        </div>
+                    <?php endif; ?>
+
                     <form action="" method="POST">
                         <div class="p-3 bg-white">
                             <div class="row">

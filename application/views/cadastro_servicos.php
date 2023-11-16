@@ -14,21 +14,13 @@
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="" role="tabpanel">
 
-                    <!-- Mensagem de sucesso cadastro/e-mail  -->
                     <?php if ($this->session->flashdata('sucesso')) { ?>
                         <div class="alert alert-success" role="alert">
                             <?php echo $this->session->flashdata('sucesso'); ?>
                         </div>
                     <?php } ?>
 
-                    <?php if ($this->session->flashdata('success_email')) { ?>
-                        <div class="alert alert-success" role="alert">
-                            <?php echo $this->session->flashdata('sucesso'); ?>
-                        </div>
-                    <?php } ?>
-
-                    <!-- Mensagem de erro cadastro/e-mail -->
-                    <?php if ($this->session->flashdata('error_email')) : ?>
+                    <?php if ($this->session->flashdata('erro')) : ?>
                         <div class="alert alert-danger">
                             <?php echo $this->session->flashdata('erro'); ?>
                         </div>

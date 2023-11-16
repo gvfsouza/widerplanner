@@ -11,11 +11,11 @@ class Servicos_model extends CI_Model {
         return $res->result();
     }
 
-    public function cadastro_servicos($arquivo_, $nome_servico, $descricao_servico, $valor_servico, $duracao_servico)
+    public function cadastro_servicos($foto_servico, $nome_servico, $descricao_servico, $valor_servico, $duracao_servico)
     {
         $data = array(
             # puxa os campos do banco
-            'foto_servico' => $arquivo_,
+            'foto_servico' => $foto_servico,
             'nome_servico' => utf8_decode($nome_servico),
             'descricao_servico' => utf8_decode($descricao_servico),
             'valor_servico' => $valor_servico,

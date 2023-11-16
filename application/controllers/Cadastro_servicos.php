@@ -28,7 +28,7 @@ class Cadastro_servicos extends CI_Controller
 		$dados = array();
 
 		if (isset($_POST['salvar'])) {
-			$arquivo = $_FILES['arquivo'];
+			$foto_servico = $_FILES['arquivo'];
 			$nome_servico = $this->input->post('nome_servico');
 			$descricao_servico = $this->input->post('descricao_servico');
 			$valor_servico = $this->input->post('valor_servico');
@@ -43,18 +43,18 @@ class Cadastro_servicos extends CI_Controller
 			$config['encrypt_name'] = TRUE;
 			$this->load->library('upload', $config);
 		
-			for ($i = 0; $i < count($arquivo['name']); $i++) {
-				if ($arquivo['size'][$i] == "") {
+			for ($i = 0; $i < count($foto_servico['name']); $i++) {
+				if ($foto_servico['size'][$i] == "") {
 					$arquivo_[] = "";
 				} else {
-					$_FILES['arquivo']['name'] = $arquivo['name'][$i];
-					$_FILES['arquivo']['type'] = $arquivo['type'][$i];
-					$_FILES['arquivo']['tmp_name'] = $arquivo['tmp_name'][$i];
-					$_FILES['arquivo']['error'] = $arquivo['error'][$i];
-					$_FILES['arquivo']['size'] = $arquivo['size'][$i];
+					$_FILES['arquivo']['name'] = $foto_servico['name'][$i];
+					$_FILES['arquivo']['type'] = $foto_servico['type'][$i];
+					$_FILES['arquivo']['tmp_name'] = $foto_servico['tmp_name'][$i];
+					$_FILES['arquivo']['error'] = $foto_servico['error'][$i];
+					$_FILES['arquivo']['size'] = $foto_servico['size'][$i];
 		
 					if (!$this->upload->do_upload('arquivo')) {
-						$error = array('error' => $this->upload->display_errors());
+						$error = array('erro' => $this->upload->display_errors());
 						$this->session->set_flashdata('erro', $error['erro']);
 					} else {
 						$arquivo_[] = $this->upload->data('file_name');

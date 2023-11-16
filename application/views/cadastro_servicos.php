@@ -41,17 +41,17 @@
                                                             <div class="form-group col-md-3">
                                                                 <label for=""><b>Foto:</b></label>
                                                                 <br>
-                                                                <input style="font-size:14px" type="file" class="form-control arquivo" id="arquivo" name="arquivo" accept="image/*">
+                                                                <input style="font-size:14px" type="file" class="form-control arquivo" id="foto_servico" name="foto_servico[]" accept="image/*">
 
-                                                                <div class="nome-arquivos col mb-3">
-                                                                    <div class="arquivo_"></div>
+                                                                <div class="foto_servico col mb-3">
+                                                                    <div class="foto_servico"></div>
                                                                 </div>
 
                                                                 <script>
                                                                     function retornaNomeArquivo() {
-                                                                        $(".arquivo").change(function() {
+                                                                        $(".foto_servico").change(function() {
                                                                             var filename = $(this).val().replace(/C:\\fakepath\\/i, '')
-                                                                            $(this).parent().parent().parent().next().find('.arquivo_').html('<i class="fas fa-folder-open"></i> ' + filename);
+                                                                            $(this).parent().parent().parent().next().find('.foto_servico').html('<i class="fas fa-folder-open"></i> ' + filename);
                                                                         });
                                                                     }
                                                                     retornaNomeArquivo()

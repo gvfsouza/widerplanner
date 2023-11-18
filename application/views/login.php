@@ -104,7 +104,7 @@
 
               <form method="POST" action="<?php echo site_url('login'); ?>" name="form_login">
                 <div class="form-group">
-                  <label for="cpf" style="color:#a8aaad"> CPF:</label>
+                  <label for="" style="color:#a8aaad"> CPF:</label>
                   <span id="cpfUsuario"></span>
                   <input type="text" name="cpf_usuario" maxlength="14" class="form-control" onkeydown="mascara(this,cpf)" maxlength="14" onkeyup="cpfCheck(this)" placeholder="Insira seu CPF" required="">
                 </div>

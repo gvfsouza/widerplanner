@@ -2,7 +2,7 @@
 
 class Login_model extends CI_Model
 {
-    public function autenticacao_usuario($cpf_usuario, $password) {
+    public function autenticacao_usuario($cpf_usuario, $senha) {
         // Realiza a autenticação do usuário, por exemplo, consulta no banco de dados
         // Substitua isso pela sua lógica real de autenticação
         $this->db->where('cpf_usuario', $cpf_usuario);

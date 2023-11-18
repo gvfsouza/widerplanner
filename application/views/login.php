@@ -105,6 +105,7 @@
               <form method="POST" action="<?php echo site_url('login'); ?>" name="form_login">
                 <div class="form-group">
                   <label for="cpf" style="color:#a8aaad"> CPF:</label>
+                  <span id="cpfUsuario"></span>
                   <input type="text" name="cpf" maxlength="14" class="form-control" onkeydown="mascara(this,cpf)" maxlength="14" onkeyup="cpfCheck(this)" placeholder="Insira seu CPF" required="">
                 </div>
 
@@ -131,8 +132,17 @@
     </div>
   </div>
 </div>
-
-
-
   </nav>
+  <script>
+    //VERIFICA SE O CPF É VÁLIDO OU NÃO
+    cpfCheck = function(el) {
+        document.getElementById('cpfUsuario').innerHTML = is_cpf(el.value) ? '<span style="color:green">Válido</span>' : '<span style="color:red">Inválido</span>';
+        if (el.value == '') document.getElementById('cpfUsuario').innerHTML = '';
+    }
+
+    // Função para formatar o CEP (removendo caracteres não numéricos)
+    function formatarCep(cep) {
+        return cep.replace(/\D/g, '');
+    }
+  </script>
 </body>

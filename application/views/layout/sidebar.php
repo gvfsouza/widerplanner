@@ -58,7 +58,7 @@
    <hr class="sidebar-divider d-none d-md-block">
 
        <li class="nav-item">
-           <a class="nav-link" href="#">
+           <a class="nav-link" href="<?php base_url();home?>">
                <i class="fas fa-home icon" style="color:#879bc9"></i>
                <span class="link" style="color:#000000d9;font-weight: bold;font-size:17px">Home</span></a>
        </li>
@@ -86,7 +86,7 @@
        </li>
 
        <li class="nav-item">
-           <a title="Gerenciar Usuários" class="nav-link" href="">
+           <a title="Gerenciar Usuários" class="nav-link" href="<?php base_url();alterar_senha?>">
                <i class="fas fa-lock icon" style="color:#879bc9"></i>
                <span class="link" style="color:#000000d9;font-weight: bold;font-size:17px">Alterar senha            
             </span>

@@ -64,7 +64,7 @@ tr, td, th{
                     </div>
                     <div class="row">
                                 <div class="col-md-12 mb-4" >
-                                    <a href="#"><button class="btn btn active" style="background-color: #879bc9; color: white; margin-top:20px; height:40px; width:150px; border-radius:5px solid black; cursor:pointer" type="submit" name="salvar">Salvar</button></a>
+                                    <a href="#"><button class="btn btn active" style="background-color: #879bc9; color: white; margin-top:20px; height:40px; width:150px; border-radius:5px solid black; cursor:pointer;float: right; margin-right: 17px;" type="submit" name="salvar">Salvar</button></a>
                                 </div>
                             </div>
                   </form>

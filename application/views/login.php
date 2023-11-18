@@ -77,9 +77,7 @@
 </style>
 
 <body>
-  <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
-    <div class="container">
-      <div class="card">
+ 
         
         
 <div class="card-body">
@@ -94,7 +92,7 @@
         </div>
           <form method="POST" action="" name="form_login">
             <div class="form-group">
-              <label> CPF:</label>
+              <label for="cpf" style="color:#a8aaad"> CPF:</label>
               <input type="text" name="cpf" maxlength="14" class="form-control" placeholder="Insira seu CPF" required="">
             </div>
 
@@ -120,5 +118,5 @@
   </div>
 </div>
 
-  </nav>
+
 </body>

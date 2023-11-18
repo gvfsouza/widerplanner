@@ -27,8 +27,8 @@ class Alterar_senha extends CI_Controller
 		// $this->load->model('Login_model');
 		
 		$this->load->view('layout/header');
-		$this->load->view('layout/navbar');
 		$this->load->view('layout/sidebar');
+		$this->load->view('layout/navbar');
 		$this->load->view('alterar_senha');
 	}
 }

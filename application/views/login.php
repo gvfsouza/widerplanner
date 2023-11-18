@@ -107,26 +107,11 @@
                   <label for="cpf" style="color:#a8aaad"> CPF:</label>
                   <span id="cpfUsuario"></span>
                   <input type="text" name="cpf" maxlength="14" class="form-control" onkeydown="mascara(this,cpf)" maxlength="14" onkeyup="cpfCheck(this)" placeholder="Insira seu CPF" required="">
->>>>>>> 7670cdb5192a607d032906ccf13c95a6df53e68c
                 </div>
-              <?php } ?>
-
-              <?php if ($this->session->flashdata('error')) {    ?>
-                <div class="alert alert-success" role="alert">
-                    <?php echo $this->session->flashdata('error'); ?>
+                <div class="form-group">
+                  <label for="senha" style="color:#a8aaad"> Senha:</label>
+                  <input type="password" name="senha" maxlength="14" class="form-control" placeholder="Digite a sua senha" required="">
                 </div>
-              <?php } ?>
-
-                <form method="POST" action="<?php echo site_url('login'); ?>" name="form_login">
-                  <div class="form-group">
-                    <label for="cpf" style="color:#a8aaad"> CPF:</label>
-                    <input type="text" name="cpf" maxlength="14" class="form-control" onkeydown="mascara(this,cpf)" maxlength="14" onkeyup="cpfCheck(this)" placeholder="Insira seu CPF" required="">
-                  </div>
-
-                  <div class="form-group">
-                    <label for="senha" style="color:#a8aaad"> Senha:</label>
-                    <input type="password" name="senha" maxlength="14" class="form-control" placeholder="Digite a sua senha" required="">
-                  </div>
                   <a href="" style="color: #a1a3a8; text-align: right; text-decoration: none">Esqueci senha</a>
                   <br>
                   <br>

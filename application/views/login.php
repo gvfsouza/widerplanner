@@ -87,24 +87,28 @@
         </div>
         
         <div class="card-body">
-          <form method="POST" action="">
-        <div class="row">
-          <div class="col-md-6">  
-            <div class="form-group">
-              <label for="cpf" style="color:#a8aaad">CPF:</label>
-              <input type="text" class="form-control" id="cpf" name="cpf" maxlength="14" placeholder="insira seu CPF" required>
-            </div>
-          </div>
-        </div>
 
-        <div class="row">
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="senha" style="color:#a8aaad">Senha:</label>
-              <input type="password" class="form-control" id="senha" name="senha" placeholder="digite a sua senha" required>
-            </div>
+
+  <div class="row">      
+    <div class="col-lg-12">
+      <div class="form-group">
+        <div class="p-3 ">
+          <div class="text-center">
+            <h1 class="h4 text-800 mb-4" style="text-align:center;font-size: 31px;color: #879bc9;font-weight: bold;"><b>WiderPlanner</b>
+            <br>
+            </h1>
+            <p><span style="text-align:center;font-size:20px;color:#a8aaad;font-weight: normal;">Login</span></p>
           </div>
-        </div>
+          <form method="POST" action="" name="form_login">
+            <div class="form-group">
+              <label> CPF:</label>
+              <input type="text" name="cpf" maxlength="14" class="form-control" placeholder="Insira seu CPF" required="">
+            </div>
+
+            <div class="form-group">
+              <label for="senha" style="color:#a8aaad"> Senha:</label>
+              <input type="password" name="senha" maxlength="14" class="form-control" placeholder="Digite a sua senha" required="">
+            </div>
             <a href="" style="color: #a1a3a8; text-align: right; text-decoration: none">Esqueci senha</a>
             <br>
             <br>
@@ -120,5 +124,6 @@
         </div>
       </div>
     </div>
+  </div>
   </nav>
 </body>

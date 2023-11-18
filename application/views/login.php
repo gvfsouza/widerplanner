@@ -80,11 +80,7 @@
   <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
     <div class="container">
       <div class="card">
-        <div class="col-md-12">
-          <p style="text-align:center;font-size: 31px;color: #879bc9;font-weight: bold;">WiderPlanner
-          <br>
-          <span style="text-align:center;font-size:20px;color:#a8aaad;font-weight: normal;">Login</span></p>
-        </div>
+        
         
 <div class="card-body">
   <div class="row">      
@@ -92,10 +88,10 @@
       <div class="form-group">
         <div class="p-3 ">
           <div class="text-center">
-            <h1 class="h4 text-800 mb-4" style="text-align:center;font-size: 31px;color: #879bc9;font-weight: bold;"><b>WiderPlanner</b>
+            <h1 class="h4 text-800 mb-4" style="font-size: 31px;color: #879bc9;font-weight: bold;"><b>WiderPlanner</b>
             <br>
             </h1>
-            <p><span style="text-align:center;font-size:20px;color:#a8aaad;font-weight: normal;">Login</span></p>
+            <p><span style="font-size:20px;color:#a8aaad;font-weight: normal;">Login</span></p>
           </div>
           <form method="POST" action="" name="form_login">
             <div class="form-group">

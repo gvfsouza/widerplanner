@@ -58,13 +58,13 @@
    <hr class="sidebar-divider d-none d-md-block">
 
        <li class="nav-item">
-           <a class="nav-link" href="<?php base_url('home');?>">
+           <a class="nav-link" href="https://widerplanner.agsete.com.br/">
                <i class="fas fa-home icon" style="color:#879bc9"></i>
                <span class="link" style="color:#000000d9;font-weight: bold;font-size:17px">Home</span></a>
        </li>
 
        <li class="nav-item">
-           <a title="Gerenciar Usuários" class="nav-link" href="<?php base_url('perfil_cliente'); ?>">
+           <a title="Gerenciar Usuários" class="nav-link" href="https://widerplanner.agsete.com.br/perfil_cliente">
             <i class="fas fa-user icon" style="color:#879bc9"></i>
                <span class="link" style="color:#000000d9;font-weight: bold;font-size:17px">Perfil </span>
            </a>

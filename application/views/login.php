@@ -106,16 +106,16 @@
                 <div class="form-group">
                   <label for="cpf" style="color:#a8aaad"> CPF:</label>
                   <span id="cpfUsuario"></span>
-                  <input type="text" name="cpf" maxlength="14" class="form-control" onkeydown="mascara(this,cpf)" maxlength="14" onkeyup="cpfCheck(this)" placeholder="Insira seu CPF" required="">
+                  <input type="text" name="cpf_usuario" maxlength="14" class="form-control" onkeydown="mascara(this,cpf)" maxlength="14" onkeyup="cpfCheck(this)" placeholder="Insira seu CPF" required="">
                 </div>
                 <div class="form-group">
                   <label for="senha" style="color:#a8aaad"> Senha:</label>
                   <input type="password" name="senha" maxlength="14" class="form-control" placeholder="Digite a sua senha" required="">
                 </div>
-                  <a href="" style="color: #a1a3a8; text-align: right; text-decoration: none">Esqueci senha</a>
+                  <a href="https://widerplanner.agsete.com.br/esqueci_senha" style="color: #a1a3a8; text-align: right; text-decoration: none">Esqueci senha</a>
                   <br>
                   <br>
-                  <a href=""><strong style="font-size:14px">Clique aqui</strong> para realizar o cadastro</a>
+                  <a href="https://widerplanner.agsete.com.br/cadastro_cliente"><strong style="font-size:14px">Clique aqui</strong> para realizar o cadastro</a>
                   <br>
                   <br>
                   <button type="submit" id="entrar" name="entrar">Entrar</button>

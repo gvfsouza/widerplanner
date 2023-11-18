@@ -88,18 +88,23 @@
         
         <div class="card-body">
           <form method="POST" action="">
+        <div class="row">
           <div class="col-md-6">  
             <div class="form-group">
               <label for="cpf" style="color:#a8aaad">CPF:</label>
               <input type="text" class="form-control" id="cpf" name="cpf" maxlength="14" placeholder="insira seu CPF" required>
             </div>
           </div>
+        </div>
+
+        <div class="row">
           <div class="col-md-6">
             <div class="form-group">
               <label for="senha" style="color:#a8aaad">Senha:</label>
               <input type="password" class="form-control" id="senha" name="senha" placeholder="digite a sua senha" required>
             </div>
           </div>
+        </div>
             <a href="" style="color: #a1a3a8; text-align: right; text-decoration: none">Esqueci senha</a>
             <br>
             <br>

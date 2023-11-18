@@ -124,7 +124,7 @@
                                                     </div>
                                                     <div class="dados-cliente col-md-3">
                                                         <label for=""><b>UF:</b></label>
-                                                        <input style="font-size:14px" type="text" class="form-control" id="uf" name="uf" value="">
+                                                        <input style="font-size:14px" type="text" class="form-control" id="estado_usuario" name="estado_usuario" value="">
                                                     </div>
                                                 </div>
                                             </div>

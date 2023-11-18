@@ -48,11 +48,10 @@
    
    <ul class="navbar-nav  sidebar " id="accordionSidebar" style="background-color: #ffffff;">
    
-        <a class="sidebar-brand d-flex align-items-center justify-content-center">
-           <div class="sidebar-brand-icon ">
-               <img src="/public/img/logo.png" class="img-fluid" style=" margin-top:10px;max-width: 35%; min-width: 35%;">
-           </div>
-        </a>
+   <div class="col-md-12">
+        <p style="text-align:center;font-size: 31px;color: #879bc9;font-weight: bold;">WiderPlanner
+        <br>
+    </div>
 
    <!-- Divider -->
    <hr class="sidebar-divider d-none d-md-block">

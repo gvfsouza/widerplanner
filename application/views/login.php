@@ -86,9 +86,7 @@
           <span style="text-align:center;font-size:20px;color:#a8aaad;font-weight: normal;">Login</span></p>
         </div>
         
-    <div class="card-body">
-
-
+<div class="card-body">
   <div class="row">      
     <div class="col-lg-12">
       <div class="form-group">
@@ -125,5 +123,7 @@
       </div>
     </div>
   </div>
+</div>
+
   </nav>
 </body>

@@ -82,11 +82,17 @@
 
     @media (min-width: 768px) {
       .card {
-        width: 50%;
+        width: 70%;
       }
     }
 
     @media (min-width: 992px) {
+      .card {
+        width: 50%;
+      }
+    }
+
+    @media (min-width: 1200px) {
       .card {
         width: 40%;
       }

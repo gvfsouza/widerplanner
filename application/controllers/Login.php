@@ -28,6 +28,9 @@ class Login extends CI_Controller
 	}
 
 	public function login() {
+        $this->load->model('Login_model');
+
+
 		// Se o usuário já estiver logado, redirecione para o painel
 		if ($this->session->userdata('logged_in')) {
 			redirect('home');

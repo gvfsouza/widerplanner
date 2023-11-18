@@ -60,7 +60,7 @@ class Login extends CI_Controller
             } else {
                 // Login inválido, exibe mensagem de erro
                 $this->session->set_flashdata('error', 'CPF do usuário ou senha inválidos');
-                redirect('auth/login');
+                redirect('login');
             }
         }
     }
@@ -68,6 +68,6 @@ class Login extends CI_Controller
     public function logout() {
         // Destrói a sessão e redireciona para a página de login
         $this->session->sess_destroy();
-        redirect('auth/login');
+        redirect('login');
     }
 }

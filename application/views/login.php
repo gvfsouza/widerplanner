@@ -6,74 +6,76 @@
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
 
-  *{
-  font-family: "poppins", sans-serif;
 
-  }
+    html, body {
+        height: 100%;
+    }
+    body {
+        background-color: #508fc03d;
+    }
 
-  body {
-    background-color: #d7e0f6;
-    background-size: 400% 400%;
-  }
+    #rodape {
+        text-align: center;
+    }
 
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
+    label {
+        margin: auto;
+        text-align: center;
+    }
 
-  .card {
-    width: 412px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: auto;
-    padding: 20px;
-    background-color: #fff;
-  }
+    .form-control {
 
-  .card .card-body {
-    padding: 20px;
-  }
+        margin: auto;
+    }
 
-  .card .form-group {
-    margin-bottom: 25px;
-  }
+    .form-group {
+        max-width: 400px;
+        margin: 0 auto;
+    }
 
-  .card .form-group input[type="text"],
-  .card .form-group input[type="password"] {
-    width: 90%;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    margin-top: 8px;
-  }
+    /* Resolução para celular */
+    @media (max-width: 300px) {
+        .form-control {
+            width: 100%;
+            margin: auto;
+        }
 
-  .card .form-group label {
-    display: block;
-    font-weight: bold;
-  }
+        label {
+            margin: auto;
+            margin-left: 0%;
+        }
 
-  .card button:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
-  }
+        .form-control p img {
+            width: 100%;
+            margin: auto;
 
-  .card button[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    background-color: #879bc9;
-    color: white;
-    border-radius: 4px;
-    border: 0;
-    cursor: pointer;
-  }
+        }
 
-  .form-control{
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  }
+    }
+
+    div .form-group input:valid-i {
+        display: block;
+    }
+
+    div .form-group i.hide-btn::defore {
+        content: "\f070";
+    }
+
+    div .form-group i #show-btn {
+        float: right;
+
+        margin: 3px 0px 0px -20px;
+        cursor: pointer
+    }
+
+    .container {
+        position: relative;
+        /* display: flex;
+        flex-direction: row;
+        justify-content: middle;
+        align-items: middle; */
+        max-width: 1000px;
+    }
 </style>
 
 <body>

@@ -70,12 +70,12 @@
            </a>
        </li>
 
-       <li class="nav-item">
+       <!-- <li class="nav-item">
            <a title="Gerenciar Usuários" class="nav-link" href="#">
                <i class="fas fa-users icon" style="color:#879bc9"></i>
                <span class="link" style="color:#000000d9;font-weight: bold;font-size:17px">Serviços</span>
            </a>
-       </li>
+       </li> -->
 
        <li class="nav-item">
            <a title="Gerenciar Usuários" class="nav-link" href="">
@@ -86,7 +86,7 @@
        </li>
 
        <li class="nav-item">
-           <a title="Gerenciar Usuários" class="nav-link" href="<?php base_url('alterar_senha');?>">
+           <a title="Gerenciar Usuários" class="nav-link" href="https://widerplanner.agsete.com.br/alterar_senha">
                <i class="fas fa-lock icon" style="color:#879bc9"></i>
                <span class="link" style="color:#000000d9;font-weight: bold;font-size:17px">Alterar senha            
             </span>

@@ -90,7 +90,7 @@
               <br>
               <span style="text-align:center;font-size:20px;color:#a8aaad;font-weight: normal;">Login</span></p>
             </div>
-              <form method="POST" action="" name="form_login">
+              <form method="POST" action="<?php echo site_url('login'); ?>" name="form_login">
                 <div class="form-group">
                   <label for="cpf" style="color:#a8aaad"> CPF:</label>
                   <input type="text" name="cpf" maxlength="14" class="form-control" placeholder="Insira seu CPF" required="">

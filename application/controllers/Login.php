@@ -30,7 +30,7 @@ class Login extends CI_Controller
 	public function login() {
         // Se o usuário já estiver logado, redirecione para o painel
         if ($this->session->userdata('logged_in')) {
-            redirect('dashboard');
+            redirect('home');
         }
 
         // Regras de validação
@@ -47,15 +47,10 @@ class Login extends CI_Controller
 
             $user = $this->Login_model->autenticacao_usuario($cpf_usuario, $senha);
 
-            if ($user) {
+            if (!isset($error) {
                 // Configura dados da sessão do usuário e redireciona para o painel
-                $user_data = array(
-                    'user_id' => $user->id,
-                    'username' => $user->username,
-                    'logged_in' => TRUE
-                );
-
-                $this->session->set_userdata($user_data);
+                
+                $this->session->set_flashdata('sucesso', 'Login efetuado com sucesso!');
                 redirect('home');
             } else {
                 // Login inválido, exibe mensagem de erro

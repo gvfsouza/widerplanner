@@ -77,40 +77,42 @@
 </style>
 
 <body>
- 
-        
-        
-<div class="card-body">
-  <div class="row">      
-    <div class="col-lg-12">
-      <div class="form-group">
-        <div class="p-3 ">
-        <div class="col-md-12">
-          <p style="text-align:center;font-size: 31px;color: #879bc9;font-weight: bold;">WiderPlanner
-          <br>
-          <span style="text-align:center;font-size:20px;color:#a8aaad;font-weight: normal;">Login</span></p>
-        </div>
-          <form method="POST" action="" name="form_login">
-            <div class="form-group">
-              <label for="cpf" style="color:#a8aaad"> CPF:</label>
-              <input type="text" name="cpf" maxlength="14" class="form-control" placeholder="Insira seu CPF" required="">
+<nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
+<div class="container">
+  <div class="card"> 
+    <div class="card-body">
+      <div class="row">      
+        <div class="col-lg-12">
+          <div class="form-group">
+            <div class="p-3 ">
+            <div class="col-md-12">
+              <p style="text-align:center;font-size: 31px;color: #879bc9;font-weight: bold;">WiderPlanner
+              <br>
+              <span style="text-align:center;font-size:20px;color:#a8aaad;font-weight: normal;">Login</span></p>
             </div>
+              <form method="POST" action="" name="form_login">
+                <div class="form-group">
+                  <label for="cpf" style="color:#a8aaad"> CPF:</label>
+                  <input type="text" name="cpf" maxlength="14" class="form-control" placeholder="Insira seu CPF" required="">
+                </div>
 
-            <div class="form-group">
-              <label for="senha" style="color:#a8aaad"> Senha:</label>
-              <input type="password" name="senha" maxlength="14" class="form-control" placeholder="Digite a sua senha" required="">
+                <div class="form-group">
+                  <label for="senha" style="color:#a8aaad"> Senha:</label>
+                  <input type="password" name="senha" maxlength="14" class="form-control" placeholder="Digite a sua senha" required="">
+                </div>
+                <a href="" style="color: #a1a3a8; text-align: right; text-decoration: none">Esqueci senha</a>
+                <br>
+                <br>
+                <a href=""><strong style="font-size:14px">Clique aqui</strong> para realizar o cadastro</a>
+                <br>
+                <br>
+                <button type="submit" id="entrar" name="entrar">Entrar</button>
+              </form>
+              <br>
+              <div id="rodape" style="text-align:center;color: gray;font-size:12px">
+                <p><small>Sistema desenvolvido para cunho estudantil <br> Projeto de Conclusão de Curso - Superior de Tecnologia em Análise e Deselvolvimento de Sistemas <br> Centro Universitário Nossa Senhora do Patrocínio<br>Endereço: R. José Weissohn, 153 - Centro, Salto - SP, 13328-300</small></p>
+              </div>
             </div>
-            <a href="" style="color: #a1a3a8; text-align: right; text-decoration: none">Esqueci senha</a>
-            <br>
-            <br>
-            <a href=""><strong style="font-size:14px">Clique aqui</strong> para realizar o cadastro</a>
-            <br>
-            <br>
-            <button type="submit" id="entrar" name="entrar">Entrar</button>
-          </form>
-          <br>
-          <div id="rodape" style="text-align:center;color: gray;font-size:12px">
-            <p><small>Sistema desenvolvido para cunho estudantil <br> Projeto de Conclusão de Curso - Superior de Tecnologia em Análise e Deselvolvimento de Sistemas <br> Centro Universitário Nossa Senhora do Patrocínio<br>Endereço: R. José Weissohn, 153 - Centro, Salto - SP, 13328-300</small></p>
           </div>
         </div>
       </div>
@@ -119,4 +121,6 @@
 </div>
 
 
+
+  </nav>
 </body>

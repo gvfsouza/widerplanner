@@ -47,7 +47,7 @@ class Login extends CI_Controller
 
             $user = $this->Login_model->autenticacao_usuario($cpf_usuario, $senha);
 
-            if (!isset($error) {
+            if (!isset($error)) {
                 // Configura dados da sessão do usuário e redireciona para o painel
                 
                 $this->session->set_flashdata('sucesso', 'Login efetuado com sucesso!');

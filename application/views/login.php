@@ -77,18 +77,16 @@
 </style>
 
 <body>
-  <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
+  <!-- <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
     <div class="container">
       <div class="card">
         <div class="col-md-12">
           <p style="text-align:center;font-size: 31px;color: #879bc9;font-weight: bold;">WiderPlanner
           <br>
           <span style="text-align:center;font-size:20px;color:#a8aaad;font-weight: normal;">Login</span></p>
-        </div>
+        </div> -->
         
-        <div class="card-body">
-
-
+<div class="card-body">
   <div class="row">      
     <div class="col-lg-12">
       <div class="form-group">
@@ -125,5 +123,6 @@
       </div>
     </div>
   </div>
-  </nav>
+</div>
+  <!-- </nav> -->
 </body>

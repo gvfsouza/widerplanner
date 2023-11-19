@@ -90,7 +90,7 @@
           Insira as informações abaixo para receber o e-mail e recuperar a senha esquecida.
         </div>
         <div class="card-body">
-          <form>
+          <form method="POST">
             <div class="form-group">
                 <label for="cpf_usuario" style="color:#a8aaad"> CPF:</label>
                 <span id="cpfUsuario"></span>
@@ -237,7 +237,7 @@ var cpfInput = document.getElementById('cpf_usuario');
             return true;
         }
     }
-    
+
 // Validação E-mail de usuários
 function validacaoEmail(input) {
         var email = input.value.trim(); // Remova os espaços em branco no início e no fim do e-mail

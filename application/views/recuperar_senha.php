@@ -91,7 +91,7 @@
           Preencha os campos abaixo com a nova senha.
         </div>
         <div class="card-body">
-          <form>
+          <form method="POST">
             <div class="form-group">
               <label for="senha_nova">Nova senha</label>
               <input type="password" class="form-control" id="senha_nova" name="senha_nova" placeholder="Digite a nova senha" required>

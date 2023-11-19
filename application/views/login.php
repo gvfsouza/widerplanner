@@ -104,10 +104,10 @@
 
               <form method="POST" action="<?php echo site_url('login'); ?>" name="form_login">
               <div class="form-group">
-                                        <label for="cpf_usuario" style="color:#a8aaad"> CPF:</label>
-                                        <span id="cpfUsuario"></span>
-                                        <input type="text" id="cpf_usuario" name="cpf_usuario" class="form-control" placeholder="Insira seu CPF" required="">
-                                    </div>
+                <label for="cpf_usuario" style="color:#a8aaad"> CPF:</label>
+                <span id="cpfUsuario"></span>
+                <input type="text" id="cpf_usuario" name="cpf_usuario" class="form-control" placeholder="Insira seu CPF" max_length="14" required="">
+              </div>
                 <div class="form-group">
                   <label for="senha" style="color:#a8aaad"> Senha:</label>
                   <input type="password" name="senha" maxlength="14" class="form-control" placeholder="Digite a sua senha" required="">

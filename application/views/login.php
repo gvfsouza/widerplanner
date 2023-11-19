@@ -106,7 +106,7 @@
               <div class="form-group">
                 <label for="cpf_usuario" style="color:#a8aaad"> CPF:</label>
                 <span id="cpfUsuario"></span>
-                <input type="text" id="cpf_usuario" name="cpf_usuario" class="form-control" placeholder="Insira seu CPF" max_length="14" required="">
+                <input type="text" id="cpf_usuario" name="cpf_usuario" class="form-control" placeholder="Insira seu CPF" maxlength="14" required="">
               </div>
                 <div class="form-group">
                   <label for="senha" style="color:#a8aaad"> Senha:</label>

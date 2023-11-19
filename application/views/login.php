@@ -103,11 +103,11 @@
             <?php } ?>
 
               <form method="POST" action="<?php echo site_url('login'); ?>" name="form_login">
-                <div class="form-group">
-                  <label for="" style="color:#a8aaad"> CPF:</label>
-                  <span id="cpfUsuario"></span>
-                  <input type="text" id="cpf_usuario" name="cpf_usuario" maxlength="14" class="form-control" onkeydown="mascara(this,cpf)" maxlength="14" onkeyup="cpfCheck(this)" oninput="aplicarMascara()" placeholder="Insira seu CPF" required="">
-                </div>
+              <div class="form-group">
+                <label for="cpf_usuario" style="color:#a8aaad"> CPF:</label>
+                <span id="cpfUsuario"></span>
+                <input type="text" id="cpf_usuario" name="cpf_usuario" maxlength="14" class="form-control" onkeydown="mascara(this, cpf)" onkeyup="cpfCheck(this)" placeholder="Insira seu CPF" required="">
+              </div>
                 <div class="form-group">
                   <label for="senha" style="color:#a8aaad"> Senha:</label>
                   <input type="password" name="senha" maxlength="14" class="form-control" placeholder="Digite a sua senha" required="">
@@ -133,6 +133,23 @@
   </div>
   </nav>
 <script>
+  function mascara(o, f) {
+            setTimeout(function () {
+                var v = mcpf(o.value);
+                if (v != o.value) {
+                    o.value = v;
+                }
+            }, 1);
+        }
+
+        function mcpf(v) {
+            v = v.replace(/\D/g, "");
+            v = v.replace(/(\d{3})(\d)/, "$1.$2");
+            v = v.replace(/(\d{3})(\d)/, "$1.$2");
+            v = v.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+            return v;
+        }
+
   function is_cpf(c) {
         if ((c = c.replace(/[^\d]/g, "")).length == 14) {
             cnpj = c;
@@ -223,16 +240,21 @@
         }
     }
 
-    //VERIFICA SE O CPF É VÁLIDO OU NÃO
-    cpfCheck = function(el) {
-        document.getElementById('cpfUsuario').innerHTML = is_cpf(el.value) ? '<span style="color:green">Válido</span>' : '<span style="color:red">Inválido</span>';
-        if (el.value == '') document.getElementById('cpfUsuario').innerHTML = '';
-    }
+    function cpfCheck(el) {
+            var cpfStatus = document.getElementById('cpfUsuario');
+            var cpfValue = el.value.replace(/\D/g, '');
 
-    function aplicarMascara() {
-      var inputCPF = document.getElementById('cpf');
+            if (is_cpf(cpfValue)) {
+                cpfStatus.innerHTML = '<span style="color:green">Válido</span>';
+            } else {
+                cpfStatus.innerHTML = '<span style="color:red">Inválido</span>';
+            }
 
-      inputCPF.value = formatarCPF(inputCPF.value);
-    }
+            if (el.value == '') {
+                cpfStatus.innerHTML = '';
+            }
+        }
+
+   
 </script>
 </body>

@@ -103,12 +103,11 @@
             <?php } ?>
 
               <form method="POST" action="<?php echo site_url('login'); ?>" name="form_login">
-              <div class="form-group col-md-2">
-                                                        <label for="" style="color: #4e4e4e;"><b>CPF:</b></label>
-                                                        <span id="cpfUsuario"></span>
-                                                        <br>
-                                                        <input style="font-size:14px" type="text" class="form-control" id="cpf_usuario" name="cpf_usuario" onkeydown="mascara(this,cpf)" maxlength="14" onkeyup="cpfCheck(this)" value="">
-                                                    </div>
+                <div class="form-group">
+                  <label for="" style="color:#a8aaad"> CPF:</label>
+                  <span id="cpfUsuario"></span>
+                  <input type="text" id="cpf_usuario" name="cpf_usuario" maxlength="14" class="form-control" onkeydown="mascara(this,cpf)" maxlength="14" onkeyup="cpfCheck(this)" placeholder="Insira seu CPF" required="">
+                </div>
                 <div class="form-group">
                   <label for="senha" style="color:#a8aaad"> Senha:</label>
                   <input type="password" name="senha" maxlength="14" class="form-control" placeholder="Digite a sua senha" required="">

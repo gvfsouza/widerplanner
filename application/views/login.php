@@ -104,10 +104,10 @@
 
               <form method="POST" action="<?php echo site_url('login'); ?>" name="form_login">
               <div class="form-group">
-                <label for="cpf_usuario" style="color:#a8aaad"> CPF:</label>
-                <span id="cpfUsuario"></span>
-                <input type="text" id="cpf_usuario" name="cpf_usuario" maxlength="14" class="form-control" onkeydown="mascara(this, cpf)" onkeyup="cpfCheck(this)" placeholder="Insira seu CPF" required="">
-              </div>
+                                        <label for="cpf_usuario" style="color:#a8aaad"> CPF:</label>
+                                        <span id="cpfUsuario"></span>
+                                        <input type="text" id="cpf_usuario" name="cpf_usuario" maxlength="14" class="form-control" oninput="aplicarMascara(this)" placeholder="Insira seu CPF" required="">
+                                    </div>
                 <div class="form-group">
                   <label for="senha" style="color:#a8aaad"> Senha:</label>
                   <input type="password" name="senha" maxlength="14" class="form-control" placeholder="Digite a sua senha" required="">
@@ -133,21 +133,18 @@
   </div>
   </nav>
 <script>
-  function mascara(o, f) {
-            setTimeout(function () {
-                var v = mcpf(o.value);
-                if (v != o.value) {
-                    o.value = v;
-                }
-            }, 1);
-        }
+ function aplicarMascara(input) {
+            // Remove caracteres não numéricos
+            var cpf = input.value.replace(/\D/g, '');
 
-        function mcpf(v) {
-            v = v.replace(/\D/g, "");
-            v = v.replace(/(\d{3})(\d)/, "$1.$2");
-            v = v.replace(/(\d{3})(\d)/, "$1.$2");
-            v = v.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
-            return v;
+            // Aplica a máscara
+            cpf = cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
+
+            // Atualiza o valor no input
+            input.value = cpf;
+
+            // Verifica a validade do CPF
+            cpfCheck(input);
         }
 
   function is_cpf(c) {

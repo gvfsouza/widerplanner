@@ -132,7 +132,7 @@
     </div>
   </div>
   </nav>
-  <script>
+<script>
 function is_cpf(c) {
         if ((c = c.replace(/[^\d]/g, "")).length == 14) {
             cnpj = c;

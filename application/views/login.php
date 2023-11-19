@@ -93,7 +93,7 @@
               <?php if ($this->session->flashdata('sucesso')) {    ?>
                 <div class="alert alert-success" role="alert">
                     <?php echo $this->session->flashdata('sucesso'); ?>
-</div>
+                </div>
             <?php } ?>
 
             <?php if ($this->session->flashdata('error')) {    ?>
@@ -228,26 +228,5 @@ function is_cpf(c) {
         document.getElementById('cpfUsuario').innerHTML = is_cpf(el.value) ? '<span style="color:green">Válido</span>' : '<span style="color:red">Inválido</span>';
         if (el.value == '') document.getElementById('cpfUsuario').innerHTML = '';
     }
-
-    $(document).ready(function() {
-    $('#cpf_usuario').on('input', function() {
-      var cpf = $(this).val().replace(/\D/g, ''); // Remove caracteres não numéricos
-
-      if (cpf.length > 3) {
-        cpf = cpf.replace(/^(\d{3})(\d)/, '$1.$2');
-      }
-
-      if (cpf.length > 6) {
-        cpf = cpf.replace(/^(\d{3})\.(\d{3})(\d)/, '$1.$2.$3');
-      }
-
-      if (cpf.length > 9) {
-        cpf = cpf.replace(/^(\d{3})\.(\d{3})\.(\d{3})(\d)/, '$1.$2.$3-$4');
-      }
-
-      $('#cpf_usuario').val(cpf);
-    });
-  });
-
   </script>
 </body>

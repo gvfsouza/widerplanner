@@ -106,7 +106,7 @@
               <div class="form-group">
                                         <label for="cpf_usuario" style="color:#a8aaad"> CPF:</label>
                                         <span id="cpfUsuario"></span>
-                                        <input type="text" id="cpf_usuario" name="cpf_usuario" maxlength="14" class="form-control" oninput="aplicarMascara(this)" placeholder="Insira seu CPF" required="">
+                                        <input type="text" id="cpf_usuario" name="cpf_usuario" class="form-control" placeholder="Insira seu CPF" required="">
                                     </div>
                 <div class="form-group">
                   <label for="senha" style="color:#a8aaad"> Senha:</label>
@@ -133,18 +133,38 @@
   </div>
   </nav>
 <script>
- function aplicarMascara(input) {
-            // Remove caracteres não numéricos
-            var cpf = input.value.replace(/\D/g, '');
+ var cpfInput = document.getElementById('cpf_usuario');
+        cpfInput.addEventListener('input', formatarCPF);
 
-            // Aplica a máscara
-            cpf = cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
+        function formatarCPF() {
+            var cpf = cpfInput.value.replace(/\D/g, '');
 
-            // Atualiza o valor no input
-            input.value = cpf;
+            if (cpf.length > 3 && cpf.length <= 6) {
+                cpf = cpf.replace(/(\d{3})(\d{1,3})/, '$1.$2');
+            } else if (cpf.length > 6 && cpf.length <= 9) {
+                cpf = cpf.replace(/(\d{3})(\d{3})(\d{1,3})/, '$1.$2.$3');
+            } else if (cpf.length > 9) {
+                cpf = cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{1,2})/, '$1.$2.$3-$4');
+            }
 
-            // Verifica a validade do CPF
-            cpfCheck(input);
+            cpfInput.value = cpf;
+
+            cpfCheck(cpfInput);
+        }
+
+        function cpfCheck(el) {
+            var cpfStatus = document.getElementById('cpfUsuario');
+            var cpfValue = el.value.replace(/\D/g, '');
+
+            if (is_cpf(cpfValue)) {
+                cpfStatus.innerHTML = '<span style="color:green">Válido</span>';
+            } else {
+                cpfStatus.innerHTML = '<span style="color:red">Inválido</span>';
+            }
+
+            if (el.value == '') {
+                cpfStatus.innerHTML = '';
+            }
         }
 
   function is_cpf(c) {
@@ -237,20 +257,7 @@
         }
     }
 
-    function cpfCheck(el) {
-            var cpfStatus = document.getElementById('cpfUsuario');
-            var cpfValue = el.value.replace(/\D/g, '');
-
-            if (is_cpf(cpfValue)) {
-                cpfStatus.innerHTML = '<span style="color:green">Válido</span>';
-            } else {
-                cpfStatus.innerHTML = '<span style="color:red">Inválido</span>';
-            }
-
-            if (el.value == '') {
-                cpfStatus.innerHTML = '';
-            }
-        }
+    
 
    
 </script>

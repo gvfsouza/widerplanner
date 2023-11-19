@@ -92,12 +92,14 @@
         <div class="card-body">
           <form>
             <div class="form-group">
-              <label for="cpf">CPF</label>
-              <input type="text" class="form-control" id="cpf" name="cpf" maxlength="14" required>
+                <label for="cpf_usuario" style="color:#a8aaad"> CPF:</label>
+                <span id="cpfUsuario"></span>
+                <input type="text" id="cpf_usuario" name="cpf_usuario" class="form-control" placeholder="Insira seu CPF" maxlength="14" required="">
             </div>
             <div class="form-group">
               <label for="senha">E-mail</label>
-              <input type="email" class="form-control" id="email" name="email" placeholder="exemplo@gmail.com" required>
+              <span id="email_usuario"></span>
+              <input type="email" class="form-control" id="email" name="email" maxlength="60" onblur="validacaoEmail(this)" placeholder="exemplo@gmail.com" required>
             </div>
            
             <button type="submit" id="enviar" name="enviar">Enviar</button>
@@ -110,3 +112,148 @@
       </div>
     </div>
   </nav>
+
+<script>
+var cpfInput = document.getElementById('cpf_usuario');
+        cpfInput.addEventListener('input', formatarCPF);
+
+        function formatarCPF() {
+            var cpf = cpfInput.value.replace(/\D/g, '');
+
+            if (cpf.length > 3 && cpf.length <= 6) {
+                cpf = cpf.replace(/(\d{3})(\d{1,3})/, '$1.$2');
+            } else if (cpf.length > 6 && cpf.length <= 9) {
+                cpf = cpf.replace(/(\d{3})(\d{3})(\d{1,3})/, '$1.$2.$3');
+            } else if (cpf.length > 9) {
+                cpf = cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{1,2})/, '$1.$2.$3-$4');
+            }
+
+            cpfInput.value = cpf;
+
+            cpfCheck(cpfInput);
+        }
+
+        function cpfCheck(el) {
+            var cpfStatus = document.getElementById('cpfUsuario');
+            var cpfValue = el.value.replace(/\D/g, '');
+
+            if (is_cpf(cpfValue)) {
+                cpfStatus.innerHTML = '<span style="color:green">Válido</span>';
+            } else {
+                cpfStatus.innerHTML = '<span style="color:red">Inválido</span>';
+            }
+
+            if (el.value == '') {
+                cpfStatus.innerHTML = '';
+            }
+        }
+
+  function is_cpf(c) {
+        if ((c = c.replace(/[^\d]/g, "")).length == 14) {
+            cnpj = c;
+            cnpj = cnpj.replace(/[^\d]+/g, '');
+
+            if (cnpj == '') return false;
+
+            if (cnpj.length != 14)
+                return false;
+
+            // Elimina CNPJs invalidos conhecidos
+            if (cnpj == "00000000000000" ||
+                cnpj == "11111111111111" ||
+                cnpj == "22222222222222" ||
+                cnpj == "33333333333333" ||
+                cnpj == "44444444444444" ||
+                cnpj == "55555555555555" ||
+                cnpj == "66666666666666" ||
+                cnpj == "77777777777777" ||
+                cnpj == "88888888888888" ||
+                cnpj == "99999999999999")
+                return false;
+
+            // Valida DVs
+            tamanho = cnpj.length - 2
+            numeros = cnpj.substring(0, tamanho);
+            digitos = cnpj.substring(tamanho);
+            soma = 0;
+            pos = tamanho - 7;
+            for (i = tamanho; i >= 1; i--) {
+                soma += numeros.charAt(tamanho - i) * pos--;
+                if (pos < 2)
+                    pos = 9;
+            }
+            resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
+            if (resultado != digitos.charAt(0))
+                return false;
+
+            tamanho = tamanho + 1;
+            numeros = cnpj.substring(0, tamanho);
+            soma = 0;
+            pos = tamanho - 7;
+            for (i = tamanho; i >= 1; i--) {
+                soma += numeros.charAt(tamanho - i) * pos--;
+                if (pos < 2)
+                    pos = 9;
+            }
+            resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
+            if (resultado != digitos.charAt(1))
+                return false;
+
+            return true;
+        } else {
+            if ((c = c.replace(/[^\d]/g, "")).length != 11)
+                return false
+
+            if (c == "00000000000")
+                return false;
+
+            var r;
+            var s = 0;
+
+            for (i = 1; i <= 9; i++)
+                s = s + parseInt(c[i - 1]) * (11 - i);
+
+            r = (s * 10) % 11;
+
+            if ((r == 10) || (r == 11))
+                r = 0;
+
+            if (r != parseInt(c[9]))
+                return false;
+
+            s = 0;
+
+            for (i = 1; i <= 10; i++)
+                s = s + parseInt(c[i - 1]) * (12 - i);
+
+            r = (s * 10) % 11;
+
+            if ((r == 10) || (r == 11))
+                r = 0;
+
+            if (r != parseInt(c[10]))
+                return false;
+
+            return true;
+        }
+    }
+    
+// Validação E-mail de usuários
+function validacaoEmail(input) {
+        var email = input.value.trim(); // Remova os espaços em branco no início e no fim do e-mail
+        var emailErro = document.getElementById('emailErro');
+
+        // Padrão de expressão regular para validar o formato de e-mail
+        var regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+        if (!regex.test(email)) {
+            emailErro.innerHTML = 'Por favor, insira um endereço de e-mail válido.';
+            input.classList.add('is-invalid');
+            input.classList.remove('is-valid');
+        } else {
+            emailErro.innerHTML = '';
+            input.classList.remove('is-invalid');
+            input.classList.add('is-valid');
+        }
+    }
+</script>

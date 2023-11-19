@@ -103,11 +103,12 @@
             <?php } ?>
 
               <form method="POST" action="<?php echo site_url('login'); ?>" name="form_login">
-                <div class="form-group">
-                  <label for="" style="color:#a8aaad"> CPF:</label>
-                  <span id="cpfUsuario"></span>
-                  <input type="text" id="cpf_usuario" name="cpf_usuario" maxlength="14" class="form-control" onkeydown="mascara(this,cpf)" maxlength="14" onkeyup="cpfCheck(this)" placeholder="Insira seu CPF" required="">
-                </div>
+              <div class="form-group col-md-2">
+                                                        <label for="" style="color: #4e4e4e;"><b>CPF:</b></label>
+                                                        <span id="cpfUsuario"></span>
+                                                        <br>
+                                                        <input style="font-size:14px" type="text" class="form-control" id="cpf_usuario" name="cpf_usuario" onkeydown="mascara(this,cpf)" maxlength="14" onkeyup="cpfCheck(this)" value="">
+                                                    </div>
                 <div class="form-group">
                   <label for="senha" style="color:#a8aaad"> Senha:</label>
                   <input type="password" name="senha" maxlength="14" class="form-control" placeholder="Digite a sua senha" required="">
@@ -133,7 +134,7 @@
   </div>
   </nav>
 <script>
-function is_cpf(c) {
+  function is_cpf(c) {
         if ((c = c.replace(/[^\d]/g, "")).length == 14) {
             cnpj = c;
             cnpj = cnpj.replace(/[^\d]+/g, '');
@@ -228,5 +229,5 @@ function is_cpf(c) {
         document.getElementById('cpfUsuario').innerHTML = is_cpf(el.value) ? '<span style="color:green">Válido</span>' : '<span style="color:red">Inválido</span>';
         if (el.value == '') document.getElementById('cpfUsuario').innerHTML = '';
     }
-  </script>
+</script>
 </body>

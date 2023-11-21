@@ -42,25 +42,20 @@ class Cadastro_Produto extends CI_Controller
 
 			if (!isset($error)) {
 
-				if (isset($foto_produto['name'])) {
-
-					$foto_produto = $_FILES['foto_produto'];
+				if ($this->upload->do_upload('foto_produto')) {
 					$upload_data = $this->upload->data();
-					
-					if (!$this->upload->do_upload('foto_produto')) {
-						$error = array('error' => $this->upload->display_errors());
-						$foto_produto = $upload_data['file_name'];
+					$foto_produto = $upload_data['file_name'];
 
-						$this->session->set_flashdata('erro', $error['error']);
-						$this->session->set_flashdata('erro_upload', 'Não foi possível fazer upload da foto.');
-					}
+					$dados['cadastro_produto'] = $this->Produto_model->cadastro_produto($nome_produto, $valor_produto, $qtde_produto, $descricao_produto, $foto_produto);
+
+					//MENSAGEM SUCESSO AO CADASTRAR
+					$this->session->set_flashdata('sucesso', 'Produto cadastrado com sucesso!');
+					redirect('cadastro_produto');
+				} else {
+					$error = array('error' => $this->upload->display_errors());
+					$this->session->set_flashdata('erro', $error['error']);
+					$this->session->set_flashdata('erro_upload', 'Não foi possível fazer upload da foto.');
 				}
-
-				$dados['cadastro_produto'] = $this->Produto_model->cadastro_produto($nome_produto, $valor_produto, $qtde_produto, $descricao_produto, $foto_produto);
-
-				//MENSAGEM SUCESSO AO CADASTRAR
-				$this->session->set_flashdata('sucesso', 'Produto cadastrado com sucesso!');
-				redirect('cadastro_produto');
 			} else {
 				$this->session->set_flashdata('erro', 'Erro ao efetuar cadastro de Produto.');
 			}

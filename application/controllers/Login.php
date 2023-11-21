@@ -6,7 +6,7 @@ class Login extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		// Carregue o arquivo functions_helper
+		// Carrega o arquivo functions_helper
 		$this->load->helper('functions_helper');
 		if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 			$_POST = $this->clean_post_data($_POST);
@@ -24,12 +24,23 @@ class Login extends CI_Controller
 	
 	public function index()
 	{
+        $this->load->model('Login_model');
+
+		if (isset($_POST['Entrar'])) {
+
+			$cpf_usuario = $this->input->post('cpf_usuario');
+
+			$senha = $this->input->post('senha');
+		}
+
 		$this->load->view('login');
 	}
 
 	public function login() {
         $this->load->model('Login_model');
 
+		$senha = $this->security->xss_clean($this->input->post('senha'));
+		$cpf_usuario = $this->security->xss_clean($this->input->post('cpf_usuario'));
 
 		// Se o usuário já estiver logado, redirecione para o painel
 		if ($this->session->userdata('logged_in')) {

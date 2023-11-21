@@ -15,7 +15,7 @@ class Produto_model extends CI_Model {
     {
         $data = array(
             # puxa os campos do banco
-            'foto_produto' => $foto_produto,
+            // 'foto_produto' => $foto_produto,
             'nome_produto' => $nome_produto,
             'descricao_produto' => $descricao_produto,
             'valor_produto' => $valor_produto,

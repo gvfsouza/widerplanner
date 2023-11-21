@@ -75,4 +75,16 @@ class Login extends CI_Controller
 		}
 	}
 
+
+	public function sair()
+	{
+		$this->session->unset_userdata("cpf_usuario");
+		redirect('login');
+	}
+
+	private function anti_injection($data)
+	{
+		$this->security->xss_clean($data);
+	}
+
 }

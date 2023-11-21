@@ -121,11 +121,11 @@
                   <a href="https://widerplanner.agsete.com.br/esqueci_senha" style="color: #a1a3a8; text-align: right; text-decoration: none">Esqueci senha</a>
                   <br>
                   <br>
-                  <a href="https://widerplanner.agsete.com.br/cadastro_cliente"><strong style="font-size:14px">Clique aqui</strong> para realizar o cadastro</a>
+                  <a href="https://widerplanner.agsete.com.br/cadastro_cliente"><strong style="font-size:14px;#87A0D2">Clique aqui</strong> para realizar o cadastro</a>
                   <br>
                   <br>
                   <input type="hidden" name="ent" id="ent" value="1">
-                  <input class="btn" type="submit" id="entrar" name="entrar" style="background:#87A0D2; color:white; border:none" value="Entrar"></input>
+                  <input class="btn" type="submit" id="entrar" name="entrar" style="background:#87A0D2; color:white; border:none;border-radius: 5px;width: 335px; height: 40px;" value="Entrar"></input>
                 </form>
                 <br>
                 <div id="rodape" style="text-align:center;color: gray;font-size:12px">

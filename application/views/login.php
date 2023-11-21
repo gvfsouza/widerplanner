@@ -108,30 +108,33 @@
                                     <br>
 
                                     <form method="POST" action="<?php echo site_url('login/login'); ?>" name="form_login" class="login">
-                                        <div class="form-group">
-                                            <label for="cpf_usuario" style="color:#a8aaad"><i class="fas fa-solid fa-id-card"></i>&nbsp; CPF:</label><br>
+                                    <div class="form-group">
+                                            <label for="cpf_usuario" style="color: #a8aaad"> CPF:</label>
                                             <span id="cpfUsuario"></span>
-                                            <input type="text" maxlength="14" class="form-control" placeholder="Digite seu CPF" name="cpf_usuario">
+                                            <input style="font-size: 14px; width: 100%;" type="text" class="form-control" id="cpf_usuario" name="cpf_usuario" placeholder="Insira seu CPF" required>
                                         </div>
 
-
                                         <div class="form-group">
-                                            <label for="senha" style="color:#a8aaad"><i class="fas fa-solid fa-key"></i>&nbsp; Senha:</label><br>
+                                            <label for="senha" style="color: #a8aaad"><i class="fas fa-solid fa-key"></i>Senha:</label>
                                             <div style="position: relative;">
-                                                <input type="password" class="form-control" name="senha" id="senha" placeholder="Digite sua senha">
+                                                <input type="password" class="form-control" name="senha" id="senha" placeholder="Digite sua senha" style="font-size: 14px; width: 100%;">
+                                                <span class="fas fa-solid fa-eye-slash" id="show-btn" style="position: absolute; cursor:pointer; top: 50%; transform: translateY(-50%); right: 10px;"></span>
                                             </div>
                                         </div>
 
-                                        <a href="https://widerplanner.agsete.com.br/esqueci_senha" style="color: #a1a3a8; text-align: right; text-decoration: none">Esqueci senha</a>
-                                        <br>
-                                        <br>
-                                        <a href="https://widerplanner.agsete.com.br/cadastro_cliente"><strong style="font-size:14px;#87A0D2">Clique aqui</strong> para realizar o cadastro</a>
-                                        <br>
-                                        <br>
+                                        <div class="form-group">
+                                            <a href="https://widerplanner.agsete.com.br/esqueci_senha" style="color: #a1a3a8; text-align: right; text-decoration: none; font-size: small"><b>Esqueci senha</b></a>
+
+                                            <br><br>
+
+                                            <a href="https://widerplanner.agsete.com.br/cadastro_cliente" style="font-size:14px; color:#87A0D2"><strong style="font-size:14px; color:#87A0D2">Clique aqui</strong> para realizar o cadastro</a>
+
+                                            <br><br>
+                                        </div>
 
                                         <div class="text-center">
                                             <p style="width: 100%;"><input type="hidden" name="env" id="env" value="1">
-                                                <input type="hidden" name="env" id="env" value="1" /> <input class="form-control" style="background:#87A0D2; color:white; border:none;border-radius: 5px;width: 335px; height: 40px; cursor:pointer" type="submit" name="entrar" id="entrar" value="Entrar" />
+                                                <input type="hidden" name="env" id="env" value="1" /> <input class="form-control" style="background:#87A0D2; color:white; border:none;border-radius: 5px; width: 100%; height: 40px; cursor:pointer" type="submit" name="entrar" id="entrar" value="Entrar" />
                                             </p>
                                         </div>
                                     </form>

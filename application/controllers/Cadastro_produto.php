@@ -22,43 +22,62 @@ class Cadastro_Produto extends CI_Controller
 	}
 
 	public function index()
-    {
-        $this->load->model('Produto_model');
-        $dados = array();
+	{
+		$this->load->model('Produto_model');
+		$dados = array();
 
-        if (isset($_POST['salvar'])) {
-            $nome_produto = $this->input->post('nome_produto');
-            $descricao_produto = $this->input->post('descricao_produto');
-            $valor_produto = $this->input->post('valor_produto');
-            $qtde_produto = $this->input->post('qtde_produto');
+		if (isset($_POST['salvar'])) {
+			$foto_produto = $_FILES['foto_produto'];
+			$nome_produto = $this->input->post('nome_produto');
+			$descricao_produto = $this->input->post('descricao_produto');
+			$valor_produto = $this->input->post('valor_produto');
+			$qtde_produto = $this->input->post('qtde_produto');
 
-            $config['upload_path'] = './application/fotos';
-            $config['allowed_types'] = 'jpg|jpeg|png';
-            $config['max_size']  = 2048;
-            $config['encrypt_name'] = TRUE;
-            $this->load->library('upload', $config);
-            $this->upload->initialize($config);
+			// FOTO - EXTENSÃO
+			// acessa o nome original do arquivo
+			$path = $_FILES['foto_produto']['name'];
 
-            if ($this->upload->do_upload('foto_produto')) {
-                $upload_data = $this->upload->data();
-                $foto_produto = $upload_data['file_name'];
+			// extensão do arquivo
+			$ext = pathinfo($path, PATHINFO_EXTENSION);
 
-                $dados['cadastro_produto'] = $this->Produto_model->cadastro_produto($nome_produto, $valor_produto, $qtde_produto, $descricao_produto, $foto_produto);
+			// Configuração foto
+			$config['upload_path'] = './application/fotos';
+			// tipo permitido
+			$config['allowed_types'] = 'jpg|jpeg|png|';
+			// tamanho permitido
+			$config['max_size']  = 2048;
+			// $config['max_width']  = 1024;
+			// $config['max_height'] = 768;
+			$config['encrypt_name'] = TRUE;
+			$this->load->library('upload', $config);
+			$this->upload->initialize($config);
 
-                //MENSAGEM SUCESSO AO CADASTRAR
-                $this->session->set_flashdata('sucesso', 'Produto cadastrado com sucesso!');
-                redirect('cadastro_produto');
-            } else {
-                $error = array('error' => $this->upload->display_errors());
-                $this->session->set_flashdata('erro', $error['error']);
-                $this->session->set_flashdata('erro_upload', 'Não foi possível fazer upload da foto.');
-            }
-        }
+			if (!isset($error)) {
 
-        $this->load->view('layout/header');
-        $this->load->view('layout/sidebar');
-        $this->load->view('layout/navbar');
-        $this->load->view('cadastro_produto', $dados);
-        // $this->load->view('layout/footer');
-    }
+				if (isset($foto_produto['name'])) {
+					if (!$this->upload->do_upload('foto_produto')) {
+						$error = array('error' => $this->upload->display_errors());
+						$foto_produto = $upload_data['file_name'];
+
+						$this->session->set_flashdata('erro', $error['error']);
+						$this->session->set_flashdata('erro_upload', 'Não foi possível fazer upload da foto.');
+					}
+				}
+
+				$dados['cadastro_produto'] = $this->Produto_model->cadastro_produto($foto_produto, $nome_produto, $valor_produto, $qtde_produto, $descricao_produto);
+
+				//MENSAGEM SUCESSO AO CADASTRAR
+				$this->session->set_flashdata('sucesso', 'Produto cadastrado com sucesso!');
+				redirect('cadastro_produto');
+			} else {
+				$this->session->set_flashdata('erro', 'Erro ao efetuar cadastro de Produto.');
+			}
+		}
+
+		$this->load->view('layout/header');
+		$this->load->view('layout/sidebar');
+		$this->load->view('layout/navbar');
+		$this->load->view('cadastro_produto', $dados);
+		// $this->load->view('layout/footer');
+	}
 }

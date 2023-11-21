@@ -371,7 +371,10 @@
                                             </div>
                                         </fieldset>
 
-                                        <?php if (!empty($listar_dados_produtos)) : ?>
+
+                                        <?php 
+                                        var_dump($listar_dados_produtos);
+                                        if (!empty($listar_dados_produtos)) : ?>
                                             <?php foreach ($listar_dados_produtos as $produto) : ?>
                                                 <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9;">
                                                     <div class="card-container">
@@ -380,8 +383,6 @@
                                                                 <div class="img-placeholder">
                                                                     <?php if (!empty($produto->foto_produto)) : ?>
                                                                         <img style='display:block; width:100px;height:100px;' id='base64image' src='data:image/jpeg;base64,<?php echo $produto->foto_produto ?>' />
-
-                                                                    
                                                                     <?php endif; ?>
                                                                 </div>
                                                                 <div>

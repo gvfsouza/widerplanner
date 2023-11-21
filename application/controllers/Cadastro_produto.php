@@ -45,18 +45,6 @@ class Cadastro_Produto extends CI_Controller
 			$this->upload->initialize($config);
 
 			if (!isset($error)) {
-
-				// if ($this->upload->do_upload('foto_produto')) {
-				// 	$upload_data = $this->upload->data();
-				// 	$foto_produto = $upload_data['file_name'];
-				// } else {
-				// 	$error = array('error' => $this->upload->display_errors());
-				// 	$this->session->set_flashdata('erro', $error['error']);
-				// 	$this->session->set_flashdata('erro_upload', 'Não foi possível fazer upload da foto.');
-
-				// 	redirect('cadastro_produto');
-				// }
-
 				$dados['cadastro_produto'] = $this->Produto_model->cadastro_produto($foto_produto, $nome_produto, $valor_produto, $qtde_produto, $descricao_produto);
 
 				//MENSAGEM SUCESSO AO CADASTRAR

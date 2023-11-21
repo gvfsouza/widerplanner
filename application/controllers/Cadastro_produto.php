@@ -63,7 +63,7 @@ class Cadastro_produto extends CI_Controller
 					}
 				}
 
-				$dados['cadastro_produto'] = $this->Servicos_model->cadastro_servicos($foto_produto, $nome_produto, $descricao_produto, $valor_produto, $qtde_produto);
+				$dados['cadastro_produto'] = $this->Produto_model->cadastro_produto($foto_produto, $nome_produto, $descricao_produto, $valor_produto, $qtde_produto);
 
 				//MENSAGEM SUCESSO AO CADASTRAR
 				$this->session->set_flashdata('sucesso', 'Cadastro de Produto realizado com sucesso!');

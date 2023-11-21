@@ -42,11 +42,13 @@ class Cadastro_Produto extends CI_Controller
 
 			// Configuração foto
 			$config['upload_path'] = './application/fotos';
-			$config['allowed_types'] = 'jpg|jpeg|png|';
+			// $config['allowed_types'] = 'jpg|jpeg|png';
+			$config['allowed_types'] = 'image/jpg|image/jpeg|image/png';
 			$config['max_size'] = 2048;
 			$config['encrypt_name'] = TRUE;
 			$this->load->library('upload', $config);
 			$this->upload->initialize($config);
+			echo $this->upload->data('file_type');
 
 			if (!isset($error)) {
 

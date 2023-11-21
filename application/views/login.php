@@ -4,6 +4,8 @@
   <title>Login Card</title>
 </head>
 <style>
+  
+  
   @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
 
   *{
@@ -102,7 +104,7 @@
               </div>
             <?php } ?>
 
-              <form method="POST" action="<?php echo site_url('login'); ?>" name="form_login">
+              <form method="POST" action="<?php echo site_url('login/login'); ?>" name="form_login">
               <div class="form-group">
                 <label for="cpf_usuario" style="color:#a8aaad"> CPF:</label>
                 <span id="cpfUsuario"></span>
@@ -118,7 +120,10 @@
                   <a href="https://widerplanner.agsete.com.br/cadastro_cliente"><strong style="font-size:14px">Clique aqui</strong> para realizar o cadastro</a>
                   <br>
                   <br>
-                  <button type="submit" id="entrar" name="entrar">Entrar</button>
+                  <input type="hidden" name="ent" id="ent" value="1">
+                  <input class="form-control" style="background:#139358; color:white; border:none" type="submit" name="lg_submit" id="lg_submit" value="Acessar" />
+
+                  <input class="form-control" type="submit" id="entrar" name="entrar" value="Entrar"></input>
                 </form>
                 <br>
                 <div id="rodape" style="text-align:center;color: gray;font-size:12px">

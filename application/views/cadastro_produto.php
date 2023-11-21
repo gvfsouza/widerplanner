@@ -73,6 +73,9 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="text-right">
+                            <button href="<?php echo base_url(); ?>/cadastro_produto/" type="submit" name="salvar" class="btn-lg btn" style="border: none;background-color: #82a4ef;color: white;">Salvar</button>
+                        </div>
                     </form>
                 </div>
                 <br>

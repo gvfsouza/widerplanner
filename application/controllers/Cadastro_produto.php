@@ -42,7 +42,7 @@ class Cadastro_Produto extends CI_Controller
 			$ext = pathinfo($path, PATHINFO_EXTENSION);
 
 			// Configuração foto
-			$config['upload_path'] = './public/img';
+			$config['upload_path'] = './application/fotos';
 			// tipo permitido
 			$config['allowed_types'] = 'jpg|jpeg|png|';
 			// tamanho permitido

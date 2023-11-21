@@ -379,16 +379,14 @@
                                                             <div class="col card">
                                                                 <div class="img-placeholder">
                                                                     <?php if (!empty($produto->foto_produto)) : ?>
-                                                                        <img src="<?php echo base_url('images/produtos/' . $produto->foto_produto); ?>" height="60" class="pl-3">
-                                                                    <?php else : ?>
-                                                                        <img src="<?php echo base_url('path_to_default_image/default_image.jpg'); ?>" height="60" class="pl-3">
+                                                                        <img style='display:block; width:100px;height:100px;' id='base64image' src='data:image/jpeg;base64,<?php echo $produto->foto_produto ?>' />
+
+                                                                    
                                                                     <?php endif; ?>
                                                                 </div>
                                                                 <div>
                                                                     <?php if (!empty($produto->nome_produto)) : ?>
                                                                         <h3><?php echo $produto->nome_produto; ?></h3>
-                                                                        <!-- Add other product details as needed -->
-
                                                                         <div class="col card">
                                                                             <div class="img-placeholder">
                                                                                 <img src="https://images.unsplash.com/photo-1614130946015-d5a7a3276fea?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTc5MTY4MTU&ixlib=rb-1.2.1&q=80">

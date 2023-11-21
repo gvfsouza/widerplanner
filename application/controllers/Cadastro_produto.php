@@ -28,7 +28,7 @@ class Cadastro_Produto extends CI_Controller
 		$dados = array();
 
 		if (isset($_POST['salvar'])) {
-			$foto_produto = $this->converte_pdf($_FILES['foto_produto']['tmp_name']);
+			$foto_produto = $this->converte_img($_FILES['foto_produto']['tmp_name'],$_FILES['arquivo_01']['type']);
 			$nome_produto = $this->input->post('nome_produto');
 			$descricao_produto = $this->input->post('descricao_produto');
 			$valor_produto = $this->input->post('valor_produto');
@@ -78,13 +78,19 @@ class Cadastro_Produto extends CI_Controller
 		// $this->load->view('layout/footer');
 	}
 
-	public function converte_pdf($pdf)
+	public function converte_img($img, $type)
 	{
-		ob_start();
-		readfile($pdf);
-		$data = ob_get_clean();
-		return base64_encode($data);
-		//	return pg_escape_bytea($data);
+		if ($type == 'image/png') {
+			$im = imagecreatefrompng($img);
+			ob_start();
+			imagejpeg($im);
+			$data = ob_get_clean();
+			imagedestroy($im);
+		} else {
+			ob_start();
+			readfile($img);
+			$data = ob_get_clean();
+		}
+		return $data;
 	}
-
 }

@@ -11,14 +11,14 @@ class Produto_model extends CI_Model {
         return $res->result();
     }
 
-    public function cadastro_produto($foto_produto, $nome_produto, $valor_produto, $qtde_produto, $descricao_produto)
+    public function cadastro_produto($nome_produto, $valor_produto, $qtde_produto, $descricao_produto, $foto_produto)
     {
         $data = array(
-            'foto_produto' => implode(',', $foto_produto),
             'nome_produto' => $nome_produto,
             'descricao_produto' => $descricao_produto,
             'valor_produto' => $valor_produto,
             'qtde_produto' => $qtde_produto,
+            'foto_produto' => $foto_produto,
         );
 
         $this->db->insert('produtos', $data);

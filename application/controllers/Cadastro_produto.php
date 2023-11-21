@@ -35,7 +35,6 @@ class Cadastro_Produto extends CI_Controller
 			$qtde_produto = $this->input->post('qtde_produto');
 
 			// FOTO - EXTENSÃO
-			// acessa o nome original do arquivo
 			$path = $_FILES['foto_produto']['name'];
 
 			// extensão do arquivo
@@ -43,12 +42,8 @@ class Cadastro_Produto extends CI_Controller
 
 			// Configuração foto
 			$config['upload_path'] = './application/fotos';
-			// tipo permitido
 			$config['allowed_types'] = 'jpg|jpeg|png|';
-			// tamanho permitido
 			$config['max_size']  = 2048;
-			// $config['max_width']  = 1024;
-			// $config['max_height'] = 768;
 			$config['encrypt_name'] = TRUE;
 			$this->load->library('upload', $config);
 			$this->upload->initialize($config);
@@ -56,7 +51,7 @@ class Cadastro_Produto extends CI_Controller
 			if (!isset($error)) {
 
 				if (isset($foto_produto['name'])) {
-					if (!$this->upload->do_upload('foto_animal')) {
+					if (!$this->upload->do_upload('foto_produto')) {
 						$error = array('error' => $this->upload->display_errors());
 						$foto_produto = $upload_data['file_name'];
 

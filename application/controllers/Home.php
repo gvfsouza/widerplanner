@@ -1,5 +1,4 @@
-<?php
-defined('BASEPATH') or exit('No direct script access allowed');
+<?php defined('BASEPATH') or exit('No direct script access allowed');
 
 class Home extends CI_Controller
 {
@@ -27,7 +26,8 @@ class Home extends CI_Controller
 		// Conexão com o Model
 		$this->load->model('Home_model');
 
-		$dados['listar_estabelecimento'] = $this->Home_model->listar_estabelecimento();
+		$dados['listar_dados_estabelecimento'] = $this->Home_model->listar_dados_estabelecimento();
+		$dados['listar_dados_produtos'] = $this->Home_model->listar_dados_produtos();
 
 		$this->load->view('layout/header');
 		$this->load->view('layout/sidebar');
@@ -35,5 +35,4 @@ class Home extends CI_Controller
 		$this->load->view('home', $dados);
 		$this->load->view('layout/footer');
 	}
-
 }

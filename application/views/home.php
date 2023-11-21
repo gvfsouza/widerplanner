@@ -370,37 +370,38 @@ a {
                                             </div>
                                         </fieldset>
 
-                                        <fieldset class="form-group " style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9;">
-                                            <div class="card-container">
-                                                <div class="flex-container space-between">
-                                                    <div class="col card">
-                                                        <div class="img-placeholder">
-                                                            <img src="https://images.unsplash.com/photo-1530797195762-6e542a0f1843?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTc5MTY2MjE&ixlib=rb-1.2.1&q=80">
+                                        <?php foreach ($listar_dados_produtos as $value) { ?>
+                                            <fieldset class="form-group " style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9;">
+                                                <div class="card-container">
+                                                    <div class="flex-container space-between">
+                                                        <div class="col card">
+                                                            <div class="img-placeholder">
+                                                                <!-- Check if the product has a photo -->
+                                                                <?php if (!empty($produto->foto_produto)) { ?>
+                                                                    <img src="<?php echo base_url('application/fotos/' . $produto->foto_produto); ?>" height="60" class="pl-3">
+                                                                <?php } ?>
+                                                            </div>
+                                                            <div>
+                                                                <h3><?php echo $produto->nome_produto; ?></h3>
+                                                            </div>
                                                         </div>
-                                                        <div>
-                                                            <h3>Wafaa</h3>
-                                                            <p><i class="fa-solid fa-user"></i> Front End Web Developer
-                                                            </p>
-                                                            <p><i class="fa-solid fa-paper-plane"></i> <a href="mailto:wafaa_cr@outlook.com">Email Me</a></p>
-                                                            <p><i class="fa-solid fa-location-dot"></i> Auckland, New Zealand</p>
-                                                           </div>
-                                                    </div>
-                                                    <div class="col card">
-                                                        <div class="img-placeholder">
-                                                            <img src="https://images.unsplash.com/photo-1614130946015-d5a7a3276fea?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTc5MTY4MTU&ixlib=rb-1.2.1&q=80">
-                                                        </div>
-                                                        <div>
-                                                            <h3>Wafaa</h3>
-                                                            <p><i class="fa-solid fa-user"></i> Front End Web Developer
-                                                            </p>
-                                                            <p><i class="fa-solid fa-paper-plane"></i> <a href="mailto:wafaa_cr@outlook.com">Email Me</a></p>
-                                                            <p><i class="fa-solid fa-location-dot"></i> Auckland, New
-                                                                Zealand</p>
+                                                        <div class="col card">
+                                                            <div class="img-placeholder">
+                                                                <img src="https://images.unsplash.com/photo-1614130946015-d5a7a3276fea?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTc5MTY4MTU&ixlib=rb-1.2.1&q=80">
+                                                            </div>
+                                                            <div>
+                                                                <h3>Wafaa</h3>
+                                                                <p><i class="fa-solid fa-user"></i> Front End Web Developer
+                                                                </p>
+                                                                <p><i class="fa-solid fa-paper-plane"></i> <a href="mailto:wafaa_cr@outlook.com">Email Me</a></p>
+                                                                <p><i class="fa-solid fa-location-dot"></i> Auckland, New
+                                                                    Zealand</p>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </fieldset>
+                                            </fieldset>
+                                        <?php } ?>
                                         <br>
                                         <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 7px; border: 1px solid #879bc9;background: #879bc9;color: black;">
                                             <div>

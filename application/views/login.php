@@ -129,8 +129,6 @@
                                             <br><br>
 
                                             <a href="https://widerplanner.agsete.com.br/cadastro_cliente" style="font-size:14px; color:#87A0D2"><strong style="font-size:14px; color:#87A0D2">Clique aqui</strong> para realizar o cadastro</a>
-
-                                            <br><br>
                                         </div>
 
                                         <div class="text-center">

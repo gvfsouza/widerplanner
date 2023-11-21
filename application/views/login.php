@@ -109,14 +109,19 @@
 
                                     <form method="POST" action="<?php echo site_url('login/login'); ?>" name="form_login" class="login">
                                         <div class="form-group">
-                                            <label for="cpf_usuario" style="color:#a8aaad"> CPF:</label>
+                                            <label for="cpf_usuario" style="color:#a8aaad"><i class="fas fa-solid fa-id-card"></i>&nbsp; CPF:</label><br>
                                             <span id="cpfUsuario"></span>
-                                            <input style="font-size:14px" type="text" class="form-control" id="cpf_usuario" name="cpf_usuario" placeholder="Insira seu CPF" required>
+                                            <input type="text" maxlength="14" class="form-control" placeholder="Digite seu CPF" name="cpf_usuario">
                                         </div>
+
+
                                         <div class="form-group">
-                                            <label for="senha" style="color:#a8aaad"> Senha:</label>
-                                            <input style="font-size:14px" type="password" class="form-control" id="senha" name="senha" placeholder="Digite a sua senha" required>
+                                            <label for="senha" style="color:#a8aaad"><i class="fas fa-solid fa-key"></i>&nbsp; Senha:</label><br>
+                                            <div style="position: relative;">
+                                                <input type="password" class="form-control" name="senha" id="senha" placeholder="Digite sua senha">
+                                            </div>
                                         </div>
+
                                         <a href="https://widerplanner.agsete.com.br/esqueci_senha" style="color: #a1a3a8; text-align: right; text-decoration: none">Esqueci senha</a>
                                         <br>
                                         <br>

@@ -24,7 +24,7 @@ class Cadastro_produto extends CI_Controller
 
 	public function index()
 	{
-		$this->load->model('Servicos_model');
+		$this->load->model('Produto_model');
 		$dados = array();
 
 		if (isset($_POST['salvar'])) {

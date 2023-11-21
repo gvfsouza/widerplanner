@@ -9,13 +9,13 @@ class Login_model extends CI_Model
         $this->db->where('senha', md5($senha)); // Supondo que a senha seja armazenada como hash MD5 para simplificar
         $query = $this->db->get('usuario');
 
-        // if ($query->num_rows() == 1) {
-        //     return $query->row();
-        // } else {
-        //     return FALSE;
-        // }
+        if ($query->num_rows() == 1) {
+            return $query->row();
+        } else {
+            return FALSE;
+        }
 
-        return $this->db->get()->row_array();
+        // return $this->db->get()->row_array();
     }
 
     public function salvar_dados_sessao($cpf_usuario)

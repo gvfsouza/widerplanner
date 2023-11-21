@@ -97,21 +97,18 @@
                 <span style="text-align:center;font-size:20px;color:#a8aaad;font-weight: normal;">Login</span></p>
               </div>
 
-        
-
-            <?php if ($message = $this->session->flashdata('error')) {
-                  echo '<div class=" row">';
-
-                      echo '<div class="col-12">';
-                          echo '<div class="alert alert-danger alert-dismissible fade show col-mb-12" role="alert"> ';
-
-                              echo '<i class="fas fa-exclamation-triangle">&nbsp;</i> <?php echo $message; ?>';
-                          echo '</div>';
-                      echo '</div>';
+              <?php
+              if ($this->session->flashdata('error')) {
+                echo '<div style="background-color: #F8D7DA;
+                color: #6a040d; padding: 10px;
+                width: 318px; height: 50px;
+                vertical-align: middle;
+                border-radius: 5px;">';
                 echo $this->session->flashdata('error');
-
-                  '</div>';
-             } ?>
+                echo '</div>';
+              }
+              ?>
+              
               <br>
 
               <form method="POST" action="<?php echo site_url('login/login'); ?>" name="form_login">

@@ -28,7 +28,7 @@ class Cadastro_Produto extends CI_Controller
 		$dados = array();
 
 		if (isset($_POST['salvar'])) {
-			$foto_produto = $this->converte_img($_FILES['foto_produto']['tmp_name'],$_FILES['arquivo_01']['type']);
+			$foto_produto = $this->converte_img($_FILES['foto_produto']['tmp_name'],$_FILES['foto_produto']['type']);
 			$nome_produto = $this->input->post('nome_produto');
 			$descricao_produto = $this->input->post('descricao_produto');
 			$valor_produto = $this->input->post('valor_produto');
@@ -80,8 +80,8 @@ class Cadastro_Produto extends CI_Controller
 
 	public function converte_img($img, $type)
 	{
-		echo ($type.'text');
-		die();
+		// echo ($type.'text');
+		// die();
 		if ($type == 'image/png') {
 			$im = imagecreatefrompng($img);
 			ob_start();

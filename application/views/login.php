@@ -35,7 +35,9 @@
     }
 
     .card .card-body {
-        padding: 20px;
+        padding-left: 20px;
+        padding-bottom: 20px;
+        padding-right: 20px;
     }
 
     .card .form-group {

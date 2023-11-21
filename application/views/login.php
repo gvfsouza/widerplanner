@@ -101,29 +101,29 @@
                 echo $alert_message;
               }
               ?> -->
-              <?php
-if ($this->session->flashdata('error')) {
-    echo '<div style="background-color: #F8D7DA;
-    color: #6a040d; padding: 10px;
-    width: 318px; height: 50px;
-    vertical-align: middle;
-    border-radius: 5px;">';
-    echo $this->session->flashdata('error');
-    echo '</div>';
-}
-?>
+              <!-- <?php
+              if ($this->session->flashdata('error')) {
+                echo '<div style="background-color: #F8D7DA;
+                color: #6a040d; padding: 10px;
+                width: 318px; height: 50px;
+                vertical-align: middle;
+                border-radius: 5px;">';
+                echo $this->session->flashdata('error');
+                echo '</div>';
+              }
+              ?> -->
               <br>
               <!-- <?php if ($this->session->flashdata('sucesso')) { ?>
                   <div class="alert alert-success" role="alert">
                       <?php echo $this->session->flashdata('sucesso'); ?>
                   </div>
-            <?php } ?>
+            <?php } ?> -->
 
             <?php if ($this->session->flashdata('error')) { ?>
                 <div class="alert alert-success" role="alert">
                     <?php echo $this->session->flashdata('error'); ?>
                 </div>
-            <?php } ?> -->
+            <?php } ?>
 
               <form method="POST" action="<?php echo site_url('login/login'); ?>" name="form_login">
               <div class="form-group">

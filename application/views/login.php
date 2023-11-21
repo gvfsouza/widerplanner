@@ -96,19 +96,22 @@
                 <br>
                 <span style="text-align:center;font-size:20px;color:#a8aaad;font-weight: normal;">Login</span></p>
               </div>
-              <?php 
-               $this->endSection();
-              if ($this->session->flashdata('sucesso')) {    ?>
-                <div class="alert alert-success" role="alert">
-                    <?php echo $this->session->flashdata('sucesso'); ?>
-                </div>
+              <?php
+              if (isset($alert_message)) {
+                echo $alert_message;
+              }
+              ?>
+              <!-- <?php if ($this->session->flashdata('sucesso')) { ?>
+                  <div class="alert alert-success" role="alert">
+                      <?php echo $this->session->flashdata('sucesso'); ?>
+                  </div>
             <?php } ?>
 
-            <?php if ($this->session->flashdata('error')) {    ?>
-              <div class="alert alert-success" role="alert">
-                  <?php echo $this->session->flashdata('error'); ?>
-              </div>
-            <?php } ?>
+            <?php if ($this->session->flashdata('error')) { ?>
+                <div class="alert alert-success" role="alert">
+                    <?php echo $this->session->flashdata('error'); ?>
+                </div>
+            <?php } ?> -->
 
               <form method="POST" action="<?php echo site_url('login/login'); ?>" name="form_login">
               <div class="form-group">

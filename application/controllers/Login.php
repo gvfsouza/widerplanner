@@ -70,8 +70,10 @@ class Login extends CI_Controller
 				redirect('home');
 			} else {
 				// Login inválido, exibe mensagem de erro
-				$this->session->set_flashdata('error', 'CPF do usuário ou senha inválidos');
-				redirect('login');
+				$data['alert_message'] = '<div class="alert alert-danger" role="alert">CPF do usuário ou senha inválidos</div>';
+				$this->load->view('login', $data);
+				// $this->session->set_flashdata('error', 'CPF do usuário ou senha inválidos');
+				// redirect('login');
 			}
 		}
 	}

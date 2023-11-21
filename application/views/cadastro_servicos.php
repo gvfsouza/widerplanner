@@ -64,7 +64,7 @@
                                                         <input style="font-size:14px" type="text" class="form-control" id="nome_servico" name="nome_servico" value="">
                                                     </div>
 
-                                                    <div class="form-group col-md-2">
+                                                    <div class="form-group col-md-3">
                                                         <label for=""><b>Duração:</b></label>
                                                         <br>
                                                         <input style="font-size:14px" type="time" class="form-control" id="duracao_servico" name="duracao_servico" value="">

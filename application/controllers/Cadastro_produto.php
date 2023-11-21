@@ -28,7 +28,7 @@ class Cadastro_Produto extends CI_Controller
 		$dados = array();
 
 		if (isset($_POST['salvar'])) {
-			$foto_produto = $_FILES['foto_produto'];
+			$foto_produto = base64_encode($_FILES['foto_produto']);
 			$nome_produto = $this->input->post('nome_produto');
 			$descricao_produto = $this->input->post('descricao_produto');
 			$valor_produto = $this->input->post('valor_produto');

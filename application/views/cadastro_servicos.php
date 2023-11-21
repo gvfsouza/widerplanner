@@ -38,66 +38,61 @@
                                             <div style="margin-left:10px;"></div>
                                             <div class="col">
                                                 <div class="row">
-                                                    <div style="margin-left:10px;"></div>
-                                                    <div class="col">
-                                                        <div class="row">
-                                                            <div class="form-group col-md-3">
-                                                                <label for=""><b>Foto:</b></label>
-                                                                <br>
-                                                                <input style="font-size:14px" type="file" class="form-control arquivo" id="foto_servico" name="foto_servico" accept="image/*" required>
+                                                    <div class="form-group col-md-3">
+                                                        <label for=""><b>Foto:</b></label>
+                                                        <br>
+                                                        <input style="font-size:14px" type="file" class="form-control arquivo" id="foto_servico" name="foto_servico" accept="image/*" required>
 
-                                                                <div class="foto_servico col mb-3">
-                                                                    <div class="foto_servico"></div>
-                                                                </div>
+                                                        <div class="foto_servico col mb-3">
+                                                            <div class="foto_servico"></div>
+                                                        </div>
 
-                                                                <script>
-                                                                    function retornaNomeArquivo() {
-                                                                        $(".foto_servico").change(function() {
-                                                                            var filename = $(this).val().replace(/C:\\fakepath\\/i, '')
-                                                                            $(this).parent().parent().parent().next().find('.foto_servico').html('<i class="fas fa-folder-open"></i> ' + filename);
-                                                                        });
-                                                                    }
-                                                                    retornaNomeArquivo()
-                                                                </script>
-                                                            </div>
+                                                        <script>
+                                                            function retornaNomeArquivo() {
+                                                                $(".foto_servico").change(function() {
+                                                                    var filename = $(this).val().replace(/C:\\fakepath\\/i, '')
+                                                                    $(this).parent().parent().parent().next().find('.foto_servico').html('<i class="fas fa-folder-open"></i> ' + filename);
+                                                                });
+                                                            }
+                                                            retornaNomeArquivo()
+                                                        </script>
+                                                    </div>
 
-                                                            <div class="form-group col-md-3">
-                                                                <label for=""><b>Nome:</b></label>
-                                                                <br>
-                                                                <input style="font-size:14px" type="text" class="form-control" id="nome_servico" name="nome_servico" value="">
-                                                            </div>
-                                                            <div class="form-group col-md-3">
-                                                                <label for=""><b>Valor:</b></label>
-                                                                <br>
-                                                                <input type="number" class="form-control" id="valor_servico" name="valor_servico" value="">
-                                                            </div>
+                                                    <div class="form-group col-md-3">
+                                                        <label for=""><b>Nome:</b></label>
+                                                        <br>
+                                                        <input style="font-size:14px" type="text" class="form-control" id="nome_servico" name="nome_servico" value="">
+                                                    </div>
 
-                                                            <div class="form-group col-md-3">
+                                                    <div class="form-group col-md-2">
+                                                        <label for=""><b>Duração:</b></label>
+                                                        <br>
+                                                        <input style="font-size:14px" type="time" class="form-control" id="duracao_servico" name="duracao_servico" value="">
+                                                    </div>
+                                                    <div class="form-group col-md-3">
+                                                        <div class="input-group" style="margin-top: 30px;">
+                                                            <div class="input-group-prepend">
                                                                 <span class="input-group-text">$</span>
                                                             </div>
-                                                            <input type="number" class="form-control" id="valor_servico" name="valor_servico" value="" aria-label="Amount (to the nearest dollar)">
+                                                            <input type="number" class="form-control col-md-4" id="valor_servico" name="valor_servico" value="" aria-label="Amount (to the nearest dollar)">
                                                             <div class="input-group-append">
                                                                 <span class="input-group-text">.00</span>
                                                             </div>
                                                         </div>
-                                                        <div class="form-group col-md-3">
-                                                            <label for=""><b>Duração:</b></label>
-                                                            <br>
-                                                            <input style="font-size:14px" type="time" class="form-control" id="duracao_servico" name="duracao_servico" value="">
-                                                        </div>
-                                                        <div class="form-group col-md-12">
-                                                            <label for=""><b>Descrição do Serviço:</b></label>
-                                                            <br>
-                                                            <textarea type="text" class="form-control" id="descricao_servico" name="descricao_servico" maxlength="14" rows="3" cols="50"></textarea>
-                                                        </div>
+                                                    </div>
+                                                    <div class="form-group col-md-12">
+                                                        <label for=""><b>Descrição do Serviço:</b></label>
+                                                        <br>
+                                                        <textarea type="text" class="form-control" id="descricao_servico" name="descricao_servico" maxlength="14" rows="3" cols="50"></textarea>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+                                    </fieldset>
                                 </div>
-                                </fieldset>
                             </div>
                         </div>
+                    </form>
                 </div>
                 <div class="text-right">
                     <button href="<?php echo base_url(); ?>/cadastro_servicos/" type="submit" name="salvar" class="btn-lg btn" style="border: none;background-color: #82a4ef;color: white;">Salvar</button>
@@ -116,5 +111,4 @@
         </div>
         <br>
     </div>
-</div>
 </div>

@@ -14,7 +14,7 @@
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="" role="tabpanel">
 
-                    <?php if ($this->session->flashdata('sucesso')) {    ?>
+                    <?php if ($this->session->flashdata('sucesso')) { ?>
                         <div class="alert alert-success" role="alert">
                             <?php echo $this->session->flashdata('sucesso'); ?>
                         </div>
@@ -71,41 +71,50 @@
                                                                 <br>
                                                                 <input type="number" class="form-control" id="valor_servico" name="valor_servico" value="">
                                                             </div>
+
                                                             <div class="form-group col-md-3">
-                                                                <label for=""><b>Duração:</b></label>
-                                                                <br>
-                                                                <input style="font-size:14px" type="time" class="form-control" id="duracao_servico" name="duracao_servico" value="">
+                                                                <span class="input-group-text">$</span>
                                                             </div>
-                                                            <div class="form-group col-md-12">
-                                                                <label for=""><b>Descrição do Serviço:</b></label>
-                                                                <br>
-                                                                <textarea type="text" class="form-control" id="descricao_servico" name="descricao_servico" maxlength="14" rows="3" cols="50"></textarea>
+                                                            <input type="number" class="form-control" id="valor_servico" name="valor_servico" value="" aria-label="Amount (to the nearest dollar)">
+                                                            <div class="input-group-append">
+                                                                <span class="input-group-text">.00</span>
                                                             </div>
+                                                        </div>
+                                                        <div class="form-group col-md-3">
+                                                            <label for=""><b>Duração:</b></label>
+                                                            <br>
+                                                            <input style="font-size:14px" type="time" class="form-control" id="duracao_servico" name="duracao_servico" value="">
+                                                        </div>
+                                                        <div class="form-group col-md-12">
+                                                            <label for=""><b>Descrição do Serviço:</b></label>
+                                                            <br>
+                                                            <textarea type="text" class="form-control" id="descricao_servico" name="descricao_servico" maxlength="14" rows="3" cols="50"></textarea>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </fieldset>
                                 </div>
+                                </fieldset>
                             </div>
                         </div>
-                        <div class="text-right">
-                            <button href="<?php echo base_url(); ?>/cadastro_servicos/" type="submit" name="salvar" class="btn-lg btn" style="border: none;background-color: #82a4ef;color: white;">Salvar</button>
-                        </div>
-                    </form>
                 </div>
+                <div class="text-right">
+                    <button href="<?php echo base_url(); ?>/cadastro_servicos/" type="submit" name="salvar" class="btn-lg btn" style="border: none;background-color: #82a4ef;color: white;">Salvar</button>
+                </div>
+                </form>
             </div>
-            <br><br>
-            <div class="col-12 text-center">
-                <span style="text-align: center">Sistema desenvolvido para cunho estudantil <br>
-                    Projeto de Conclusão de Curso - Superior de Tecnologia em Análise e Deselvolvimento de Sistemas
-                    <br>
-                    Centro Universitário Nossa Senhora do Patrocínio <br>
-                    Endereço: R. José Weissohn, 153 - Centro, Salto - SP, 13328-300</span>
-                <br><br>
-            </div>
-            <br>
         </div>
+        <br><br>
+        <div class="col-12 text-center">
+            <span style="text-align: center">Sistema desenvolvido para cunho estudantil <br>
+                Projeto de Conclusão de Curso - Superior de Tecnologia em Análise e Deselvolvimento de Sistemas
+                <br>
+                Centro Universitário Nossa Senhora do Patrocínio <br>
+                Endereço: R. José Weissohn, 153 - Centro, Salto - SP, 13328-300</span>
+            <br><br>
+        </div>
+        <br>
     </div>
+</div>
 </div>

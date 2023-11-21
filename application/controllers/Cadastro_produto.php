@@ -80,7 +80,7 @@ class Cadastro_Produto extends CI_Controller
 
 	public function converte_img($img, $type)
 	{
-		echo ($type);
+		echo ($type.'text');
 		die();
 		if ($type == 'image/png') {
 			$im = imagecreatefrompng($img);

@@ -121,8 +121,6 @@
                   <br>
                   <br>
                   <input type="hidden" name="ent" id="ent" value="1">
-                  <input class="form-control" style="background:#139358; color:white; border:none" type="submit" name="lg_submit" id="lg_submit" value="Acessar" />
-
                   <input class="form-control" type="submit" id="entrar" name="entrar" value="Entrar"></input>
                 </form>
                 <br>

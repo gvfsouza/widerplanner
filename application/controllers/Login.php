@@ -47,6 +47,8 @@ class Login extends CI_Controller
 			redirect('home');
 		}
 	
+		$this->load->library('form_validation');
+		
 		// Regras de validação
 		$this->form_validation->set_rules('cpf_usuario', 'CPF do Usuário', 'trim|required');
 		$this->form_validation->set_rules('senha', 'Senha', 'trim|required');

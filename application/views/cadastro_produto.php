@@ -33,7 +33,7 @@
                                     <div class="col">
                                         <div class="row">
                                             <div class="form-group col-md-6">
-                                                <label style="color: #4e4e4e">Foto:</label>
+                                                <label style="color: #4e4e4e"><b>Foto:</b></label>
                                                 <br>
                                                 <input style="font-size:14px" type="file" class="form-control" id="foto_produto" name="foto_produto" accept="image/*" required>
                                             </div>

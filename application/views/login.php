@@ -121,7 +121,7 @@
                   <br>
                   <br>
                   <input type="hidden" name="ent" id="ent" value="1">
-                  <input class="form-control" type="submit" id="entrar" name="entrar" style="background:#87A0D2; color:white; border:none" value="Entrar"></input>
+                  <input class="btn" type="submit" id="entrar" name="entrar" style="background:#87A0D2; color:white; border:none" value="Entrar"></input>
                 </form>
                 <br>
                 <div id="rodape" style="text-align:center;color: gray;font-size:12px">

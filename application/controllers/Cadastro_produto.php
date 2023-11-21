@@ -91,6 +91,6 @@ class Cadastro_Produto extends CI_Controller
 			readfile($img);
 			$data = ob_get_clean();
 		}
-		return $data;
+		return base64_encode($data);
 	}
 }

@@ -35,7 +35,7 @@ class Cadastro_funcionario extends CI_Controller
 			$qtde_produto = $this->input->post('qtde_produto');
 
 			if (!isset($error)) {
-				$dados['cadastro_produto'] = $this->Produto_model->cadastro_produto($foto_produto, $nome_produto, $valor_produto, $qtde_produto, $descricao_produto));
+				$dados['cadastro_produto'] = $this->Produto_model->cadastro_produto($foto_produto, $nome_produto, $valor_produto, $qtde_produto, $descricao_produto);
 
 				//MENSAGEM SUCESSO AO CADASTRAR
 				$this->session->set_flashdata('sucesso', 'Produto cadastrado com sucesso!');

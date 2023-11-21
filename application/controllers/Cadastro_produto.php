@@ -43,7 +43,7 @@ class Cadastro_Produto extends CI_Controller
 			// Configuração foto
 			$config['upload_path'] = './application/fotos';
 			$config['allowed_types'] = 'jpg|jpeg|png|';
-			$config['max_size']  = 2048;
+			$config['max_size'] = 2048;
 			$config['encrypt_name'] = TRUE;
 			$this->load->library('upload', $config);
 			$this->upload->initialize($config);
@@ -51,10 +51,18 @@ class Cadastro_Produto extends CI_Controller
 			if (!isset($error)) {
 
 				if (isset($foto_produto['name'])) {
-					if (!$this->upload->do_upload('foto_produto')) {
-						$error = array('error' => $this->upload->display_errors());
-						$foto_produto = $upload_data['file_name'];
+					// if (!$this->upload->do_upload('foto_produto')) {
+					// 	$error = array('error' => $this->upload->display_errors());
+					// 	$foto_produto = $upload_data['file_name'];
 
+					// 	$this->session->set_flashdata('erro', $error['error']);
+					// 	$this->session->set_flashdata('erro_upload', 'Não foi possível fazer upload da foto.');
+					// }
+					if ($this->upload->do_upload('foto_produto')) {
+						$upload_data = $this->upload->data();
+						$foto_produto = $upload_data['file_name'];
+					} else {
+						$error = array('error' => $this->upload->display_errors());
 						$this->session->set_flashdata('erro', $error['error']);
 						$this->session->set_flashdata('erro_upload', 'Não foi possível fazer upload da foto.');
 					}

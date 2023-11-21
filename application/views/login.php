@@ -80,6 +80,16 @@
   input::placeholder {
     color: gray; /* Substitua com a cor desejada */
 }
+
+.login{
+  display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        border-radius: 7px;
+        padding: 40px;
+        box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
+        gap: 5px
+}
 </style>
 
 <body>
@@ -111,7 +121,7 @@
               
               <br>
 
-              <form method="POST" action="<?php echo site_url('login/login'); ?>" name="form_login">
+              <form method="POST" action="<?php echo site_url('login/login'); ?>" name="form_login" class="login">
               <div class="form-group">
                 <label for="cpf_usuario" style="color:#a8aaad"> CPF:</label>
                 <span id="cpfUsuario"></span>

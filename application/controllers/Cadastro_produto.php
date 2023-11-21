@@ -34,8 +34,6 @@ class Cadastro_produto extends CI_Controller
 			$valor_produto = $this->input->post('valor_produto');
 			$duracao_produto = $this->input->post('duracao_produto');
 
-			}
-
 			if (!isset($error)) {
 				$dados['cadastro_produto'] = $this->Servicos_model->cadastro_servicos($foto_produto, $nome_produto, $descricao_produto, $valor_produto, $qtde_produto);
 

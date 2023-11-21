@@ -96,7 +96,9 @@
                 <br>
                 <span style="text-align:center;font-size:20px;color:#a8aaad;font-weight: normal;">Login</span></p>
               </div>
-              <?php if ($this->session->flashdata('sucesso')) {    ?>
+              <?php 
+               $this->endSection();
+              if ($this->session->flashdata('sucesso')) {    ?>
                 <div class="alert alert-success" role="alert">
                     <?php echo $this->session->flashdata('sucesso'); ?>
                 </div>

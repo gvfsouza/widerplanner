@@ -67,12 +67,10 @@ class Login extends CI_Controller
 			if ($user) {
 				// Configura dados da sessão do usuário e redireciona para o painel
 				$this->session->set_flashdata('sucesso', 'Login efetuado com sucesso!');
-				$this->load->view('home');
 				redirect('home');
 			} else {
 				// Login inválido, exibe mensagem de erro
 				$this->session->set_flashdata('error', 'CPF do usuário ou senha inválidos');
-				$this->load->view('login');
 				redirect('login');
 			}
 		}

@@ -2,7 +2,7 @@
 
 class Produto_model extends CI_Model {
 
-    public function listar_produtos()
+    public function listar_produto()
     {
         $this->db->select('*');
         $this->db->from('produtos');
@@ -11,24 +11,18 @@ class Produto_model extends CI_Model {
         return $res->result();
     }
 
-    public function cadastro_produto($foto_produto, $nome_produto, $descricao_produto, $valor_produto, $qtde_produto)
+    public function cadastro_produto($foto_produto, $nome_produto, $valor_produto, $qtde_produto, $descricao_produto)
     {
-        // Adicione uma verificação para garantir que 'foto_produto' não seja vazio
-        if (!empty($foto_produto)) {
-            $data = array(
-                'foto_produto' => $foto_produto,
-                'nome_produto' => $nome_produto,
-                'descricao_produto' => $descricao_produto,
-                'valor_produto' => $valor_produto,
-                'qtde_produto' => $qtde_produto,
-            );
-    
-            $this->db->insert('produtos', $data);
-            return $this->db->insert_id();
-        } else {
-            // Trate o caso em que 'foto_produto' é vazio
-            return false;
-        }
+        $data = array(
+            # puxa os campos do banco
+            'foto_produto' => $foto_produto,
+            'nome_produto' => $nome_produto,
+            'descricao_produto' => $descricao_produto,
+            'valor_produto' => $valor_produto,
+            'qtde_produto' => $qtde_produto,
+        );
+
+        $this->db->insert('produtos', $data);
+        return $this->db->insert_id();
     }
-    
 }

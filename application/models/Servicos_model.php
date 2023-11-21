@@ -14,7 +14,6 @@ class Servicos_model extends CI_Model {
     public function cadastro_servicos($foto_servico, $nome_servico, $descricao_servico, $valor_servico, $duracao_servico)
     {
         $data = array(
-            # puxa os campos do banco
             'foto_servico' => $foto_servico,
             'nome_servico' => $nome_servico,
             'descricao_servico' => $descricao_servico,

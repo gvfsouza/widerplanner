@@ -14,7 +14,7 @@
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="" role="tabpanel">
 
-                    <<?php if ($this->session->flashdata('sucesso')) {    ?>
+                    <?php if ($this->session->flashdata('sucesso')) {    ?>
                         <div class="alert alert-success" role="alert">
                             <?php echo $this->session->flashdata('sucesso'); ?>
                         </div>
@@ -44,7 +44,7 @@
                                                             <div class="form-group col-md-3">
                                                                 <label for=""><b>Foto:</b></label>
                                                                 <br>
-                                                                <input style="font-size:14px" type="file" class="form-control arquivo" id="foto_servico" name="foto_servico[]" accept="image/*">
+                                                                <input style="font-size:14px" type="file" class="form-control arquivo" id="foto_servico" name="foto_servico" accept="image/*" required>
 
                                                                 <div class="foto_servico col mb-3">
                                                                     <div class="foto_servico"></div>

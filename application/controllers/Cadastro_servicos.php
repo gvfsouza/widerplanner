@@ -27,40 +27,22 @@ class Cadastro_servicos extends CI_Controller
 		$dados = array();
 
 		if (isset($_POST['salvar'])) {
-			$foto_servico = $_FILES['foto_servico'];
+			$foto_servico = $this->converte_img($_FILES['foto_servico']['tmp_name'],$_FILES['foto_servico']['type']);
 			$nome_servico = $this->input->post('nome_servico');
 			$descricao_servico = $this->input->post('descricao_servico');
 			$valor_servico = $this->input->post('valor_servico');
 			$duracao_servico = $this->input->post('duracao_servico');
 
-			$config['upload_path']          = './arquivos/';
-			$config['allowed_types']        = '*';
-			$config['allowed_types']        = 'jpg|jpeg|png';
-			$config['max_size']             = 0;
-			// $config['max_width']            = 1024;
-			// $config['max_height']           = 768;
+			// FOTO - EXTENSÃO
+			$path = $_FILES['foto_servico']['name'];
+			$ext = pathinfo($path, PATHINFO_EXTENSION);
+			$config['upload_path'] = './application/fotos';
+			$config['allowed_types'] = 'jpg|jpeg|png';
+			$config['max_size'] = 2048;
 			$config['encrypt_name'] = TRUE;
 			$this->load->library('upload', $config);
+			$this->upload->initialize($config);
 		
-			for ($i = 0; $i < count($foto_servico['name']); $i++) {
-				if ($foto_servico['size'][$i] == "") {
-					$foto_servico[] = "";
-				} else {
-					$_FILES['arquivo']['name'] = $foto_servico['name'][$i];
-					$_FILES['arquivo']['type'] = $foto_servico['type'][$i];
-					$_FILES['arquivo']['tmp_name'] = $foto_servico['tmp_name'][$i];
-					$_FILES['arquivo']['error'] = $foto_servico['error'][$i];
-					$_FILES['arquivo']['size'] = $foto_servico['size'][$i];
-		
-					if (!$this->upload->do_upload('arquivo')) {
-						$error = array('erro' => $this->upload->display_errors());
-						$this->session->set_flashdata('erro', $error['erro']);
-					} else {
-						$arquivo_[] = $this->upload->data('file_name');
-					}
-				}
-			}
-
 			if (!isset($error)) {
 				$dados['cadastro_servicos'] = $this->Servicos_model->cadastro_servicos($foto_servico, $nome_servico, $descricao_servico, $valor_servico, $duracao_servico);
 
@@ -77,5 +59,21 @@ class Cadastro_servicos extends CI_Controller
 		$this->load->view('layout/navbar');
 		$this->load->view('cadastro_servicos', $dados);
 		// $this->load->view('layout/footer');
+	}
+
+	public function converte_img($img, $type)
+	{
+		if ($type == 'image/png') {
+			$im = imagecreatefrompng($img);
+			ob_start();
+			imagejpeg($im);
+			$data = ob_get_clean();
+			imagedestroy($im);
+		} else {
+			ob_start();
+			readfile($img);
+			$data = ob_get_clean();
+		}
+		return base64_encode($data);
 	}
 }

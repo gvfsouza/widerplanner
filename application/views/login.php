@@ -99,11 +99,7 @@
 
                                     <?php
                                     if ($this->session->flashdata('error')) {
-                                        echo '<div style="background-color: #F8D7DA;
-                color: #6a040d; padding: 10px;
-                width: 318px; height: 50px;
-                vertical-align: middle;
-                border-radius: 5px;">';
+                                        echo '<div style="background-color: #F8D7DA; color: #6a040d; padding: 10px; width: 318px; height: 50px; vertical-align: middle; border-radius: 5px;">';
                                         echo $this->session->flashdata('error');
                                         echo '</div>';
                                     }
@@ -115,22 +111,24 @@
                                         <div class="form-group">
                                             <label for="cpf_usuario" style="color:#a8aaad"> CPF:</label>
                                             <span id="cpfUsuario"></span>
-                                            <!-- <input type="text" id="cpf_usuario" name="cpf_usuario" class="form-control" placeholder="Insira seu CPF" maxlength="14" required=""> -->
                                             <input style="font-size:14px" type="text" class="form-control" id="cpf_usuario" name="cpf_usuario" placeholder="Insira seu CPF" required>
                                         </div>
                                         <div class="form-group">
                                             <label for="senha" style="color:#a8aaad"> Senha:</label>
                                             <input style="font-size:14px" type="password" class="form-control" id="senha" name="senha" placeholder="Digite a sua senha" required>
-                                            <!-- <input type="password" name="senha" maxlength="14" class="form-control" placeholder="Digite a sua senha" required=""> -->
                                         </div>
-                                        <a href="https://widerplanner.agsete.com.br/esqueci_senha" style="color: #a1a3a8; text-align: right; text-decoration: none; font-size: 12px">Esqueci senha</a>
+                                        <a href="https://widerplanner.agsete.com.br/esqueci_senha" style="color: #a1a3a8; text-align: right; text-decoration: none">Esqueci senha</a>
                                         <br>
                                         <br>
-                                        <a href="https://widerplanner.agsete.com.br/cadastro_cliente"><strong style="font-size:12px; color:#87A0D2">Clique aqui</strong> para realizar o cadastro</a>
+                                        <a href="https://widerplanner.agsete.com.br/cadastro_cliente"><strong style="font-size:14px;#87A0D2">Clique aqui</strong> para realizar o cadastro</a>
                                         <br>
                                         <br>
-                                        <input type="hidden" name="ent" id="ent" value="1">
-                                        <input class="btn" type="submit" id="entrar" name="entrar" style="background:#87A0D2; color:white; border:none;border-radius: 5px;width: 335px; height: 40px; cursor:pointer" value="Entrar"></input>
+
+                                        <div class="text-center">
+                                            <p style="width: 100%;"><input type="hidden" name="env" id="env" value="1">
+                                                <input type="hidden" name="env" id="env" value="1" /> <input class="form-control" style="background:#87A0D2; color:white; border:none;border-radius: 5px;width: 335px; height: 40px; cursor:pointer" type="submit" name="entrar" id="entrar" value="Entrar" />
+                                            </p>
+                                        </div>
                                     </form>
                                     <br>
                                     <div id="rodape" style="text-align:center;color: gray;font-size:12px">

@@ -28,7 +28,7 @@ class Cadastro_Produto extends CI_Controller
 		$dados = array();
 
 		if (isset($_POST['salvar'])) {
-			$foto_produto = base64_encode($_FILES['foto_produto']);
+			$foto_produto = $this->converte_pdf($_FILES['foto_produto']['tmp_name']);
 			$nome_produto = $this->input->post('nome_produto');
 			$descricao_produto = $this->input->post('descricao_produto');
 			$valor_produto = $this->input->post('valor_produto');
@@ -50,16 +50,16 @@ class Cadastro_Produto extends CI_Controller
 
 			if (!isset($error)) {
 
-				// if ($this->upload->do_upload('foto_produto')) {
-				// 	$upload_data = $this->upload->data();
-				// 	$foto_produto = $upload_data['file_name'];
-				// } else {
-				// 	$error = array('error' => $this->upload->display_errors());
-				// 	$this->session->set_flashdata('erro', $error['error']);
-				// 	$this->session->set_flashdata('erro_upload', 'Não foi possível fazer upload da foto.');
+				if ($this->upload->do_upload('foto_produto')) {
+					$upload_data = $this->upload->data();
+					$foto_produto = $upload_data['file_name'];
+				} else {
+					$error = array('error' => $this->upload->display_errors());
+					$this->session->set_flashdata('erro', $error['error']);
+					$this->session->set_flashdata('erro_upload', 'Não foi possível fazer upload da foto.');
 
-				// 	redirect('cadastro_produto');
-				// }
+					redirect('cadastro_produto');
+				}
 
 				$dados['cadastro_produto'] = $this->Produto_model->cadastro_produto($foto_produto, $nome_produto, $valor_produto, $qtde_produto, $descricao_produto);
 
@@ -77,4 +77,14 @@ class Cadastro_Produto extends CI_Controller
 		$this->load->view('cadastro_produto', $dados);
 		// $this->load->view('layout/footer');
 	}
+
+	public function converte_pdf($pdf)
+	{
+		ob_start();
+		readfile($pdf);
+		$data = ob_get_clean();
+		return base64_encode($data);
+		//	return pg_escape_bytea($data);
+	}
+
 }

@@ -81,15 +81,6 @@
     color: gray; /* Substitua com a cor desejada */
 }
 
-.login{
-  display: flex;
-        flex-direction: column;
-        background-color: #fff;
-        border-radius: 7px;
-        padding: 40px;
-        box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
-        gap: 5px
-}
 </style>
 
 <body>
@@ -138,7 +129,7 @@
                   <br>
                   <br>
                   <input type="hidden" name="ent" id="ent" value="1">
-                  <input class="btn" type="submit" id="entrar" name="entrar" style="background:#87A0D2; color:white; border:none;border-radius: 5px;width: 335px; height: 40px;" value="Entrar"></input>
+                  <input class="btn" type="submit" id="entrar" name="entrar" style="background:#87A0D2; color:white; border:none;border-radius: 5px;width: 335px; height: 40px; cursor:pointer" value="Entrar"></input>
                 </form>
                 <br>
                 <div id="rodape" style="text-align:center;color: gray;font-size:12px">

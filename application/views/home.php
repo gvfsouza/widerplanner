@@ -159,119 +159,120 @@
     }
 
     @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
-*
-{
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+
+    * {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
 
 
-body {
-    font-family: 'Roboto', sans-serif;
-}
+    body {
+        font-family: 'Roboto', sans-serif;
+    }
 
-a {
-    text-decoration: none;
-}
-.product-card {
-    width: 380px;
-    position: relative;
-    box-shadow: 0 2px 7px #dfdfdf;
-    margin: 50px auto;
-    border-radius: 19px;
-    /* background: #fafafa; */
-}
+    a {
+        text-decoration: none;
+    }
 
-.product-tumb {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 300px;
-    padding: 50px;
-    /* background: #f0f0f0; */
-}
+    .product-card {
+        width: 380px;
+        position: relative;
+        box-shadow: 0 2px 7px #dfdfdf;
+        margin: 50px auto;
+        border-radius: 19px;
+        /* background: #fafafa; */
+    }
 
-.product-tumb img {
-    max-width: 100%;
-    max-height: 100%;
-}
+    .product-tumb {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 300px;
+        padding: 50px;
+        /* background: #f0f0f0; */
+    }
 
-.product-details {
-    padding: 30px;
-}
+    .product-tumb img {
+        max-width: 100%;
+        max-height: 100%;
+    }
 
-.product-catagory {
-    display: block;
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #ccc;
-    margin-bottom: 18px;
-}
+    .product-details {
+        padding: 30px;
+    }
 
-.product-details h4 a {
-    font-weight: 500;
-    display: block;
-    margin-bottom: 18px;
-    text-transform: uppercase;
-    color: #363636;
-    text-decoration: none;
-    transition: 0.3s;
-}
+    .product-catagory {
+        display: block;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #ccc;
+        margin-bottom: 18px;
+    }
 
-.product-details h4 a:hover {
-    color: #fbb72c;
-}
+    .product-details h4 a {
+        font-weight: 500;
+        display: block;
+        margin-bottom: 18px;
+        text-transform: uppercase;
+        color: #363636;
+        text-decoration: none;
+        transition: 0.3s;
+    }
 
-.product-details p {
-    font-size: 15px;
-    line-height: 22px;
-    margin-bottom: 18px;
-    color: #999;
-}
+    .product-details h4 a:hover {
+        color: #fbb72c;
+    }
 
-.product-bottom-details {
-    overflow: hidden;
-    border-top: 1px solid #eee;
-    padding-top: 20px;
-}
+    .product-details p {
+        font-size: 15px;
+        line-height: 22px;
+        margin-bottom: 18px;
+        color: #999;
+    }
 
-.product-bottom-details div {
-    float: left;
-    width: 50%;
-}
+    .product-bottom-details {
+        overflow: hidden;
+        border-top: 1px solid #eee;
+        padding-top: 20px;
+    }
 
-.product-price {
-    font-size: 18px;
-    color: #fbb72c;
-    font-weight: 600;
-}
+    .product-bottom-details div {
+        float: left;
+        width: 50%;
+    }
 
-.product-price small {
-    font-size: 80%;
-    font-weight: 400;
-    text-decoration: line-through;
-    display: inline-block;
-    margin-right: 5px;
-}
+    .product-price {
+        font-size: 18px;
+        color: #fbb72c;
+        font-weight: 600;
+    }
 
-.product-links {
-    text-align: right;
-}
+    .product-price small {
+        font-size: 80%;
+        font-weight: 400;
+        text-decoration: line-through;
+        display: inline-block;
+        margin-right: 5px;
+    }
 
-.product-links a {
-    display: inline-block;
-    margin-left: 5px;
-    color: #e1e1e1;
-    transition: 0.3s;
-    font-size: 17px;
-}
+    .product-links {
+        text-align: right;
+    }
 
-.product-links a:hover {
-    color: #fbb72c;
-}
+    .product-links a {
+        display: inline-block;
+        margin-left: 5px;
+        color: #e1e1e1;
+        transition: 0.3s;
+        font-size: 17px;
+    }
+
+    .product-links a:hover {
+        color: #fbb72c;
+    }
 </style>
 
 <br>
@@ -370,39 +371,49 @@ a {
                                             </div>
                                         </fieldset>
 
-                                        <?php foreach ($listar_dados_produtos as $value) { ?>
-                                            <fieldset class="form-group " style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9;">
-                                                <div class="card-container">
-                                                    <div class="flex-container space-between">
-                                                        <div class="col card">
-                                                            <div class="img-placeholder">
-                                                                <!-- Check if the product has a photo -->
-                                                                <?php if (!empty($produto->foto_produto)) { ?>
-                                                                    <img src="<?php echo base_url('application/fotos/' . $produto->foto_produto); ?>" height="60" class="pl-3">
-                                                                <?php } ?>
-                                                            </div>
-                                                            <div>
-                                                                <h3><?php echo $produto->nome_produto; ?></h3>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col card">
-                                                            <div class="img-placeholder">
-                                                                <img src="https://images.unsplash.com/photo-1614130946015-d5a7a3276fea?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTc5MTY4MTU&ixlib=rb-1.2.1&q=80">
-                                                            </div>
-                                                            <div>
-                                                                <h3>Wafaa</h3>
-                                                                <p><i class="fa-solid fa-user"></i> Front End Web Developer
-                                                                </p>
-                                                                <p><i class="fa-solid fa-paper-plane"></i> <a href="mailto:wafaa_cr@outlook.com">Email Me</a></p>
-                                                                <p><i class="fa-solid fa-location-dot"></i> Auckland, New
-                                                                    Zealand</p>
+                                        <?php if (!empty($listar_dados_produtos)) : ?>
+                                            <?php foreach ($listar_dados_produtos as $produto) : ?>
+                                                <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9;">
+                                                    <div class="card-container">
+                                                        <div class="flex-container space-between">
+                                                            <div class="col card">
+                                                                <div class="img-placeholder">
+                                                                    <?php if (!empty($produto->foto_produto)) : ?>
+                                                                        <img src="<?php echo base_url('images/produtos/' . $produto->foto_produto); ?>" height="60" class="pl-3">
+                                                                    <?php else : ?>
+                                                                        <img src="<?php echo base_url('path_to_default_image/default_image.jpg'); ?>" height="60" class="pl-3">
+                                                                    <?php endif; ?>
+                                                                </div>
+                                                                <div>
+                                                                    <?php if (!empty($produto->nome_produto)) : ?>
+                                                                        <h3><?php echo $produto->nome_produto; ?></h3>
+                                                                        <!-- Add other product details as needed -->
+
+                                                                        <div class="col card">
+                                                                            <div class="img-placeholder">
+                                                                                <img src="https://images.unsplash.com/photo-1614130946015-d5a7a3276fea?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTc5MTY4MTU&ixlib=rb-1.2.1&q=80">
+                                                                            </div>
+                                                                            <div>
+                                                                                <h3>Wafaa</h3>
+                                                                                <p><i class="fa-solid fa-user"></i> Front End Web Developer
+                                                                                </p>
+                                                                                <p><i class="fa-solid fa-paper-plane"></i> <a href="mailto:wafaa_cr@outlook.com">Email Me</a></p>
+                                                                                <p><i class="fa-solid fa-location-dot"></i> Auckland, New
+                                                                                    Zealand</p>
+                                                                            </div>
+                                                                        </div>
+                                                                </div><?php endif; ?>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </fieldset>
-                                        <?php } ?>
+                                                </fieldset>
+                                            <?php endforeach; ?>
+                                        <?php else : ?>
+                                            <p>Nenhum produto encontrado.</p>
+                                        <?php endif; ?>
+
                                         <br>
+
                                         <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 7px; border: 1px solid #879bc9;background: #879bc9;color: black;">
                                             <div>
                                                 <legend class="form-group" style="color: white; font-size: 18px;">

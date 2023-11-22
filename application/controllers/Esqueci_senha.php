@@ -31,8 +31,14 @@ class Esqueci_senha extends CI_Controller
 		if (isset($_POST['enviar'])) {
 			$this->load->library('encryption');
 
-			$cpf_usuario = $_POST['cpf_usuario'];
-			$email_usuario = $_POST['email_usuario'];
+			// $cpf_usuario = $_POST['cpf_usuario'];
+			// $email_usuario = $_POST['email_usuario'];
+
+			// Verifica se a chave 'cpf_usuario' está definida no array $_POST
+			$cpf_usuario = isset($_POST['cpf_usuario']) ? $_POST['cpf_usuario'] : null;
+
+			// Verifica se a chave 'email_usuario' está definida no array $_POST
+			$email_usuario = isset($_POST['email_usuario']) ? $_POST['email_usuario'] : null;
 
 			if ($cpf_usuario == '' || $email_usuario == '') {
 				$this->session->set_flashdata('error', 'Todos os campos devem ser preenchidos.');
@@ -80,10 +86,10 @@ class Esqueci_senha extends CI_Controller
 		if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($explode_chave[1], $_POST['nova_senha'])) {
 			$data_hora = $explode_chave[0];
 			$cpf_usuario = $explode_chave[1];
-		
+
 			$nova_senha = $_POST['nova_senha'];
 			$confirma_senha = $_POST['confirma_senha'];
-		
+
 			if ($nova_senha != $confirma_senha) {
 				$this->session->set_flashdata('error', 'As senhas não conferem');
 			} else {
@@ -92,7 +98,7 @@ class Esqueci_senha extends CI_Controller
 				redirect('login/');
 			}
 		}
-		
+
 
 		$this->load->view('layout/header');
 		$this->load->view('recuperar_senha');

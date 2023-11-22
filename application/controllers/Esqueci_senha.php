@@ -30,7 +30,6 @@ class Esqueci_senha extends CI_Controller
 
 		if (isset($_POST['enviar'])) {
 			$this->load->library('encryption');
-			$this->load->library('my_encrypt');
 
 			$cpf_usuario = $_POST['cpf_usuario'];
 			$email_usuario = $_POST['email_usuario'];

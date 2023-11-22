@@ -2,6 +2,7 @@
 
 class Login_model extends CI_Model
 {
+    // Login
     public function autenticacao_usuario($cpf_usuario, $senha)
     {
         // Realiza a autenticação do usuário, por exemplo, consulta no banco de dados
@@ -20,10 +21,21 @@ class Login_model extends CI_Model
 
     public function salvar_dados_sessao($cpf_usuario)
     {
-      $this->db->select("*");
-      $this->db->from('usuario');
-      $this->db->where('cpf_usuario', $cpf_usuario);
-  
-      return $this->db->get()->row_array();
+        $this->db->select("*");
+        $this->db->from('usuario');
+        $this->db->where('cpf_usuario', $cpf_usuario);
+
+        return $this->db->get()->row_array();
+    }
+
+    //  Esqueci senha
+    public function esqueci_senha($cpf_usuario, $email_usuario)
+    {
+        $this->db->select("*");
+        $this->db->from('usuario');
+        $this->db->where('cpf_usuario', $cpf_usuario);
+        $this->db->where('email_usuario', $email_usuario);
+
+        return $this->db->get()->first_row();
     }
 }

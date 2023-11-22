@@ -91,6 +91,18 @@
         </div>
         <div class="card-body">
           <form method="POST">
+            <?php if ($this->session->flashdata('success_email')) {    ?>
+              <div class="alert alert-success" role="alert">
+                  <?php echo $this->session->flashdata('success_email'); ?>
+              </div>
+          <?php } ?>
+
+          <?php if ($this->session->flashdata('error_email')) {    ?>
+              <div class="alert alert-danger" role="alert">
+                  <?php echo $this->session->flashdata('error_email'); ?>
+              </div>
+          <?php } ?>
+          <br>
             <div class="form-group">
                 <label for="cpf_usuario" style="color:#a8aaad"> CPF:</label>
                 <span id="cpfUsuario"></span>
@@ -101,8 +113,8 @@
               <span id="email_usuario"></span>
               <input type="email" class="form-control" id="email" name="email" maxlength="60" onblur="validacaoEmail(this)" placeholder="exemplo@gmail.com" required>
             </div>
-           
-            <button type="submit" id="enviar" name="enviar">Enviar</button>
+            <input type="hidden" name="enviar" id="enviar" value="1" />
+            <input class="form-control" style=" background: #0090c9c7; color: white; border:none " type="submit" name="botao_enviar" value="Enviar" />
           </form>
           <br>
           <div id="rodape" style="text-align:center;color: gray;font-size:12px">

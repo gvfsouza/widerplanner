@@ -92,13 +92,27 @@
         </div>
         <div class="card-body">
           <form method="POST">
+            <?php if ($this->session->flashdata('sucesso')) {    ?>
+                <div class="alert alert-success" role="alert">
+                    <?php echo $this->session->flashdata('sucesso'); ?>
+                </div>
+            <?php } ?>
+
+            <?php if ($this->session->flashdata('error')) {    ?>
+                <div class="alert alert-danger" role="alert">
+                    <?php echo $this->session->flashdata('error'); ?>
+                </div>
+            <?php } ?>
+  
+            
+            <br>
             <div class="form-group">
               <label for="senha_nova">Nova senha</label>
               <input type="password" class="form-control" id="senha_nova" name="senha_nova" placeholder="Digite a nova senha" required>
             </div>
             <div class="form-group">
               <label for="conf_senha">Confirme a nova senha</label>
-              <input type="password" class="form-control" id="conf_senha" name="conf_senha" placeholder="Insira a senha novamente" required>
+              <input type="password" class="form-control" id="confirma_senha" name="confirma_senha" placeholder="Insira a senha novamente" required>
             </div>
            
             <button type="submit" id="entrar" name="entrar">Entrar</button>
@@ -111,4 +125,3 @@
       </div>
     </div>
   </nav>
-</body>

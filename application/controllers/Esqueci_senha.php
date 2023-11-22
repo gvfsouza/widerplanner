@@ -23,61 +23,39 @@ class Esqueci_senha extends CI_Controller
 	}
 
 	public function index()
-	{
-		$this->load->model('Login_model');
+{
+    $this->load->model('Login_model');
 
+    if (isset($_POST['enviar'])) {
+        $this->load->library('encryption');
 
+        $cpf_usuario = isset($_POST['cpf_usuario']) ? $_POST['cpf_usuario'] : null;
+        $email_usuario = isset($_POST['email_usuario']) ? $_POST['email_usuario'] : null;
 
-		if (isset($_POST['enviar'])) {
-			$this->load->library('encryption');
+        if (empty($cpf_usuario) || empty($email_usuario)) {
+            $this->session->set_flashdata('error', 'Todos os campos devem ser preenchidos.');
+        } else {
+            // Removida a verificação de $error, pois não é usada
+            $dados = $this->Login_model->esqueci_senha($cpf_usuario, $email_usuario);
 
-			// $cpf_usuario = $_POST['cpf_usuario'];
-			// $email_usuario = $_POST['email_usuario'];
+            if ($dados) {
+                $link_esqueci_senha = base_url() . 'esqueci_senha/recuperar_senha/' . $dados->chave_recuperacao;
 
-			// Verifica se a chave 'cpf_usuario' está definida no array $_POST
-			$cpf_usuario = isset($_POST['cpf_usuario']) ? $_POST['cpf_usuario'] : null;
+                // Restante do código do envio de e-mail aqui
 
-			// Verifica se a chave 'email_usuario' está definida no array $_POST
-			$email_usuario = isset($_POST['email_usuario']) ? $_POST['email_usuario'] : null;
+                $this->session->set_flashdata('success_email', 'Verifique sua caixa de e-mails para recuperar a senha');
+            } else {
+                $this->session->set_flashdata('error', 'Usuário não encontrado.');
+            }
+        }
+    }
 
-			if ($cpf_usuario == '' || $email_usuario == '') {
-				$this->session->set_flashdata('error', 'Todos os campos devem ser preenchidos.');
-				// redirect('esqueci_senha');
-			} else {
-				if (!isset($error)) {
+    // Descomente esta linha se desejar redirecionar após o envio do e-mail
+    redirect('esqueci_senha');
 
-					$dados = $this->Login_model->esqueci_senha($cpf_usuario, $email_usuario);
-
-					$link_esqueci_senha = base_url() . 'esqueci_senha/recuperar_senha/';
-
-					//ENVIA EMAIL DE RECUPERAÇÃO
-					$this->load->library('email');
-					$config['mailtype'] = 'html';
-					$this->email->initialize($config);
-					$this->email->from('contato@agsete.com.br', 'widerplanner');
-					$this->email->to($email_usuario);
-					$this->email->subject('WiderPlanner - Dados para recuperar senha');
-
-					$info_email['nome'] = $dados->nome_usuario;
-					$info_email['link_esqueci_senha'] = $link_esqueci_senha;
-
-					$mensagem = 'Olá ' . $nome_usuario . ',<br><br>';
-					$mensagem .= 'Vimos que você solicitou para recuperar a senha<br>';
-					$mensagem .= 'Pra criar uma senha nova, <strong>Clique aqui</strong>' . $link_esqueci_senha . '</strong><br><br>';
-
-					$this->email->message($mensagem);
-					if ($this->email->send()) {
-						$this->session->set_flashdata('success_email', 'Verifique sua caixa de e-mails para recuperar a senha');
-					} else {
-						$this->session->set_flashdata('error_email', 'Erro ao enviar e-mail');
-					}
-				}
-			}
-		}
-
-		$this->load->view('layout/header');
-		$this->load->view('esqueci_senha');
-	}
+    $this->load->view('layout/header');
+    $this->load->view('esqueci_senha');
+}
 
 	public function recuperar_senha()
 	{

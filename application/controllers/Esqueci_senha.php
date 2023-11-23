@@ -55,7 +55,7 @@ class Esqueci_senha extends CI_Controller
     // redirect('esqueci_senha');
 
     $this->load->view('layout/header');
-    $this->load->view('esqueci_senha', $dados);
+    $this->load->view('esqueci_senha');
 }
 
 	// public function recuperar_senha()

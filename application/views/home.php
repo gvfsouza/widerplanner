@@ -373,7 +373,6 @@
 
 
                                         <?php 
-                                        var_dump($listar_dados_produtos);
                                         if (!empty($listar_dados_produtos)) : ?>
                                             <?php foreach ($listar_dados_produtos as $produto) : ?>
                                                 <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9;">

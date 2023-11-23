@@ -30,8 +30,8 @@ class Esqueci_senha extends CI_Controller
 
 			$this->load->library('encryption');
 
-			$cpf_usuario = isset($_POST['cpf_usuario']) ? trim($_POST['cpf_usuario']) : null;
-			$email_usuario = isset($_POST['email_usuario']) ? trim($_POST['email_usuario']) : null;
+			$cpf_usuario = $_POST['cpf_usuario'];
+			$email_usuario = $_POST['email_usuario'];
 
 
 			if ($cpf_usuario == '' || $email_usuario == '') {
@@ -49,19 +49,26 @@ class Esqueci_senha extends CI_Controller
 					$this->email->from('contato@agsete.com.br', 'widerplanner');
 					$this->email->to($email_usuario);
 					$this->email->subject('WiderPlanner - Esqueci Senha');
-		
-					$corpo_email['nome_usuario'] = $nome_usuario;
-		
+
+					$corpo_email['nome_usuario'] = $dados->$nome_usuario;
+
 					$mensagem = 'Olá ' . $nome_usuario . ',<br><br>';
 					$mensagem .= 'Vimos que você solicitou para recuperar a senha.<br><br>';
 					$mensagem .= 'Para criar uma nova senha, <strong><a href="' . $link_esqueci_senha . '">CLIQUE AQUI</a></strong><br><br>';
-		
+
 					$this->email->message($mensagem);
 
-					$this->session->set_flashdata('success_email', 'Verifique sua caixa de e-mails para recuperar a senha');
-				} else {
-					$this->session->set_flashdata('error', 'Usuário não encontrado.');
+					if ($this->email->send()) {
+						$this->session->set_flashdata('success_email', 'Verifique sua caixa de e-mails para recuperar a senha');
+					} else {
+						$this->session->set_flashdata('error', 'Erro ao enviar e-mail');
+					}
+
 				}
+				// $this->session->set_flashdata('success_email', 'Verifique sua caixa de e-mails para recuperar a senha');
+				// } else {
+				// 	$this->session->set_flashdata('error', 'Usuário não encontrado.');
+				// }
 			}
 		}
 
@@ -75,15 +82,17 @@ class Esqueci_senha extends CI_Controller
 	public function recuperar_senha()
 	{
 		$this->load->model('Login_model');
+		$this->load->library('encryption');
 
-		if ($_POST['nova_senha']) {
+		if (isset($_POST['nova_senha'])) {
+
 			$nova_senha = $_POST['nova_senha'];
 			$confirma_senha = $_POST['confirma_senha'];
 
 			if ($nova_senha != $confirma_senha) {
 				$this->session->set_flashdata('error', 'As senhas não conferem');
 			} else {
-				$this->login_model->altera_senha($cpf_usuario, $nova_senha);
+				$this->Login_model->altera_senha($nova_senha);
 				$this->session->set_flashdata('sucesso', 'Senha recuperada com sucesso!');
 				redirect('login/');
 			}

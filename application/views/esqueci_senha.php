@@ -119,7 +119,7 @@
             <div class="form-group">
               <label for="senha">E-mail</label>
               <span id="email_usuario"></span>
-              <input type="email" class="form-control" id="email" name="email" maxlength="60" onblur="validacaoEmail(this)" placeholder="exemplo@gmail.com" required>
+              <input type="email" class="form-control" id="email_usuario" name="email_usuario" maxlength="60" onblur="validacaoEmail(this)" placeholder="exemplo@gmail.com" required>
             </div>
             <input type="hidden" name="enviar" id="enviar" value="1" />
             <input class="form-control" style=" background: #0090c9c7; color: white; border:none " type="submit" name="botao_enviar" value="Enviar" />

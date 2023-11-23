@@ -78,7 +78,7 @@
                 <span class="link" style="color:#000000d9;font-weight: bold;font-size:17px">Cadastros </span>
             </a>
             <div id="collapseReports" class="collapse" aria-labelledby="headingReports" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
+                <div class="bg py-2 collapse-inner rounded" style="backgound-color: #879bc9">
                     <a class="collapse-item" href="<?php echo base_url(); ?>cadastro_servicos">Cadastro de Serviços </a>
                     <a class="collapse-item" href="<?php echo base_url(); ?>cadastro_produto">Cadastro de Produtos</a>
                     <a class="collapse-item" href="<?php echo base_url(); ?>cadastro_funcionario">Cadastro de Profissionais</a>

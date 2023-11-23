@@ -42,9 +42,10 @@ class Cadastro_funcionario extends CI_Controller
 			$cidade_usuario = $this->input->post('cidade_usuario');
 			$estado_usuario = $this->input->post('estado_usuario');
 
-			// gerarSenhaAleatoria função do arquivo functions_helper
-			$senha_gerada = gerarSenhaAleatoria(8);
-			$senha_criptografada = md5($senha_gerada);
+			
+            // gerarSenhaAleatoria função do arquivo functions_helper
+            $senha_gerada = gerarSenhaAleatoria(8);
+            $senha_criptografada = md5($senha_gerada);
 
 			// FOTO - EXTENSÃO
 			$path = $_FILES['foto_usuario']['name'];

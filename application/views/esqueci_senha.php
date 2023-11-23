@@ -94,7 +94,7 @@
           
 
           <?php if ($this->session->flashdata('success_email')) { ?>
-            <div class="alert alert-warning" role="alert">
+            <div class="alert alert-success" role="alert">
                 <?php echo $this->session->flashdata('success_email'); ?>
             </div>
           <?php } ?>

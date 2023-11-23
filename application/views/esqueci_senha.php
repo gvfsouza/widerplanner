@@ -91,15 +91,23 @@
         </div>
         <div class="card-body">
           <form method="POST">
+          
+
+          <?php if ($this->session->flashdata('success_email')) { ?>
+            <div class="alert alert-warning" role="alert">
+                <?php echo $this->session->flashdata('success_email'); ?>
+            </div>
+          <?php } ?>
+
           <?php if ($this->session->flashdata('error')) { ?>
             <div class="alert alert-danger" role="alert">
                 <?php echo $this->session->flashdata('error'); ?>
             </div>
           <?php } ?>
 
-          <?php if ($this->session->flashdata('success_email')) { ?>
-            <div class="alert alert-warning" role="alert">
-                <?php echo $this->session->flashdata('success_email'); ?>
+          <?php if ($this->session->flashdata('erro')) { ?>
+            <div class="alert alert-danger" role="alert">
+                <?php echo $this->session->flashdata('erro'); ?>
             </div>
           <?php } ?>
           <br>

@@ -34,8 +34,8 @@ class Esqueci_senha extends CI_Controller
 			$email_usuario = isset($_POST['email_usuario']) ? trim($_POST['email_usuario']) : null;
 
 
-			if ($cpf_usuario === null || $cpf_usuario === '' || $email_usuario === null || $email_usuario === '') {
-				$this->session->set_flashdata('error', 'Todos os campos devem ser preenchidos.');
+			if ($cpf_usuario == '' || $email_usuario == '') {
+				$this->session->set_flashdata('erro', 'Todos os campos devem ser preenchidos.');
 			} else {
 				// Removida a verificação de $error, pois não é usada
 				$dados = $this->Login_model->esqueci_senha($cpf_usuario, $email_usuario);

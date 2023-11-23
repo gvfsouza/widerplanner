@@ -37,13 +37,25 @@ class Esqueci_senha extends CI_Controller
 			if ($cpf_usuario == '' || $email_usuario == '') {
 				$this->session->set_flashdata('erro', 'Todos os campos devem ser preenchidos.');
 			} else {
-				// Removida a verificação de $error, pois não é usada
 				$dados = $this->Login_model->esqueci_senha($cpf_usuario, $email_usuario);
 
 				if ($dados) {
 					$link_esqueci_senha = base_url() . 'esqueci_senha/recuperar_senha/' . $dados->chave_recuperacao;
 
-					// Restante do código do envio de e-mail aqui
+					$this->load->library('email');
+					$config['mailtype'] = 'html';
+					$this->email->initialize($config);
+					$this->email->from('contato@agsete.com.br', 'widerplanner');
+					$this->email->to($email_usuario);
+					$this->email->subject('WiderPlanner - Esqueci Senha');
+		
+					$corpo_email['nome_usuario'] = $nome_usuario;
+		
+					$mensagem = 'Olá ' . $nome_usuario . ',<br><br>';
+					$mensagem .= 'Vimos que você solicitou para recuperar a senha.<br><br>';
+					$mensagem .= 'Para criar uma nova senha, <strong><a href="' . $link_esqueci_senha . '">CLIQUE AQUI</a></strong><br><br>';
+		
+					$this->email->message($mensagem);
 
 					$this->session->set_flashdata('success_email', 'Verifique sua caixa de e-mails para recuperar a senha');
 				} else {

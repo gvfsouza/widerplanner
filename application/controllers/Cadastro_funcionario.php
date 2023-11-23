@@ -41,7 +41,6 @@ class Cadastro_funcionario extends CI_Controller
 			$bairro_usuario = $this->input->post('bairro_usuario');
 			$cidade_usuario = $this->input->post('cidade_usuario');
 			$estado_usuario = $this->input->post('estado_usuario');
-			$profissao = $this->input->post('profissao');
 
 			// gerarSenhaAleatoria função do arquivo functions_helper
 			$senha_gerada = gerarSenhaAleatoria(8);
@@ -58,7 +57,7 @@ class Cadastro_funcionario extends CI_Controller
 			$this->upload->initialize($config);
 
 			if (!isset($error)) {
-				$dados['cadastro_funcionario'] = $this->Funcionario_model->cadastro_profissional($foto_usuario, $nome_usuario, $cpf_usuario, $dt_nasc_usuario, $email_usuario, $sexo_usuario, $telefone_usuario, $cep_usuario, $logradouro_usuario, $numero_usuario, $complemento_usuario, $bairro_usuario, $cidade_usuario, $estado_usuario, $profissao, $senha_criptografada);
+				$dados['cadastro_funcionario'] = $this->Funcionario_model->cadastro_profissional($foto_usuario, $nome_usuario, $cpf_usuario, $dt_nasc_usuario, $email_usuario, $sexo_usuario, $telefone_usuario, $cep_usuario, $logradouro_usuario, $numero_usuario, $complemento_usuario, $bairro_usuario, $cidade_usuario, $estado_usuario, $senha_criptografada);
 
 				//MENSAGEM SUCESSO AO CADASTRAR
 				$this->session->set_flashdata('sucesso', 'Cadastro realizado com sucesso!');

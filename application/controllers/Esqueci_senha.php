@@ -76,7 +76,7 @@ class Esqueci_senha extends CI_Controller
 	{
 		$this->load->model('Login_model');
 
-		if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($explode_chave[1], $_POST['nova_senha'])) {
+		if ($_POST['nova_senha']) {
 			$nova_senha = $_POST['nova_senha'];
 			$confirma_senha = $_POST['confirma_senha'];
 

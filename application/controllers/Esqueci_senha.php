@@ -1,5 +1,4 @@
-<?php
-defined('BASEPATH') or exit('No direct script access allowed');
+<?php defined('BASEPATH') or exit('No direct script access allowed');
 
 class Esqueci_senha extends CI_Controller
 {
@@ -23,10 +22,12 @@ class Esqueci_senha extends CI_Controller
 	}
 
 	public function index()
-{
+	{
+
     $this->load->model('Login_model');
 
     if (isset($_POST['enviar'])) {
+
         $this->load->library('encryption');
 
         $cpf_usuario = isset($_POST['cpf_usuario']) ? $_POST['cpf_usuario'] : null;
@@ -51,10 +52,10 @@ class Esqueci_senha extends CI_Controller
     }
 
     // Descomente esta linha se desejar redirecionar após o envio do e-mail
-    redirect('esqueci_senha');
+    // redirect('esqueci_senha');
 
     $this->load->view('layout/header');
-    $this->load->view('esqueci_senha');
+    $this->load->view('esqueci_senha', $dados);
 }
 
 	// public function recuperar_senha()

@@ -124,7 +124,7 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <a href="https://widerplanner.agsete.com.br/esqueci_senha" style="color: #a1a3a8; text-align: right; text-decoration: none; font-size: small"><b>Esqueci senha</b></a>
+                                            <a href="<?php echo base_url(); ?>esqueci_senha" style="color: #a1a3a8; text-align: right; text-decoration: none; font-size: small"><b>Esqueci senha</b></a>
 
                                             <br><br>
 

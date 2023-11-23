@@ -38,4 +38,17 @@ class Login_model extends CI_Model
 
         return $this->db->get()->first_row();
     }
+
+    public function altera_senha($cpf_usuario, $senha_nova)
+  {
+    $senha = md5($senha_nova);
+
+    $data = array(
+      'senha' => $senha,
+      'alterar_senha' => NULL,
+    );
+
+    $this->db->where('cpf_usuario', $cpf_usuario);
+    $this->db->update('usuario', $data);
+  }
 }

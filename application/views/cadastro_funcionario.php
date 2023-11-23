@@ -46,7 +46,7 @@
                                                     <div class="form-group col-md-4">
                                                         <label for="" style="color: #4e4e4e;"><b>Nome Completo:</b></label>
                                                         <br>
-                                                        <input style="font-size:14px" type="text" class="form-control" id="nome_funcionario" name="nome_funcionario" value="">
+                                                        <input style="font-size:14px" type="text" class="form-control" id="nome_usuario" name="nome_usuario" value="">
                                                     </div>
                                                     <div class="form-group col-md-2">
                                                         <label for="" style="color: #4e4e4e;"><b>CPF:</b></label>

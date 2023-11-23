@@ -41,7 +41,8 @@ class Esqueci_senha extends CI_Controller
 
 				if ($dados) {
 					$nome_usuario = $dados->nome_usuario;
-					$link_esqueci_senha = base_url() . 'esqueci_senha/recuperar_senha/' . $dados;
+					
+					$link_esqueci_senha = 'https://widerplanner.agsete.com.br/esqueci_senha/recuperar_senha/' . $dados;
 
 					$this->load->library('email');
 					$config['mailtype'] = 'html';

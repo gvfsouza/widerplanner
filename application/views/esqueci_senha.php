@@ -91,7 +91,17 @@
         </div>
         <div class="card-body">
           <form method="POST">
-           
+          <?php if ($this->session->flashdata('error')) { ?>
+            <div class="alert alert-success" role="alert">
+                <?php echo $this->session->flashdata('error'); ?>
+            </div>
+          <?php } ?>
+
+          <?php if ($this->session->flashdata('success_email')) { ?>
+            <div class="alert alert-warning" role="alert">
+                <?php echo $this->session->flashdata('success_email'); ?>
+            </div>
+          <?php } ?>
           <br>
             <div class="form-group">
                 <label for="cpf_usuario" style="color:#a8aaad"> CPF:</label>

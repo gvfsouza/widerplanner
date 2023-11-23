@@ -58,28 +58,28 @@ class Esqueci_senha extends CI_Controller
     $this->load->view('esqueci_senha');
 }
 
-	// public function recuperar_senha()
-	// {
-	// 	$this->load->model('Login_model');
+	public function recuperar_senha()
+	{
+		$this->load->model('Login_model');
 
-	// 	if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($explode_chave[1], $_POST['nova_senha'])) {
-	// 		$data_hora = $explode_chave[0];
-	// 		$cpf_usuario = $explode_chave[1];
+		if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($explode_chave[1], $_POST['nova_senha'])) {
+			$data_hora = $explode_chave[0];
+			$cpf_usuario = $explode_chave[1];
 
-	// 		$nova_senha = $_POST['nova_senha'];
-	// 		$confirma_senha = $_POST['confirma_senha'];
+			$nova_senha = $_POST['nova_senha'];
+			$confirma_senha = $_POST['confirma_senha'];
 
-	// 		if ($nova_senha != $confirma_senha) {
-	// 			$this->session->set_flashdata('error', 'As senhas não conferem');
-	// 		} else {
-	// 			$this->login_model->altera_senha($cpf_usuario, $nova_senha);
-	// 			$this->session->set_flashdata('sucesso', 'Senha recuperada com sucesso!');
-	// 			redirect('login/');
-	// 		}
-	// 	}
+			if ($nova_senha != $confirma_senha) {
+				$this->session->set_flashdata('error', 'As senhas não conferem');
+			} else {
+				$this->login_model->altera_senha($cpf_usuario, $nova_senha);
+				$this->session->set_flashdata('sucesso', 'Senha recuperada com sucesso!');
+				redirect('login/');
+			}
+		}
 
 
-	// 	$this->load->view('layout/header');
-	// 	$this->load->view('recuperar_senha');
-	// }
+		$this->load->view('layout/header');
+		$this->load->view('recuperar_senha');
+	}
 }

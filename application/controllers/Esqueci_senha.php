@@ -50,7 +50,7 @@ class Esqueci_senha extends CI_Controller
 					$this->email->to($email_usuario);
 					$this->email->subject('WiderPlanner - Esqueci Senha');
 
-					$corpo_email['nome_usuario'] = $dados->$nome_usuario;
+					$corpo_email['nome_usuario'] = $dados->nome_usuario;
 
 					$mensagem = 'Olá ' . $nome_usuario . ',<br><br>';
 					$mensagem .= 'Vimos que você solicitou para recuperar a senha.<br><br>';

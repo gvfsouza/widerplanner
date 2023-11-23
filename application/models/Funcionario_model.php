@@ -1,6 +1,8 @@
-<?php if(!defined('BASEPATH')) exit('No direct scripts access allowed');
+<?php if (!defined('BASEPATH'))
+    exit('No direct scripts access allowed');
 
-class Funcionario_model extends CI_Model {
+class Funcionario_model extends CI_Model
+{
 
     public function listar_dados_cliente()
     {
@@ -35,5 +37,15 @@ class Funcionario_model extends CI_Model {
 
         $this->db->insert('usuario', $data);
         return $this->db->insert_id();
+    }
+
+    public function FuncionarioServico($id_usuario, $id_servicos)
+    {
+        $data = array(
+            'fk_usuario' => $id_usuario,
+            'fk_servico' => $id_servicos,
+        );
+
+        $this->db->insert('func_servicos', $data);
     }
 }

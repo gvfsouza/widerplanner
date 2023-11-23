@@ -27,7 +27,7 @@ class Cadastro_funcionario extends CI_Controller
 		$dados = array();
 
 		if (isset($_POST['salvar'])) {
-			$foto_usuario = $this->converte_img($_FILES['foto_usuario']['tmp_name'],$_FILES['foto_usuario']['type']);
+			$foto_usuario = $this->converte_img($_FILES['foto_usuario']['tmp_name'], $_FILES['foto_usuario']['type']);
 			$nome_usuario = $this->input->post('nome_usuario');
 			$cpf_usuario = $this->input->post('cpf_usuario');
 			$dt_nasc_usuario = $this->input->post('dt_nasc_usuario');
@@ -42,30 +42,34 @@ class Cadastro_funcionario extends CI_Controller
 			$cidade_usuario = $this->input->post('cidade_usuario');
 			$estado_usuario = $this->input->post('estado_usuario');
 
-			
-            // gerarSenhaAleatoria função do arquivo functions_helper
-            $senha_gerada = gerarSenhaAleatoria(8);
-            $senha_criptografada = md5($senha_gerada);
+			$Servicos_selecionados = $this->input->post('fk_servico');
 
-			// FOTO - EXTENSÃO
-			$path = $_FILES['foto_usuario']['name'];
-			$ext = pathinfo($path, PATHINFO_EXTENSION);
-			$config['upload_path'] = './application/fotos';
-			$config['allowed_types'] = 'jpg|jpeg|png';
-			$config['max_size'] = 2048;
-			$config['encrypt_name'] = TRUE;
-			$this->load->library('upload', $config);
-			$this->upload->initialize($config);
+			$id_usuario = $this->Funcionario_model->cadastro_profissional(
+				$foto_usuario,
+				$nome_usuario,
+				$cpf_usuario,
+				$dt_nasc_usuario,
+				$email_usuario,
+				$sexo_usuario,
+				$telefone_usuario,
+				$cep_usuario,
+				$logradouro_usuario,
+				$numero_usuario,
+				$complemento_usuario,
+				$bairro_usuario,
+				$cidade_usuario,
+				$estado_usuario,
+				md5(gerarSenhaAleatoria(8))
+			);
 
-			if (!isset($error)) {
-				$dados['cadastro_funcionario'] = $this->Funcionario_model->cadastro_profissional($foto_usuario, $nome_usuario, $cpf_usuario, $dt_nasc_usuario, $email_usuario, $sexo_usuario, $telefone_usuario, $cep_usuario, $logradouro_usuario, $numero_usuario, $complemento_usuario, $bairro_usuario, $cidade_usuario, $estado_usuario, $senha_criptografada);
-
-				//MENSAGEM SUCESSO AO CADASTRAR
-				$this->session->set_flashdata('sucesso', 'Cadastro realizado com sucesso!');
-				redirect('cadastro_funcionario');
-			} else {
-				$this->session->set_flashdata('erro', 'Erro ao efetuar cadastro.');
+			// Insert selected services into func_servicos table
+			foreach ($Servicos_selecionados as $id_servicos) {
+				$this->Funcionario_model->insertFuncionarioServico($id_usuario, $id_servicos);
 			}
+
+			//MENSAGEM SUCESSO AO CADASTRAR
+			$this->session->set_flashdata('sucesso', 'Cadastro realizado com sucesso!');
+			redirect('cadastro_funcionario');
 		}
 
 		$this->load->view('layout/header');

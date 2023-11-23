@@ -79,9 +79,9 @@
             </a>
             <div id="collapseReports" class="collapse" aria-labelledby="headingReports" data-parent="#accordionSidebar">
                 <div class="bg py-2 collapse-inner rounded" style="background-color: #D4DDF1;">
-                    <a class="collapse-item" href="<?php echo base_url(); ?>cadastro_servicos" style="color: #white"><i class=" fas fa-solid fa-scissors icon" style="background-color: #D4DDF1;"></i><b>Cadastro de Serviços</b></a>
-                    <a class="collapse-item" href="<?php echo base_url(); ?>cadastro_produto" style="color: #white"><b>Cadastro de Produtos</b></a>
-                    <a class="collapse-item" href="<?php echo base_url(); ?>cadastro_funcionario" style="color: #white"><b>Cadastro de Profissionais</b></a>
+                    <a class="collapse-item" href="<?php echo base_url(); ?>cadastro_servicos"><i class=" fas fa-solid fa-scissors icon" style="background-color: white;"></i><b>Cadastro de Serviços</b></a>
+                    <a class="collapse-item" href="<?php echo base_url(); ?>cadastro_produto"><b>Cadastro de Produtos</b></a>
+                    <a class="collapse-item" href="<?php echo base_url(); ?>cadastro_funcionario"><b>Cadastro de Profissionais</b></a>
                 </div>
             </div>
         </li>

@@ -32,7 +32,6 @@ class Funcionario_model extends CI_Model {
             'profissao' => utf8_decode($profissao),
         );
 
-
         $this->db->insert('usuario', $data);
         return $this->db->insert_id();
     }

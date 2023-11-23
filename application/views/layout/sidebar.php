@@ -60,35 +60,34 @@
    <hr class="sidebar-divider d-none d-md-block">
 
        <li class="nav-item">
-           <a class="nav-link" href="https://widerplanner.agsete.com.br/">
+           <a class="nav-link" href="<?php echo base_url(); ?>home">
                <i class="fas fa-home icon" style="color:#879bc9"></i>
                <span class="link" style="color:#000000d9;font-weight: bold;font-size:17px">Home</span></a>
        </li>
 
        <li class="nav-item">
-           <a title="Gerenciar Usuários" class="nav-link" href="https://widerplanner.agsete.com.br/perfil_cliente">
+           <a title="Gerenciar Usuários" class="nav-link" href="<?php echo base_url(); ?>perfil_cliente">
             <i class="fas fa-user icon" style="color:#879bc9"></i>
                <span class="link" style="color:#000000d9;font-weight: bold;font-size:17px">Perfil </span>
            </a>
        </li>
 
-       <!-- <li class="nav-item">
-           <a title="Gerenciar Usuários" class="nav-link" href="#">
-               <i class="fas fa-users icon" style="color:#879bc9"></i>
-               <span class="link" style="color:#000000d9;font-weight: bold;font-size:17px">Serviços</span>
-           </a>
-       </li> -->
+       <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseReports" style="color: #008175;">
+                <i class="fas fa-notes-medical icon"></i>
+                <span class="link">&nbsp; Cadastros</span>
+            </a>
+            <div id="collapseReports" class="collapse" aria-labelledby="headingReports" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <a class="collapse-item" href="<?php echo base_url(); ?>cadastro_servicos">Cadastro de Serviços </a>
+                    <a class="collapse-item" href="<?php echo base_url(); ?>cadastro_produto">Cadastro de Produtos</a>
+                    <a class="collapse-item" href="<?php echo base_url(); ?>cadastro_funcionario">Cadastro de Profissionais</a>
+                </div>
+            </div>
+        </li>
 
        <li class="nav-item">
-           <a title="Gerenciar Usuários" class="nav-link" href="">
-               <i class="fas fa-user-plus icon" style="color:#879bc9"></i>
-               <span class="link" style="color:#000000d9;font-weight: bold;font-size:17px">Cadastros            
-            </span>
-           </a>
-       </li>
-
-       <li class="nav-item">
-           <a title="Gerenciar Usuários" class="nav-link" href="https://widerplanner.agsete.com.br/alterar_senha">
+           <a title="Gerenciar Usuários" class="nav-link" href="<?php echo base_url(); ?>alterar_senha">
                <i class="fas fa-lock icon" style="color:#879bc9"></i>
                <span class="link" style="color:#000000d9;font-weight: bold;font-size:17px">Alterar senha            
             </span>
@@ -98,7 +97,8 @@
        <li class="nav-item">
            <a title="Sair" class="nav-link" href="<?php echo site_url('login/logout'); ?>" data-toggle="modal" data-target="#logoutModal">
                <i class="fas fa-sign-out-alt icon" style="color:#879bc9"></i>
-               <span class="link" style="color:#000000d9;font-weight: bold;font-size:17px">Sair</span></a>
+               <span class="link" style="color:#000000d9;font-weight: bold;font-size:17px">Sair</span>
+            </a>
        </li>
 
        <!-- Divider -->

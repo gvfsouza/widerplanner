@@ -41,8 +41,7 @@ class Esqueci_senha extends CI_Controller
 
 				if ($dados) {
 					$nome_usuario = $dados->nome_usuario;
-					
-					$link_esqueci_senha = 'https://widerplanner.agsete.com.br/esqueci_senha/recuperar_senha/' . $dados;
+                    $link_esqueci_senha = base_url() . 'esqueci_senha/recuperar_senha/' . $dados->chave_recuperacao;
 
 					$this->load->library('email');
 					$config['mailtype'] = 'html';
@@ -81,26 +80,27 @@ class Esqueci_senha extends CI_Controller
 	}
 
 	public function recuperar_senha()
-	{
-		$this->load->model('Login_model');
-		$this->load->library('encryption');
+    {
+        $this->load->model('Login_model');
+        $this->load->library('encryption');
 
-		if (isset($_POST['nova_senha'])) {
+        if (isset($_POST['nova_senha'])) {
+            $nova_senha = $_POST['nova_senha'];
+            $confirma_senha = $_POST['confirma_senha'];
 
-			$nova_senha = $_POST['nova_senha'];
-			$confirma_senha = $_POST['confirma_senha'];
+            if ($nova_senha != $confirma_senha) {
+                $this->session->set_flashdata('error', 'As senhas não conferem');
+            } else {
+                // Supondo que você precise de um identificador para o usuário
+                $cpf_usuario = $this->encryption->decrypt($this->uri->segment(3));
+                
+                $this->Login_model->altera_senha($cpf_usuario, $nova_senha);
+                $this->session->set_flashdata('sucesso', 'Senha recuperada com sucesso!');
+                redirect('login/');
+            }
+        }
 
-			if ($nova_senha != $confirma_senha) {
-				$this->session->set_flashdata('error', 'As senhas não conferem');
-			} else {
-				$this->Login_model->altera_senha($nova_senha);
-				$this->session->set_flashdata('sucesso', 'Senha recuperada com sucesso!');
-				redirect('login/');
-			}
-		}
-
-
-		$this->load->view('layout/header');
-		$this->load->view('recuperar_senha');
-	}
+        $this->load->view('layout/header');
+        $this->load->view('recuperar_senha');
+    }
 }

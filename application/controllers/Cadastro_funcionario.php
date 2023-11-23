@@ -74,4 +74,20 @@ class Cadastro_funcionario extends CI_Controller
 		$this->load->view('cadastro_funcionario', $dados);
 		// $this->load->view('layout/footer');
 	}
+
+	public function converte_img($img, $type)
+	{
+		if ($type == 'image/png') {
+			$im = imagecreatefrompng($img);
+			ob_start();
+			imagejpeg($im);
+			$data = ob_get_clean();
+			imagedestroy($im);
+		} else {
+			ob_start();
+			readfile($img);
+			$data = ob_get_clean();
+		}
+		return base64_encode($data);
+	}
 }

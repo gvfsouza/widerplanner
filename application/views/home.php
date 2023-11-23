@@ -379,17 +379,14 @@
                                                     <div class="card-container">
                                                         <div class="flex-container space-between">
                                                             <div class="col card">
-                                                                <div class="img-placeholder">
-                                                                    <?php if (!empty($produto->foto_produto)) : ?>
-                                                                        <img style='display:block; width:100px;height:100px;' id='base64image' src='data:image/jpeg;base64,<?php echo $produto->foto_produto ?>' />
-                                                                    <?php endif; ?>
-                                                                </div>
                                                                 <div>
                                                                     <?php if (!empty($produto->nome_produto)) : ?>
                                                                         <h3><?php echo $produto->nome_produto; ?></h3>
                                                                         <div class="col card">
                                                                             <div class="img-placeholder">
-                                                                                <img src="https://images.unsplash.com/photo-1614130946015-d5a7a3276fea?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTc5MTY4MTU&ixlib=rb-1.2.1&q=80">
+                                                                            <?php if (!empty($produto->foto_produto)) : ?>
+                                                                        <img style='display:block; width:100px;height:100px;' id='base64image' src='data:image/jpeg;base64,<?php echo $produto->foto_produto ?>' />
+                                                                    <?php endif; ?>
                                                                             </div>
                                                                             <div>
                                                                                 <h3>Wafaa</h3>

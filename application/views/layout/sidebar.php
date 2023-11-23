@@ -74,7 +74,7 @@
 
        <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseReports" style="color: #008175;">
-                <i class="fas fa-notes-medical icon" style="color:#879bc9"></i>
+                <i class="fas fa-sharp fa-solid fa-address-card icon" style="color:#879bc9"></i>
                 <span class="link" style="color:#000000d9;font-weight: bold;font-size:17px">Cadastros </span>
             </a>
             <div id="collapseReports" class="collapse" aria-labelledby="headingReports" data-parent="#accordionSidebar">

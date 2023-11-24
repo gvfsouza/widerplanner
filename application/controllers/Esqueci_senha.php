@@ -39,6 +39,8 @@ class Esqueci_senha extends CI_Controller
 			} else {
 				$dados = $this->Login_model->esqueci_senha($cpf_usuario, $email_usuario);
 
+				var_dump($dados);
+				die();
 				if ($dados) {
 					$nome_usuario = $dados->nome_usuario;
 					$link_esqueci_senha = base_url() . 'esqueci_senha/recuperar_senha/' . urlencode($cpf_usuario);

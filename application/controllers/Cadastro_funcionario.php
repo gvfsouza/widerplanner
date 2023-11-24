@@ -46,7 +46,16 @@ class Cadastro_funcionario extends CI_Controller
 			if (!isset($error)) {
 
 				$dados['cadastro_funcionario'] = $this->Funcionario_model->cadastro_profissional($foto_usuario, $nome_usuario, $cpf_usuario, $dt_nasc_usuario, $email_usuario, $sexo_usuario, $telefone_usuario, $cep_usuario, $logradouro_usuario, $numero_usuario, $complemento_usuario, $bairro_usuario, $cidade_usuario, $estado_usuario, $fk_servico, md5(gerarSenhaAleatoria(8)));
-				
+
+				// Captura o ID do usuário recém-cadastrado
+				$id_func = $dados['cadastro_funcionario'];
+
+				// Captura o ID do serviço selecionado
+				$servico_escolhido = $this->input->post('fk_servico');
+
+				// Insere na tabela func_servicos
+				$this->Funcionario_model->associar_servico($id_func, $servico_escolhido);
+
 				//MENSAGEM SUCESSO AO CADASTRAR
 				$this->session->set_flashdata('sucesso', 'Cadastro realizado com sucesso!');
 				redirect('cadastro_funcionario');

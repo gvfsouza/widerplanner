@@ -90,7 +90,7 @@ class Esqueci_senha extends CI_Controller
             } else {
 				
                 // Supondo que você precise de um identificador para o usuário
-                $cpf_usuario = $this->encryption->decrypt($this->uri->segment(4));
+                $cpf_usuario = $this->uri->segment(3);
 
 				echo ($cpf_usuario);
 				die();

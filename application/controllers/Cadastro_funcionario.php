@@ -58,7 +58,6 @@ class Cadastro_funcionario extends CI_Controller
 				redirect('cadastro_funcionario');
 			} else {
 				$this->session->set_flashdata('erro', 'Erro ao efetuar cadastro de Funcionário.');
-				salvar_log('Cadastro Funcionário - Erro ao efetuar cadastro de Funcionário.');
 			}
 		}
 

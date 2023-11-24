@@ -5,6 +5,8 @@ class Login_model extends CI_Model
     // Login
     public function autenticacao_usuario($cpf_usuario, $senha)
     {
+      $senha = md5($senha);
+
         // Realiza a autenticação do usuário, por exemplo, consulta no banco de dados
         $this->db->where('cpf_usuario', $cpf_usuario);
         $this->db->where('senha', md5($senha)); // Supondo que a senha seja armazenada como hash MD5 para simplificar

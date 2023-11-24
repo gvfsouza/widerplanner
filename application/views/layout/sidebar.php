@@ -18,7 +18,7 @@
        .navbar-nav.sidebar {
         margin: 20px;
         border-radius: 15px;
-        background-color: #F0F3F9;
+        background-color: white;
       }
 
        /* cor do ícone quando passa o mouse */
@@ -42,10 +42,6 @@
            font-size: 20px;
            color: white;
        }
-
-       .sidebar .nav-item .collapse:hover {
-        background-color: white;   
-    }
 
    </style>
    

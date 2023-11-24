@@ -36,12 +36,15 @@ class Funcionario_model extends CI_Model
         return $id_func;
     }
 
+    
     public function associar_servico($fk_usuario, $fk_servicos)
     {
         $data = array(
             'fk_usuario	' => $fk_usuario,
             'fk_servicos' => $fk_servicos,
         );
+
+        var_dump($fk_servicos);
 
         $this->db->insert('func_servicos', $data);
         return $this->db->insert_id();

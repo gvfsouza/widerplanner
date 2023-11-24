@@ -43,7 +43,7 @@ class Cadastro_funcionario extends CI_Controller
 			$estado_usuario = $this->input->post('estado_usuario');
 			$fk_servicos = $this->input->post('fk_servicos');
 
-			echo $fk_servicos;
+			echo $fk_servicos . 'teste';
 			die();
 
 			if (!isset($error)) {

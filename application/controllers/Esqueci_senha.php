@@ -82,8 +82,6 @@ class Esqueci_senha extends CI_Controller
         $this->load->library('encryption');
 
         if (isset($_POST['nova_senha'])) {
-			echo 'teste';
-				die ();
             $nova_senha = $_POST['nova_senha'];
             $confirma_senha = $_POST['confirma_senha'];
 
@@ -98,7 +96,9 @@ class Esqueci_senha extends CI_Controller
                 $this->session->set_flashdata('sucesso', 'Senha recuperada com sucesso!');
                 redirect('login/');
             }
-        }
+        } else {
+			$this->session->set_flashdata('error_senha', 'Digite uma senha');
+		}
 
         $this->load->view('layout/header');
         $this->load->view('recuperar_senha');

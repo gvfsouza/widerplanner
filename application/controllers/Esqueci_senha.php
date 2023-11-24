@@ -91,9 +91,6 @@ class Esqueci_senha extends CI_Controller
 				
                 // Supondo que você precise de um identificador para o usuário
                 $cpf_usuario = $this->uri->segment(3);
-
-				echo ($cpf_usuario);
-				die();
                 
                 $this->Login_model->altera_senha($cpf_usuario, $nova_senha);
                 $this->session->set_flashdata('sucesso', 'Senha recuperada com sucesso!');

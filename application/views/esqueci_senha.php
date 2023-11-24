@@ -107,6 +107,13 @@
           }
           ?>
 
+<?php
+          if ($this->session->flashdata('error_usuario')) {
+            echo '<div style="background-color: #F8D7DA; color: #6a040d; padding: 10px; width: 318px; height: 50px; vertical-align: middle; border-radius: 5px;">';
+            echo $this->session->flashdata('error_usuario');
+            echo '</div>';
+          }
+          ?>
          
           <br>
             <div class="form-group">

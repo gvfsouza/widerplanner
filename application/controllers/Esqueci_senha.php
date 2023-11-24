@@ -67,7 +67,7 @@ class Esqueci_senha extends CI_Controller
 					}
 
 				} else {
-					$this->session->set_flashdata('erro', 'Usuário não encontrado');
+					$this->session->set_flashdata('error_usuario', 'Usuário não encontrado');
 				}
 				// $this->session->set_flashdata('success_email', 'Verifique sua caixa de e-mails para recuperar a senha');
 				// } else {

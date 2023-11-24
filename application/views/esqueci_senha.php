@@ -1,179 +1,180 @@
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login Card</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Card</title>
 </head>
 <style>
-  @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
 
-  *{
-  font-family: "poppins", sans-serif;
+    * {
+        font-family: "poppins", sans-serif;
 
-  }
+    }
 
-  body {
-    background-color: #d7e0f6;
-    background-size: 400% 400%;
-  }
+    body {
+        background-color: #d7e0f6;
+        background-size: 400% 400%;
+    }
 
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
 
-  .card {
-    width: 412px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: auto;
-    padding: 20px;
-    background-color: #fff;
-  }
+    .card {
+        width: 412px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: auto;
+        padding: 20px;
+        background-color: #fff;
+    }
 
-  .card .card-body {
-    padding: 20px;
-  }
+    .card .card-body {
+        padding: 20px;
+    }
 
-  .card .form-group {
-    margin-bottom: 25px;
-  }
+    .card .form-group {
+        margin-bottom: 25px;
+    }
 
-  .card .form-group input[type="text"],
-  .card .form-group input[type="password"] {
-    width: 90%;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    margin-top: 8px;
-  }
+    .card .form-group input[type="text"],
+    .card .form-group input[type="password"] {
+        width: 90%;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        margin-top: 8px;
+    }
 
-  .card .form-group label {
-    display: block;
-    font-weight: bold;
-  }
+    .card .form-group label {
+        display: block;
+        font-weight: bold;
+    }
 
-  .card button:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
-  }
+    .card button:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+    }
 
-  .card button[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    background-color: #72b9b7;
-    color: white;
-    border-radius: 4px;
-    border: 0;
-    cursor: pointer;
-  }
+    .card button[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #72b9b7;
+        color: white;
+        border-radius: 4px;
+        border: 0;
+        cursor: pointer;
+    }
 
-  .form-control{
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  }
+    .form-control {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    }
 </style>
 
-  <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
+<nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
     <div class="container">
-      <div class="card">
-        <div class="col-md-12">
-          <p style="text-align:center;font-size: 31px;color: #72b9b7;font-weight: bold;">WiderPlanner
-          <br>
-          <span style="text-align:center;font-size:20px;color:#a8aaad;font-weight: normal;">Esqueci Senha</span></p>
-          <br>
-        </div>
-
-        <div class="alert alert-warning">
-          Insira as informações abaixo para receber o e-mail e recuperar a senha esquecida.
-        </div>
-        <div class="card-body">
-          <form method="POST">
-          <?php
-          if ($this->session->flashdata('success_email')) {
-            echo '<div style="background-color: green; color: #6a040d; padding: 10px; width: 318px; height: 50px; vertical-align: middle; border-radius: 5px;">';
-            echo $this->session->flashdata('success_email');
-            echo '</div>';
-          }
-          ?>
-
-          <?php
-          if ($this->session->flashdata('error')) {
-            echo '<div style="background-color: #F8D7DA; color: #6a040d; padding: 10px; width: 318px; height: 50px; vertical-align: middle; border-radius: 5px;">';
-            echo $this->session->flashdata('error');
-            echo '</div>';
-          }
-          ?>
-
-<?php
-          if ($this->session->flashdata('error_usuario')) {
-            echo '<div style="background-color: #F8D7DA; color: #6a040d; padding: 10px; width: 318px; height: 50px; vertical-align: middle; border-radius: 5px;">';
-            echo $this->session->flashdata('error_usuario');
-            echo '</div>';
-          }
-          ?>
-         
-          <br>
-            <div class="form-group">
-                <label for="cpf_usuario" style="color:#a8aaad"> CPF:</label>
-                <span id="cpfUsuario"></span>
-                <input type="text" id="cpf_usuario" name="cpf_usuario" class="form-control" placeholder="Insira seu CPF" maxlength="14" required="">
+        <div class="card">
+            <div class="col-md-12">
+                <p style="text-align:center;font-size: 31px;color: #72b9b7;font-weight: bold;">WiderPlanner
+                    <br>
+                    <span style="text-align:center;font-size:20px;color:#a8aaad;font-weight: normal;">Esqueci Senha</span>
+                </p>
+                <br>
             </div>
-            <div class="form-group">
-              <label for="senha">E-mail</label>
-              <span id="email_usuario"></span>
-              <input type="email" class="form-control" id="email_usuario" name="email_usuario" maxlength="60" onblur="validacaoEmail(this)" placeholder="exemplo@gmail.com" required>
+
+            <div class="alert alert-warning">
+                Insira as informações abaixo para receber o e-mail e recuperar a senha esquecida.
             </div>
-            <input type="hidden" name="enviar" id="enviar" value="1" />
-            <input class="form-control" style=" background: #0090c9c7; color: white; border:none " type="submit" name="botao_enviar" value="Enviar" />
-          </form>
-          <br>
-          <div id="rodape" style="text-align:center;color: gray;font-size:12px">
-            <p><small>Sistema desenvolvido para cunho estudantil <br> Projeto de Conclusão de Curso - Superior de Tecnologia em Análise e Deselvolvimento de Sistemas <br> Centro Universitário Nossa Senhora do Patrocínio<br>Endereço: R. José Weissohn, 153 - Centro, Salto - SP, 13328-300</small></p>
-          </div>
+            <div class="card-body">
+                <form method="POST">
+                    <?php
+                    if ($this->session->flashdata('success_email')) {
+                        echo '<div style="background-color: green; color: #6a040d; padding: 10px; width: 318px; height: 50px; vertical-align: middle; border-radius: 5px;">';
+                        echo $this->session->flashdata('success_email');
+                        echo '</div>';
+                    }
+                    ?>
+
+                    <?php
+                    if ($this->session->flashdata('error')) {
+                        echo '<div style="background-color: #F8D7DA; color: #6a040d; padding: 10px; width: 318px; height: 50px; vertical-align: middle; border-radius: 5px;">';
+                        echo $this->session->flashdata('error');
+                        echo '</div>';
+                    }
+                    ?>
+
+                    <?php
+                    if ($this->session->flashdata('error_usuario')) {
+                        echo '<div style="background-color: #F8D7DA; color: #6a040d; padding: 10px; width: 318px; height: 50px; vertical-align: middle; border-radius: 5px;">';
+                        echo $this->session->flashdata('error_usuario');
+                        echo '</div>';
+                    }
+                    ?>
+
+                    <br>
+                    <div class="form-group">
+                        <label for="cpf_usuario" style="color:#a8aaad"> CPF:</label>
+                        <span id="cpfUsuario"></span>
+                        <input type="text" id="cpf_usuario" name="cpf_usuario" class="form-control" placeholder="Insira seu CPF" maxlength="14" required="">
+                    </div>
+                    <div class="form-group">
+                        <label for="senha">E-mail</label>
+                        <span id="email_usuario"></span>
+                        <input type="email" class="form-control" id="email_usuario" name="email_usuario" maxlength="60" onblur="validacaoEmail(this)" placeholder="exemplo@gmail.com" required>
+                    </div>
+                    <input type="hidden" name="enviar" id="enviar" value="1" />
+                    <input class="form-control" style=" background: #0090c9c7; color: white; border:none " type="submit" name="botao_enviar" value="Enviar" />
+                </form>
+                <br>
+                <div id="rodape" style="text-align:center;color: gray;font-size:12px">
+                    <p><small>Sistema desenvolvido para cunho estudantil <br> Projeto de Conclusão de Curso - Superior de Tecnologia em Análise e Deselvolvimento de Sistemas <br> Centro Universitário Nossa Senhora do Patrocínio<br>Endereço: R. José Weissohn, 153 - Centro, Salto - SP, 13328-300</small></p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </nav>
+</nav>
 
 <script>
-var cpfInput = document.getElementById('cpf_usuario');
-        cpfInput.addEventListener('input', formatarCPF);
+    var cpfInput = document.getElementById('cpf_usuario');
+    cpfInput.addEventListener('input', formatarCPF);
 
-        function formatarCPF() {
-            var cpf = cpfInput.value.replace(/\D/g, '');
+    function formatarCPF() {
+        var cpf = cpfInput.value.replace(/\D/g, '');
 
-            if (cpf.length > 3 && cpf.length <= 6) {
-                cpf = cpf.replace(/(\d{3})(\d{1,3})/, '$1.$2');
-            } else if (cpf.length > 6 && cpf.length <= 9) {
-                cpf = cpf.replace(/(\d{3})(\d{3})(\d{1,3})/, '$1.$2.$3');
-            } else if (cpf.length > 9) {
-                cpf = cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{1,2})/, '$1.$2.$3-$4');
-            }
-
-            cpfInput.value = cpf;
-
-            cpfCheck(cpfInput);
+        if (cpf.length > 3 && cpf.length <= 6) {
+            cpf = cpf.replace(/(\d{3})(\d{1,3})/, '$1.$2');
+        } else if (cpf.length > 6 && cpf.length <= 9) {
+            cpf = cpf.replace(/(\d{3})(\d{3})(\d{1,3})/, '$1.$2.$3');
+        } else if (cpf.length > 9) {
+            cpf = cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{1,2})/, '$1.$2.$3-$4');
         }
 
-        function cpfCheck(el) {
-            var cpfStatus = document.getElementById('cpfUsuario');
-            var cpfValue = el.value.replace(/\D/g, '');
+        cpfInput.value = cpf;
 
-            if (is_cpf(cpfValue)) {
-                cpfStatus.innerHTML = '<span style="color:green">Válido</span>';
-            } else {
-                cpfStatus.innerHTML = '<span style="color:red">Inválido</span>';
-            }
+        cpfCheck(cpfInput);
+    }
 
-            if (el.value == '') {
-                cpfStatus.innerHTML = '';
-            }
+    function cpfCheck(el) {
+        var cpfStatus = document.getElementById('cpfUsuario');
+        var cpfValue = el.value.replace(/\D/g, '');
+
+        if (is_cpf(cpfValue)) {
+            cpfStatus.innerHTML = '<span style="color:green">Válido</span>';
+        } else {
+            cpfStatus.innerHTML = '<span style="color:red">Inválido</span>';
         }
 
-  function is_cpf(c) {
+        if (el.value == '') {
+            cpfStatus.innerHTML = '';
+        }
+    }
+
+    function is_cpf(c) {
         if ((c = c.replace(/[^\d]/g, "")).length == 14) {
             cnpj = c;
             cnpj = cnpj.replace(/[^\d]+/g, '');
@@ -263,8 +264,8 @@ var cpfInput = document.getElementById('cpf_usuario');
         }
     }
 
-// Validação E-mail de usuários
-function validacaoEmail(input) {
+    // Validação E-mail de usuários
+    function validacaoEmail(input) {
         var email = input.value.trim(); // Remova os espaços em branco no início e no fim do e-mail
         var emailErro = document.getElementById('emailErro');
 

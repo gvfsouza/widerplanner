@@ -90,15 +90,16 @@ class Esqueci_senha extends CI_Controller
             } else {
 				
                 // Supondo que você precise de um identificador para o usuário
-                $cpf_usuario = $this->encryption->decrypt($this->uri->segment(3));
+                $cpf_usuario = $this->encryption->decrypt($this->uri->segment(4));
+
+				echo ($cpf_usuario);
+				die();
                 
                 $this->Login_model->altera_senha($cpf_usuario, $nova_senha);
                 $this->session->set_flashdata('sucesso', 'Senha recuperada com sucesso!');
                 redirect('login/');
             }
-        } else {
-			$this->session->set_flashdata('error_senha', 'Digite uma senha');
-		}
+        }
 
         $this->load->view('layout/header');
         $this->load->view('recuperar_senha');

@@ -40,10 +40,6 @@ class Funcionario_model extends CI_Model
 
         foreach ($fk_servico as $value) {
 
-            if ($value == '') {
-                $value = NULL;
-            }
-
             $data = array(
                 'fk_servico' => $value,
                 'fk_usuario' => $fk_usuario

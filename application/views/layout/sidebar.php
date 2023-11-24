@@ -43,7 +43,7 @@
            color: white;
        }
 
-       .sidebar .nav-item .collapse .collapse-inner .collapse-item, .sidebar .nav-item .collapsing .collapse-inner .collapse-item:hover {
+       .sidebar .nav-item .collapse:hover {
         background-color: white;   
     }
 

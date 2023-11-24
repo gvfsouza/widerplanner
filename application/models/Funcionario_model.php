@@ -1,5 +1,4 @@
-<?php if (!defined('BASEPATH'))
-    exit('No direct scripts access allowed');
+<?php if (!defined('BASEPATH')) exit('No direct scripts access allowed');
 
 class Funcionario_model extends CI_Model
 {
@@ -47,5 +46,14 @@ class Funcionario_model extends CI_Model
         );
 
         $this->db->insert('func_servicos', $data);
+    }
+
+    public function listar_servicos()
+    {
+        $this->db->select('*');
+        $this->db->from('servicos');
+
+        $res = $this->db->get();
+        return $res->result();
     }
 }

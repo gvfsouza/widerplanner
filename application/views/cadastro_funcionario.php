@@ -14,18 +14,18 @@
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="" role="tabpanel">
 
-                <?php if ($this->session->flashdata('sucesso')) {    ?>
-                    <div class="alert alert-success" role="alert">
-                        <?php echo $this->session->flashdata('sucesso'); ?>
-                    </div>
+                <?php if ($this->session->flashdata('sucesso')) { ?>
+                        <div class="alert alert-success" role="alert">
+                            <?php echo $this->session->flashdata('sucesso'); ?>
+                        </div>
                 <?php } ?>
                 <!----------------FIM-----MENSAGEM DE SUCESSO AO CADASTRAR ---------------->
 
                 <!----------------INICIO-----MENSAGEM DE ERRO AO CADASTRAR ---------------->
-                <?php if ($this->session->flashdata('erro')) : ?>
-                    <div class="alert alert-danger">
-                        <?php echo $this->session->flashdata('erro'); ?>
-                    </div>
+                <?php if ($this->session->flashdata('erro')): ?>
+                        <div class="alert alert-danger">
+                            <?php echo $this->session->flashdata('erro'); ?>
+                        </div>
                 <?php endif; ?>
                 <!----------------FIM-----MENSAGEM DE ERRO AO CADASTRAR ---------------->
 
@@ -77,7 +77,7 @@
                                                         <input style="font-size:14px" type="email" class="form-control" id="email_usuario" name="email_usuario" maxlength="60" onblur="validacaoEmail(this)" required>
                                                         <div id="emailErro" style="color: red;"></div>
                                                     </div>
-                                                    <div class="col-md-2">
+                                                    <div class="form-group col-md-2">
                                                         <label for="" style="color: #4e4e4e;"><b>Telefone:</b></label>
                                                         <input style="font-size:14px" type="text" class="form-control" id="telefone_usuario" name="telefone_usuario" value="">
                                                     </div>
@@ -90,6 +90,15 @@
                                                             <option value="opcao2">Opção 2</option>
                                                         </select>
                                                     </div>
+                                                    <div class="form-group col-md-4" id="campos">
+                                <label for="">Serviço(s):</label>
+                                <select name="fk_servico[]" id="fk_servico" class="form-control adicionar_servico" style="cursor: pointer;" required>
+                                    <option class="text-center" value="">--- Selecione uma Opção ---</option>
+                                    <?php foreach ($listar_doencas_compulsorias as $value) { ?>
+                                            <option value="<?php echo $value->id; ?>" data-nome="<?php echo utf8_encode($value->doencas); ?>"><?php echo utf8_encode($value->doencas); ?></option>
+                                    <?php } ?>
+                                </select>
+                            </div>
                                                     <div class="col-md-3" style="margin-top: 30px;">
                                                         <span style="width: 160px" title="addServico" class="btn btn-primary" onclick="adicionarCampo()">Adicionar Serviço</span>
                                                         <span style="width: 100px" title="removerServico" class="btn btn-danger" onclick="removerCampo(this) ">Remover</span>

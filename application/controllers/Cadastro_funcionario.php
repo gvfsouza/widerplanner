@@ -56,6 +56,8 @@ class Cadastro_funcionario extends CI_Controller
 			redirect('cadastro_funcionario');
 		}
 
+		$dados['listar_servicos'] = $this->Funcionario_model->listar_servicos();
+
 		$this->load->view('layout/header');
 		$this->load->view('layout/sidebar');
 		$this->load->view('layout/navbar');

@@ -44,8 +44,7 @@ class Login_model extends CI_Model
     $senha = md5($senha_nova);
 
     $data = array(
-      'senha' => $senha,
-      'alterar_senha' => NULL,
+      'senha' => $senha
     );
 
     $this->db->where('cpf_usuario', $cpf_usuario);

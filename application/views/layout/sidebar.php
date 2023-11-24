@@ -28,8 +28,7 @@
 
        /* cor do link quando passa o mouse */
        .nav-item .nav-link:hover .link {
-            font-size: 18px;
-            background-color: white;
+            font-size: 18px;X
        }
 
        .nav-item .nav-link .icon {
@@ -43,6 +42,10 @@
            font-size: 20px;
            color: white;
        }
+
+       .sidebar .nav-item .collapse .collapse-inner .collapse-item, .sidebar .nav-item .collapsing .collapse-inner .collapse-item:hover {
+        background-color: white;   
+    }
 
    </style>
    

@@ -79,64 +79,26 @@ class Esqueci_senha extends CI_Controller
 		$this->load->view('esqueci_senha');
 	}
 
-	public function recuperar_senha($chave = '')
+	public function recuperar_senha()
     {
         $this->load->model('Login_model');
         $this->load->library('encryption');
 
-        // if (isset($_POST['nova_senha'])) {
-        //     $nova_senha = $_POST['nova_senha'];
-        //     $confirma_senha = $_POST['confirma_senha'];
+        if (isset($_POST['nova_senha'])) {
+            $nova_senha = $_POST['nova_senha'];
+            $confirma_senha = $_POST['confirma_senha'];
 
-        //     if ($nova_senha != $confirma_senha) {
-        //         $this->session->set_flashdata('error', 'As senhas não conferem');
-        //     } else {
-        //         // Supondo que você precise de um identificador para o usuário
-        //         $cpf_usuario = $this->encryption->decrypt($this->uri->segment(3));
+            if ($nova_senha != $confirma_senha) {
+                $this->session->set_flashdata('error', 'As senhas não conferem');
+            } else {
+                // Supondo que você precise de um identificador para o usuário
+                $cpf_usuario = $this->encryption->decrypt($this->uri->segment(3));
                 
-        //         $this->Login_model->altera_senha($cpf_usuario, $nova_senha);
-        //         $this->session->set_flashdata('sucesso', 'Senha recuperada com sucesso!');
-        //         redirect('login/');
-        //     }
-        // }
-
-        if ($chave != '') {
-			$this->load->library('encryption');
-
-			// descriptografa a chave
-			$chave_descriptografada = $this->my_encrypt->decode($chave);
-
-			$explode_chave = explode('#', $chave_descriptografada);
-
-			if (isset($explode_chave[1])) {
-
-				$data_hora = $explode_chave[0];
-				$cpf_usuario = $explode_chave[1];
-
-				$minutes_to_add = 2880;
-				$time = new DateTime(date($data_hora));
-				$time->add(new DateInterval('PT' . $minutes_to_add . 'M'));
-				$stamp = $time->format('Y-m-d H:i');
-				// echo $stamp;
-				// die();
-				if (date('Y-m-d H:i') > $stamp) {
-					$this->session->set_flashdata('error', 'Link expirado, clique em esqueci senha novamente');
-				} else {
-					if (isset($_POST['nova_senha'])) {
-						$senha_nova = $_POST['senha_nova'];
-						$confirma_senha = $_POST['confirma_senha'];
-
-						if ($nova_senha != $confirma_senha) {
-							$this->session->set_flashdata('error', 'As senhas não conferem');
-						} else {
-							$this->login_model->altera_senha($cpf_usuario, $senha_nova);
-							$this->session->set_flashdata('sucesso', 'Senha recuperada com sucesso!');
-							redirect('login/');
-						}
-					}
-				}
-			}
-		}
+                $this->Login_model->altera_senha($cpf_usuario, $nova_senha);
+                $this->session->set_flashdata('sucesso', 'Senha recuperada com sucesso!');
+                redirect('login/');
+            }
+        }
 
         $this->load->view('layout/header');
         $this->load->view('recuperar_senha');

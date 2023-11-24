@@ -82,12 +82,12 @@ class Esqueci_senha extends CI_Controller
         $this->load->library('encryption');
 
         if (isset($_POST['nova_senha'])) {
+			echo 'teste';
+				die ();
             $nova_senha = $_POST['nova_senha'];
             $confirma_senha = $_POST['confirma_senha'];
 
             if ($nova_senha != $confirma_senha) {
-				echo 'teste';
-				die ();
                 $this->session->set_flashdata('erro', 'As senhas não conferem');
             } else {
 				

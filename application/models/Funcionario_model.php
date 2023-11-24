@@ -36,7 +36,7 @@ class Funcionario_model extends CI_Model
     {
         $data = array(
             'fk_usuario	' => $id_func,
-            'fk_servico' => $id_servico
+            'fk_servicos' => $id_servico
         );
 
         $this->db->insert('func_servicos', $data);

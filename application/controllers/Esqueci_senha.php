@@ -88,13 +88,12 @@ class Esqueci_senha extends CI_Controller
             if ($nova_senha != $confirma_senha) {
                 $this->session->set_flashdata('erro', 'As senhas não conferem');
             } else {
-				
                 // Supondo que você precise de um identificador para o usuário
                 $cpf_usuario = $this->uri->segment(3);
                 
                 $this->Login_model->altera_senha($cpf_usuario, $nova_senha);
                 $this->session->set_flashdata('sucesso', 'Senha recuperada com sucesso!');
-                redirect('login/');
+                redirect('recuperar_senha/');
             }
         }
 

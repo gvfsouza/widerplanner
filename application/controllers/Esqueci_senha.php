@@ -86,10 +86,11 @@ class Esqueci_senha extends CI_Controller
             $confirma_senha = $_POST['confirma_senha'];
 
             if ($nova_senha != $confirma_senha) {
-                $this->session->set_flashdata('erro', 'As senhas não conferem');
-            } else {
 				echo 'teste';
 				die ();
+                $this->session->set_flashdata('erro', 'As senhas não conferem');
+            } else {
+				
                 // Supondo que você precise de um identificador para o usuário
                 $cpf_usuario = $this->encryption->decrypt($this->uri->segment(3));
                 

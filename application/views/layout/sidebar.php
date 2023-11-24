@@ -21,7 +21,6 @@
         background-color: #F0F3F9;
       }
 
-
        /* cor do ícone quando passa o mouse */
        .nav-item .nav-link:hover .icon {
            font-size: 18px;
@@ -30,6 +29,7 @@
        /* cor do link quando passa o mouse */
        .nav-item .nav-link:hover .link {
             font-size: 18px;
+            background-color: white;
        }
 
        .nav-item .nav-link .icon {

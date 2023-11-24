@@ -43,6 +43,9 @@ class Cadastro_funcionario extends CI_Controller
 			$estado_usuario = $this->input->post('estado_usuario');
 			$fk_servicos = $this->input->post('fk_servicos');
 
+			echo $fk_servicos;
+			die();
+
 			if (!isset($error)) {
 
 				$dados['cadastro_funcionario'] = $this->Funcionario_model->cadastro_profissional($foto_usuario, $nome_usuario, $cpf_usuario, $dt_nasc_usuario, $email_usuario, $sexo_usuario, $telefone_usuario, $cep_usuario, $logradouro_usuario, $numero_usuario, $complemento_usuario, $bairro_usuario, $cidade_usuario, $estado_usuario, $fk_servicos, md5(gerarSenhaAleatoria(8)));

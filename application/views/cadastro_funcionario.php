@@ -87,7 +87,7 @@
                                                         <select name="fk_servico[]" id="fk_servico" class="form-control adicionar_servico" style="cursor: pointer;" required>
                                                             <option class="text-center" value="">--- Selecione uma Opção ---</option>
                                                             <?php foreach ($listar_servicos as $value) { ?>
-                                                                <option value="<?php echo isset($value->id) ? $value->id : ''; ?>" data-nome="<?php echo utf8_encode($value->nome_servico); ?>"></option>
+                                                                <option value="<?php echo isset($value->id) ? $value->id : ''; ?>" data-nome="<?php echo utf8_encode($value->nome_servico); ?><?php echo utf8_encode($value->nome_servico); ?>"></option>
                                                             <?php } ?>
                                                         </select>
                                                     </div>

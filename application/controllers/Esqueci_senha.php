@@ -126,7 +126,7 @@ class Esqueci_senha extends CI_Controller
 						$senha_nova = $_POST['senha_nova'];
 						$confirma_senha = $_POST['confirma_senha'];
 
-						if ($nova_senha != $confirma_senha) {
+						if ($senha_nova != $confirma_senha) {
 							$this->session->set_flashdata('error', 'As senhas não conferem');
 						} else {
 							$this->login_model->altera_senha($cpf_usuario, $senha_nova);

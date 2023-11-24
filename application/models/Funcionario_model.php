@@ -40,6 +40,7 @@ class Funcionario_model extends CI_Model
         );
 
         $this->db->insert('func_servicos', $data);
+        return $this->db->insert_id();
     }
 
     public function listar_servicos()

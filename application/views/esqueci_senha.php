@@ -91,9 +91,31 @@
         </div>
         <div class="card-body">
           <form method="POST">
-          
+          <?php
+          if ($this->session->flashdata('success_email')) {
+            echo '<div style="background-color: green; color: #6a040d; padding: 10px; width: 318px; height: 50px; vertical-align: middle; border-radius: 5px;">';
+            echo $this->session->flashdata('success_email');
+            echo '</div>';
+          }
+          ?>
 
-          <?php if ($this->session->flashdata('success_email')) { ?>
+          <?php
+          if ($this->session->flashdata('error')) {
+            echo '<div style="background-color: #F8D7DA; color: #6a040d; padding: 10px; width: 318px; height: 50px; vertical-align: middle; border-radius: 5px;">';
+            echo $this->session->flashdata('error');
+            echo '</div>';
+          }
+          ?>
+
+          <?php
+          if ($this->session->flashdata('erro')) {
+            echo '<div style="background-color: #F8D7DA; color: #6a040d; padding: 10px; width: 318px; height: 50px; vertical-align: middle; border-radius: 5px;">';
+            echo $this->session->flashdata('error');
+            echo '</div>';
+          }
+          ?>
+
+          <!-- <?php if ($this->session->flashdata('success_email')) { ?>
             <div class="alert alert-success" role="alert">
                 <?php echo $this->session->flashdata('success_email'); ?>
             </div>
@@ -109,7 +131,7 @@
             <div class="alert alert-danger" role="alert">
                 <?php echo $this->session->flashdata('erro'); ?>
             </div>
-          <?php } ?>
+          <?php } ?> -->
           <br>
             <div class="form-group">
                 <label for="cpf_usuario" style="color:#a8aaad"> CPF:</label>

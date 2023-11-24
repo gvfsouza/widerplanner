@@ -35,17 +35,24 @@ class Funcionario_model extends CI_Model
         );
 
         $this->db->insert('usuario', $data);
+
+        $fk_usuario = $this->db->insert_id();
+
+        foreach ($fk_servico as $value) {
+
+            if ($value == '') {
+                $value = NULL;
+            }
+
+            $data = array(
+                'fk_servico' => $value,
+                'fk_usuario' => $fk_usuario
+            );
+
+            $this->db->insert('func_servicos', $data);
+        }
+
         return $this->db->insert_id();
-    }
-
-    public function FuncionarioServico($id_usuario, $id_servicos)
-    {
-        $data = array(
-            'fk_usuario' => $id_usuario,
-            'fk_servico' => $id_servicos,
-        );
-
-        $this->db->insert('func_servicos', $data);
     }
 
     public function listar_servicos()

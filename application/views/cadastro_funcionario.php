@@ -84,7 +84,7 @@
                                                     <div class="col-md-4">
                                                         <label for="" style="color: #4e4e4e;"><b>Serviço:</b></label>
                                                         <br>
-                                                        <select name="fk_servico[]" id="fk_servico" class="form-control adicionar_servico" style="cursor: pointer;" required>
+                                                        <select name="fk_servicos[]" id="fk_servicos" class="form-control adicionar_servico" style="cursor: pointer;" required>
                                                             <option class="text-center" value="">--- Selecione uma Opção ---</option>
                                                             <?php foreach ($listar_servicos as $value) { ?>
                                                                 <option value="<?php echo $value->id_servicos; ?>" data-nome="<?php echo utf8_encode($value->nome_servico); ?>"><?php echo utf8_encode($value->nome_servico); ?></option>

@@ -44,8 +44,6 @@ class Funcionario_model extends CI_Model
             'fk_servicos' => $fk_servicos,
         );
 
-        
-
         $this->db->insert('func_servicos', $data);
         var_dump($fk_servicos);
         die();

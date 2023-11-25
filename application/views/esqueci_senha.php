@@ -94,7 +94,7 @@
                 <form method="POST">
                     <?php
                     if ($this->session->flashdata('success_email')) {
-                        echo '<div style="background-color: green; color: #6a040d; padding: 10px; width: 318px; height: 50px; vertical-align: middle; border-radius: 5px;">';
+                        echo '<div style="background-color: #209d2042; color: #0e3d0e; padding: 10px; vertical-align: middle; border-radius: 5px;">';
                         echo $this->session->flashdata('success_email');
                         echo '</div>';
                     }

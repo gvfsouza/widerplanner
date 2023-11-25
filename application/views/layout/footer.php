@@ -25,12 +25,10 @@
     </div>
 </footer> -->
 <script>
-    $(document).ready(function () {
-        $(".logout-link").click(function (e) {
-            e.preventDefault();
-            $("#logoutModal").modal("show");
-        });
-    });
+    // Função para mostrar o modal ao clicar no link de logout
+    function showLogoutModal() {
+        $("#logoutModal").modal("show");
+    }
 
     // Limpar o modal ao fechar
     $('#logoutModal').on('hidden.bs.modal', function () {

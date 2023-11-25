@@ -9,7 +9,7 @@ class Login_model extends CI_Model
 
         // Realiza a autenticação do usuário, por exemplo, consulta no banco de dados
         $this->db->where('cpf_usuario', $cpf_usuario);
-        $this->db->where('senha', md5($senha)); // Supondo que a senha seja armazenada como hash MD5 para simplificar
+        $this->db->where('senha',$senha); 
         $query = $this->db->get('usuario');
 
         if ($query->num_rows() == 1) {

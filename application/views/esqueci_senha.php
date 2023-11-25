@@ -128,7 +128,7 @@
                         <input type="email" class="form-control" id="email_usuario" name="email_usuario" maxlength="60" onblur="validacaoEmail(this)" placeholder="exemplo@gmail.com" required>
                     </div>
                     <input type="hidden" name="enviar" id="enviar" value="1" />
-                    <input class="form-control" style=" background: #0090c9c7; color: white; border:none " type="submit" name="botao_enviar" value="Enviar" />
+                    <input class="form-control" style=" background: #72b9b7; color: white; border:none " type="submit" name="botao_enviar" value="Enviar" />
                 </form>
                 <br>
                 <div id="rodape" style="text-align:center;color: gray;font-size:12px">

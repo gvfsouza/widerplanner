@@ -24,5 +24,13 @@
         </div>
     </div>
 </footer> -->
+<script>
+    $(document).ready(function () {
+        $(".logout-link").click(function (e) {
+            e.preventDefault();
+            $("#logoutModal").modal("show");
+        });
+    });
+</script>
 
 </body>

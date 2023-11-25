@@ -54,12 +54,3 @@
 </head>
 <body id="page-top">
     <div id="wrapper" class="h-100" style="background-color: #d9e2f7;">
-
-    <script>
-    $(document).ready(function () {
-        $(".logout-link").click(function (e) {
-            e.preventDefault();
-            $("#logoutModal").modal("show");
-        });
-    });
-</script>

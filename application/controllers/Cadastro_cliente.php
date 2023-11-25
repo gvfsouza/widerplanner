@@ -41,7 +41,7 @@ class Cadastro_cliente extends CI_Controller
             $complemento_usuario = $this->input->post('complemento_usuario');
             $bairro_usuario = $this->input->post('bairro_usuario');
             $cidade_usuario = $this->input->post('cidade_usuario');
-            $uf_usuario = $this->input->post('uf');
+            $uf_usuario = $this->input->post('estado_usuario');
 
             // gerarSenhaAleatoria função do arquivo functions_helper
             $senha_gerada = gerarSenhaAleatoria(8);

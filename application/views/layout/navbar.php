@@ -31,13 +31,35 @@
     </button>
 
     <!-- Topbar Navbar -->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <ul class="navbar-nav ml-auto">
+            <!-- Nav Item - User Information -->
+            <li class="nav-item dropdown no-arrow">
+                <!-- Dropdown - User Information -->
+                <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <!-- Conteúdo do seu modal aqui -->
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Confirmação</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Tem certeza de que deseja sair?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Não</button>
+                <a href="<?php echo site_url('login/logout'); ?>" class="btn btn-primary">Sim</a>
+            </div>
         </div>
     </div>
 </div>
+
+            </li>
+        </ul>
+
+
+        
 
     <script>
        // Adicionar funcionalidade ao botão de toggle

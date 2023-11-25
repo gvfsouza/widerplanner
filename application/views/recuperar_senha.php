@@ -86,8 +86,7 @@
           <span style="text-align:center;font-size:20px;color:#a8aaad;font-weight: normal;">Recuperar Senha<span></p>
           <br>
         </div>
-
-        <div class="alert alert-warning">
+        <div style="background-color: #7fc19c30; color: #555252; padding: 10px; border-radius: 5px;">
           Preencha os campos abaixo com a nova senha.
         </div>
         <div class="card-body">
@@ -107,11 +106,11 @@
             
             <br>
             <div class="form-group">
-              <label for="nova_senha">Nova senha</label>
+              <label for="nova_senha" style="#a8aaad">Nova senha</label>
               <input type="password" class="form-control" id="nova_senha" name="nova_senha" placeholder="Digite a nova senha" required>
             </div>
             <div class="form-group">
-              <label for="confirma_senha">Confirme a nova senha</label>
+              <label for="confirma_senha" style="#a8aaad">Confirme a nova senha</label>
               <input type="password" class="form-control" id="confirma_senha" name="confirma_senha" placeholder="Insira a senha novamente" required>
             </div>
            

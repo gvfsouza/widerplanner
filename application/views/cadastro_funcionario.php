@@ -59,7 +59,7 @@
                                                     <div class="form-group col-md-2">
                                                         <label for="" style="color: #4e4e4e;"><b>Data Nasc.:</b></label>
                                                         <br>
-                                                        <input type="date" class="form-control" id="dt_nasc_usuario" name="dt_nasc_usuario" value="">
+                                                        <input type="date" max="9999-12-31" class="form-control" id="dt_nasc_usuario" name="dt_nasc_usuario" value="">
                                                     </div>
                                                     <div class="form-group col-md-3">
                                                         <label for="" style="color: #4e4e4e;"><b>Sexo:</b></label>

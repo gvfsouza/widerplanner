@@ -48,12 +48,13 @@
                       <div class="form-group col-md-3">
                         <label for="" style="color: #4e4e4e;"><b>Escolha um dia da Semana:</b></label>
                         <br>
-                        <select name="fk_dia_semana" id="fk_dia_semana" class="form-control fk_dia_semana" style="cursor: pointer;" required>
+                        <input type="date" class="form-control" id="fk_dia_semana" name="fk_dia_semana" max="9999-12-31">
+                        <!-- <select name="fk_dia_semana" id="fk_dia_semana" class="form-control fk_dia_semana" style="cursor: pointer;" required>
                           <option class="text-center" value="">--- Selecione uma Opção ---</option>
-                          <?php foreach ($listar_diasemana as $value) { ?>
-                                <option value="<?php echo $value->id_semana; ?>" data-nome="<?php echo $value->dias_semana; ?>"><?php echo $value->dias_semana; ?></option>
-                          <?php } ?>
-                        </select>
+                          </?php foreach ($listar_diasemana as $value) { ?>
+                                <option value="</?php echo $value->id_semana; ?>" data-nome="</?php echo $value->dias_semana; ?>"></?php echo $value->dias_semana; ?></option>
+                          </?php } ?>
+                        </select> -->
                       </div>
 
                       <div class="form-group col-md-3">

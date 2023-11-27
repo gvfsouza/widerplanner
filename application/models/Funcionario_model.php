@@ -1,5 +1,4 @@
-<?php if (!defined('BASEPATH'))
-    exit('No direct scripts access allowed');
+<?php if (!defined('BASEPATH')) exit('No direct scripts access allowed');
 
 class Funcionario_model extends CI_Model
 {

@@ -26,17 +26,13 @@ class Agendamento extends CI_Controller
 		$this->load->model('Agendamento_model');
 		$dados = array();
 
-		$data_agenda = $this->input->post('data_agenda');
-		$fk_hora = $this->input->post('fk_hora');
-		$fk_servicos = $this->input->post('fk_servicos');
-		$fk_profissional = $this->input->post('fk_profissional');
+		if (isset($_POST['salvar'])) {
+			$data_agenda = $this->input->post('data_agenda');
+			$fk_hora = $this->input->post('fk_hora');
+			$fk_servicos = $this->input->post('fk_servicos');
+			$fk_profissional = $this->input->post('fk_profissional');
 
-		// Verifica se o formulário foi submetido e as variáveis estão definidas
-		if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['salvar']) && isset($data_agenda) && isset($fk_hora) && isset($fk_servicos) && isset($fk_profissional)) {
-			// Verifica se o horário escolhido está ocupado
-			$horario_ocupado = $this->Agendamento_model->verificarHorarioOcupado($data_agenda, $fk_profissional, $fk_hora);
-
-			if (!$horario_ocupado) {
+			if (!isset($error)) {
 				// Obtenha o fk_usuario da sessão
 				$fk_usuario = $this->session->userdata('fk_usuario');
 
@@ -52,24 +48,19 @@ class Agendamento extends CI_Controller
 					$this->Agendamento_model->associarServico($fk_agenda, $value);
 				}
 
+				
 				//MENSAGEM SUCESSO AO CADASTRAR
 				$this->session->set_flashdata('sucesso', 'Agendamento realizado com sucesso!');
 				redirect('agendamento');
+
 			} else {
-				$this->session->set_flashdata('erro', 'O horário escolhido já está ocupado. Por favor, escolha outro horário.');
+				$this->session->set_flashdata('erro', 'Erro ao efetuar o agendamento de Horário.');
 			}
-		}
 
-		// Consulta para obter os horários já preenchidos para a data e o profissional escolhidos
-		// Certifique-se de que $data_agenda e $fk_profissional estejam definidos antes de chamar a função
-		if (isset($data_agenda) && isset($fk_profissional)) {
-			$horarios_ocupados = $this->Agendamento_model->horariosOcupados($data_agenda, $fk_profissional);
-
-			// Carrega os dados na view, removendo os horários já ocupados da lista de horários disponíveis
-			$dados['listar_hora'] = array_diff($this->Agendamento_model->listar_hora(), $horarios_ocupados);
 		}
 
 		$dados['listar_servicos'] = $this->Agendamento_model->listar_servicos();
+		$dados['listar_hora'] = $this->Agendamento_model->listar_hora();
 		$dados['listar_profissionais'] = $this->Agendamento_model->listar_profissionais();
 
 		$this->load->view('layout/header');
@@ -77,5 +68,4 @@ class Agendamento extends CI_Controller
 		$this->load->view('layout/navbar');
 		$this->load->view('agendamento', $dados);
 	}
-
 }

@@ -486,14 +486,14 @@
                                                 </div>
                                             </div>
                                         </fieldset>
+                                        <a class="btn" href="#" role="button" style="float: right; background-color: #1cc88a; color: white; margin-bottom: 15px; position: fixed;">Agenda
+    </a>
                                         <br>
                                     </div>
                                 </div>
                             </div>
                         </form>
                     </div>
-                    <a class="btn" href="#" role="button" style="float: right; background-color: #1cc88a; color: white; margin-bottom: 15px; position: fixed;">Agenda
-    </a>
                 </div>
                 <div class="col-12 text-center">
                     <span class="text-center" style="text-align: center">Sistema desenvolvido para cunho estudantil <br>

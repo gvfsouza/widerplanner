@@ -23,6 +23,29 @@ function gerarSenhaAleatoria($tamanho = 10) {
     return $senha;
 }
 
+if (!function_exists('formata_data')) {
+    function formata_data($data)
+    {
+        if ($data != "") {
+            $data = explode('-', $data);
+            if (isset($data[1]))
+                return $data[2] . '/' . $data[1] . '/' . $data[0];
+        } else {
+            return NULL;
+        }
+    }
+}
+
+if (!function_exists('formata_hora')) {
+    function formata_hora($hora)
+    {
+        if (trim($hora) != '') {
+            return substr($hora, 0, 5) . 'h';
+        } else {
+            return;
+        }
+    }
+}
 
 // function gerarSenhaAleatoria($tamanho = 8) {
 //     $caracteres = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';

@@ -2,11 +2,15 @@
 
 class Agendamento_model extends CI_Model
 {
-    public function cadastro_agenda($fk_servico, $fk_dia_semana)
+    public function cadastro_agenda($data_agenda, $fk_hora, $fk_servicos, $fk_profissional, $fk_usuario)
     {
         $data = array(
-            'fk_servico' => $fk_servico,
-            'fk_dia_semana' => $fk_dia_semana,
+            'data_agenda' => $data_agenda,
+            'fk_hora' => $fk_hora,
+            'fk_servicos' => $fk_servicos,
+            'fk_profissional' => $fk_profissional,
+            'fk_usuario' => $fk_usuario,
+            
         );
 
         $this->db->insert('agenda', $data);
@@ -15,10 +19,10 @@ class Agendamento_model extends CI_Model
         return $id_func;
     }
 
-    public function associar_servico($fk_usuario, $fk_servicos)
+    public function associarServico($fk_agenda, $fk_servicos)
     {
         $data = array(
-            'fk_usuario	' => $fk_usuario,
+            'fk_agenda	' => $fk_agenda,
             'fk_servicos' => $fk_servicos,
         );
 

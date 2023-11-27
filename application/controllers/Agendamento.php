@@ -27,12 +27,24 @@ class Agendamento extends CI_Controller
 		$dados = array();
 
 		if (isset($_POST['salvar'])) {
-			$fk_dia_semana = $this->input->post('fk_dia_semana');
-			$fk_servico = $this->input->post('fk_servico');
+			$data_agenda = $this->input->post('data_agenda');
+			$fk_hora = $this->input->post('fk_hora');
+			$fk_servicos = $this->input->post('fk_servicos');
+			$fk_profissional = $this->input->post('fk_profissional');
 
 			if (!isset($error)) {
 
-				$dados['agendamento'] = $this->Agendamento_model->cadastro_profissional($fk_dia_semana, $fk_servico);
+				$fk_usuario = $this->session->userdata('fk_usuario');
+
+				$dados['agendamento'] = $this->Agendamento_model->cadastro_agenda($data_agenda, $fk_hora, $fk_servicos, $fk_profissional, $fk_usuario);
+
+				// Captura o ID da agenda recém cadastrada
+				$fk_agenda = $dados['agendamento'];
+
+				// Insere na tabela func_servicos
+				foreach($fk_servicos as $value){
+					$this->Agendamento_model->associarServico($fk_agenda, $value);
+				}
 
 				//MENSAGEM SUCESSO AO CADASTRAR
 				$this->session->set_flashdata('sucesso', 'Cadastro realizado com sucesso!');

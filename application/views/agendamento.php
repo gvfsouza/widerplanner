@@ -49,7 +49,7 @@
                         <div class="form-group col-md-6">
                           <label for="" style="color: #4e4e4e;"><b>Escolha uma Data:</b></label>
                           <br>
-                          <input type="date" class="form-control" id="fk_dia_semana" name="fk_dia_semana" max="9999-12-31">
+                          <input type="date" class="form-control" id="data_agenda" name="data_agenda" max="9999-12-31">
                           <!-- <select name="fk_dia_semana" id="fk_dia_semana" class="form-control fk_dia_semana" style="cursor: pointer;" required>
                           <option class="text-center" value="">--- Selecione uma Opção ---</option>
                           </?php foreach ($listar_diasemana as $value) { ?>

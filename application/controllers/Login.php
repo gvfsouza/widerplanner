@@ -65,12 +65,18 @@ class Login extends CI_Controller
 			$user = $this->Login_model->autenticacao_usuario($cpf_usuario, $senha);
 
 			if ($user) {
-				// Configura dados da sessão do usuário e redireciona para o painel
+				// Configura dados da sessão do usuário, incluindo o fk_usuario
+				$session_data = array(
+					'fk_usuario' => $user['fk_usuario'],
+					'cpf_usuario' => $user['cpf_usuario']
+				);
+	
+				$this->session->set_userdata('logged_in', $session_data);
 				$this->session->set_flashdata('sucesso', 'Login efetuado com sucesso!');
 				redirect('home');
 			} else {
 				$this->session->set_flashdata('error', 'CPF do usuário ou senha inválidos');
-    			redirect('login');
+				redirect('login');
 			}
 		}
 	}

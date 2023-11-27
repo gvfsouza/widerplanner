@@ -69,6 +69,13 @@
        </li>
 
        <li class="nav-item">
+           <a title="Gerenciar Usuários" class="nav-link" href="<?php echo base_url(); ?>agendamento">
+                <i class="fas fa-solid fa-clock icon" style="color:#879bc9"></i>
+                <span class="link" style="color:#000000d9;font-weight: bold;font-size:17px">Agendar Horário </span>
+           </a>
+       </li>
+
+       <li class="nav-item">
            <a title="Gerenciar Usuários" class="nav-link" href="<?php echo base_url(); ?>perfil_cliente">
             <i class="fas fa-user icon" style="color:#879bc9"></i>
                <span class="link" style="color:#000000d9;font-weight: bold;font-size:17px">Perfil </span>

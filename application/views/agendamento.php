@@ -1,4 +1,3 @@
-
 <style>
   label {
     color: black;
@@ -49,14 +48,14 @@
                       <div class="form-group col-md-6">
                         <label for="" style="color: #4e4e4e;"><b>Escolha um dia da Semana:</b></label>
                         <br>
-                        <select name="fk_servicos[]" id="fk_servicos" class="form-control servico" style="cursor: pointer;" required>
-                                                    <option class="text-center" value="">--- Selecione uma Opção ---</option>
-                                                    <?php foreach ($listar_servicos as $value) { ?>
-                                                        <option value="<?php echo $value->id_servicos; ?>" data-nome="<?php echo utf8_encode($value->nome_servico); ?>"><?php echo utf8_encode($value->nome_servico); ?></option>
-                                                    <?php } ?>
-                                                </select>
+                        <select name="fk_dia_semana" id="fk_dia_semana" class="form-control fk_dia_semana" style="cursor: pointer;" required>
+                          <option class="text-center" value="">--- Selecione uma Opção ---</option>
+                          <?php foreach ($listar_diasemana as $value) { ?>
+                            <option value="<?php echo $value->id_semana; ?>" data-nome="<?php echo utf8_encode($value->dias_semana); ?>"><?php echo utf8_encode($value->dias_semana); ?></option>
+                          <?php } ?>
+                        </select>
                       </div>
-                      
+
                       <div class="form-group col-md-6">
                         <label for="" style="color: #4e4e4e;"><b>Escolha um Horário:</b></label>
                         <br>
@@ -70,7 +69,7 @@
                     </div>
 
                     <br>
-                    
+
                     <div class="row">
                       <div class="form-group col-md-6">
                         <label for="" style="color: #4e4e4e;"><b>Serviço:</b></label>

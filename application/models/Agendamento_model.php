@@ -43,12 +43,21 @@ class Agendamento_model extends CI_Model
     {
         $horarios_ocupados = $this->horariosOcupados($data_agenda, $fk_profissional);
 
-        $this->db->select('*');
-        $this->db->from('hora_disp');
-        $this->db->where_not_in('id_hora', $horarios_ocupados);
+        if (!empty($horarios_ocupados)) {
+            $this->db->select('*');
+            $this->db->from('hora_disp');
+            $this->db->where_not_in('id_hora', $horarios_ocupados);
 
-        $res = $this->db->get();
-        return $res->result();
+            $res = $this->db->get();
+            return $res->result();
+        } else {
+            // Se não houver horários ocupados, retornar todos os horários
+            $this->db->select('*');
+            $this->db->from('hora_disp');
+
+            $res = $this->db->get();
+            return $res->result();
+        }
     }
 
     public function horariosOcupados($data_agenda, $fk_profissional)

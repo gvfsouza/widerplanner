@@ -53,19 +53,19 @@
                                                         <div class="form-group col-md-12">
                                                             <label for="" style="color: #77787a;">Senha atual:</label>
                                                             <br>
-                                                            <input style="font-size:14px" type="text" class="form-control" id="senha_atual" name="senha_atual" value="">
+                                                            <input style="font-size:14px" type="password" class="form-control" id="senha_atual" name="senha_atual" value="">
                                                             <i class="fas fa-eye-slash"></i>
                                                         </div>
                                                         <div class="form-group col-md-12">
                                                             <label for="" style="color: #77787a;">Nova senha:</label>
                                                             <br>
-                                                            <input type="text" class="form-control" id="nova_senha" name="nova_senha">
+                                                            <input type="password" class="form-control" id="nova_senha" name="nova_senha">
                                                             <i class="fas fa-eye-slash"></i>
                                                         </div>
                                                         <div class="form-group col-md-12">
                                                             <label for="" style="color: #77787a;">Confirmação nova senha</label>
                                                             <br>
-                                                            <input type="text" class="form-control" id="confirma_senha" name="confirma_senha" value="">
+                                                            <input type="password" class="form-control" id="confirma_senha" name="confirma_senha" value="">
                                                             <i class="fas fa-eye-slash"></i>
                                                         </div>
                                                     </div>

@@ -38,28 +38,30 @@
                                             <div style="margin-left:10px;"></div>
                                             <div class="col">
                                                 <div class="row">
-                                                    <div class="form-group col-md-2">
+                                                    <div class="form-group col-md-3">
                                                         <label style="color: #4e4e4e"><b>Foto:</b></label>
                                                         <br>
                                                         <input style="font-size:14px" type="file" class="form-control" id="foto_usuario" name="foto_usuario" accept="image/*" required>
                                                     </div>
-                                                    <div class="form-group col-md-4">
+                                                    <div class="form-group col-md-5">
                                                         <label for="" style="color: #4e4e4e;"><b>Nome Completo:</b></label>
                                                         <br>
                                                         <input style="font-size:14px" type="text" class="form-control" id="nome_usuario" name="nome_usuario" value="">
                                                     </div>
-                                                    <div class="form-group col-md-2">
+                                                    <div class="form-group col-md-3">
                                                         <label for="" style="color: #4e4e4e;"><b>CPF:</b></label>
                                                         <span id="cpfUsuario"></span>
                                                         <br>
                                                         <input style="font-size:14px" type="text" class="form-control" id="cpf_usuario" name="cpf_usuario" onkeydown="mascara(this,cpf)" maxlength="14" onkeyup="cpfCheck(this)" value="">
                                                     </div>
+                                                </div>
+                                                <div class="row">
                                                     <div class="form-group col-md-2">
                                                         <label for="" style="color: #4e4e4e;"><b>Data Nasc.:</b></label>
                                                         <br>
                                                         <input type="date" class="form-control" id="dt_nasc_usuario" name="dt_nasc_usuario" value="">
                                                     </div>
-                                                    <div class="form-group col-md-2">
+                                                    <div class="form-group col-md-3">
                                                         <label for="" style="color: #4e4e4e;"><b>Sexo:</b></label>
                                                         <select name="sexo_usuario" id="sexo_usuario" class="form-control" style="cursor: pointer;" required>
                                                             <option class="text-center" value="">--- Selecione uma Opção ---</option>
@@ -68,39 +70,43 @@
                                                             <option value="Prefiro não dizer">Prefiro não dizer</option>
                                                         </select>
                                                     </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="form-group col-md-3">
+                                                    <div class="form-group col-md-4">
                                                         <label for="" style="color: #4e4e4e;"><b>E-mail:</b></label>
                                                         <span id="emailResponsavel"></span>
                                                         <br>
                                                         <input style="font-size:14px" type="email" class="form-control" id="email_usuario" name="email_usuario" maxlength="60" onblur="validacaoEmail(this)" required>
                                                         <div id="emailErro" style="color: red;"></div>
                                                     </div>
-                                                    <div class="col-md-2">
+                                                    <div class="col-md-3">
                                                         <label for="" style="color: #4e4e4e;"><b>Telefone:</b></label>
                                                         <input style="font-size:14px" type="text" class="form-control" id="telefone_usuario" name="telefone_usuario" value="">
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <label for="" style="color: #4e4e4e;"><b>Serviço:</b></label>
-                                                        <br>
-                                                        <select name="fk_servicos[]" id="fk_servicos" class="form-control servico" style="cursor: pointer;" required>
-                                                            <option class="text-center" value="">--- Selecione uma Opção ---</option>
-                                                            <?php foreach ($listar_servicos as $value) { ?>
-                                                                <option value="<?php echo $value->id_servicos; ?>" data-nome="<?php echo utf8_encode($value->nome_servico); ?>"><?php echo utf8_encode($value->nome_servico); ?></option>
-                                                            <?php } ?>
-                                                        </select>
-                                                    </div>
-
-                                                    <div class="col-md-3" style="margin-top: 30px;">
-                                                        <div class="servicos_add">
-                                                            <button type="button" id="addServico" class="btn btn-primary addServico add_novo_Servico" style="width: 185px; height: 40px; font-size: 14px;"><i class="fas fa-plus"></i> Adicionar Serviço</button>
-                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </fieldset>
+
+                                    <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9;">
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <label for="" style="color: #4e4e4e;"><b>Serviço:</b></label>
+                                                <br>
+                                                <select name="fk_servicos[]" id="fk_servicos" class="form-control servico" style="cursor: pointer;" required>
+                                                    <option class="text-center" value="">--- Selecione uma Opção ---</option>
+                                                    <?php foreach ($listar_servicos as $value) { ?>
+                                                        <option value="<?php echo $value->id_servicos; ?>" data-nome="<?php echo utf8_encode($value->nome_servico); ?>"><?php echo utf8_encode($value->nome_servico); ?></option>
+                                                    <?php } ?>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-3" style="margin-top: 30px;">
+                                                <div class="servicos_add">
+                                                    <button type="button" class="btn btn-primary add_novo_Servico" style="width: 185px; height: 40px; font-size: 14px;"><i class="fas fa-plus"></i> Adicionar Serviço</button>
+                                                    <button type="button" class="btn btn-outline-danger botao_remover" style="width: 100px; height: 40px; font-size: 14px; margin-left: 10px;"><i class="fas fa-trash-alt"></i> Remover</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+
                                     <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9;">
                                         <div class="row">
                                             <div style="margin-left:10px;"></div>
@@ -165,37 +171,32 @@
 </div>
 
 <script>
-    var maxButtons = 2;
-    var addButton = $('#addServico');
+    var maxButtons = 9999; // Remova o limite de adição de serviços
 
     $('.add_novo_Servico').click(function(e) {
-        if ($('.add_novo_Servico').length < maxButtons) {
-            var element_copy = $(this).parent().parent().prev().clone();
-            botao_excluir = '<div align="right">';
-            botao_excluir += '<div id="remover" class="btn btn-outline-danger botao_remover"><i class="fas fa-trash-alt">&nbsp;</i></i>Remover</div>';
-            botao_excluir += '</div>';
+        var container = $(this).closest('.row');
+        var element_copy = container.clone();
+        var botao_excluir = '<div class="btn btn-outline-danger botao_remover" style="width: 100px; height: 40px; font-size: 14px; margin-top: 10px;"><i class="fas fa-trash-alt"></i> Remover</div>';
 
-            element_copy.find('select, input').val('');
-            element_copy.find('.select2').remove(); // limpa o campo
+        element_copy.find('select, input').val('');
+        element_copy.find('.select2').remove(); // Limpa o campo
+        element_copy.find('.add_novo_Servico').remove(); // Remove o botão "Adicionar Serviço"
 
-            $(this).parent().parent().prev().after(element_copy);
+        container.after(element_copy);
 
-            if (element_copy.find('.botao_remover').length === 0) {
-                element_copy.append(botao_excluir);
-            }
-
-            $('.botao_remover').click(function(e) {
-                addButton.show(); // Mostrar botão de adicionar responsável
-                $(this).parent().parent().remove();
-            });
-
-            //Select picker
-            $('.servico').select2({
-                width: '100%'
-            });
+        if (element_copy.find('.botao_remover').length === 0) {
+            element_copy.find('.col-md-3').append(botao_excluir);
         }
-    });
 
+        $('.botao_remover').click(function(e) {
+            $(this).closest('.row').remove();
+        });
+
+        // Select picker
+        $('.servico').select2({
+            width: '100%'
+        });
+    });
 
     //------------------------------------------------------------------------------------------------------
 

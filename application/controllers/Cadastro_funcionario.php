@@ -61,8 +61,10 @@ class Cadastro_funcionario extends CI_Controller
 				$fk_usuario = $dados['cadastro_funcionario'];
 
 				// Insere na tabela func_servicos
-				$this->Funcionario_model->associar_servico($fk_usuario, $fk_servicos);
-
+				foreach($fk_servicos as $values){
+					$this->Funcionario_model->associar_servico($fk_usuario, $values);
+				}
+			
 				//MENSAGEM SUCESSO AO CADASTRAR
 				$this->session->set_flashdata('sucesso', 'Cadastro realizado com sucesso!');
 				redirect('cadastro_funcionario');

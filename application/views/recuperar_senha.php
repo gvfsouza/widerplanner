@@ -80,46 +80,53 @@
   <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
     <div class="container">
       <div class="card">
-        <div class="col-md-12">
-          <p style="text-align:center;font-size: 31px;color: #135b93;font-weight: bold;">WiderPlanner
-          <br>
-          <span style="text-align:center;font-size:20px;color:#a8aaad;font-weight: normal;">Recuperar Senha<span></p>
-          <br>
-        </div>
-        <div style="background-color: #7fc19c30; color: #555252; padding: 10px; border-radius: 5px;">
-          Preencha os campos abaixo com a nova senha.
-        </div>
         <div class="card-body">
-          <form method="POST">
-          <?php
-            if ($this->session->flashdata('succeso')) {
-                echo '<div style="background-color: #209d2042; color: #0e3d0e; padding: 10px; vertical-align: middle; border-radius: 5px;">';
-                echo $this->session->flashdata('success_email');
-                echo '</div>';
-            }
-            ?>
-
-            <?php
-            if ($this->session->flashdata('erro')) {
-                echo '<div style="background-color: #F8D7DA; color: #6a040d; padding: 10px; width: 318px; height: 50px; vertical-align: middle; border-radius: 5px;">';
-                echo $this->session->flashdata('erro');
-                echo '</div>';
-          } ?>
-            <br>
-            <div class="form-group">
-              <label for="nova_senha" style="color:#a8aaad">Nova senha</label>
-              <input type="password" class="form-control" id="nova_senha" name="nova_senha" placeholder="Digite a nova senha" required>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="form-group">
+                <div class="p-3">
+                  <div class="col-md-12">
+                    <p style="text-align:center;font-size: 31px;color: #135b93;font-weight: bold;">WiderPlanner
+                    <br>
+                    <span style="text-align:center;font-size:20px;color:#a8aaad;font-weight: normal;">Recuperar Senha<span></p>
+                    <br>
+                  </div>
+                  <div style="background-color: #7fc19c30; color: #555252; padding: 10px; border-radius: 5px;">
+                    Preencha os campos abaixo com a nova senha.
+                  </div>
+                    <form method="POST">
+                    <?php
+                      if ($this->session->flashdata('succeso')) {
+                          echo '<div style="background-color: #209d2042; color: #0e3d0e; padding: 10px; vertical-align: middle; border-radius: 5px;">';
+                          echo $this->session->flashdata('success_email');
+                          echo '</div>';
+                      }
+                      ?>
+                      <?php
+                      if ($this->session->flashdata('erro')) {
+                          echo '<div style="background-color: #F8D7DA; color: #6a040d; padding: 10px; width: 318px; height: 50px; vertical-align: middle; border-radius: 5px;">';
+                          echo $this->session->flashdata('erro');
+                          echo '</div>';
+                    } ?>
+                      <br>
+                      <div class="form-group">
+                        <label for="nova_senha" style="color:#a8aaad">Nova senha</label>
+                        <input style="width: 100%" type="password" class="form-control" id="nova_senha" name="nova_senha" placeholder="Digite a nova senha" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="confirma_senha" style="color:#a8aaad">Confirme a nova senha</label>
+                        <input style="width: 100%" type="password" class="form-control" id="confirma_senha" name="confirma_senha" placeholder="Insira a senha novamente" required>
+                      </div>
+                  
+                      <button type="submit" id="entrar" name="entrar">Entrar</button>
+                    </form>
+                    <br>
+                    <div id="rodape" style="text-align:center;color: gray;font-size:12px">
+                      <p><small>Sistema desenvolvido para cunho estudantil <br> Projeto de Conclusão de Curso - Superior de Tecnologia em Análise e Deselvolvimento de Sistemas <br> Centro Universitário Nossa Senhora do Patrocínio<br>Endereço: R. José Weissohn, 153 - Centro, Salto - SP, 13328-300</small></p>
+                    </div>
+                </div>
+              </div>
             </div>
-            <div class="form-group">
-              <label for="confirma_senha" style="color:#a8aaad">Confirme a nova senha</label>
-              <input type="password" class="form-control" id="confirma_senha" name="confirma_senha" placeholder="Insira a senha novamente" required>
-            </div>
-           
-            <button type="submit" id="entrar" name="entrar">Entrar</button>
-          </form>
-          <br>
-          <div id="rodape" style="text-align:center;color: gray;font-size:12px">
-            <p><small>Sistema desenvolvido para cunho estudantil <br> Projeto de Conclusão de Curso - Superior de Tecnologia em Análise e Deselvolvimento de Sistemas <br> Centro Universitário Nossa Senhora do Patrocínio<br>Endereço: R. José Weissohn, 153 - Centro, Salto - SP, 13328-300</small></p>
           </div>
         </div>
       </div>

@@ -55,10 +55,10 @@ class Login_model extends CI_Model
 
     // View Alterar Senha
 
-    public function verifica_senha_atual($cpf_usuario, $senhaatual)
+    public function verifica_senha_atual($cpf_usuario, $senha_atual)
     {
         // md5 faz a criptografia da senha
-        $senha = md5($senhaatual);
+        $senha = md5($senha_atual);
 
         $this->db->select("*");
         $this->db->from('usuario');

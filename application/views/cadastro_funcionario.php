@@ -94,7 +94,7 @@
 
                                                     <div class="col-md-3" style="margin-top: 30px;">
                                                         <div class="servicos_add">
-                                                            <button type="button" id="addServico" class="btn addServico add_novo_Servico" style="width: 185px; height: 40px; font-size: 14px;"><i class="fas fa-plus"></i> Adicionar Serviço</button>
+                                                            <button type="button" id="addServico" class="btn btn-primary addServico add_novo_Servico" style="width: 185px; height: 40px; font-size: 14px;"><i class="fas fa-plus"></i> Adicionar Serviço</button>
                                                         </div>
                                                     </div>
                                                 </div>

@@ -61,10 +61,10 @@
                         <label for="" style="color: #4e4e4e;"><b>Escolha um Horário:</b></label>
                         <br>
                         <select name="fk_hora" id="fk_hora" class="form-control servico" style="cursor: pointer;" required>
-                            <option class="text-center" value="">--- Selecione uma Opção ---</option>
-                            <?php foreach ($listar_hora as $value) { ?>
+                          <option class="text-center" value="">--- Selecione uma Opção ---</option>
+                          <?php foreach ($listar_hora as $value) { ?>
                                 <option value="<?php echo $value->id_hora; ?>" data-nome="<?php echo $value->horarios_semana; ?>"><?php echo $value->horarios_semana; ?></option>
-                            <?php } ?>
+                          <?php } ?>
                         </select>
                       </div>
                     </div>
@@ -72,15 +72,21 @@
                     <br>
 
                     <div class="row">
-                      <div class="form-group col-md-6">
+                      <div class="col-md-4">
                         <label for="" style="color: #4e4e4e;"><b>Serviço:</b></label>
                         <br>
                         <select name="fk_servicos[]" id="fk_servicos" class="form-control servico" style="cursor: pointer;" required>
-                            <option class="text-center" value="">--- Selecione uma Opção ---</option>
-                            <?php foreach ($listar_servicos as $value) { ?>
+                          <option class="text-center" value="">--- Selecione uma Opção ---</option>
+                          <?php foreach ($listar_servicos as $value) { ?>
                                 <option value="<?php echo $value->id_servicos; ?>" data-nome="<?php echo $value->nome_servico; ?>"><?php echo $value->nome_servico; ?></option>
-                            <?php } ?>
+                          <?php } ?>
                         </select>
+                      </div>
+                      <div class="col-md-3" style="margin-top: 30px;">
+                        <div class="servicos_add">
+                          <button type="button" class="btn btn-primary add_novo_Servico" style="width: 185px; height: 40px; font-size: 14px;"><i class="fas fa-plus"></i> Adicionar Serviço</button>
+                          <button type="button" class="btn btn-danger botao_remover" style="width: 150px; height: 40px; font-size: 14px; margin-left: 10px;"><i class="fas fa-trash-alt"></i> Remover</button>
+                        </div>
                       </div>
 
                       <div class="form-group col-md-6">

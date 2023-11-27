@@ -295,71 +295,59 @@
                                 <div class="row">
                                     <div class="col-12">
 
-                                        <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 7px; border: 1px solid #879bc9;background: #879bc9;color: black;">
-                                            <div>
-                                                <legend class="form-group" style="color: white; font-size: 18px;">
-                                                    <strong>Serviços Oferecidos</strong>
-                                                </legend>
-                                            </div>
-                                        </fieldset>
+                                    <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 7px; border: 1px solid #879bc9;background: #879bc9;color: black;">
+                <legend class="form-group" style="color: white; font-size: 18px;">
+                    <strong>Serviços Oferecidos</strong>
+                </legend>
+            </fieldset>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 mb-4">
+            <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9;">
+                <div class="card-container">
+                    <div class="card-profile">
+                        <div class="card-header-profile">
+                            <div class="profile-info">
+                                <h3 class="profile-name"><strong>Corte de Cabelo</strong></h3>
+                                <br>
+                                <p class="profile-desc">Descrição (se tiver)</p>
+                            </div>
+                        </div>
+                        <center>
+                            <p class="status-value">R$ &nbsp;45,00 <i class="fas fa-clock"></i> &nbsp;&nbsp;40 minutos</p>
+                        </center>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
 
-                                        <fieldset class="form-group " style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9;">
-                                            <div class="card-container">
-                                                <div class="card-profile">
-                                                    <div class="card-header-profile">
-                                                        <div class="profile-info">
-                                                            <h3 class="profile-name"><strong>Corte de Cabelo</strong>
-                                                            </h3>
-                                                            <br>
-                                                            <p class="profile-desc">Descrição (se tiver)</p>
-                                                        </div>
-                                                    </div>
-                                                    <center>
-                                                        <p class="status-value">R$ &nbsp;45,00 <i class="fas fa-clock"></i> &nbsp;&nbsp;40 minutos</p>
-                                                    </center>
-                                                </div>
+        <!-- Repita os blocos anteriores para outros serviços -->
 
-                                                <div class="card-profile">
-                                                    <div class="card-header-profile">
-                                                        <div class="profile-info">
-                                                            <h3 class="profile-name"><strong>Barba</strong></h3>
-                                                            <br>
-                                                            <p class="profile-desc">Descrição (se tiver)</p>
-                                                        </div>
-                                                    </div>
-                                                    <center>
-                                                        <p class="status-value">R$ &nbsp;45,00 <i class="fas fa-clock"></i> &nbsp;&nbsp;40 minutos</p>
-                                                    </center>
-                                                </div>
+        <div class="col-md-3 mb-4">
+            <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9;">
+                <div class="card-container">
+                    <div class="card-profile">
+                        <div class="card-header-profile">
+                            <div class="profile-info">
+                                <h3 class="profile-name"><strong>Pigmentação em barba</strong></h3>
+                                <br>
+                                <p class="profile-desc">Descrição (se tiver)</p>
+                            </div>
+                        </div>
+                        <center>
+                            <p class="status-value">R$ &nbsp;15,00 <i class="fas fa-clock"></i> &nbsp;&nbsp;1 hora</p>
+                        </center>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</div>
 
-                                                <div class="card-profile">
-                                                    <div class="card-header-profile">
-                                                        <div class="profile-info">
-                                                            <h3 class="profile-name"><strong>Sobrancelhas</strong></h3>
-                                                            <br>
-                                                            <p class="profile-desc">Descrição (se tiver)</p>
-                                                        </div>
-                                                    </div>
-                                                    <center>
-                                                        <p class="status-value">R$ &nbsp;15,00 <i class="fas fa-clock"></i> &nbsp;&nbsp;10 minutos</p>
-                                                    </center>
-                                                </div>
-
-                                                <div class="card-profile">
-                                                    <div class="card-header-profile">
-                                                        <div class="profile-info">
-                                                            <h3 class="profile-name"><strong>Pigmentação em
-                                                                    barba</strong></h3>
-                                                            <br>
-                                                            <p class="profile-desc">Descrição (se tiver)</p>
-                                                        </div>
-                                                    </div>
-                                                    <center>
-                                                        <p class="status-value">R$ &nbsp;15,00 <i class="fas fa-clock"></i> &nbsp;&nbsp;1 hora</p>
-                                                    </center>
-                                                </div>
-                                            </div>
-                                        </fieldset>
 
                                         <br>
 

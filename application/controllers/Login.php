@@ -65,7 +65,6 @@ class Login extends CI_Controller
 			$user = $this->Login_model->autenticacao_usuario($cpf_usuario, $senha);
 
 			if ($user) {
-				$cpf_usuario = $user['cpf_usuario'];
 				$dados_usuario = $this->Login_model->salvar_dados_sessao($cpf_usuario);
 				$fk_usuario = $dados_usuario['fk_usuario'];
 				$nome_usuario = $dados_usuario['nome_usuario'];

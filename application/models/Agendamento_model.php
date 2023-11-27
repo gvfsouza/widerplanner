@@ -22,7 +22,7 @@ class Agendamento_model extends CI_Model
     {
         $data = array(
             'fk_agenda' => $fk_agenda,
-            'fk_servicos' => $fk_servicos,
+            'fk_servico' => $fk_servicos,
         );
 
         $this->db->insert('agenda2', $data);

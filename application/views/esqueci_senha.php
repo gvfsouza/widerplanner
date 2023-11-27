@@ -79,60 +79,64 @@
 <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
     <div class="container">
         <div class="card">
-            <div class="col-md-12">
-                <p style="text-align:center;font-size: 31px;color: #72b9b7;font-weight: bold;">WiderPlanner
-                    <br>
-                    <span style="text-align:center;font-size:20px;color:#a8aaad;font-weight: normal;">Esqueci Senha</span>
-                </p>
-                <br>
-            </div>
-
-            <div class="alert alert-warning">
-                Insira as informações abaixo para receber o e-mail e recuperar a senha esquecida.
-            </div>
             <div class="card-body">
-                <form method="POST">
-                    <?php
-                    if ($this->session->flashdata('success_email')) {
-                        echo '<div style="background-color: #209d2042; color: #0e3d0e; padding: 10px; vertical-align: middle; border-radius: 5px;">';
-                        echo $this->session->flashdata('success_email');
-                        echo '</div>';
-                    }
-                    ?>
-
-                    <?php
-                    if ($this->session->flashdata('error')) {
-                        echo '<div style="background-color: #F8D7DA; color: #6a040d; padding: 10px; width: 318px; height: 50px; vertical-align: middle; border-radius: 5px;">';
-                        echo $this->session->flashdata('error');
-                        echo '</div>';
-                    }
-                    ?>
-
-                    <?php
-                    if ($this->session->flashdata('error_usuario')) {
-                        echo '<div style="background-color: #F8D7DA; color: #6a040d; padding: 10px; width: 318px; height: 50px; vertical-align: middle; border-radius: 5px;">';
-                        echo $this->session->flashdata('error_usuario');
-                        echo '</div>';
-                    }
-                    ?>
-
-                    <br>
-                    <div class="form-group">
-                        <label for="cpf_usuario" style="color:#a8aaad"> CPF:</label>
-                        <span id="cpfUsuario"></span>
-                        <input type="text" id="cpf_usuario" name="cpf_usuario" class="form-control" placeholder="Insira seu CPF" maxlength="14" required="">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <div class="p-3">
+                                <div class="col-md-12">
+                                    <p style="text-align:center;font-size: 31px;color: #72b9b7;font-weight: bold;">WiderPlanner
+                                        <br>
+                                        <span style="text-align:center;font-size:20px;color:#a8aaad;font-weight: normal;">Esqueci Senha</span>
+                                    </p>
+                                    <br>
+                                </div>
+                                <div class="alert alert-warning">
+                                    Insira as informações abaixo para receber o e-mail e recuperar a senha esquecida.
+                                </div>
+                                    <form method="POST">
+                                        <?php
+                                        if ($this->session->flashdata('success_email')) {
+                                            echo '<div style="background-color: #209d2042; color: #0e3d0e; padding: 10px; vertical-align: middle; border-radius: 5px;">';
+                                            echo $this->session->flashdata('success_email');
+                                            echo '</div>';
+                                        }
+                                        ?>
+                                        <?php
+                                        if ($this->session->flashdata('error')) {
+                                            echo '<div style="background-color: #F8D7DA; color: #6a040d; padding: 10px; width: 318px; height: 50px; vertical-align: middle; border-radius: 5px;">';
+                                            echo $this->session->flashdata('error');
+                                            echo '</div>';
+                                        }
+                                        ?>
+                                        <?php
+                                        if ($this->session->flashdata('error_usuario')) {
+                                            echo '<div style="background-color: #F8D7DA; color: #6a040d; padding: 10px; width: 318px; height: 50px; vertical-align: middle; border-radius: 5px;">';
+                                            echo $this->session->flashdata('error_usuario');
+                                            echo '</div>';
+                                        }
+                                        ?>
+                                        <br>
+                                        <div class="form-group">
+                                            <label for="cpf_usuario" style="color:#a8aaad"> CPF:</label>
+                                            <span id="cpfUsuario"></span>
+                                            <input style="width: 100%;" type="text" id="cpf_usuario" name="cpf_usuario" class="form-control" placeholder="Insira seu CPF" maxlength="14" required="">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="senha">E-mail</label>
+                                            <span id="email_usuario"></span>
+                                            <input type="email" class="form-control" id="email_usuario" name="email_usuario" maxlength="60" onblur="validacaoEmail(this)" placeholder="exemplo@gmail.com" required>
+                                        </div>
+                                        <input type="hidden" name="enviar" id="enviar" value="1" />
+                                        <input class="form-control" style=" background: #72b9b7; color: white; border:none " type="submit" name="botao_enviar" value="Enviar" />
+                                    </form>
+                                    <br>
+                                    <div id="rodape" style="text-align:center;color: gray;font-size:12px">
+                                        <p><small>Sistema desenvolvido para cunho estudantil <br> Projeto de Conclusão de Curso - Superior de Tecnologia em Análise e Deselvolvimento de Sistemas <br> Centro Universitário Nossa Senhora do Patrocínio<br>Endereço: R. José Weissohn, 153 - Centro, Salto - SP, 13328-300</small></p>
+                                    </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="senha">E-mail</label>
-                        <span id="email_usuario"></span>
-                        <input type="email" class="form-control" id="email_usuario" name="email_usuario" maxlength="60" onblur="validacaoEmail(this)" placeholder="exemplo@gmail.com" required>
-                    </div>
-                    <input type="hidden" name="enviar" id="enviar" value="1" />
-                    <input class="form-control" style=" background: #72b9b7; color: white; border:none " type="submit" name="botao_enviar" value="Enviar" />
-                </form>
-                <br>
-                <div id="rodape" style="text-align:center;color: gray;font-size:12px">
-                    <p><small>Sistema desenvolvido para cunho estudantil <br> Projeto de Conclusão de Curso - Superior de Tecnologia em Análise e Deselvolvimento de Sistemas <br> Centro Universitário Nossa Senhora do Patrocínio<br>Endereço: R. José Weissohn, 153 - Centro, Salto - SP, 13328-300</small></p>
                 </div>
             </div>
         </div>

@@ -109,7 +109,7 @@
                                     ?>
                                     <br>
                                     <form method="POST" action="<?php echo site_url('login/login'); ?>" name="form_login" class="login">
-                                    <div class="form-group">
+                                        <div class="form-group">
                                             <label for="cpf_usuario" style="color: #a8aaad"> CPF:</label>
                                             <span id="cpfUsuario"></span>
                                             <input style="font-size: 14px; width: 100%;" type="text" class="form-control" id="cpf_usuario" name="cpf_usuario" placeholder="Insira seu CPF" required>

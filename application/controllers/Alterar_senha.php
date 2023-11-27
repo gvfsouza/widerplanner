@@ -53,10 +53,11 @@ class Alterar_senha extends CI_Controller
                         }
                     } else {
                         $this->session->set_flashdata('erro', 'Senha atual incorreta.');
-						var_dump($senha_atual).'teste';
                     }
                 } else {
                     $this->session->set_flashdata('erro', 'Senha atual incorreta.');
+					var_dump($senha_atual).'teste';
+
                 }
             }
         }

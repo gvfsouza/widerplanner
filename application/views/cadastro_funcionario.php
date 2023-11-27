@@ -15,17 +15,17 @@
                 <div class="tab-pane fade show active" id="" role="tabpanel">
 
                     <?php if ($this->session->flashdata('sucesso')) { ?>
-                            <div class="alert alert-success" role="alert">
-                                <?php echo $this->session->flashdata('sucesso'); ?>
-                            </div>
+                        <div class="alert alert-success" role="alert">
+                            <?php echo $this->session->flashdata('sucesso'); ?>
+                        </div>
                     <?php } ?>
                     <!----------------FIM-----MENSAGEM DE SUCESSO AO CADASTRAR ---------------->
 
                     <!----------------INICIO-----MENSAGEM DE ERRO AO CADASTRAR ---------------->
-                    <?php if ($this->session->flashdata('erro')): ?>
-                            <div class="alert alert-danger">
-                                <?php echo $this->session->flashdata('erro'); ?>
-                            </div>
+                    <?php if ($this->session->flashdata('erro')) : ?>
+                        <div class="alert alert-danger">
+                            <?php echo $this->session->flashdata('erro'); ?>
+                        </div>
                     <?php endif; ?>
                     <!----------------FIM-----MENSAGEM DE ERRO AO CADASTRAR ---------------->
 
@@ -84,17 +84,18 @@
                                                     <div class="col-md-4">
                                                         <label for="" style="color: #4e4e4e;"><b>Serviço:</b></label>
                                                         <br>
-                                                        <select name="fk_servicos[]" id="fk_servicos" class="form-control adicionar_servico" style="cursor: pointer;" required>
+                                                        <select name="fk_servicos[]" id="fk_servicos" class="form-control servico" style="cursor: pointer;" required>
                                                             <option class="text-center" value="">--- Selecione uma Opção ---</option>
                                                             <?php foreach ($listar_servicos as $value) { ?>
-                                                                    <option value="<?php echo $value->id_servicos; ?>" data-nome="<?php echo utf8_encode($value->nome_servico); ?>"><?php echo utf8_encode($value->nome_servico); ?></option>
+                                                                <option value="<?php echo $value->id_servicos; ?>" data-nome="<?php echo utf8_encode($value->nome_servico); ?>"><?php echo utf8_encode($value->nome_servico); ?></option>
                                                             <?php } ?>
                                                         </select>
                                                     </div>
 
                                                     <div class="col-md-3" style="margin-top: 30px;">
-                                                        <span style="width: 160px" title="addServico" class="btn btn-primary" onclick="adicionarCampo()">Adicionar Serviço</span>
-                                                        <span style="width: 100px" title="removerServico" class="btn btn-danger" onclick="removerCampo(this) ">Remover</span>
+                                                        <div class="servicos_add">
+                                                            <button type="button" id="addServico" class="btn addServico add_novo_Servico" style="width: 185px; height: 40px; font-size: 14px;"><i class="fas fa-plus"></i> Adicionar Serviço</button>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -164,23 +165,39 @@
 </div>
 
 <script>
-    function adicionarCampo() {
-        // Clona o primeiro menu suspenso de serviço
-        var newServiceField = document.querySelector('.adicionar_servico').cloneNode(true);
-        // Limpa o valor selecionado no novo menu suspenso
-        newServiceField.value = '';
-        // Acrescenta o novo menu suspenso ao formulário
-        document.querySelector('.col-md-4').appendChild(newServiceField);
-    }
+    var maxButtons = 2;
+    var addButton = $('#addServico');
 
-    function removerCampo() {
-        var serviceFields = document.querySelectorAll('.adicionar_servico');
-        if (serviceFields.length > 1) {
-            serviceFields[serviceFields.length - 1].remove();
-        } else {
-            alert("Você não pode remover todos os campos de serviço.");
+    $('.add_novo_Servico').click(function(e) {
+        if ($('.add_novo_Servico').length < maxButtons) {
+            var element_copy = $(this).parent().parent().prev().clone();
+            botao_excluir = '<div align="right">';
+            botao_excluir += '<div id="remover" class="btn btn-outline-danger botao_remover"><i class="fas fa-trash-alt">&nbsp;</i></i>Remover</div>';
+            botao_excluir += '</div>';
+
+            element_copy.find('select, input').val('');
+            element_copy.find('.select2').remove(); // limpa o campo
+
+            $(this).parent().parent().prev().after(element_copy);
+
+            if (element_copy.find('.botao_remover').length === 0) {
+                element_copy.append(botao_excluir);
+            }
+
+            $('.botao_remover').click(function(e) {
+                addButton.show(); // Mostrar botão de adicionar responsável
+                $(this).parent().parent().remove();
+            });
+
+            //Select picker
+            $('.servico').select2({
+                width: '100%'
+            });
         }
-    }
+    });
+
+
+    //------------------------------------------------------------------------------------------------------
 
     function is_cpf(c) {
         if ((c = c.replace(/[^\d]/g, "")).length == 14) {

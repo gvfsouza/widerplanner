@@ -41,24 +41,22 @@ class Alterar_senha extends CI_Controller
             } else {
                 if ($senhaAntiga != null) {
 
-                    if ($senhaAntiga->senha == md5($senha_atual)) {
-                        if ($nova_senha === $confirma_senha) {
-
-                            $this->Login_model->altera_senha($cpf_usuario, $nova_senha);
-
-                            $this->session->set_flashdata('sucesso', 'Senha atualizada com sucesso!');
-                            redirect('/alterar_senha');
-                        } else {
-                            $this->session->set_flashdata('erro', 'Campo de confirmação de senha não confere.');
-                        }
-                    } else {
-                        $this->session->set_flashdata('erro', 'Senha atual incorreta.');
-                    }
-                } else {
-                    $this->session->set_flashdata('erro', 'Senha atual incorreta.');
-					var_dump($senha_atual).'teste';
-
-                }
+					if ($senhaAntiga->senha === $senha_atual) {
+						if ($nova_senha === $confirma_senha) {
+				
+							$this->Login_model->altera_senha($cpf_usuario, $nova_senha);
+				
+							$this->session->set_flashdata('sucesso', 'Senha atualizada com sucesso!');
+							redirect('/alterar_senha');
+						} else {
+							$this->session->set_flashdata('erro', 'Campo de confirmação de senha não confere.');
+						}
+					} else {
+						$this->session->set_flashdata('erro', 'Senha atual incorreta.');
+					}
+				} else {
+					$this->session->set_flashdata('erro', 'Senha atual incorreta.');
+				}
             }
         }
 

@@ -24,24 +24,17 @@
         </div>
     </div>
 </footer> -->
-<!-- <script>
-    $(document).ready(function () {
-        // Adiciona um ouvinte de evento de clique ao link de logout no sidebar
-        $(".nav-item a[title='Sair']").click(function (e) {
-            e.preventDefault();
-            // Chama a função para mostrar o modal
-            $("#logoutModal").modal("show");
-        });
-    });
+<script>
+    // Função para mostrar o modal ao clicar no link de logout
+    function showLogoutModal() {
+        $("#logoutModal").modal("show");
+    }
 
     // Limpar o modal ao fechar
     $('#logoutModal').on('hidden.bs.modal', function () {
         $(this).find('form')[0].reset();
     });
-</script> -->
-
-
-
+</script>
 
 
 </body>

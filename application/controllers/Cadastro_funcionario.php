@@ -85,5 +85,13 @@ class Cadastro_funcionario extends CI_Controller
         }
         return base64_encode($data);
     }
+
+	private function clean_post_data($data)
+{
+    foreach ($data as $key => $value) {
+        $data[$key] = is_array($value) ? array_map('anti_injection', $value) : anti_injection($value);
+    }
+    return $data;
+}
 }
 

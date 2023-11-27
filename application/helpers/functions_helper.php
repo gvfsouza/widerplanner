@@ -9,8 +9,6 @@ if (!function_exists('anti_injection')) {
     }
 }
 
-
-
 function gerarSenhaAleatoria($tamanho = 10) {
     $caracteres = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     $senha = '';
@@ -21,7 +19,20 @@ function gerarSenhaAleatoria($tamanho = 10) {
     return $senha;
 }
 
+if (!function_exists('anti_injection')) {
+    function anti_injection($input)
+    {
+        if (is_array($input)) {
+            return array_map('anti_injection', $input);
+        }
 
+        $input = trim($input);
+        $input = strip_tags($input);
+        $input = addslashes($input);
+
+        return $input;
+    }
+}
 // function gerarSenhaAleatoria($tamanho = 8) {
 //     $caracteres = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 //     $senha = '';

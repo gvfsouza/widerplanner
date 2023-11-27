@@ -30,27 +30,16 @@
         $(".nav-item a[title='Sair']").click(function (e) {
             e.preventDefault();
             // Chama a função para mostrar o modal
-            showLogoutModal();
-        });
-
-        // Adiciona um ouvinte de evento de clique ao link de logout no navbar
-        $(".dropdown-item[title='Sair']").click(function (e) {
-            e.preventDefault();
-            // Chama a função para mostrar o modal
-            showLogoutModal();
+            $("#logoutModal").modal("show");
         });
     });
-
-    // Função para mostrar o modal
-    function showLogoutModal() {
-        $("#logoutModal").modal("show");
-    }
 
     // Limpar o modal ao fechar
     $('#logoutModal').on('hidden.bs.modal', function () {
         $(this).find('form')[0].reset();
     });
 </script>
+
 
 
 

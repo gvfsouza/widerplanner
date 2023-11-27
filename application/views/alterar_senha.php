@@ -25,7 +25,7 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <?php if ($this->session->flashdata('sucesso')) { ?>
-                                            <div class="alert alert-danger " role="alert">
+                                            <div class="alert alert-success " role="alert">
                                                 <?php echo $this->session->flashdata('sucesso'); ?>
                                             </div>
                                         <?php } ?>

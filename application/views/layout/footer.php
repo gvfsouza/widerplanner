@@ -25,6 +25,11 @@
     </div>
 </footer> -->
 
+<script>
+    function openLogoutModal() {
+    $("#logoutModal").modal("show");
+}
 
+</script>
 
 </body>

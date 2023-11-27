@@ -1,4 +1,5 @@
-<?php if (!defined('BASEPATH')) exit('No direct scripts access allowed');
+<?php if (!defined('BASEPATH'))
+    exit('No direct scripts access allowed');
 
 class Agendamento_model extends CI_Model
 {
@@ -9,11 +10,11 @@ class Agendamento_model extends CI_Model
             'fk_hora' => $fk_hora,
             'fk_profissional' => $fk_profissional,
             'fk_usuario' => $fk_usuario,
-            
+
         );
 
         $this->db->insert('agenda', $data);
-        $id_func = $this->db->insert_id(); 
+        $id_func = $this->db->insert_id();
 
         return $id_func;
     }
@@ -38,7 +39,6 @@ class Agendamento_model extends CI_Model
         return $res->result();
     }
 
-
     public function listar_hora()
     {
         $this->db->select('*');
@@ -46,6 +46,24 @@ class Agendamento_model extends CI_Model
 
         $res = $this->db->get();
         return $res->result();
+    }
+
+    public function horariosOcupados($data_agenda, $fk_profissional)
+    {
+        $this->db->select('fk_hora');
+        $this->db->from('agenda');
+        $this->db->where('data_agenda', $data_agenda);
+        $this->db->where('fk_profissional', $fk_profissional);
+
+        $res = $this->db->get();
+        $result = $res->result();
+
+        // Extrai os horários ocupados da consulta
+        $horarios_ocupados = array_map(function ($item) {
+            return $item->fk_hora;
+        }, $result);
+
+        return $horarios_ocupados;
     }
 
     public function listar_profissionais()

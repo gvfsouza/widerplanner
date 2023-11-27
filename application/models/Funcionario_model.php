@@ -38,7 +38,6 @@ class Funcionario_model extends CI_Model
     
     public function associar_servico($fk_usuario, $fk_servicos)
     {
-
         $data = array(
             'fk_usuario	' => $fk_usuario,
             'fk_servicos' => $fk_servicos,

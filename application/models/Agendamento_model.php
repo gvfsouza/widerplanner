@@ -15,6 +15,17 @@ class Agendamento_model extends CI_Model
         return $id_func;
     }
 
+    public function associar_servico($fk_usuario, $fk_servicos)
+    {
+        $data = array(
+            'fk_usuario	' => $fk_usuario,
+            'fk_servicos' => $fk_servicos,
+        );
+
+        $this->db->insert('agenda2', $data);
+        return $this->db->insert_id();
+    }
+
     public function listar_servicos()
     {
         $this->db->select('*');
@@ -24,32 +35,6 @@ class Agendamento_model extends CI_Model
         return $res->result();
     }
 
-    public function listar_mes()
-    {
-        $this->db->select('*');
-        $this->db->from('meses');
-
-        $res = $this->db->get();
-        return $res->result();
-    }
-
-    public function listar_diasemana()
-    {
-        $this->db->select('*');
-        $this->db->from('diasemana');
-
-        $res = $this->db->get();
-        return $res->result();
-    }
-
-    public function listar_dia()
-    {
-        $this->db->select('*');
-        $this->db->from('dia_disp');
-
-        $res = $this->db->get();
-        return $res->result();
-    }
 
     public function listar_hora()
     {

@@ -95,12 +95,12 @@
                       <div class="form-group col-md-12">
                         <label for="" style="color: #4e4e4e;"><b>Profissional(s) Disponível:</b></label>
                         <br>
-                        <select name="horaDisp" id="horaDisp" class="form-control" style="cursor: pointer;" required>
-                          <option selected>Choose...</option>
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
-                        </select>
+                        <select name="fk_usuario" id="fk_usuario" class="form-control servico" style="cursor: pointer;" required>
+                            <option class="text-center" value="">--- Selecione uma Opção ---</option>
+                            <?php foreach ($listar_profissionais as $value) { ?>
+                                  <option value="<?php echo $value->id_usuario; ?>" data-nome="<?php echo $value->nome_usuario; ?>"><?php echo $value->nome_usuario; ?></option>
+                            <?php } ?>
+                          </select>
                       </div>
                     </fieldset>
                   </div>

@@ -40,7 +40,7 @@ class Alterar_senha extends CI_Controller
                 $this->session->set_flashdata('erro', 'Todos os campos devem ser preenchidos.');
             } else {
                 if ($senhaAntiga != null) {
-					var_dump($senhaAntiga->senha, md5($senha_atual));
+
                     if ($senhaAntiga->senha === md5($senha_atual)) {
                         if ($nova_senha === $confirma_senha) {
 

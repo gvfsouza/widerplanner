@@ -96,7 +96,7 @@
       
 
        <li class="nav-item">
-    <a title="Sair" class="nav-link" href="javascript:void(0);" onclick="openLogoutModal()">
+    <a title="Sair" class="nav-link" href="#" onclick="openLogoutModal()">
         <i class="fas fa-sign-out-alt icon" style="color:#879bc9"></i>
         <span class="link" style="color:#000000d9;font-weight: bold;font-size:17px">Sair</span>
     </a>

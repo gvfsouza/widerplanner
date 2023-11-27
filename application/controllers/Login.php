@@ -65,6 +65,15 @@ class Login extends CI_Controller
 			$user = $this->Login_model->autenticacao_usuario($cpf_usuario, $senha);
 
 			if ($user) {
+				$cpf_usuario = $user['cpf_usuario'];
+				$dados_usuario = $this->Login_model->salvar_dados_sessao($cpf_usuario);
+				$fk_usuario = $dados_usuario['fk_usuario'];
+				$nome_usuario = $dados_usuario['nome_usuario'];
+		
+				$this->session->set_userdata('cpf_usuario', $cpf_usuario);
+				$this->session->set_userdata('fk_usuario', $fk_usuario);
+				$this->session->set_userdata('nome_usuario', $nome_usuario);
+
 				// Configura dados da sessão do usuário e redireciona para o painel
 				$this->session->set_flashdata('sucesso', 'Login efetuado com sucesso!');
 				redirect('home');

@@ -71,8 +71,6 @@
                       </div>
                     </fieldset>
 
-                    <br>
-
                     <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9;">
                       <div class="row">
                         <div class="col-md-4">

@@ -28,10 +28,11 @@ class Agendamento extends CI_Controller
 
 		if (isset($_POST['salvar'])) {
 			$fk_dia_semana = $this->input->post('fk_dia_semana');
+			$fk_servico = $this->input->post('fk_servico');
 
 			if (!isset($error)) {
 
-				$dados['agendamento'] = $this->Agendamento_model->cadastro_profissional($fk_dia_semana);
+				$dados['agendamento'] = $this->Agendamento_model->cadastro_profissional($fk_dia_semana, $fk_servico);
 
 				//MENSAGEM SUCESSO AO CADASTRAR
 				$this->session->set_flashdata('sucesso', 'Cadastro realizado com sucesso!');
@@ -42,6 +43,7 @@ class Agendamento extends CI_Controller
 		}
 
 		$dados['listar_diasemana'] = $this->Agendamento_model->listar_diasemana();
+		$dados['listar_servicos'] = $this->Agendamento_model->listar_servicos();
 
 		$this->load->view('layout/header');
 		$this->load->view('layout/sidebar');

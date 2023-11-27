@@ -2,10 +2,11 @@
 
 class Agendamento_model extends CI_Model
 {
-    public function cadastro_agenda($fk_servico, )
+    public function cadastro_agenda($fk_servico, $fk_dia_semana)
     {
         $data = array(
             'fk_servico' => $fk_servico,
+            'fk_dia_semana' => $fk_dia_semana,
         );
 
         $this->db->insert('agenda', $data);

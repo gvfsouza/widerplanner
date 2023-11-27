@@ -59,7 +59,7 @@ class Agendamento extends CI_Controller
 		}
 
 		$dados['listar_servicos'] = $this->Agendamento_model->listar_servicos();
-		$dados['listar_hora'] = $this->Agendamento_model->horariosOcupados($data_agenda, $fk_profissional);
+		$dados['listar_hora'] = $this->Agendamento_model->horariosOcupados();
 		$dados['listar_profissionais'] = $this->Agendamento_model->listar_profissionais();
 
 		$this->load->view('layout/header');

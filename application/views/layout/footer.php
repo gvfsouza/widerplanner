@@ -24,7 +24,7 @@
         </div>
     </div>
 </footer> -->
-<script>
+<!-- <script>
     $(document).ready(function () {
         // Adiciona um ouvinte de evento de clique ao link de logout no sidebar
         $(".nav-item a[title='Sair']").click(function (e) {
@@ -38,7 +38,7 @@
     $('#logoutModal').on('hidden.bs.modal', function () {
         $(this).find('form')[0].reset();
     });
-</script>
+</script> -->
 
 
 

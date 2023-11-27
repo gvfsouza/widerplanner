@@ -101,7 +101,9 @@
         <span class="link" style="color:#000000d9;font-weight: bold;font-size:17px">Sair</span>
     </a>
 </li>
-
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>
        <!-- Divider -->
        <hr class="sidebar-divider d-none d-md-block">
    </ul>

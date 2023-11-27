@@ -20,7 +20,7 @@
                 <!-- FORMULÁRIO  -->
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="" role="tabpanel">
-                        <form action="">
+                        <form action="" method="POST">
                             <div class="p-3 bg-white">
                                 <div class="row">
                                     <div class="col-12">

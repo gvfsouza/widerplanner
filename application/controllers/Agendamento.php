@@ -59,12 +59,7 @@ class Agendamento extends CI_Controller
 		}
 
 		$dados['listar_servicos'] = $this->Agendamento_model->listar_servicos();
-
-		// Verifique se a data_agenda e fk_profissional estão definidas antes de chamar a função listar_hora_disponivel
-		if (isset($data_agenda, $fk_profissional)) {
-			$dados['listar_hora'] = $this->Agendamento_model->listar_hora_disponivel($data_agenda, $fk_profissional);
-		}
-
+		$dados['listar_hora'] = $this->Agendamento_model->horariosOcupados($data_agenda, $fk_profissional);
 		$dados['listar_profissionais'] = $this->Agendamento_model->listar_profissionais();
 
 		$this->load->view('layout/header');

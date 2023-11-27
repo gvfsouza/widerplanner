@@ -36,11 +36,27 @@
             </legend>
           </div>
         </fieldset>
-
+                    
         <!-- FORMULÁRIO  -->
         <div class="tab-content" id="myTabContent">
           <div class="tab-pane fade show active" id="" role="tabpanel">
-            <form action="">
+
+          <?php if ($this->session->flashdata('sucesso')) { ?>
+            <div class="alert alert-success" role="alert">
+                <?php echo $this->session->flashdata('sucesso'); ?>
+            </div>
+        <?php } ?>
+        <!----------------FIM-----MENSAGEM DE SUCESSO AO CADASTRAR ---------------->
+
+        <!----------------INICIO-----MENSAGEM DE ERRO AO CADASTRAR ---------------->
+        <?php if ($this->session->flashdata('erro')): ?>
+            <div class="alert alert-danger">
+                <?php echo $this->session->flashdata('erro'); ?>
+            </div>
+        <?php endif; ?>
+        <!----------------FIM-----MENSAGEM DE ERRO AO CADASTRAR ---------------->
+
+            <form action=""  method="POST">
               <div class="p-3 bg-white">
                 <div class="row">
                   <div class="col-12">
@@ -64,7 +80,7 @@
                           <select name="fk_hora" id="fk_hora" class="form-control servico" style="cursor: pointer;" required>
                             <option class="text-center" value="">--- Selecione uma Opção ---</option>
                             <?php foreach ($listar_hora as $value) { ?>
-                                  <option value="<?php echo $value->id_hora; ?>" data-nome="<?php echo $value->horarios_semana; ?>"><?php echo $value->horarios_semana; ?></option>
+                                      <option value="<?php echo $value->id_hora; ?>" data-nome="<?php echo $value->horarios_semana; ?>"><?php echo $value->horarios_semana; ?></option>
                             <?php } ?>
                           </select>
                         </div>
@@ -79,7 +95,7 @@
                           <select name="fk_servicos[]" id="fk_servicos" class="form-control servico" style="cursor: pointer;" required>
                             <option class="text-center" value="">--- Selecione uma Opção ---</option>
                             <?php foreach ($listar_servicos as $value) { ?>
-                                  <option value="<?php echo $value->id_servicos; ?>" data-nome="<?php echo $value->nome_servico; ?>"><?php echo $value->nome_servico; ?></option>
+                                      <option value="<?php echo $value->id_servicos; ?>" data-nome="<?php echo $value->nome_servico; ?>"><?php echo $value->nome_servico; ?></option>
                             <?php } ?>
                           </select>
                         </div>
@@ -98,7 +114,7 @@
                         <select name="fk_usuario" id="fk_usuario" class="form-control servico" style="cursor: pointer;" required>
                             <option class="text-center" value="">--- Selecione uma Opção ---</option>
                             <?php foreach ($listar_profissionais as $value) { ?>
-                                  <option value="<?php echo $value->id_usuario; ?>" data-nome="<?php echo $value->nome_usuario; ?>"><?php echo $value->nome_usuario; ?></option>
+                                      <option value="<?php echo $value->id_usuario; ?>" data-nome="<?php echo $value->nome_usuario; ?>"><?php echo $value->nome_usuario; ?></option>
                             <?php } ?>
                           </select>
                       </div>

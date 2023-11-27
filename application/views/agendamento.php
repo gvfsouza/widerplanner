@@ -59,11 +59,11 @@
                       <div class="form-group col-md-3">
                         <label for="" style="color: #4e4e4e;"><b>Escolha um Horário:</b></label>
                         <br>
-                        <select name="horaDisp" id="horaDisp" class="form-control" style="cursor: pointer;" required>
-                          <option selected>Choose...</option>
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
+                        <select name="fk_hora" id="fk_hora" class="form-control servico" style="cursor: pointer;" required>
+                            <option class="text-center" value="">--- Selecione uma Opção ---</option>
+                            <?php foreach ($listar_hora as $value) { ?>
+                                <option value="<?php echo $value->id_hora; ?>" data-nome="<?php echo $value->horarios_semana; ?>"><?php echo $value->horarios_semana; ?></option>
+                            <?php } ?>
                         </select>
                       </div>
                     </div>

@@ -44,6 +44,7 @@ class Agendamento extends CI_Controller
 
 		$dados['listar_diasemana'] = $this->Agendamento_model->listar_diasemana();
 		$dados['listar_servicos'] = $this->Agendamento_model->listar_servicos();
+		$dados['listar_hora'] = $this->Agendamento_model->listar_hora();
 
 		$this->load->view('layout/header');
 		$this->load->view('layout/sidebar');

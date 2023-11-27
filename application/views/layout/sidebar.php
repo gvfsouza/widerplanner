@@ -108,8 +108,4 @@
    <!-- Content Wrapper -->
    
    <div id="content-wrapper" class="d-flex flex-column" style="background-color: #d9e2f7">
-   <script>
-    $(document).ready(function() {
-        $('#logoutModal').modal('show');
-    });
-</script>
+  

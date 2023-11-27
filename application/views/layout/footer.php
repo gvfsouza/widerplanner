@@ -24,7 +24,17 @@
         </div>
     </div>
 </footer> -->
+<script>
+    // Função para mostrar o modal ao clicar no link de logout
+    function showLogoutModal() {
+        $("#logoutModal").modal("show");
+    }
 
+    // Limpar o modal ao fechar
+    $('#logoutModal').on('hidden.bs.modal', function () {
+        $(this).find('form')[0].reset();
+    });
+</script>
 
 
 </body>

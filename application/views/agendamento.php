@@ -89,7 +89,7 @@
                         </div>
                       </div>
 
-                      <div class="form-group col-md-6">
+                      <div class="form-group col-md-5">
                         <label for="" style="color: #4e4e4e;"><b>Profissional(s) Disponível:</b></label>
                         <br>
                         <select name="horaDisp" id="horaDisp" class="form-control" style="cursor: pointer;" required>

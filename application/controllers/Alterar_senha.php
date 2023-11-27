@@ -41,7 +41,7 @@ class Alterar_senha extends CI_Controller
             } else {
                 if ($senhaAntiga != null) {
 
-                    if ($senhaAntiga->senha === md5($senha_atual)) {
+                    if ($senhaAntiga->senha == md5($senha_atual)) {
                         if ($nova_senha === $confirma_senha) {
 
                             $this->Login_model->altera_senha($cpf_usuario, $nova_senha);

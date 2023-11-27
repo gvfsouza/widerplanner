@@ -26,7 +26,7 @@ class Login_model extends CI_Model
     {
         $this->db->where('cpf_usuario', $cpf_usuario);
         $this->db->where('senha', $senha);
-        $query = $this->db->get('usuarios');
+        $query = $this->db->get('usuario');
 
         if ($query->num_rows() == 1) {
             $user = $query->row();

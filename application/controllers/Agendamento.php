@@ -31,11 +31,11 @@ class Cadastro_funcionario extends CI_Controller
 
 			if (!isset($error)) {
 
-				$dados['cadastro_funcionario'] = $this->Agendamento_model->cadastro_profissional($fk_dia_semana);
+				$dados['agendamento'] = $this->Agendamento_model->cadastro_profissional($fk_dia_semana);
 
 				//MENSAGEM SUCESSO AO CADASTRAR
 				$this->session->set_flashdata('sucesso', 'Cadastro realizado com sucesso!');
-				redirect('cadastro_funcionario');
+				redirect('agendamento');
 			} else {
 				$this->session->set_flashdata('erro', 'Erro ao efetuar cadastro de Funcionário.');
 			}

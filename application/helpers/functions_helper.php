@@ -1,20 +1,15 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-// if (!function_exists('anti_injection')) {
-//     function anti_injection($input) {
-//         $input = trim($input); // Remove espaços em branco no início e no final
-//         $input = stripslashes($input); // Remove barras invertidas adicionadas por addslashes
-//         $input = htmlspecialchars($input, ENT_QUOTES); // Converte caracteres especiais em entidades HTML
-//         return $input;
-//     }
-// }
-
 if (!function_exists('anti_injection')) {
-    function anti_injection($POST)
-    {
-        array_walk_recursive($POST, function (&$item, $key) {
-            $_POST[$key] = pg_escape_string(trim(htmlspecialchars($item)));
-        });
+    function anti_injection($input) {
+        if (is_array($input)) {
+            return array_map('anti_injection', $input);
+        }
+
+        $input = trim($input); // Remove espaços em branco no início e no final
+        $input = stripslashes($input); // Remove barras invertidas adicionadas por addslashes
+        $input = htmlspecialchars($input, ENT_QUOTES); // Converte caracteres especiais em entidades HTML
+        return $input;
     }
 }
 

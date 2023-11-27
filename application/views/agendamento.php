@@ -99,7 +99,7 @@
                             </div>
                         </div>
                         <div class="text-right">
-                            <button href="<?php echo base_url(); ?>agendamento/" type="submit" name="salvar" class="btn-lg btn" style="border: none;background-color: #82a4ef;color: white;">Salvar</button>
+                            <button href="<?php echo base_url(); ?>/cadastro_servicos/" type="submit" name="salvar" class="btn-lg btn" style="border: none;background-color: #82a4ef;color: white;">Salvar</button>
                         </div>
                     </form>
                 </div>
@@ -237,7 +237,7 @@
                                 </div>
                             </div>
                             <div class="text-right">
-                                <button href="<?php echo base_url(); ?>/agendamento/" type="submit" name="salvar" class="btn-lg btn" style="border: none;background-color: #82a4ef;color: white;">Salvar</button>
+                            <button href="<?php echo base_url(); ?>/agendamento/" type="submit" name="salvar" class="btn-lg btn" style="border: none;background-color: #82a4ef;color: white;">Salvar</button>
                             </div>
                         </form>
                     </div>

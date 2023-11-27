@@ -45,8 +45,8 @@
                 <div class="row">
                   <div class="col-12">
                     <div class="row">
-                      <div class="form-group col-md-3">
-                        <label for="" style="color: #4e4e4e;"><b>Escolha um dia da Semana:</b></label>
+                      <div class="form-group col-md-6">
+                        <label for="" style="color: #4e4e4e;"><b>Escolha uma Data:</b></label>
                         <br>
                         <input type="date" class="form-control" id="fk_dia_semana" name="fk_dia_semana" max="9999-12-31">
                         <!-- <select name="fk_dia_semana" id="fk_dia_semana" class="form-control fk_dia_semana" style="cursor: pointer;" required>
@@ -57,7 +57,7 @@
                         </select> -->
                       </div>
 
-                      <div class="form-group col-md-3">
+                      <div class="form-group col-md-6">
                         <label for="" style="color: #4e4e4e;"><b>Escolha um Horário:</b></label>
                         <br>
                         <select name="fk_hora" id="fk_hora" class="form-control servico" style="cursor: pointer;" required>

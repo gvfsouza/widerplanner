@@ -43,6 +43,18 @@
            color: white;
        }
 
+       /* Estilo padrão para os itens do submenu */
+.collapse-inner a.collapse-item {
+    background-color: #D4DDF1; /* Cor de fundo padrão */
+    color: #000000; /* Cor do texto padrão */
+}
+
+/* Estilo ao passar o mouse sobre os itens do submenu */
+.collapse-inner a.collapse-item:hover {
+    background-color: white; /* Cor de fundo ao passar o mouse */
+    color: #D4DDF1; /* Cor do texto ao passar o mouse */
+}
+
    </style>
    
    <ul class="navbar-nav  sidebar " id="accordionSidebar" style="background-color: #ffffff;">

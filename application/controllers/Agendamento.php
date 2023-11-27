@@ -39,6 +39,9 @@ class Agendamento extends CI_Controller
 
 				// Se necessário, adicione verificação para garantir que $fk_usuario seja válido
 
+				$dados['listar_hora'] = $this->Agendamento_model->horariosOcupados($data_agenda, $fk_profissional);
+
+
 				$dados['agendamento'] = $this->Agendamento_model->cadastro_agenda($data_agenda, $fk_hora, $fk_servicos, $fk_profissional, $fk_usuario);
 
 				// Captura o ID da agenda recém cadastrada
@@ -59,7 +62,6 @@ class Agendamento extends CI_Controller
 		}
 
 		$dados['listar_servicos'] = $this->Agendamento_model->listar_servicos();
-		$dados['listar_hora'] = $this->Agendamento_model->horariosOcupados($data_agenda, $fk_profissional);
 		$dados['listar_profissionais'] = $this->Agendamento_model->listar_profissionais();
 
 		$this->load->view('layout/header');

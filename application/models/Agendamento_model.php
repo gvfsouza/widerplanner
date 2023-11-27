@@ -39,10 +39,13 @@ class Agendamento_model extends CI_Model
         return $res->result();
     }
 
-    public function listar_hora()
+    public function listar_hora_disponivel($data_agenda, $fk_profissional)
     {
+        $horarios_ocupados = $this->horariosOcupados($data_agenda, $fk_profissional);
+
         $this->db->select('*');
         $this->db->from('hora_disp');
+        $this->db->where_not_in('id_hora', $horarios_ocupados);
 
         $res = $this->db->get();
         return $res->result();

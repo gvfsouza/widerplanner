@@ -30,11 +30,6 @@
     <div class="card shadow mb-4">
       <div class="card-header py-3" style="background-color: white;">
 
-        <div>
-          <h3 id="dados-agenda" style="font-size: 25px;font-weight:bold"></h3>
-          <br>
-        </div>
-
         <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 7px; border: 1px solid #879bc9;background: #879bc9;color: black;">
           <div>
             <legend class="form-group" style="color: white; font-size: 18px;">

@@ -5,11 +5,11 @@ class Login_model extends CI_Model
     // Login
     public function autenticacao_usuario($cpf_usuario, $senha)
     {
-      $senha = md5($senha);
+        $senha = md5($senha);
 
         // Realiza a autenticação do usuário, por exemplo, consulta no banco de dados
         $this->db->where('cpf_usuario', $cpf_usuario);
-        $this->db->where('senha',$senha); 
+        $this->db->where('senha', $senha);
         $query = $this->db->get('usuario');
 
         if ($query->num_rows() == 1) {
@@ -42,14 +42,31 @@ class Login_model extends CI_Model
     }
 
     public function altera_senha($cpf_usuario, $senha_nova)
-  {
-    $senha = md5($senha_nova);
+    {
+        $senha = md5($senha_nova);
 
-    $data = array(
-      'senha' => $senha
-    );
+        $data = array(
+            'senha' => $senha
+        );
 
-    $this->db->where('cpf_usuario', $cpf_usuario);
-    $this->db->update('usuario', $data);
-  }
+        $this->db->where('cpf_usuario', $cpf_usuario);
+        $this->db->update('usuario', $data);
+    }
+
+    // View Alterar Senha
+
+    public function verifica_senha_atual($cpf_usuario, $senhaatual)
+    {
+        // md5 faz a criptografia da senha
+        $senha = md5($senhaatual);
+
+        $this->db->select("*");
+        $this->db->from('usuario');
+        $this->db->where('cpf_usuario', $cpf_usuario);
+        $this->db->where('senha', $senha);
+
+        $res = $this->db->get();
+        // echo $this->db->last_query(); 
+        return $res->first_row();
+    }
 }

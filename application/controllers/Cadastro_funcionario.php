@@ -27,7 +27,11 @@ class Cadastro_funcionario extends CI_Controller
 		$dados = array();
 
 		if (isset($_POST['salvar'])) {
-			$foto_usuario = $this->converte_img($_FILES['foto_usuario']['tmp_name'], $_FILES['foto_usuario']['type']);
+			if (isset($_FILES['foto_usuario']) && $_FILES['foto_usuario']['error'] === UPLOAD_ERR_OK) {
+				$foto_usuario = $this->converte_img($_FILES['foto_usuario']['tmp_name'], $_FILES['foto_usuario']['type']);
+			} else {
+				$foto_usuario = ''; // Set a default value or handle it according to your application logic
+			}
 			$nome_usuario = $this->input->post('nome_usuario');
 			$cpf_usuario = $this->input->post('cpf_usuario');
 			$dt_nasc_usuario = $this->input->post('dt_nasc_usuario');

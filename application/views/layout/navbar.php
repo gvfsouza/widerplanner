@@ -32,18 +32,29 @@
 
     <!-- Topbar Navbar -->
     <ul class="navbar-nav ml-auto">
-    <!-- Nav Item - User Information -->
-    <li class="nav-item dropdown no-arrow">
-        <!-- Dropdown - User Information -->
-        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-900"></i>
-                Sair
-            </a>
-        </div>
-    </li>
-</ul>
+        <!-- Nav Item - User Information -->
+        <li class="nav-item dropdown no-arrow">
+                <!-- Dropdown - User Information -->
+                <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Confirmação</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Tem certeza de que deseja sair?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Não</button>
+                        <a href="<?php echo site_url('login/logout'); ?>" class="btn btn-primary">Sim</a>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
 
 
         

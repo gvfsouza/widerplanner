@@ -25,7 +25,16 @@
     </div>
 </footer> -->
 <script>
-    // Função para mostrar o modal ao clicar no link de logout
+    $(document).ready(function () {
+        // Adiciona um ouvinte de evento de clique ao link de logout
+        $(".nav-link[title='Sair']").click(function (e) {
+            e.preventDefault();
+            // Chama a função para mostrar o modal
+            showLogoutModal();
+        });
+    });
+
+    // Função para mostrar o modal
     function showLogoutModal() {
         $("#logoutModal").modal("show");
     }
@@ -35,6 +44,7 @@
         $(this).find('form')[0].reset();
     });
 </script>
+
 
 
 </body>

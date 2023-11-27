@@ -15,10 +15,6 @@ class Login_model extends CI_Model
 
         if ($query->num_rows() == 1) {
             return $query->row();
-
-            return array(
-                'fk_usuario' => $user->fk_usuario,
-            );
         } else {
             return FALSE;
         }

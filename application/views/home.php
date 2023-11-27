@@ -277,7 +277,7 @@
 
 <br>
 
-
+<div>
     <div class="container-fluid">
         <div class="card shadow mb-4">
             <div class="card-header py-3" style="background-color: white;">
@@ -505,3 +505,4 @@
     </div>
     <a class="btn" href="#" role="button" style="float: right; background-color: #1cc88a; color: white; margin-bottom: 15px; position: fixed;">Agenda
     </a>
+</div>

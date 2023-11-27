@@ -51,7 +51,7 @@
                         <select name="fk_dia_semana" id="fk_dia_semana" class="form-control fk_dia_semana" style="cursor: pointer;" required>
                           <option class="text-center" value="">--- Selecione uma Opção ---</option>
                           <?php foreach ($listar_diasemana as $value) { ?>
-                            <option value="<?php echo $value->id_semana; ?>" data-nome="<?php echo $value->dias_semana; ?>"><?php echo $value->dias_semana; ?></option>
+                                <option value="<?php echo $value->id_semana; ?>" data-nome="<?php echo $value->dias_semana; ?>"><?php echo $value->dias_semana; ?></option>
                           <?php } ?>
                         </select>
                       </div>
@@ -74,11 +74,11 @@
                       <div class="form-group col-md-6">
                         <label for="" style="color: #4e4e4e;"><b>Serviço:</b></label>
                         <br>
-                        <select name="horaDisp" id="horaDisp" class="form-control" style="cursor: pointer;" required>
-                          <option selected>Choose...</option>
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
+                        <select name="fk_servicos[]" id="fk_servicos" class="form-control servico" style="cursor: pointer;" required>
+                            <option class="text-center" value="">--- Selecione uma Opção ---</option>
+                            <?php foreach ($listar_servicos as $value) { ?>
+                                <option value="<?php echo $value->id_servicos; ?>" data-nome="<?php echo $value->nome_servico; ?>"><?php echo $value->nome_servico; ?></option>
+                            <?php } ?>
                         </select>
                       </div>
 

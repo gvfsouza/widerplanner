@@ -84,7 +84,7 @@
                                                     <div class="col-md-4">
                                                         <label for="" style="color: #4e4e4e;"><b>Serviço:</b></label>
                                                         <br>
-                                                        <select name="fk_servicos" id="fk_servicos" class="form-control adicionar_servico" style="cursor: pointer;" required>
+                                                        <select name="fk_servicos[]" id="fk_servicos" class="form-control adicionar_servico" style="cursor: pointer;" required>
                                                             <option class="text-center" value="">--- Selecione uma Opção ---</option>
                                                             <?php foreach ($listar_servicos as $value) { ?>
                                                                 <option value="<?php echo $value->id_servicos; ?>" data-nome="<?php echo utf8_encode($value->nome_servico); ?>"><?php echo utf8_encode($value->nome_servico); ?></option>
@@ -165,18 +165,12 @@
 
 <script>
     function adicionarCampo() {
-        var divCampos = document.getElementById("campos");
-        var campoPrincipal = divCampos.querySelector(".row.form-group");
-        var novoCampo = campoPrincipal.cloneNode(true);
-        // Torna o botão "Remover" visível no campo adicionado
-        novoCampo.querySelector("button").style.display = "block";
-        divCampos.appendChild(novoCampo);
-    }
-
-    function removerCampo(botaoRemover) {
-        var divCampos = document.getElementById("campos");
-        var campoParaRemover = botaoRemover.closest(".row.form-group");
-        divCampos.removeChild(campoParaRemover);
+        // Clona o primeiro menu suspenso de serviço
+        var newServiceField = document.querySelector('.adicionar_servico').cloneNode(true);
+        // Limpa o valor selecionado no novo menu suspenso
+        newServiceField.value = '';
+        // Acrescenta o novo menu suspenso ao formulário
+        document.querySelector('.col-md-4').appendChild(newServiceField);
     }
 
     function is_cpf(c) {

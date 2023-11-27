@@ -47,14 +47,14 @@
                   <div class="col-12">
                     <div class="row">
                       <div class="form-group col-md-6">
-                        <label for="" style="color: #4e4e4e;"><b>Escolha uma Data:</b></label>
+                        <label for="" style="color: #4e4e4e;"><b>Escolha um dia da Semana:</b></label>
                         <br>
-                        <select name="dataDisp" id="dataDisp" class="form-control" style="cursor: pointer;" required>
-                          <option selected>Choose...</option>
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
-                        </select>
+                        <select name="fk_servicos[]" id="fk_servicos" class="form-control servico" style="cursor: pointer;" required>
+                                                    <option class="text-center" value="">--- Selecione uma Opção ---</option>
+                                                    <?php foreach ($listar_servicos as $value) { ?>
+                                                        <option value="<?php echo $value->id_servicos; ?>" data-nome="<?php echo utf8_encode($value->nome_servico); ?>"><?php echo utf8_encode($value->nome_servico); ?></option>
+                                                    <?php } ?>
+                                                </select>
                       </div>
                       
                       <div class="form-group col-md-6">

@@ -31,7 +31,7 @@ class Cadastro_funcionario extends CI_Controller
 
 			if (!isset($error)) {
 
-				$dados['cadastro_funcionario'] = $this->Agendamento_model->cadastro_profissional($fk_dia_semana));
+				$dados['cadastro_funcionario'] = $this->Agendamento_model->cadastro_profissional($fk_dia_semana);
 
 				//MENSAGEM SUCESSO AO CADASTRAR
 				$this->session->set_flashdata('sucesso', 'Cadastro realizado com sucesso!');

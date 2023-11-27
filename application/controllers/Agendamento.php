@@ -64,5 +64,4 @@ class Agendamento extends CI_Controller
 		$this->load->view('layout/navbar');
 		$this->load->view('agendamento', $dados);
 	}
-
 }

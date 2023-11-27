@@ -7,7 +7,6 @@ class Agendamento_model extends CI_Model
         $data = array(
             'data_agenda' => $data_agenda,
             'fk_hora' => $fk_hora,
-            'fk_servicos' => $fk_servicos,
             'fk_profissional' => $fk_profissional,
             'fk_usuario' => $fk_usuario,
             
@@ -22,7 +21,7 @@ class Agendamento_model extends CI_Model
     public function associarServico($fk_agenda, $fk_servicos)
     {
         $data = array(
-            'fk_agenda	' => $fk_agenda,
+            'fk_agenda' => $fk_agenda,
             'fk_servicos' => $fk_servicos,
         );
 

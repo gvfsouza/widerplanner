@@ -41,7 +41,7 @@
                                                     <div class="form-group col-md-3">
                                                         <label style="color: #4e4e4e"><b>Foto:</b></label>
                                                         <br>
-                                                        <input style="font-size:14px" type="file" class="form-control" id="foto_usuario" name="foto_usuario" accept="image/*" required>
+                                                        <input style="font-size:14px" type="file" class="form-control" id="foto_usuario" name="foto_usuario" accept="image/*">
                                                     </div>
                                                     <div class="form-group col-md-5">
                                                         <label for="" style="color: #4e4e4e;"><b>Nome Completo:</b></label>

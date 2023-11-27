@@ -73,7 +73,7 @@
 
                     <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9;">
                       <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                           <label for="" style="color: #4e4e4e;"><b>Serviço:</b></label>
                           <br>
                           <select name="fk_servicos[]" id="fk_servicos" class="form-control servico" style="cursor: pointer;" required>
@@ -92,7 +92,7 @@
                     </fieldset>
 
                     <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9;">
-                      <div class="form-group col-md-5">
+                      <div class="form-group col-md-12">
                         <label for="" style="color: #4e4e4e;"><b>Profissional(s) Disponível:</b></label>
                         <br>
                         <select name="horaDisp" id="horaDisp" class="form-control" style="cursor: pointer;" required>

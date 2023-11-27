@@ -24,7 +24,7 @@ class Login_model extends CI_Model
 
     public function salvar_dados_sessao($cpf_usuario)
     {
-        $this->db->select("*");
+        $this->db->select("*, usuario.id_usuario as fk_usuario");
         $this->db->from('usuario');
         $this->db->where('cpf_usuario', $cpf_usuario);
 

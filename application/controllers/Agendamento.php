@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') or exit('No direct script access allowed');
 
-class Cadastro_funcionario extends CI_Controller
+class Agendamento extends CI_Controller
 {
 	public function __construct()
 	{

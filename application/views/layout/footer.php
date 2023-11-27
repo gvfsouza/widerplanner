@@ -26,8 +26,15 @@
 </footer> -->
 <script>
     $(document).ready(function () {
-        // Adiciona um ouvinte de evento de clique ao link de logout
-        $(".nav-link[title='Sair']").click(function (e) {
+        // Adiciona um ouvinte de evento de clique ao link de logout no sidebar
+        $(".nav-item a[title='Sair']").click(function (e) {
+            e.preventDefault();
+            // Chama a função para mostrar o modal
+            showLogoutModal();
+        });
+
+        // Adiciona um ouvinte de evento de clique ao link de logout no navbar
+        $(".dropdown-item[title='Sair']").click(function (e) {
             e.preventDefault();
             // Chama a função para mostrar o modal
             showLogoutModal();
@@ -44,6 +51,7 @@
         $(this).find('form')[0].reset();
     });
 </script>
+
 
 
 

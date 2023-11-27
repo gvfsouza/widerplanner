@@ -41,14 +41,14 @@
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel">Confirmação</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                                <span aria-hidden="true">&times;</span>
+                                <span aria-hidden="true" style="font-size: 28px; color: #434d64;">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
-                            <p>Tem certeza de que deseja sair?</p>
+                            <p style="font-weight: bold;">Tem certeza de que deseja sair?</p>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Não</button>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Não</button>
                             <a href="<?php echo site_url('login/logout'); ?>" class="btn btn-primary">Sim</a>
                         </div>
                     </div>

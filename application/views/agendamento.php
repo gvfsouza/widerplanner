@@ -101,7 +101,7 @@
                                                     <br>
                                                     <select name="fk_servicos[]" id="fk_servicos" class="form-control servico" style="cursor: pointer;" required>
                                                         <option class="text-center" value="">--- Selecione uma Opção ---</option>
-                                                        <?php foreach ($listar_servicos as $value) { ?>
+                                                        <?php foreach ($horarios_disponiveis as $value) { ?>
                                                                             <option value="<?php echo $value->id_servicos; ?>" data-nome="<?php echo $value->nome_servico; ?>"><?php echo $value->nome_servico; ?></option>
                                                         <?php } ?>
                                                     </select>
@@ -138,7 +138,37 @@
     </div>
 </div>
 
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
 <script>
+    $(document).ready(function() {
+        $('#data_agenda, #fk_profissional').change(function() {
+            var data_agenda = $('#data_agenda').val();
+            var fk_profissional = $('#fk_profissional').val();
+
+            if (data_agenda && fk_profissional) {
+                $.ajax({
+                    type: 'POST',
+                    url: '<?php echo base_url("Agendamento/horarios_disponiveis"); ?>',
+                    data: {data_agenda: data_agenda, fk_profissional: fk_profissional},
+                    success: function(response) {
+                    // Limpa o dropdown de horários
+                    $('#fk_hora').empty();
+
+                    // Adiciona os novos horários disponíveis ao dropdown
+                        $.each(response, function(index, value) {
+                            $('#fk_hora').append('<option value="' + value.id_hora + '">' + value.horarios_semana + '</option>');
+                        });
+                    },
+                    error: function() {
+                        console.log('Erro ao buscar horários disponíveis.');
+                    }
+                });
+            }
+        });
+    });
+
+
     var maxButtons = 9999;
 
     $('.add_novo_Servico').click(function(e) {

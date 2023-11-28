@@ -82,7 +82,7 @@
                                                 </div>
 
                                                 <div class="form-group col-md-6">
-                                                    <label for="" style="color: #4e4e4e;"><b>Escolha um Horário:</b></label>
+                                                    <label for="" style="color: #4e4e4e;"><b>Horários Disponíveis:</b></label>
                                                     <br>
                                                     <select name="fk_hora" id="fk_hora" class="form-control servico" style="cursor: pointer;" required>
                                                         <option class="text-center" value="">--- Selecione uma Opção ---</option>

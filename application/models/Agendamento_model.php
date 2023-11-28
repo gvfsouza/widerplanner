@@ -57,7 +57,7 @@ class Agendamento_model extends CI_Model
         return $res->result();
     }
 
-    public function horas_disponiveis($data_agenda, $fk_profissional)
+    public function horas_disponiveis()
     {
         $this->db->select('data_agenda, fk_profissional, fk_hora');
         $this->db->from('agenda');

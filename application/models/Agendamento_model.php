@@ -13,6 +13,9 @@ class Agendamento_model extends CI_Model
 
         );
 
+    $this->db->join('microchip.cadastro_clinica', 'microchip.cadastro_usuario.fk_clinica = microchip.cadastro_clinica.id');
+
+
         $this->db->insert('agenda', $data);
         return $this->db->insert_id();
     }

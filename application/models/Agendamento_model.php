@@ -14,9 +14,7 @@ class Agendamento_model extends CI_Model
         );
 
         $this->db->insert('agenda', $data);
-        $id_func = $this->db->insert_id();
-
-        return $id_func;
+        return $this->db->insert_id();
     }
 
     public function associarServico($fk_agenda, $fk_servicos)

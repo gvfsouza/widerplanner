@@ -66,6 +66,11 @@ class Agendamento_model extends CI_Model
         $this->db->where('fk_hora', $fk_hora);
     
         $res = $this->db->get();
-        return $res->result();
+    
+        if ($res->num_rows() > 0) {
+            return false; // Já existe um cadastro para a combinação de profissional e data escolhida
+        } else {
+            return true; // Não existe um cadastro para a combinação de profissional e data escolhida
+        }
     }
 }

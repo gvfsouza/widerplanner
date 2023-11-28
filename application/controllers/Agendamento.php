@@ -22,48 +22,50 @@ class Agendamento extends CI_Controller
 	}
 
 	public function index()
-	{
-		$this->load->model('Agendamento_model');
-		$dados = array();
+{
+    $this->load->model('Agendamento_model');
+    $dados = array();
 
-		if ($this->input->post('salvar')) {
-			$data_agenda = $this->input->post('data_agenda');
-			$fk_hora = $this->input->post('fk_hora');
-			$fk_servicos = $this->input->post('fk_servicos');
-			$fk_profissional = $this->input->post('fk_profissional');
+    if ($this->input->post('salvar')) {
+        $data_agenda = $this->input->post('data_agenda');
+        $fk_hora = $this->input->post('fk_hora');
+        $fk_servicos = $this->input->post('fk_servicos');
+        $fk_profissional = $this->input->post('fk_profissional');
 
-			// Verifique se as variáveis estão definidas
-			if (!isset($error)) {
-				
-				$fk_usuario = $this->session->userdata('fk_usuario');
+        // Verifique se as variáveis estão definidas
+        if (!empty($data_agenda) && !empty($fk_hora) && !empty($fk_servicos) && !empty($fk_profissional)) {
+            
+            $fk_usuario = $this->session->userdata('fk_usuario');
 
-				$this->Agendamento_model->cadastro_agenda($data_agenda, $fk_hora, $fk_servicos, $fk_profissional, $fk_usuario);
+            // Cadastre a agenda
+            $fk_agenda = $this->Agendamento_model->cadastro_agenda($data_agenda, $fk_hora, $fk_servicos, $fk_profissional, $fk_usuario);
 
-				// Captura o ID da agenda recém cadastrada
-				$fk_agenda = $dados['agendamento'];
+            if ($fk_agenda) {
+                // Insere na tabela func_servicos
+                foreach ($fk_servicos as $value) {
+                    $this->Agendamento_model->associarServico($fk_agenda, $value);
+                }
 
-				// Insere na tabela func_servicos
-				foreach ($fk_servicos as $value) {
-					$this->Agendamento_model->associarServico($fk_agenda, $value);
-				}
+                // MENSAGEM SUCESSO AO CADASTRAR
+                $this->session->set_flashdata('sucesso', 'Agendamento realizado com sucesso!');
+                redirect('agendamento');
+            } else {
+                $this->session->set_flashdata('erro', 'Erro ao efetuar o agendamento de Horário.');
+                redirect('agendamento');
+            }
+        } else {
+            $this->session->set_flashdata('erro', 'Preencha todos os campos obrigatórios.');
+            redirect('agendamento');
+        }
+    }
 
-				// MENSAGEM SUCESSO AO CADASTRAR
-				$this->session->set_flashdata('sucesso', 'Agendamento realizado com sucesso!');
-				redirect('agendamento');
+    $dados['listar_servicos'] = $this->Agendamento_model->listar_servicos();
+    $dados['listar_hora'] = $this->Agendamento_model->listar_hora();
+    $dados['listar_profissionais'] = $this->Agendamento_model->listar_profissionais();
 
-			} else {
-				$this->session->set_flashdata('erro', 'Erro ao efetuar o agendamento de Horário.');
-				redirect('agendamento');
-			}
-		}
-
-		$dados['listar_servicos'] = $this->Agendamento_model->listar_servicos();
-		$dados['listar_hora'] = $this->Agendamento_model->listar_hora();
-		$dados['listar_profissionais'] = $this->Agendamento_model->listar_profissionais();
-
-		$this->load->view('layout/header');
-		$this->load->view('layout/sidebar');
-		$this->load->view('layout/navbar');
-		$this->load->view('agendamento', $dados);
-	}
+    $this->load->view('layout/header');
+    $this->load->view('layout/sidebar');
+    $this->load->view('layout/navbar');
+    $this->load->view('agendamento', $dados);
+}
 }

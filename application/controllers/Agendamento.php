@@ -75,7 +75,7 @@ class Agendamento extends CI_Controller
 
 		$horarios_disponiveis = $this->Agendamento_model->listar_hora_disponivel($data_agenda, $fk_profissional);
 
-		// Converta para JSON e envie de volta para o JavaScript
+		// Retorne os horários disponíveis como JSON
 		echo json_encode($horarios_disponiveis);
 	}
 }

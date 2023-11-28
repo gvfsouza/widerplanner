@@ -82,6 +82,19 @@
                                         </fieldset>
 
                                         <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9;">
+                                            <div class="form-group col-md-12">
+                                                <label for="" style="color: #4e4e4e;"><b>Profissional(s) Disponível:</b></label>
+                                                <br>
+                                                <select name="fk_profissional" id="fk_profissional" class="form-control profissional" style="cursor: pointer;" required>
+                                                    <option class="text-center" value="">--- Selecione uma Opção ---</option>
+                                                    <?php foreach ($listar_profissionais as $value) { ?>
+                                                                <option value="<?php echo $value->id_usuario; ?>" data-nome="<?php echo $value->nome_usuario; ?>"><?php echo $value->nome_usuario; ?></option>
+                                                    <?php } ?>
+                                                </select>
+                                            </div>
+                                        </fieldset>
+                                        
+                                        <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9;">
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <label for="" style="color: #4e4e4e;"><b>Serviço:</b></label>
@@ -99,19 +112,6 @@
                                                         <button type="button" class="btn btn-danger botao_remover" style="width: 150px; height: 40px; font-size: 14px; margin-left: 10px;"><i class="fas fa-trash-alt"></i> Remover</button>
                                                     </div>
                                                 </div>
-                                        </fieldset>
-
-                                        <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9;">
-                                            <div class="form-group col-md-12">
-                                                <label for="" style="color: #4e4e4e;"><b>Profissional(s) Disponível:</b></label>
-                                                <br>
-                                                <select name="fk_profissional" id="fk_profissional" class="form-control profissional" style="cursor: pointer;" required>
-                                                    <option class="text-center" value="">--- Selecione uma Opção ---</option>
-                                                    <?php foreach ($listar_profissionais as $value) { ?>
-                                                                <option value="<?php echo $value->id_usuario; ?>" data-nome="<?php echo $value->nome_usuario; ?>"><?php echo $value->nome_usuario; ?></option>
-                                                    <?php } ?>
-                                                </select>
-                                            </div>
                                         </fieldset>
                                     </div>
                                 </div>

@@ -87,7 +87,7 @@
                                                     <select name="fk_hora" id="fk_hora" class="form-control servico" style="cursor: pointer;" required>
                                                         <option class="text-center" value="">--- Selecione uma Opção ---</option>
                                                         <?php foreach ($listar_hora as $value) { ?>
-                                                                            <option value="<?php echo $value->id_hora; ?>" data-nome="<?php echo $value->horarios_semana; ?>"><?php echo $value->horarios_semana; ?></option>
+                                                            <option value="<?php echo $value->id_hora; ?>" data-nome="<?php echo $value->horarios_semana; ?>"><?php echo $value->horarios_semana; ?></option>
                                                         <?php } ?>
                                                     </select>
                                                 </div>
@@ -137,30 +137,6 @@
         </div>
     </div>
 </div>
-
-<script>
-    $(document).ready(function() {
-        $('#fk_profissional, #data_agenda').change(function() {
-            var fk_profissional = $('#fk_profissional').val();
-            var data_agenda = $('#data_agenda').val();
-
-            $.ajax({
-                url: '<?php echo base_url("Agendamento/verificarDisponibilidade"); ?>',
-                type: 'POST',
-                data: {fk_profissional: fk_profissional, data_agenda: data_agenda},
-                dataType: 'json',
-                success: function(response) {
-                    $('#fk_hora').empty();
-
-                    // Adiciona as horas disponíveis ao campo de seleção
-                    $.each(response, function(index, value) {
-                        $('#fk_hora').append('<option value="' + value.fk_hora + '">' + value.fk_hora + '</option>');
-                   });
-                }
-            });
-        });
-    });
-</script>
 
 <script>
     var maxButtons = 9999;

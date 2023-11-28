@@ -32,7 +32,7 @@ class Agendamento extends CI_Controller
 			$fk_servicos = $this->input->post('fk_servicos');
 			$fk_profissional = $this->input->post('fk_profissional');
 
-			$disponivel = $this->Agendamento_model->verificarHora($data_agenda, $fk_hora,$fk_profissional);
+			$disponivel = $this->Agendamento_model->verificarHora($data_agenda, $fk_profissional);
 
 			if ($disponivel) {
 				$this->Agendamento_model->listar_hora();

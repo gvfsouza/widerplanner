@@ -21,7 +21,7 @@ class Agendamento extends CI_Controller
 		return $data;
 	}
 
-	public function index($data_agenda, $fk_profissional)
+	public function index()
 	{
 		$this->load->model('Agendamento_model');
 		$dados = array();

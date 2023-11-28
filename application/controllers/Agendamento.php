@@ -40,7 +40,7 @@ class Agendamento extends CI_Controller
 				// Se necessário, adicione verificação para garantir que $fk_usuario seja válido
 
 				// Verifique se já existe agendamento
-				$existe_agendamento = verificar_agendamento($data_agenda, $fk_profissional);
+				$existe_agendamento = $this->Agendamento_model->verificar_agendamento($data_agenda, $fk_profissional);
 
 				// Se não existir agendamento, liste os horários disponíveis
 				if (!$existe_agendamento) {

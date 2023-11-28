@@ -30,24 +30,6 @@ class Agendamento_model extends CI_Model
         return $this->db->insert_id();
     }
 
-    public function verificar_agendamento($data_agenda, $fk_profissional)
-    {
-        // Consulta para verificar se já existe agendamento
-        $sql = "SELECT * FROM agenda WHERE data_agenda = '" + $data_agenda + "' AND fk_profissional = '" + $fk_profissional + "'";
-
-        // Executa a consulta
-        $result = $this->db->query($sql);
-
-        // Verifica se retornou algum registro
-        if ($result->num_rows > 0) {
-            // Existe agendamento
-            return true;
-        } else {
-            // Não existe agendamento
-            return false;
-        }
-    }
-
     public function listar_servicos()
     {
         $this->db->select('*');

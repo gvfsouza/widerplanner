@@ -56,7 +56,7 @@
                         <?php endif; ?>
                         <!----------------FIM-----MENSAGEM DE ERRO AO CADASTRAR ---------------->
 
-                        <form action="" method="POST">
+                        <form action="" method="POST" id="form_agendamento">
                             <div class="p-3 bg-white">
                                 <div class="row">
                                     <div class="col-12">
@@ -138,28 +138,47 @@
     </div>
 </div>
 
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script>
-    $(document).ready(function() {
-        $('#fk_profissional, #data_agenda').change(function() {
-            var fk_profissional = $('#fk_profissional').val();
-            var data_agenda = $('#data_agenda').val();
-
-            $.ajax({
-                url: '<?php echo base_url("Agendamento/verificarDisponibilidade"); ?>',
-                type: 'POST',
-                data: {fk_profissional: fk_profissional, data_agenda: data_agenda},
-                dataType: 'json',
-                success: function(response) {
-                    $('#fk_hora').empty();
-
-                    // Adiciona as horas disponíveis ao campo de seleção
-                    $.each(response, function(index, value) {
-                        $('#fk_hora').append('<option value="' + value.fk_hora + '">' + value.fk_hora + '</option>');
-                   });
-                }
-            });
-        });
+$(document).ready(function() {
+    // Função para verificar a disponibilidade ao mudar o profissional ou a data
+    $('#fk_profissional, #data_agenda').change(function() {
+        verificarDisponibilidade();
     });
+
+    // Função para verificar a disponibilidade ao carregar a página
+    verificarDisponibilidade();
+
+    // Função para realizar a verificação de disponibilidade
+    function verificarDisponibilidade() {
+        var fk_profissional = $('#fk_profissional').val();
+        var data_agenda = $('#data_agenda').val();
+
+        // Faz uma requisição AJAX para verificar a disponibilidade
+        $.ajax({
+            url: '<?php echo base_url("Agendamento/verificarDisponibilidade"); ?>',
+            type: 'POST',
+            data: {fk_profissional: fk_profissional, data_agenda: data_agenda},
+            dataType: 'json',
+            success: function(response) {
+                // Limpa as opções atuais do campo de seleção de horas
+                $('#fk_hora').empty();
+
+                // Adiciona as horas disponíveis ao campo de seleção
+                $.each(response, function(index, value) {
+                    $('#fk_hora').append('<option value="' + value.fk_hora + '">' + value.fk_hora + '</option>');
+                });
+            }
+        });
+    }
+
+    // Intercepta o envio do formulário para realizar a verificação de disponibilidade
+    $('#form_agendamento').submit(function(e) {
+        e.preventDefault(); // Impede o envio padrão do formulário
+        verificarDisponibilidade(); // Realiza a verificação antes de enviar o formulário
+        // Adicione aqui o código necessário para enviar o formulário após a verificação
+    });
+});
 </script>
 
 <script>

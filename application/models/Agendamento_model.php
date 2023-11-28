@@ -60,22 +60,13 @@ class Agendamento_model extends CI_Model
         }
     }
 
-    public function horariosOcupados($data_agenda, $fk_profissional)
+    public function horariosOcupados()
     {
-        $this->db->select('fk_hora');
+        $this->db->select('*');
         $this->db->from('agenda');
-        $this->db->where('data_agenda', $data_agenda);
-        $this->db->where('fk_profissional', $fk_profissional);
 
         $res = $this->db->get();
-        $result = $res->result();
-
-        // Extrai os horários ocupados da consulta
-        $horarios_ocupados = array_map(function ($item) {
-            return $item->fk_hora;
-        }, $result);
-
-        return $horarios_ocupados;
+        return $res->result();
     }
 
     public function listar_profissionais()

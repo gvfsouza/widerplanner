@@ -32,20 +32,10 @@ class Agendamento extends CI_Controller
 			$fk_servicos = $this->input->post('fk_servicos');
 			$fk_profissional = $this->input->post('fk_profissional');
 
-			$disponivel = $this->Agendamento_model->verificarHora($data_agenda, $fk_profissional);
-
-			if ($disponivel) {
-				$this->Agendamento_model->listar_hora();
-			} else {
-				$this->session->set_flashdata('al', 'Sem horários vagos!');
-			}
-
 			// Verifique se as variáveis estão definidas
 			if (isset($data_agenda, $fk_hora, $fk_servicos, $fk_profissional)) {
 				// Obtenha o fk_usuario da sessão
 				$fk_usuario = $this->session->userdata('fk_usuario');
-
-				// Se necessário, adicione verificação para garantir que $fk_usuario seja válido
 
 				$dados['agendamento'] = $this->Agendamento_model->cadastro_agenda($data_agenda, $fk_hora, $fk_servicos, $fk_profissional, $fk_usuario);
 
@@ -66,6 +56,7 @@ class Agendamento extends CI_Controller
 			}
 		}
 
+		$dados['horas_disponiveis'] = $this->agenda_model->horas_disponiveis($dados['data_agenda'], $dados['fk_profissional']);
 		$dados['listar_servicos'] = $this->Agendamento_model->listar_servicos();
 		// $dados['listar_hora'] = $this->Agendamento_model->listar_hora();
 		$dados['listar_profissionais'] = $this->Agendamento_model->listar_profissionais();

@@ -67,4 +67,19 @@ class Agendamento extends CI_Controller
 		$this->load->view('layout/navbar');
 		$this->load->view('agendamento', $dados);
 	}
+
+	// No controlador Agendamento_controller
+	public function verificarDisponibilidade()
+	{
+		$fk_profissional = $this->input->post('fk_profissional');
+		$data_agenda = $this->input->post('data_agenda');
+
+		// Adapte isso conforme necessário para verificar no banco de dados se já existe um cadastro para o profissional na data escolhida
+
+		// Exemplo de verificação (isso pode precisar ser ajustado de acordo com a estrutura do seu banco de dados)
+		$disponibilidade = $this->Agendamento_model->verificarDisponibilidade($fk_profissional, $data_agenda);
+
+		// Retorna a resposta como JSON
+		echo json_encode($disponibilidade);
+	}
 }

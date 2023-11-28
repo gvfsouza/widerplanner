@@ -39,6 +39,19 @@ class Agendamento_model extends CI_Model
         return $res->result();
     }
 
+    public function verificarDisponibilidade($fk_profissional, $data_agenda)
+    {
+        $this->db->select('fk_hora');
+        $this->db->from('agenda');
+        $this->db->where('fk_profissional', $fk_profissional);
+        $this->db->where('data_agenda', $data_agenda);
+
+        $result = $this->db->get();
+
+        // Retorna as horas já cadastradas para o profissional na data escolhida
+        return $result->result();
+    }
+
     public function listar_hora()
     {
         $this->db->select('*');

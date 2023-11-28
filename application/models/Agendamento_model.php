@@ -42,7 +42,7 @@ class Agendamento_model extends CI_Model
     public function listar_hora()
     {
         $this->db->select('*');
-        $this->db->from('agenda');
+        $this->db->from('hora_disp');
 
         $res = $this->db->get();
         return $res->result();

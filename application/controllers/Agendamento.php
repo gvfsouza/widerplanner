@@ -34,15 +34,21 @@ class Agendamento extends CI_Controller
 	
 		if (!isset($error)) {
 			$fk_usuario = $this->session->userdata('fk_usuario');
-	
+		
 			$fk_agenda = $this->Agendamento_model->cadastro_agenda($data_agenda, $fk_hora, $fk_servicos, $fk_profissional, $fk_usuario);
-	
+		
 			if ($fk_agenda) {
 				// Associar serviços ao agendamento
 				foreach ($fk_servicos as $servico_id) {
-					$this->db->insert('agenda2', array('fk_agenda' => $fk_agenda, 'fk_servicos' => $servico_id));
+					$insert_data = array('fk_agenda' => $fk_agenda, 'fk_servicos' => $servico_id);
+					$insert_result = $this->db->insert('agenda2', $insert_data);
+		
+					if (!$insert_result) {
+						$this->session->set_flashdata('erro', 'Erro ao associar serviço ao agendamento.');
+						redirect('agendamento');
+					}
 				}
-	
+		
 				// MENSAGEM SUCESSO AO CADASTRAR
 				$this->session->set_flashdata('sucesso', 'Agendamento realizado com sucesso!');
 				redirect('agendamento');
@@ -51,7 +57,7 @@ class Agendamento extends CI_Controller
 				redirect('agendamento');
 			}
 		} else {
-			$this->session->set_flashdata('erro', 'Erro ao efetuar o agendamento de Horário.');
+			$this->session->set_flashdata('erro', 'Erro ao efetuar o agendamento de Horário. Verifique se todos os campos foram preenchidos corretamente.');
 			redirect('agendamento');
 		}
 	}

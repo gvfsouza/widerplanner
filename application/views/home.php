@@ -6,6 +6,7 @@
     /* .card-profile {
         width: 350px;
         display: flex;
+        
         flex-direction: column;
         align-items: center;
         padding: 2rem;

@@ -149,7 +149,7 @@
             if (data_agenda && fk_profissional) {
                 $.ajax({
                     type: 'POST',
-                    url: '<?php echo base_url("seu_controlador/horarios_disponiveis"); ?>',
+                    url: '<?php echo base_url("Agendamento/horarios_disponiveis"); ?>',
                     data: {data_agenda: data_agenda, fk_profissional: fk_profissional},
                     success: function(response) {
                     // Limpa o dropdown de horários

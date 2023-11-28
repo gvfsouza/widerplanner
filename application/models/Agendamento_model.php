@@ -57,20 +57,20 @@ class Agendamento_model extends CI_Model
         return $res->result();
     }
     
-    public function verificarHora($fk_profissional, $data_agenda, $fk_hora)
-    {
-        $this->db->select('*');
-        $this->db->from('agenda');
-        $this->db->where('fk_profissional', $fk_profissional);
-        $this->db->where('data_agenda', $data_agenda);
-        $this->db->where('fk_hora', $fk_hora);
+    // public function verificarHora($fk_profissional, $data_agenda, $fk_hora)
+    // {
+    //     $this->db->select('*');
+    //     $this->db->from('agenda');
+    //     $this->db->where('fk_profissional', $fk_profissional);
+    //     $this->db->where('data_agenda', $data_agenda);
+    //     $this->db->where('fk_hora', $fk_hora);
     
-        $res = $this->db->get();
+    //     $res = $this->db->get();
     
-        if ($res->num_rows() > 0) {
-            return false; // Já existe um cadastro para a combinação de profissional e data escolhida
-        } else {
-            return true; // Não existe um cadastro para a combinação de profissional e data escolhida
-        }
-    }
+    //     if ($res->num_rows() > 0) {
+    //         return false;
+    //     } else {
+    //         return true;
+    //     }
+    // }
 }

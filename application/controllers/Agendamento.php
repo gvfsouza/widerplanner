@@ -39,7 +39,18 @@ class Agendamento extends CI_Controller
 
 				// Se necessário, adicione verificação para garantir que $fk_usuario seja válido
 
-				$dados['agendamento'] = $this->Agendamento_model->cadastro_agenda($data_agenda, $fk_hora, $fk_servicos, $fk_profissional, $fk_usuario);
+				// Verifique se já existe agendamento
+				$existe_agendamento = verificar_agendamento($data_agenda, $fk_profissional);
+
+				// Se não existir agendamento, liste os horários disponíveis
+				if (!$existe_agendamento) {
+					// Liste os horários disponíveis
+					$this->load->model('Agendamento_model');
+					$dados['listar_hora'] = $this->Agendamento_model->listar_hora();
+				} else {
+					// Desabilite o campo hora
+					$dados['listar_hora'] = array();
+				}
 
 				// Captura o ID da agenda recém cadastrada
 				$fk_agenda = $dados['agendamento'];
@@ -58,6 +69,18 @@ class Agendamento extends CI_Controller
 			}
 		}
 
+		// Verifique se já existe agendamento
+		$existe_agendamento = verificar_agendamento($data_agenda, $fk_profissional);
+
+		// Se não existir agendamento, liste os horários disponíveis
+		if (!$existe_agendamento) {
+			// Liste os horários disponíveis
+			$dados['listar_hora'] = $this->Agendamento_model->listar_hora();
+		} else {
+			// Desabilite o campo hora
+			$dados['listar_hora'] = array();
+		}
+
 		$dados['listar_servicos'] = $this->Agendamento_model->listar_servicos();
 		$dados['listar_hora'] = $this->Agendamento_model->listar_hora();
 		$dados['listar_profissionais'] = $this->Agendamento_model->listar_profissionais();
@@ -68,18 +91,4 @@ class Agendamento extends CI_Controller
 		$this->load->view('agendamento', $dados);
 	}
 
-	// No controlador Agendamento_controller
-	public function verificarDisponibilidade()
-	{
-		$fk_profissional = $this->input->post('fk_profissional');
-		$data_agenda = $this->input->post('data_agenda');
-
-		// Adapte isso conforme necessário para verificar no banco de dados se já existe um cadastro para o profissional na data escolhida
-
-		// Exemplo de verificação (isso pode precisar ser ajustado de acordo com a estrutura do seu banco de dados)
-		$disponibilidade = $this->Agendamento_model->verificarDisponibilidade($fk_profissional, $data_agenda);
-
-		// Retorna a resposta como JSON
-		echo json_encode($disponibilidade);
-	}
 }

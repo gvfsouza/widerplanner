@@ -42,17 +42,17 @@
                     <div class="tab-pane fade show active" id="" role="tabpanel">
 
                         <?php if ($this->session->flashdata('sucesso')) { ?>
-                                            <div class="alert alert-success" role="alert">
-                                                <?php echo $this->session->flashdata('sucesso'); ?>
-                                            </div>
+                                                <div class="alert alert-success" role="alert">
+                                                    <?php echo $this->session->flashdata('sucesso'); ?>
+                                                </div>
                         <?php } ?>
                         <!----------------FIM-----MENSAGEM DE SUCESSO AO CADASTRAR ---------------->
 
                         <!----------------INICIO-----MENSAGEM DE ERRO AO CADASTRAR ---------------->
                         <?php if ($this->session->flashdata('erro')): ?>
-                                            <div class="alert alert-danger">
-                                                <?php echo $this->session->flashdata('erro'); ?>
-                                            </div>
+                                                <div class="alert alert-danger">
+                                                    <?php echo $this->session->flashdata('erro'); ?>
+                                                </div>
                         <?php endif; ?>
                         <!----------------FIM-----MENSAGEM DE ERRO AO CADASTRAR ---------------->
 
@@ -67,7 +67,7 @@
                                                 <select name="fk_profissional" id="fk_profissional" class="form-control profissional" style="cursor: pointer;" required>
                                                     <option class="text-center" value="">--- Selecione uma Opção ---</option>
                                                     <?php foreach ($listar_profissionais as $value) { ?>
-                                                                        <option value="<?php echo $value->id_usuario; ?>" data-nome="<?php echo $value->nome_usuario; ?>"><?php echo $value->nome_usuario; ?></option>
+                                                                            <option value="<?php echo $value->id_usuario; ?>" data-nome="<?php echo $value->nome_usuario; ?>"><?php echo $value->nome_usuario; ?></option>
                                                     <?php } ?>
                                                 </select>
                                             </div>
@@ -87,7 +87,7 @@
                                                     <select name="fk_hora" id="fk_hora" class="form-control servico" style="cursor: pointer;" required>
                                                         <option class="text-center" value="">--- Selecione uma Opção ---</option>
                                                         <?php foreach ($listar_hora as $value) { ?>
-                                                                            <option value="<?php echo $value->id_hora; ?>" data-nome="<?php echo $value->horarios_semana; ?>"><?php echo $value->horarios_semana; ?></option>
+                                                                                <option value="<?php echo $value->id_hora; ?>" data-nome="<?php echo $value->horarios_semana; ?>"><?php echo $value->horarios_semana; ?></option>
                                                         <?php } ?>
                                                     </select>
                                                 </div>
@@ -102,7 +102,7 @@
                                                     <select name="fk_servicos[]" id="fk_servicos" class="form-control servico" style="cursor: pointer;" required>
                                                         <option class="text-center" value="">--- Selecione uma Opção ---</option>
                                                         <?php foreach ($listar_servicos as $value) { ?>
-                                                                            <option value="<?php echo $value->id_servicos; ?>" data-nome="<?php echo $value->nome_servico; ?>"><?php echo $value->nome_servico; ?></option>
+                                                                                <option value="<?php echo $value->id_servicos; ?>" data-nome="<?php echo $value->nome_servico; ?>"><?php echo $value->nome_servico; ?></option>
                                                         <?php } ?>
                                                     </select>
                                                 </div>
@@ -138,50 +138,42 @@
     </div>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script>
-$(document).ready(function() {
-    // Função para verificar a disponibilidade ao mudar o profissional ou a data
-    $('#fk_profissional, #data_agenda').change(function() {
-        verificarDisponibilidade();
-    });
 
-    // Função para verificar a disponibilidade ao carregar a página
-    verificarDisponibilidade();
+function verificarAgendamento(data_agenda, fk_profissional) {
+    // Consulta para verificar se já existe agendamento
+    var sql = "SELECT * FROM agenda WHERE data_agenda = '" + data_agenda + "' AND fk_profissional = '" + fk_profissional + "'";
 
-    // Função para realizar a verificação de disponibilidade
-    function verificarDisponibilidade() {
-        var fk_profissional = $('#fk_profissional').val();
-        var data_agenda = $('#data_agenda').val();
-
-        // Faz uma requisição AJAX para verificar a disponibilidade
-        $.ajax({
-            url: '<?php echo base_url("Agendamento/verificarDisponibilidade"); ?>',
-            type: 'POST',
-            data: {fk_profissional: fk_profissional, data_agenda: data_agenda},
-            dataType: 'json',
-            success: function(response) {
-                // Limpa as opções atuais do campo de seleção de horas
-                $('#fk_hora').empty();
-
-                // Adiciona as horas disponíveis ao campo de seleção
-                $.each(response, function(index, value) {
-                    $('#fk_hora').append('<option value="' + value.fk_hora + '">' + value.fk_hora + '</option>');
-                });
+    // Executa a consulta
+    $.ajax({
+        url: "<?php echo site_url('Agendamento/verificar_agendamento'); ?>",
+        data: {
+            data_agenda: data_agenda,
+            fk_profissional: fk_profissional
+        },
+        type: "POST",
+        success: function(data) {
+            // Verifica se retornou algum registro
+            if (data.length > 0) {
+                // Existe agendamento
+                $("#fk_hora").prop("disabled", true);
+            } else {
+                // Não existe agendamento
+                $("#fk_hora").prop("disabled", false);
             }
-        });
-    }
-
-    // Intercepta o envio do formulário para realizar a verificação de disponibilidade
-    $('#form_agendamento').submit(function(e) {
-        e.preventDefault(); // Impede o envio padrão do formulário
-        verificarDisponibilidade(); // Realiza a verificação antes de enviar o formulário
-        // Adicione aqui o código necessário para enviar o formulário após a verificação
+        }
     });
-});
-</script>
+}
 
-<script>
+$(document).ready(function() {
+    // Verifica se já existe agendamento
+    var data_agenda = $("#data_agenda").val();
+    var fk_profissional = $("#fk_profissional").val();
+
+    verificarAgendamento(data_agenda, fk_profissional);
+});
+
+
     var maxButtons = 9999;
 
     $('.add_novo_Servico').click(function(e) {

@@ -42,17 +42,17 @@
                     <div class="tab-pane fade show active" id="" role="tabpanel">
 
                         <?php if ($this->session->flashdata('sucesso')) { ?>
-                                            <div class="alert alert-success" role="alert">
-                                                <?php echo $this->session->flashdata('sucesso'); ?>
-                                            </div>
+                            <div class="alert alert-success" role="alert">
+                                <?php echo $this->session->flashdata('sucesso'); ?>
+                            </div>
                         <?php } ?>
                         <!----------------FIM-----MENSAGEM DE SUCESSO AO CADASTRAR ---------------->
 
                         <!----------------INICIO-----MENSAGEM DE ERRO AO CADASTRAR ---------------->
                         <?php if ($this->session->flashdata('erro')): ?>
-                                            <div class="alert alert-danger">
-                                                <?php echo $this->session->flashdata('erro'); ?>
-                                            </div>
+                            <div class="alert alert-danger">
+                                <?php echo $this->session->flashdata('erro'); ?>
+                            </div>
                         <?php endif; ?>
                         <!----------------FIM-----MENSAGEM DE ERRO AO CADASTRAR ---------------->
 

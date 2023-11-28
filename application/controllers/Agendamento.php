@@ -32,13 +32,9 @@ class Agendamento extends CI_Controller
 			$fk_servicos = $this->input->post('fk_servicos');
 			$fk_profissional = $this->input->post('fk_profissional');
 
-			// Verifique se as variáveis estão definidas
-			if (isset($data_agenda, $fk_hora, $fk_servicos, $fk_profissional)) {
+			if (!isset($error)) {
 				// Obtenha o fk_usuario da sessão
 				$fk_usuario = $this->session->userdata('fk_usuario');
-
-				// Se necessário, adicione verificação para garantir que $fk_usuario seja válido
-
 				$dados['agendamento'] = $this->Agendamento_model->cadastro_agenda($data_agenda, $fk_hora, $fk_servicos, $fk_profissional, $fk_usuario);
 
 				// Captura o ID da agenda recém cadastrada
@@ -52,8 +48,7 @@ class Agendamento extends CI_Controller
 				// MENSAGEM SUCESSO AO CADASTRAR
 				$this->session->set_flashdata('sucesso', 'Agendamento realizado com sucesso!');
 				redirect('agendamento');
-
-			} else {
+		} else {
 				$this->session->set_flashdata('erro', 'Erro ao efetuar o agendamento de Horário.');
 			}
 		}

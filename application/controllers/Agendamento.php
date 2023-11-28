@@ -37,7 +37,6 @@ class Agendamento extends CI_Controller
 				// Obtenha o fk_usuario da sessão
 				$fk_usuario = $this->session->userdata('fk_usuario');
 
-				$dados['horas_disponiveis'] = $this->Agendamento_model->horas_disponiveis($dados['data_agenda'], $dados['fk_profissional']);
 				$dados['agendamento'] = $this->Agendamento_model->cadastro_agenda($data_agenda, $fk_hora, $fk_servicos, $fk_profissional, $fk_usuario);
 
 				// Captura o ID da agenda recém cadastrada
@@ -58,7 +57,7 @@ class Agendamento extends CI_Controller
 		}
 
 		$dados['listar_servicos'] = $this->Agendamento_model->listar_servicos();
-		// $dados['listar_hora'] = $this->Agendamento_model->listar_hora();
+		$dados['listar_hora'] = $this->Agendamento_model->horas_disponiveis();
 		$dados['listar_profissionais'] = $this->Agendamento_model->listar_profissionais();
 
 		$this->load->view('layout/header');

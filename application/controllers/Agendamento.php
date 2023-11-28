@@ -59,6 +59,7 @@ class Agendamento extends CI_Controller
 		}
 
 		$dados['listar_servicos'] = $this->Agendamento_model->listar_servicos();
+		$dados['listar_hora'] = $this->Agendamento_model->horariosOcupados($data_agenda, $fk_profissional);
 		$dados['listar_profissionais'] = $this->Agendamento_model->listar_profissionais();
 
 		$this->load->view('layout/header');
@@ -67,12 +68,14 @@ class Agendamento extends CI_Controller
 		$this->load->view('agendamento', $dados);
 	}
 
-	public function visualizar_horarios($data_agenda, $fk_profissional)
+	public function horarios_disponiveis()
 	{
-		$this->load->model('Agendamento_model');
+		$data_agenda = $this->input->post('data_agenda');
+		$fk_profissional = $this->input->post('fk_profissional');
 
-		$dados['listar_hora'] = $this->Agendamento_model->horariosOcupados($data_agenda, $fk_profissional);
+		$horarios_disponiveis = $this->Agendamento_model->listar_hora_disponivel($data_agenda, $fk_profissional);
 
-		$this->load->view('agendamento', $dados);
+		// Converta para JSON e envie de volta para o JavaScript
+		echo json_encode($horarios_disponiveis);
 	}
 }

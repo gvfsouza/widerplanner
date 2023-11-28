@@ -10,13 +10,31 @@ class Agendamento_model extends CI_Model
             'fk_hora' => $fk_hora,
             'fk_profissional' => $fk_profissional,
             'fk_usuario' => $fk_usuario,
-
         );
 
         $this->db->insert('agenda', $data);
         $id_func = $this->db->insert_id();
 
         return $id_func;
+    }
+
+    public function listar_profissionais()
+    {
+        $this->db->select('*');
+        $this->db->from('usuario');
+        $this->db->where('profissional', 'sim');
+
+        $res = $this->db->get();
+        return $res->result();
+    }
+
+    public function listar_servicos()
+    {
+        $this->db->select('*');
+        $this->db->from('servicos');
+
+        $res = $this->db->get();
+        return $res->result();
     }
 
     public function associarServico($fk_agenda, $fk_servicos)
@@ -30,15 +48,6 @@ class Agendamento_model extends CI_Model
         return $this->db->insert_id();
     }
 
-    public function listar_servicos()
-    {
-        $this->db->select('*');
-        $this->db->from('servicos');
-
-        $res = $this->db->get();
-        return $res->result();
-    }
-
     public function listar_hora()
     {
         $this->db->select('*');
@@ -48,13 +57,32 @@ class Agendamento_model extends CI_Model
         return $res->result();
     }
 
-    public function listar_profissionais()
+    // public function verificarHora($fk_hora, $fk_profissional, $data_agenda)
+    // {
+    //     $this->db->select('*');
+    //     $this->db->from('agenda');
+    //     $this->db->where('fk_hora', $fk_hora);
+    //     $this->db->where('fk_profissional', $fk_profissional);
+    //     $this->db->where('data_agenda', $data_agenda);
+
+    //     $result = $this->db->get();
+    //     return $result->result();
+    // }
+
+    public function verificarHora($id_profissional, $data_escolhida, $fk_hora)
     {
         $this->db->select('*');
-        $this->db->from('usuario');
-        $this->db->where('profissional', 'sim');
-
+        $this->db->from('agenda');
+        $this->db->where('fk_profissional', $id_profissional);
+        $this->db->where('data_agenda', $data_escolhida);
+        $this->db->where('fk_hora', $fk_hora);
+    
         $res = $this->db->get();
-        return $res->result();
+    
+        if ($res->num_rows() > 0) {
+            return false; // Já existe um cadastro para a combinação de profissional e data escolhida
+        } else {
+            return true; // Não existe um cadastro para a combinação de profissional e data escolhida
+        }
     }
 }

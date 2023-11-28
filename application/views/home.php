@@ -91,8 +91,8 @@
 
     .card-container {
         display: flex;
-        overflow-x: auto;
-        /* white-space: nowrap; */
+        /* overflow-x: auto; */
+        white-space: nowrap; */
     }
 
     .flex-container {
@@ -159,13 +159,6 @@
     }
 
     @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
-
-    * {
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
 
 
     body {

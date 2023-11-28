@@ -69,12 +69,12 @@ class Agendamento_model extends CI_Model
     //     return $result->result();
     // }
 
-    public function verificarHora($id_profissional, $data_escolhida, $fk_hora)
+    public function verificarHora($fk_profissional, $data_agenda, $fk_hora)
     {
         $this->db->select('*');
         $this->db->from('agenda');
-        $this->db->where('fk_profissional', $id_profissional);
-        $this->db->where('data_agenda', $data_escolhida);
+        $this->db->where('fk_profissional', $fk_profissional);
+        $this->db->where('data_agenda', $data_agenda);
         $this->db->where('fk_hora', $fk_hora);
     
         $res = $this->db->get();

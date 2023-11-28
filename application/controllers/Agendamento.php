@@ -27,37 +27,34 @@ class Agendamento extends CI_Controller
     $dados = array();
 
     if ($this->input->post('salvar')) {
-        $data_agenda = $this->input->post('data_agenda');
-        $fk_hora = $this->input->post('fk_hora');
-        $fk_servicos = $this->input->post('fk_servicos');
-        $fk_profissional = $this->input->post('fk_profissional');
-
-        // Verifique se as variáveis estão definidas
-        if (!empty($data_agenda) && !empty($fk_hora) && !empty($fk_servicos) && !empty($fk_profissional)) {
-            
-            $fk_usuario = $this->session->userdata('fk_usuario');
-
-            // Cadastre a agenda
-            $fk_agenda = $this->Agendamento_model->cadastro_agenda($data_agenda, $fk_hora, $fk_servicos, $fk_profissional, $fk_usuario);
-
-            if ($fk_agenda) {
-                // Insere na tabela func_servicos
-                foreach ($fk_servicos as $value) {
-                    $this->Agendamento_model->associarServico($fk_agenda, $value);
-                }
-
-                // MENSAGEM SUCESSO AO CADASTRAR
-                $this->session->set_flashdata('sucesso', 'Agendamento realizado com sucesso!');
-                redirect('agendamento');
-            } else {
-                $this->session->set_flashdata('erro', 'Erro ao efetuar o agendamento de Horário.');
-                redirect('agendamento');
-            }
-        } else {
-            $this->session->set_flashdata('erro', 'Preencha todos os campos obrigatórios.');
-            redirect('agendamento');
-        }
-    }
+		$data_agenda = $this->input->post('data_agenda');
+		$fk_hora = $this->input->post('fk_hora');
+		$fk_servicos = $this->input->post('fk_servicos');
+		$fk_profissional = $this->input->post('fk_profissional');
+	
+		if (!isset($error)) {
+			$fk_usuario = $this->session->userdata('fk_usuario');
+	
+			$fk_agenda = $this->Agendamento_model->cadastro_agenda($data_agenda, $fk_hora, $fk_servicos, $fk_profissional, $fk_usuario);
+	
+			if ($fk_agenda) {
+				// Associar serviços ao agendamento
+				foreach ($fk_servicos as $servico_id) {
+					$this->db->insert('agenda2', array('fk_agenda' => $fk_agenda, 'fk_servicos' => $servico_id));
+				}
+	
+				// MENSAGEM SUCESSO AO CADASTRAR
+				$this->session->set_flashdata('sucesso', 'Agendamento realizado com sucesso!');
+				redirect('agendamento');
+			} else {
+				$this->session->set_flashdata('erro', 'Erro ao efetuar o agendamento de Horário.');
+				redirect('agendamento');
+			}
+		} else {
+			$this->session->set_flashdata('erro', 'Erro ao efetuar o agendamento de Horário.');
+			redirect('agendamento');
+		}
+	}
 
     $dados['listar_servicos'] = $this->Agendamento_model->listar_servicos();
     $dados['listar_hora'] = $this->Agendamento_model->listar_hora();

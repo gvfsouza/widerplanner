@@ -149,7 +149,7 @@ $(document).ready(function() {
         if (data_agenda && fk_profissional) {
             $.ajax({
                 type: 'POST',
-                url: 'caminho/para/seu/controlador/horarios_disponiveis',
+                url: 'Agendamento/horarios_disponiveis',
                 data: {data_agenda: data_agenda, fk_profissional: fk_profissional},
                 success: function(response) {
                     // Atualiza o dropdown de horários com os horários disponíveis

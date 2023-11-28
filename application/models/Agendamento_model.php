@@ -56,29 +56,16 @@ class Agendamento_model extends CI_Model
         $res = $this->db->get();
         return $res->result();
     }
-
-    public function horas_disponiveis()
+    
+    public function verificarHora($fk_profissional, $data_agenda, $fk_hora)
     {
-        $this->db->select('data_agenda, fk_profissional, fk_hora');
+        $this->db->select('*');
         $this->db->from('agenda');
-        $this->db->where('data_agenda', $data_agenda);
         $this->db->where('fk_profissional', $fk_profissional);
-        $query = $this->db->get();
-        $resultado = $query->result();
-
-        if ($resultado) {
-            $this->db->select('horarios_semana');
-            $this->db->from('hora_disp');
-            $this->db->where_not_in('id_hora', array_column($resultado, 'fk_hora'));
-            $query2 = $this->db->get();
-            $horas_disponiveis = $query2->result();
-            return $horas_disponiveis;
-        } else {
-            $this->db->select('horarios_semana');
-            $this->db->from('hora_disp');
-            $query3 = $this->db->get();
-            $horas_disponiveis = $query3->result();
-            return $horas_disponiveis;
-        }
+        $this->db->where('data_agenda', $data_agenda);
+        $this->db->where('fk_hora', $fk_hora);
+    
+        $res = $this->db->get();
+        return $res->result();
     }
 }

@@ -49,7 +49,7 @@ class Agendamento extends CI_Controller
 				$this->session->set_flashdata('sucesso', 'Agendamento realizado com sucesso!');
 				redirect('agendamento');
 		} else {
-				$this->session->set_flashdata('erro', 'Erro ao efetuar o agendamento de Horário.');
+				$this->session->set_flashdata('error', 'Erro ao efetuar o agendamento de Horário.');
 			}
 		}
 

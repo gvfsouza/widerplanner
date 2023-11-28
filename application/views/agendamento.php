@@ -49,9 +49,9 @@
                         <!----------------FIM-----MENSAGEM DE SUCESSO AO CADASTRAR ---------------->
 
                         <!----------------INICIO-----MENSAGEM DE ERRO AO CADASTRAR ---------------->
-                        <?php if ($this->session->flashdata('erro')): ?>
+                        <?php if ($this->session->flashdata('error')): ?>
                             <div class="alert alert-danger">
-                                <?php echo $this->session->flashdata('erro'); ?>
+                                <?php echo $this->session->flashdata('error'); ?>
                             </div>
                         <?php endif; ?>
                         <!----------------FIM-----MENSAGEM DE ERRO AO CADASTRAR ---------------->

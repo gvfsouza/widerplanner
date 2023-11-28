@@ -99,7 +99,6 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-        margin: 0 auto; /* Adjust as needed */
     }
 
     .flex-container {

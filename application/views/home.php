@@ -3,7 +3,7 @@
         color: black;
     }
 
-    .card-profile {
+    /* .card-profile {
         width: 350px;
         display: flex;
         flex-direction: column;
@@ -14,7 +14,7 @@
         box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
         margin: 12px;
         margin-top: 40px;
-    }
+    } */
 
     .profile-image {
         position: relative;
@@ -89,11 +89,11 @@
         color: #1331859d;
     }
 
-    @media (max-width: 600px) {
+    /* @media (max-width: 600px) {
         .card-profile {
-            width: 100%; /* Make each card take full width on small screens */
+            width: 100%;
         }
-    }
+    } */
 
     .card-container {
         display: flex;

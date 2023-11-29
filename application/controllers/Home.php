@@ -28,6 +28,7 @@ class Home extends CI_Controller
 
 		$dados['listar_dados_estabelecimento'] = $this->Home_model->listar_dados_estabelecimento();
 		$dados['listar_dados_produtos'] = $this->Home_model->listar_dados_produtos();
+		$dados['listar_dados_servicos'] = $this->Home_model->listar_dados_servicos();
 
 		$this->load->view('layout/header');
 		$this->load->view('layout/sidebar');

@@ -300,61 +300,23 @@
                                         </fieldset>
 
                                         <fieldset class="form-group " style="border: 1px solid #ddd; border-radius: 4px; border: 1px solid #879bc9;">
-                                            <div class="card-container">
-                                                <div class="card" style="margin-top: 30px; margin-left: 10px; margin-right: 10px">
-                                                    <div class="card-header-profile">
-                                                        <div class="profile-info">
-                                                            <h3 class="profile-name"><strong>Corte de Cabelo</strong>
-                                                            </h3>
-                                                            <br>
-                                                            <p class="profile-desc">Descrição (se tiver)</p>
+                                        <?php foreach ($listar_dados_servicos as $value) { ?>
+                                                <div class="card-container">
+                                                    <div class="card" style="margin-top: 30px; margin-left: 10px; margin-right: 10px">
+                                                        <div class="card-header-profile">
+                                                            <div class="profile-info">
+                                                                <h3 class="profile-name"><strong><?php echo $value->nome_servico; ?></strong>
+                                                                </h3>
+                                                                <br>
+                                                                <p class="profile-desc"><?php echo $value->descricao_servico; ?></p>
+                                                            </div>
                                                         </div>
+                                                        <center>
+                                                            <p class="status-value">R$ &nbsp;<?php echo $value->valor_servico; ?><i class="fas fa-clock"></i> &nbsp;&nbsp;<?php echo $value->duracao_servico; ?></p>
+                                                        </center>
                                                     </div>
-                                                    <center>
-                                                        <p class="status-value">R$ &nbsp;45,00 <i class="fas fa-clock"></i> &nbsp;&nbsp;40 minutos</p>
-                                                    </center>
                                                 </div>
-
-                                                <div class="card" style="margin-top: 30px; margin-left: 10px; margin-right: 10px">
-                                                    <div class="card-header-profile">
-                                                        <div class="profile-info">
-                                                            <h3 class="profile-name"><strong>Barba</strong></h3>
-                                                            <br>
-                                                            <p class="profile-desc">Descrição (se tiver)</p>
-                                                        </div>
-                                                    </div>
-                                                    <center>
-                                                        <p class="status-value">R$ &nbsp;45,00 <i class="fas fa-clock"></i> &nbsp;&nbsp;40 minutos</p>
-                                                    </center>
-                                                </div>
-
-                                                <div class="card" style="margin-top: 30px; margin-left: 10px; margin-right: 10px">
-                                                    <div class="card-header-profile">
-                                                        <div class="profile-info">
-                                                            <h3 class="profile-name"><strong>Sobrancelhas</strong></h3>
-                                                            <br>
-                                                            <p class="profile-desc">Descrição (se tiver)</p>
-                                                        </div>
-                                                    </div>
-                                                    <center>
-                                                        <p class="status-value">R$ &nbsp;15,00 <i class="fas fa-clock"></i> &nbsp;&nbsp;10 minutos</p>
-                                                    </center>
-                                                </div>
-
-                                                <div class="card" style="margin-top: 30px; margin-left: 10px; margin-right: 10px">
-                                                    <div class="card-header-profile">
-                                                        <div class="profile-info">
-                                                            <h3 class="profile-name"><strong>Pigmentação em
-                                                                    barba</strong></h3>
-                                                            <br>
-                                                            <p class="profile-desc">Descrição (se tiver)</p>
-                                                        </div>
-                                                    </div>
-                                                    <center>
-                                                        <p class="status-value">R$ &nbsp;15,00 <i class="fas fa-clock"></i> &nbsp;&nbsp;1 hora</p>
-                                                    </center>
-                                                </div>
-                                            </div>
+                                            <?php } ?>
                                         </fieldset>
 
                                         <br>
@@ -370,37 +332,37 @@
 
                                         <?php
                                         if (!empty($listar_dados_produtos)): ?>
-                                                    <?php foreach ($listar_dados_produtos as $produto): ?>
-                                                                <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9;">
-                                                                    <div class="card-container">
-                                                                        <div class="flex-container space-between">
-                                                                            <div class="col card">
-                                                                                <div>
-                                                                                    <?php if (!empty($produto->nome_produto)): ?>
-                                                                                                <h3><?php echo $produto->nome_produto; ?></h3>
-                                                                                                <div class="col card">
-                                                                                                    <div class="img-placeholder">
-                                                                                                        <?php if (!empty($produto->foto_produto)): ?>
-                                                                                                                    <img style='display:block; width:100px;height:100px;' id='base64image' src='data:image/jpeg;base64,<?php echo $produto->foto_produto ?>' />
-                                                                                                        <?php endif; ?>
-                                                                                                    </div>
-                                                                                                    <div>
-                                                                                                        <h3>Wafaa</h3>
-                                                                                                        <p><i class="fa-solid fa-user"></i> Front End Web Developer
-                                                                                                        </p>
-                                                                                                        <p><i class="fa-solid fa-paper-plane"></i> <a href="mailto:wafaa_cr@outlook.com">Email Me</a></p>
-                                                                                                        <p><i class="fa-solid fa-location-dot"></i> Auckland, New
-                                                                                                            Zealand</p>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                        </div><?php endif; ?>
+                                                        <?php foreach ($listar_dados_produtos as $produto): ?>
+                                                                        <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9;">
+                                                                            <div class="card-container">
+                                                                                <div class="flex-container space-between">
+                                                                                    <div class="col card">
+                                                                                        <div>
+                                                                                            <?php if (!empty($produto->nome_produto)): ?>
+                                                                                                            <h3><?php echo $produto->nome_produto; ?></h3>
+                                                                                                            <div class="col card">
+                                                                                                                <div class="img-placeholder">
+                                                                                                                    <?php if (!empty($produto->foto_produto)): ?>
+                                                                                                                                    <img style='display:block; width:100px;height:100px;' id='base64image' src='data:image/jpeg;base64,<?php echo $produto->foto_produto ?>' />
+                                                                                                                    <?php endif; ?>
+                                                                                                                </div>
+                                                                                                                <div>
+                                                                                                                    <h3>Wafaa</h3>
+                                                                                                                    <p><i class="fa-solid fa-user"></i> Front End Web Developer
+                                                                                                                    </p>
+                                                                                                                    <p><i class="fa-solid fa-paper-plane"></i> <a href="mailto:wafaa_cr@outlook.com">Email Me</a></p>
+                                                                                                                    <p><i class="fa-solid fa-location-dot"></i> Auckland, New
+                                                                                                                        Zealand</p>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                    </div><?php endif; ?>
+                                                                                    </div>
+                                                                                </div>
                                                                             </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </fieldset>
-                                                    <?php endforeach; ?>
+                                                                        </fieldset>
+                                                        <?php endforeach; ?>
                                         <?php else: ?>
-                                                    <p>Nenhum produto encontrado.</p>
+                                                        <p>Nenhum produto encontrado.</p>
                                         <?php endif; ?>
 
                                         <br>

@@ -19,4 +19,13 @@ class Home_model extends CI_Model
         $res = $this->db->get();
         return $res->result();
     }
+
+    public function listar_dados_servicos()
+    {
+        $this->db->select('*');
+        $this->db->from('servicos');
+
+        $res = $this->db->get();
+        return $res->result();
+    }
 }

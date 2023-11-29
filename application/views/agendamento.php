@@ -144,7 +144,7 @@
         var profissional_escolhido = $('#fk_profissional').val();
         if(data_escolhida != '' && profissional_escolhido != ''){
             $.ajax({
-                url: '<?php echo base_url('agendamento/datas/'); ?>'+ data_escolhida + '/' + profissional_escolhido,
+                url: '<?php echo base_url('Agendamento/datas/'); ?>'+ data_escolhida + '/' + profissional_escolhido,
                 success: function(result) {
                       console.log(result);    
                 },

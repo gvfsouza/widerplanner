@@ -53,10 +53,12 @@ class Agendamento_model extends CI_Model
         $this->db->join('hora_disp', 'hora_disp.id_hora = agenda.fk_hora');
         $this->db->where('data_agenda', $data_agenda);
         $this->db->where('fk_profissional', $fk_profissional);
+        $this->db->where('agenda.fk_hora IS NULL', null, false);
 
         $res = $this->db->get();
         return $res->result_array();
     }
+
 
 
     public function listar_profissionais()

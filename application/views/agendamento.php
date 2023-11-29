@@ -42,17 +42,17 @@
                     <div class="tab-pane fade show active" id="" role="tabpanel">
 
                         <?php if ($this->session->flashdata('sucesso')) { ?>
-                            <div class="alert alert-success" role="alert">
-                                <?php echo $this->session->flashdata('sucesso'); ?>
-                            </div>
+                                <div class="alert alert-success" role="alert">
+                                    <?php echo $this->session->flashdata('sucesso'); ?>
+                                </div>
                         <?php } ?>
                         <!----------------FIM-----MENSAGEM DE SUCESSO AO CADASTRAR ---------------->
 
                         <!----------------INICIO-----MENSAGEM DE ERRO AO CADASTRAR ---------------->
                         <?php if ($this->session->flashdata('erro')): ?>
-                            <div class="alert alert-danger">
-                                <?php echo $this->session->flashdata('erro'); ?>
-                            </div>
+                                <div class="alert alert-danger">
+                                    <?php echo $this->session->flashdata('erro'); ?>
+                                </div>
                         <?php endif; ?>
                         <!----------------FIM-----MENSAGEM DE ERRO AO CADASTRAR ---------------->
 
@@ -67,7 +67,7 @@
                                                 <select name="fk_profissional" id="fk_profissional" class="form-control profissional" style="cursor: pointer;" required>
                                                     <option class="text-center" value="">--- Selecione uma Opção ---</option>
                                                     <?php foreach ($listar_profissionais as $value) { ?>
-                                                                    <option value="<?php echo $value->id_usuario; ?>" data-nome="<?php echo $value->nome_usuario; ?>"><?php echo $value->nome_usuario; ?></option>
+                                                                        <option value="<?php echo $value->id_usuario; ?>" data-nome="<?php echo $value->nome_usuario; ?>"><?php echo $value->nome_usuario; ?></option>
                                                     <?php } ?>
                                                 </select>
                                             </div>
@@ -78,7 +78,7 @@
                                                 <div class="form-group col-md-6">
                                                     <label for="" style="color: #4e4e4e;"><b>Escolha uma Data:</b></label>
                                                     <br>
-                                                    <input type="date" class="form-control" id="data_agenda" name="data_agenda" max="9999-12-31">
+                                                    <input type="date" class="form-control data_agenda" id="data_agenda" name="data_agenda" max="9999-12-31">
                                                 </div>
 
                                                 <div class="form-group col-md-6">
@@ -87,7 +87,7 @@
                                                     <select name="fk_hora" id="fk_hora" class="form-control servico" style="cursor: pointer;" required>
                                                         <option class="text-center" value="">--- Selecione uma Opção ---</option>
                                                         <?php foreach ($listar_hora as $value) { ?>
-                                                                        <option value="<?php echo $value->id_hora; ?>" data-nome="<?php echo $value->horarios_semana; ?>"><?php echo $value->horarios_semana; ?></option>
+                                                                            <option value="<?php echo $value->id_hora; ?>" data-nome="<?php echo $value->horarios_semana; ?>"><?php echo $value->horarios_semana; ?></option>
                                                         <?php } ?>
                                                     </select>
                                                 </div>
@@ -102,7 +102,7 @@
                                                     <select name="fk_servicos[]" id="fk_servicos" class="form-control servico" style="cursor: pointer;" required>
                                                         <option class="text-center" value="">--- Selecione uma Opção ---</option>
                                                         <?php foreach ($listar_servicos as $value) { ?>
-                                                                        <option value="<?php echo $value->id_servicos; ?>" data-nome="<?php echo $value->nome_servico; ?>"><?php echo $value->nome_servico; ?></option>
+                                                                            <option value="<?php echo $value->id_servicos; ?>" data-nome="<?php echo $value->nome_servico; ?>"><?php echo $value->nome_servico; ?></option>
                                                         <?php } ?>
                                                     </select>
                                                 </div>
@@ -139,6 +139,26 @@
 </div>
 
 <script>
+    $(".data_agenda").blur(function() {
+        var data_escolhida = $(this).val();
+        var profissional_escolhido = $('#fk_profissional').val();
+        if(data_escolhida != '' && profissional_escolhido != ''){
+            $.ajax({
+                url: '<?php echo base_url('agendamento/datas/'); ?>'+ data_escolhida + '/' + profissional_escolhido,
+                success: function(result) {
+                      console.log(result);    
+                },
+
+                //APARECE UM ALERTA SE O CEP JÁ EXISTIR
+                error: function(xhr, ajaxOptions, thrownError) {
+                    return false;
+                }
+            });
+        } else {
+            alert('Escolha um profissional e uma data!');
+        }
+    });
+
     var maxButtons = 9999;
 
     $('.add_novo_Servico').click(function(e) {

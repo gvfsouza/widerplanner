@@ -31,40 +31,45 @@ class Agendamento extends CI_Controller
 			$fk_hora = $this->input->post('fk_hora');
 			$fk_servicos = $this->input->post('fk_servicos');
 			$fk_profissional = $this->input->post('fk_profissional');
-		
+
 			// Verifique se as variáveis estão definidas
 			if ($data_agenda && $fk_hora && $fk_servicos && $fk_profissional) {
 				$fk_usuario = $this->session->userdata('fk_usuario');
-		
+
 				$fk_agenda = $this->Agendamento_model->cadastrar_agenda($data_agenda, $fk_hora, $fk_servicos, $fk_profissional, $fk_usuario);
-		
+
 				if ($fk_agenda) {
 					if (is_array($fk_servicos)) {
 						foreach ($fk_servicos as $value) {
 							$this->Agendamento_model->associar_servico($fk_agenda, $value);
 						}
 					}
-					
+
 					// MENSAGEM SUCESSO AO CADASTRAR
 					$this->session->set_flashdata('sucesso', 'Agendamento realizado com sucesso!');
 				} else {
 					$this->session->set_flashdata('erro', 'Erro ao cadastrar a agenda.');
 				}
-				
+
 			} else {
 				$this->session->set_flashdata('erro', 'Erro ao efetuar o agendamento de Horário.');
 			}
-
-			$dados['listar_horaDisponivel'] = $this->Agendamento_model->listar_horaDisponivel($data_agenda, $fk_profissional);
 		}
-		
+
 		$dados['listar_servicos'] = $this->Agendamento_model->listar_servicos();
 		$dados['listar_profissionais'] = $this->Agendamento_model->listar_profissionais();
 		// $dados['listar_hora'] = $this->Agendamento_model->listar_hora();
-		
+
 		$this->load->view('layout/header');
 		$this->load->view('layout/sidebar');
 		$this->load->view('layout/navbar');
 		$this->load->view('agendamento', $dados);
+	}
+
+	public function datas($data_agenda, $fk_profissional)
+	{
+		$listar_horaDisponivel = $this->Agendamento_model->listar_horaDisponivel($data_agenda, $fk_profissional);
+
+		echo json_encode($listar_horaDisponivel);
 	}
 }

@@ -48,16 +48,16 @@ class Agendamento_model extends CI_Model
 
     public function listar_horaDisponivel($data_agenda, $fk_profissional)
     {
-        $this->db->select('hora_disp.id_hora, hora_disp.horarios_semana');
-        $this->db->from('hora_disp');
-        $this->db->join('agenda', 'hora_disp.id_hora = agenda.fk_hora');
+        $this->db->select('data_agenda, fk_profissional, fk_hora');
+        $this->db->from('agenda');
+        $this->db->join('hora_disp', 'hora_disp.id_hora = agenda.fk_hora');
         $this->db->where('data_agenda', $data_agenda);
         $this->db->where('fk_profissional', $fk_profissional);
-        $this->db->where('agenda.fk_hora', null, false);
 
         $res = $this->db->get();
         return $res->result_array();
     }
+
 
     public function listar_profissionais()
     {

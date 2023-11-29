@@ -279,23 +279,23 @@
 
                                         <fieldset class="form-group " style="border: 1px solid #ddd; border-radius: 4px; border: 1px solid #879bc9;">
                                             <?php foreach ($listar_dados_servicos as $value) { ?>
-                                                <div class="flex-container card-container">
-                                                    <div class="card-container">
-                                                        <div class="card" style="margin-top: 30px; margin-left: 10px; margin-right: 10px">
-                                                            <div class="card-header-profile">
-                                                                <div class="profile-info">
-                                                                    <h3 class="profile-name"><strong><?php echo $value->nome_servico; ?></strong>
-                                                                    </h3>
-                                                                    <br>
-                                                                    <p class="profile-desc"><?php echo $value->descricao_servico; ?></p>
+                                                    <div class="flex-container card-container">
+                                                        <div class="card-container">
+                                                            <div class="card" style="margin-top: 30px; margin-left: 10px; margin-right: 10px">
+                                                                <div class="card-header-profile">
+                                                                    <div class="profile-info">
+                                                                        <h3 class="profile-name"><strong><?php echo $value->nome_servico; ?></strong>
+                                                                        </h3>
+                                                                        <br>
+                                                                        <p class="profile-desc"><?php echo $value->descricao_servico; ?></p>
+                                                                    </div>
                                                                 </div>
+                                                                <center>
+                                                                    <p class="status-value">R$ &nbsp;<?php echo $value->valor_servico; ?>,00<i class="fas fa-clock"></i> &nbsp;&nbsp;<?php echo $value->duracao_servico; ?></p>
+                                                                </center>
                                                             </div>
-                                                            <center>
-                                                                <p class="status-value">R$ &nbsp;<?php echo $value->valor_servico; ?>,00<i class="fas fa-clock"></i> &nbsp;&nbsp;<?php echo $value->duracao_servico; ?></p>
-                                                            </center>
                                                         </div>
                                                     </div>
-                                                </div>
                                             <?php } ?>
                                         </fieldset>
 
@@ -309,41 +309,39 @@
                                             </div>
                                         </fieldset>
 
-
-                                        <?php
-                                        if (!empty($listar_dados_produtos)): ?>
-                                            <?php foreach ($listar_dados_produtos as $produto): ?>
-                                                <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9;">
-                                                    <div class="card-container">
-                                                        <div class="flex-container space-between">
-                                                            <div class="col card">
-                                                                <div>
-                                                                    <?php if (!empty($produto->nome_produto)): ?>
-                                                                        <h3><?php echo $produto->nome_produto; ?></h3>
-                                                                            <div class="col card">
-                                                                                <div class="img-placeholder">
-                                                                                    <?php if (!empty($produto->foto_produto)): ?>
-                                                                                        <img style='display:block; width:100px;height:100px;' id='base64image' src='data:image/jpeg;base64,<?php echo $produto->foto_produto ?>' />
-                                                                                    <?php endif; ?>
-                                                                                </div>
-                                                                                <div>
-                                                                                    <h3>Wafaa</h3>
-                                                                                    <p><i class="fa-solid fa-user"></i> Front End Web Developer</p>
-                                                                                    <p><i class="fa-solid fa-paper-plane"></i> <a href="mailto:wafaa_cr@outlook.com">Email Me</a></p>
-                                                                                    <p><i class="fa-solid fa-location-dot"></i> Auckland, New Zealand</p>
-                                                                                </div>
-                                                                            </div>
-                                                                    <?php endif; ?>
+                                        <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9;">
+                                            <?php if (!empty($listar_dados_produtos)): ?>
+                                                    <?php foreach ($listar_dados_produtos as $produto): ?>
+                                                            <div class="card-container">
+                                                                <div class="flex-container space-between">
+                                                                    <div class="col card">
+                                                                        <div>
+                                                                            <?php if (!empty($produto->nome_produto)): ?>
+                                                                                    <h3><?php echo $produto->nome_produto; ?></h3>
+                                                                                    <div class="col card">
+                                                                                        <div class="img-placeholder">
+                                                                                            <?php if (!empty($produto->foto_produto)): ?>
+                                                                                                    <img style='display:block; width:100px;height:100px;' id='base64image' src='data:image/jpeg;base64,<?php echo $produto->foto_produto ?>' />
+                                                                                            <?php endif; ?>
+                                                                                        </div>
+                                                                                        <div>
+                                                                                            <h3>Wafaa</h3>
+                                                                                            <p><i class="fa-solid fa-user"></i> Front End Web Developer</p>
+                                                                                            <p><i class="fa-solid fa-paper-plane"></i> <a href="mailto:wafaa_cr@outlook.com">Email Me</a></p>
+                                                                                            <p><i class="fa-solid fa-location-dot"></i> Auckland, New Zealand</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                            <?php endif; ?>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                    </div>
-                                                </fieldset>
-                                                                <?php endforeach; ?>
-                                        <?php else: ?>
-                                                                <p>Nenhum produto encontrado.</p>
-                                        <?php endif; ?>
+                                                    <?php endforeach; ?>
+                                            <?php else: ?>
+                                                    <p>Nenhum produto encontrado.</p>
+                                            <?php endif; ?>
 
+                                        </fieldset>
                                         <br>
 
                                         <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 7px; border: 1px solid #879bc9;background: #879bc9;color: black;">
@@ -425,7 +423,7 @@
                                             <a class="btn" href="#" role="button" style="float: right; background-color: #1cc88a; color: white; margin-bottom: 15px; position: fixed;">Agenda
                                             </a>
                                         </fieldset>
-                                        
+
                                         <br>
                                     </div>
                                 </div>
@@ -446,10 +444,10 @@
 </div>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function() {
         var cardDescriptions = document.querySelectorAll('.profile-desc');
 
-        cardDescriptions.forEach(function (desc) {
+        cardDescriptions.forEach(function(desc) {
             var fullText = desc.textContent;
             var truncatedText = fullText.slice(0, 120); // Defina o número de caracteres desejado
 
@@ -457,13 +455,13 @@
 
             var readMoreLink = desc.querySelector('.read-more a');
 
-            readMoreLink.addEventListener('click', function (e) {
+            readMoreLink.addEventListener('click', function(e) {
                 e.preventDefault();
                 desc.innerHTML = fullText + '<span class="read-less"> <a href="#" style="color:blue"><b>Ler menos</b></a></span>';
 
                 var readLessLink = desc.querySelector('.read-less a');
 
-                readLessLink.addEventListener('click', function (e) {
+                readLessLink.addEventListener('click', function(e) {
                     e.preventDefault();
                     desc.innerHTML = truncatedText + '<span class="read-more">... <a href="#">Ler mais</a></span>';
                 });

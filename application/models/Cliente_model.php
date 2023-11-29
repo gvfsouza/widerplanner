@@ -1,6 +1,8 @@
-<?php if(!defined('BASEPATH')) exit('No direct scripts access allowed');
+<?php if (!defined('BASEPATH'))
+    exit('No direct scripts access allowed');
 
-class Cliente_model extends CI_Model {
+class Cliente_model extends CI_Model
+{
 
     public function listar_dados_cliente()
     {
@@ -10,7 +12,7 @@ class Cliente_model extends CI_Model {
         return $res->result();
     }
 
-    public function cadastro_cliente($nome_usuario,$cpf_usuario,$dt_nasc_usuario,$email_usuario,$sexo_usuario,$telefone_usuario,$cep_usuario,$logradouro_usuario,$numero_usuario,$complemento_usuario,$bairro_usuario,$cidade_usuario,$uf_usuario,$senha_criptografada)
+    public function cadastro_cliente($nome_usuario, $cpf_usuario, $dt_nasc_usuario, $email_usuario, $sexo_usuario, $telefone_usuario, $cep_usuario, $logradouro_usuario, $numero_usuario, $complemento_usuario, $bairro_usuario, $cidade_usuario, $uf_usuario, $senha_criptografada)
     {
         $data = array(
             # puxa os campos do banco
@@ -30,10 +32,20 @@ class Cliente_model extends CI_Model {
             'senha' => $senha_criptografada,
         );
 
-        $this->db->insert('usuario',$data);
+        $this->db->insert('usuario', $data);
         echo $this->db->last_query();
         echo $this->db->error();
 
         return $this->db->insert_id();
+    }
+
+    public function dados_cliente($cpf_usuario)
+    {
+        $this->db->select('*');
+        $this->db->from('usuario');
+        $this->db->where('cpf_usuario', $cpf_usuario);
+
+        $res = $this->db->get();
+        return $res->result();
     }
 }

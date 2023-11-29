@@ -465,25 +465,14 @@
 
         cardDescriptions.forEach(function (desc) {
             var fullText = desc.textContent;
-            var truncatedText = fullText.slice(0, 900); // Limite de 1000 caracteres
+            desc.innerHTML = fullText + '<span class="read-less"> <a href="#">Ler menos</a></span>';
 
-            if (fullText.length > 120) {
-                desc.innerHTML = truncatedText + '<span class="read-more">... <a href="#">Ler mais</a></span>';
+            var readLessLink = desc.querySelector('.read-less a');
 
-                var readMoreLink = desc.querySelector('.read-more a');
-
-                readMoreLink.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    desc.innerHTML = fullText + '<span class="read-less"> <a href="#">Ler menos</a></span>';
-
-                    var readLessLink = desc.querySelector('.read-less a');
-
-                    readLessLink.addEventListener('click', function (e) {
-                        e.preventDefault();
-                        desc.innerHTML = truncatedText + '<span class="read-more">... <a href="#">Ler mais</a></span>';
-                    });
-                });
-            }
+            readLessLink.addEventListener('click', function (e) {
+                e.preventDefault();
+                desc.innerHTML = fullText + '<span class="read-more">... <a href="#">Ler mais</a></span>';
+            });
         });
     });
 </script>

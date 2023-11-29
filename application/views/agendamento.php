@@ -42,17 +42,17 @@
                     <div class="tab-pane fade show active" id="" role="tabpanel">
 
                         <?php if ($this->session->flashdata('sucesso')) { ?>
-                                <div class="alert alert-success" role="alert">
-                                    <?php echo $this->session->flashdata('sucesso'); ?>
-                                </div>
+                            <div class="alert alert-success" role="alert">
+                                <?php echo $this->session->flashdata('sucesso'); ?>
+                            </div>
                         <?php } ?>
                         <!----------------FIM-----MENSAGEM DE SUCESSO AO CADASTRAR ---------------->
 
                         <!----------------INICIO-----MENSAGEM DE ERRO AO CADASTRAR ---------------->
                         <?php if ($this->session->flashdata('erro')): ?>
-                                <div class="alert alert-danger">
-                                    <?php echo $this->session->flashdata('erro'); ?>
-                                </div>
+                            <div class="alert alert-danger">
+                                <?php echo $this->session->flashdata('erro'); ?>
+                            </div>
                         <?php endif; ?>
                         <!----------------FIM-----MENSAGEM DE ERRO AO CADASTRAR ---------------->
 
@@ -67,7 +67,7 @@
                                                 <select name="fk_profissional" id="fk_profissional" class="form-control profissional" style="cursor: pointer;" required>
                                                     <option class="text-center" value="">--- Selecione uma Opção ---</option>
                                                     <?php foreach ($listar_profissionais as $value) { ?>
-                                                                        <option value="<?php echo $value->id_usuario; ?>" data-nome="<?php echo $value->nome_usuario; ?>"><?php echo $value->nome_usuario; ?></option>
+                                                                    <option value="<?php echo $value->id_usuario; ?>" data-nome="<?php echo $value->nome_usuario; ?>"><?php echo $value->nome_usuario; ?></option>
                                                     <?php } ?>
                                                 </select>
                                             </div>
@@ -87,7 +87,7 @@
                                                     <select name="fk_hora" id="fk_hora" class="form-control servico" style="cursor: pointer;" required>
                                                         <option class="text-center" value="">--- Selecione uma Opção ---</option>
                                                         <?php foreach ($listar_hora as $value) { ?>
-                                                                            <option value="<?php echo $value->id_hora; ?>" data-nome="<?php echo $value->horarios_semana; ?>"><?php echo $value->horarios_semana; ?></option>
+                                                                        <option value="<?php echo $value->id_hora; ?>" data-nome="<?php echo $value->horarios_semana; ?>"><?php echo $value->horarios_semana; ?></option>
                                                         <?php } ?>
                                                     </select>
                                                 </div>
@@ -102,7 +102,7 @@
                                                     <select name="fk_servicos" id="fk_servicos" class="form-control servico" style="cursor: pointer;" required>
                                                         <option class="text-center" value="">--- Selecione uma Opção ---</option>
                                                         <?php foreach ($listar_servicos as $value) { ?>
-                                                                            <option value="<?php echo $value->id_servicos; ?>" data-nome="<?php echo $value->nome_servico; ?>"><?php echo $value->nome_servico; ?></option>
+                                                                        <option value="<?php echo $value->id_servicos; ?>" data-nome="<?php echo $value->nome_servico; ?>"><?php echo $value->nome_servico; ?></option>
                                                         <?php } ?>
                                                     </select>
                                                 </div>
@@ -141,34 +141,28 @@
 <script>
     var maxButtons = 9999;
 
-$('.add_novo_Servico').click(function (e) {
-    var container = $(this).closest('.row');
-    var element_copy = container.clone();
-    var botao_excluir = '<div class="btn btn-outline-danger botao_remover" style="width: 100px; height: 40px; font-size: 14px; margin-top: 10px;"><i class="fas fa-trash-alt"></i> Remover</div>';
+    $('.add_novo_Servico').click(function(e) {
+        var container = $(this).closest('.row');
+        var element_copy = container.clone();
+        var botao_excluir = '<div class="btn btn-outline-danger botao_remover" style="width: 100px; height: 40px; font-size: 14px; margin-top: 10px;"><i class="fas fa-trash-alt"></i> Remover</div>';
 
-    element_copy.find('select, input').val('');
-    element_copy.find('.select2').remove(); // Limpa o campo
-    element_copy.find('.add_novo_Servico').remove(); // Remove o botão "Adicionar Serviço"
+        element_copy.find('select, input').val('');
+        element_copy.find('.select2').remove(); // Limpa o campo
+        element_copy.find('.add_novo_Servico').remove(); // Remove o botão "Adicionar Serviço"
 
-    container.after(element_copy);
+        container.after(element_copy);
 
-    // Adiciona o botão "Remover" apenas se já houver mais de um serviço
-    if (container.siblings('.row').length > 0) {
-        element_copy.find('.col-md-3').append(botao_excluir);
+        if (element_copy.find('.botao_remover').length === 0) {
+            element_copy.find('.col-md-3').append(botao_excluir);
+        }
 
-        // Configura o evento de clique para o novo botão "Remover"
-        element_copy.find('.botao_remover').click(function (e) {
+        $('.botao_remover').click(function(e) {
             $(this).closest('.row').remove();
         });
-    }
 
-    // Select picker
-    $('.servico').select2({
-        width: '100%'
+        // Select picker
+        $('.servico').select2({
+            width: '100%'
+        });
     });
-});
-
-
-
-
 </script>

@@ -58,8 +58,6 @@ class Agendamento_model extends CI_Model
         return $res->result_array();
     }
 
-
-
     public function listar_profissionais()
     {
         $this->db->select('*');

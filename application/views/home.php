@@ -90,17 +90,11 @@
         color: #1331859d;
     }
 
-    /* @media (max-width: 600px) {
-        .card-profile {
-            width: 100%;
-        }
-    } */
-
-    .card-container {
+    /* .card-container {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-    }
+    } */
 
     .flex-container {
         display: flex;

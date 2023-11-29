@@ -301,7 +301,7 @@
 
                                         <fieldset class="form-group " style="border: 1px solid #ddd; border-radius: 4px; border: 1px solid #879bc9;">
                                             <div class="card-container">
-                                                <div class="card" style="margin-top: 30px; margin-left: 5px; margin-right:5px">
+                                                <div class="card" style="margin-top: 30px; margin-left: 10px; margin-right: 10px">
                                                     <div class="card-header-profile">
                                                         <div class="profile-info">
                                                             <h3 class="profile-name"><strong>Corte de Cabelo</strong>
@@ -315,7 +315,7 @@
                                                     </center>
                                                 </div>
 
-                                                <div class="card" style="margin-top: 30px; margin-left: 5px; margin-right:5px">
+                                                <div class="card" style="margin-top: 30px; margin-left: 10px; margin-right: 10px">
                                                     <div class="card-header-profile">
                                                         <div class="profile-info">
                                                             <h3 class="profile-name"><strong>Barba</strong></h3>
@@ -328,7 +328,7 @@
                                                     </center>
                                                 </div>
 
-                                                <div class="card" style="margin-top: 30px; margin-left: 5px; margin-right:5px">
+                                                <div class="card" style="margin-top: 30px; margin-left: 10px; margin-right: 10px">
                                                     <div class="card-header-profile">
                                                         <div class="profile-info">
                                                             <h3 class="profile-name"><strong>Sobrancelhas</strong></h3>
@@ -341,7 +341,7 @@
                                                     </center>
                                                 </div>
 
-                                                <div class="card" style="margin-top: 30px; margin-left: 5px; margin-right:5px">
+                                                <div class="card" style="margin-top: 30px; margin-left: 10px; margin-right: 10px">
                                                     <div class="card-header-profile">
                                                         <div class="profile-info">
                                                             <h3 class="profile-name"><strong>Pigmentação em

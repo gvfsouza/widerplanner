@@ -33,11 +33,6 @@
         font-size: 0.9rem;
     }
 
-    .profile-info>.profille-desc {
-        color: #666666;
-        font-size: 0.7rem;
-    }
-
     .status-value {
         display: flex;
         align-items: center;
@@ -283,10 +278,11 @@
                                         </fieldset>
 
                                         <fieldset class="form-group " style="border: 1px solid #ddd; border-radius: 4px; border: 1px solid #879bc9;">
-                                        <?php foreach ($listar_dados_servicos as $value) { ?>
+                                       
                                                     <div class="flex-container card-container">
                                                         <div class="card-container">
                                                             <div class="card" style="margin-top: 30px; margin-left: 10px; margin-right: 10px">
+                                                            <?php foreach ($listar_dados_servicos as $value) { ?>
                                                                 <div class="card-header-profile">
                                                                     <div class="profile-info">
                                                                         <h3 class="profile-name"><strong><?php echo $value->nome_servico; ?></strong>
@@ -298,10 +294,11 @@
                                                                 <center>
                                                                     <p class="status-value">R$ &nbsp;<?php echo $value->valor_servico; ?>,00<i class="fas fa-clock"></i> &nbsp;&nbsp;<?php echo $value->duracao_servico; ?></p>
                                                                 </center>
+                                                                <?php } ?>
                                                             </div>
                                                         </div>
                                                     </div>
-                                            <?php } ?>
+                                           
                                         </fieldset>
 
                                         <br>

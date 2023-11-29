@@ -468,13 +468,13 @@
             var fullText = desc.textContent;
             var truncatedText = fullText.slice(0, 120); // Defina o número de caracteres desejado
 
-            desc.innerHTML = truncatedText + '<span class="read-more">... <a href="#">Ler mais</a></span>';
+            desc.innerHTML = truncatedText + '<span class="read-more">... <a href="#" style="color: blue">Ler mais</a></span>';
 
             var readMoreLink = desc.querySelector('.read-more a');
 
             readMoreLink.addEventListener('click', function (e) {
                 e.preventDefault();
-                desc.innerHTML = fullText + '<span class="read-less"> <a href="#">Ler menos</a></span>';
+                desc.innerHTML = fullText + '<span class="read-less"> <a href="#" style="color: blue">Ler menos</a></span>';
 
                 var readLessLink = desc.querySelector('.read-less a');
 

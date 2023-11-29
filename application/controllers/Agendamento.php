@@ -43,9 +43,6 @@ class Agendamento extends CI_Controller
 						foreach ($fk_servicos as $value) {
 							$this->Agendamento_model->associar_servico($fk_agenda, $value);
 						}
-					} else {
-						// Handle the case where $fk_servicos is not an array (e.g., show an error message)
-						$this->session->set_flashdata('erro', 'Erro ao associar serviços à agenda.');
 					}
 					
 					// MENSAGEM SUCESSO AO CADASTRAR
@@ -53,6 +50,7 @@ class Agendamento extends CI_Controller
 				} else {
 					$this->session->set_flashdata('erro', 'Erro ao cadastrar a agenda.');
 				}
+				
 			} else {
 				$this->session->set_flashdata('erro', 'Erro ao efetuar o agendamento de Horário.');
 			}

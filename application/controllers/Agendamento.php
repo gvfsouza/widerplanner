@@ -54,12 +54,11 @@ class Agendamento extends CI_Controller
 			} else {
 				$this->session->set_flashdata('erro', 'Erro ao efetuar o agendamento de Horário.');
 			}
-
-			$dados['listar_servicos'] = $this->Agendamento_model->listar_servicos();
-			$dados['listar_profissionais'] = $this->Agendamento_model->listar_profissionais();
-			$dados['listar_horaDisponivel'] = $this->Agendamento_model->listar_horaDisponivel($data_agenda, $fk_profissional);
 		}
 		
+		$dados['listar_servicos'] = $this->Agendamento_model->listar_servicos();
+		$dados['listar_profissionais'] = $this->Agendamento_model->listar_profissionais();
+		$dados['listar_horaDisponivel'] = $this->Agendamento_model->listar_horaDisponivel($data_agenda, $fk_profissional);
 		// $dados['listar_hora'] = $this->Agendamento_model->listar_hora();
 		
 		$this->load->view('layout/header');

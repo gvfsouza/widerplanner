@@ -279,6 +279,7 @@
 
                                         <fieldset class="form-group " style="border: 1px solid #ddd; border-radius: 4px; border: 1px solid #879bc9;">
                                             <?php foreach ($listar_dados_servicos as $value) { ?>
+                                                <div class="flex-container card-container">
                                                     <div class="card-container">
                                                         <div class="card" style="margin-top: 30px; margin-left: 10px; margin-right: 10px">
                                                             <div class="card-header-profile">
@@ -294,6 +295,7 @@
                                                             </center>
                                                         </div>
                                                     </div>
+                                                </div>
                                             <?php } ?>
                                         </fieldset>
 

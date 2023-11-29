@@ -16,18 +16,17 @@ class Agendamento_model extends CI_Model
         $this->db->insert('agenda', $data);
         return $this->db->insert_id();
     }
-    
 
-    // public function associarServico($fk_agenda, $fk_servicos)
-    // {
-    //     $data = array(
-    //         'fk_agenda' => $fk_agenda,
-    //         'fk_servicos' => $fk_servicos,
-    //     );
+    public function associarServico($fk_agenda, $fk_servicos)
+    {
+        $data = array(
+            'fk_agenda' => $fk_agenda,
+            'fk_servicos' => $fk_servicos,
+        );
 
-    //     $this->db->insert('agenda2', $data);
-    //     return $this->db->insert_id();
-    // }
+        $this->db->insert('agenda2', $data);
+        return $this->db->insert_id();
+    }
 
     public function listar_servicos()
     {

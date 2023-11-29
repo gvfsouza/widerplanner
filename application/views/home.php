@@ -278,22 +278,20 @@
                                         </fieldset>
 
                                         <fieldset class="form-group " style="border: 1px solid #ddd; border-radius: 4px; border: 1px solid #879bc9;">
-                                        <?php foreach ($listar_dados_servicos as $value) { ?>
-                                                    <div class="flex-container card-container">
-                                                        <div class="card-container">
-                                                            <div class="card" style="margin-top: 30px; margin-left: 10px; margin-right: 10px">
-                                                                <div class="card-header-profile">
-                                                                    <div class="profile-info">
-                                                                        <h3 class="profile-name"><strong><?php echo $value->nome_servico; ?></strong>
-                                                                        </h3>
-                                                                        <br>
-                                                                        <p class="profille-desc"><?php echo $value->descricao_servico; ?></p>
-                                                                    </div>
+                                            <?php foreach ($listar_dados_servicos as $value) { ?>
+                                                    <div class="card-container">
+                                                        <div class="card" style="margin-top: 30px; margin-left: 10px; margin-right: 10px">
+                                                            <div class="card-header-profile">
+                                                                <div class="profile-info">
+                                                                    <h3 class="profile-name"><strong><?php echo $value->nome_servico; ?></strong>
+                                                                    </h3>
+                                                                    <br>
+                                                                    <p class="profille-desc"><?php echo $value->descricao_servico; ?></p>
                                                                 </div>
-                                                                <center>
-                                                                    <p class="status-value">R$ &nbsp;<?php echo $value->valor_servico; ?>,00<i class="fas fa-clock"></i> &nbsp;&nbsp;<?php echo $value->duracao_servico; ?></p>
-                                                                </center>
                                                             </div>
+                                                            <center>
+                                                                <p class="status-value">R$ &nbsp;<?php echo $value->valor_servico; ?>,00<i class="fas fa-clock"></i> &nbsp;&nbsp;<?php echo $value->duracao_servico; ?></p>
+                                                            </center>
                                                         </div>
                                                     </div>
                                             <?php } ?>
@@ -444,30 +442,3 @@
         </div>
     </div>
 </div>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var cardDescriptions = document.querySelectorAll('.profille-desc');
-
-        cardDescriptions.forEach(function (desc) {
-            var fullText = desc.textContent;
-            var truncatedText = fullText.slice(10, 120); // Defina o número de caracteres desejado
-
-            desc.innerHTML = truncatedText + '<span class="read-more">... <a href="#" style="color: blue">Ler mais</a></span>';
-
-            var readMoreLink = desc.querySelector('.read-more a');
-
-            readMoreLink.addEventListener('click', function (e) {
-                e.preventDefault();
-                desc.innerHTML = fullText + '<span class="read-less"> <a href="#" style="color: blue">Ler menos</a></span>';
-
-                var readLessLink = desc.querySelector('.read-less a');
-
-                readLessLink.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    desc.innerHTML = truncatedText + '<span class="read-more">... <a href="#">Ler mais</a></span>';
-                });
-            });
-        });
-    });
-</script>

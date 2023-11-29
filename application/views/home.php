@@ -312,7 +312,7 @@
                                                             </div>
                                                         </div>
                                                         <center>
-                                                            <p class="status-value">R$ &nbsp;<?php echo $value->valor_servico; ?><i class="fas fa-clock"></i> &nbsp;&nbsp;<?php echo $value->duracao_servico; ?></p>
+                                                            <p class="status-value">R$ &nbsp;<?php echo $value->valor_servico; ?>,00<i class="fas fa-clock"></i> &nbsp;&nbsp;<?php echo $value->duracao_servico; ?></p>
                                                         </center>
                                                     </div>
                                                 </div>

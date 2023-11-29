@@ -55,7 +55,7 @@ class Agendamento_model extends CI_Model
         $this->db->from('agenda');
 
         // Faça um JOIN com a tabela 'horadisp' (alias 'hd') usando fk_profissional
-        $this->db->join('horadisp', 'fk_profissional = fk_profissional', 'left');
+        $this->db->join('hora_disp', 'fk_profissional = fk_profissional', 'left');
 
         // Adicione uma condição para a data escolhida
         $this->db->where('data_agenda', $data_agenda);

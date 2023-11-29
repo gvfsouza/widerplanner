@@ -141,33 +141,37 @@
 <script>
     var maxButtons = 9999;
 
-    $('.add_novo_Servico').click(function (e) {
-        var container = $(this).closest('.row');
-        var element_copy = container.clone();
-        var botao_excluir = '<div class="btn btn-outline-danger botao_remover" style="width: 100px; height: 40px; font-size: 14px; margin-top: 10px;"><i class="fas fa-trash-alt"></i> Remover</div>';
 
-        element_copy.find('select, input').val('');
-        element_copy.find('.select2').remove(); // Limpa o campo
-        element_copy.find('.add_novo_Servico').remove(); // Remove o botão "Adicionar Serviço"
+$('.add_novo_Servico').click(function (e) {
+    var container = $(this).closest('.row');
+    var element_copy = container.clone();
+    var botao_excluir = '<div class="btn btn-outline-danger botao_remover" style="width: 100px; height: 40px; font-size: 14px; margin-top: 10px;"><i class="fas fa-trash-alt"></i> Remover</div>';
 
-        container.after(element_copy);
+    element_copy.find('select, input').val('');
+    element_copy.find('.select2').remove(); // Limpa o campo
+    element_copy.find('.add_novo_Servico').remove(); // Remove o botão "Adicionar Serviço"
 
-        // Remove o botão "Remover" caso ele exista
-        element_copy.find('.botao_remover').remove();
+    container.after(element_copy);
 
-        // Adiciona o botão "Remover"
+    // Remove o botão "Remover" caso ele exista
+    element_copy.find('.botao_remover').remove();
+
+    // Adiciona o botão "Remover" apenas se houver mais de um serviço
+    if (container.siblings('.row').length > 0) {
         element_copy.find('.col-md-3').append(botao_excluir);
 
         // Configura o evento de clique para o novo botão "Remover"
         element_copy.find('.botao_remover').click(function (e) {
             $(this).closest('.row').remove();
         });
+    }
 
-        // Select picker
-        $('.servico').select2({
-            width: '100%'
-        });
+    // Select picker
+    $('.servico').select2({
+        width: '100%'
     });
+});
+
 
 
 </script>

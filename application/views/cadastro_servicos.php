@@ -83,7 +83,7 @@
                                                     <div class="form-group col-md-12">
                                                         <label for=""><b>Descrição do Serviço:</b></label>
                                                         <br>
-                                                        <textarea type="text" class="form-control" id="descricao_servico" name="descricao_servico" maxlength="14" rows="3" cols="50"></textarea>
+                                                        <textarea type="text" class="form-control" id="descricao_servico" name="descricao_servico" rows="3" cols="50"></textarea>
                                                     </div>
                                                 </div>
                                             </div>

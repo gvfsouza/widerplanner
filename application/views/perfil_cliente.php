@@ -8,6 +8,11 @@
     th {
         text-align: center;
     }
+
+    input{
+    color: #766f6f;
+    font-weight: bold;
+    }
 </style>
 
 <br>

@@ -141,28 +141,45 @@
 <script>
     var maxButtons = 9999;
 
-    $('.add_novo_Servico').click(function(e) {
-        var container = $(this).closest('.row');
-        var element_copy = container.clone();
-        var botao_excluir = '<div class="btn btn-outline-danger botao_remover" style="width: 100px; height: 40px; font-size: 14px; margin-top: 10px;"><i class="fas fa-trash-alt"></i> Remover</div>';
+$('.add_novo_Servico').click(function (e) {
+    var container = $(this).closest('.row');
+    var element_copy = container.clone();
+    var botao_excluir = '<div class="btn btn-outline-danger botao_remover" style="width: 100px; height: 40px; font-size: 14px; margin-top: 10px;"><i class="fas fa-trash-alt"></i> Remover</div>';
 
-        element_copy.find('select, input').val('');
-        element_copy.find('.select2').remove(); // Limpa o campo
-        element_copy.find('.add_novo_Servico').remove(); // Remove o botão "Adicionar Serviço"
+    element_copy.find('select, input').val('');
+    element_copy.find('.select2').remove(); // Limpa o campo
+    element_copy.find('.add_novo_Servico').remove(); // Remove o botão "Adicionar Serviço"
 
-        container.after(element_copy);
+    container.after(element_copy);
 
-        if (element_copy.find('.botao_remover').length === 0) {
-            element_copy.find('.col-md-3').append(botao_excluir);
-        }
+    // Adiciona o botão "Remover" apenas se já houver mais de um serviço
+    if (container.siblings('.row').length > 0) {
+        element_copy.find('.col-md-3').append(botao_excluir);
 
-        $('.botao_remover').click(function(e) {
+        // Configura o evento de clique para o novo botão "Remover"
+        element_copy.find('.botao_remover').click(function (e) {
             $(this).closest('.row').remove();
+            // Se não houver mais nenhum serviço, mostra novamente o botão "Adicionar Serviço"
+            if ($('.botao_remover').length === 0) {
+                $('.add_novo_Servico').show();
+            }
         });
+    }
 
-        // Select picker
-        $('.servico').select2({
-            width: '100%'
-        });
+    // Configura o evento de clique novamente após adicionar novo serviço
+    $('.add_novo_Servico').off('click').click(function (e) {
+        // Se já houver mais de um serviço, mostra o botão "Remover"
+        if (container.siblings('.row').length > 0) {
+            $('.botao_remover').show();
+        }
+        // Restante do código do botão "Adicionar Serviço"
+        // ...
     });
+
+    // Select picker
+    $('.servico').select2({
+        width: '100%'
+    });
+});
+
 </script>

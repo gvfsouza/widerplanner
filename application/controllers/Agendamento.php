@@ -68,6 +68,7 @@ class Agendamento extends CI_Controller
 
 	public function datas($data_agenda, $fk_profissional)
 	{
+		$this->load->model('Agendamento_model');
 		$listar_horaDisponivel = $this->Agendamento_model->listar_horaDisponivel($data_agenda, $fk_profissional);
 
 		echo json_encode($listar_horaDisponivel);

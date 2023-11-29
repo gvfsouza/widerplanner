@@ -90,11 +90,10 @@
         color: #1331859d;
     }
 
-    /* .card-container {
+    .card-container {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
-    } */
+    }
 
     .flex-container {
         display: flex;

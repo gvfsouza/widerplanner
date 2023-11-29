@@ -301,7 +301,7 @@
                                                                         <h3 class="profile-name"><strong><?php echo $value->nome_servico; ?></strong>
                                                                         </h3>
                                                                         <br>
-                                                                        <p class="profile-desc"><?php echo $value->descricao_servico; ?></p>
+                                                                        <p class="profille-desc"><?php echo $value->descricao_servico; ?></p>
                                                                     </div>
                                                                 </div>
                                                                 <center>
@@ -461,7 +461,7 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        var cardDescriptions = document.querySelectorAll('.profile-desc');
+        var cardDescriptions = document.querySelectorAll('.profille-desc');
 
         cardDescriptions.forEach(function (desc) {
             var fullText = desc.textContent;

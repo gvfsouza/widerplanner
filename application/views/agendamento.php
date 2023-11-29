@@ -86,7 +86,7 @@
                                                     <br>
                                                     <select name="fk_hora" id="fk_hora" class="form-control servico" style="cursor: pointer;" required>
                                                         <option class="text-center" value="">--- Selecione uma Opção ---</option>
-                                                        <?php foreach ($listar_horaDisponivel as $value) { ?>
+                                                        <?php foreach ($listar_hora as $value) { ?>
                                                             <option value="<?php echo $value->id_hora; ?>" data-nome="<?php echo $value->horarios_semana; ?>"><?php echo $value->horarios_semana; ?></option>
                                                         <?php } ?>
                                                     </select>

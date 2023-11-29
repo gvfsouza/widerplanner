@@ -93,6 +93,9 @@
     .card-container {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
 
     .flex-container {

@@ -48,29 +48,49 @@
         min-height: 100vh;
     }
 
+    .sidebar-brand {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .brand-text {
+        text-align: center;
+        font-size: 20px;
+        color: #879bc9;
+        font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+        .brand-text {
+            display: none; /* Esconde o texto quando a tela é menor ou igual a 768 pixels */
+        }
+    }
+
     .sidebar .nav-item .collapse .collapse-inner .collapse-item:hover, .sidebar .nav-item .collapsing .collapse-inner .collapse-item:hover {
         background-color: #ffffff;
         color: #879bc9;
     }
 </style>
    
-   <ul class="navbar-nav sidebar " id="accordionSidebar" style="background-color: #ffffff;">
+    <ul class="navbar-nav sidebar " id="accordionSidebar" style="background-color: #ffffff;">
    
         <a class="sidebar-brand d-flex align-items-center justify-content-center">
-        <div class="col-md-12">
-        <br>
-        <p style="text-align:center;font-size: 20px;color: #879bc9;font-weight: bold;">WiderPlanner
-        <br>
-      </div>
+            <div class="col-md-12">
+                <br><p style="text-align:center;font-size: 20px;color: #879bc9;font-weight: bold;">WiderPlanner<br>
+                <br><p class="brand-text">WP</p><br>
+            </div>
         </a>
 
-   <!-- Divider -->
-   <hr class="sidebar-divider d-none d-md-block">
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block">
 
-       <li class="nav-item">
-           <a class="nav-link" href="<?php echo base_url(); ?>home">
+        <li class="nav-item">
+            <a class="nav-link" href="<?php echo base_url(); ?>home">
                <i class="fas fa-home icon" style="color:#879bc9"></i>
-               <span class="link" style="color:#000000d9;font-weight: bold;font-size:17px">Home</span></a>
+               <span class="link" style="color:#000000d9;font-weight: bold;font-size:17px">Home</span>
+            </a>
        </li>
 
        <li class="nav-item">
@@ -120,8 +140,6 @@
        <!-- Divider -->
        <hr class="sidebar-divider d-none d-md-block">
    </ul>
-   <!-- End of Sidebar -->
-   <!-- Content Wrapper -->
    
    <div id="content-wrapper" class="d-flex flex-column" style="background-color: #d9e2f7">
   

@@ -278,24 +278,25 @@
                                         </fieldset>
 
                                         <fieldset class="form-group " style="border: 1px solid #ddd; border-radius: 4px; border: 1px solid #879bc9;">
-                                                <div class="card-container">
-                                                    <?php foreach ($listar_dados_servicos as $value) { ?>
-                                                        <div class="card" style="margin-top: 30px; margin-left: 10px; margin-right: 10px">
-                                                            <div class="card-header-profile">
-                                                                <div class="profile-info">
-                                                                    <h3 class="profile-name"><strong><?php echo $value->nome_servico; ?></strong>
-                                                                    </h3>
-                                                                    <br>
-                                                                     <p class="profille-desc"><?php echo $value->descricao_servico; ?></p>
+                                        <?php foreach ($listar_dados_servicos as $value) { ?>
+                                                    <div class="flex-container card-container">
+                                                        <div class="card-container">
+                                                            <div class="card" style="margin-top: 30px; margin-left: 10px; margin-right: 10px">
+                                                                <div class="card-header-profile">
+                                                                    <div class="profile-info">
+                                                                        <h3 class="profile-name"><strong><?php echo $value->nome_servico; ?></strong>
+                                                                        </h3>
+                                                                        <br>
+                                                                        <p class="profille-desc"><?php echo $value->descricao_servico; ?></p>
+                                                                    </div>
                                                                 </div>
+                                                                <center>
+                                                                    <p class="status-value">R$ &nbsp;<?php echo $value->valor_servico; ?>,00<i class="fas fa-clock"></i> &nbsp;&nbsp;<?php echo $value->duracao_servico; ?></p>
+                                                                </center>
                                                             </div>
-                                                            <center>
-                                                                <p class="status-value">R$ &nbsp;<?php echo $value->valor_servico; ?>,00<i class="fas fa-clock"></i> &nbsp;&nbsp;<?php echo $value->duracao_servico; ?></p>
-                                                            </center>
-                                                         </div>
-                                                    <?php } ?>
-                                                </div>
-                                            </div>
+                                                        </div>
+                                                    </div>
+                                            <?php } ?>
                                         </fieldset>
 
                                         <br>

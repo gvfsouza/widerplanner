@@ -1,55 +1,60 @@
 <style>
-        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
 
-        * {
-            font-family: Quicksand;
-        }
+    * {
+        font-family: Quicksand;
+    }
 
-       .nav-item .nav-link {
-           display: flex;
-           align-items: center;
-           margin: 8px 0;
-           padding: 14px 12px;
-           border-radius: 8px;
-           text-decoration: none;
-           transition: all 0.2s ease;
-       }
+    .nav-item .nav-link {
+        display: flex;
+        align-items: center;
+        margin: 8px 0;
+        padding: 14px 12px;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: all 0.2s ease;
+    }
 
-       .navbar-nav.sidebar {
+    .navbar-nav.sidebar {
         margin: 20px;
         border-radius: 15px;
         background-color: white;
-      }
+    }
 
-       /* cor do ícone quando passa o mouse */
-       .nav-item .nav-link:hover .icon {
-           font-size: 18px;
-       }
+    /* cor do ícone quando passa o mouse */
+    .nav-item .nav-link:hover .icon {
+        font-size: 18px;
+    }
 
-       /* cor do link quando passa o mouse */
-       .nav-item .nav-link:hover .link {
-            font-size: 18px;X
-       }
+    /* cor do link quando passa o mouse */
+    .nav-item .nav-link:hover .link {
+        font-size: 18px;X
+    }
 
-       .nav-item .nav-link .icon {
-           margin-right: 14px;
-           font-size: 20px;
-           color: white;
-       }
+    .nav-item .nav-link .icon {
+       margin-right: 14px;
+       font-size: 20px;
+       color: white;
+    }
 
-       .nav-item .nav-link .link {
-           margin-right: 14px;
-           font-size: 20px;
-           color: white;
-       }
+    .nav-item .nav-link .link {
+        margin-right: 14px;
+        font-size: 20px;
+        color: white;
+    }
 
-       .sidebar .nav-item .collapse .collapse-inner .collapse-item:hover, .sidebar .nav-item .collapsing .collapse-inner .collapse-item:hover {
-    background-color: #ffffff;
-    color: #879bc9;
-}
-   </style>
+    .sidebar {
+        width: 13.5rem;
+        min-height: 100vh;
+    }
+
+    .sidebar .nav-item .collapse .collapse-inner .collapse-item:hover, .sidebar .nav-item .collapsing .collapse-inner .collapse-item:hover {
+        background-color: #ffffff;
+        color: #879bc9;
+    }
+</style>
    
-   <ul class="navbar-nav  sidebar " id="accordionSidebar" style="background-color: #ffffff;">
+   <ul class="navbar-nav sidebar " id="accordionSidebar" style="background-color: #ffffff;">
    
         <a class="sidebar-brand d-flex align-items-center justify-content-center">
         <div class="col-md-12">

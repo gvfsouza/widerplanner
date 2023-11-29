@@ -326,37 +326,36 @@
 
                                         <?php
                                         if (!empty($listar_dados_produtos)): ?>
-                                                                <?php foreach ($listar_dados_produtos as $produto): ?>
-                                                                                        <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9;">
-                                                                                            <div class="card-container">
-                                                                                                <div class="flex-container space-between">
-                                                                                                    <div class="col card">
-                                                                                                        <div>
-                                                                                                            <?php if (!empty($produto->nome_produto)): ?>
-                                                                                                                                    <h3><?php echo $produto->nome_produto; ?></h3>
-                                                                                                                                    <div class="col card">
-                                                                                                                                        <div class="img-placeholder">
-                                                                                                                                            <?php if (!empty($produto->foto_produto)): ?>
-                                                                                                                                                                    <img style='display:block; width:100px;height:100px;' id='base64image' src='data:image/jpeg;base64,<?php echo $produto->foto_produto ?>' />
-                                                                                                                                            <?php endif; ?>
-                                                                                                                                        </div>
-                                                                                                                                        <div>
-                                                                                                                                            <h3>Wafaa</h3>
-                                                                                                                                            <p><i class="fa-solid fa-user"></i> Front End Web Developer
-                                                                                                                                            </p>
-                                                                                                                                            <p><i class="fa-solid fa-paper-plane"></i> <a href="mailto:wafaa_cr@outlook.com">Email Me</a></p>
-                                                                                                                                            <p><i class="fa-solid fa-location-dot"></i> Auckland, New
-                                                                                                                                                Zealand</p>
-                                                                                                                                        </div>
-                                                                                                                                    </div>
-                                                                                                                            </div><?php endif; ?>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </fieldset>
-                                                                <?php endforeach; ?>
+                                            <?php foreach ($listar_dados_produtos as $produto): ?>
+                                                <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9;">
+                                                    <div class="card-container">
+                                                        <div class="flex-container space-between">
+                                                            <div class="col card">
+                                                                <div>
+                                                                    <?php if (!empty($produto->nome_produto)): ?>
+                                                                        <h3><?php echo $produto->nome_produto; ?></h3>
+                                                                            <div class="col card">
+                                                                                <div class="img-placeholder">
+                                                                                    <?php if (!empty($produto->foto_produto)): ?>
+                                                                                        <img style='display:block; width:100px;height:100px;' id='base64image' src='data:image/jpeg;base64,<?php echo $produto->foto_produto ?>' />
+                                                                                    <?php endif; ?>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <h3>Wafaa</h3>
+                                                                                    <p><i class="fa-solid fa-user"></i> Front End Web Developer</p>
+                                                                                    <p><i class="fa-solid fa-paper-plane"></i> <a href="mailto:wafaa_cr@outlook.com">Email Me</a></p>
+                                                                                    <p><i class="fa-solid fa-location-dot"></i> Auckland, New Zealand</p>
+                                                                                </div>
+                                                                            </div>
+                                                                    <?php endif; ?>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                            <?php endforeach; ?>
                                         <?php else: ?>
-                                                                <p>Nenhum produto encontrado.</p>
+                                            <p>Nenhum produto encontrado.</p>
                                         <?php endif; ?>
 
                                         <br>
@@ -466,23 +465,25 @@
 
         cardDescriptions.forEach(function (desc) {
             var fullText = desc.textContent;
-            var truncatedText = fullText.slice(0, 1000); // Defina o número de caracteres desejado
+            var truncatedText = fullText.slice(0, 1000); // Limite de 1000 caracteres
 
-            desc.innerHTML = truncatedText + '<span class="read-more">... <a href="#" style="color: blue">Ler mais</a></span>';
+            if (fullText.length > 1000) {
+                desc.innerHTML = truncatedText + '<span class="read-more">... <a href="#">Ler mais</a></span>';
 
-            var readMoreLink = desc.querySelector('.read-more a');
+                var readMoreLink = desc.querySelector('.read-more a');
 
-            readMoreLink.addEventListener('click', function (e) {
-                e.preventDefault();
-                desc.innerHTML = fullText + '<span class="read-less"> <a href="#" style="color: blue">Ler menos</a></span>';
-
-                var readLessLink = desc.querySelector('.read-less a');
-
-                readLessLink.addEventListener('click', function (e) {
+                readMoreLink.addEventListener('click', function (e) {
                     e.preventDefault();
-                    desc.innerHTML = truncatedText + '<span class="read-more">... <a href="#">Ler mais</a></span>';
+                    desc.innerHTML = fullText + '<span class="read-less"> <a href="#">Ler menos</a></span>';
+
+                    var readLessLink = desc.querySelector('.read-less a');
+
+                    readLessLink.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        desc.innerHTML = truncatedText + '<span class="read-more">... <a href="#">Ler mais</a></span>';
+                    });
                 });
-            });
+            }
         });
     });
 </script>

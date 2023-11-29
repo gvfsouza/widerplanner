@@ -25,14 +25,14 @@ class Agendamento extends CI_Controller
 	{
 		$this->load->model('Agendamento_model');
 		$dados = array();
+		
+		var_dump($_POST);
 
 		if ($this->input->post('salvar')) {
 			$data_agenda = $this->input->post('data_agenda');
 			$fk_hora = $this->input->post('fk_hora');
 			$fk_servicos = $this->input->post('fk_servicos');
 			$fk_profissional = $this->input->post('fk_profissional');
-
-			var_dump($_POST);
 
 			// Verifique se as variáveis estão definidas
 			if (isset($data_agenda, $fk_hora, $fk_servicos, $fk_profissional)) {

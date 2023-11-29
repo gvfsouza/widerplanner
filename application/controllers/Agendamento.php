@@ -43,11 +43,9 @@ class Agendamento extends CI_Controller
 				// Captura o ID da agenda recém cadastrada
 				$fk_agenda = $dados['cadastro_agenda'];
 
-				if (is_array($fk_servicos)) {
 					foreach ($fk_servicos as $value) {
 						$this->Agendamento_model->associarServico($fk_agenda, $value);
 					}
-				}
 
 				// MENSAGEM SUCESSO AO CADASTRAR
 				$this->session->set_flashdata('sucesso', 'Agendamento realizado com sucesso!');

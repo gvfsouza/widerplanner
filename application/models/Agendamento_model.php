@@ -3,7 +3,7 @@
 
 class Agendamento_model extends CI_Model
 {
-    public function cadastro_agenda($data_agenda, $fk_hora, $fk_servicos, $fk_profissional, $fk_usuario)
+    public function cadastro_agenda($data_agenda, $fk_hora, $fk_servicos, $fk_profissional, $fk_usuario, $fk_agenda)
     {
         $data = array(
             'data_agenda' => $data_agenda,
@@ -13,18 +13,17 @@ class Agendamento_model extends CI_Model
 
         );
 
+        foreach($fk_servicos as $value) {
+            $data = array(
+                'fk_agenda' => $fk_agenda,
+                'fk_servicos' => $value,
+            );
+            
+            $this->db->insert('agenda2', $data);
+            return $this->db->insert_id();
+        }
+
         $this->db->insert('agenda', $data);
-        return $this->db->insert_id();
-    }
-
-    public function associarServico($fk_agenda, $fk_servicos)
-    {
-        $data = array(
-            'fk_agenda' => $fk_agenda,
-            'fk_servicos' => $fk_servicos,
-        );
-
-        $this->db->insert('agenda2', $data);
         return $this->db->insert_id();
     }
 

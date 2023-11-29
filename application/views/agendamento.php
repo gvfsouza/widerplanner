@@ -115,8 +115,6 @@
                                         </fieldset>
                                     </div>
                                 </div>
-
-                                <?php echo base_url(); ?>
                             </div>
                             <div class="text-right">
                                 <button href="<?php echo base_url(); ?>/agendamento/" type="submit" name="salvar" class="btn-lg btn" style="border: none;background-color: #82a4ef;color: white;" value='2' >Salvar</button>

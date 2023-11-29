@@ -25,8 +25,6 @@ class Agendamento extends CI_Controller
 	{
 		$this->load->model('Agendamento_model');
 		$dados = array();
-		
-		var_dump($_POST);
 
 		if ($this->input->post('salvar')) {
 			$data_agenda = $this->input->post('data_agenda');
@@ -52,11 +50,11 @@ class Agendamento extends CI_Controller
 
 				// MENSAGEM SUCESSO AO CADASTRAR
 				$this->session->set_flashdata('sucesso', 'Agendamento realizado com sucesso!');
-				//redirect('agendamento/');
+				redirect('agendamento/');
 
 			} else {
 				$this->session->set_flashdata('erro', 'Erro ao efetuar o agendamento de Horário.');
-				//redirect('agendamento/');
+				redirect('agendamento/');
 			}
 		}
 

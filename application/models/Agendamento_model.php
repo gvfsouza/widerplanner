@@ -46,7 +46,7 @@ class Agendamento_model extends CI_Model
         return $res->result();
     }
 
-    public function listar_horaDisponivel($data_escolhida, $fk_profissional)
+    public function listar_horaDisponivel($data_agenda, $fk_profissional)
     {
         // Selecione as colunas desejadas da tabela agenda
         $this->db->select('data_agenda, fk_profissional, fk_hora');
@@ -58,7 +58,7 @@ class Agendamento_model extends CI_Model
         $this->db->join('horadisp', 'fk_profissional = fk_profissional', 'left');
 
         // Adicione uma condição para a data escolhida
-        $this->db->where('data_agenda', $data_escolhida);
+        $this->db->where('data_agenda', $data_agenda);
 
         // Adicione uma condição para o profissional escolhido
         $this->db->where('fk_profissional', $fk_profissional);

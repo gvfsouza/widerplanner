@@ -65,42 +65,42 @@
                                                             </div>
                                                             <div class="dados-cliente col-md-6">
                                                                 <label for="" style="color: #77787a;">Celular:</label>
-                                                                <input style="font-size:14px" type="text" class="form-control" id="celular" name="celular" value="<?php echo $value->telefone_usuario ;?>">
+                                                                <input style="font-size:14px" type="text" class="form-control" id="celular" name="celular" value="<?php echo $value->telefone_usuario ;?>" disabled="">
                                                             </div>
                                                         </div>
                                                         <div class="row">
                                                             <div class="dados-cliente col-md-3">
                                                                 <label for="" style="color: #77787a;">CEP:</label>
-                                                                <input style="font-size:14px" type="text" class="form-control" id="cep" name="cep" value="<?php echo $value->cep_usuario ;?>">
+                                                                <input style="font-size:14px" type="text" class="form-control" id="cep" name="cep" value="<?php echo $value->cep_usuario ;?>" disabled="">
                                                             </div>
                                                             <div class="dados-cliente col-md-7">
                                                                 <label for="" style="color: #77787a;">Logradouro:</label>
-                                                                <input style="font-size:14px" type="text" class="form-control" id="logradouro" name="logradouro" value="<?php echo $value->logradouro_usuario ;?>">
+                                                                <input style="font-size:14px" type="text" class="form-control" id="logradouro" name="logradouro" value="<?php echo $value->logradouro_usuario ;?>" disabled="">
                                                             </div>
                                                             <div class="dados-cliente col-md-2">
                                                                 <label for="" style="color: #77787a;">N°:</label>
-                                                                <input style="font-size:14px" type="text" class="form-control" id="numero" name="numero" value="<?php echo $value->numero_usuario ;?>">
+                                                                <input style="font-size:14px" type="text" class="form-control" id="numero" name="numero" value="<?php echo $value->numero_usuario ;?>" disabled="">
                                                             </div>
                                                         </div>
                                                         <br>
                                                         <div class="row">
                                                             <div class="dados-cliente col-md-5">
                                                                 <label for="" style="color: #77787a;">Complemento:</label>
-                                                                <input style="font-size:14px" type="text" class="form-control" id="complemento" name="complemento" value="<?php echo $value->complemento_usuario ;?>">
+                                                                <input style="font-size:14px" type="text" class="form-control" id="complemento" name="complemento" value="<?php echo $value->complemento_usuario ;?>" disabled="">
                                                             </div>
                                                             <div class="dados-cliente col-md-7">
                                                                 <label for="" style="color: #77787a;">Bairro:</label>
-                                                                <input style="font-size:14px" type="text" class="form-control" id="bairro" name="bairro" value="<?php echo $value->bairro_usuario ;?>">
+                                                                <input style="font-size:14px" type="text" class="form-control" id="bairro" name="bairro" value="<?php echo $value->bairro_usuario ;?>" disabled="">
                                                             </div>
                                                         </div><br>
                                                         <div class="row">
                                                             <div class="dados-cliente col-md-7">
                                                                 <label for="" style="color: #77787a;">Cidade:</label>
-                                                                <input style="font-size:14px" type="text" class="form-control" id="cidade" name="cidade" value="<?php echo $value->cidade_usuario ;?>">
+                                                                <input style="font-size:14px" type="text" class="form-control" id="cidade" name="cidade" value="<?php echo $value->cidade_usuario ;?>" disabled="">
                                                             </div>
                                                             <div class="dados-cliente col-md-5">
                                                                 <label for="" style="color: #77787a;">UF:</label>
-                                                                <input style="font-size:14px" type="text" class="form-control" id="uf" name="uf" value="<?php echo $value->estado_usuario ;?>">
+                                                                <input style="font-size:14px" type="text" class="form-control" id="uf" name="uf" value="<?php echo $value->estado_usuario ;?>" disabled="">
                                                             </div>
                                                         </div>
                                                     </div>

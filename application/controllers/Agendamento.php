@@ -34,6 +34,7 @@ class Agendamento extends CI_Controller
 			$fk_servicos = $this->input->post('fk_servicos');
 			$fk_profissional = $this->input->post('fk_profissional');
 
+			var_dump($_POST);
 			// Verifique se as variáveis estão definidas
 			if (isset($data_agenda, $fk_hora, $fk_servicos, $fk_profissional)) {
 				

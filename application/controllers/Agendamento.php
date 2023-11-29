@@ -39,10 +39,15 @@ class Agendamento extends CI_Controller
 				$fk_agenda = $this->Agendamento_model->cadastrar_agenda($data_agenda, $fk_hora, $fk_servicos, $fk_profissional, $fk_usuario);
 		
 				if ($fk_agenda) {
-					foreach ($fk_servicos as $value) {
-						$this->Agendamento_model->associar_servico($fk_agenda, $value);
+					if (is_array($fk_servicos)) {
+						foreach ($fk_servicos as $value) {
+							$this->Agendamento_model->associar_servico($fk_agenda, $value);
+						}
+					} else {
+						// Handle the case where $fk_servicos is not an array (e.g., show an error message)
+						$this->session->set_flashdata('erro', 'Erro ao associar serviços à agenda.');
 					}
-		
+					
 					// MENSAGEM SUCESSO AO CADASTRAR
 					$this->session->set_flashdata('sucesso', 'Agendamento realizado com sucesso!');
 				} else {

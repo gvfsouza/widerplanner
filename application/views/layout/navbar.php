@@ -24,18 +24,19 @@
 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow"  style="border-radius: 10px 10px 10px 10px; margin-left: 20px; margin-right: 20px; margin-top: 20px"> 
 
     <p style="color: #66afa8; margin-top: 5px; font-weight: bold; font-size: 13px"></p>
-    <a class="sidebar-brand d-flex align-items-center justify-content-center">
-        <div class="col-md-12">
-            <br>
-            <p style="text-align:center; font-size:20px; color:#879bc9; font-weight: bold; vertical-align:middle">WiderPlanner
-            <br>
-        </div>
-    </a>
 
     <!-- Sidebar Toggle (Topbar) -->
     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
         <i class="fa fa-bars" style="color: #879BC9;"></i>
     </button>
+
+    <a class="sidebar-brand d-flex align-items-center justify-content-center">
+        <div class="col-md-12">
+            <br>
+            <p style="text-align:center; font-size:20px; color:#879bc9; font-weight: bold; vertical-align:middle; float: right">WiderPlanner
+            <br>
+        </div>
+    </a>
 
     <!-- Topbar Navbar -->
     <ul class="navbar-nav ml-auto">

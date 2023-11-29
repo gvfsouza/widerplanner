@@ -313,7 +313,7 @@
                                             <?php if (!empty($listar_dados_produtos)): ?>
                                                     <?php foreach ($listar_dados_produtos as $produto): ?>
                                                         <div class="card-container">
-                                                            <div class="col card">
+                                                            <div class="col">
                                                                 <?php if (!empty($produto->nome_produto)): ?>
                                                                     <h3><?php echo $produto->nome_produto; ?></h3>
                                                                     <div class="col card">

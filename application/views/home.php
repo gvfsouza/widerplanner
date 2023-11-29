@@ -465,7 +465,7 @@
 
         cardDescriptions.forEach(function (desc) {
             var fullText = desc.textContent;
-            var truncatedText = fullText.slice(1, 120); // Defina o número de caracteres desejado
+            var truncatedText = fullText.slice(10, 120); // Defina o número de caracteres desejado
 
             desc.innerHTML = truncatedText + '<span class="read-more">... <a href="#" style="color: blue">Ler mais</a></span>';
 

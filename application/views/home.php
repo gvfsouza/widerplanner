@@ -353,9 +353,9 @@
                                                         </div>
                                                     </div>
                                                 </fieldset>
-                                            <?php endforeach; ?>
+                                                                <?php endforeach; ?>
                                         <?php else: ?>
-                                            <p>Nenhum produto encontrado.</p>
+                                                                <p>Nenhum produto encontrado.</p>
                                         <?php endif; ?>
 
                                         <br>
@@ -465,13 +465,22 @@
 
         cardDescriptions.forEach(function (desc) {
             var fullText = desc.textContent;
-            desc.innerHTML = fullText + '<span class="read-less"> <a href="#">Ler menos</a></span>';
+            var truncatedText = fullText.slice(0, 120); // Defina o número de caracteres desejado
 
-            var readLessLink = desc.querySelector('.read-less a');
+            desc.innerHTML = truncatedText + '<span class="read-more">... <a href="#" style="color: blue">Ler mais</a></span>';
 
-            readLessLink.addEventListener('click', function (e) {
+            var readMoreLink = desc.querySelector('.read-more a');
+
+            readMoreLink.addEventListener('click', function (e) {
                 e.preventDefault();
-                desc.innerHTML = fullText + '<span class="read-more">... <a href="#">Ler mais</a></span>';
+                desc.innerHTML = fullText + '<span class="read-less"> <a href="#" style="color: blue">Ler menos</a></span>';
+
+                var readLessLink = desc.querySelector('.read-less a');
+
+                readLessLink.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    desc.innerHTML = truncatedText + '<span class="read-more">... <a href="#">Ler mais</a></span>';
+                });
             });
         });
     });

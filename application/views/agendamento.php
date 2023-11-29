@@ -99,7 +99,7 @@
                                                 <div class="col-md-6">
                                                     <label for="" style="color: #4e4e4e;"><b>Serviço:</b></label>
                                                     <br>
-                                                    <select name="fk_servicos[]" id="fk_servicos" class="form-control servico" style="cursor: pointer;" required>
+                                                    <select name="fk_servicos" id="fk_servicos" class="form-control servico" style="cursor: pointer;" required>
                                                         <option class="text-center" value="">--- Selecione uma Opção ---</option>
                                                         <?php foreach ($listar_servicos as $value) { ?>
                                                             <option value="<?php echo $value->id_servicos; ?>" data-nome="<?php echo $value->nome_servico; ?>"><?php echo $value->nome_servico; ?></option>

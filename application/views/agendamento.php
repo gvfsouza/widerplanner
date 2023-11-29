@@ -141,7 +141,6 @@
 <script>
     var maxButtons = 9999;
 
-
 $('.add_novo_Servico').click(function (e) {
     var container = $(this).closest('.row');
     var element_copy = container.clone();
@@ -153,10 +152,7 @@ $('.add_novo_Servico').click(function (e) {
 
     container.after(element_copy);
 
-    // Remove o botão "Remover" caso ele exista
-    element_copy.find('.botao_remover').remove();
-
-    // Adiciona o botão "Remover" apenas se houver mais de um serviço
+    // Adiciona o botão "Remover" apenas se já houver mais de um serviço
     if (container.siblings('.row').length > 0) {
         element_copy.find('.col-md-3').append(botao_excluir);
 
@@ -171,6 +167,7 @@ $('.add_novo_Servico').click(function (e) {
         width: '100%'
     });
 });
+
 
 
 

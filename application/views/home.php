@@ -319,7 +319,7 @@
                                                     </center>
                                                 </div>
 
-                                                <div class="card-profile">
+                                                <div class="card">
                                                     <div class="card-header-profile">
                                                         <div class="profile-info">
                                                             <h3 class="profile-name"><strong>Barba</strong></h3>

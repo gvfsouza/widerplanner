@@ -315,7 +315,6 @@
                                                         <div class="card-container">
                                                             <div class="col">
                                                                 <?php if (!empty($produto->nome_produto)): ?>
-                                                                    <h3><?php echo $produto->nome_produto; ?></h3>
                                                                     <div class="col card">
                                                                         <div class="img-placeholder">
                                                                             <?php if (!empty($produto->foto_produto)): ?>

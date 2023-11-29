@@ -48,26 +48,6 @@
         min-height: 100vh;
     }
 
-    .sidebar-brand {
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .brand-text {
-        text-align: center;
-        font-size: 20px;
-        color: #879bc9;
-        font-weight: bold;
-    }
-
-    @media (max-width: 768px) {
-        .brand-text {
-            display: none; /* Esconde o texto quando a tela é menor ou igual a 768 pixels */
-        }
-    }
-
     .sidebar .nav-item .collapse .collapse-inner .collapse-item:hover, .sidebar .nav-item .collapsing .collapse-inner .collapse-item:hover {
         background-color: #ffffff;
         color: #879bc9;
@@ -78,8 +58,9 @@
    
         <a class="sidebar-brand d-flex align-items-center justify-content-center">
             <div class="col-md-12">
-                <br><p style="text-align:center;font-size: 20px;color: #879bc9;font-weight: bold;">WiderPlanner<br>
-                <br><p class="brand-text">WP</p><br>
+                <br>
+                <p style="text-align:center;font-size: 20px;color: #879bc9;font-weight: bold;">WiderPlanner
+                <br>
             </div>
         </a>
 

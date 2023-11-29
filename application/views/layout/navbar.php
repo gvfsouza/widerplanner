@@ -27,7 +27,7 @@
     <div class="sidebar-brand d-flex align-items-center justify-content-center">
         <div class="col-md-12">
             <br>
-            <p style="text-align:center; font-size:20px; color:#879bc9; font-weight: bold;">WiderPlanner
+            <p style="text-align:center; font-size:20px; color:#879bc9; font-weight: bold; vertical-align:middle">WiderPlanner
             <br>
         </div>
     </div>

@@ -465,7 +465,7 @@
 
         cardDescriptions.forEach(function (desc) {
             var fullText = desc.textContent;
-            var truncatedText = fullText.slice(0, 1000); // Limite de 1000 caracteres
+            var truncatedText = fullText.slice(0, 900); // Limite de 1000 caracteres
 
             if (fullText.length > 1000) {
                 desc.innerHTML = truncatedText + '<span class="read-more">... <a href="#">Ler mais</a></span>';

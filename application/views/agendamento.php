@@ -176,8 +176,7 @@ $('.add_novo_Servico').click(function (e) {
         if (container.siblings('.row').length > 0) {
             $('.botao_remover').show();
         }
-        // Restante do código do botão "Adicionar Serviço"
-        // ...
+        // Aqui você pode adicionar código adicional relacionado ao botão "Adicionar Serviço" se necessário
     });
 
     // Select picker

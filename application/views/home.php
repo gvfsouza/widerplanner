@@ -287,7 +287,7 @@
                                                                     <h3 class="profile-name"><strong><?php echo $value->nome_servico; ?></strong>
                                                                     </h3>
                                                                     <br>
-                                                                    <p class="profille-desc"><?php echo $value->descricao_servico; ?></p>
+                                                                    <p class="profile-desc"><?php echo $value->descricao_servico; ?></p>
                                                                 </div>
                                                             </div>
                                                             <center>
@@ -447,17 +447,26 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        var cardDescriptions = document.querySelectorAll('.profille-desc');
+        var cardDescriptions = document.querySelectorAll('.profile-desc');
 
         cardDescriptions.forEach(function (desc) {
             var fullText = desc.textContent;
-            desc.innerHTML = fullText + '<span class="read-less"> <a href="#">Ler menos</a></span>';
+            var truncatedText = fullText.slice(0, 120); // Defina o número de caracteres desejado
 
-            var readLessLink = desc.querySelector('.read-less a');
+            desc.innerHTML = truncatedText + '<span class="read-more">... <a href="#">Ler mais</a></span>';
 
-            readLessLink.addEventListener('click', function (e) {
+            var readMoreLink = desc.querySelector('.read-more a');
+
+            readMoreLink.addEventListener('click', function (e) {
                 e.preventDefault();
-                desc.innerHTML = fullText + '<span class="read-more">... <a href="#">Ler mais</a></span>';
+                desc.innerHTML = fullText + '<span class="read-less"> <a href="#">Ler menos</a></span>';
+
+                var readLessLink = desc.querySelector('.read-less a');
+
+                readLessLink.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    desc.innerHTML = truncatedText + '<span class="read-more">... <a href="#">Ler mais</a></span>';
+                });
             });
         });
     });

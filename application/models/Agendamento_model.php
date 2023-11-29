@@ -50,10 +50,9 @@ class Agendamento_model extends CI_Model
     {
         $this->db->select('data_agenda, fk_profissional, fk_hora');
         $this->db->from('agenda');
-        $this->db->join('hora_disp', 'fk_profissional = fk_profissional', 'left');
+        $this->db->join('hora_disp', 'hora_disp.id_hora = agenda.fk_hora');
         $this->db->where('data_agenda', $data_agenda);
         $this->db->where('fk_profissional', $fk_profissional);
-        $this->db->where('fk_hora IS NULL');
 
         $res = $this->db->get();
         return $res->result_array();

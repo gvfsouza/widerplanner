@@ -141,6 +141,9 @@
 <script>
     var maxButtons = 9999;
 
+// Configuração inicial: esconde todos os botões "Remover"
+$('.botao_remover').hide();
+
 $('.add_novo_Servico').click(function (e) {
     var container = $(this).closest('.row');
     var element_copy = container.clone();
@@ -152,23 +155,24 @@ $('.add_novo_Servico').click(function (e) {
 
     container.after(element_copy);
 
-    // Adiciona o botão "Remover" apenas se já houver mais de um serviço
+    // Mostra o botão "Remover" apenas se já houver mais de um serviço
     if (container.siblings('.row').length > 0) {
-        element_copy.find('.col-md-3').append(botao_excluir);
-
-        // Configura o evento de clique para o novo botão "Remover"
-        element_copy.find('.botao_remover').click(function (e) {
-            $(this).closest('.row').remove();
-            // Se não houver mais nenhum serviço, mostra novamente o botão "Adicionar Serviço"
-            if ($('.botao_remover').length === 0) {
-                $('.add_novo_Servico').show();
-            }
-        });
+        $('.botao_remover').show();
     }
+
+    // Configura o evento de clique para o novo botão "Remover"
+    element_copy.find('.botao_remover').click(function (e) {
+        $(this).closest('.row').remove();
+        // Se não houver mais nenhum serviço, esconde todos os botões "Remover"
+        if ($('.botao_remover').length === 0) {
+            $('.add_novo_Servico').show();
+            $('.botao_remover').hide();
+        }
+    });
 
     // Configura o evento de clique novamente após adicionar novo serviço
     $('.add_novo_Servico').off('click').click(function (e) {
-        // Se já houver mais de um serviço, mostra o botão "Remover"
+        // Se já houver mais de um serviço, mostra os botões "Remover"
         if (container.siblings('.row').length > 0) {
             $('.botao_remover').show();
         }

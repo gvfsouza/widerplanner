@@ -442,3 +442,21 @@
         </div>
     </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var cardDescriptions = document.querySelectorAll('.profille-desc');
+
+        cardDescriptions.forEach(function (desc) {
+            var fullText = desc.textContent;
+            desc.innerHTML = fullText + '<span class="read-less"> <a href="#">Ler menos</a></span>';
+
+            var readLessLink = desc.querySelector('.read-less a');
+
+            readLessLink.addEventListener('click', function (e) {
+                e.preventDefault();
+                desc.innerHTML = fullText + '<span class="read-more">... <a href="#">Ler mais</a></span>';
+            });
+        });
+    });
+</script>

@@ -324,6 +324,7 @@
                                                                            <?php } ?>
                                                                         </div>
                                                                         <div>
+                                                                            <br>
                                                                             <h3><?php echo $value->nome_usuario; ?></h3>
                                                                             <p><?php echo $value->descricao_usuario; ?></p>
                                                                             <p><i class="fas fa-solid fa-paper-plane"></i>&nbsp;<?php echo $value->email_usuario; ?></p>

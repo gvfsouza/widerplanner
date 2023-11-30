@@ -48,4 +48,36 @@ class Cliente_model extends CI_Model
         $res = $this->db->get();
         return $res->result();
     }
+
+    public function historico_agendamentos_realizados() {
+        $this->db->select('*');
+        $this->db->from('agenda');
+        $this->db->join('hora_disp', 'hora_disp.id_hora = agenda.fk_hora', 'left');
+        $this->db->join('usuario', 'usuario.id_usuario = agenda.fk_usuario', 'left');
+        $this->db->where('usuario.profissional !=', 'sim');
+        $this->db->where('fk_usuario', $this->session->userdata('fk_usuario'));
+
+    
+        $res = $this->db->get();
+        return $res->result();
+    }
+
+    public function historico_profissionais_agendamentos() {
+        $this->db->select('*');
+        $this->db->from('agenda');
+        $this->db->join('usuario', 'usuario.id_usuario = agenda.fk_profissional', 'left');
+        $this->db->where('usuario.profissional', 'sim');
+    
+        $res = $this->db->get();
+        return $res->result();
+    }
+
+    public function historico_servicos_agendamentos() {
+        $this->db->select('*');
+        $this->db->from('agenda2');
+        $this->db->join('servicos', 'servicos.id_servicos = agenda2.fk_servicos', 'left');
+    
+        $res = $this->db->get();
+        return $res->result();
+    }
 }

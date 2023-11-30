@@ -30,6 +30,10 @@ class Perfil_cliente extends CI_Controller {
 
 		$dados_cliente = $this->Cliente_model->dados_cliente($cpf_usuario);
 		$dados['dados_cliente'] = $this->Cliente_model->dados_cliente($cpf_usuario);
+		$dados['historico_agendamentos_realizados'] = $this->Cliente_model->historico_agendamentos_realizados();
+		$dados['historico_profissionais_agendamentos'] = $this->Cliente_model->historico_profissionais_agendamentos();
+		$dados['historico_servicos_agendamentos'] = $this->Cliente_model->historico_servicos_agendamentos();
+
 
 		$this->load->view('layout/header');
 		$this->load->view('layout/sidebar');

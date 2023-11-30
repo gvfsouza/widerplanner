@@ -143,13 +143,13 @@
                                 <tbody>
                                     <?php foreach ($historico_agendamentos_realizados as $value) { ?>
                                         <tr>
-                                        <?php if (!empty($listar_servicos_agendamentos)) { ?>
-                                            <td><?php echo $listar_servicos_agendamentos[0]->nome_servico; ?></td>
+                                        <?php if (!empty($historico_servicos_agendamentos)) { ?>
+                                            <td><?php echo $historico_servicos_agendamentos[0]->nome_servico; ?></td>
                                     <?php } ?>
                                         <td style="font-size: 11px;"><?php echo formata_data($value->data_agenda); ?></td>
                                         <td style="font-size: 11px;"><?php echo $value->horarios_semana; ?></td>
-                                        <?php if (!empty($listar_profissionais_agendamentos)) { ?>
-                                        <td><?php echo $listar_profissionais_agendamentos[0]->nome_usuario; ?></td>
+                                        <?php if (!empty($historico_profissionais_agendamentos)) { ?>
+                                        <td><?php echo $historico_profissionais_agendamentos[0]->nome_usuario; ?></td>
                                     <?php } ?>
                                             </tr>
                                     <?php } ?>

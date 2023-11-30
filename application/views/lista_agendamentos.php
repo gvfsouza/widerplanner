@@ -194,9 +194,9 @@
                             <tbody>
                                 <tr>
                                 <th scope="row"><?php echo $value->nome_usuario; ?></th>
-                                <td><?php echo $value->data_agenda; ?></td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
+                                <td><?php echo formata_data($value->data_agenda); ?></td>
+                                <td><?php echo formata_hora($value->horarios_semana); ?></td>
+                                <td><?php echo $value->horarios_semana; ?></td>
                                 <td>@mdo</td>
                             </tbody>
                         </table>

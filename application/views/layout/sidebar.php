@@ -84,7 +84,7 @@
        <?php if ($this->session->fk_usuario != '' && $this->session->profissional == 'sim'): ?>
                 <li class="nav-item">
                     <a title="Gerenciar Usuários" class="nav-link" href="<?php echo base_url(); ?>listar_agendamentos">
-                        <i class="fas fa-solid fa-list-check icon" style="color:#879bc9"></i>
+                    <i class="fas fa-list-ul icon"></i>
                         <span class="link" style="color:#000000d9;font-weight: bold;font-size:17px">Agendamentos Realizados </span>
                     </a>
                 </li>

@@ -42,6 +42,7 @@ class Cadastro_funcionario extends CI_Controller
 			$cidade_usuario = $this->input->post('cidade_usuario');
 			$estado_usuario = $this->input->post('estado_usuario');
 			$fk_servicos = $this->input->post('fk_servicos');
+			$descricao_usuario = $this->input->post('descricao_usuario');
 
 			// FOTO - EXTENSÃO
 			$path = $_FILES['nome_usuario']['name'];
@@ -55,7 +56,7 @@ class Cadastro_funcionario extends CI_Controller
 
 			if (!isset($error)) {
 
-				$dados['cadastro_funcionario'] = $this->Funcionario_model->cadastro_profissional($foto_usuario, $nome_usuario, $cpf_usuario, $dt_nasc_usuario, $email_usuario, $sexo_usuario, $telefone_usuario, $cep_usuario, $logradouro_usuario, $numero_usuario, $complemento_usuario, $bairro_usuario, $cidade_usuario, $estado_usuario, $fk_servicos, md5(gerarSenhaAleatoria(8)));
+				$dados['cadastro_funcionario'] = $this->Funcionario_model->cadastro_profissional($foto_usuario, $nome_usuario, $cpf_usuario, $dt_nasc_usuario, $email_usuario, $sexo_usuario, $telefone_usuario, $cep_usuario, $logradouro_usuario, $numero_usuario, $complemento_usuario, $bairro_usuario, $cidade_usuario, $estado_usuario, $fk_servicos, $descricao_usuario, md5(gerarSenhaAleatoria(8)));
 
 				// Captura o ID do usuário recém-cadastrado
 				$fk_usuario = $dados['cadastro_funcionario'];

@@ -6,6 +6,7 @@ class Home_model extends CI_Model
     {
         $this->db->select('*');
         $this->db->from('usuario');
+        $this->db->where('profissional', 'sim');
 
         $res = $this->db->get();
         return $res->result();

@@ -310,11 +310,11 @@
                                         </fieldset>
 
                                         <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9;">
-                                            <?php if (!empty($listar_dados_produtos)): ?>
-                                                    <?php foreach ($listar_dados_produtos as $produto): ?>
+                                            <?php if (!empty($listar_dados_estabelecimento)): ?>
+                                                    <?php foreach ($listar_dados_estabelecimento as $value): ?>
                                                         <div class="card-container">
                                                             <div class="col">
-                                                                <?php if (!empty($produto->nome_produto)): ?>
+                                                                <?php if (!empty($value->nome_usuario)): ?>
                                                                     <div class="col card">
                                                                         <div class="img-placeholder">
                                                                             <!-- </?php if (!empty($produto->foto_produto)): ?>
@@ -323,10 +323,9 @@
                                                                             <img src="https://scontent-gru2-2.xx.fbcdn.net/v/t39.30808-6/302135953_502845391841930_8585948991976360589_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=TpFICO55swEAX9n1EQ0&_nc_ht=scontent-gru2-2.xx&oh=00_AfBT9HRfTe5yRcAsGZt3sDXK85JhzGBXzs-N63KIrkrQ-A&oe=656B55E5" alt="Logo Barbearia">
                                                                         </div>
                                                                         <div>
-                                                                            <h3>Wafaa</h3>
-                                                                            <p><i class="fa-solid fa-user"></i> Front End Web Developer</p>
-                                                                            <p><i class="fa-solid fa-paper-plane"></i> <a href="mailto:wafaa_cr@outlook.com">Email Me</a></p>
-                                                                            <p><i class="fa-solid fa-location-dot"></i> Auckland, New Zealand</p>
+                                                                            <h3><?php echo $value->nome_usuario; ?></h3>
+                                                                            <p><i class="fa-solid fa-user"></i><?php echo $value->descricao_usuario; ?></p>
+                                                                            <p><i class="fa-solid fa-paper-plane"></i><?php echo $value->email_usuario; ?></p>
                                                                         </div>
                                                                     </div>
                                                                 <?php endif; ?>

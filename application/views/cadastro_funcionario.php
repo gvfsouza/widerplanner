@@ -70,7 +70,7 @@
                                                             <option value="Prefiro não dizer">Prefiro não dizer</option>
                                                         </select>
                                                     </div>
-                                                    <div class="form-group col-md-4">
+                                                    <div class="form-group col-md-3">
                                                         <label for="" style="color: #4e4e4e;"><b>E-mail:</b></label>
                                                         <span id="emailResponsavel"></span>
                                                         <br>
@@ -80,6 +80,11 @@
                                                     <div class="col-md-3">
                                                         <label for="" style="color: #4e4e4e;"><b>Telefone:</b></label>
                                                         <input style="font-size:14px" type="text" class="form-control" id="telefone_usuario" name="telefone_usuario" value="">
+                                                    </div>
+
+                                                    <div class="col-md-3">
+                                                        <label for="" style="color: #4e4e4e;"><b>Telefone:</b></label>
+                                                        <textarea type="text" class="form-control" id="descricao_usuario" name="descricao_usuario" rows="2" cols="250"></textarea>
                                                     </div>
                                                 </div>
                                             </div>

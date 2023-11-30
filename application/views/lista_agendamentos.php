@@ -197,7 +197,7 @@
                                 <td><?php echo formata_data($value->data_agenda); ?></td>
                                 <td><?php echo $value->horarios_semana; ?></td>
                                 <td></td>
-                                <td>@mdo</td>
+                                <td><?php echo $value->fk_profissional; ?></td>
                             <?php } ?>
                             </tbody>
                         </table>

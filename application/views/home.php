@@ -304,7 +304,7 @@
                                             </div>
                                         </fieldset>
 
-                                        <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9; width: 100px">
+                                        <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9; width: 400px">
                                             <?php if (!empty($listar_dados_estabelecimento)): ?>
                                                     <?php foreach ($listar_dados_estabelecimento as $value): ?>
                                                         <div class="card-container">

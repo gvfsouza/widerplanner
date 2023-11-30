@@ -362,7 +362,7 @@
                                                                     <br>
                                                                     <p class="profile-desc"><?php echo $value->descricao_produto; ?></p>
                                                                     <center>
-                                                                        <p class="status-value" style="color: red">R$ &nbsp;<?php echo $value->valor_produto; ?>,00</p>
+                                                                        <p class="status-value" style="color: #879BC9">R$ &nbsp;<b><?php echo $value->valor_produto; ?>,00</b></p>
                                                                     </center>
                                                                 </div>
                                                             </div>

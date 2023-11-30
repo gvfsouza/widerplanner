@@ -200,7 +200,7 @@
                                 <td>@mdo</td>
                             </tbody>
                         </table>
-                        <?php break; } ?>
+                        <?php } ?>
                     </div>
                 </div>
                 <div class="col-12 text-center">

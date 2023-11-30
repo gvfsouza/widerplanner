@@ -117,7 +117,7 @@
 
            <li class="nav-item">
                <a title="Gerenciar Usuários" class="nav-link" href="<?php echo base_url(); ?>fotos_barbearia">
-                <i class="fas fa-user icon" style="color:#879bc9"></i>
+                <i class="fas fa-photo-video icon" style="color:#879bc9"></i>
                    <span class="link" style="color:#000000d9;font-weight: bold;font-size:17px">Fotos - Barbearia </span>
                </a>
            </li>

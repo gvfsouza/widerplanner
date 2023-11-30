@@ -97,10 +97,6 @@
         justify-content: space-between;
     }
 
-    .col {
-        width: 50%;
-    }
-
     .card {
         border: 1px solid #eee;
         border-radius: 15px;

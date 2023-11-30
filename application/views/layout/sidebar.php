@@ -81,7 +81,7 @@
            </a>
        </li>
 
-       <?php if ($this->session->fk_usuario != ''_ ?>
+       <?php if ($this->session->fk_usuario != '' && $this->session->profissional == 'sim'): ?>
             <li class="nav-item">
                 <a title="Gerenciar Usuários" class="nav-link" href="<?php echo base_url(); ?>listar_agendamentos">
                     <i class="fas fa-solid fa-clock icon" style="color:#879bc9"></i>

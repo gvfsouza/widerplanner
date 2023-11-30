@@ -260,7 +260,7 @@
                         <form action="">
                             <div class="p-3 bg-white">
                                 <div class="row">
-                                    <p class="col-md-12" style="font-size: 18px; text-align: end;"><strong>Barbearia GAVAZ </strong> <br> <strong>CNPJ:</strong> 31.458.001/0001-08 <br> <b>Dados de localização:</b> Av Dom Pedro I, 1226, Centro, Salto/SP - box 205 (ao lado do cinema)</p>
+                                    <p class="col-md-12" style="font-size: 18px; text-align: end;"><strong>Barbearia GAVAZ </strong> <br> <strong>CNPJ:</strong> 31.458.001/0001-08 <br> <b>Dados de localização:</b> Av Dom Pedro I, 1226, Centro, Salto/SP - box 205 (ao lado do cinema)<br> <b>Instagram:</b>@barbeariagavaz</p>
                                     <div class="col-12">
                                         <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 7px; border: 1px solid #879bc9;background: #879bc9;color: black;">
                                             <div>

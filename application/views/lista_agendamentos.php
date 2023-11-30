@@ -194,7 +194,7 @@
                             <tbody>
                                 <tr>
                                 <th scope="row"><?php echo $value->nome_usuario; ?></th>
-                                <td>Mark</td>
+                                <td><?php echo $value->data_agenda; ?></td>
                                 <td>Otto</td>
                                 <td>@mdo</td>
                                 <td>@mdo</td>

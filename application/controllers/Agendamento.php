@@ -31,30 +31,37 @@ class Agendamento extends CI_Controller
 			$fk_hora = $this->input->post('fk_hora');
 			$fk_servicos = $this->input->post('fk_servicos');
 			$fk_profissional = $this->input->post('fk_profissional');
-
+		
 			// Verifique se as variáveis estão definidas
 			if ($data_agenda && $fk_hora && $fk_servicos && $fk_profissional) {
 				$fk_usuario = $this->session->userdata('fk_usuario');
-
-				$fk_agenda = $this->Agendamento_model->cadastrar_agenda($data_agenda, $fk_hora, $fk_servicos, $fk_profissional, $fk_usuario);
-
-				if ($fk_agenda) {
-					if (is_array($fk_servicos)) {
-						foreach ($fk_servicos as $value) {
-							$this->Agendamento_model->associar_servico($fk_agenda, $value);
+		
+				// Verifique se já existe um agendamento com os mesmos valores
+				$agenda_existente = $this->Agendamento_model->verificar_agendamento_existente($data_agenda, $fk_hora, $fk_profissional);
+		
+				if (!$agenda_existente) {
+					$fk_agenda = $this->Agendamento_model->cadastrar_agenda($data_agenda, $fk_hora, $fk_servicos, $fk_profissional, $fk_usuario);
+		
+					if ($fk_agenda) {
+						if (is_array($fk_servicos)) {
+							foreach ($fk_servicos as $value) {
+								$this->Agendamento_model->associar_servico($fk_agenda, $value);
+							}
 						}
+		
+						// MENSAGEM SUCESSO AO CADASTRAR
+						$this->session->set_flashdata('sucesso', 'Agendamento realizado com sucesso!');
+					} else {
+						$this->session->set_flashdata('erro', 'Erro ao cadastrar a agenda.');
 					}
-
-					// MENSAGEM SUCESSO AO CADASTRAR
-					$this->session->set_flashdata('sucesso', 'Agendamento realizado com sucesso!');
 				} else {
-					$this->session->set_flashdata('erro', 'Erro ao cadastrar a agenda.');
+					$this->session->set_flashdata('erro', 'Já existe um agendamento para esta data, hora e profissional.');
 				}
-
+		
 			} else {
 				$this->session->set_flashdata('erro', 'Erro ao efetuar o agendamento de Horário.');
 			}
-		}
+		}		
 
 		$dados['listar_servicos'] = $this->Agendamento_model->listar_servicos();
 		$dados['listar_profissionais'] = $this->Agendamento_model->listar_profissionais();

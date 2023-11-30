@@ -183,43 +183,31 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th scope="col" style="font-size: 18px; color: #002b6c; font-weight: bold;">Cliente</th>
-                                    <th scope="col" style="font-size: 18px; color: #002b6c; font-weight: bold;">Data</th>
-                                    <th scope="col" style="font-size: 18px; color: #002b6c; font-weight: bold;">Hora</th>
-                                    <th scope="col" style="font-size: 18px; color: #002b6c; font-weight: bold;">Serviço</th>
-                                    <th scope="col" style="font-size: 18px; color: #002b6c; font-weight: bold;">Profissional</th>
+                                <th scope="col" style="font-size: 18px; color: #002b6c; font-weight: bold;">Cliente</th>
+                                <th scope="col" style="font-size: 18px; color: #002b6c; font-weight: bold;">Data</th>
+                                <th scope="col" style="font-size: 18px; color: #002b6c; font-weight: bold;">Hora</th>
+                                <th scope="col" style="font-size: 18px; color: #002b6c; font-weight: bold;">Serviço</th>
+                                <th scope="col" style="font-size: 18px; color: #002b6c; font-weight: bold;">Profissional</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($listar_agendamentos_realizados as $value) { ?>
-                                        <tr>
-                                            <td><?php echo $value->nome_usuario; ?></td>
-                                            <td><?php echo formata_data($value->data_agenda); ?></td>
-                                            <td><?php echo $value->horarios_semana; ?></td>
-                                            <!-- Adicionei colunas vazias para Profissional e Serviço -->
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                <?php } ?>
+                            <?php foreach ($listar_agendamentos_realizados as $value) { ?>
+                                <tr>
+                                <th scope="row"><?php echo $value->nome_usuario; ?></th>
+                                <td><?php echo formata_data($value->data_agenda); ?></td>
+                                <td><?php echo $value->horarios_semana; ?></td>
+                            <?php } ?>
+                            <?php foreach ($listar_profissionais_agendamentos as $value2) { ?>
+                                <td><?php echo $value2->nome_usuario; ?></td>
+                            <?php } ?>
+
+                            <?php foreach ($listar_servicos_agendamentos as $value3) { ?>
+                                <td><?php echo $value3->nome_servico; ?></td>
+                            <?php } ?>
                             </tbody>
                         </table>
                     </div>
                 </div>
-
-                <?php foreach ($listar_agendamentos_realizados as $value) { ?>
-                    <?php
-                    // Supondo que você tenha funções separadas para obter o nome do profissional e do serviço
-                    $nome_profissional = obter_nome_profissional($value->fk_profissional);
-                    $nome_servico = obter_nome_servico($value->fk_servico);
-                    ?>
-
-                    <tr>
-                        <!-- Mantenha as colunas anteriores -->
-                        <td><?php echo $nome_servico; ?></td>
-                        <td><?php echo $nome_profissional; ?></td>
-                    </tr>
-                <?php } ?>
-
                 <div class="col-12 text-center">
                     <span class="text-center" style="text-align: center">Sistema desenvolvido para cunho estudantil <br>
                         Projeto de Conclusão de Curso - Superior de

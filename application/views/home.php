@@ -329,7 +329,6 @@
                                             <?php endif; ?>
                                         </fieldset>
 
-
                                         <br>
 
                                         <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 7px; border: 1px solid #879bc9;background: #879bc9;color: black;">

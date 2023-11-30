@@ -180,7 +180,7 @@
                 <!-- FORMULÁRIO  -->
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="" role="tabpanel">
-                        <?php foreach($listar_agendamentos_realizados) {?>
+                        <?php foreach($listar_agendamentos_realizados as $value) {?>
                         <table class="table">
                             <thead>
                                 <tr>
@@ -193,7 +193,7 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                <th scope="row">1</th>
+                                <th scope="row"><?php $value->nome_usuario; ?></th>
                                 <td>Mark</td>
                                 <td>Otto</td>
                                 <td>@mdo</td>

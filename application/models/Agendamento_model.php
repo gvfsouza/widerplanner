@@ -75,7 +75,7 @@ class Agendamento_model extends CI_Model
         $this->db->where('data_agenda', $data_agenda);
         $this->db->where('fk_hora', $fk_hora);
         $this->db->where('fk_profissional', $fk_profissional);
-        $query = $this->db->get('sua_tabela_agendamento'); // substitua 'sua_tabela_agendamento' pelo nome real da sua tabela
+        $query = $this->db->get('agenda'); // substitua 'sua_tabela_agendamento' pelo nome real da sua tabela
 
         return $query->num_rows() > 0;
     }

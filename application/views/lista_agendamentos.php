@@ -183,11 +183,11 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                <th scope="col">Cliente</th>
-                                <th scope="col">Data</th>
-                                <th scope="col">Hora</th>
-                                <th scope="col">Serviço</th>
-                                <th scope="col">Profissional</th>
+                                <th scope="col" style="font-size: 18px; color: #002b6c; font-weight: bold;">Cliente</th>
+                                <th scope="col" style="font-size: 18px; color: #002b6c; font-weight: bold;">Data</th>
+                                <th scope="col" style="font-size: 18px; color: #002b6c; font-weight: bold;">Hora</th>
+                                <th scope="col" style="font-size: 18px; color: #002b6c; font-weight: bold;">Serviço</th>
+                                <th scope="col" style="font-size: 18px; color: #002b6c; font-weight: bold;">Profissional</th>
                                 </tr>
                             </thead>
                             <tbody>

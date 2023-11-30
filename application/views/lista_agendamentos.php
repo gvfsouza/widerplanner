@@ -192,18 +192,19 @@
                             </thead>
                             <tbody>
                             <?php foreach ($listar_agendamentos_realizados as $value) { ?>
-                                <tr>
-                                <th scope="row"><?php echo $value->nome_usuario; ?></th>
-                                <td><?php echo formata_data($value->data_agenda); ?></td>
-                                <td><?php echo $value->horarios_semana; ?></td>
-                            <?php } ?>
-                            <?php if (!empty($listar_profissionais_agendamentos)) { ?>
-                                <td><?php echo $listar_profissionais_agendamentos[0]->nome_usuario; ?></td>
+                                    <tr>
+                                    <th scope="row"><?php echo $value->nome_usuario; ?></th>
+                                    <td><?php echo formata_data($value->data_agenda); ?></td>
+                                    <td><?php echo $value->horarios_semana; ?></td>
+                                <?php if (!empty($listar_profissionais_agendamentos)) { ?>
+                                        <td><?php echo $listar_profissionais_agendamentos[0]->nome_usuario; ?></td>
+                                <?php } ?>
+
+                                <?php if (!empty($listar_servicos_agendamentos)) { ?>
+                                        <td><?php echo $listar_servicos_agendamentos[0]->nome_servico; ?></td>
+                                <?php } ?>
                             <?php } ?>
 
-                            <?php if (!empty($listar_servicos_agendamentos)) { ?>
-                                <td><?php echo $listar_servicos_agendamentos[0]->nome_servico; ?></td>
-                            <?php } ?>
                             </tbody>
                         </table>
                     </div>

@@ -304,13 +304,13 @@
                                             </div>
                                         </fieldset>
 
-                                        <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9; width: 350px">
+                                        <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9">
                                             <?php if (!empty($listar_dados_estabelecimento)): ?>
                                                     <?php foreach ($listar_dados_estabelecimento as $value): ?>
                                                         <div class="card-container">
                                                             <div class="col">
                                                                 <?php if (!empty($value->nome_usuario)): ?>
-                                                                    <div class="card usuario">
+                                                                    <div class="card usuario" style="width: 350px">
                                                                         <div class="img-placeholder">
                                                                             <?php if (!empty($value->foto_usuario)) { ?>
                                                                                 <center><img style='display:block; width:100px;height:100px;' id='base64image' src='data:image/jpeg;base64,<?php echo $value->foto_usuario ?>' /></center>

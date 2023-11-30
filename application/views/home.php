@@ -346,6 +346,7 @@
                                                         <div class="col">
                                                             <?php if (!empty($value->nome_produto)) : ?>
                                                                 <div class="card usuario" style="width: 100%;">
+                                                                <br>
                                                                     <div class="img">
                                                                         <?php if (!empty($value->foto_produto)) { ?>
                                                                             <center><img style="width:130px; height:150px" id='base64image' src='data:image/jpeg;base64,<?php echo $value->foto_produto ?>' /></center>

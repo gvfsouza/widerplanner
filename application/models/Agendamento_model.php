@@ -70,6 +70,16 @@ class Agendamento_model extends CI_Model
         return $res->result_array();
     }
 
+    public function verificar_agendamento_existente($data_agenda, $fk_hora, $fk_profissional)
+    {
+        $this->db->where('data_agenda', $data_agenda);
+        $this->db->where('fk_hora', $fk_hora);
+        $this->db->where('fk_profissional', $fk_profissional);
+        $query = $this->db->get('sua_tabela_agendamento'); // substitua 'sua_tabela_agendamento' pelo nome real da sua tabela
+
+        return $query->num_rows() > 0;
+    }
+
     public function listar_profissionais()
     {
         $this->db->select('*');

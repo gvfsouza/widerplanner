@@ -347,25 +347,23 @@
                                                     <div class="card-container">
                                                         <?php if (!empty($value->nome_produto)) : ?>
                                                             <div class="card" style="margin-top: 30px; margin-bottom: 30px; margin-left: 5px; margin-right: 5px; width: 100%;">
-                                                            <br>
-                                                            <div class="img-placeholder">
+                                                                <br>
+                                                                <div class="img-placeholder">
                                                                     <?php if (!empty($value->foto_produto)) { ?>
                                                                         <center><img style='width:130px; height:150px;' id='base64image' src='data:image/jpeg;base64,<?php echo $value->foto_produto ?>' /></center>
                                                                     <?php } else { ?>
                                                                         <center><img src="https://scontent-gru2-2.xx.fbcdn.net/v/t39.30808-6/302135953_502845391841930_8585948991976360589_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=TpFICO55swEAX9n1EQ0&_nc_ht=scontent-gru2-2.xx&oh=00_AfBT9HRfTe5yRcAsGZt3sDXK85JhzGBXzs-N63KIrkrQ-A&oe=656B55E5" alt="Logo Barbearia"></center>
                                                                     <?php } ?>
                                                                 </div>
-                                                                <br
-                                                                <div class="card-header-profile">
-                                                                    <div class="profile-info">
-                                                                        <h3 class="profile-name"><strong><?php echo $value->nome_produto; ?></strong>
-                                                                        </h3>
-                                                                        <br>
-                                                                        <p class="profile-desc"><?php echo $value->descricao_produto; ?></p>
-                                                                        <center>
-                                                                            <p class="status-value" style="color: red">R$ &nbsp;<?php echo $value->valor_produto; ?>,00></p>
-                                                                        </center>
-                                                                    </div>
+                                                                <br <div class="card-header-profile">
+                                                                <div class="profile-info">
+                                                                    <h3 class="profile-name"><strong><?php echo $value->nome_produto; ?></strong>
+                                                                    </h3>
+                                                                    <br>
+                                                                    <p class="profile-desc"><?php echo $value->descricao_produto; ?></p>
+                                                                    <center>
+                                                                        <p class="status-value" style="color: red">R$ &nbsp;<?php echo $value->valor_produto; ?>,00></p>
+                                                                    </center>
                                                                 </div>
                                                             </div>
                                                         <?php endif; ?>
@@ -375,24 +373,24 @@
                                                 <p>Nenhum produto encontrado.</p>
                                             <?php endif; ?>
                                         </fieldset>
-
-                                        <br>
                                     </div>
+                                    <br>
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
-                <div class="col-12 text-center">
-                    <span class="text-center" style="text-align: center">Sistema desenvolvido para cunho estudantil <br>
-                        Projeto de Conclusão de Curso - Superior de
-                        Tecnologia em Análise e Deselvolvimento de Sistemas <br> Centro Universitário Nossa Senhora do
-                        Patrocínio <br> Endereço: R. José Weissohn, 153 - Centro, Salto - SP, 13328-300</span>
-                </div>
-                <br>
             </div>
+            <div class="col-12 text-center">
+                <span class="text-center" style="text-align: center">Sistema desenvolvido para cunho estudantil <br>
+                    Projeto de Conclusão de Curso - Superior de
+                    Tecnologia em Análise e Deselvolvimento de Sistemas <br> Centro Universitário Nossa Senhora do
+                    Patrocínio <br> Endereço: R. José Weissohn, 153 - Centro, Salto - SP, 13328-300</span>
+            </div>
+            <br>
         </div>
     </div>
+</div>
 </div>
 
 <script>

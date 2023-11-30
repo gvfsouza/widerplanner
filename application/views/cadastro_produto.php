@@ -58,8 +58,8 @@
                                                         <br>
                                                         <input style="font-size:14px" type="text" class="form-control" id="nome_produto" name="nome_produto" value="">
                                                     </div>
-                                                    <div class="form-group col-md-5">
-                                                        <div class="input-group" style="margin-top: 30px;">
+                                                    <div class="form-group col-md-6">
+                                                        <div class="input-group">
                                                             <div class="input-group-prepend">
                                                                 <span class="input-group-text">$</span>
                                                             </div>

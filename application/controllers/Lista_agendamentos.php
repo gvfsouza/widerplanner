@@ -24,9 +24,14 @@ class Lista_agendamentos extends CI_Controller
 	
 	public function index()
 	{
+		// Conexão com o Model
+		$this->load->model('Agendamento_model');
+
+		$dados['listar_agendamentos_realizados'] = $this->Agendamento_model->listar_agendamentos_realizados();
+
 		$this->load->view('layout/header');
 		$this->load->view('layout/sidebar');
-		$this->load->view('lista_agendamentos');
+		$this->load->view('lista_agendamentos',$dados);
 		$this->load->view('layout/footer');
 	}
 }

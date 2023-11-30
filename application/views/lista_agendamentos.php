@@ -180,6 +180,7 @@
                 <!-- FORMULÁRIO  -->
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="" role="tabpanel">
+                        <?php foreach($listar_agendamentos_realizados) {?>
                         <table class="table">
                             <thead>
                                 <tr>
@@ -197,23 +198,9 @@
                                 <td>Otto</td>
                                 <td>@mdo</td>
                                 <td>@mdo</td>
-                                </tr>
-                                <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                                <td>@fat</td>
-                                </tr>
-                                <tr>
-                                <th scope="row">3</th>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
-                                <td>@twitter</td>
-                                </tr>
                             </tbody>
                         </table>
+                        <?php } ?>
                     </div>
                 </div>
                 <div class="col-12 text-center">

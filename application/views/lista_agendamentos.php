@@ -193,7 +193,7 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                <th scope="row"><?php $value->nome_usuario; ?></th>
+                                <th scope="row"><?php echo $value->nome_usuario; ?></th>
                                 <td>Mark</td>
                                 <td>Otto</td>
                                 <td>@mdo</td>

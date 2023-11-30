@@ -68,7 +68,7 @@
                                                         <input style="font-size:14px" type="number" class="form-control" id="qtde_produto" name="qtde_produto" value="">
                                                     </div>
                                                     <div class="form-group col-md-12">
-                                                        <label for=""><b>Descrição do Serviço:</b></label>
+                                                        <label for=""><b>Descrição do Produto:</b></label>
                                                         <br>
                                                         <textarea type="text" class="form-control" id="descricao_produto" name="descricao_produto" rows="3" cols="50"></textarea>
                                                     </div>

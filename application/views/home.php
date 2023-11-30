@@ -317,7 +317,7 @@
                                                                 <?php if (!empty($value->nome_usuario)): ?>
                                                                     <div class="col card">
                                                                         <div class="img-placeholder">
-                                                                            <?php if (empty($value->foto_usuario) > 0) { ?>
+                                                                            <?php if (!empty($value->foto_usuario)) { ?>
                                                                                 <img style='display:block; width:100px;height:100px;' id='base64image' src='data:image/jpeg;base64,<?php echo $value->foto_usuario ?>' />
                                                                             <?php } else { ?>
                                                                                 <img src="https://scontent-gru2-2.xx.fbcdn.net/v/t39.30808-6/302135953_502845391841930_8585948991976360589_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=TpFICO55swEAX9n1EQ0&_nc_ht=scontent-gru2-2.xx&oh=00_AfBT9HRfTe5yRcAsGZt3sDXK85JhzGBXzs-N63KIrkrQ-A&oe=656B55E5" alt="Logo Barbearia">

@@ -195,8 +195,8 @@
                                 <tr>
                                 <th scope="row"><?php echo $value->nome_usuario; ?></th>
                                 <td><?php echo formata_data($value->data_agenda); ?></td>
-                                <td><?php echo formata_hora($value->horarios_semana); ?></td>
                                 <td><?php echo $value->horarios_semana; ?></td>
+                                <td><?php echo $value->; ?></td>
                                 <td>@mdo</td>
                             </tbody>
                         </table>

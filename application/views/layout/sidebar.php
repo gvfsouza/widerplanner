@@ -81,6 +81,15 @@
            </a>
        </li>
 
+       <?php if ($this->session->profissional != '') { ?>
+       <li class="nav-item">
+           <a title="Gerenciar Usuários" class="nav-link" href="<?php echo base_url(); ?>listar_agendamentos">
+                <i class="fas fa-solid fa-clock icon" style="color:#879bc9"></i>
+                <span class="link" style="color:#000000d9;font-weight: bold;font-size:17px">Agendamentos Realizados </span>
+           </a>
+       </li>
+       <?php } ?>
+
        <li class="nav-item">
            <a title="Gerenciar Usuários" class="nav-link" href="<?php echo base_url(); ?>perfil_cliente">
             <i class="fas fa-user icon" style="color:#879bc9"></i>

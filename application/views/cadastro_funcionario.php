@@ -82,9 +82,9 @@
                                                         <input style="font-size:14px" type="text" class="form-control" id="telefone_usuario" name="telefone_usuario" value="">
                                                     </div>
 
-                                                    <div class="col-md-3">
-                                                        <label for="" style="color: #4e4e4e;"><b>Telefone:</b></label>
-                                                        <textarea type="text" class="form-control" id="descricao_usuario" name="descricao_usuario" rows="2" cols="250"></textarea>
+                                                    <div class="col-md-12">
+                                                        <label for="" style="color: #4e4e4e;"><b>Breve descrição de Função:</b></label>
+                                                        <textarea type="text" class="form-control" id="descricao_usuario" name="descricao_usuario" rows="1" cols="350"></textarea>
                                                     </div>
                                                 </div>
                                             </div>

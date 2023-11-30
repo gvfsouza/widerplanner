@@ -272,11 +272,11 @@
                                             </div>
                                         </fieldset>
 
-                                        <fieldset class="form-group " style="border: 1px solid #ddd; border-radius: 4px; border: 1px solid #879bc9;">
+                                        <fieldset class="form-group " style="border: 1px solid #ddd; border-radius: 4px; border: 1px solid #879bc9; display: flex; flex-wrap: wrap;">
                                             <?php foreach ($listar_dados_servicos as $value) { ?>
                                                 <div class="flex-container card-container">
                                                     <div class="card-container">
-                                                        <div class="card" style="margin-top: 30px; margin-left: 10px; margin-right: 10px">
+                                                        <div class="card" style="margin-top: 30px; margin-left: 10px; margin-right: 10px; width: 100%; height: 280px;">
                                                             <div class="card-header-profile">
                                                                 <div class="profile-info">
                                                                     <h3 class="profile-name"><strong><?php echo $value->nome_servico; ?></strong>

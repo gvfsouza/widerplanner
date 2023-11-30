@@ -196,8 +196,13 @@
                                 <th scope="row"><?php echo $value->nome_usuario; ?></th>
                                 <td><?php echo formata_data($value->data_agenda); ?></td>
                                 <td><?php echo $value->horarios_semana; ?></td>
-                                <td></td>
-                                <td><?php echo $value->fk_profissional; ?></td>
+                            <?php } ?>
+                            <?php foreach ($listar_profissionais_agendamentos as $value2) { ?>
+                                <td><?php echo $value2->nome_usuario; ?></td>
+                            <?php } ?>
+
+                            <?php foreach ($listar_servicos_agendamentos as $value3) { ?>
+                                <td><?php echo $value3->nome_servico; ?></td>
                             <?php } ?>
                             </tbody>
                         </table>

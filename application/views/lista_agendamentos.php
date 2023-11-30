@@ -179,32 +179,46 @@
 
                 <!-- FORMULÁRIO  -->
                 <div class="tab-content" id="myTabContent">
-    <div class="tab-pane fade show active" id="" role="tabpanel">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col" style="font-size: 18px; color: #002b6c; font-weight: bold;">Cliente</th>
-                    <th scope="col" style="font-size: 18px; color: #002b6c; font-weight: bold;">Data</th>
-                    <th scope="col" style="font-size: 18px; color: #002b6c; font-weight: bold;">Hora</th>
-                    <th scope="col" style="font-size: 18px; color: #002b6c; font-weight: bold;">Serviço</th>
-                    <th scope="col" style="font-size: 18px; color: #002b6c; font-weight: bold;">Profissional</th>
-                </tr>
-            </thead>
-            <tbody>
+                    <div class="tab-pane fade show active" id="" role="tabpanel">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col" style="font-size: 18px; color: #002b6c; font-weight: bold;">Cliente</th>
+                                    <th scope="col" style="font-size: 18px; color: #002b6c; font-weight: bold;">Data</th>
+                                    <th scope="col" style="font-size: 18px; color: #002b6c; font-weight: bold;">Hora</th>
+                                    <th scope="col" style="font-size: 18px; color: #002b6c; font-weight: bold;">Serviço</th>
+                                    <th scope="col" style="font-size: 18px; color: #002b6c; font-weight: bold;">Profissional</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach ($listar_agendamentos_realizados as $value) { ?>
+                                        <tr>
+                                            <td><?php echo $value->nome_usuario; ?></td>
+                                            <td><?php echo formata_data($value->data_agenda); ?></td>
+                                            <td><?php echo $value->horarios_semana; ?></td>
+                                            <!-- Adicionei colunas vazias para Profissional e Serviço -->
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                <?php } ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
                 <?php foreach ($listar_agendamentos_realizados as $value) { ?>
+                    <?php
+                    // Supondo que você tenha funções separadas para obter o nome do profissional e do serviço
+                    $nome_profissional = obter_nome_profissional($value->fk_profissional);
+                    $nome_servico = obter_nome_servico($value->fk_servico);
+                    ?>
+
                     <tr>
-                        <td><?php echo $value->nome_usuario; ?></td>
-                        <td><?php echo formata_data($value->data_agenda); ?></td>
-                        <td><?php echo $value->horarios_semana; ?></td>
-                        <!-- Adicionei as colunas Profissional e Serviço dentro do mesmo loop -->
-                        <td><?php echo $value->nome_profissional; ?></td>
-                        <td><?php echo $value->nome_servico; ?></td>
+                        <!-- Mantenha as colunas anteriores -->
+                        <td><?php echo $nome_servico; ?></td>
+                        <td><?php echo $nome_profissional; ?></td>
                     </tr>
                 <?php } ?>
-            </tbody>
-        </table>
-    </div>
-</div>
 
                 <div class="col-12 text-center">
                     <span class="text-center" style="text-align: center">Sistema desenvolvido para cunho estudantil <br>

@@ -340,7 +340,6 @@
                                             </div>
                                         </fieldset>
 
-
                                         <fieldset class="form-group " style="border: 1px solid #ddd; border-radius: 4px; border: 1px solid #879bc9; display: flex; flex-wrap: wrap; justify-content: space-around;">
                                             <?php if (!empty($listar_dados_produtos)) : ?>
                                                 <?php foreach ($listar_dados_produtos as $value) : ?>

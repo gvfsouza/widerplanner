@@ -261,7 +261,7 @@
                             <div class="p-3 bg-white">
                                 <div class="row">
                                     <div class="col-12">
-                                        <p>Barbearia GAVAZ  <br> CNPJ: 31.458.001/0001-08 <br> <b>Dados de localização:</b> Av Dom Pedro I, 1226, Centro, Salto/SP - box 205 (ao lado do cinema)</p>
+                                        <p style="font-size: 22px; float: right"><strong>Barbearia GAVAZ </strong> <br> CNPJ: 31.458.001/0001-08 <br> <b>Dados de localização:</b> Av Dom Pedro I, 1226, Centro, Salto/SP - box 205 (ao lado do cinema)</p>
                                         <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 7px; border: 1px solid #879bc9;background: #879bc9;color: black;">
                                             <div>
                                                 <legend class="form-group" style="color: white; font-size: 18px;">

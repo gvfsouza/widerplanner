@@ -347,7 +347,7 @@
                                                     <div class="card-container" style="flex: 0 0 20%;">
                                                         <?php if (!empty($value->nome_produto)) : ?>
                                                             <div class="card" style="margin-top: 30px; margin-bottom: 30px; margin-left: 5px; margin-right: 5px; width: 100%;">
-                                                                <div class="img-placeholder">
+                                                                <div class="foto">
                                                                     <?php if (!empty($value->foto_produto)) { ?>
                                                                         <center><img style='display:block; width:100px;height:100px;' id='base64image' src='data:image/jpeg;base64,<?php echo $value->foto_produto ?>' /></center>
                                                                     <?php } else { ?>

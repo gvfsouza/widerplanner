@@ -253,6 +253,7 @@
     <div class="container-fluid">
         <div class="card shadow mb-4">
             <div class="card-header py-3" style="background-color: white;">
+
                 <!-- FORMULÁRIO  -->
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="" role="tabpanel">
@@ -283,7 +284,7 @@
                                                         <center>
                                                             <p class="status-value">R$ &nbsp;<?php echo $value->valor_servico; ?>,00<i class="fas fa-clock"></i> &nbsp;&nbsp;<?php echo $value->duracao_servico; ?></p>
                                                         </center>
-                                                    </div>                                                    
+                                                    </div>
                                                 </div>
                                             <?php } ?>
                                         </fieldset>
@@ -339,76 +340,38 @@
                                             </div>
                                         </fieldset>
 
-                                        <fieldset class="form-group " style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9;">
-                                            <div class="card-container">
-                                                <div class="card-profile">
-                                                    <div class="card-header-profile">
-                                                        <center>
-                                                            <div class="produto-image"></div>
-                                                        </center>
-                                                        <div class="profile-info">
-                                                            <h3 class="produto"><strong>Corte de Cabelo</strong>
-                                                            </h3>
-                                                            <br>
-                                                            <p class="profile-desc">Descrição (se tiver)</p>
-                                                        </div>
-                                                    </div>
-                                                    <center>
-                                                        <p class="status-value">R$ &nbsp;45,00 <i class="fas fa-clock"></i> &nbsp;&nbsp;40 minutos</p>
-                                                    </center>
-                                                </div>
 
-                                                <div class="card-profile">
-                                                    <div class="card-header-profile">
-                                                        <center>
-                                                            <div class="produto-image"></div>
-                                                        </center>
-                                                        <div class="profile-info">
-                                                            <h3 class="profile-name"><strong>Barba</strong></h3>
-                                                            <br>
-                                                            <p class="produto-desc">Descrição (se tiver)</p>
-                                                        </div>
+                                        <fieldset class="form-group " style="border: 1px solid #ddd; border-radius: 4px; border: 1px solid #879bc9; display: flex; flex-wrap: wrap; justify-content: space-around;">
+                                            <?php if (!empty($listar_dados_produtos)) : ?>
+                                                <?php foreach ($listar_dados_produtos as $value) : ?>
+                                                    <div class="card-container" style="flex: 0 0 20%;">
+                                                        <?php if (!empty($value->nome_produto)) : ?>
+                                                            <div class="card" style="margin-top: 30px; margin-bottom: 30px; margin-left: 5px; margin-right: 5px; width: 100%;">
+                                                                <div class="img-placeholder">
+                                                                    <?php if (!empty($value->foto_produto)) { ?>
+                                                                        <center><img style='display:block; width:100px;height:100px;' id='base64image' src='data:image/jpeg;base64,<?php echo $value->foto_produto ?>' /></center>
+                                                                    <?php } else { ?>
+                                                                        <center><img src="https://scontent-gru2-2.xx.fbcdn.net/v/t39.30808-6/302135953_502845391841930_8585948991976360589_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=TpFICO55swEAX9n1EQ0&_nc_ht=scontent-gru2-2.xx&oh=00_AfBT9HRfTe5yRcAsGZt3sDXK85JhzGBXzs-N63KIrkrQ-A&oe=656B55E5" alt="Logo Barbearia"></center>
+                                                                    <?php } ?>
+                                                                </div>
+                                                                <div class="card-header-profile">
+                                                                    <div class="profile-info">
+                                                                        <h3 class="profile-name"><strong><?php echo $value->nome_produto; ?></strong>
+                                                                        </h3>
+                                                                        <br>
+                                                                        <p class="profile-desc"><?php echo $value->descricao_produto; ?></p>
+                                                                    </div>
+                                                                </div>
+                                                                <center>
+                                                                    <p class="status-value" style="color: red">R$ &nbsp;<?php echo $value->valor_produto; ?>,00></p>
+                                                                </center>
+                                                            </div>
+                                                        <?php endif; ?>
                                                     </div>
-                                                    <center>
-                                                        <p class="status-value">R$ &nbsp;45,00</p>
-                                                    </center>
-                                                </div>
-
-                                                <div class="card-profile">
-                                                    <div class="card-header-profile">
-                                                        <center>
-                                                            <div class="produto-image"></div>
-                                                        </center>
-                                                        <div class="profile-info">
-                                                            <h3 class="profile-name"><strong>Sobrancelhas</strong></h3>
-                                                            <br>
-                                                            <p class="profile-desc">Descrição (se tiver)</p>
-                                                        </div>
-                                                    </div>
-                                                    <center>
-                                                        <p class="status-value">R$ &nbsp;15,00 <i class="fas fa-clock"></i> &nbsp;&nbsp;10 minutos</p>
-                                                    </center>
-                                                </div>
-
-                                                <div class="card-profile">
-                                                    <div class="card-header-profile">
-                                                        <center>
-                                                            <div class="produto-image"></div>
-                                                        </center>
-                                                        <div class="profile-info">
-                                                            <h3 class="profile-name"><strong>Pigmentação em
-                                                                    barba</strong></h3>
-                                                            <br>
-                                                            <p class="profile-desc">Descrição (se tiver)</p>
-                                                        </div>
-                                                    </div>
-                                                    <center>
-                                                        <p class="status-value">R$ &nbsp;15,00 <i class="fas fa-clock"></i> &nbsp;&nbsp;1 hora</p>
-                                                    </center>
-                                                </div>
-                                            </div>
-                                            <a class="btn" href="#" role="button" style="float: right; background-color: #1cc88a; color: white; margin-bottom: 15px; position: fixed;">Agenda
-                                            </a>
+                                                <?php endforeach; ?>
+                                            <?php else : ?>
+                                                <p>Nenhum produto encontrado.</p>
+                                            <?php endif; ?>
                                         </fieldset>
 
                                         <br>

@@ -104,7 +104,7 @@ class Agendamento_model extends CI_Model
     public function listar_servicos_agendamentos() {
         $this->db->select('*');
         $this->db->from('agenda2');
-        $this->db->join('servicos', 'hora_disp.id_hora = agenda.fk_hora', 'left');
+        $this->db->join('servicos', 'servicos.id_servicos = agenda2.fk_servicos', 'left');
     
         $res = $this->db->get();
         return $res->result();

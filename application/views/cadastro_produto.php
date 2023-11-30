@@ -59,15 +59,9 @@
                                                         <input style="font-size:14px" type="text" class="form-control" id="nome_produto" name="nome_produto" value="">
                                                     </div>
                                                     <div class="form-group col-md-6">
-                                                        <div class="input-group">
-                                                            <div class="input-group-prepend">
-                                                                <span class="input-group-text">$</span>
-                                                            </div>
-                                                            <input type="number" class="form-control col-md-4" id="valor_produto" name="valor_produto" value="">
-                                                            <div class="input-group-append">
-                                                                <span class="input-group-text">.00</span>
-                                                            </div>
-                                                        </div>
+                                                        <label for="" style="color: #4e4e4e;"><b>Valor:</b></label>
+                                                        <br>
+                                                        <input type="text" class="form-control" id="valor_produto" name="valor_produto" value="">
                                                     </div>
                                                     <div class="form-group col-md-6">
                                                         <label for="" style="color: #4e4e4e;"><b>Quantidade:</b></label>

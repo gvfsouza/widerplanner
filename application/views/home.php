@@ -98,7 +98,6 @@
     }
 
     .card {
-        border: 1px solid #eee;
         border-radius: 15px;
         padding: 20px;
         background-color: #fff;
@@ -305,13 +304,13 @@
                                             </div>
                                         </fieldset>
 
-                                        <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9;">
+                                        <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9; width: 100px">
                                             <?php if (!empty($listar_dados_estabelecimento)): ?>
                                                     <?php foreach ($listar_dados_estabelecimento as $value): ?>
                                                         <div class="card-container">
                                                             <div class="col">
                                                                 <?php if (!empty($value->nome_usuario)): ?>
-                                                                    <div class="col card">
+                                                                    <div class="card usuario">
                                                                         <div class="img-placeholder">
                                                                             <?php if (!empty($value->foto_usuario)) { ?>
                                                                                 <img style='display:block; width:100px;height:100px;' id='base64image' src='data:image/jpeg;base64,<?php echo $value->foto_usuario ?>' />

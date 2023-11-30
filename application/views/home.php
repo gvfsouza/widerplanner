@@ -310,7 +310,7 @@
                                                     <div class="card-container" style="flex: 0 0 300px; margin: 10px;">
                                                         <div class="col">
                                                             <?php if (!empty($value->nome_usuario)) : ?>
-                                                                <div class="card usuario" style="width: 100%;">
+                                                                <div class="card usuario" style="width: 100%; height: 380px;">
                                                                     <div class="img-placeholder">
                                                                         <?php if (!empty($value->foto_usuario)) { ?>
                                                                             <center><img style='display:block; width:100px;height:100px;' id='base64image' src='data:image/jpeg;base64,<?php echo $value->foto_usuario ?>' /></center>

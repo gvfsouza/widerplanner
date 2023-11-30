@@ -276,7 +276,7 @@
                                             <?php foreach ($listar_dados_servicos as $value) { ?>
                                                 <div class="flex-container card-container">
                                                     <div class="card-container">
-                                                        <div class="card" style="margin-top: 30px; margin-left: 10px; margin-right: 10px; width: 100%; height: 280px;">
+                                                        <div class="card" style="margin-top: 30px; width: 100%;">
                                                             <div class="card-header-profile">
                                                                 <div class="profile-info">
                                                                     <h3 class="profile-name"><strong><?php echo $value->nome_servico; ?></strong>

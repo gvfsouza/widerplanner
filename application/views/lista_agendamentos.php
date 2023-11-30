@@ -180,7 +180,6 @@
                 <!-- FORMULÁRIO  -->
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="" role="tabpanel">
-                        <?php foreach($listar_agendamentos_realizados as $value) {?>
                         <table class="table">
                             <thead>
                                 <tr>
@@ -192,15 +191,16 @@
                                 </tr>
                             </thead>
                             <tbody>
+                            <?php foreach ($listar_agendamentos_realizados as $value) { ?>
                                 <tr>
                                 <th scope="row"><?php echo $value->nome_usuario; ?></th>
                                 <td><?php echo formata_data($value->data_agenda); ?></td>
                                 <td><?php echo $value->horarios_semana; ?></td>
                                 <td></td>
                                 <td>@mdo</td>
+                            <?php } ?>
                             </tbody>
                         </table>
-                        <?php } ?>
                     </div>
                 </div>
                 <div class="col-12 text-center">

@@ -344,11 +344,11 @@
                                         <fieldset class="form-group " style="border: 1px solid #ddd; border-radius: 4px; border: 1px solid #879bc9; display: flex; flex-wrap: wrap; justify-content: space-around;">
                                             <?php if (!empty($listar_dados_produtos)) : ?>
                                                 <?php foreach ($listar_dados_produtos as $value) : ?>
-                                                    <div class="card-container" style="flex: 0 0 20%;">
+                                                    <div class="card-container">
                                                         <?php if (!empty($value->nome_produto)) : ?>
                                                             <div class="card" style="margin-top: 30px; margin-bottom: 30px; margin-left: 5px; margin-right: 5px; width: 100%;">
                                                             <br>
-                                                            <div class="foto">
+                                                            <div class="img-placeholder">
                                                                     <?php if (!empty($value->foto_produto)) { ?>
                                                                         <center><img style='width:130px; height:150px;' id='base64image' src='data:image/jpeg;base64,<?php echo $value->foto_produto ?>' /></center>
                                                                     <?php } else { ?>

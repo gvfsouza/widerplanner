@@ -35,7 +35,7 @@ class Perfil_cliente extends CI_Controller {
 			$complemento_usuario = $this->input->post('complemento_usuario');
 
 			if (!isset($error)) {
-				$this->Cliente_model->editar_dados_pesoais($telefone_usuario,$cep_usuario,$numero_usuario,$complemento_usuario);
+				$this->Cliente_model->editar_dados_pesoais($value->id_usuario,$telefone_usuario,$cep_usuario,$numero_usuario,$complemento_usuario);
 				$this->session->set_flashdata('sucesso', 'Alterações efetuadas com sucesso!');
 				redirect('cadastro_cliente');
 			} else {

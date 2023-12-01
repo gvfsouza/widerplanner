@@ -212,7 +212,4 @@
 
     // Evento que dispara a consulta ao preencher o CEP
     document.getElementById('cep_usuario').addEventListener('blur', preencherEndereco);
-
-    document.getElementById('logradouro_hidden').value = document.getElementById('logradouro').value;
-
 </script>

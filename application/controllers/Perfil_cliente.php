@@ -37,7 +37,7 @@ class Perfil_cliente extends CI_Controller {
 			if (!isset($error)) {
 				$this->Cliente_model->editar_dados_pesoais($value->id_usuario,$telefone_usuario,$cep_usuario,$numero_usuario,$complemento_usuario);
 				$this->session->set_flashdata('sucesso', 'Alterações efetuadas com sucesso!');
-				redirect('cadastro_cliente');
+				redirect('perfil_cliente');
 			} else {
 				$this->session->set_flashdata('erro', 'Erro ao atualizar os dados.');
 			}

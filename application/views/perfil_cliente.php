@@ -91,7 +91,7 @@
                                                                 <div class="row">
                                                                     <div class="dados-cliente col-md-5">
                                                                         <label for="" style="color: #77787a;">Complemento:</label>
-                                                                        <input style="font-size:14px" type="text" class="form-control" id="complemento" name="complemento" value="<?php echo $value->complemento_usuario; ?>" disabled>
+                                                                        <input style="font-size:14px" type="text" class="form-control" id="complemento" name="complemento" value="<?php echo $value->complemento_usuario; ?>">
                                                                     </div>
                                                                     <div class="dados-cliente col-md-7">
                                                                         <label for="" style="color: #77787a;">Bairro:</label>

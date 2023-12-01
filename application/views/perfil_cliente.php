@@ -76,7 +76,7 @@
                                                                 <div class="row">
                                                                     <div class="dados-cliente col-md-3">
                                                                         <label for="" style="color: #77787a;">CEP:</label>
-                                                                        <input style="font-size:14px" type="text" class="form-control" id="cep" name="cep" value="<?php echo $value->cep_usuario; ?>" onkeypress="mascara(this, cep)" oninput="formatarCep(this)" maxlength="9">
+                                                                        <input style="font-size:14px" type="text" class="form-control" id="cep_usuario" name="cep_usuario" value="<?php echo $value->cep_usuario; ?>" onkeypress="mascara(this, cep)" oninput="formatarCep(this)" maxlength="9">
                                                                     </div>
                                                                     <div class="dados-cliente col-md-7">
                                                                         <label for="" style="color: #77787a;">Logradouro:</label>
@@ -177,7 +177,7 @@
 
     // Função para buscar e preencher os campos de endereço
     function preencherEndereco() {
-        var cep = formatarCep(document.getElementById('cep').value);
+        var cep = formatarCep(document.getElementById('cep_usuario').value);
 
         if (cep.length === 8) {
             // Fazer a consulta à API ViaCEP
@@ -193,5 +193,5 @@
     }
 
     // Evento que dispara a consulta ao preencher o CEP
-    document.getElementById('cep').addEventListener('blur', preencherEndereco);
+    document.getElementById('cep_usuario').addEventListener('blur', preencherEndereco);
 </script>

@@ -76,7 +76,7 @@
                                                                 <div class="row">
                                                                     <div class="dados-cliente col-md-3">
                                                                         <label for="" style="color: #77787a;">CEP:</label>
-                                                                        <input style="font-size:14px" type="text" class="form-control" id="cep" name="cep" value="<?php echo $value->cep_usuario; ?>">
+                                                                        <input style="font-size:14px" type="text" class="form-control" id="cep" name="cep" value="<?php echo $value->cep_usuario; ?>" onkeypress="mascara(this, cep)" oninput="formatarCep(this)" maxlength="9">
                                                                     </div>
                                                                     <div class="dados-cliente col-md-7">
                                                                         <label for="" style="color: #77787a;">Logradouro:</label>
@@ -169,3 +169,29 @@
         </div>
     </div>
 </div>
+<script>
+    // Função para formatar o CEP (removendo caracteres não numéricos)
+    function formatarCep(cep) {
+        return cep.replace(/\D/g, '');
+    }
+
+    // Função para buscar e preencher os campos de endereço
+    function preencherEndereco() {
+        var cep = formatarCep(document.getElementById('cep_usuario').value);
+
+        if (cep.length === 8) {
+            // Fazer a consulta à API ViaCEP
+            $.getJSON('https://viacep.com.br/ws/' + cep + '/json/', function(data) {
+                if (!data.erro) {
+                    document.getElementById('logradouro_usuario').value = data.logradouro;
+                    document.getElementById('bairro_usuario').value = data.bairro;
+                    document.getElementById('cidade_usuario').value = data.localidade;
+                    document.getElementById('estado_usuario').value = data.uf;
+                }
+            });
+        }
+    }
+
+    // Evento que dispara a consulta ao preencher o CEP
+    document.getElementById('cep_usuario').addEventListener('blur', preencherEndereco);
+</script>

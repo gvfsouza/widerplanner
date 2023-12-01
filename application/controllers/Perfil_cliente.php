@@ -33,6 +33,11 @@ class Perfil_cliente extends CI_Controller {
 			$cep_usuario = $this->input->post('cep_usuario');
 			$numero_usuario = $this->input->post('numero_usuario');
 			$complemento_usuario = $this->input->post('complemento_usuario');
+
+			if (!isset($error)) {
+			
+			}
+
 		}
 
 		$dados_cliente = $this->Cliente_model->dados_cliente($cpf_usuario);

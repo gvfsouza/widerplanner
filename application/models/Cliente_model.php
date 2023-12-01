@@ -85,7 +85,7 @@ class Cliente_model extends CI_Model
     }
 
 
-    public function editar_dados_pesoais($id_usuario,$telefone_usuario,$cep_usuario,$numero_usuario,$complemento_usuario)
+    public function editar_dados_pesoais($id_usuario, $telefone_usuario, $cep_usuario, $numero_usuario, $complemento_usuario)
     {
         $data = array(
             'telefone_usuario' => $telefone_usuario,
@@ -97,4 +97,5 @@ class Cliente_model extends CI_Model
         $this->db->where('id_usuario', $id_usuario);
         $this->db->update('usuario', $data);
     }
+
 }

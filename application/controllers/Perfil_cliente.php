@@ -22,7 +22,7 @@ class Perfil_cliente extends CI_Controller {
 		return $data;
 	}
 	
-	public function index($id_usuario)
+	public function index()
 	{
 		$this->load->model('Cliente_model');
 

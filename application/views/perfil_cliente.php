@@ -25,7 +25,7 @@
                 <!-- FORMULÁRIO  -->
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="" role="tabpanel">
-                        <form action="">
+                        <form action="" method="post">
                             <div class="p-3 bg-white">
                                 <div class="row">
                                     <div class="col-12">
@@ -38,82 +38,83 @@
                                         </fieldset>
                                         <?php foreach ($dados_cliente as $value) { ?>
 
-                                                    <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9;">
-                                                        <div class="row">
-                                                            <div style="margin-left:10px;"></div>
+                                                        <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9;">
+                                                            <div class="row">
+                                                                <div style="margin-left:10px;"></div>
 
-                                                            <div class="col">
+                                                                <div class="col">
 
-                                                                <div class="row">
-                                                                    <legend class="form-group" style="color: #879bc9; font-size: 18px; margin-left:14px">
-                                                                        <strong>Dados Pessoais</strong>
-                                                                    </legend>
-                                                                    <div class="form-group col-md-6">
-                                                                        <label for="" style="color: #77787a;">Nome:</label>
-                                                                        <br>
-                                                                        <input style="font-size:14px" type="text" class="form-control" id="nome" name="nome" value="<?php echo $value->nome_usuario; ?>" disabled>
+                                                                    <div class="row">
+                                                                        <legend class="form-group" style="color: #879bc9; font-size: 18px; margin-left:14px">
+                                                                            <strong>Dados Pessoais</strong>
+                                                                        </legend>
+                                                                        <div class="form-group col-md-6">
+                                                                            <label for="" style="color: #77787a;">Nome:</label>
+                                                                            <br>
+                                                                            <input style="font-size:14px" type="text" class="form-control" id="nome" name="nome" value="<?php echo $value->nome_usuario; ?>" disabled>
+                                                                        </div>
+                                                                        <div class="dados-cliente form-group col-md-6">
+                                                                            <label for="" style="color: #77787a;">CPF:</label>
+                                                                            <br>
+                                                                            <input type="text" class="form-control" id="cpd" name="cpf" value="<?php echo $value->cpf_usuario; ?>" disabled>
+                                                                        </div>
+                                                                        <div class="dados-cliente form-group col-md-4">
+                                                                            <label for="" style="color: #77787a;">Data Nasc.:</label>
+                                                                            <br>
+                                                                            <input type="date" class="form-control" id="dt_nascimento" name="dt_nascimento" value="<?php echo $value->dt_nasc_usuario; ?>" disabled>
+                                                                        </div>
+                                                                        <div class="dados-cliente form-group col-md-2">
+                                                                            <label for="" style="color: #77787a;">Sexo:</label>
+                                                                            <br>
+                                                                            <input style="font-size:14px" type="text" class="form-control" id="sexo" name="sexo" value="<?php echo $value->sexo_usuario; ?>" disabled>
+                                                                        </div>
+                                                                        <div class="dados-cliente col-md-6">
+                                                                            <label for="" style="color: #77787a;">Celular:</label>
+                                                                            <input style="font-size:14px" type="text" class="form-control" id="celular" name="celular" value="<?php echo $value->telefone_usuario; ?>">
+                                                                        </div>
                                                                     </div>
-                                                                    <div class="dados-cliente form-group col-md-6">
-                                                                        <label for="" style="color: #77787a;">CPF:</label>
-                                                                        <br>
-                                                                        <input type="text" class="form-control" id="cpd" name="cpf" value="<?php echo $value->cpf_usuario; ?>" disabled>
+                                                                    <div class="row">
+                                                                        <div class="dados-cliente col-md-3">
+                                                                            <label for="" style="color: #77787a;">CEP:</label>
+                                                                            <input style="font-size:14px" type="text" class="form-control" id="cep_usuario" name="cep_usuario" value="<?php echo $value->cep_usuario; ?>" onkeypress="mascara(this, cep)" oninput="formatarCep(this)" maxlength="9">
+                                                                        </div>
+                                                                        <div class="dados-cliente col-md-7">
+                                                                            <label for="" style="color: #77787a;">Logradouro:</label>
+                                                                            <input style="font-size:14px" type="text" class="form-control" id="logradouro" name="logradouro" value="<?php echo $value->logradouro_usuario; ?>" disabled>
+                                                                        </div>
+                                                                        <div class="dados-cliente col-md-2">
+                                                                            <label for="" style="color: #77787a;">N°:</label>
+                                                                            <input style="font-size:14px" type="text" class="form-control" id="numero" name="numero" value="<?php echo $value->numero_usuario; ?>">
+                                                                        </div>
                                                                     </div>
-                                                                    <div class="dados-cliente form-group col-md-4">
-                                                                        <label for="" style="color: #77787a;">Data Nasc.:</label>
-                                                                        <br>
-                                                                        <input type="date" class="form-control" id="dt_nascimento" name="dt_nascimento" value="<?php echo $value->dt_nasc_usuario; ?>" disabled>
-                                                                    </div>
-                                                                    <div class="dados-cliente form-group col-md-2">
-                                                                        <label for="" style="color: #77787a;">Sexo:</label>
-                                                                        <br>
-                                                                        <input style="font-size:14px" type="text" class="form-control" id="sexo" name="sexo" value="<?php echo $value->sexo_usuario; ?>" disabled>
-                                                                    </div>
-                                                                    <div class="dados-cliente col-md-6">
-                                                                        <label for="" style="color: #77787a;">Celular:</label>
-                                                                        <input style="font-size:14px" type="text" class="form-control" id="celular" name="celular" value="<?php echo $value->telefone_usuario; ?>">
+                                                                    <br>
+                                                                    <div class="row">
+                                                                        <div class="dados-cliente col-md-5">
+                                                                            <label for="" style="color: #77787a;">Complemento:</label>
+                                                                            <input style="font-size:14px" type="text" class="form-control" id="complemento" name="complemento" value="<?php echo $value->complemento_usuario; ?>">
+                                                                        </div>
+                                                                        <div class="dados-cliente col-md-7">
+                                                                            <label for="" style="color: #77787a;">Bairro:</label>
+                                                                            <input style="font-size:14px" type="text" class="form-control" id="bairro" name="bairro" value="<?php echo $value->bairro_usuario; ?>" disabled>
+                                                                        </div>
+                                                                    </div><br>
+                                                                    <div class="row">
+                                                                        <div class="dados-cliente col-md-7">
+                                                                            <label for="" style="color: #77787a;">Cidade:</label>
+                                                                            <input style="font-size:14px" type="text" class="form-control" id="cidade" name="cidade" value="<?php echo $value->cidade_usuario; ?>" disabled>
+                                                                        </div>
+                                                                        <div class="dados-cliente col-md-5">
+                                                                            <label for="" style="color: #77787a;">UF:</label>
+                                                                            <input style="font-size:14px" type="text" class="form-control" id="uf" name="uf" value="<?php echo $value->estado_usuario; ?>" disabled>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="row">
-                                                                    <div class="dados-cliente col-md-3">
-                                                                        <label for="" style="color: #77787a;">CEP:</label>
-                                                                        <input style="font-size:14px" type="text" class="form-control" id="cep_usuario" name="cep_usuario" value="<?php echo $value->cep_usuario; ?>" onkeypress="mascara(this, cep)" oninput="formatarCep(this)" maxlength="9">
-                                                                    </div>
-                                                                    <div class="dados-cliente col-md-7">
-                                                                        <label for="" style="color: #77787a;">Logradouro:</label>
-                                                                        <input style="font-size:14px" type="text" class="form-control" id="logradouro" name="logradouro" value="<?php echo $value->logradouro_usuario; ?>" disabled>
-                                                                    </div>
-                                                                    <div class="dados-cliente col-md-2">
-                                                                        <label for="" style="color: #77787a;">N°:</label>
-                                                                        <input style="font-size:14px" type="text" class="form-control" id="numero" name="numero" value="<?php echo $value->numero_usuario; ?>">
-                                                                    </div>
-                                                                </div>
-                                                                <br>
-                                                                <div class="row">
-                                                                    <div class="dados-cliente col-md-5">
-                                                                        <label for="" style="color: #77787a;">Complemento:</label>
-                                                                        <input style="font-size:14px" type="text" class="form-control" id="complemento" name="complemento" value="<?php echo $value->complemento_usuario; ?>">
-                                                                    </div>
-                                                                    <div class="dados-cliente col-md-7">
-                                                                        <label for="" style="color: #77787a;">Bairro:</label>
-                                                                        <input style="font-size:14px" type="text" class="form-control" id="bairro" name="bairro" value="<?php echo $value->bairro_usuario; ?>" disabled>
-                                                                    </div>
-                                                                </div><br>
-                                                                <div class="row">
-                                                                    <div class="dados-cliente col-md-7">
-                                                                        <label for="" style="color: #77787a;">Cidade:</label>
-                                                                        <input style="font-size:14px" type="text" class="form-control" id="cidade" name="cidade" value="<?php echo $value->cidade_usuario; ?>" disabled>
-                                                                    </div>
-                                                                    <div class="dados-cliente col-md-5">
-                                                                        <label for="" style="color: #77787a;">UF:</label>
-                                                                        <input style="font-size:14px" type="text" class="form-control" id="uf" name="uf" value="<?php echo $value->estado_usuario; ?>" disabled>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                    </fieldset>
+                                                        </fieldset>
                                         <?php } ?>
                                     </div>
                                 </div>
                             </div>
+                            <button href="<?php echo base_url(); ?>/perfil_cliente/" type="submit" name="salvar" class="btn-lg btn" style="border: none;background-color: #82a4ef;color: white;    margin-right: 17px;">Salvar</button>
                         </form>
                     </div>
                 </div>
@@ -142,22 +143,21 @@
                                 </thead>
                                 <tbody>
                                     <?php foreach ($historico_agendamentos_realizados as $value) { ?>
-                                        <tr>
-                                        <?php if (!empty($historico_servicos_agendamentos)) { ?>
-                                            <td><?php echo $historico_servicos_agendamentos[0]->nome_servico; ?></td>
-                                    <?php } ?>
-                                        <td style="font-size: 11px;"><?php echo formata_data($value->data_agenda); ?></td>
-                                        <td style="font-size: 11px;"><?php echo $value->horarios_semana; ?></td>
-                                        <?php if (!empty($historico_profissionais_agendamentos)) { ?>
-                                        <td><?php echo $historico_profissionais_agendamentos[0]->nome_usuario; ?></td>
-                                    <?php } ?>
-                                            </tr>
+                                            <tr>
+                                            <?php if (!empty($historico_servicos_agendamentos)) { ?>
+                                                    <td><?php echo $historico_servicos_agendamentos[0]->nome_servico; ?></td>
+                                        <?php } ?>
+                                            <td style="font-size: 11px;"><?php echo formata_data($value->data_agenda); ?></td>
+                                            <td style="font-size: 11px;"><?php echo $value->horarios_semana; ?></td>
+                                            <?php if (!empty($historico_profissionais_agendamentos)) { ?>
+                                                <td><?php echo $historico_profissionais_agendamentos[0]->nome_usuario; ?></td>
+                                        <?php } ?>
+                                                </tr>
                                     <?php } ?>
                                 </tbody>
                             </table>
                         </fieldset>
                     </div>
-                    <button href="<?php echo base_url(); ?>/perfil_cliente/" type="submit" name="salvar" class="btn-lg btn" style="border: none;background-color: #82a4ef;color: white;    margin-right: 17px;">Salvar</button>
 
                 </form>
 

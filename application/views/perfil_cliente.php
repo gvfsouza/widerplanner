@@ -70,13 +70,13 @@
                                                                     </div>
                                                                     <div class="dados-cliente col-md-6">
                                                                         <label for="" style="color: #77787a;">Celular:</label>
-                                                                        <input style="font-size:14px" type="text" class="form-control" id="celular" name="celular" value="<?php echo $value->telefone_usuario; ?>" disabled>
+                                                                        <input style="font-size:14px" type="text" class="form-control" id="celular" name="celular" value="<?php echo $value->telefone_usuario; ?>">
                                                                     </div>
                                                                 </div>
                                                                 <div class="row">
                                                                     <div class="dados-cliente col-md-3">
                                                                         <label for="" style="color: #77787a;">CEP:</label>
-                                                                        <input style="font-size:14px" type="text" class="form-control" id="cep" name="cep" value="<?php echo $value->cep_usuario; ?>" disabled>
+                                                                        <input style="font-size:14px" type="text" class="form-control" id="cep" name="cep" value="<?php echo $value->cep_usuario; ?>">
                                                                     </div>
                                                                     <div class="dados-cliente col-md-7">
                                                                         <label for="" style="color: #77787a;">Logradouro:</label>
@@ -84,7 +84,7 @@
                                                                     </div>
                                                                     <div class="dados-cliente col-md-2">
                                                                         <label for="" style="color: #77787a;">N°:</label>
-                                                                        <input style="font-size:14px" type="text" class="form-control" id="numero" name="numero" value="<?php echo $value->numero_usuario; ?>" disabled>
+                                                                        <input style="font-size:14px" type="text" class="form-control" id="numero" name="numero" value="<?php echo $value->numero_usuario; ?>">
                                                                     </div>
                                                                 </div>
                                                                 <br>

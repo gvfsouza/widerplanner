@@ -157,7 +157,10 @@
                             </table>
                         </fieldset>
                     </div>
+                    <button href="<?php echo base_url(); ?>/perfil_cliente/" type="submit" name="salvar" class="btn-lg btn" style="border: none;background-color: #82a4ef;color: white;    margin-right: 17px;">Salvar</button>
+
                 </form>
+
                 <div class="col-12 text-center">
                     <span style="text-align: center">Sistema desenvolvido para cunho estudantil <br>
                         Projeto de Conclusão de Curso - Superior de Tecnologia em Análise e Deselvolvimento de Sistemas

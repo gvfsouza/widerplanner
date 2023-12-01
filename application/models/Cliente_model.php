@@ -49,7 +49,8 @@ class Cliente_model extends CI_Model
         return $res->result();
     }
 
-    public function historico_agendamentos_realizados() {
+    public function historico_agendamentos_realizados()
+    {
         $this->db->select('*');
         $this->db->from('agenda');
         $this->db->join('hora_disp', 'hora_disp.id_hora = agenda.fk_hora', 'left');
@@ -57,27 +58,43 @@ class Cliente_model extends CI_Model
         $this->db->where('usuario.profissional !=', 'sim');
         $this->db->where('fk_usuario', $this->session->userdata('fk_usuario'));
 
-    
+
         $res = $this->db->get();
         return $res->result();
     }
 
-    public function historico_profissionais_agendamentos() {
+    public function historico_profissionais_agendamentos()
+    {
         $this->db->select('*');
         $this->db->from('agenda');
         $this->db->join('usuario', 'usuario.id_usuario = agenda.fk_profissional', 'left');
         $this->db->where('usuario.profissional', 'sim');
-    
+
         $res = $this->db->get();
         return $res->result();
     }
 
-    public function historico_servicos_agendamentos() {
+    public function historico_servicos_agendamentos()
+    {
         $this->db->select('*');
         $this->db->from('agenda2');
         $this->db->join('servicos', 'servicos.id_servicos = agenda2.fk_servicos', 'left');
-    
+
         $res = $this->db->get();
         return $res->result();
+    }
+
+
+    public function editar_dados_pesoais($id_usuario,$telefone_usuario,$cep_usuario,$numero_usuario,$complemento_usuario)
+    {
+        $data = array(
+            'telefone_usuario' => $telefone_usuario,
+            'cep_usuario' => $cep_usuario,
+            'numero_usuario' => $numero_usuario,
+            'complemento_usuario' => $complemento_usuario,
+        );
+
+        $this->db->where('id_usuario', $id_usuario);
+        $this->db->update('usuario', $data);
     }
 }

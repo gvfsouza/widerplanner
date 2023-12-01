@@ -22,11 +22,18 @@ class Perfil_cliente extends CI_Controller {
 		return $data;
 	}
 	
-	public function index()
+	public function index($id_usuario)
 	{
 		$this->load->model('Cliente_model');
 
 		$cpf_usuario = $this->session->userdata('cpf_usuario');
+
+		if (isset($_POST['salvar']) or isset($_GET['telefone_usuario'])) {
+			$telefone_usuario = $this->input->post('telefone_usuario');
+			$cep_usuario = $this->input->post('cep_usuario');
+			$numero_usuario = $this->input->post('numero_usuario');
+			$complemento_usuario = $this->input->post('complemento_usuario');
+		}
 
 		$dados_cliente = $this->Cliente_model->dados_cliente($cpf_usuario);
 		$dados['dados_cliente'] = $this->Cliente_model->dados_cliente($cpf_usuario);

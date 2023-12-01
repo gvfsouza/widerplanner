@@ -177,7 +177,7 @@
 
     // Função para buscar e preencher os campos de endereço
     function preencherEndereco() {
-        var cep = formatarCep(document.getElementById('cep_usuario').value);
+        var cep = formatarCep(document.getElementById('cep').value);
 
         if (cep.length === 8) {
             // Fazer a consulta à API ViaCEP
@@ -193,5 +193,5 @@
     }
 
     // Evento que dispara a consulta ao preencher o CEP
-    document.getElementById('cep_usuario').addEventListener('blur', preencherEndereco);
+    document.getElementById('cep').addEventListener('blur', preencherEndereco);
 </script>

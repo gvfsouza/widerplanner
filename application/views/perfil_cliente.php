@@ -92,11 +92,14 @@
                                                                             </div>
                                                                             <div class="dados-cliente col-md-7">
                                                                                 <label for="" style="color: #77787a;">Logradouro:</label>
-                                                                                <input style="font-size:14px" type="text" class="form-control" id="logradouro" name="logradouro" value="<?php echo $value->logradouro_usuario; ?>" disabled>
+                                                                                <input type="hidden" id="logradouro_hidden" name="logradouro" value="<?php echo $value->logradouro_usuario; ?>">
+                                                                                <input style="font-size:14px" type="text" class="form-control" id="logradouro" value="<?php echo $value->logradouro_usuario; ?>" disabled>
                                                                             </div>
                                                                             <div class="dados-cliente col-md-2">
                                                                                 <label for="" style="color: #77787a;">N°:</label>
-                                                                                <input style="font-size:14px" type="text" class="form-control" id="numero" name="numero" value="<?php echo $value->numero_usuario; ?>">
+                                                                                <input type="hidden" id="numero_hidden" name="numero" value="<?php echo $value->numero_usuario; ?>">
+
+                                                                                <input style="font-size:14px" type="text" class="form-control" id="numero" value="<?php echo $value->numero_usuario; ?>">
                                                                             </div>
                                                                         </div>
                                                                         <br>
@@ -209,4 +212,7 @@
 
     // Evento que dispara a consulta ao preencher o CEP
     document.getElementById('cep_usuario').addEventListener('blur', preencherEndereco);
+
+    document.getElementById('logradouro_hidden').value = document.getElementById('logradouro').value;
+
 </script>

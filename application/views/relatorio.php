@@ -95,3 +95,108 @@
         </div>
     </div>
 </div>
+
+<script>
+    var options = {
+        series: [{
+            data: [
+                <?php
+                foreach ($listar_animais_mes as $value) {
+
+                ?>
+                    <?php echo $value->quantidade; ?>,
+                <?php
+                }
+                ?>
+            ]
+        }],
+        title: {
+            // Puxa o ano atual
+            text: 'Animais Microchipados (<?php echo $value->ano; ?>)',
+            align: 'center',
+        },
+        categories: {
+            align: 'right',
+        },
+        // tamanho do gráfico
+        chart: {
+            height: 480,
+            type: 'bar',
+            events: {
+                click: function(chart, w, e) {
+                    // console.log(chart, w, e)
+                }
+            }
+        },
+        colors: ['#FAAB00', '#0DCB93', '#F8A500', '#FF2344', '#775DD0',
+            '#64b2ee', '#9CE4CB', '#FFC95C', '#FC7186', '#C4B9E7',
+            '#B1D3EC', '#0DB67B', '#FFE1A4', '#F8B7C0',
+
+            '#FF7700', '#9400D3', '#fbff12', '#708090', '#ff206e', '#adf6b1', '#41ead4', '#DC143C', '#5A5CDD', '#4B0082',
+            '#295135', '#FF0000', '#0000FF', '#FFB6C1', '#533b4d', '#13d8aa', '#00ffc5', '#2b908f', '#d55672', '#481620',
+            '#5a6650', '#0075a2', '#adf5ff', '#00ffc5', '#276fbf', '#829298', '#f03a47', '#e7decd', '#af5b5b', '#804e49',
+            '#9fcc2e', '#183059', '#0e402d', '#546E7A', '#d4526e', '#13d8aa', '#A5978B', '#2b908f', '#f9a3a4', '#90ee7e',
+
+        ],
+
+        // Tamanho da barrinha
+        plotOptions: {
+            bar: {
+                columnWidth: '10%',
+                distributed: true,
+            }
+        },
+        dataLabels: {
+            // enabled: false
+        },
+        legend: {
+            show: false
+        },
+        xaxis: {
+            categories: [
+
+                <?php
+                $meses = array(1 => 'Janeiro', 2 => 'Fevereiro', 3 => 'Março', 4 => 'Abril', 5 => 'Maio', 6 => 'Junho', 7 => 'Julho', 8 => 'Agosto', 9 => 'Setembro', 10 => 'Outubro', 11 => 'Novembro', 12 => 'Dezembro');
+
+                $i = 0;
+
+                foreach ($listar_animais_mes as $value) {
+                    $i++;
+                ?> '<?php echo $meses[$value->mes]; ?>'
+                    <?php if ($i < count($listar_animais_mes)) {
+                        echo ',';
+                    }
+                    ?>
+                <?php
+                }
+                ?>,
+            ],
+            // nome que aparece embaixo da barrinha
+            labels: {
+                show: true,
+                style: {
+                    // colors: colors
+                    // height:1000,
+                    fontSize: '12px'
+                }
+            }
+
+        },
+        tooltip: {
+            theme: 'dark',
+            x: {
+                show: true
+            },
+            y: {
+                title: {
+                    formatter: function() {
+                        return ''
+                    }
+                }
+            }
+        }
+    };
+
+    var chart = new ApexCharts(document.querySelector("#grafico_animais_microchipados"), options);
+    chart.render();
+</script>

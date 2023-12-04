@@ -31,14 +31,6 @@ class Perfil_cliente extends CI_Controller
 
 		if ($this->input->post('salvar')) {
 			if ($this->input->post('salvar')) {
-				$telefone_usuario = $this->input->post('telefone_usuario');
-				$cep_usuario = $this->input->post('cep_usuario');
-				$numero_usuario = $this->input->post('numero_usuario');
-				$complemento_usuario = $this->input->post('complemento_usuario');
-	
-				$dados_cliente = $this->Cliente_model->dados_cliente($cpf_usuario);
-	
-				// Verifique se os campos foram alterados antes de chamar a função de edição
 				if (
 					$dados_cliente->telefone_usuario !== $telefone_usuario ||
 					$dados_cliente->cep_usuario !== $cep_usuario ||
@@ -52,26 +44,24 @@ class Perfil_cliente extends CI_Controller
 						$numero_usuario,
 						$complemento_usuario
 					);
-	
+		
 					$this->session->set_flashdata('sucesso', 'Alterações efetuadas com sucesso!');
 					redirect('cadastro_cliente');
 				} else {
 					$this->session->set_flashdata('erro', 'Nenhum dado foi alterado.');
 				}
 			}
-	
+		
 			$dados['dados_cliente'] = $this->Cliente_model->dados_cliente($cpf_usuario);
 			$dados['historico_agendamentos_realizados'] = $this->Cliente_model->historico_agendamentos_realizados();
 			$dados['historico_profissionais_agendamentos'] = $this->Cliente_model->historico_profissionais_agendamentos();
 			$dados['historico_servicos_agendamentos'] = $this->Cliente_model->historico_servicos_agendamentos();
-		}
-
-
-		$this->load->view('layout/header');
-		$this->load->view('layout/sidebar');
-		$this->load->view('layout/navbar');
-		$this->load->view('perfil_cliente', $dados);
-		$this->load->view('layout/footer');
+		
+			$this->load->view('layout/header');
+			$this->load->view('layout/sidebar');
+			$this->load->view('layout/navbar');
+			$this->load->view('perfil_cliente', $dados);
+			$this->load->view('layout/footer');
 	}
 
 }

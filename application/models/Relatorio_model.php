@@ -25,15 +25,16 @@ class Relatorio_model extends CI_Model
     // Gráfico listar agendamentos por mês
     public function listar_agendamentos_mes()
     {
-        $this->db->select("COUNT(id_agenda) as quantidade, DATE_PART('MONTH',data_agenda) as mes, DATE_PART('YEAR',data_agenda) as ano");
+        $this->db->select("COUNT(id_agenda) as quantidade, MONTH(data_agenda) as mes, YEAR(data_agenda) as ano");
         $this->db->from('agenda');
         $this->db->where("DATE_PART('MONTH',data_agenda) >", 0);
         $ano_atual = date('Y'); // traz os registros do ano atual
         $this->db->where("DATE_PART('YEAR',data_agenda) = ", $ano_atual);
-        $this->db->group_by("DATE_PART('MONTH',data_agenda)");
-        $this->db->group_by("DATE_PART('YEAR',data_agenda)");
+        $this->db->group_by("MONTH(data_agenda)");
+        $this->db->group_by("YEAR(data_agenda)");
 
         $res = $this->db->get();
         return $res->result();
     }
+
 }

@@ -86,41 +86,44 @@ class Cliente_model extends CI_Model
 
 
     public function editar_dados_pesoais($id_usuario, $telefone_usuario, $cep_usuario, $numero_usuario, $complemento_usuario)
-{
-    if ($cep_usuario != '') {
-        $dados_endereco = $this->Endereco_model->buscar_endereco_por_cep($cep_usuario);
-
-        if ($dados_endereco != null) {
-            $logradouro_usuario = $dados_endereco->logradouro;
-            $bairro_usuario = $dados_endereco->bairro;
-            $cidade_usuario = $dados_endereco->cidade;
-            $estado_usuario = $dados_endereco->estado;
+    {
+        if ($cep_usuario != '') {
+            $dados_endereco = $this->Endereco_model->buscar_endereco_por_cep($cep_usuario);
+    
+            if ($dados_endereco != null) {
+                $logradouro_usuario = $dados_endereco->logradouro;
+                $bairro_usuario = $dados_endereco->bairro;
+                $cidade_usuario = $dados_endereco->cidade;
+                $estado_usuario = $dados_endereco->estado;
+            } else {
+                $logradouro_usuario = null;
+                $bairro_usuario = null;
+                $cidade_usuario = null;
+                $estado_usuario = null;
+            }
         } else {
-            $logradouro_usuario = '';
-            $bairro_usuario = '';
-            $cidade_usuario = '';
-            $estado_usuario = '';
+            if ($this->input->post('logradouro_usuario') == '') {
+                $logradouro_usuario = null;
+            } else {
+                $logradouro_usuario = $this->input->post('logradouro_usuario');
+            }
+            $bairro_usuario = $this->input->post('bairro_usuario');
+            $cidade_usuario = $this->input->post('cidade_usuario');
+            $estado_usuario = $this->input->post('estado_usuario');
         }
-    } else {
-        $logradouro_usuario = '';
-        $bairro_usuario = '';
-        $cidade_usuario = '';
-        $estado_usuario = '';
+    
+        $data = array(
+            'telefone_usuario' => $telefone_usuario,
+            'cep_usuario' => $cep_usuario,
+            'numero_usuario' => $numero_usuario,
+            'complemento_usuario' => $complemento_usuario,
+            'logradouro_usuario' => $logradouro_usuario,
+            'bairro_usuario' => $bairro_usuario,
+            'cidade_usuario' => $cidade_usuario,
+            'estado_usuario' => $estado_usuario,
+        );
+    
+        $this->db->where('id_usuario', $id_usuario);
+        $this->db->update('usuario', $data);
     }
-
-    $data = array(
-        'telefone_usuario' => $telefone_usuario,
-        'cep_usuario' => $cep_usuario,
-        'numero_usuario' => $numero_usuario,
-        'complemento_usuario' => $complemento_usuario,
-        'logradouro_usuario' => $logradouro_usuario,
-        'bairro_usuario' => $bairro_usuario,
-        'cidade_usuario' => $cidade_usuario,
-        'estado_usuario' => $estado_usuario,
-    );
-
-    $this->db->where('id_usuario', $id_usuario);
-    $this->db->update('usuario', $data);
-}
-
 }

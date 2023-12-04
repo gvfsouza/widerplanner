@@ -79,7 +79,7 @@
                             </div>
                         <?php endforeach; ?>
                     <?php else : ?>
-                      <p>Nenhum produto encontrado.</p>
+                      <p>Nenhuma foto encontrada.</p>
                     <?php endif; ?>
                     </div>
                   </div>

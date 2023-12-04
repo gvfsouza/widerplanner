@@ -29,26 +29,20 @@ class Fotos_barbearia extends CI_Controller
 		if (isset($_POST['salvar'])) {
 			$fotos_lugar = $this->converte_img($_FILES['fotos_lugar']['tmp_name'],$_FILES['fotos_lugar']['type']);
 
-			// FOTO - EXTENSÃO
-			$path = $_FILES['fotos_lugar']['name'];
-			$ext = pathinfo($path, PATHINFO_EXTENSION);
-			$config['upload_path'] = './application/fotos';
-			$config['allowed_types'] = 'jpg|jpeg|png';
-			$config['max_size'] = 2048;
-			$config['encrypt_name'] = TRUE;
-			$this->load->library('upload', $config);
-			$this->upload->initialize($config);
+			// // FOTO - EXTENSÃO
+			// $path = $_FILES['fotos_lugar']['name'];
+			// $ext = pathinfo($path, PATHINFO_EXTENSION);
+			// $config['upload_path'] = './application/fotos';
+			// $config['allowed_types'] = 'jpg|jpeg|png';
+			// $config['max_size'] = 2048;
+			// $config['encrypt_name'] = TRUE;
+			// $this->load->library('upload', $config);
+			// $this->upload->initialize($config);
 		
 			if (!isset($error)) {
+				
+				$dados['cadastro_fotos'] = $this->Fotos_barbearia_model->cadastro_fotos($fotos_lugar);
 
-				if (!isset($error)) {
-					$uploaded_info = $this->upload->data();
-					$uploaded_file_name = $uploaded_info['file_name'];
-					$fotos_lugar = $this->converte_img($uploaded_info['full_path'], $_FILES['fotos_lugar']['type']);
-				
-					$dados['cadastro_fotos'] = $this->Fotos_barbearia_model->cadastro_fotos($uploaded_file_name);
-				
-				}
 				//MENSAGEM SUCESSO AO CADASTRAR
 				$this->session->set_flashdata('sucesso', 'Cadastro de uma nova foto realizado com sucesso!');
 				redirect('fotos_barbearia');

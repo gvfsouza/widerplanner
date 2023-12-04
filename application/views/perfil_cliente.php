@@ -131,7 +131,7 @@
                                 </div>
                             </div>
                             <div class="text-right">
-                                <button href="<?php echo base_url(); ?>/perfil_cliente/" type="submit" name="salvar" class="btn-lg btn" style="border: none;background-color: #82a4ef;color: white;">Salvar</button>
+                                <button type="submit" name="salvar" class="btn-lg btn" style="border: none;background-color: #82a4ef;color: white;">Salvar</button>
                             </div>
                         </form>
                     </div>

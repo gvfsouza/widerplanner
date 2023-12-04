@@ -28,7 +28,7 @@ class Fotos_barbearia extends CI_Controller
 
 		if (isset($_POST['salvar'])) {
 			$fotos_lugar = $this->converte_img($_FILES['fotos_lugar']['tmp_name'],$_FILES['fotos_lugar']['type']);
-			var_dump($fotos_lugar);
+			var_dump($_FILES['fotos_lugar']);
 			die();
 
 			// // FOTO - EXTENSÃO

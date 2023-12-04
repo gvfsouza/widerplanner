@@ -66,6 +66,7 @@
                                     </div>
 
                                     <div class="form-group col-md-6">
+                                        <br>
                                         <label class="invisible">&nbsp;</label>
                                         <button type="submit" name="salvar" class="btn-lg btn" style="border: none;background-color: #82a4ef;color: white;">Salvar</button>
                                     </div>

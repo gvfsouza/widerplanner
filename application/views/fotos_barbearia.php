@@ -57,19 +57,17 @@
                     <?php endif; ?>
                     <!----------------FIM-----MENSAGEM DE ERRO AO CADASTRAR ---------------->
 
-                        <div class="p-3 bg-white">
+                        <div class="container-fluid p-3 bg-white">
                             <form action="" method="POST" enctype="multipart/form-data">
                                 <div class="row">
-                                    <div class="form-group col">
-                                        <label for=""><b>Inserir uma Foto:</b></label>
-                                        <br>
-                                        <input style="font-size:14px" type="file" class="form-control" id="fotos_lugar" name="fotos_lugar" accept="image/*">
+                                    <div class="form-group col-md-6">
+                                        <label for="fotos_lugar"><b>Inserir uma Foto:</b></label>
+                                        <input style="font-size: 14px" type="file" class="form-control" id="fotos_lugar" name="fotos_lugar" accept="image/*">
                                     </div>
 
-                                    <div class="form-group col">
-                                        <label for="" class="invisible"></label>
-                                        <br>
-                                        <button type="submit" name="salvar" class="btn-lg btn" style="border: none; background-color: #82a4ef; color: white;">Salvar</button>
+                                    <div class="form-group col-md-6">
+                                        <label class="invisible">&nbsp;</label>
+                                        <button type="submit" name="salvar" class="btn btn-lg btn-primary btn-block">Salvar</button>
                                     </div>
                                 </div>
                                 <br><br>
@@ -78,23 +76,23 @@
                                         <div class="row">
                                             <?php if (!empty($listar_fotos)) : ?>
                                                 <?php foreach ($listar_fotos as $value) : ?>
-                                                    <div class="col">
+                                                    <div class="col-md-4 mb-3">
                                                         <?php if (!empty($value->fotos_lugar)) : ?>
                                                             <div class="img-placeholder">
-                                                            <center><img style="display:block;" id='base64image' src='data:image/jpeg;base64,<?php echo $value->fotos_lugar; ?>' /></center>
-                                                                <!-- <center><img style='display:block; width:100px;height:100px;' id='base64image' src='data:image/jpeg;base64,</?php echo $value->fotos_lugar; ?>' /></center> -->
+                                                                <center><img style="display: block; max-width: 100%;" id='base64image' src='data:image/jpeg;base64,<?php echo $value->fotos_lugar; ?>' /></center>
                                                             </div>
                                                         <?php endif; ?>
                                                     </div>
                                                 <?php endforeach; ?>
                                             <?php else : ?>
-                                                <p>Nenhuma foto encontrada.</p>
+                                                <p class="col-12">Nenhuma foto encontrada.</p>
                                             <?php endif; ?>
                                         </div>
                                     </div>
                                 </div>
                             </form>
                         </div>
+
                     </div>
                     <br><br>
                     <div class="col-12 text-center">

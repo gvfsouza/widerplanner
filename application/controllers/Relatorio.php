@@ -23,7 +23,7 @@ class Relatorio extends CI_Controller
 
 	public function index()
 	{
-		// $this->load->model('relatorio_model');
+		$this->load->model('Relatorio_model');
 		$dados = array();
 
 		$dados['listar_usuarios_cadastrados'] = $this->Relatorio_model->listar_usuarios_cadastrados();

@@ -64,18 +64,18 @@
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="" role="tabpanel">
 
-                    <?php if ($this->session->flashdata('sucesso')) {    ?>
-                        <div class="alert alert-success" role="alert">
-                            <?php echo $this->session->flashdata('sucesso'); ?>
-                        </div>
+                    <?php if ($this->session->flashdata('sucesso')) { ?>
+                            <div class="alert alert-success" role="alert">
+                                <?php echo $this->session->flashdata('sucesso'); ?>
+                            </div>
                     <?php } ?>
                     <!----------------FIM-----MENSAGEM DE SUCESSO AO CADASTRAR ---------------->
 
                     <!----------------INICIO-----MENSAGEM DE ERRO AO CADASTRAR ---------------->
-                    <?php if ($this->session->flashdata('erro')) : ?>
-                        <div class="alert alert-danger">
-                            <?php echo $this->session->flashdata('erro'); ?>
-                        </div>
+                    <?php if ($this->session->flashdata('erro')): ?>
+                            <div class="alert alert-danger">
+                                <?php echo $this->session->flashdata('erro'); ?>
+                            </div>
                     <?php endif; ?>
                     <!----------------FIM-----MENSAGEM DE ERRO AO CADASTRAR ---------------->
 
@@ -84,22 +84,27 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="row">
-                                            <?php if (!empty($listar_fotos)) : ?>
-                                                <?php foreach ($listar_fotos as $value) : ?>
-                                                    <div class="col">
-                                                        <?php if (!empty($value->fotos_lugar)) : ?>
-                                                            <div class="img-placeholder">
-                                                                <center><img style='display:block; width:100px;height:100px;' id='base64image' src='data:image/jpeg;base64,<?php echo $value->fotos_lugar; ?>' /></center>
+                                            <?php if (!empty($listar_fotos)): ?>
+                                                    <?php foreach ($listar_fotos as $value): ?>
+                                                            <div class="col">
+                                                                <?php if (!empty($value->id) && !empty($value->fotos_lugar)): ?>
+                                                                        <div class="img-placeholder">
+                                                                            <?php
+                                                                            // Construa a URL para puxar a foto pelo ID
+                                                                            $photo_url = base_url('application/fotos/' . $value->id . '/' . $value->fotos_lugar);
+                                                                            ?>
+                                                                            <center><img style='display:block; width:100px;height:100px;' id='base64image' src='<?php echo $photo_url; ?>' /></center>
+                                                                        </div>
+                                                                <?php endif; ?>
                                                             </div>
-                                                        <?php endif; ?>
-                                                    </div>
-                                                <?php endforeach; ?>
-                                            <?php else : ?>
-                                                <p>Nenhuma foto encontrada.</p>
+                                                    <?php endforeach; ?>
+                                            <?php else: ?>
+                                                    <p>Nenhuma foto encontrada.</p>
                                             <?php endif; ?>
                                         </div>
                                     </div>
                                 </div>
+
                                 
                                 <br><br><br>
                                 <br><br><br>

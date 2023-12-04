@@ -2,93 +2,89 @@
 
 class Fotos_barbearia extends CI_Controller
 {
-    public function __construct()
-    {
-        parent::__construct();
-        $this->load->helper('functions_helper');
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $_POST = $this->clean_post_data($_POST);
-        }
-        $this->load->database();
-    }
+	public function __construct()
+	{
+		parent::__construct();
+		// Carregue o arquivo functions_helper
+		$this->load->helper('functions_helper');
+		if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+			$_POST = $this->clean_post_data($_POST);
+		}
+		$this->load->database();
+	}
 
-    private function clean_post_data($data)
-    {
-        foreach ($data as $key => $value) {
-            $data[$key] = anti_injection($value);
-        }
-        return $data;
-    }
+	private function clean_post_data($data)
+	{
+		foreach ($data as $key => $value) {
+			$data[$key] = anti_injection($value);
+		}
+		return $data;
+	}
 
-    public function index()
-    {
-        $this->load->model('Fotos_barbearia_model');
-        $dados = array();
+	public function index()
+	{
+		$this->load->model('Fotos_barbearia_model');
+		$dados = array();
 
-        if (isset($_POST['salvar'])) {
-            $foto = $_FILES['fotos_lugar'];
+		if (isset($_POST['salvar'])) {
+			$foto = $_FILES['fotos_lugar'];
 
-            $fotos_lugar = $this->converte_img($_FILES['fotos_lugar']['name'], $_FILES['fotos_lugar']['type']);
 
-            // FOTO - EXTENSÃO
-            $path = $_FILES['fotos_lugar']['name'];
-            $ext = pathinfo($path, PATHINFO_EXTENSION);
-            $config['upload_path'] = './application/fotos';
-            $config['allowed_types'] = 'jpg|jpeg|png';
-            $config['max_size'] = 2048;
-            $config['encrypt_name'] = TRUE;
-            $this->load->library('upload', $config);
-            $this->upload->initialize($config);
+			$fotos_lugar = $this->converte_img($_FILES['fotos_lugar']['name'],$_FILES['fotos_lugar']['type']);
 
-            if (!isset($error)) {
+			// // FOTO - EXTENSÃO
+			$path = $_FILES['fotos_lugar']['name'];
+			$ext = pathinfo($path, PATHINFO_EXTENSION);
+			$config['upload_path'] = './application/fotos';
+			$config['allowed_types'] = 'jpg|jpeg|png';
+			$config['max_size'] = 2048;
+			$config['encrypt_name'] = TRUE;
+			$this->load->library('upload', $config);
+			$this->upload->initialize($config);
+		
+			if (!isset($error)) {
+				
+				if (isset($foto['name'])) {
+					if (!$this->upload->do_upload('fotos_lugar')) {
+						$error = array('erro' => $this->upload->display_errors());
+						// $foto = $upload_data['file'];
 
-                if (isset($foto['name'])) {
-                    if (!$this->upload->do_upload('fotos_lugar')) {
-                        $error = array('erro' => $this->upload->display_errors());
+						$this->session->set_flashdata('erro', $error['erro']);
+						$this->session->set_flashdata('erro_upload', 'Não foi possível fazer upload da foto.');
+					}
+				}
 
-                        $this->session->set_flashdata('erro', $error['erro']);
-                        $this->session->set_flashdata('erro_upload', 'Não foi possível fazer upload da foto.');
-                    }
-                }
+				$dados['cadastro_fotos'] = $this->Fotos_barbearia_model->cadastro_fotos($fotos_lugar);
 
-                $dados['cadastro_fotos'] = $this->Fotos_barbearia_model->cadastro_fotos($fotos_lugar);
+				//MENSAGEM SUCESSO AO CADASTRAR
+				$this->session->set_flashdata('sucesso', 'Cadastro de uma nova foto realizado com sucesso!');
+				redirect('fotos_barbearia');
+			} else {
+				$this->session->set_flashdata('erro', 'Erro ao efetuar cadastro de uma nova foto.');
+			}
+		}
+		
+		$dados['listar_fotos'] = $this->Fotos_barbearia_model->listar_fotos();
 
-                // MENSAGEM SUCESSO AO CADASTRAR
-                $this->session->set_flashdata('sucesso', 'Cadastro de uma nova foto realizado com sucesso!');
-                redirect('fotos_barbearia');
-            } else {
-                $this->session->set_flashdata('erro', 'Erro ao efetuar cadastro de uma nova foto.');
-            }
-        }
+		$this->load->view('layout/header');
+		$this->load->view('layout/sidebar');
+		$this->load->view('layout/navbar');
+		$this->load->view('fotos_barbearia', $dados);
+	}
 
-        $dados['listar_fotos'] = $this->Fotos_barbearia_model->listar_fotos();
-
-        $this->load->view('layout/header');
-        $this->load->view('layout/sidebar');
-        $this->load->view('layout/navbar');
-        $this->load->view('fotos_barbearia', $dados);
-    }
-
-    public function converte_img($img, $type)
-    {
-        if ($type == 'image/png') {
-            $im = imagecreatefrompng($img);
-            ob_start();
-            imagejpeg($im);
-            $data = ob_get_clean();
-            imagedestroy($im);
-        } else {
-            ob_start();
-            readfile($img);
-            $data = ob_get_clean();
-        }
-
-        // Gerar um nome único baseado no timestamp
-        $unique_name = time() . '_' . rand(1000, 9999) . '.' . $ext;
-
-        // Salvar a imagem com o nome único
-        file_put_contents('.fotos/' . $unique_name, $data);
-
-        return $unique_name;
-    }
+	public function converte_img($img, $type)
+	{
+		if ($type == 'image/png') {
+			$im = imagecreatefrompng($img);
+			ob_start();
+			imagejpeg($im);
+			$data = ob_get_clean();
+			imagedestroy($im);
+		} else {
+			ob_start();
+			readfile($img);
+			$data = ob_get_clean();
+		}
+		return base64_encode($data);
+	}
 }

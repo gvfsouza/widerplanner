@@ -27,7 +27,7 @@ class Relatorio_model extends CI_Model
     {
         $this->db->select("COUNT(id_agenda) as quantidade, MONTH(data_agenda) as mes, YEAR(data_agenda) as ano");
         $this->db->from('agenda');
-        $this->db->where("DATE_PART('MONTH',data_agenda) >", 0);
+        $this->db->where("MONTH(data_agenda) >", 0);
         $ano_atual = date('Y'); // traz os registros do ano atual
         $this->db->where("YEAR(data_agenda) = ", $ano_atual);
         $this->db->group_by("MONTH(data_agenda)");

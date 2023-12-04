@@ -68,7 +68,7 @@
                                 <div class="col mr-2">
                                     <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                         Usuários</div>
-                                    <div class="h5 mb-0 font-weight-bold text-gray-800">quantidade</div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $listar_usuarios_cadastrados[0]->quantidade_usuarios; ?></div>
                                 </div>
                                 <div class="col-auto">
                                     <i class="fas fa-users"></i>

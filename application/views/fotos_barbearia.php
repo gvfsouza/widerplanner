@@ -70,7 +70,7 @@
                   <div class="col-12">
                     <div class="row">
                       <article>
-                        <figure><img style="font-size:14px" type="file" class="form-control" id="fotos_lugar" name="fotos_lugar" accept="image/*"></figure>
+                        <figure><input style="font-size:14px" type="file" class="form-control" id="fotos_lugar" name="fotos_lugar" accept="image/*"></figure>
                       </article>
                       <article>
                         <figure><img src="https://lh3.googleusercontent.com/p/AF1QipNHO-Qc0KTw8X4jwQlKp9RGfEX6jT_7rtr-lea_=s680-w680-h510" alt=""></figure>

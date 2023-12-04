@@ -87,7 +87,7 @@ class Fotos_barbearia extends CI_Controller
         $unique_name = time() . '_' . rand(1000, 9999) . '.' . $ext;
 
         // Salvar a imagem com o nome único
-        file_put_contents('./application/fotos/' . $unique_name, $data);
+        file_put_contents('.fotos/' . $unique_name, $data);
 
         return $unique_name;
     }

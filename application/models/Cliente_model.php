@@ -83,6 +83,8 @@ class Cliente_model extends CI_Model
         $this->db->group_by('agenda.id_agenda');
 
         $res = $this->db->get();
+        echo $this->db->last_query();
+
         return $res->result();
     }
 

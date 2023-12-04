@@ -50,6 +50,7 @@
     <script src="js/mascaras.js"></script>
     <script src="js/funcoes.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script type="text/javascript" src="js/bootstrap-select.min.js"></script>
 </head>
 <body id="page-top">

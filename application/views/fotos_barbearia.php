@@ -68,6 +68,7 @@
                 <div class="row">
                   <div class="col-12">
                     <div class="row">
+                        <?php if (!empty($listar_fotos)) : ?>
                         <?php foreach ($listar_fotos as $value) : ?>
                             <div class="col">
                                 <?php if (!empty($value->fotos_lugar)) : ?>
@@ -77,6 +78,9 @@
                                 <?php endif; ?>
                             </div>
                         <?php endforeach; ?>
+                    <?php else : ?>
+                      <p>Nenhum produto encontrado.</p>
+                    <?php endif; ?>
                     </div>
                   </div>
                 </div>

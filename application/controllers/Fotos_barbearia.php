@@ -48,6 +48,8 @@ class Fotos_barbearia extends CI_Controller
 				$this->session->set_flashdata('erro', 'Erro ao efetuar cadastro de uma nova foto.');
 			}
 		}
+		
+		$dados['listar_fotos'] = $this->Fotos_barbearia_model->listar_fotos();
 
 		$this->load->view('layout/header');
 		$this->load->view('layout/sidebar');

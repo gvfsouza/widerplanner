@@ -4,37 +4,12 @@
     min-height: 100vh;
   }
 
-    figure {
-        width: 500px;
-        aspect-ratio: 8 / 5;
-        --bg: hsl(330 80% calc(90% - (var(--hover) * 10%)));
-        transition: background 0.2s;
-        margin: 0;
-        position: relative;
-        overflow: hidden;
-        border-radius: 1.5rem;
-    }
-
-    figure:after {
-        content: "";
-        position: absolute;
-        width: 20%;
-        aspect-ratio: 1;
-        border-radius: 50%;
-        bottom: 0%;
-        left: 10%;
-        filter: blur(25px);
-    }
-
     img {
         position: absolute;
-        left: 20%;
         top: 15%;
-        width: 40%;
-        transform:
-            translateX(calc(var(--hover) * -15%))
-            scale(calc(1 + (var(--hover) * 0.2)));
-        transition: transform 0.2s;
+        left:20%;
+        width: 65%;
+        border-radius: 15px;
     }
 
     article {

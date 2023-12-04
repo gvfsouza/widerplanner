@@ -85,13 +85,17 @@ class Cliente_model extends CI_Model
     }
 
 
-    public function editar_dados_pesoais($id_usuario, $telefone_usuario, $cep_usuario, $numero_usuario, $complemento_usuario)
+    public function editar_dados_pesoais($id_usuario, $telefone_usuario, $cep_usuario, $logradouro_usuario, $numero_usuario, $complemento_usuario, $bairro_usuario, $cidade_usuario, $uf_usuario)
     {
         $data = array(
             'telefone_usuario' => $telefone_usuario,
             'cep_usuario' => $cep_usuario,
+            'logradouro_usuario'=> $logradouro_usuario,
             'numero_usuario' => $numero_usuario,
             'complemento_usuario' => $complemento_usuario,
+            'bairro_usuario' => $bairro_usuario, 
+            'cidade_usuario' => $cidade_usuario, 
+            'estado_usuario' => $uf_usuario,
         );
 
         $this->db->where('id_usuario', $id_usuario);

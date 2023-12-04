@@ -81,7 +81,7 @@ class Cliente_model extends CI_Model
         $this->db->join('agenda2', 'agenda.id_agenda = agenda2.fk_agenda', 'left');
         $this->db->join('servicos', 'servicos.id_servicos = agenda2.fk_servicos', 'left');
         $this->db->group_by('agenda.id_agenda');
-        $this->db->order_by('agenda.id_agenda, ASC');
+        $this->db->order_by('agenda.id_agenda', 'ASC');
 
         $res = $this->db->get();
         return $res->result();

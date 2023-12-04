@@ -29,7 +29,6 @@ class Perfil_cliente extends CI_Controller
 
 		$cpf_usuario = $this->session->userdata('cpf_usuario');
 
-		if ($this->input->post('salvar')) {
 			if ($this->input->post('salvar')) {
 				if (
 					$dados_cliente->telefone_usuario !== $telefone_usuario ||
@@ -62,6 +61,6 @@ class Perfil_cliente extends CI_Controller
 			$this->load->view('layout/navbar');
 			$this->load->view('perfil_cliente', $dados);
 			$this->load->view('layout/footer');
-	}
+	
 
 }

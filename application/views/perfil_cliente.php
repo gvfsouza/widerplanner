@@ -148,24 +148,22 @@
                         </div>
                         <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 7px; border: 1px solid #879bc9;color: black;">
                             <table class="table table-responsive-lg">
-                                <thead>
-                                    <tr>
-                                        <th scope="col" style="font-size: 13px;">Serviço</th>
-                                        <th scope="col" style="font-size: 13px;">Data</th>
-                                        <th scope="col" style="font-size: 13px;">Hora</th>
-                                        <th scope="col" style="font-size: 13px;">Profissional</th>
-                                    </tr>
-                                </thead>
+                                <tr>
+                                    <th scope="col" style="font-size: 13px;">Serviço</th>
+                                    <th scope="col" style="font-size: 13px;">Data</th>
+                                    <th scope="col" style="font-size: 13px;">Hora</th>
+                                    <th scope="col" style="font-size: 13px;">Profissional</th>
+                                </tr>
                                 <tbody>
-                                    <?php foreach ($historico_agendamentos_realizados as $value) { ?>
+                                    <?php foreach ($historico_agendamentos_realizados as $key => $value) { ?>
                                         <tr>
-                                            <?php if (!empty($historico_servicos_agendamentos)) { ?>
-                                                <td><?php echo $historico_servicos_agendamentos[0]->nome_servico; ?></td>
+                                            <?php if (!empty($historico_servicos_agendamentos[$key])) { ?>
+                                                <td><?php echo $historico_servicos_agendamentos[$key]->nome_servico; ?></td>
                                             <?php } ?>
                                             <td style="font-size: 11px;"><?php echo formata_data($value->data_agenda); ?></td>
                                             <td style="font-size: 11px;"><?php echo $value->horarios_semana; ?></td>
                                             <?php if (!empty($historico_profissionais_agendamentos)) { ?>
-                                                <td><?php echo $historico_profissionais_agendamentos[0]->nome_usuario; ?></td>
+                                                <td><?php echo $historico_profissionais_agendamentos[$key]->nome_usuario; ?></td>
                                             <?php } ?>
                                         </tr>
                                     <?php } ?>

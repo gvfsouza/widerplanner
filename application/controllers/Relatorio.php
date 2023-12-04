@@ -26,12 +26,12 @@ class Relatorio extends CI_Controller
 		// $this->load->model('relatorio_model');
 		$dados = array();
 
-		// $dados['listar_servicos'] = $this->Agendamento_model->listar_servicos();
+		$dados['listar_usuarios_cadastrados'] = $this->Relatorio_model->listar_usuarios_cadastrados();
 
 		$this->load->view('layout/header');
 		$this->load->view('layout/sidebar');
 		$this->load->view('layout/navbar');
-		$this->load->view('relatorio');
+		$this->load->view('relatorio',$dados);
 	}
 
 }

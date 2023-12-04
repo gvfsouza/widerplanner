@@ -12,10 +12,10 @@ class Fotos_barbearia_model extends CI_Model
         return $res->result();
     }
 
-    public function cadastro_fotos($fotos_lugar)
+    public function cadastro_fotos($nome_arquivo)
     {
         $data = array(
-            'fotos_lugar' => $fotos_lugar,
+            'fotos_lugar' => $nome_arquivo,
         );
 
         $this->db->insert('fotos_barbearia', $data);

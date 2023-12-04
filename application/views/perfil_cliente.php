@@ -201,10 +201,10 @@
             // Fazer a consulta à API ViaCEP
             $.getJSON('https://viacep.com.br/ws/' + cep + '/json/', function(data) {
                 if (!data.erro) {
-                    document.getElementById('logradouro').value = data.logradouro;
-                    document.getElementById('bairro').value = data.bairro;
-                    document.getElementById('cidade').value = data.localidade;
-                    document.getElementById('uf').value = data.uf;
+                    document.getElementById('logradouro_usuario').value = data.logradouro;
+                    document.getElementById('bairro_usuario').value = data.bairro;
+                    document.getElementById('cidade_usuario').value = data.localidade;
+                    document.getElementById('estado_usuario').value = data.uf;
                 }
             });
         }

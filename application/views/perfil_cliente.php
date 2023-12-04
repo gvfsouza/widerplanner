@@ -160,8 +160,11 @@
                                             <?php if (!empty($historico_servicos_agendamentos[$key])) { ?>
                                                 <td><?php echo $historico_servicos_agendamentos[$key]->servicos; ?></td>
                                             <?php } ?>
+
                                             <td style="font-size: 11px;"><?php echo formata_data($value->data_agenda); ?></td>
+
                                             <td style="font-size: 11px;"><?php echo $value->horarios_semana; ?></td>
+                                            
                                             <?php if (!empty($historico_profissionais_agendamentos)) { ?>
                                                 <td><?php echo $historico_profissionais_agendamentos[$key]->nome_usuario; ?></td>
                                             <?php } ?>

@@ -84,6 +84,7 @@
                     </div>
                   </div>
                 </div>
+                <br><br><br>
                 <form action="" method="POST">
                     <div class="form-group col-md-3">
                         <label for=""><b>Foto:</b></label>

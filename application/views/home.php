@@ -93,52 +93,6 @@
         /* margin-top: 60px; */
     }
 
-    .space-between {
-        justify-content: space-between;
-    }
-
-    .card {
-        border-radius: 15px;
-        padding: 20px;
-        -webkit-box-shadow: 1px 1px 16px -6px rgba(0, 0, 0, 0.5);
-        -moz-box-shadow: 1px 1px 16px -6px rgba(0, 0, 0, 0.5);
-    }
-
-    .card img {
-        max-width: 250px;
-        transform: translateY(-15%);
-    }
-
-    .img-placeholder {
-        position: relative;
-        max-height: 150px;
-        max-width: 250px;
-        overflow: hidden;
-        border-radius: 15px;
-        box-shadow: 1px 1px 16px -6px rgba(0, 0, 0, 0.75);
-        -webkit-box-shadow: 1px 1px 16px -6px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: 1px 1px 16px -6px rgba(0, 0, 0, 0.75);
-    }
-
-    h3 {
-        font-weight: 400;
-    }
-
-    p {
-        font-weight: 300;
-    }
-
-    a {
-        color: #888;
-        text-decoration: none;
-    }
-
-    a:hover {
-        color: inherit;
-    }
-
-    @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
-
 
     body {
         font-family: 'Roboto', sans-serif;

@@ -30,7 +30,6 @@
 
   img {
     position: absolute;
-    top: 15%;
   }
 
   article {

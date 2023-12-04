@@ -4,41 +4,55 @@
     min-height: 100vh;
   }
 
-  figure {
-    width: 500px;
-    aspect-ratio: 7 / 4;
-    --bg: hsl(330 80% calc(90% - (var(--hover) * 10%)));
-    /* --accent: hsl(280 80% 40%); */
-    transition: background 0.2s;
-    /* background:
-      radial-gradient(circle at top left, var(--accent), transparent 75%),
-      var(--bg); */
-    margin: 0;
-    position: relative;
-    overflow: hidden;
-    border-radius: 1.5rem;
-    margin: 10px;
-  }
+    figure {
+        width: 500px;
+        aspect-ratio: 8 / 5;
+        --bg: hsl(330 80% calc(90% - (var(--hover) * 10%)));
+        --accent: hsl(280 80% 40%);
+        transition: background 0.2s;
+        background:
+            radial-gradient(circle at top left, var(--accent), transparent 75%),
+            var(--bg);
+        margin: 0;
+        position: relative;
+        overflow: hidden;
+        border-radius: 1.5rem;
+    }
 
-  figure:after {
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-    bottom: 0%;
-    left: 10%;
-  }
+    figure:after {
+        content: "";
+        position: absolute;
+        width: 20%;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        bottom: 0%;
+        left: 10%;
+        background: linear-gradient(-65deg, var(--bg) 50%, var(--accent) 50%);
+        filter: blur(25px);
+        transform:
+            translateX(calc(var(--hover) * 15%))
+            scale(calc(1 + (var(--hover) * 0.2)));
+        transition: transform 0.2s, background 0.2s;
+    }
 
-  img {
-    position: absolute;
-  }
+    img {
+        position: absolute;
+        left: 20%;
+        top: 15%;
+        width: 40%;
+        transform:
+            translateX(calc(var(--hover) * -15%))
+            scale(calc(1 + (var(--hover) * 0.2)));
+        transition: transform 0.2s;
+    }
 
-  article {
-    --hover: 0;
-  }
+    article {
+        --hover: 0;
+    }
 
-  article:hover {
-    --hover: 1;
-  }
+    article:hover {
+        --hover: 1;
+    }
 </style>
 
 <br>

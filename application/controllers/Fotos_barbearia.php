@@ -32,7 +32,6 @@ class Fotos_barbearia extends CI_Controller
 			// // FOTO - EXTENSÃO
 			$path = $_FILES['fotos_lugar']['name'];
 			$ext = pathinfo($path, PATHINFO_EXTENSION);
-			$config['upload_path'] = './application/fotos';
 			$config['allowed_types'] = 'jpg|jpeg|png';
 			$config['max_size'] = 2048;
 			$config['encrypt_name'] = TRUE;

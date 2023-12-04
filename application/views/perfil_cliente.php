@@ -158,7 +158,7 @@
                                     <?php foreach ($historico_agendamentos_realizados as $key => $value) { ?>
                                         <tr>
                                             <?php if (!empty($historico_servicos_agendamentos[$key])) { ?>
-                                                <td><?php echo $historico_servicos_agendamentos[$key]->nome_servico; ?></td>
+                                                <td><?php echo $historico_servicos_agendamentos[$key]->servicos; ?></td>
                                             <?php } ?>
                                             <td style="font-size: 11px;"><?php echo formata_data($value->data_agenda); ?></td>
                                             <td style="font-size: 11px;"><?php echo $value->horarios_semana; ?></td>

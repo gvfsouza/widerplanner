@@ -76,9 +76,11 @@ class Cliente_model extends CI_Model
 
     public function historico_servicos_agendamentos()
     {
-        $this->db->select('*');
+        $this->db->select('agenda.id_agenda, GROUP_CONCAT(servicos.nome_servico) as servicos');
         $this->db->from('agenda2');
         $this->db->join('servicos', 'servicos.id_servicos = agenda2.fk_servicos', 'left');
+        $this->db->join('agenda', 'agenda.id_agenda = agenda2.fk_agenda', 'left');
+        $this->db->group_by('agenda.id_agenda');
 
         $res = $this->db->get();
         return $res->result();

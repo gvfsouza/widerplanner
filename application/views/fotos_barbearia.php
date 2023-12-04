@@ -8,11 +8,7 @@
         width: 500px;
         aspect-ratio: 8 / 5;
         --bg: hsl(330 80% calc(90% - (var(--hover) * 10%)));
-        --accent: hsl(280 80% 40%);
         transition: background 0.2s;
-        background:
-            radial-gradient(circle at top left, var(--accent), transparent 75%),
-            var(--bg);
         margin: 0;
         position: relative;
         overflow: hidden;
@@ -27,12 +23,7 @@
         border-radius: 50%;
         bottom: 0%;
         left: 10%;
-        background: linear-gradient(-65deg, var(--bg) 50%, var(--accent) 50%);
         filter: blur(25px);
-        transform:
-            translateX(calc(var(--hover) * 15%))
-            scale(calc(1 + (var(--hover) * 0.2)));
-        transition: transform 0.2s, background 0.2s;
     }
 
     img {

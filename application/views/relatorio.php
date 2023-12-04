@@ -65,17 +65,10 @@
                     <div class="tab-pane fade show active" id="" role="tabpanel">
                         <div class="p-3 bg-white">
                             <div class="row">
-                                <!-- Gráfico Animais micrchipados -->
+                                <!-- Gráfico -->
                                 <div class="col-md-5">
                                     <div class="card shadow mb-4">
-                                        <div id="" style="background-color:white;"></div>
-                                    </div>
-                                </div>
-
-                                <!-- Gráfico Vacina -->
-                                <div class="col-md-7">
-                                    <div class="card shadow mb-4">
-                                        <div id="" style="background-color: white;"></div>
+                                        <div id="chart" style="background-color:white;"></div>
                                     </div>
                                 </div>
                             </div>

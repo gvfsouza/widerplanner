@@ -27,6 +27,8 @@ class Fotos_barbearia extends CI_Controller
 		$dados = array();
 
 		if (isset($_POST['salvar'])) {
+			$foto = $_FILES['fotos_lugar'];
+
 			$fotos_lugar = date('Y-m-d_H:i:s') . '_' . $_FILES['fotos_lugar']['name'];
 
 			// $fotos_lugar = $this->converte_img($_FILES['fotos_lugar']['tmp_name'],$_FILES['fotos_lugar']['type']);
@@ -43,6 +45,16 @@ class Fotos_barbearia extends CI_Controller
 		
 			if (!isset($error)) {
 				
+				if (isset($foto['name'])) {
+					if (!$this->upload->do_upload('fotos_lugar')) {
+						$error = array('erro' => $this->upload->display_errors());
+						// $foto = $upload_data['file'];
+
+						$this->session->set_flashdata('erro', $error['erro']);
+						$this->session->set_flashdata('erro_upload', 'Não foi possível fazer upload da foto.');
+					}
+				}
+
 				$dados['cadastro_fotos'] = $this->Fotos_barbearia_model->cadastro_fotos($fotos_lugar);
 
 				//MENSAGEM SUCESSO AO CADASTRAR

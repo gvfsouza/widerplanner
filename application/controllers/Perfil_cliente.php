@@ -23,6 +23,8 @@ class Perfil_cliente extends CI_Controller
 
     public function index()
     {
+		$this->load->library('form_validation');
+
         $this->load->model('Cliente_model');
 
         $cpf_usuario = $this->session->userdata('cpf_usuario');

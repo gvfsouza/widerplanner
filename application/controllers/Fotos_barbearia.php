@@ -39,11 +39,11 @@ class Fotos_barbearia extends CI_Controller
 			$this->upload->initialize($config);
 		
 			if (!isset($error)) {
-				$dados['cadastro_fotos'] = $this->Fotos_barbearia_model->cadastro_servicos($fotos_lugar);
+				$dados['cadastro_fotos'] = $this->Fotos_barbearia_model->cadastro_fotos($fotos_lugar);
 
 				//MENSAGEM SUCESSO AO CADASTRAR
 				$this->session->set_flashdata('sucesso', 'Cadastro de uma nova foto realizado com sucesso!');
-				redirect('cadastro_servicos');
+				redirect('fotos_barbearia');
 			} else {
 				$this->session->set_flashdata('erro', 'Erro ao efetuar cadastro de uma nova foto.');
 			}

@@ -1,9 +1,4 @@
 <style>
-  body {
-    display: grid;
-    min-height: 100vh;
-  }
-
     img {
         left:20%;
         width: 65%;

@@ -27,12 +27,8 @@ class Fotos_barbearia extends CI_Controller
 		$dados = array();
 
 		if (isset($_POST['salvar'])) {
-			$foto = $_FILES['fotos_lugar'];
-
 
 			$fotos_lugar = $this->converte_img($_FILES['fotos_lugar']['tmp_name'], $_FILES['fotos_lugar']['type']);
-			$dados['cadastro_fotos'] = $this->Fotos_barbearia_model->cadastro_fotos($fotos_lugar);
-
 
 			// // FOTO - EXTENSÃO
 			$path = $_FILES['fotos_lugar']['name'];

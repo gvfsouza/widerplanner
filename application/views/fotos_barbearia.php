@@ -73,7 +73,7 @@
                             <article>
                                     <figure> 
                                         <?php if (!empty($value->foto_lugar)) { ?>
-                                            <center><img style='width:100px; height:100px;' id='base64image' src='data:image/jpeg;base64,<?php echo $value->foto_lugar ?>' /></center>
+                                            <center><img style='width:100px; height:100px;' id='base64image' src='data:image/jpeg;base64,<?php echo $value->fotos_lugar ?>' /></center>
                                         <?php } ?>
                                     </figure>
                                 </article>
@@ -89,7 +89,7 @@
                     <div class="form-group col-md-12">
                         <label for=""><b>Inserir uma Foto:</b></label>
                         <br>
-                        <input style="font-size:14px" type="file" class="form-control arquivo" id="foto_servico" name="foto_servico" accept="image/*">
+                        <input style="font-size:14px" type="file" class="form-control" id="fotos_lugar" name="fotos_lugar" accept="image/*">
                     </div>
                 <div class="text-right">
                   <button href="/fotos_barbearia/" type="submit" name="salvar" class="btn-lg btn" style="border: none; background-color: #82a4ef; color: white;">Salvar</button>

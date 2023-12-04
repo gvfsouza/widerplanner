@@ -23,15 +23,13 @@ class Fotos_barbearia extends CI_Controller
 
 	public function index()
 	{
-		$this->load->model('Servicos_model');
+		$this->load->model('Fotos_barbearia_model');
 		$dados = array();
 
 		if (isset($_POST['salvar'])) {
-			$foto_lugar = $this->converte_img($_FILES['foto_lugar']['tmp_name'],$_FILES['foto_lugar']['type']);
-			
-
+			$fotos_lugar = $this->converte_img($_FILES['fotos_lugar']['tmp_name'],$_FILES['fotos_lugar']['type']);
 			// FOTO - EXTENSÃO
-			$path = $_FILES['foto_lugar']['name'];
+			$path = $_FILES['fotos_lugar']['name'];
 			$ext = pathinfo($path, PATHINFO_EXTENSION);
 			$config['upload_path'] = './application/fotos';
 			$config['allowed_types'] = 'jpg|jpeg|png';
@@ -41,7 +39,7 @@ class Fotos_barbearia extends CI_Controller
 			$this->upload->initialize($config);
 		
 			if (!isset($error)) {
-				$dados['cadastro_fotos'] = $this->Servicos_model->cadastro_servicos($foto_lugar);
+				$dados['cadastro_fotos'] = $this->Fotos_barbearia_model->cadastro_servicos($fotos_lugar);
 
 				//MENSAGEM SUCESSO AO CADASTRAR
 				$this->session->set_flashdata('sucesso', 'Cadastro de uma nova foto realizado com sucesso!');

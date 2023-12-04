@@ -1,3 +1,5 @@
+controller relatório
+
 <?php defined('BASEPATH') or exit('No direct script access allowed');
 
 class Relatorio extends CI_Controller
@@ -27,6 +29,7 @@ class Relatorio extends CI_Controller
 		$dados = array();
 
 		$dados['listar_usuarios_cadastrados'] = $this->Relatorio_model->listar_usuarios_cadastrados();
+		$dados['total_servicos'] = $this->Relatorio_model->total_servicos();
 
 		$this->load->view('layout/header');
 		$this->load->view('layout/sidebar');

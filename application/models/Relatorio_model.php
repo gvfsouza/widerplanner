@@ -1,4 +1,3 @@
-model relatório
 
 <?php if (!defined('BASEPATH'))
     exit('No direct scripts access allowed');

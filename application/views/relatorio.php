@@ -1,4 +1,3 @@
-view relatório
 
 <style>
     body {

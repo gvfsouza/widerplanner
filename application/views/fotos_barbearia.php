@@ -23,26 +23,15 @@
   figure:after {
     content: "";
     position: absolute;
-    width: 20%;
-    aspect-ratio: 1;
     border-radius: 50%;
     bottom: 0%;
     left: 10%;
-    background: linear-gradient(-65deg, var(--bg) 50%, var(--accent) 50%);
-    filter: blur(25px);
-    transform:
-      translateX(calc(var(--hover) * 15%)) scale(calc(1 + (var(--hover) * 0.2)));
-    transition: transform 0.2s, background 0.2s;
   }
 
   img {
     position: absolute;
     left: 20%;
     top: 15%;
-    width: 40%;
-    transform:
-      translateX(calc(var(--hover) * -15%)) scale(calc(1 + (var(--hover) * 0.2)));
-    transition: transform 0.2s;
   }
 
   article {

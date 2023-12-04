@@ -68,21 +68,15 @@
                 <div class="row">
                   <div class="col-12">
                     <div class="row">
-                        <?php if (!empty($listar_fotos)) : ?>
                         <?php foreach ($listar_fotos as $value) : ?>
                             <div class="col">
                                 <?php if (!empty($value->fotos_lugar)) : ?>
                                     <div class="img-placeholder">
-                                        <?php if (!empty($value->fotos_lugar)) { ?>
-                                            <center><img style='display:block; width:100px;height:100px;' id='base64image' src='data:image/jpeg;base64,<?php echo $value->fotos_lugar ?>' /></center>
-                                        <?php } ?>
+                                        <center><img style='display:block; width:100px;height:100px;' id='base64image' src='data:image/jpeg;base64,<?php echo $value->fotos_lugar ?>' /></center>
                                     </div>
                                 <?php endif; ?>
                             </div>
                         <?php endforeach; ?>
-                    <?php else : ?>
-                      <p>Nenhum produto encontrado.</p>
-                    <?php endif; ?>
                     </div>
                   </div>
                 </div>

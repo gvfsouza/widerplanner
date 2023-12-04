@@ -53,52 +53,31 @@
                 </div>
 
                 <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 7px; border: 1px solid #879bc9;background: #879bc9;color: black;">
-                <div>
-                    <legend class="form-group" style="color: white; font-size: 18px;">
-                    <strong>Relatório</strong>
-                    </legend>
-                </div>
+                    <div>
+                        <legend class="form-group" style="color: white; font-size: 18px;">
+                        <strong>Relatório</strong>
+                        </legend>
+                    </div>
                 </fieldset>
 
-                <div id="content">
-    <div class="col-md">
-        <div class="container-fluid">
-            <div class="card shadow mb-4">
-                <div class="card-header" style="background-color: white;">
-                    <div id="content-wrapper" class="d-flex flex-column" style="background-color: white;">
-                        <div id="content">
-                            <div class="container-fluid">
-                                <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                <!-- Card quantidade vacina -->
+                <div class="col-xl-4 col-md-6 mb-3">
+                    <div class="card border-left-primary shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                        Usuários</div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800">quantidade</div>
                                 </div>
-
-                                <div class="row">
-
-                                    <!-- Card quantidade vacina -->
-                                    <div class="col-xl-4 col-md-6 mb-3">
-                                        <div class="card border-left-primary shadow h-100 py-2">
-                                            <div class="card-body">
-                                                <div class="row no-gutters align-items-center">
-                                                    <div class="col mr-2">
-                                                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                            Usuáriod</div>
-                                                        <div class="h5 mb-0 font-weight-bold text-gray-800">quantidade</div>
-                                                    </div>
-                                                    <div class="col-auto">
-                                                        <i class="fas fa-users"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="col-auto">
+                                    <i class="fas fa-users"></i>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
+                                
                 <!-- FORMULÁRIO  -->
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="" role="tabpanel">

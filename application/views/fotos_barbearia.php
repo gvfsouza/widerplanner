@@ -81,29 +81,30 @@
 
                         <div class="p-3 bg-white">
                             <form action="" method="POST">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="row">
-                                            <?php if (!empty($listar_fotos)): ?>
-                                                    <?php foreach ($listar_fotos as $value): ?>
-                                                            <div class="col">
-                                                                <?php if (!empty($value->id) && !empty($value->fotos_lugar)): ?>
-                                                                        <div class="img-placeholder">
-                                                                            <?php
-                                                                            // Construa a URL para puxar a foto pelo ID
-                                                                            $photo_url = base_url('application/fotos/' . $value->id . '/' . $value->fotos_lugar);
-                                                                            ?>
-                                                                            <center><img style='display:block; width:100px;height:100px;' id='base64image' src='<?php echo $photo_url; ?>' /></center>
-                                                                        </div>
-                                                                <?php endif; ?>
-                                                            </div>
-                                                    <?php endforeach; ?>
-                                            <?php else: ?>
-                                                    <p>Nenhuma foto encontrada.</p>
-                                            <?php endif; ?>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="row">
+                            <div class="row">
+    <div class="col-12">
+        <div class="row">
+            <?php if (!empty($listar_fotos)) : ?>
+                <?php foreach ($listar_fotos as $value) : ?>
+                    <div class="col">
+                        <?php if (!empty($value->id) && !empty($value->fotos_lugar)) : ?>
+                            <div class="img-placeholder">
+                                <?php
+                                // Exibe a imagem diretamente do banco de dados
+                                echo '<center><img style="display:block; width:100px;height:100px;" id="base64image" src="data:image/jpeg;base64,' . $value->fotos_lugar . '" /></center>';
+                                ?>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+                <?php endforeach; ?>
+            <?php else : ?>
+                <p>Nenhuma foto encontrada.</p>
+            <?php endif; ?>
+        </div>
+    </div>
+</div>
+
 
                                 
                                 <br><br><br>

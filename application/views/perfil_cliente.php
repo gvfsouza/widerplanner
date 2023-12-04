@@ -93,14 +93,11 @@
                                                             </div>
                                                             <div class="dados-cliente col-md-7">
                                                                 <label for="" style="color: #77787a;">Logradouro:</label>
-                                                                <input type="hidden" id="logradouro_hidden" name="logradouro_usuario" value="<?php echo $value->logradouro_usuario; ?>">
-                                                                <input style="font-size:14px" type="text" class="form-control" id="logradouro_usuario" value="<?php echo $value->logradouro_usuario; ?>">
+                                                                <input style="font-size:14px" type="text" class="form-control" id="logradouro_usuario" name="logradouro_usuario" value="<?php echo $value->logradouro_usuario; ?>">
                                                             </div>
                                                             <div class="dados-cliente col-md-2">
                                                                 <label for="" style="color: #77787a;">N°:</label>
-                                                                <input type="hidden" id="numero_hidden" name="numero_usuario" value="<?php echo $value->numero_usuario; ?>">
-
-                                                                <input style="font-size:14px" type="text" class="form-control" id="numero_usuario" value="<?php echo $value->numero_usuario; ?>">
+                                                                <input style="font-size:14px" type="text" class="form-control" id="numero_usuario" name="numero_usuario" value="<?php echo $value->numero_usuario; ?>">
                                                             </div>
                                                         </div>
                                                         <br>

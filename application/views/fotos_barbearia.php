@@ -64,25 +64,29 @@
         <!-- FORMULÁRIO  -->
         <div class="tab-content" id="myTabContent">
           <div class="tab-pane fade show active" id="" role="tabpanel">
-            <form action="">
               <div class="p-3 bg-white">
                 <div class="row">
                   <div class="col-12">
                     <div class="row">
-                      <article>
-                        <figure><input style="font-size:14px" type="file" class="form-control" id="fotos_lugar" name="fotos_lugar" accept="image/*"></figure>
-                      </article>
-                      <article>
-                        <figure><img src="https://lh3.googleusercontent.com/p/AF1QipNHO-Qc0KTw8X4jwQlKp9RGfEX6jT_7rtr-lea_=s680-w680-h510" alt=""></figure>
-                      </article>
-                      <article>
-                        <figure><img src="https://assets.codepen.io/605876/person.png" alt=""></figure>
-                      </article>
+                        <?php if (!empty($listar_fotos)) : ?>
+                            <?php foreach ($listar_fotos as $value) : ?>
+                            <article>
+                                    <figure> 
+                                        <?php if (!empty($value->foto_lugar)) { ?>
+                                            <center><img style='width:100px; height:100px;' id='base64image' src='data:image/jpeg;base64,<?php echo $value->foto_lugar ?>' /></center>
+                                        <?php } ?>
+                                    </figure>
+                                </article>
+                            <?php endforeach; ?>
+                        <?php else : ?>
+                            <p>Nenhum produto encontrado.</p>
+                        <?php endif; ?>
                     </div>
                   </div>
                 </div>
+                <form action="" method="POST">
                 <div class="text-right">
-                  <button href="/agendamento/" type="submit" name="salvar" class="btn-lg btn" style="border: none;background-color: #82a4ef;color: white;">Salvar</button>
+                  <button href="/fotos_barbearia/" type="submit" name="salvar" class="btn-lg btn" style="border: none;background-color: #82a4ef;color: white;">Salvar</button>
                 </div>
             </form>
           </div>

@@ -23,13 +23,55 @@ class Fotos_barbearia extends CI_Controller
 
 	public function index()
 	{
-		// Conexão com o Model
-		$this->load->model('Home_model');
+		$this->load->model('Servicos_model');
+		$dados = array();
+
+		if (isset($_POST['salvar'])) {
+			$foto_lugar = $this->converte_img($_FILES['foto_lugar']['tmp_name'],$_FILES['foto_lugar']['type']);
+			
+
+			// FOTO - EXTENSÃO
+			$path = $_FILES['foto_lugar']['name'];
+			$ext = pathinfo($path, PATHINFO_EXTENSION);
+			$config['upload_path'] = './application/fotos';
+			$config['allowed_types'] = 'jpg|jpeg|png';
+			$config['max_size'] = 2048;
+			$config['encrypt_name'] = TRUE;
+			$this->load->library('upload', $config);
+			$this->upload->initialize($config);
+		
+			if (!isset($error)) {
+				$dados['cadastro_fotos'] = $this->Servicos_model->cadastro_servicos($foto_lugar);
+
+				//MENSAGEM SUCESSO AO CADASTRAR
+				$this->session->set_flashdata('sucesso', 'Cadastro de uma nova foto realizado com sucesso!');
+				redirect('cadastro_servicos');
+			} else {
+				$this->session->set_flashdata('erro', 'Erro ao efetuar cadastro de uma nova foto.');
+			}
+		}
 
 		$this->load->view('layout/header');
 		$this->load->view('layout/sidebar');
 		$this->load->view('layout/navbar');
-		$this->load->view('fotos_barbearia');
-		$this->load->view('layout/footer');
+		$this->load->view('fotos_barbearia', $dados);
+
+		// $this->load->view('layout/footer');
+	}
+
+	public function converte_img($img, $type)
+	{
+		if ($type == 'image/png') {
+			$im = imagecreatefrompng($img);
+			ob_start();
+			imagejpeg($im);
+			$data = ob_get_clean();
+			imagedestroy($im);
+		} else {
+			ob_start();
+			readfile($img);
+			$data = ob_get_clean();
+		}
+		return base64_encode($data);
 	}
 }

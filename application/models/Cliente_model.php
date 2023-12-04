@@ -86,35 +86,16 @@ class Cliente_model extends CI_Model
 
 
     public function editar_dados_pesoais($id_usuario, $telefone_usuario, $cep_usuario, $numero_usuario, $complemento_usuario)
-{
-    // Consulte os dados atuais do usuário
-    $dados_atuais = $this->db->get_where('usuario', ['id_usuario' => $id_usuario])->row();
+    {
+        $data = array(
+            'telefone_usuario' => $telefone_usuario,
+            'cep_usuario' => $cep_usuario,
+            'numero_usuario' => $numero_usuario,
+            'complemento_usuario' => $complemento_usuario,
+        );
 
-    // Verifique se os campos foram modificados antes de atualizar
-    $data = [];
-    
-    if ($dados_atuais->telefone_usuario !== $telefone_usuario) {
-        $data['telefone_usuario'] = $telefone_usuario;
-    }
-
-    if ($dados_atuais->cep_usuario !== $cep_usuario) {
-        $data['cep_usuario'] = $cep_usuario;
-        // Se o CEP foi alterado, você pode querer atualizar automaticamente outros campos de endereço aqui
-    }
-
-    if ($dados_atuais->numero_usuario !== $numero_usuario) {
-        $data['numero_usuario'] = $numero_usuario;
-    }
-
-    if ($dados_atuais->complemento_usuario !== $complemento_usuario) {
-        $data['complemento_usuario'] = $complemento_usuario;
-    }
-
-    if (!empty($data)) {
         $this->db->where('id_usuario', $id_usuario);
         $this->db->update('usuario', $data);
     }
-}
-
 
 }

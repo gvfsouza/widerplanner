@@ -98,29 +98,24 @@
 
 <script>
     var options = {
+        // Legenda
         series: [{
+            name: 'Teste',
             data: [
-                <?php
-                foreach ($listar_animais_mes as $value) {
-
-                ?>
-                    <?php echo $value->quantidade; ?>,
-                <?php
-                }
-                ?>
+                // <?php foreach ($mostrar_vacinacao_animais as $value) {
+                //     echo $value->total_gatos_vacinados . ",";
+                // } ?>
+            ]
+        }, {
+            name: 'Cachorro',
+            data: [
+                // <?php foreach ($mostrar_vacinacao_animais as $value) {
+                //     echo $value->total_cachorros_vacinados . ",";
+                // } ?>
             ]
         }],
-        title: {
-            // Puxa o ano atual
-            text: 'Animais Microchipados (<?php echo $value->ano; ?>)',
-            align: 'center',
-        },
-        categories: {
-            align: 'right',
-        },
-        // tamanho do gráfico
         chart: {
-            height: 480,
+            height: 250,
             type: 'bar',
             events: {
                 click: function(chart, w, e) {
@@ -128,7 +123,7 @@
                 }
             }
         },
-        colors: ['#FAAB00', '#0DCB93', '#F8A500', '#FF2344', '#775DD0',
+        colors: ['#F1BEE3', '#83BFF2', '#F8CC00', '#FF2344', '#775DD0',
             '#64b2ee', '#9CE4CB', '#FFC95C', '#FC7186', '#C4B9E7',
             '#B1D3EC', '#0DB67B', '#FFE1A4', '#F8B7C0',
 
@@ -138,65 +133,77 @@
             '#9fcc2e', '#183059', '#0e402d', '#546E7A', '#d4526e', '#13d8aa', '#A5978B', '#2b908f', '#f9a3a4', '#90ee7e',
 
         ],
-
-        // Tamanho da barrinha
         plotOptions: {
             bar: {
-                columnWidth: '10%',
-                distributed: true,
-            }
+                horizontal: true,
+                dataLabels: {
+                    total: {
+                        enabled: true,
+                        offsetX: 0,
+                        style: {
+                            fontSize: '13px',
+                            fontWeight: 900
+                        }
+                    }
+                }
+            },
         },
-        dataLabels: {
-            // enabled: false
+        stroke: {
+            width: 1,
+            colors: ['#fff']
         },
-        legend: {
-            show: false
+        title: {
+            // Puxa o ano atual
+            text: 'Agendamentos (<?//php echo $value->ano; ?>)',
+            align: 'center',
         },
         xaxis: {
             categories: [
-
                 <?php
-                $meses = array(1 => 'Janeiro', 2 => 'Fevereiro', 3 => 'Março', 4 => 'Abril', 5 => 'Maio', 6 => 'Junho', 7 => 'Julho', 8 => 'Agosto', 9 => 'Setembro', 10 => 'Outubro', 11 => 'Novembro', 12 => 'Dezembro');
+                // $meses = array(1 => 'Janeiro', 2 => 'Fevereiro', 3 => 'Março', 4 => 'Abril', 5 => 'Maio', 6 => 'Junho', 7 => 'Julho', 8 => 'Agosto', 9 => 'Setembro', 10 => 'Outubro', 11 => 'Novembro', 12 => 'Dezembro');
 
-                $i = 0;
+                // $i = 0;
 
-                foreach ($listar_animais_mes as $value) {
-                    $i++;
-                ?> '<?php echo $meses[$value->mes]; ?>'
-                    <?php if ($i < count($listar_animais_mes)) {
-                        echo ',';
-                    }
-                    ?>
-                <?php
-                }
-                ?>,
+                // foreach ($mostrar_vacinacao_animais as $value) {
+                //     $i++;
+                // ?> '<?php echo $meses[$value->mes]; ?>'
+                //     <?php if ($i < count($mostrar_vacinacao_animais)) {
+                //         echo ',';
+                //     }
+                //     ?>
+                // <?php
+                // }
+                // ?>,
             ],
-            // nome que aparece embaixo da barrinha
             labels: {
-                show: true,
-                style: {
-                    // colors: colors
-                    // height:1000,
-                    fontSize: '12px'
+                // val = quantidade
+                formatter: function(val) {
+                    return val
                 }
             }
-
+        },
+        yaxis: {
+            title: {
+                text: undefined
+            },
         },
         tooltip: {
-            theme: 'dark',
-            x: {
-                show: true
-            },
             y: {
-                title: {
-                    formatter: function() {
-                        return ''
-                    }
+                formatter: function(val) {
+                    return val
                 }
             }
+        },
+        fill: {
+            opacity: 1
+        },
+        legend: {
+            position: 'top',
+            horizontalAlign: 'left',
+            offsetX: 40
         }
     };
 
-    var chart = new ApexCharts(document.querySelector("#grafico_animais_microchipados"), options);
+    var chart = new ApexCharts(document.querySelector("#grafico_"), options);
     chart.render();
 </script>

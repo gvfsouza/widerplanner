@@ -128,7 +128,7 @@
                                 </div>
                             </div>
                             <div class="text-right">
-                                <button type="submit" name="salvar" class="btn-lg btn" style="border: none;background-color: #82a4ef;color: white;">Salvar</button>
+                                <button type="submit" name="salvar" class="btn-lg btn" style="border: none;background-color: #82a4ef;color: white; margin-right:16px;">Salvar</button>
                             </div>
                         </form>
                     </div>
@@ -164,7 +164,7 @@
                                             <td style="font-size: 11px;"><?php echo formata_data($value->data_agenda); ?></td>
 
                                             <td style="font-size: 11px;"><?php echo $value->horarios_semana; ?></td>
-                                            
+
                                             <?php if (!empty($historico_profissionais_agendamentos)) { ?>
                                                 <td><?php echo $historico_profissionais_agendamentos[$key]->nome_usuario; ?></td>
                                             <?php } ?>

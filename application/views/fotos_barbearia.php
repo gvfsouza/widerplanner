@@ -80,7 +80,7 @@
                     <!----------------FIM-----MENSAGEM DE ERRO AO CADASTRAR ---------------->
 
                         <div class="p-3 bg-white">
-                            <form action="" method="POST">
+                            <form action="" method="POST" enctype="multipart/form-data">
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="row">

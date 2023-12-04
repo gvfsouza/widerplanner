@@ -29,7 +29,7 @@
                     <?php endif; ?>
                     <!----------------FIM-----MENSAGEM DE ERRO AO CADASTRAR ---------------->
 
-                    <form action="" method="POST">
+                    <form action="" method="POST" enctype="multipart/form-data">
                         <div class="p-3 bg-white">
                             <div class="row">
                                 <div class="col-12">

@@ -63,7 +63,7 @@
                 <!-- FORMULÁRIO  -->
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="" role="tabpanel">
-                        
+
                     <?php if ($this->session->flashdata('sucesso')) {    ?>
                         <div class="alert alert-success" role="alert">
                             <?php echo $this->session->flashdata('sucesso'); ?>
@@ -86,7 +86,22 @@
                                         <label for=""><b>Inserir uma Foto:</b></label>
                                         <br>
                                         <input style="font-size:14px" type="file" class="form-control" id="fotos_lugar" name="fotos_lugar" accept="image/*">
+                                        
+                                        <div class="fotos_lugar col mb-3">
+                                             <div class="fotos_lugar"></div>
+                                        </div>
+
+                                        <script>
+                                            function retornaNomeArquivo() {
+                                                $(".fotos_lugar").change(function() {
+                                                    var filename = $(this).val().replace(/C:\\fakepath\\/i, '')
+                                                    $(this).parent().parent().parent().next().find('.fotos_lugar').html('<i class="fas fa-folder-open"></i> ' + filename);
+                                                });
+                                            }
+                                            retornaNomeArquivo()
+                                        </script>
                                     </div>
+                                    
                                     <div class="form-group col">
                                         <label for="" class="invisible"></label>
                                         <br>

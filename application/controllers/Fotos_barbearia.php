@@ -55,8 +55,6 @@ class Fotos_barbearia extends CI_Controller
 		$this->load->view('layout/sidebar');
 		$this->load->view('layout/navbar');
 		$this->load->view('fotos_barbearia', $dados);
-
-		// $this->load->view('layout/footer');
 	}
 
 	public function converte_img($img, $type)

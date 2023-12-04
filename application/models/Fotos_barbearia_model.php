@@ -1,4 +1,5 @@
-<?php if (!defined('BASEPATH')) exit('No direct scripts access allowed');
+<?php if (!defined('BASEPATH'))
+    exit('No direct scripts access allowed');
 
 class Fotos_barbearia_model extends CI_Model
 {
@@ -11,10 +12,10 @@ class Fotos_barbearia_model extends CI_Model
         return $res->result();
     }
 
-    public function cadastro_fotos($nome_arquivo)
+    public function cadastro_fotos($fotos_lugar)
     {
         $data = array(
-            'fotos_lugar' => $nome_arquivo,
+            'fotos_lugar' => $fotos_lugar,
         );
 
         $this->db->insert('fotos_barbearia', $data);

@@ -4,14 +4,6 @@
         width: 65%;
         border-radius: 15px;
     }
-
-    article {
-        --hover: 0;
-    }
-
-    article:hover {
-        --hover: 1;
-    }
 </style>
 
 <br>
@@ -74,8 +66,8 @@
                                                 <?php foreach ($listar_fotos as $value) : ?>
                                                     <div class="col-md-4 mb-3">
                                                         <?php if (!empty($value->fotos_lugar)) : ?>
-                                                            <div class="img-placeholder">
-                                                                <center><img style="display: block; max-width: 100%;" id='base64image' src='data:image/jpeg;base64,<?php echo $value->fotos_lugar; ?>' /></center>
+                                                            <div>
+                                                                <center><img id='base64image' src='data:image/jpeg;base64,<?php echo $value->fotos_lugar; ?>' /></center>
                                                             </div>
                                                         <?php endif; ?>
                                                     </div>

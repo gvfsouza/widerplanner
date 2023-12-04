@@ -85,6 +85,11 @@
                   </div>
                 </div>
                 <form action="" method="POST">
+                    <div class="form-group col-md-3">
+                        <label for=""><b>Foto:</b></label>
+                        <br>
+                        <input style="font-size:14px" type="file" class="form-control arquivo" id="foto_servico" name="foto_servico" accept="image/*">
+                    </div>
                 <div class="text-right">
                   <button href="/fotos_barbearia/" type="submit" name="salvar" class="btn-lg btn" style="border: none;background-color: #82a4ef;color: white;">Salvar</button>
                 </div>

@@ -72,7 +72,7 @@
                             <?php foreach ($listar_fotos as $value) : ?>
                             <article>
                                     <figure> 
-                                        <?php if (!empty($value->foto_lugar)) { ?>
+                                        <?php if (!empty($value->fotos_lugar)) { ?>
                                             <center><img style='width:100px; height:100px;' id='base64image' src='data:image/jpeg;base64,<?php echo $value->fotos_lugar ?>' /></center>
                                         <?php } ?>
                                     </figure>

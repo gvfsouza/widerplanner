@@ -62,5 +62,5 @@ class Perfil_cliente extends CI_Controller
 			$this->load->view('perfil_cliente', $dados);
 			$this->load->view('layout/footer');
 	
-
+		}
 }

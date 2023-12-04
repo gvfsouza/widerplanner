@@ -30,7 +30,6 @@
 
   img {
     position: absolute;
-    left: 20%;
     top: 15%;
   }
 

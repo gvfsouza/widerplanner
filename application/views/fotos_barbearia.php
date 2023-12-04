@@ -72,7 +72,8 @@
                                         <input style="font-size:14px" type="file" class="form-control" id="fotos_lugar" name="fotos_lugar" accept="image/*">
                                     </div>
                                     <div class="form-group col-md-2 text-right">
-                                        <label for="" class="invisible">Ações</label>
+                                        <label for="" class="invisible"></label>
+                                        <br>
                                         <button href="/fotos_barbearia/" type="submit" name="salvar" class="btn-lg btn" style="border: none; background-color: #82a4ef; color: white;">Salvar</button>
                                     </div>
                                 </div>

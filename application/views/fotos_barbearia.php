@@ -62,31 +62,6 @@
                         <div class="p-3 bg-white">
                             <form action="" method="POST" enctype="multipart/form-data">
                                 <div class="row">
-                                    <div class="col-12">
-                                        <div class="row">
-                                            <?php if (!empty($listar_fotos)) : ?>
-                                                <?php foreach ($listar_fotos as $value) : ?>
-                                                    <div class="col">
-                                                        <?php if (!empty($value->fotos_lugar)) : ?>
-                                                            <div class="img-placeholder">
-                                                            <img id='base64image' src='data:image/jpeg;base64,<?php echo $value->fotos_lugar; ?>' />
-                                                            <br><br><br><br>
-                                                                <!-- <center><img style='display:block; width:100px;height:100px;' id='base64image' src='data:image/jpeg;base64,</?php echo $value->fotos_lugar; ?>' /></center> -->
-                                                            </div>
-                                                        <?php endif; ?>
-                                                    </div>
-                                                <?php endforeach; ?>
-                                            <?php else : ?>
-                                                <p>Nenhuma foto encontrada.</p>
-                                            <?php endif; ?>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <br><br><br>
-                                <br><br><br>
-
-                                <div class="row">
                                     <div class="form-group col">
                                         <label for=""><b>Inserir uma Foto:</b></label>
                                         <br>
@@ -97,6 +72,27 @@
                                         <label for="" class="invisible"></label>
                                         <br>
                                         <button type="submit" name="salvar" class="btn-lg btn" style="border: none; background-color: #82a4ef; color: white;">Salvar</button>
+                                    </div>
+                                </div>
+                                <br><br><br>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <?php if (!empty($listar_fotos)) : ?>
+                                                <?php foreach ($listar_fotos as $value) : ?>
+                                                    <div class="col">
+                                                        <?php if (!empty($value->fotos_lugar)) : ?>
+                                                            <div class="img-placeholder">
+                                                            <img id='base64image' src='data:image/jpeg;base64,<?php echo $value->fotos_lugar; ?>' />
+                                                                <!-- <center><img style='display:block; width:100px;height:100px;' id='base64image' src='data:image/jpeg;base64,</?php echo $value->fotos_lugar; ?>' /></center> -->
+                                                            </div>
+                                                        <?php endif; ?>
+                                                    </div>
+                                                <?php endforeach; ?>
+                                            <?php else : ?>
+                                                <p>Nenhuma foto encontrada.</p>
+                                            <?php endif; ?>
+                                        </div>
                                     </div>
                                 </div>
                             </form>

@@ -5,7 +5,7 @@ class Fotos_barbearia_model extends CI_Model
 {
     public function listar_fotos()
     {
-        $this->db->select('fotos_lugar');
+        $this->db->select('*');
         $this->db->from('fotos_barbearia');
 
         $res = $this->db->get();

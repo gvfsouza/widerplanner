@@ -65,7 +65,7 @@
                                         <div class="row">
                                             <?php if (!empty($listar_fotos)) : ?>
                                                 <?php foreach ($listar_fotos as $value) : ?>
-                                                    <div class="col-md-4 mb-3">
+                                                    <div class="col">
                                                         <?php if (!empty($value->fotos_lugar)) : ?>
                                                             <div>
                                                                 <center><img id='base64image' src='data:image/jpeg;base64,<?php echo $value->fotos_lugar; ?>' /></center>

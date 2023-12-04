@@ -3,6 +3,7 @@
         left:20%;
         width: 65%;
         border-radius: 15px;
+        height: 100%;
     }
 </style>
 

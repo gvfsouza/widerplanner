@@ -92,35 +92,35 @@
                                                             </div>
                                                             <div class="dados-cliente col-md-7">
                                                                 <label for="" style="color: #77787a;">Logradouro:</label>
-                                                                <input type="hidden" id="logradouro_hidden" name="logradouro" value="<?php echo $value->logradouro_usuario; ?>">
-                                                                <input style="font-size:14px" type="text" class="form-control" id="logradouro" value="<?php echo $value->logradouro_usuario; ?>">
+                                                                <input type="hidden" id="logradouro_hidden" name="logradouro_usuario" value="<?php echo $value->logradouro_usuario; ?>">
+                                                                <input style="font-size:14px" type="text" class="form-control" id="logradouro_usuario" value="<?php echo $value->logradouro_usuario; ?>">
                                                             </div>
                                                             <div class="dados-cliente col-md-2">
                                                                 <label for="" style="color: #77787a;">N°:</label>
-                                                                <input type="hidden" id="numero_hidden" name="numero" value="<?php echo $value->numero_usuario; ?>">
+                                                                <input type="hidden" id="numero_hidden" name="numero_usuario" value="<?php echo $value->numero_usuario; ?>">
 
-                                                                <input style="font-size:14px" type="text" class="form-control" id="numero" value="<?php echo $value->numero_usuario; ?>">
+                                                                <input style="font-size:14px" type="text" class="form-control" id="numero_usuario" value="<?php echo $value->numero_usuario; ?>">
                                                             </div>
                                                         </div>
                                                         <br>
                                                         <div class="row">
                                                             <div class="dados-cliente col-md-5">
                                                                 <label for="" style="color: #77787a;">Complemento:</label>
-                                                                <input style="font-size:14px" type="text" class="form-control" id="complemento" name="complemento" value="<?php echo $value->complemento_usuario; ?>">
+                                                                <input style="font-size:14px" type="text" class="form-control" id="complemento_usuario" name="complemento_usuario" value="<?php echo $value->complemento_usuario; ?>">
                                                             </div>
                                                             <div class="dados-cliente col-md-7">
                                                                 <label for="" style="color: #77787a;">Bairro:</label>
-                                                                <input style="font-size:14px" type="text" class="form-control" id="bairro" name="bairro" value="<?php echo $value->bairro_usuario; ?>">
+                                                                <input style="font-size:14px" type="text" class="form-control" id="bairro_usuario" name="bairro_usuario" value="<?php echo $value->bairro_usuario; ?>">
                                                             </div>
                                                         </div><br>
                                                         <div class="row">
                                                             <div class="dados-cliente col-md-7">
                                                                 <label for="" style="color: #77787a;">Cidade:</label>
-                                                                <input style="font-size:14px" type="text" class="form-control" id="cidade" name="cidade" value="<?php echo $value->cidade_usuario; ?>">
+                                                                <input style="font-size:14px" type="text" class="form-control" id="cidade_usuario" name="cidade_usuario" value="<?php echo $value->cidade_usuario; ?>">
                                                             </div>
                                                             <div class="dados-cliente col-md-5">
                                                                 <label for="" style="color: #77787a;">UF:</label>
-                                                                <input style="font-size:14px" type="text" class="form-control" id="uf" name="uf" value="<?php echo $value->estado_usuario; ?>">
+                                                                <input style="font-size:14px" type="text" class="form-control" id="estado_usuario" name="estado_usuario" value="<?php echo $value->estado_usuario; ?>">
                                                             </div>
                                                         </div>
                                                     </div>

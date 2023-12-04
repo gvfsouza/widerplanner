@@ -100,8 +100,8 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="row">
                                 <br><br><br>
-                                <div class="form-row">
                                     <div class="form-group col">
                                         <label for=""><b>Inserir uma Foto:</b></label>
                                         <br>

@@ -60,42 +60,18 @@ class Fotos_barbearia extends CI_Controller
 	}
 
 	public function converte_img($img, $type)
-{
-    try {
-        // Verifica se o arquivo existe
-        if (!file_exists($img)) {
-            throw new Exception('Arquivo de imagem não encontrado.');
-        }
-
-        // Se o tipo de imagem for PNG, converte para JPEG
-        if ($type == 'image/png') {
-            $im = imagecreatefrompng($img);
-
-            // Garante que a criação da imagem foi bem-sucedida
-            if (!$im) {
-                throw new Exception('Falha ao criar imagem a partir do PNG.');
-            }
-
-            ob_start();
-            // Define a qualidade como 90 (pode ser ajustado conforme necessário)
-            imagejpeg($im, null, 90);
-            $data = ob_get_clean();
-            imagedestroy($im);
-        } else {
-            // Se não for PNG, lê o arquivo diretamente
-            ob_start();
-            // Define a leitura do arquivo binário
-            readfile($img);
-            $data = ob_get_clean();
-        }
-
-        // Converte os dados em base64 e retorna
-        return base64_encode($data);
-    } catch (Exception $e) {
-        // Trata qualquer exceção lançada durante o processo
-        error_log('Erro na função converte_img: ' . $e->getMessage());
-        return false;
-    }
-}
-
+	{
+		if ($type == 'image/png') {
+			$im = imagecreatefrompng($img);
+			ob_start();
+			imagejpeg($im);
+			$data = ob_get_clean();
+			imagedestroy($im);
+		} else {
+			ob_start();
+			readfile($img);
+			$data = ob_get_clean();
+		}
+		return base64_encode($data);
+	}
 }

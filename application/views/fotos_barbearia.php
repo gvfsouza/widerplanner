@@ -74,7 +74,9 @@
                                                     </div>
                                                 <?php endforeach; ?>
                                             <?php else : ?>
-                                                <p class="col-12">Nenhuma foto encontrada.</p>
+                                                <div class="alert alert-danger" role="alert">
+                                                    Nenhuma Foto Encontrada!
+                                                </div>
                                             <?php endif; ?>
                                         </div>
                                     </div>

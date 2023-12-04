@@ -37,7 +37,8 @@
                                 <?php echo $this->session->flashdata('erro'); ?>
                             </div>
                         <?php endif; ?>
-                        <form action="" method="post">
+
+                        <form action="" method="POST">
                             <div class="p-3 bg-white">
                                 <div class="row">
                                     <div class="col-12">
@@ -129,7 +130,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <button href="<?php echo base_url(); ?>/perfil_cliente/" type="submit" name="salvar" class="btn-lg btn" style="border: none;background-color: #82a4ef;color: white;    margin-right: 17px;">Salvar</button>
+                            <div class="text-right">
+                                <button href="<?php echo base_url(); ?>/perfil_cliente/" type="submit" name="salvar" class="btn-lg btn" style="border: none;background-color: #82a4ef;color: white;">Salvar</button>
+                            </div>
                         </form>
                     </div>
                 </div>

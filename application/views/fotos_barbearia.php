@@ -5,8 +5,6 @@
   }
 
     img {
-        position: absolute;
-        top: 15%;
         left:20%;
         width: 65%;
         border-radius: 15px;
@@ -74,7 +72,7 @@
                                         <button type="submit" name="salvar" class="btn-lg btn" style="border: none; background-color: #82a4ef; color: white;">Salvar</button>
                                     </div>
                                 </div>
-                                <br><br><br>
+                                <br><br>
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="row">
@@ -83,7 +81,7 @@
                                                     <div class="col">
                                                         <?php if (!empty($value->fotos_lugar)) : ?>
                                                             <div class="img-placeholder">
-                                                            <img id='base64image' src='data:image/jpeg;base64,<?php echo $value->fotos_lugar; ?>' />
+                                                                <img id='base64image' src='data:image/jpeg;base64,<?php echo $value->fotos_lugar; ?>' />
                                                                 <!-- <center><img style='display:block; width:100px;height:100px;' id='base64image' src='data:image/jpeg;base64,</?php echo $value->fotos_lugar; ?>' /></center> -->
                                                             </div>
                                                         <?php endif; ?>

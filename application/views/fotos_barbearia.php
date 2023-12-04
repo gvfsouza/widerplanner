@@ -114,7 +114,7 @@
                                     <div class="form-group col">
                                         <label for="" class="invisible"></label>
                                         <br>
-                                        <button href="#" type="submit" name="salvar" class="btn-lg btn" style="border: none; background-color: #82a4ef; color: white;">Salvar</button>
+                                        <button type="submit" name="salvar" class="btn-lg btn" style="border: none; background-color: #82a4ef; color: white;">Salvar</button>
                                     </div>
                                 </div>
                             </form>

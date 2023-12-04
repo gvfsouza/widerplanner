@@ -31,8 +31,7 @@ class Perfil_cliente extends CI_Controller
         if ($this->input->post('salvar')) {
             // Obtenha os dados do cliente novamente após o envio do formulário
             $dados_cliente = $this->Cliente_model->dados_cliente($cpf_usuario);
-print_r($cpf_usuario).'teste';
-            // Obtenha os valores dos campos do formulário
+			var_dump($_POST);            // Obtenha os valores dos campos do formulário
             $telefone_usuario = $this->input->post('telefone_usuario');
             $cep_usuario = $this->input->post('cep_usuario');
             $numero_usuario = $this->input->post('numero_usuario');

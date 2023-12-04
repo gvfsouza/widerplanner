@@ -44,70 +44,69 @@
 <br>
 
 <div>
-  <div class="container-fluid">
-    <div class="card shadow mb-4">
-      <div class="card-header py-3" style="background-color: white;">
+    <div class="container-fluid">
+        <div class="card shadow mb-4">
+            <div class="card-header py-3" style="background-color: white;">
+                <div>
+                <h3 id="dados-agenda" style="font-size: 25px;font-weight:bold"></h3>
+                <br>
+                </div>
 
-        <div>
-          <h3 id="dados-agenda" style="font-size: 25px;font-weight:bold"></h3>
-          <br>
-        </div>
+                <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 7px; border: 1px solid #879bc9;background: #879bc9;color: black;">
+                <div>
+                    <legend class="form-group" style="color: white; font-size: 18px;">
+                    <strong>Fotos da Barbearia</strong>
+                    </legend>
+                </div>
+                </fieldset>
 
-        <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 7px; border: 1px solid #879bc9;background: #879bc9;color: black;">
-          <div>
-            <legend class="form-group" style="color: white; font-size: 18px;">
-              <strong>Fotos da Barbearia</strong>
-            </legend>
-          </div>
-        </fieldset>
-
-        <!-- FORMULÁRIO  -->
-        <div class="tab-content" id="myTabContent">
-          <div class="tab-pane fade show active" id="" role="tabpanel">
-              <div class="p-3 bg-white">
-                <div class="row">
-                  <div class="col-12">
-                    <div class="row">
-                        <?php if (!empty($listar_fotos)) : ?>
-                        <?php foreach ($listar_fotos as $value) : ?>
-                            <div class="col">
-                                <?php if (!empty($value->fotos_lugar)) : ?>
-                                    <div class="img-placeholder">
-                                        <center><img style='display:block; width:100px;height:100px;' id='base64image' src='data:image/jpeg;base64,<?php echo $value->fotos_lugar ?>' /></center>
+                <!-- FORMULÁRIO  -->
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="" role="tabpanel">
+                        <div class="p-3 bg-white">
+                            <form action="" method="POST">
+                                <div class="form-group col-md-12">
+                                    <label for=""><b>Inserir uma Foto:</b></label>
+                                    <br>
+                                    <input style="font-size:14px" type="file" class="form-control" id="fotos_lugar" name="fotos_lugar" accept="image/*">
+                                </div>
+                                <div class="text-right">
+                                    <button href="/fotos_barbearia/" type="submit" name="salvar" class="btn-lg btn" style="border: none; background-color: #82a4ef; color: white;">Salvar</button>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <?php if (!empty($listar_fotos)) : ?>
+                                                <?php foreach ($listar_fotos as $value) : ?>
+                                                    <div class="col">
+                                                        <?php if (!empty($value->fotos_lugar)) : ?>
+                                                            <div class="img-placeholder">
+                                                                <center><img style='display:block; width:100px;height:100px;' id='base64image' src='data:image/jpeg;base64,<?php echo $value->fotos_lugar ?>' /></center>
+                                                            </div>
+                                                        <?php endif; ?>
+                                                    </div>
+                                                <?php endforeach; ?>
+                                            <?php else : ?>
+                                                <p>Nenhuma foto encontrada.</p>
+                                            <?php endif; ?>
+                                        </div>
                                     </div>
-                                <?php endif; ?>
-                            </div>
-                        <?php endforeach; ?>
-                    <?php else : ?>
-                      <p>Nenhuma foto encontrada.</p>
-                    <?php endif; ?>
+                                </div>
+                                <br><br><br>
+                            </form>
+                        </div>
                     </div>
-                  </div>
-                </div>
-                <br><br><br>
-                <form action="" method="POST">
-                    <div class="form-group col-md-12">
-                        <label for=""><b>Inserir uma Foto:</b></label>
+                    <br><br>
+                    <div class="col-12 text-center">
+                        <span style="text-align: center">Sistema desenvolvido para cunho estudantil <br>
+                            Projeto de Conclusão de Curso - Superior de Tecnologia em Análise e Deselvolvimento de Sistemas
                         <br>
-                        <input style="font-size:14px" type="file" class="form-control" id="fotos_lugar" name="fotos_lugar" accept="image/*">
+                            Centro Universitário Nossa Senhora do Patrocínio <br>
+                            Endereço: R. José Weissohn, 153 - Centro, Salto - SP, 13328-300</span>
                     </div>
-                <div class="text-right">
-                  <button href="/fotos_barbearia/" type="submit" name="salvar" class="btn-lg btn" style="border: none; background-color: #82a4ef; color: white;">Salvar</button>
+                    <br>
                 </div>
-            </form>
-          </div>
+            </div>
         </div>
-        <br>
-        <br>
-        <div class="col-12 text-center">
-          <span style="text-align: center">Sistema desenvolvido para cunho estudantil <br>
-            Projeto de Conclusão de Curso - Superior de Tecnologia em Análise e Deselvolvimento de Sistemas
-            <br>
-            Centro Universitário Nossa Senhora do Patrocínio <br>
-            Endereço: R. José Weissohn, 153 - Centro, Salto - SP, 13328-300</span>
-        </div>
-        <br>
-      </div>
     </div>
-  </div>
 </div>

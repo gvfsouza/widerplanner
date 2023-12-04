@@ -30,7 +30,9 @@ class Fotos_barbearia extends CI_Controller
 			$foto = $_FILES['fotos_lugar'];
 
 
-			$fotos_lugar = $this->converte_img($_FILES['fotos_lugar']['name'],$_FILES['fotos_lugar']['type']);
+			$fotos_lugar = $this->converte_img($_FILES['fotos_lugar']['tmp_name'], $_FILES['fotos_lugar']['type']);
+			$dados['cadastro_fotos'] = $this->Fotos_barbearia_model->cadastro_fotos($fotos_lugar);
+
 
 			// // FOTO - EXTENSÃO
 			$path = $_FILES['fotos_lugar']['name'];
@@ -41,9 +43,9 @@ class Fotos_barbearia extends CI_Controller
 			$config['encrypt_name'] = TRUE;
 			$this->load->library('upload', $config);
 			$this->upload->initialize($config);
-		
+
 			if (!isset($error)) {
-				
+
 				if (isset($foto['name'])) {
 					if (!$this->upload->do_upload('fotos_lugar')) {
 						$error = array('erro' => $this->upload->display_errors());
@@ -63,7 +65,7 @@ class Fotos_barbearia extends CI_Controller
 				$this->session->set_flashdata('erro', 'Erro ao efetuar cadastro de uma nova foto.');
 			}
 		}
-		
+
 		$dados['listar_fotos'] = $this->Fotos_barbearia_model->listar_fotos();
 
 		$this->load->view('layout/header');
@@ -85,6 +87,7 @@ class Fotos_barbearia extends CI_Controller
 			readfile($img);
 			$data = ob_get_clean();
 		}
-		return base64_encode($data);
+		return $data;
 	}
+
 }

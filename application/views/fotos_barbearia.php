@@ -65,14 +65,18 @@
                     <div class="tab-pane fade show active" id="" role="tabpanel">
                         <div class="p-3 bg-white">
                             <form action="" method="POST">
-                                <div class="form-group col-md-12">
-                                    <label for=""><b>Inserir uma Foto:</b></label>
-                                    <br>
-                                    <input style="font-size:14px" type="file" class="form-control" id="fotos_lugar" name="fotos_lugar" accept="image/*">
+                                <div class="form-row">
+                                    <div class="form-group col-md-8">
+                                        <label for=""><b>Inserir uma Foto:</b></label>
+                                        <br>
+                                        <input style="font-size:14px" type="file" class="form-control" id="fotos_lugar" name="fotos_lugar" accept="image/*">
+                                    </div>
+                                    <div class="form-group col-md-2 text-right">
+                                        <label for="" class="invisible">Ações</label>
+                                        <button href="/fotos_barbearia/" type="submit" name="salvar" class="btn-lg btn" style="border: none; background-color: #82a4ef; color: white;">Salvar</button>
+                                    </div>
                                 </div>
-                                <div class="text-right">
-                                    <button href="/fotos_barbearia/" type="submit" name="salvar" class="btn-lg btn" style="border: none; background-color: #82a4ef; color: white;">Salvar</button>
-                                </div>
+
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="row">

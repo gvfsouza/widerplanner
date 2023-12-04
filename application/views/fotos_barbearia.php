@@ -94,9 +94,7 @@
                                                     <div class="col">
                                                         <?php if (!empty($value->fotos_lugar)) : ?>
                                                             <div class="img-placeholder">
-                                                                <article>
-                                                                    <figure><img id='base64image' src='data:image/jpeg;base64,<?php echo $value->fotos_lugar; ?>' /></figure>
-                                                                </article>
+                                                                <figure><img id='base64image' src='data:image/jpeg;base64,<?php echo $value->fotos_lugar; ?>' /></figure>
                                                                 <!-- <center><img style='display:block; width:100px;height:100px;' id='base64image' src='data:image/jpeg;base64,</?php echo $value->fotos_lugar; ?>' /></center> -->
                                                             </div>
                                                         <?php endif; ?>

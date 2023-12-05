@@ -149,10 +149,10 @@
                         <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 7px; border: 1px solid #879bc9;color: black;">
                             <table class="table table-responsive-lg">
                                 <tr>
-                                    <th scope="col" style="font-size: 13px;">Serviço</th>
-                                    <th scope="col" style="font-size: 13px;">Data</th>
-                                    <th scope="col" style="font-size: 13px;">Hora</th>
-                                    <th scope="col" style="font-size: 13px;">Profissional</th>
+                                    <th scope="col" style="font-size: 15px;"><b>Serviço</b></th>
+                                    <th scope="col" style="font-size: 15px;"><b>Data</b></th>
+                                    <th scope="col" style="font-size: 15px;"><b>Hora</b></th>
+                                    <th scope="col" style="font-size: 15px;"><b>Profissional</b></th>
                                 </tr>
                                 <tbody>
                                     <?php foreach ($historico_agendamentos_realizados as $key => $value) { ?>

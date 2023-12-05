@@ -148,28 +148,28 @@
             name: 'Barba',
             data: [
                 <?php foreach ($listar_agendamentos_mes_com_servicos as $value) {
-                    echo $value->total_gatos_vacinados . ",";
+                    echo $value->total_barba . ",";
                 } ?>
             ]
         }, {
             name: 'Cabelo',
             data: [
                 <?php foreach ($listar_agendamentos_mes_com_servicos as $value) {
-                    echo $value->total_cachorros_vacinados . ",";
+                    echo $value->total_cabelo . ",";
                 } ?>
             ]
         }, {
             name: 'Sobrancelha',
             data: [
                 <?php foreach ($listar_agendamentos_mes_com_servicos as $value) {
-                    echo $value->total_cachorros_vacinados . ",";
+                    echo $value->total_sobrancelha . ",";
                 } ?>
             ]
         }, {
             name: 'Pigmentação em Barba',
             data: [
                 <?php foreach ($listar_agendamentos_mes_com_servicos as $value) {
-                    echo $value->total_cachorros_vacinados . ",";
+                    echo $value->total_pigmentacao . ",";
                 } ?>
             ]
         }],

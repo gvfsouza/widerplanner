@@ -71,6 +71,7 @@ class Agendamento_model extends CI_Model
         return $res->result_array();
     }
 
+
     public function verificar_agendamento_existente($data_agenda, $fk_hora, $fk_profissional)
     {
         $this->db->where('data_agenda', $data_agenda);

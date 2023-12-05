@@ -144,45 +144,56 @@
 
 <script>
     var options = {
-        series: [
-            <?php
-            $dataByService = [];
-
-            foreach ($listar_agendamentos_mes_com_servicos as $value) {
-                $serviceName = $value->nome_servico;
-                $serviceData = isset($dataByService[$serviceName]) ? $dataByService[$serviceName] : [];
-
-                $serviceData[] = $value->cabelo; // Substitua "cabelo" pelo nome correto do campo que representa a quantidade de cada serviço
-
-                $dataByService[$serviceName] = $serviceData;
-            }
-
-            foreach ($dataByService as $serviceName => $serviceData) {
-                echo "{ name: '$serviceName', data: [" . implode(", ", $serviceData) . "] },";
-            }
-            ?>
-        ],
+        series: [{
+            name: 'Barba',
+            data: [
+                <?php foreach ($listar_agendamentos_mes_com_servicos as $value) {
+                    echo $value->barba . ",";
+                } ?>
+            ]
+        }, {
+            name: 'Cabelo',
+            data: [
+                <?php foreach ($listar_agendamentos_mes_com_servicos as $value) {
+                    echo $value->cabelo . ",";
+                } ?>
+            ]
+        }, {
+            name: 'Sobrancelha',
+            data: [
+                <?php foreach ($listar_agendamentos_mes_com_servicos as $value) {
+                    echo $value->sobrancelha . ",";
+                } ?>
+            ]
+        }, {
+            name: 'Pigmentação em Barba',
+            data: [
+                <?php foreach ($listar_agendamentos_mes_com_servicos as $value) {
+                    echo $value->pigmentacao . ",";
+                } ?>
+            ]
+        }],
         chart: {
-            type: 'bar',
+            type: "bar",
             height: 350,
             stacked: true,
             toolbar: {
-                show: true
+                show: true,
             },
             zoom: {
-                enabled: true
-            }
+                enabled: true,
+            },
         },
         responsive: [{
             breakpoint: 480,
             options: {
                 legend: {
-                    position: 'bottom',
+                    position: "bottom",
                     offsetX: -10,
-                    offsetY: 0
-                }
-            }
-        }],
+                    offsetY: 0,
+                },
+            },
+        }, ],
         plotOptions: {
             bar: {
                 horizontal: false,
@@ -191,40 +202,44 @@
                     total: {
                         enabled: true,
                         style: {
-                            fontSize: '13px',
-                            fontWeight: 900
-                        }
-                    }
-                }
+                            fontSize: "13px",
+                            fontWeight: 900,
+                        },
+                    },
+                },
             },
         },
         xaxis: {
-            type: 'category',
+            type: "category",
             categories: [
-                <?php
-                $months = array(1 => 'Janeiro', 2 => 'Fevereiro', 3 => 'Março', 4 => 'Abril', 5 => 'Maio', 6 => 'Junho', 7 => 'Julho', 8 => 'Agosto', 9 => 'Setembro', 10 => 'Outubro', 11 => 'Novembro', 12 => 'Dezembro');
+                // mês
+                 <?php
+                $meses = array(1 => 'Janeiro', 2 => 'Fevereiro', 3 => 'Março', 4 => 'Abril', 5 => 'Maio', 6 => 'Junho', 7 => 'Julho', 8 => 'Agosto', 9 => 'Setembro', 10 => 'Outubro', 11 => 'Novembro', 12 => 'Dezembro');
 
                 $i = 0;
 
                 foreach ($listar_agendamentos_mes_com_servicos as $value) {
                     $i++;
-                    echo "'{$months[$value->mes]}'";
-                    if ($i < count($listar_agendamentos_mes_com_servicos)) {
+                ?> '<?php echo $meses[$value->mes] . ' ' . $value->ano; ?>'
+                    <?php if ($i < count($listar_agendamentos_mes_com_servicos)) {
                         echo ',';
                     }
+                    ?>
+                <?php
                 }
                 ?>
             ],
         },
+
         legend: {
-            position: 'right',
-            offsetY: 40
+            position: "right",
+            offsetY: 40,
         },
         fill: {
-            opacity: 1
-        }
+            opacity: 1,
+        },
     };
 
-    var chart = new ApexCharts(document.querySelector('#chart'), options);
+    var chart = new ApexCharts(document.querySelector("#chart"), options);
     chart.render();
 </script>

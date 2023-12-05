@@ -46,7 +46,7 @@ class Relatorio_model extends CI_Model
                 WHEN servicos.id_servicos = 8 THEN 'Sobrancelha'
                 ELSE 'Outro' -- Adicione mais casos conforme necessário
             END as nome_servico,
-            COUNT(CASE WHEN servicos.id_servico IN (1, 2, 7, 8) THEN 1 ELSE NULL END) as quantidade,
+            COUNT(CASE WHEN servicos.id_servicos IN (1, 2, 7, 8) THEN 1 ELSE NULL END) as quantidade,
             MONTH(agenda.data_agenda) as mes,
             YEAR(agenda.data_agenda) as ano
         ");

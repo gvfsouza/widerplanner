@@ -115,6 +115,7 @@ class Agendamento_model extends CI_Model
         $this->db->select('*');
         $this->db->from('agenda2');
         $this->db->join('servicos', 'servicos.id_servicos = agenda2.fk_servicos', 'left');
+        date('Y');
     
         $res = $this->db->get();
         return $res->result();

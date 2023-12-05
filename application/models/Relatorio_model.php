@@ -41,7 +41,7 @@ class Relatorio_model extends CI_Model
     $this->db->select("servicos.nome_servico, COUNT(agenda.id_agenda) as quantidade, MONTH(agenda.data_agenda) as mes, YEAR(agenda.data_agenda) as ano");
     $this->db->from('agenda');
     $this->db->join('agenda2', 'agenda.id_agenda = agenda2.fk_agenda');
-    $this->db->join('servicos', 'agenda2.fk_servicos = servicos.id_servico');
+    $this->db->join('servicos', 'agenda2.fk_servicos = servicos.id_servicos');
     $this->db->where("MONTH(agenda.data_agenda) >", 0);
     
     $ano_atual = date('Y'); // traz os registros do ano atual

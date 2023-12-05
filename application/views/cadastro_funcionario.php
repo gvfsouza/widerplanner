@@ -193,7 +193,7 @@
     $('.add_novo_Servico').click(function(e) {
         var container = $(this).closest('.row');
         var element_copy = container.clone();
-        var botao_excluir = '<div class="btn btn-outline-danger botao_remover" style="width: 200px; height: 50px; font-size: 14px; margin-top: 10px;"><i class="fas fa-trash-alt"></i> Remover</div>';
+        var botao_excluir = '<div class="btn btn-outline-danger botao_remover" style="width: 150px; font-size: 14px"><i class="fas fa-trash-alt"></i> Remover</div>';
 
         element_copy.find('select, input').val('');
         element_copy.find('.select2').remove(); // Limpa o campo

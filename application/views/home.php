@@ -279,6 +279,7 @@
 
                                     <p class="col-md-12" style="font-size: 18px; text-align: end;">
                                     <img src="https://scontent-gru2-2.xx.fbcdn.net/v/t39.30808-6/302135953_502845391841930_8585948991976360589_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=TpFICO55swEAX9n1EQ0&_nc_ht=scontent-gru2-2.xx&oh=00_AfBT9HRfTe5yRcAsGZt3sDXK85JhzGBXzs-N63KIrkrQ-A&oe=656B55E5" alt="Logo Barbearia" style="width: 100px; height: 100px"></center>
+                                    <br>
                                     <strong>Barbearia GAVAZ </strong> <br> <strong>CNPJ:</strong> 31.458.001/0001-08 <br> <b>Dados de localização:</b> Av Dom Pedro I, 1226, Centro, Salto/SP - box 205 (ao lado do cinema)<br> <b>Instagram:</b>&nbsp;@barbeariagavaz
                                 </p>
                                     <div class="col-12">

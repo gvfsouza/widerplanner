@@ -37,9 +37,8 @@ class Relatorio_model extends CI_Model
     // }
 
     public function listar_agendamentos_mes_com_servicos()
-    {
-        $this->db->select("
-        servicos.id_servicos,
+{
+    $this->db->select("
         CASE 
             WHEN servicos.id_servicos = 1 THEN 'Cabelo' 
             WHEN servicos.id_servicos = 2 THEN 'Barba' 
@@ -54,14 +53,15 @@ class Relatorio_model extends CI_Model
         MONTH(agenda.data_agenda) as mes,
         YEAR(agenda.data_agenda) as ano
     ");
-        $this->db->from('agenda');
-        $this->db->join('agenda2', 'agenda.id_agenda = agenda2.fk_agenda');
-        $this->db->join('servicos', 'agenda2.fk_servicos = servicos.id_servicos');
-        $this->db->group_by("servicos.id_servicos, MONTH(agenda.data_agenda), YEAR(agenda.data_agenda)");
+    $this->db->from('agenda');
+    $this->db->join('agenda2', 'agenda.id_agenda = agenda2.fk_agenda');
+    $this->db->join('servicos', 'agenda2.fk_servicos = servicos.id_servicos');
+    $this->db->group_by("nome_servico, MONTH(agenda.data_agenda), YEAR(agenda.data_agenda)");
 
-        $res = $this->db->get();
-        return $res->result(); // Retorna um objeto
-    }
+    $res = $this->db->get();
+    return $res->result(); // Retorna um objeto
+}
+
 
 
 

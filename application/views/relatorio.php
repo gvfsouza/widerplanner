@@ -221,11 +221,11 @@
                 foreach ($listar_agendamentos_mes_com_servicos as $value) {
                     $mesAno = $value->mes . '/' . $value->ano;
 
-                    // Verifica se o mês e ano já foram processados
+                    // Verifica se o mês e ano já foram incluídos
                     if (!in_array($mesAno, $mesesComRegistros)) {
                         echo "'" . $meses[$value->mes] . "',";
 
-                        // Adiciona o mês e ano ao array de processados
+                        // Adiciona o mês e ano ao array de incluídos
                         $mesesComRegistros[] = $mesAno;
                     }
                 }

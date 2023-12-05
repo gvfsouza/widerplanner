@@ -144,24 +144,35 @@
 
 <script>
     var options = {
-        series: [
-            {
-                name: 'Barba',
-                data: <?php echo json_encode(array_column($listar_agendamentos_mes_com_servicos, 'barba')); ?>
-            },
-            {
-                name: 'Cabelo',
-                data: <?php echo json_encode(array_column($listar_agendamentos_mes_com_servicos, 'cabelo')); ?>
-            },
-            {
-                name: 'Sobrancelha',
-                data: <?php echo json_encode(array_column($listar_agendamentos_mes_com_servicos, 'sobrancelha')); ?>
-            },
-            {
-                name: 'Pigmentação em Barba',
-                data: <?php echo json_encode(array_column($listar_agendamentos_mes_com_servicos, 'pigmentacao')); ?>
-            }
-        ],
+        series: [{
+            name: 'Barba',
+            data: [
+                <?php foreach ($listar_agendamentos_mes_com_servicos as $value) {
+                    echo $value->barba . ",";
+                } ?>
+            ]
+        }, {
+            name: 'Cabelo',
+            data: [
+                <?php foreach ($listar_agendamentos_mes_com_servicos as $value) {
+                    echo $value->cabelo . ",";
+                } ?>
+            ]
+        }, {
+            name: 'Sobrancelha',
+            data: [
+                <?php foreach ($listar_agendamentos_mes_com_servicos as $value) {
+                    echo $value->sobrancelha . ",";
+                } ?>
+            ]
+        }, {
+            name: 'Pigmentação em Barba',
+            data: [
+                <?php foreach ($listar_agendamentos_mes_com_servicos as $value) {
+                    echo $value->pigmentacao . ",";
+                } ?>
+            ]
+        }],
         chart: {
             type: "bar",
             height: 350,
@@ -173,18 +184,16 @@
                 enabled: true,
             },
         },
-        responsive: [
-            {
-                breakpoint: 480,
-                options: {
-                    legend: {
-                        position: "bottom",
-                        offsetX: -10,
-                        offsetY: 0,
-                    },
+        responsive: [{
+            breakpoint: 480,
+            options: {
+                legend: {
+                    position: "bottom",
+                    offsetX: -10,
+                    offsetY: 0,
                 },
             },
-        ],
+        }, ],
         plotOptions: {
             bar: {
                 horizontal: false,
@@ -202,10 +211,28 @@
         },
         xaxis: {
             type: "category",
-            categories: <?php echo json_encode(array_unique(array_map(function($value) {
-                return $value->mes . ' ' . $value->ano;
-            }, $listar_agendamentos_mes_com_servicos))); ?>
+            categories: [
+                // mês
+                <?php
+                $meses = array(1 => 'Janeiro', 2 => 'Fevereiro', 3 => 'Março', 4 => 'Abril', 5 => 'Maio', 6 => 'Junho', 7 => 'Julho', 8 => 'Agosto', 9 => 'Setembro', 10 => 'Outubro', 11 => 'Novembro', 12 => 'Dezembro');
+
+                $mesesComRegistros = array();
+
+                foreach ($listar_agendamentos_mes_com_servicos as $value) {
+                    $mesAno = $value->mes . '/' . $value->ano;
+
+                    // Verifica se o mês e ano já foram incluídos
+                    if (!in_array($mesAno, $mesesComRegistros)) {
+                        echo "'" . $meses[$value->mes] . "',";
+
+                        // Adiciona o mês e ano ao array de incluídos
+                        $mesesComRegistros[] = $mesAno;
+                    }
+                }
+                ?>
+            ],
         },
+
         legend: {
             position: "right",
             offsetY: 40,

@@ -152,7 +152,7 @@
                 $serviceName = $value->nome_servico;
                 $serviceData = isset($dataByService[$serviceName]) ? $dataByService[$serviceName] : [];
 
-                $serviceData[] = $value->quantidade;
+                $serviceData[] = $value->cabelo; // Substitua "cabelo" pelo nome correto do campo que representa a quantidade de cada serviço
 
                 $dataByService[$serviceName] = $serviceData;
             }

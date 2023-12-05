@@ -249,5 +249,15 @@ foreach ($mesesData as $mesData) {
             categories: <?php echo json_encode($categories); ?>,
         },
         legend: {
-            position: "r
+            position: "right",
+            offsetY: 40,
+        },
+        fill: {
+            opacity: 1,
+        },
+    };
+
+    var chart = new ApexCharts(document.querySelector("#chart"), options);
+    chart.render();
+</script>
 

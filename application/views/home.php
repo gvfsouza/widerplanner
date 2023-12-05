@@ -390,9 +390,11 @@
                                                                     <center>
                                                                         <p class="status-value" style="color: #879BC9; font-weight: bold;">R$ &nbsp;<b><?php echo $value->valor_produto; ?>,00</b></p>
                                                                     </center>
-                                                                    <form method="POST" action="<?php echo base_url('home/excluir_produto/' . $value->id_produto); ?>">
-                                                                        <button type="submit" class="btn btn-danger" style="font-size: 11px; float: right">Excluir</button>
-                                                                    </form>
+                                                                    <?php if ($this->session->fk_usuario != '' && $this->session->profissional == 'sim'): ?>
+                                                                        <form method="POST" action="<?php echo base_url('home/excluir_produto/' . $value->id_produto); ?>">
+                                                                            <button type="submit" class="btn btn-danger" style="font-size: 11px; float: right">Excluir</button>
+                                                                        </form>
+                                                                    <?php endif; ?>
                                                                 </div>
                                                             </div>
                                                         <?php endif; ?>

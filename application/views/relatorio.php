@@ -145,94 +145,40 @@
 <script>
     var options = {
         series: [
-            <?php
-            $monthsData = [];
-
-            foreach ($listar_agendamentos_mes_com_servicos as $value) {
-                $monthKey = $value->ano . '-' . $value->mes;
-                $monthsData[$monthKey][$value->nome_servico] = $value->total_servicos;
-            }
-
-            foreach ($monthsData as $monthKey => $services) {
-                echo "{\n";
-                echo "  name: '$monthKey',\n";
-                echo "  data: {";
-
-                foreach ($services as $serviceName => $serviceTotal) {
-                    echo "'$serviceName': $serviceTotal, ";
-                }
-
-                echo "},\n";
-                echo "},\n";
-            }
-            ?>
-        ],
-        chart: {
-            type: "bar",
-            height: 350,
-            stacked: true,
-            toolbar: {
-                show: true,
-            },
-            zoom: {
-                enabled: true,
-            },
-        },
-        responsive: [{
-            breakpoint: 480,
-            options: {
-                legend: {
-                    position: "bottom",
-                    offsetX: -10,
-                    offsetY: 0,
+            <?php foreach ($listar_agendamentos_mes_com_servicos as $value) : ?>
+                {
+                    name: '<?php echo date('F Y', mktime(0, 0, 0, $value->mes, 1, $value->ano)); ?>',
+                    data: [<?php echo $value->total_servicos; ?>],
+                    tipos_servicos: '<?php echo $value->tipos_servicos; ?>',
                 },
-            },
-        }, ],
-        plotOptions: {
-            bar: {
-                horizontal: false,
-                borderRadius: 10,
-                dataLabels: {
-                    total: {
-                        enabled: true,
-                        style: {
-                            fontSize: "13px",
-                            fontWeight: 900,
-                        },
+            <?php endforeach; ?>
+        ],
+        // Restante do código...
+    };
+
+    // Adicione um evento para exibir os tipos de serviços ao passar o mouse sobre a barra
+    options.plotOptions = {
+        bar: {
+            horizontal: false,
+            borderRadius: 10,
+            dataLabels: {
+                total: {
+                    enabled: true,
+                    style: {
+                        fontSize: "13px",
+                        fontWeight: 900,
                     },
                 },
             },
-        },
-        xaxis: {
-            type: "category",
-            categories: [
-                <?php
-                $meses = array(1 => 'Janeiro', 2 => 'Fevereiro', 3 => 'Março', 4 => 'Abril', 5 => 'Maio', 6 => 'Junho', 7 => 'Julho', 8 => 'Agosto', 9 => 'Setembro', 10 => 'Outubro', 11 => 'Novembro', 12 => 'Dezembro');
-
-                $i = 0;
-
-                foreach ($listar_agendamentos_mes_com_servicos as $value) {
-                    $i++;
-                ?> '<?php echo $meses[$value->mes] . ' ' . $value->ano; ?>'
-                    <?php if ($i < count($listar_agendamentos_mes_com_servicos)) {
-                        echo ',';
-                    }
-                    ?>
-                <?php
-                }
-                ?>
-            ],
-        },
-
-        legend: {
-            position: "right",
-            offsetY: 40,
-        },
-        fill: {
-            opacity: 1,
+            events: {
+                dataPointMouseEnter: function (event, chartContext, config) {
+                    var tiposServicos = config.w.config.series[config.seriesIndex].tipos_servicos;
+                    alert('Tipos de Serviços: ' + tiposServicos);
+                },
+            },
         },
     };
 
-    var chart = new ApexCharts(document.querySelector("#chart"), options);
-    chart.render();
+    // Restante do código...
 </script>
+

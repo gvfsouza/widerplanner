@@ -158,15 +158,15 @@
                                     <?php foreach ($historico_agendamentos_realizados as $key => $value) { ?>
                                         <tr>
                                             <?php if (!empty($historico_servicos_agendamentos[$key])) { ?>
-                                                <td><?php echo $historico_servicos_agendamentos[$key]->servicos; ?></td>
+                                                <td><b><?php echo $historico_servicos_agendamentos[$key]->servicos; ?></b></td>
                                             <?php } ?>
 
-                                            <td style="font-size: 11px;"><?php echo formata_data($value->data_agenda); ?></td>
+                                            <td style="font-size: 11px;"><b><?php echo formata_data($value->data_agenda); ?></b></td>
 
-                                            <td style="font-size: 11px;"><?php echo $value->horarios_semana; ?></td>
+                                            <td style="font-size: 11px;"><b><?php echo $value->horarios_semana; ?></b></td>
 
                                             <?php if (!empty($historico_profissionais_agendamentos)) { ?>
-                                                <td><?php echo $historico_profissionais_agendamentos[$key]->nome_usuario; ?></td>
+                                                <td>v<?php echo $historico_profissionais_agendamentos[$key]->nome_usuario; ?></b></td>
                                             <?php } ?>
                                         </tr>
                                     <?php } ?>

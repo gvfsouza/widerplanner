@@ -39,11 +39,10 @@ class Relatorio_model extends CI_Model
     public function listar_agendamentos_mes_com_servicos() {
         $this->db->select("
             CASE 
-                WHEN agenda2.fk_servicos = 1 THEN 'Cabelo'
-                WHEN agenda2.fk_servicos = 2 THEN 'Barba'
-                WHEN agenda2.fk_servicos = 7 THEN 'Pigmentação'
-                WHEN agenda2.fk_servicos = 8 THEN 'Sobrancelha'
-                ELSE 'Outro' -- Adicione mais casos conforme necessário
+            SUM(CASE WHEN servicos.id_servico = 1 THEN cachorros_vacinados ELSE 0 END) as total_cabelo,
+            SUM(CASE WHEN servicos.id_servico = 2 THEN cachorros_vacinados ELSE 0 END) as total_barba,
+            SUM(CASE WHEN servicos.id_servico = 7 THEN cachorros_vacinados ELSE 0 END) as total_pigmentacao,
+            SUM(CASE WHEN servicos.id_servico = 8 THEN cachorros_vacinados ELSE 0 END) as total_sobrancelha,
             END as nome_servico,
             COUNT(agenda2.fk_servicos) as quantidade,
             MONTH(agenda.data_agenda) as mes,

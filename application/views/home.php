@@ -390,7 +390,7 @@
                                                                 </div>
                                                                 <div>
                                                                     <br>
-                                                                    <h3><?php echo $value->nome_produto; ?></h3>
+                                                                    <h3 style="text-align: center"><?php echo $value->nome_produto; ?></h3>
                                                                     <p class="profile-desc" ><?php echo $value->descricao_produto; ?></p>
                                                                     <center>
                                                                         <p class="status-value" style="color: #879BC9; font-weight: bold;">R$ &nbsp;<b><?php echo $value->valor_produto; ?>,00</b></p>

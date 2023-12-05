@@ -273,140 +273,140 @@
                 <!-- FORMULÁRIO  -->
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="" role="tabpanel">
-                        <form action="">
-                            <div class="p-3 bg-white">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <br>
-                                        <img src="https://scontent-gru2-2.xx.fbcdn.net/v/t39.30808-6/302135953_502845391841930_8585948991976360589_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=TpFICO55swEAX9n1EQ0&_nc_ht=scontent-gru2-2.xx&oh=00_AfBT9HRfTe5yRcAsGZt3sDXK85JhzGBXzs-N63KIrkrQ-A&oe=656B55E5" alt="Logo Barbearia" style="width: 150px; height: 150px; border-radius: 15px">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p style="font-size: 18px; text-align: end;">
-                                            Barbearia GAVAZ <br>
-                                            CNPJ: 31.458.001/0001-08 <br>
-                                            Instagram: &nbsp;@barbeariagavaz <br><br>
-                                            Dados de localização: <br>
-                                            Av Dom Pedro I, 1226, Centro, Salto/SP - box 205 (ao lado do cinema)
-                                        </p>
-                                    </div>
+                        <div class="p-3 bg-white">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <br>
+                                    <img src="https://scontent-gru2-2.xx.fbcdn.net/v/t39.30808-6/302135953_502845391841930_8585948991976360589_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=TpFICO55swEAX9n1EQ0&_nc_ht=scontent-gru2-2.xx&oh=00_AfBT9HRfTe5yRcAsGZt3sDXK85JhzGBXzs-N63KIrkrQ-A&oe=656B55E5" alt="Logo Barbearia" style="width: 150px; height: 150px; border-radius: 15px">
+                                </div>
+                                <div class="col-md-6">
+                                    <p style="font-size: 18px; text-align: end;">
+                                        Barbearia GAVAZ <br>
+                                        CNPJ: 31.458.001/0001-08 <br>
+                                        Instagram: &nbsp;@barbeariagavaz <br><br>
+                                        Dados de localização: <br>
+                                        Av Dom Pedro I, 1226, Centro, Salto/SP - box 205 (ao lado do cinema)
+                                    </p>
+                                </div>
 
-                                    <div class="col-12">
-                                        <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 7px; border: 1px solid #879bc9;background: #879bc9;color: black;">
-                                            <div>
-                                                <legend class="form-group" style="color: white; font-size: 18px;">
-                                                    <strong>Serviços Oferecidos</strong>
-                                                </legend>
-                                            </div>
-                                        </fieldset>
+                                <div class="col-12">
+                                    <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 7px; border: 1px solid #879bc9;background: #879bc9;color: black;">
+                                        <div>
+                                            <legend class="form-group" style="color: white; font-size: 18px;">
+                                                <strong>Serviços Oferecidos</strong>
+                                            </legend>
+                                        </div>
+                                    </fieldset>
 
-                                        <fieldset class="form-group " style="border: 1px solid #ddd; border-radius: 4px; border: 1px solid #879bc9; display: flex; flex-wrap: wrap; justify-content: space-around;">
-                                            <?php foreach ($listar_dados_servicos as $value) { ?>
-                                                <div class="card-container" style="flex: 0 0 20%;">
-                                                    <div class="card" style="margin-top: 30px; margin-bottom: 30px; margin-left: 5px; margin-right: 5px; width: 100%;">
-                                                        <div class="card-header-profile">
-                                                            <div class="profile-info">
-                                                                <h3 class="profile-name"><strong><?php echo $value->nome_servico; ?></strong>
-                                                                </h3>
-                                                                <br>
-                                                                <p class="profile-desc"><?php echo $value->descricao_servico; ?></p>
-                                                            </div>
+                                    <fieldset class="form-group " style="border: 1px solid #ddd; border-radius: 4px; border: 1px solid #879bc9; display: flex; flex-wrap: wrap; justify-content: space-around;">
+                                        <?php foreach ($listar_dados_servicos as $value) { ?>
+                                            <div class="card-container" style="flex: 0 0 20%;">
+                                                <div class="card" style="margin-top: 30px; margin-bottom: 30px; margin-left: 5px; margin-right: 5px; width: 100%;">
+                                                    <div class="card-header-profile">
+                                                        <div class="profile-info">
+                                                            <h3 class="profile-name"><strong><?php echo $value->nome_servico; ?></strong>
+                                                            </h3>
+                                                            <br>
+                                                            <p class="profile-desc"><?php echo $value->descricao_servico; ?></p>
                                                         </div>
-                                                        <center>
-                                                            <p class="status-value">R$ &nbsp;<?php echo $value->valor_servico; ?>,00<i class="fas fa-clock"></i> &nbsp;&nbsp;<?php echo $value->duracao_servico; ?></p>
-                                                        </center>
+                                                    </div>
+                                                    <center>
+                                                        <p class="status-value">R$ &nbsp;<?php echo $value->valor_servico; ?>,00<i class="fas fa-clock"></i> &nbsp;&nbsp;<?php echo $value->duracao_servico; ?></p>
+                                                    </center>
+                                                </div>
+                                            </div>
+                                        <?php } ?>
+                                    </fieldset>
+
+                                    <br>
+
+                                    <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 7px; border: 1px solid #879bc9;background: #879bc9;color: black;">
+                                        <div>
+                                            <legend class="form-group" style="color: white; font-size: 18px;">
+                                                <strong>Profissionais</strong>
+                                            </legend>
+                                        </div>
+                                    </fieldset>
+
+                                    <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9; display: flex; flex-wrap: wrap; justify-content: space-around">
+                                        <?php if (!empty($listar_dados_estabelecimento)) : ?>
+                                            <?php foreach ($listar_dados_estabelecimento as $value) : ?>
+                                                <div class="card-container" style="flex: 0 0 300px; margin: 10px;">
+                                                    <div class="col">
+                                                        <?php if (!empty($value->nome_usuario)) : ?>
+                                                            <div class="card usuario" style="width: 100%; height: 380px;">
+                                                                <div class="img-placeholder">
+                                                                    <?php if (!empty($value->foto_usuario)) { ?>
+                                                                        <center><img style='display:block; width:100px;height:100px;' id='base64image' src='data:image/jpeg;base64,<?php echo $value->foto_usuario ?>' /></center>
+                                                                    <?php } else { ?>
+                                                                        <center><img src="https://scontent-gru2-2.xx.fbcdn.net/v/t39.30808-6/302135953_502845391841930_8585948991976360589_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=TpFICO55swEAX9n1EQ0&_nc_ht=scontent-gru2-2.xx&oh=00_AfBT9HRfTe5yRcAsGZt3sDXK85JhzGBXzs-N63KIrkrQ-A&oe=656B55E5" alt="Logo Barbearia"></center>
+                                                                    <?php } ?>
+                                                                </div>
+                                                                <div>
+                                                                    <br>
+                                                                    <h3><?php echo $value->nome_usuario; ?></h3>
+                                                                    <p><?php echo $value->descricao_usuario; ?></p>
+                                                                    <p><i class="fas fa-solid fa-paper-plane icon"></i>&nbsp;<?php echo $value->email_usuario; ?></p>
+                                                                </div>
+                                                            </div>
+                                                        <?php endif; ?>
                                                     </div>
                                                 </div>
-                                            <?php } ?>
-                                        </fieldset>
+                                            <?php endforeach; ?>
+                                        <?php else : ?>
+                                            <p>Nenhum produto encontrado.</p>
+                                        <?php endif; ?>
+                                    </fieldset>
 
-                                        <br>
-
-                                        <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 7px; border: 1px solid #879bc9;background: #879bc9;color: black;">
-                                            <div>
-                                                <legend class="form-group" style="color: white; font-size: 18px;">
-                                                    <strong>Profissionais</strong>
-                                                </legend>
-                                            </div>
-                                        </fieldset>
-
-                                        <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9; display: flex; flex-wrap: wrap; justify-content: space-around">
-                                            <?php if (!empty($listar_dados_estabelecimento)) : ?>
-                                                <?php foreach ($listar_dados_estabelecimento as $value) : ?>
-                                                    <div class="card-container" style="flex: 0 0 300px; margin: 10px;">
-                                                        <div class="col">
-                                                            <?php if (!empty($value->nome_usuario)) : ?>
-                                                                <div class="card usuario" style="width: 100%; height: 380px;">
-                                                                    <div class="img-placeholder">
-                                                                        <?php if (!empty($value->foto_usuario)) { ?>
-                                                                            <center><img style='display:block; width:100px;height:100px;' id='base64image' src='data:image/jpeg;base64,<?php echo $value->foto_usuario ?>' /></center>
-                                                                        <?php } else { ?>
-                                                                            <center><img src="https://scontent-gru2-2.xx.fbcdn.net/v/t39.30808-6/302135953_502845391841930_8585948991976360589_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=TpFICO55swEAX9n1EQ0&_nc_ht=scontent-gru2-2.xx&oh=00_AfBT9HRfTe5yRcAsGZt3sDXK85JhzGBXzs-N63KIrkrQ-A&oe=656B55E5" alt="Logo Barbearia"></center>
-                                                                        <?php } ?>
-                                                                    </div>
-                                                                    <div>
-                                                                        <br>
-                                                                        <h3><?php echo $value->nome_usuario; ?></h3>
-                                                                        <p><?php echo $value->descricao_usuario; ?></p>
-                                                                        <p><i class="fas fa-solid fa-paper-plane icon"></i>&nbsp;<?php echo $value->email_usuario; ?></p>
-                                                                    </div>
-                                                                </div>
-                                                            <?php endif; ?>
-                                                        </div>
-                                                    </div>
-                                                <?php endforeach; ?>
-                                            <?php else : ?>
-                                                <p>Nenhum produto encontrado.</p>
-                                            <?php endif; ?>
-                                        </fieldset>
-
-                                        <br>
-
-                                        <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 7px; border: 1px solid #879bc9;background: #879bc9;color: black;">
-                                            <div>
-                                                <legend class="form-group" style="color: white; font-size: 18px;">
-                                                    <strong>Produtos</strong>
-                                                </legend>
-                                            </div>
-                                        </fieldset>
-
-                                        <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9; display: flex; flex-wrap: wrap; justify-content: space-around">
-                                            <?php if (!empty($listar_dados_produtos)) : ?>
-                                                <?php foreach ($listar_dados_produtos as $value) : ?>
-                                                    <div class="card-container" style="flex: 0 0 300px; margin: 10px;">
-                                                        <div class="col">
-                                                            <?php if (!empty($value->nome_produto)) : ?>
-                                                                <div class="card usuario" style="width: 100%;">
-                                                                <br>
-                                                                    <div class="img">
-                                                                        <?php if (!empty($value->foto_produto)) { ?>
-                                                                            <center><img style="width:130px; height:140px" id='base64image' src='data:image/jpeg;base64,<?php echo $value->foto_produto ?>' /></center>
-                                                                        <?php } else { ?>
-                                                                            <center><img src="https://scontent-gru2-2.xx.fbcdn.net/v/t39.30808-6/302135953_502845391841930_8585948991976360589_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=TpFICO55swEAX9n1EQ0&_nc_ht=scontent-gru2-2.xx&oh=00_AfBT9HRfTe5yRcAsGZt3sDXK85JhzGBXzs-N63KIrkrQ-A&oe=656B55E5" alt="Logo Barbearia"></center>
-                                                                        <?php } ?>
-                                                                    </div>
-                                                                    <div>
-                                                                        <br>
-                                                                        <h3><?php echo $value->nome_produto; ?></h3>
-                                                                        <p class="profile-desc" ><?php echo $value->descricao_produto; ?></p>
-                                                                        <center>
-                                                                            <p class="status-value" style="color: #879BC9; font-weight: bold;">R$ &nbsp;<b><?php echo $value->valor_produto; ?>,00</b></p>
-                                                                        </center>
-                                                                        <button type="button" class="btn btn-danger" style="font-size: 11px; float: right">Excluir</button>
-                                                                    </div>
-                                                                </div>
-                                                            <?php endif; ?>
-                                                        </div>
-                                                    </div>
-                                                <?php endforeach; ?>
-                                            <?php else : ?>
-                                                <p>Nenhum produto encontrado.</p>
-                                            <?php endif; ?>
-                                        </fieldset>
-                                    </div>
                                     <br>
+
+                                    <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 7px; border: 1px solid #879bc9;background: #879bc9;color: black;">
+                                        <div>
+                                            <legend class="form-group" style="color: white; font-size: 18px;">
+                                                <strong>Produtos</strong>
+                                            </legend>
+                                        </div>
+                                    </fieldset>
+
+                                    <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9; display: flex; flex-wrap: wrap; justify-content: space-around">
+                                        <?php if (!empty($listar_dados_produtos)) : ?>
+                                            <?php foreach ($listar_dados_produtos as $value) : ?>
+                                                <div class="card-container" style="flex: 0 0 300px; margin: 10px;">
+                                                    <div class="col">
+                                                        <?php if (!empty($value->nome_produto)) : ?>
+                                                            <div class="card usuario" style="width: 100%;">
+                                                            <br>
+                                                                <div class="img">
+                                                                    <?php if (!empty($value->foto_produto)) { ?>
+                                                                        <center><img style="width:130px; height:140px" id='base64image' src='data:image/jpeg;base64,<?php echo $value->foto_produto ?>' /></center>
+                                                                    <?php } else { ?>
+                                                                        <center><img src="https://scontent-gru2-2.xx.fbcdn.net/v/t39.30808-6/302135953_502845391841930_8585948991976360589_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=TpFICO55swEAX9n1EQ0&_nc_ht=scontent-gru2-2.xx&oh=00_AfBT9HRfTe5yRcAsGZt3sDXK85JhzGBXzs-N63KIrkrQ-A&oe=656B55E5" alt="Logo Barbearia"></center>
+                                                                    <?php } ?>
+                                                                </div>
+                                                                <div>
+                                                                    <br>
+                                                                    <h3><?php echo $value->nome_produto; ?></h3>
+                                                                    <p class="profile-desc" ><?php echo $value->descricao_produto; ?></p>
+                                                                    <center>
+                                                                        <p class="status-value" style="color: #879BC9; font-weight: bold;">R$ &nbsp;<b><?php echo $value->valor_produto; ?>,00</b></p>
+                                                                    </center>
+                                                                    <form method="POST" action="<?php echo base_url('home/excluir_produto/' . $value->id_produto); ?>">
+                                                                        <button type="submit" class="btn btn-danger" style="font-size: 11px; float: right">Excluir</button>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                        <?php endif; ?>
+                                                    </div>
+                                                </div>
+                                            <?php endforeach; ?>
+                                        <?php else : ?>
+                                            <p>Nenhum produto encontrado.</p>
+                                        <?php endif; ?>
+                                    </fieldset>
                                 </div>
+                                <br>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>

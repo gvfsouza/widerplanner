@@ -36,4 +36,14 @@ class Home extends CI_Controller
 		$this->load->view('home', $dados);
 		$this->load->view('layout/footer');
 	}
+
+	public function excluir_produto($id_produto)
+	{
+		// Conexão com o Model
+		$this->load->model('Home_model');
+
+		$this->Home_model->excluir_produto($id_produto);
+		redirect('home');
+	}
+
 }

@@ -1,4 +1,5 @@
-<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
+<?php if (!defined('BASEPATH'))
+    exit('No direct script access allowed');
 
 class Home_model extends CI_Model
 {
@@ -28,5 +29,11 @@ class Home_model extends CI_Model
 
         $res = $this->db->get();
         return $res->result();
+    }
+
+    public function excluir_produto($id_produto)
+    {
+        $this->db->where('id_produto', $id_produto);
+        $this->db->delete('produtos');
     }
 }

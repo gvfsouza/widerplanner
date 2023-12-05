@@ -119,7 +119,6 @@
                                             <div class="col-md-3" style="margin-top: 30px;">
                                                 <div class="servicos_add">
                                                     <button type="button" class="btn btn-primary add_novo_Servico" style="width: 185px; height: 40px; font-size: 14px;"><i class="fas fa-plus"></i> Adicionar Serviço</button>
-                                                    <button type="button" class="btn btn-danger botao_remover" style="width: 150px; height: 40px; font-size: 14px; margin-left: 10px;"><i class="fas fa-trash-alt"></i> Remover</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -202,13 +201,14 @@
 
         container.after(element_copy);
 
+        // Adicione o botão de remover apenas ao novo elemento clonado
         if (element_copy.find('.botao_remover').length === 0) {
             element_copy.find('.col-md-3').append(botao_excluir);
-        }
 
-        $('.botao_remover').click(function(e) {
-            $(this).closest('.row').remove();
-        });
+            $('.botao_remover').click(function(e) {
+                $(this).closest('.row').remove();
+            });
+        }
 
         // Select picker
         $('.servico').select2({

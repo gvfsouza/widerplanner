@@ -46,10 +46,7 @@ class Relatorio_model extends CI_Model
             WHEN servicos.id_servicos = 8 THEN 'Sobrancelha' 
             ELSE 'Outro' 
         END as nome_servico,
-        SUM(CASE WHEN servicos.id_servicos = 1 THEN 1 ELSE 0 END) as cabelo,
-        SUM(CASE WHEN servicos.id_servicos = 2 THEN 1 ELSE 0 END) as barba, 
-        SUM(CASE WHEN servicos.id_servicos = 7 THEN 1 ELSE 0 END) as pigmentacao,
-        SUM(CASE WHEN servicos.id_servicos = 8 THEN 1 ELSE 0 END) as sobrancelha,
+        COUNT(*) as total_servicos,
         MONTH(agenda.data_agenda) as mes,
         YEAR(agenda.data_agenda) as ano
     ");
@@ -61,4 +58,5 @@ class Relatorio_model extends CI_Model
         $res = $this->db->get();
         return $res->result(); // Retorna um objeto
     }
+
 }

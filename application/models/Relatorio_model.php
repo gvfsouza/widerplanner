@@ -40,10 +40,10 @@ class Relatorio_model extends CI_Model
     {
         $this->db->select("
             CASE 
-                WHEN servicos.id_servico = 1 THEN 'Cabelo'
-                WHEN servicos.id_servico = 2 THEN 'Barba'
-                WHEN servicos.id_servico = 7 THEN 'Pigmentação'
-                WHEN servicos.id_servico = 8 THEN 'Sobrancelha'
+                WHEN servicos.id_servicos = 1 THEN 'Cabelo'
+                WHEN servicos.id_servicos = 2 THEN 'Barba'
+                WHEN servicos.id_servicos = 7 THEN 'Pigmentação'
+                WHEN servicos.id_servicos = 8 THEN 'Sobrancelha'
                 ELSE 'Outro' -- Adicione mais casos conforme necessário
             END as nome_servico,
             COUNT(CASE WHEN servicos.id_servico IN (1, 2, 7, 8) THEN 1 ELSE NULL END) as quantidade,

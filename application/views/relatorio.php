@@ -142,36 +142,57 @@
     </div>
 </div>
 
+<?php
+$mesesData = array();
+
+foreach ($listar_agendamentos_mes_com_servicos as $value) {
+    $mesAno = $value->mes . '-' . $value->ano;
+
+    if (!isset($mesesData[$mesAno])) {
+        $mesesData[$mesAno] = array(
+            'mes_ano' => $mesAno,
+            'cabelo' => 0,
+            'barba' => 0,
+            'sobrancelha' => 0,
+            'pigmentacao' => 0,
+        );
+    }
+
+    $mesesData[$mesAno]['cabelo'] += $value->cabelo;
+    $mesesData[$mesAno]['barba'] += $value->barba;
+    $mesesData[$mesAno]['sobrancelha'] += $value->sobrancelha;
+    $mesesData[$mesAno]['pigmentacao'] += $value->pigmentacao;
+}
+
+$categories = array();
+$cabeloData = array();
+$barbaData = array();
+$sobrancelhaData = array();
+$pigmentacaoData = array();
+
+foreach ($mesesData as $mesData) {
+    $categories[] = $mesData['mes_ano'];
+    $cabeloData[] = $mesData['cabelo'];
+    $barbaData[] = $mesData['barba'];
+    $sobrancelhaData[] = $mesData['sobrancelha'];
+    $pigmentacaoData[] = $mesData['pigmentacao'];
+}
+?>
+
 <script>
     var options = {
         series: [{
             name: 'Barba',
-            data: [
-                <?php foreach ($listar_agendamentos_mes_com_servicos as $value) {
-                    echo $value->barba . ",";
-                } ?>
-            ]
+            data: <?php echo json_encode($barbaData); ?>,
         }, {
             name: 'Cabelo',
-            data: [
-                <?php foreach ($listar_agendamentos_mes_com_servicos as $value) {
-                    echo $value->cabelo . ",";
-                } ?>
-            ]
+            data: <?php echo json_encode($cabeloData); ?>,
         }, {
             name: 'Sobrancelha',
-            data: [
-                <?php foreach ($listar_agendamentos_mes_com_servicos as $value) {
-                    echo $value->sobrancelha . ",";
-                } ?>
-            ]
+            data: <?php echo json_encode($sobrancelhaData); ?>,
         }, {
             name: 'Pigmentação em Barba',
-            data: [
-                <?php foreach ($listar_agendamentos_mes_com_servicos as $value) {
-                    echo $value->pigmentacao . ",";
-                } ?>
-            ]
+            data: <?php echo json_encode($pigmentacaoData); ?>,
         }],
         chart: {
             type: "bar",
@@ -193,7 +214,7 @@
                     offsetY: 0,
                 },
             },
-        }, ],
+        }],
         plotOptions: {
             bar: {
                 horizontal: false,
@@ -211,26 +232,8 @@
         },
         xaxis: {
             type: "category",
-            categories: [
-                // mês
-                 <?php
-                $meses = array(1 => 'Janeiro', 2 => 'Fevereiro', 3 => 'Março', 4 => 'Abril', 5 => 'Maio', 6 => 'Junho', 7 => 'Julho', 8 => 'Agosto', 9 => 'Setembro', 10 => 'Outubro', 11 => 'Novembro', 12 => 'Dezembro');
-
-                $i = 0;
-
-                foreach ($listar_agendamentos_mes_com_servicos as $value) {
-                    $i++;
-                ?> '<?php echo $meses[$value->mes] . ' ' . $value->ano; ?>'
-                    <?php if ($i < count($listar_agendamentos_mes_com_servicos)) {
-                        echo ',';
-                    }
-                    ?>
-                <?php
-                }
-                ?>
-            ],
+            categories: <?php echo json_encode($categories); ?>,
         },
-
         legend: {
             position: "right",
             offsetY: 40,

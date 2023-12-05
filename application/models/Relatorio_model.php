@@ -58,8 +58,7 @@ class Relatorio_model extends CI_Model
         $this->db->join('agenda2', 'agenda.id_agenda = agenda2.fk_agenda');
         $this->db->join('servicos', 'agenda2.fk_servicos = servicos.id_servicos');
         $this->db->group_by("servicos.id_servicos, MONTH(agenda.data_agenda), YEAR(agenda.data_agenda)");
-        $this->db->order_by("ano", "ASC");
-        $this->db->order_by("mes", "ASC");
+        $this->db->order_by("mes", "DESC");
 
         $res = $this->db->get();
         return $res->result(); // Retorna um objeto

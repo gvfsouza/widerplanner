@@ -214,8 +214,6 @@
             categories: [
                 // mês
                 <?php
-                $meses = array(1 => 'Janeiro', 2 => 'Fevereiro', 3 => 'Março', 4 => 'Abril', 5 => 'Maio', 6 => 'Junho', 7 => 'Julho', 8 => 'Agosto', 9 => 'Setembro', 10 => 'Outubro', 11 => 'Novembro', 12 => 'Dezembro');
-
                 $mesesComRegistros = array();
 
                 foreach ($listar_agendamentos_mes_com_servicos as $value) {
@@ -223,7 +221,7 @@
 
                     // Verifica se o mês e ano já foram incluídos
                     if (!in_array($mesAno, $mesesComRegistros)) {
-                        echo "'" . $meses[$value->mes] . "',";
+                        echo "'" . $mesAno . "',";
 
                         // Adiciona o mês e ano ao array de incluídos
                         $mesesComRegistros[] = $mesAno;

@@ -21,6 +21,15 @@ class Relatorio_model extends CI_Model
         return $res->result();
     }
 
+    // Card Produtos
+    public function total_produtos()
+    {
+        $this->db->select("COUNT(produtos.id_produto) as quantidade_produtos");
+        $this->db->from('produtos');
+        $res = $this->db->get();
+        return $res->result();
+    }
+    
     // Gráfico listar agendamentos por mês
     // public function listar_agendamentos_mes()
     // {

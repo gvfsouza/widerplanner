@@ -391,7 +391,7 @@
                                                                         <center>
                                                                             <p class="status-value" style="color: #879BC9; font-weight: bold;">R$ &nbsp;<b><?php echo $value->valor_produto; ?>,00</b></p>
                                                                         </center>
-                                                                        <button type="button" class="btn btn-danger" style="font-size: 13px">Excluir</button>
+                                                                        <button type="button" class="btn btn-danger" style="font-size: 11px; float: right">Excluir</button>
                                                                     </div>
                                                                 </div>
                                                             <?php endif; ?>

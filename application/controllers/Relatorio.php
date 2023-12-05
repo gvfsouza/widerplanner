@@ -28,7 +28,7 @@ class Relatorio extends CI_Controller
 
 		$dados['listar_usuarios_cadastrados'] = $this->Relatorio_model->listar_usuarios_cadastrados();
 		$dados['total_servicos'] = $this->Relatorio_model->total_servicos();
-		$dados['listar_agendamentos_mes'] = $this->Relatorio_model->listar_agendamentos_mes();
+		$dados['listar_agendamentos_mes_com_servicos'] = $this->Relatorio_model->listar_agendamentos_mes_com_servicos();
 
 		$this->load->view('layout/header');
 		$this->load->view('layout/sidebar');

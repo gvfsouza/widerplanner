@@ -37,29 +37,31 @@ class Relatorio_model extends CI_Model
     // }
 
     public function listar_agendamentos_mes_com_servicos()
-{
-    $this->db->select("
-        CASE WHEN servicos.id_servicos = 1 THEN 'Cabelo' 
-             WHEN servicos.id_servicos = 2 THEN 'Barba' 
-             WHEN servicos.id_servicos = 7 THEN 'Pigmentacao' 
-             WHEN servicos.id_servicos = 8 THEN 'Sobrancelha' 
-             ELSE 'Outro' 
-        END as nome_servico,
-        SUM(CASE WHEN servicos.id_servicos = 1 THEN quantidade ELSE 0 END) as total_cabelo,
-        SUM(CASE WHEN servicos.id_servicos = 2 THEN quantidade ELSE 0 END) as total_barba,
-        SUM(CASE WHEN servicos.id_servicos = 7 THEN quantidade ELSE 0 END) as total_pigmentacao,
-        SUM(CASE WHEN servicos.id_servicos = 8 THEN quantidade ELSE 0 END) as total_sobrancelha,
-        COUNT(CASE WHEN servicos.id_servicos IN (1, 2, 7, 8) THEN 1 ELSE NULL END) as quantidade,
-        MONTH(agenda.data_agenda) as mes,
-        YEAR(agenda.data_agenda) as ano
-    ");
-    $this->db->from('agenda');
-    $this->db->join('agenda2', 'agenda.id_agenda = agenda2.fk_agenda');
-    $this->db->join('servicos', 'agenda2.fk_servicos = servicos.id_servicos');
-    $this->db->group_by("nome_servico, MONTH(agenda.data_agenda), YEAR(agenda.data_agenda)");
-
-    $res = $this->db->get();
-    return $res->result_array(); // Retorna um array associativo
-}
+    {
+        $this->db->select("
+            servicos.id_servicos,
+            CASE 
+                WHEN servicos.id_servicos = 1 THEN 'Cabelo' 
+                WHEN servicos.id_servicos = 2 THEN 'Barba' 
+                WHEN servicos.id_servicos = 7 THEN 'Pigmentacao' 
+                WHEN servicos.id_servicos = 8 THEN 'Sobrancelha' 
+                ELSE 'Outro' 
+            END as nome_servico,
+            COUNT(servicos.id_servicos = 1) as cabelo,
+            COUNT(servicos.id_servicos = 2) as barba, 
+            COUNT(servicos.id_servicos = 7) as pigmentacao,
+            COUNT(servicos.id_servicos = 8) as sobrancelha,
+            MONTH(agenda.data_agenda) as mes,
+            YEAR(agenda.data_agenda) as ano
+        ");
+        $this->db->from('agenda');
+        $this->db->join('agenda2', 'agenda.id_agenda = agenda2.fk_agenda');
+        $this->db->join('servicos', 'agenda2.fk_servicos = servicos.id_servicos');
+        $this->db->group_by("servicos.id_servicos, MONTH(agenda.data_agenda), YEAR(agenda.data_agenda)");
+    
+        $res = $this->db->get();
+        return $res->result_array(); // Retorna um array associativo
+    }
+    
 
 }

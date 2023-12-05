@@ -148,28 +148,28 @@
             name: 'Barba',
             data: [
                 <?php foreach ($listar_agendamentos_mes_com_servicos as $value) {
-                    echo $value->total_barba . ",";
+                    echo $value->barba . ",";
                 } ?>
             ]
         }, {
             name: 'Cabelo',
             data: [
                 <?php foreach ($listar_agendamentos_mes_com_servicos as $value) {
-                    echo $value->total_cabelo . ",";
+                    echo $value->cabelo . ",";
                 } ?>
             ]
         }, {
             name: 'Sobrancelha',
             data: [
                 <?php foreach ($listar_agendamentos_mes_com_servicos as $value) {
-                    echo $value->total_sobrancelha . ",";
+                    echo $value->sobrancelha . ",";
                 } ?>
             ]
         }, {
             name: 'Pigmentação em Barba',
             data: [
                 <?php foreach ($listar_agendamentos_mes_com_servicos as $value) {
-                    echo $value->total_pigmentacao . ",";
+                    echo $value->pigmentacao . ",";
                 } ?>
             ]
         }],

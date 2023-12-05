@@ -31,6 +31,12 @@ class Home_model extends CI_Model
         return $res->result();
     }
 
+    public function excluir_servico($id_servicos)
+    {
+        $this->db->where('id_servicos', $id_servicos);
+        $this->db->delete('servicos');
+    }
+
     public function excluir_produto($id_produto)
     {
         $this->db->where('id_produto', $id_produto);

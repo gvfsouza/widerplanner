@@ -144,41 +144,102 @@
 
 <script>
     var options = {
-        series: [
-            <?php foreach ($listar_agendamentos_mes_com_servicos as $value) : ?>
-                {
-                    name: '<?php echo date('F Y', mktime(0, 0, 0, $value->mes, 1, $value->ano)); ?>',
-                    data: [<?php echo $value->total_servicos; ?>],
-                    tipos_servicos: '<?php echo $value->tipos_servicos; ?>',
+        series: [{
+            name: 'Barba',
+            data: [
+                <?php foreach ($listar_agendamentos_mes_com_servicos as $value) {
+                    echo $value->barba . ",";
+                } ?>
+            ]
+        }, {
+            name: 'Cabelo',
+            data: [
+                <?php foreach ($listar_agendamentos_mes_com_servicos as $value) {
+                    echo $value->cabelo . ",";
+                } ?>
+            ]
+        }, {
+            name: 'Sobrancelha',
+            data: [
+                <?php foreach ($listar_agendamentos_mes_com_servicos as $value) {
+                    echo $value->sobrancelha . ",";
+                } ?>
+            ]
+        }, {
+            name: 'Pigmentação em Barba',
+            data: [
+                <?php foreach ($listar_agendamentos_mes_com_servicos as $value) {
+                    echo $value->pigmentacao . ",";
+                } ?>
+            ]
+        }],
+        chart: {
+            type: "bar",
+            height: 350,
+            stacked: true,
+            toolbar: {
+                show: true,
+            },
+            zoom: {
+                enabled: true,
+            },
+        },
+        responsive: [{
+            breakpoint: 480,
+            options: {
+                legend: {
+                    position: "bottom",
+                    offsetX: -10,
+                    offsetY: 0,
                 },
-            <?php endforeach; ?>
-        ],
-        // Restante do código...
-    };
-
-    // Adicione um evento para exibir os tipos de serviços ao passar o mouse sobre a barra
-    options.plotOptions = {
-        bar: {
-            horizontal: false,
-            borderRadius: 10,
-            dataLabels: {
-                total: {
-                    enabled: true,
-                    style: {
-                        fontSize: "13px",
-                        fontWeight: 900,
+            },
+        }, ],
+        plotOptions: {
+            bar: {
+                horizontal: false,
+                borderRadius: 10,
+                dataLabels: {
+                    total: {
+                        enabled: true,
+                        style: {
+                            fontSize: "13px",
+                            fontWeight: 900,
+                        },
                     },
                 },
             },
-            events: {
-                dataPointMouseEnter: function (event, chartContext, config) {
-                    var tiposServicos = config.w.config.series[config.seriesIndex].tipos_servicos;
-                    alert('Tipos de Serviços: ' + tiposServicos);
-                },
-            },
+        },
+        xaxis: {
+            type: "category",
+            categories: [
+                // mês
+                 <?php
+                $meses = array(1 => 'Janeiro', 2 => 'Fevereiro', 3 => 'Março', 4 => 'Abril', 5 => 'Maio', 6 => 'Junho', 7 => 'Julho', 8 => 'Agosto', 9 => 'Setembro', 10 => 'Outubro', 11 => 'Novembro', 12 => 'Dezembro');
+
+                $i = 0;
+
+                foreach ($listar_agendamentos_mes_com_servicos as $value) {
+                    $i++;
+                ?> '<?php echo $meses[$value->mes] . ' ' . $value->ano; ?>'
+                    <?php if ($i < count($listar_agendamentos_mes_com_servicos)) {
+                        echo ',';
+                    }
+                    ?>
+                <?php
+                }
+                ?>
+            ],
+        },
+
+        legend: {
+            position: "right",
+            offsetY: 40,
+        },
+        fill: {
+            opacity: 1,
         },
     };
 
-    // Restante do código...
+    var chart = new ApexCharts(document.querySelector("#chart"), options);
+    chart.render();
 </script>
-

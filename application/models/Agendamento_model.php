@@ -109,7 +109,7 @@ class Agendamento_model extends CI_Model
         $this->db->select('*');
         $this->db->from('usuario');
         $this->db->join('agenda', 'usuario.id_usuario = agenda.fk_profissional', 'left');
-        // $this->db->where('usuario.profissional', 'sim');
+        $this->db->where('usuario.profissional', 'sim');
     
         $res = $this->db->get();
         return $res->result();

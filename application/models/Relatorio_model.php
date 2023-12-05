@@ -40,10 +40,10 @@ class Relatorio_model extends CI_Model
     {
         $this->db->select("
             CASE 
-            SUM(CASE WHEN servicos.id_servico = 1 THEN quantidade ELSE 0 END) as total_cabelo,
-            SUM(CASE WHEN servicos.id_servico = 2 THEN quantidade ELSE 0 END) as total_barba,
-            SUM(CASE WHEN servicos.id_servico = 7 THEN quantidade ELSE 0 END) as total_pigmentacao,
-            SUM(CASE WHEN servicos.id_servico = 8 THEN quantidade ELSE 0 END) as total_sobrancelha,
+            SUM(CASE WHEN servicos.id_servicos = 1 THEN quantidade ELSE 0 END) as total_cabelo,
+            SUM(CASE WHEN servicos.id_servicos = 2 THEN quantidade ELSE 0 END) as total_barba,
+            SUM(CASE WHEN servicos.id_servicos = 7 THEN quantidade ELSE 0 END) as total_pigmentacao,
+            SUM(CASE WHEN servicos.id_servicos = 8 THEN quantidade ELSE 0 END) as total_sobrancelha,
             END as nome_servico,
             COUNT(CASE WHEN servicos.id_servicos IN (1, 2, 7, 8) THEN 1 ELSE NULL END) as quantidade,
             MONTH(agenda.data_agenda) as mes,

@@ -216,16 +216,18 @@
                 <?php
                 $meses = array(1 => 'Janeiro', 2 => 'Fevereiro', 3 => 'Março', 4 => 'Abril', 5 => 'Maio', 6 => 'Junho', 7 => 'Julho', 8 => 'Agosto', 9 => 'Setembro', 10 => 'Outubro', 11 => 'Novembro', 12 => 'Dezembro');
 
-                $i = 0;
+                $mesesProcessados = array();
 
                 foreach ($listar_agendamentos_mes_com_servicos as $value) {
-                    $i++;
-                ?> '<?php echo $meses[$value->mes]; ?>'
-                    <?php if ($i < count($listar_agendamentos_mes_com_servicos)) {
-                        echo ',';
+                    $mesAno = $value->mes . '/' . $value->ano;
+
+                    // Verifica se o mês e ano já foram processados
+                    if (!in_array($mesAno, $mesesProcessados)) {
+                        echo "'" . $meses[$value->mes] . "',";
+
+                        // Adiciona o mês e ano ao array de processados
+                        $mesesProcessados[] = $mesAno;
                     }
-                    ?>
-                <?php
                 }
                 ?>
             ],

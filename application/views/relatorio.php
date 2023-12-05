@@ -144,14 +144,14 @@
 
 <script>
     var options = {
-        series: series: [
+        series: series: [{
             <?php foreach ($resultados as $dados): ?>
             {
                 name: '<?= $nome_servico ?>',
                 data: [<?= implode(',', $quantidades) ?>]
             },
     <?php endforeach; ?>
-    ],
+    }],
         chart: {
             type: "bar",
             height: 350,

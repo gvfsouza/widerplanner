@@ -120,7 +120,7 @@ public function listar_servicos_agendamentos()
     $this->db->select('*');
     $this->db->from('agenda2');
     $this->db->join('servicos', 'servicos.id_servicos = agenda2.fk_servicos', 'left');
-    $this->db->where('YEAR(agenda2.data_agenda)', date('Y'));
+    $this->db->where('YEAR(agenda.data_agenda)', date('Y'));
 
     $res = $this->db->get();
     return $res->result();

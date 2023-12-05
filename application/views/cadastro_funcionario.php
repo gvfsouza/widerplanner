@@ -116,7 +116,7 @@
                                                     <?php } ?>
                                                 </select>
                                             </div>
-                                            <div class="col-md-3" style="margin-top: 30px;">
+                                            <div class="col" style="margin-top: 30px;">
                                                 <div class="servicos_add">
                                                     <button type="button" class="btn btn-primary add_novo_Servico" style="width: 185px; height: 40px; font-size: 14px;"><i class="fas fa-plus"></i> Adicionar Serviço</button>
                                                 </div>
@@ -203,7 +203,7 @@
 
         // Adicione o botão de remover apenas ao novo elemento clonado
         if (element_copy.find('.botao_remover').length === 0) {
-            element_copy.find('.col-md-3').append(botao_excluir);
+            element_copy.find('.col').append(botao_excluir);
 
             $('.botao_remover').click(function(e) {
                 $(this).closest('.row').remove();

@@ -60,8 +60,9 @@ class Relatorio_model extends CI_Model
     $this->db->group_by("servicos.id_servicos, MONTH(agenda.data_agenda), YEAR(agenda.data_agenda)");
 
     $res = $this->db->get();
-    return $res->result_array(); // Retorna um array associativo
+    return $res->result(); // Retorna um objeto
 }
+
 
     
 

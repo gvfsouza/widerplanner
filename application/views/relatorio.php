@@ -144,13 +144,27 @@
 
 <?php
 $mesesData = array();
+$nomesMeses = array(
+    1 => 'Janeiro',
+    2 => 'Fevereiro',
+    3 => 'Março',
+    4 => 'Abril',
+    5 => 'Maio',
+    6 => 'Junho',
+    7 => 'Julho',
+    8 => 'Agosto',
+    9 => 'Setembro',
+    10 => 'Outubro',
+    11 => 'Novembro',
+    12 => 'Dezembro',
+);
 
 foreach ($listar_agendamentos_mes_com_servicos as $value) {
     $mesAno = $value->mes . '-' . $value->ano;
 
     if (!isset($mesesData[$mesAno])) {
         $mesesData[$mesAno] = array(
-            'mes_ano' => $mesAno,
+            'mes_ano' => $nomesMeses[$value->mes] . ' ' . $value->ano,
             'cabelo' => 0,
             'barba' => 0,
             'sobrancelha' => 0,
@@ -235,14 +249,5 @@ foreach ($mesesData as $mesData) {
             categories: <?php echo json_encode($categories); ?>,
         },
         legend: {
-            position: "right",
-            offsetY: 40,
-        },
-        fill: {
-            opacity: 1,
-        },
-    };
+            position: "r
 
-    var chart = new ApexCharts(document.querySelector("#chart"), options);
-    chart.render();
-</script>

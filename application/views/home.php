@@ -284,7 +284,7 @@
                                         <p style="font-size: 18px; text-align: end;">
                                             Barbearia GAVAZ <br>
                                             CNPJ: 31.458.001/0001-08 <br>
-                                            Instagram: &nbsp;&nbsp;@barbeariagavaz <br><br>
+                                            Instagram: &nbsp;@barbeariagavaz <br><br>
                                             Dados de localização: <br>
                                             Av Dom Pedro I, 1226, Centro, Salto/SP - box 205 (ao lado do cinema)
                                         </p>

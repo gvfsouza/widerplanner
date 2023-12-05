@@ -166,7 +166,7 @@
                                             <td style="font-size: 11px;"><b><?php echo $value->horarios_semana; ?></b></td>
 
                                             <?php if (!empty($historico_profissionais_agendamentos)) { ?>
-                                                <td>v<?php echo $historico_profissionais_agendamentos[$key]->nome_usuario; ?></b></td>
+                                                <td><b><?php echo $historico_profissionais_agendamentos[$key]->nome_usuario; ?></b></td>
                                             <?php } ?>
                                         </tr>
                                     <?php } ?>

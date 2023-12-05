@@ -106,7 +106,7 @@
 
                                     <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9;">
                                         <div class="row">
-                                            <div class="col-md-5">
+                                            <div class="col-md-4">
                                                 <label for="" style="color: #4e4e4e;"><b>Serviço:</b></label>
                                                 <br>
                                                 <select name="fk_servicos[]" id="fk_servicos" class="form-control servico" style="cursor: pointer;" required>

@@ -218,10 +218,10 @@
 
                 $i = 0;
 
-                foreach ($listar_agendamentos_mes as $value) {
+                foreach ($listar_agendamentos_mes_com_servicos as $value) {
                     $i++;
                 ?> '<?php echo $meses[$value->mes]; ?>'
-                    <?php if ($i < count($listar_agendamentos_mes)) {
+                    <?php if ($i < count($listar_agendamentos_mes_com_servicos)) {
                         echo ',';
                     }
                     ?>

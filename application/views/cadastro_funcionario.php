@@ -29,6 +29,19 @@
                     <?php endif; ?>
                     <!----------------FIM-----MENSAGEM DE ERRO AO CADASTRAR ---------------->
 
+                    <?php if ($this->session->flashdata('success_email')) {    ?>
+                        <div class="alert alert-warning" role="alert">
+                            <?php echo $this->session->flashdata('success_email'); ?>
+                        </div>
+                    <?php } ?>
+
+                    <!-- Mensagem de erro cadastro/e-mail -->
+                    <?php if ($this->session->flashdata('error_email')) : ?>
+                        <div class="alert alert-danger">
+                            <?php echo $this->session->flashdata('error_email'); ?>
+                        </div>
+                    <?php endif; ?>
+
                     <form action="" method="POST" enctype="multipart/form-data">
                         <div class="p-3 bg-white">
                             <div class="row">

@@ -106,7 +106,7 @@
 
                                     <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9;">
                                         <div class="row">
-                                            <div class="col-md-5">
+                                            <div class="col-md-9">
                                                 <label for="" style="color: #4e4e4e;"><b>Serviço:</b></label>
                                                 <br>
                                                 <select name="fk_servicos[]" id="fk_servicos" class="form-control servico" style="cursor: pointer;" required>
@@ -116,7 +116,7 @@
                                                     <?php } ?>
                                                 </select>
                                             </div>
-                                            <div class="col-md-3" style="margin-top: 30px;">
+                                            <div class="col" style="margin-top: 30px;">
                                                 <div class="servicos_add">
                                                     <button type="button" class="btn btn-primary add_novo_Servico" style="width: 185px; height: 40px; font-size: 14px;"><i class="fas fa-plus"></i> Adicionar Serviço</button>
                                                 </div>

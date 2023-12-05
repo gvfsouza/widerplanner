@@ -37,8 +37,8 @@ class Relatorio_model extends CI_Model
     // }
 
     public function listar_agendamentos_mes_com_servicos()
-{
-    $this->db->select("
+    {
+        $this->db->select("
         CASE 
             WHEN servicos.id_servicos = 1 THEN 'Cabelo' 
             WHEN servicos.id_servicos = 2 THEN 'Barba' 
@@ -46,17 +46,19 @@ class Relatorio_model extends CI_Model
             WHEN servicos.id_servicos = 8 THEN 'Sobrancelha' 
             ELSE 'Outro' 
         END as nome_servico,
-        COUNT(servicos.id_servicos) as total_servicos,
+        SUM(CASE WHEN servicos.id_servicos = 1 THEN 1 ELSE 0 END) as cabelo,
+        SUM(CASE WHEN servicos.id_servicos = 2 THEN 1 ELSE 0 END) as barba, 
+        SUM(CASE WHEN servicos.id_servicos = 7 THEN 1 ELSE 0 END) as pigmentacao,
+        SUM(CASE WHEN servicos.id_servicos = 8 THEN 1 ELSE 0 END) as sobrancelha,
         MONTH(agenda.data_agenda) as mes,
         YEAR(agenda.data_agenda) as ano
     ");
-    $this->db->from('agenda');
-    $this->db->join('agenda2', 'agenda.id_agenda = agenda2.fk_agenda');
-    $this->db->join('servicos', 'agenda2.fk_servicos = servicos.id_servicos');
-    $this->db->group_by("servicos.id_servicos, MONTH(agenda.data_agenda), YEAR(agenda.data_agenda)");
+        $this->db->from('agenda');
+        $this->db->join('agenda2', 'agenda.id_agenda = agenda2.fk_agenda');
+        $this->db->join('servicos', 'agenda2.fk_servicos = servicos.id_servicos');
+        $this->db->group_by("nome_servico, MONTH(agenda.data_agenda), YEAR(agenda.data_agenda)");
 
-    $res = $this->db->get();
-    return $res->result(); // Retorna um objeto
-}
-
+        $res = $this->db->get();
+        return $res->result(); // Retorna um objeto
+    }
 }

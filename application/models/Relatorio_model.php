@@ -52,7 +52,7 @@ class Relatorio_model extends CI_Model
         ");
         $this->db->from('agenda');
         $this->db->join('agenda2', 'agenda.id_agenda = agenda2.fk_agenda');
-        $this->db->join('servicos', 'agenda2.fk_servicos = servicos.id_servico');
+        $this->db->join('servicos', 'agenda2.fk_servicos = servicos.id_servicos');
         $this->db->group_by("nome_servico, MONTH(agenda.data_agenda), YEAR(agenda.data_agenda)");
     
         $res = $this->db->get();

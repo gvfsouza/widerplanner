@@ -69,6 +69,7 @@ class Cliente_model extends CI_Model
         $this->db->from('agenda');
         $this->db->join('usuario', 'usuario.id_usuario = agenda.fk_profissional', 'left');
         $this->db->where('usuario.profissional', 'sim');
+        $this->db->where('fk_usuario', $this->session->userdata('fk_usuario')); 
 
         $res = $this->db->get();
         return $res->result();

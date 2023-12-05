@@ -247,10 +247,10 @@ foreach ($mesesData as $mesData) {
         xaxis: {
             type: "category",
             categories: <?php echo json_encode($categories); ?>,
-            labels: {
-        rotateAlways: true, // rotação automática
-    }
         },
+        labels: {
+            rotate: -45, // ângulo de rotação em graus
+        }
         legend: {
             position: "right",
             offsetY: 40,
@@ -263,5 +263,4 @@ foreach ($mesesData as $mesData) {
     var chart = new ApexCharts(document.querySelector("#chart"), options);
     chart.render();
 </script>
-
 

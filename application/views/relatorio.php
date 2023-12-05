@@ -144,14 +144,35 @@
 
 <script>
     var options = {
-        series: series: [{
-            <?php foreach ($resultados as $dados): ?>
-            {
-                name: '<?= $nome_servico ?>',
-                data: [<?= implode(',', $quantidades) ?>]
-            },
-    <?php endforeach; ?>
-    }],
+        series: [{
+            name: 'Barba',
+            data: [
+                <?php foreach ($mostrar_vacinacao_animais as $value) {
+                    echo $value->total_gatos_vacinados . ",";
+                } ?>
+            ]
+        }, {
+            name: 'Cabelo',
+            data: [
+                <?php foreach ($mostrar_vacinacao_animais as $value) {
+                    echo $value->total_cachorros_vacinados . ",";
+                } ?>
+            ]
+        }, {
+            name: 'Sobrancelha',
+            data: [
+                <?php foreach ($mostrar_vacinacao_animais as $value) {
+                    echo $value->total_cachorros_vacinados . ",";
+                } ?>
+            ]
+        }, {
+            name: 'Pigmentação em Barba',
+            data: [
+                <?php foreach ($mostrar_vacinacao_animais as $value) {
+                    echo $value->total_cachorros_vacinados . ",";
+                } ?>
+            ]
+        }],
         chart: {
             type: "bar",
             height: 350,
@@ -199,12 +220,12 @@
 
                 foreach ($listar_agendamentos_mes as $value) {
                     $i++;
-                    ?> '<?php echo $meses[$value->mes]; ?>'
-                        <?php if ($i < count($listar_agendamentos_mes)) {
-                            echo ',';
-                        }
-                        ?>
-                    <?php
+                ?> '<?php echo $meses[$value->mes]; ?>'
+                    <?php if ($i < count($listar_agendamentos_mes)) {
+                        echo ',';
+                    }
+                    ?>
+                <?php
                 }
                 ?>
             ],

@@ -146,35 +146,14 @@ view relatório
 
 <script>
     var options = {
-        series: [{
-            name: 'Barba',
-            data: [
-                <?php foreach ($mostrar_vacinacao_animais as $value) {
-                    echo $value->total_gatos_vacinados . ",";
-                } ?>
-            ]
-        }, {
-            name: 'Cabelo',
-            data: [
-                <?php foreach ($mostrar_vacinacao_animais as $value) {
-                    echo $value->total_cachorros_vacinados . ",";
-                } ?>
-            ]
-        }, {
-            name: 'Sobrancelha',
-            data: [
-                <?php foreach ($mostrar_vacinacao_animais as $value) {
-                    echo $value->total_cachorros_vacinados . ",";
-                } ?>
-            ]
-        }, {
-            name: 'Pigmentação em Barba',
-            data: [
-                <?php foreach ($mostrar_vacinacao_animais as $value) {
-                    echo $value->total_cachorros_vacinados . ",";
-                } ?>
-            ]
-        }],
+        series: series: [
+    <?php foreach ($dados_por_servico as $nome_servico => $quantidades): ?>
+            {
+                name: '<?= $nome_servico ?>',
+                data: [<?= implode(',', $quantidades) ?>]
+            },
+    <?php endforeach; ?>
+    ],
         chart: {
             type: "bar",
             height: 350,
@@ -222,12 +201,12 @@ view relatório
 
                 foreach ($listar_agendamentos_mes as $value) {
                     $i++;
-                ?> '<?php echo $meses[$value->mes]; ?>'
-                    <?php if ($i < count($listar_agendamentos_mes)) {
-                        echo ',';
-                    }
-                    ?>
-                <?php
+                    ?> '<?php echo $meses[$value->mes]; ?>'
+                        <?php if ($i < count($listar_agendamentos_mes)) {
+                            echo ',';
+                        }
+                        ?>
+                    <?php
                 }
                 ?>
             ],

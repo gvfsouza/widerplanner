@@ -145,27 +145,34 @@
 <script>
     var options = {
         series: [{
-            <?php
-            $monthsData = [];
-
-            foreach ($listar_agendamentos_mes_com_servicos as $value) {
-                $monthKey = $value->ano . '-' . $value->mes;
-                $monthsData[$monthKey][$value->nome_servico] = $value->total_servicos;
-            }
-
-            foreach ($monthsData as $monthKey => $services) {
-                echo "{\n";
-                echo "  name: '$monthKey',\n";
-                echo "  data: [";
-
-                foreach ($services as $serviceTotal) {
-                    echo "$serviceTotal, ";
-                }
-
-                echo "],\n";
-                echo "},\n";
-            }
-            ?> }],
+            name: 'Barba',
+            data: [
+                <?php foreach ($listar_agendamentos_mes_com_servicos as $value) {
+                    echo $value->barba . ",";
+                } ?>
+            ]
+        }, {
+            name: 'Cabelo',
+            data: [
+                <?php foreach ($listar_agendamentos_mes_com_servicos as $value) {
+                    echo $value->cabelo . ",";
+                } ?>
+            ]
+        }, {
+            name: 'Sobrancelha',
+            data: [
+                <?php foreach ($listar_agendamentos_mes_com_servicos as $value) {
+                    echo $value->sobrancelha . ",";
+                } ?>
+            ]
+        }, {
+            name: 'Pigmentação em Barba',
+            data: [
+                <?php foreach ($listar_agendamentos_mes_com_servicos as $value) {
+                    echo $value->pigmentacao . ",";
+                } ?>
+            ]
+        }],
         chart: {
             type: "bar",
             height: 350,

@@ -248,6 +248,9 @@ foreach ($mesesData as $mesData) {
             type: "category",
             categories: <?php echo json_encode($categories); ?>,
         },
+        labels: {
+            rotate: -45, // ângulo de rotação em graus
+        }
         legend: {
             position: "right",
             offsetY: 40,

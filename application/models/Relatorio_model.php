@@ -36,24 +36,21 @@ class Relatorio_model extends CI_Model
     //     return $res->result();
     // }
 
-    public function listar_agendamentos_mes_com_servicos()
-{
-    $this->db->select("servicos.nome_servico, COUNT(agenda.id_agenda) as quantidade, MONTH(agenda.data_agenda) as mes, YEAR(agenda.data_agenda) as ano");
-    $this->db->from('agenda');
-    $this->db->join('agenda2', 'agenda.id_agenda = agenda2.fk_agenda');
-    $this->db->join('servicos', 'agenda2.fk_servicos = servicos.id_servicos');
-    $this->db->where("MONTH(agenda.data_agenda) >", 0);
-    
-    $ano_atual = date('Y'); // traz os registros do ano atual
-    $this->db->where("YEAR(agenda.data_agenda) = ", $ano_atual);
-    
-    $this->db->group_by("servicos.nome_servico");
-    $this->db->group_by("MONTH(agenda.data_agenda)");
-    $this->db->group_by("YEAR(agenda.data_agenda)");
+    public function listar_agendamentos_mes_com_servicos() {
+        $this->db->select("servicos.nome_servico, COUNT(agenda2.fk_servicos) as quantidade, MONTH(agenda.data_agenda) as mes, YEAR(agenda.data_agenda) as ano");
+        $this->db->from('agenda');
+        $this->db->join('agenda2', 'agenda.id_agenda = agenda2.fk_agenda');
+        $this->db->join('servicos', 'agenda2.fk_servicos = servicos.id_servicos');
+        $this->db->where("MONTH(agenda.data_agenda) >", 0);
+        $ano_atual = date('Y');
+        $this->db->where("YEAR(agenda.data_agenda) = ", $ano_atual);
+        $this->db->group_by("servicos.nome_servico");
+        $this->db->group_by("MONTH(agenda.data_agenda)");
+        $this->db->group_by("YEAR(agenda.data_agenda)");
 
-    $res = $this->db->get();
-    return $res->result();
-}
+        $res = $this->db->get();
+        return $res->result_array(); // Retorna um array associativo
+    }
 
 
 }

@@ -145,7 +145,7 @@
 <script>
     var options = {
         series: series: [
-    <?php foreach ($dados_por_servico as $nome_servico => $quantidades): ?>
+            <?php foreach ($resultados as $dados): ?>
             {
                 name: '<?= $nome_servico ?>',
                 data: [<?= implode(',', $quantidades) ?>]

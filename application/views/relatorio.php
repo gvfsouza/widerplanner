@@ -1,3 +1,5 @@
+view relatório
+
 
 <style>
     body {
@@ -145,22 +147,34 @@
 <script>
     var options = {
         series: [{
-                name: "servico A",
-                data: [44, 55, 41, 67, 22, 43],
-            },
-            {
-                name: "servico B",
-                data: [13, 23, 20, 8, 13, 27],
-            },
-            {
-                name: "servico C",
-                data: [11, 17, 15, 15, 21, 14],
-            },
-            {
-                name: "servico d",
-                data: [21, 7, 25, 13, 22, 8],
-            },
-        ],
+            name: 'Barba',
+            data: [
+                <?php foreach ($mostrar_vacinacao_animais as $value) {
+                    echo $value->total_gatos_vacinados . ",";
+                } ?>
+            ]
+        }, {
+            name: 'Cabelo',
+            data: [
+                <?php foreach ($mostrar_vacinacao_animais as $value) {
+                    echo $value->total_cachorros_vacinados . ",";
+                } ?>
+            ]
+        }, {
+            name: 'Sobrancelha',
+            data: [
+                <?php foreach ($mostrar_vacinacao_animais as $value) {
+                    echo $value->total_cachorros_vacinados . ",";
+                } ?>
+            ]
+        }, {
+            name: 'Pigmentação em Barba',
+            data: [
+                <?php foreach ($mostrar_vacinacao_animais as $value) {
+                    echo $value->total_cachorros_vacinados . ",";
+                } ?>
+            ]
+        }],
         chart: {
             type: "bar",
             height: 350,

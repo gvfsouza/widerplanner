@@ -468,14 +468,18 @@
                     <div class="modal-body">
                         Tem certeza que deseja excluir este serviço?
                     </div>
+
+                   
+                    
                     <div class="modal-footer">
-                        <?php if (isset($value->id)): ?>
-                            <a title="Excluir" href="<?= base_url('home/excluir_servico/') . $value->id ?>" class="btn btn-secondary" data-dismiss="modal">Sim</a>
-                        <?php else: ?>
-                            <!-- Lida com o caso em que $value->id não está definido -->
-                            <span class="btn btn-secondary disabled">Sim</span>
-                        <?php endif; ?>
-                        <button type="button" class="btn btn-danger" data-dismiss="modal" style="width: 65px; margin: 1px; border: none; height: 35px; border-radius: 3px;">Não</button>
+                    <form action="" method="POST" name="excluir" class="form-excluir">
+                        <div style="text-align: center;">
+                            <!--Botão "sim" puxa a função "excluir" do controller "Usuario" -->
+                            <a title="Excluir" href="<?= base_url('home/excluir_servico/') . $value->id ?>" class="btn btn-sm btn-success" style="width: 65px;margin: 1px;border: none;height: 35px;font-size: 16px;padding: 5px;">Sim</a>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal" style="width: 65px;margin: 1px;border: none;height: 35px;border-radius: 3px;">Não</button>
+                        </div>
+                    </form>
+                       
                     </div>
                 </div>
             </div>

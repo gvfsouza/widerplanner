@@ -5,46 +5,24 @@
         min-height: 100vh;
     }
 
-    figure {
-        width: 500px;
-        aspect-ratio: 7 / 4;
-        --bg: hsl(330 80% calc(90% - (var(--hover) * 10%)));
-        /* --accent: hsl(280 80% 40%); */
-        transition: background 0.2s;
-        /* background:
-      radial-gradient(circle at top left, var(--accent), transparent 75%),
-      var(--bg); */
-        margin: 0;
-        position: relative;
-        overflow: hidden;
-        border-radius: 1.5rem;
-        margin: 10px;
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 
-    figure:after {
-        content: "";
-        position: absolute;
-        border-radius: 50%;
-        bottom: 0%;
-        left: 10%;
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
     }
 
-    img {
-        position: absolute;
-    }
-
-    article {
-        --hover: 0;
-    }
-
-    article:hover {
-        --hover: 1;
-    }
-
-    .chart-container {
-        max-width: 100%;
+    .card {
         width: 100%;
-        margin: 0 auto;
+    }
+
+    #chart {
+        width: 100%;
     }
 </style>
 
@@ -136,7 +114,9 @@
                             </div>
                         </div>
                     </div>
-                    <!-- FORMULÁRIO  -->
+                </div>
+
+                <!-- FORMULÁRIO  -->
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="" role="tabpanel">
                         <div class="p-3 bg-white">
@@ -162,9 +142,6 @@
                     </div>
                     <br />
                 </div>
-                </div>
-
-                
             </div>
         </div>
     </div>

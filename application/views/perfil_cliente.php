@@ -189,6 +189,33 @@
     </div>
 </div>
 <script>
+    // Função para formatar o número de telefone
+    function formatarTelefone(input) {
+        const numeroTelefone = input.value.replace(/\D/g, '');
+        const tamanhoNumeroTelefone = numeroTelefone.length;
+
+        if (tamanhoNumeroTelefone === 0) {
+            input.value = '';
+        } else if (tamanhoNumeroTelefone <= 2) {
+            input.value = '(' + numeroTelefone;
+        } else if (tamanhoNumeroTelefone <= 6) {
+            input.value = '(' + numeroTelefone.substring(0, 2) + ') ' + numeroTelefone.substring(2);
+        } else if (tamanhoNumeroTelefone <= 10) {
+            input.value = '(' + numeroTelefone.substring(0, 2) + ') ' + numeroTelefone.substring(2, 6) + '-' + numeroTelefone.substring(6);
+        } else {
+            input.value = '(' + numeroTelefone.substring(0, 2) + ') ' + numeroTelefone.substring(2, 7) + '-' + numeroTelefone.substring(7, 11);
+        }
+    }
+
+    // Obter os elementos de input dos telefones
+    const inputTelefone_usuario = document.getElementById('telefone_usuario');
+
+    // Adicionar event listeners para mudanças nos inputs dos telefones
+    inputTelefone_usuario.addEventListener('input', function() {
+        formatarTelefone(this);
+    });
+    // FIM DO FORMATA NÚMERO
+
     // Função para formatar o CEP (removendo caracteres não numéricos)
     function formatarCep(cep) {
         return cep.replace(/\D/g, '');

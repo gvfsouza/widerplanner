@@ -503,15 +503,16 @@
 
 
     $(document).ready(function () {
-        $('.excluir-item').on('click', function () {
+        $('.excluir-servico').on('click', function () {
             var id = $(this).data('id');
-            var modalTipo = $(this).data('modal-tipo');
+            $('#confirmarExclusaoServico').attr('href', '<?php echo base_url('home/excluir_servico/'); ?>' + id);
+        });
+    });
 
-            if (modalTipo === 'servico') {
-                $('#confirmarExclusaoServico').attr('href', '<?php echo base_url('home/excluir_servico/'); ?>' + id);
-            } else if (modalTipo === 'produto') {
-                $('#confirmarExclusaoProduto').attr('href', '<?php echo base_url('home/excluir_produto/'); ?>' + id);
-            }
+    $(document).ready(function () {
+        $('.excluir-produto').on('click', function () {
+            var id = $(this).data('id');
+            $('#confirmarExclusaoProduto').attr('href', '<?php echo base_url('home/excluir_produto/'); ?>' + id);
         });
     });
 </script>

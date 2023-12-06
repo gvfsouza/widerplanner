@@ -298,19 +298,6 @@
                                             </div>
                                         </fieldset>
 
-                                        <?php if ($this->session->flashdata('sucesso')) {    ?>
-                                            <div class="alert alert-success" role="alert">
-                                                <?php echo $this->session->flashdata('sucesso'); ?>
-                                            </div>
-                                        <?php } ?>
-                                        <!----------------FIM-----MENSAGEM DE SUCESSO AO CADASTRAR ---------------->
-
-                                        <!-- mensagem de erro -->
-                                        <?php if ($this->session->flashdata('erro')) : ?>
-                                            <div class="alert alert-danger">
-                                                <?php echo $this->session->flashdata('erro'); ?>
-                                            </div>
-                                        <?php endif; ?>
                                         <fieldset class="form-group " style="border: 1px solid #ddd; border-radius: 4px; border: 1px solid #879bc9; display: flex; flex-wrap: wrap; justify-content: space-around;">
                                             <?php foreach ($listar_dados_servicos as $value) { ?>
                                                     <div class="card-container" style="flex: 20%;">

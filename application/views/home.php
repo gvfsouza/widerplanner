@@ -499,4 +499,18 @@
             });
         });
     });
+
+
+    $(document).ready(function () {
+        $('.excluir-item').on('click', function () {
+            var id = $(this).data('id');
+            var modalTipo = $(this).data('modal-tipo');
+
+            if (modalTipo === 'servico') {
+                $('#confirmarExclusaoServico').attr('href', '<?php echo base_url('home/excluir_servico/'); ?>' + id);
+            } else if (modalTipo === 'produto') {
+                $('#confirmarExclusaoProduto').attr('href', '<?php echo base_url('home/excluir_produto/'); ?>' + id);
+            }
+        });
+    });
 </script>

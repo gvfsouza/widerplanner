@@ -260,7 +260,7 @@ foreach ($mesesData as $mesData) {
             bar: {
                 horizontal: false,
                 borderRadius: 10,
-                columnWidth: '20%',
+                columnWidth: '30%',
                 dataLabels: {
                     total: {
                         enabled: true,

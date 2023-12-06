@@ -461,26 +461,6 @@
         </div>
     </div>
 </div>
-<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Confirmação</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                    <span aria-hidden="true" style="font-size: 28px; color: #434d64;">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <p style="font-weight: bold;">Tem certeza de que deseja sair?</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Não</button>
-                <a href="<?php echo site_url('login/logout'); ?>" class="btn btn-primary">Sim</a>
-            </div>
-        </div>
-    </div>
-</div>
-
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -507,4 +487,11 @@
             });
         });
     });
+
+    $(document).ready(function () {
+    $('.excluir-servico').on('click', function () {
+        var id = $(this).data('id');
+        $('#confirmarExclusaoServico').attr('href', '<?php echo base_url('home/excluir_servico/'); ?>' + id);
+    });
+});
 </script>

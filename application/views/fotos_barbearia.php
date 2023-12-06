@@ -1,8 +1,9 @@
 <style>
     img {
-        width: 100%;
+        width: 150px;
         border-radius: 5px;
-        margin-bottom: 15px; /* Adicionando espaço entre as imagens */
+        height: 150px;
+        margin: 15px;
     }
 </style>
 
@@ -58,7 +59,7 @@
                                 </div>
 
                                 <br><br>
-                                
+
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="row">

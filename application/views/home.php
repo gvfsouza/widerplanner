@@ -483,19 +483,15 @@
         });
 
         $(document).ready(function () {
-    $('.excluir-servico').on('click', function () {
-        var id = $(this).data('id');
+            $('.excluir-servico').on('click', function () {
+                var id = $(this).data('id');
+                $('#confirmarExclusaoServico').data('url', '<?php echo base_url('home/excluir_servico/'); ?>' + id);
+            });
 
-        // Exibir um alerta e confirmar a exclusão
-        var confirmarExclusao = confirm('Tem certeza que deseja excluir este serviço?');
-
-        // Se o usuário clicar em "OK" no alerta, realizar a exclusão
-        if (confirmarExclusao) {
-            // Redirecionar para a URL de exclusão
-            window.location.href = '<?php echo base_url('home/excluir_servico/'); ?>' + id;
-        }
-        // Se o usuário clicar em "Cancelar" no alerta, não fazer nada
-    });
-});
+            $('#btnConfirmarExclusaoServico').on('click', function () {
+                var url = $('#confirmarExclusaoServico').data('url');
+                window.location.href = url;
+            });
+        });
 
     </script>

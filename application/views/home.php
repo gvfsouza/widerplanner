@@ -485,8 +485,14 @@
 
         $(document).ready(function () {
             $('.excluir-servico').on('click', function () {
-            var id = $(this).data('id');
-            $('#confirmarExclusaoServico').data('url', '<?php echo base_url('home/excluir_servico/'); ?>' + id);
+                var id = $(this).data('id');
+                $('#confirmarExclusaoServico').data('url', '<?php echo base_url('home/excluir_servico/'); ?>' + id);
+            });
+
+            $('#btnConfirmarExclusaoServico').on('click', function () {
+                var url = $('#confirmarExclusaoServico').data('url');
+                window.location.href = url;
             });
         });
+
     </script>

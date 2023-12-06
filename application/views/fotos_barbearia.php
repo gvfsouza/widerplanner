@@ -69,11 +69,10 @@
                             <form action="" method="POST" enctype="multipart/form-data">
                                 <?php if ($this->session->fk_usuario != '' && $this->session->profissional == 'sim'): ?>
                                     <div class="row">
-                                    
-                                            <div class="form-group col-md-6">
-                                                <label for="fotos_lugar"><b>Inserir uma Foto:</b></label>
-                                                <input style="font-size: 14px" type="file" class="form-control" id="fotos_lugar" name="fotos_lugar" accept="image/*">
-                                            </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="fotos_lugar"><b>Inserir uma Foto:</b></label>
+                                            <input style="font-size: 14px" type="file" class="form-control" id="fotos_lugar" name="fotos_lugar" accept="image/*">
+                                        </div>
 
                                         <div class="form-group col-md-6">
                                             <br>

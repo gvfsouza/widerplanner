@@ -104,7 +104,7 @@ class Agendamento_model extends CI_Model
         return $res->result();
     }
 
-    public function listar_profissionais_agendamentos($id_agenda)
+    public function listar_profissionais_agendamentos()
     {
         $this->db->select('usuario.id_usuario, usuario.nome_usuario, agenda.*');
         $this->db->from('usuario');

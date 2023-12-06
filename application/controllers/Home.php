@@ -39,13 +39,13 @@ class Home extends CI_Controller
 		$this->load->view('layout/footer');
 	}
 
-	public function excluir_servico($id_servicos)
+	public function editar_servico($id_servicos)
 	{
 		// Conexão com o Model
 		$this->load->model('Home_model');
 
-		$this->Home_model->excluir_servico($id_servicos);
-		redirect('home');
+		$this->Home_model->editar_servico($id_servicos);
+		redirect('editar_servico');
 	}
 
 	public function excluir_produto($id_produto)

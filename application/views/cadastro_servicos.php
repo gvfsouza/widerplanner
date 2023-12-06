@@ -38,7 +38,7 @@
                                             <div style="margin-left:10px;"></div>
                                             <div class="col">
                                                 <div class="row">
-                                                    <div class="form-group col-md-3">
+                                                    <!-- <div class="form-group col-md-3">
                                                         <label for=""><b>Foto:</b></label>
                                                         <br>
                                                         <input style="font-size:14px" type="file" class="form-control arquivo" id="foto_servico" name="foto_servico" accept="image/*">
@@ -46,7 +46,6 @@
                                                         <div class="foto_servico col mb-3">
                                                             <div class="foto_servico"></div>
                                                         </div>
-
                                                         <script>
                                                             function retornaNomeArquivo() {
                                                                 $(".foto_servico").change(function() {
@@ -55,10 +54,10 @@
                                                                 });
                                                             }
                                                             retornaNomeArquivo()
-                                                        </script>
-                                                    </div>
+                                                        </script> 
+                                                    </div> -->
 
-                                                    <div class="form-group col-md-3">
+                                                    <div class="form-group col-md-4">
                                                         <label for=""><b>Nome:</b></label>
                                                         <br>
                                                         <input style="font-size:14px" type="text" class="form-control" id="nome_servico" name="nome_servico" value="">
@@ -69,7 +68,7 @@
                                                         <br>
                                                         <input style="font-size:14px" type="time" class="form-control" id="duracao_servico" name="duracao_servico" value="">
                                                     </div>
-                                                    <div class="form-group col-md-3">
+                                                    <div class="form-group col-md-5">
                                                         <div class="input-group" style="margin-top: 30px;">
                                                             <div class="input-group-prepend">
                                                                 <span class="input-group-text">$</span>

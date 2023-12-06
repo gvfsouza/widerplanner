@@ -453,8 +453,8 @@
     </div>
     </div>
 
-<?php foreach ($excluir_servico as $value) { ?>
-
+<?php if (isset($excluir_servico) && is_array($excluir_servico)) : ?>
+    <?php foreach ($excluir_servico as $value) { ?>
         <!-- Modal de Confirmação para Excluir Serviço -->
         <div class="modal fade" id="confirmacaoModalServico" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelServico" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -469,17 +469,19 @@
                         Tem certeza que deseja excluir este serviço?
                     </div>
                     <div class="modal-footer">
-                    
-                    
-
-                        <a title="Excluir"  href="<?= base_url('home/excluir_servico/') . $value->id ?>" class="btn btn-secondary" data-dismiss="modal">Sim</a>
-                        <button type="button" class="btn btn-danger" data-dismiss="modal" style="width: 65px;margin: 1px;border: none;height: 35px;border-radius: 3px;">Não</button>
-
+                        <?php if (isset($value->id)): ?>
+                            <a title="Excluir" href="<?= base_url('home/excluir_servico/') . $value->id ?>" class="btn btn-secondary" data-dismiss="modal">Sim</a>
+                        <?php else: ?>
+                            <!-- Lida com o caso em que $value->id não está definido -->
+                            <span class="btn btn-secondary disabled">Sim</span>
+                        <?php endif; ?>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal" style="width: 65px; margin: 1px; border: none; height: 35px; border-radius: 3px;">Não</button>
                     </div>
                 </div>
             </div>
         </div>
-<?php } ?>
+    <?php } ?>
+<?php endif; ?>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var cardDescriptions = document.querySelectorAll('.profile-desc');

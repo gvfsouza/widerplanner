@@ -316,7 +316,7 @@
                     
                                                     <?php if ($this->session->fk_usuario != '' && $this->session->profissional == 'sim'): ?>
                                                         <form method="POST" action="<?php echo base_url('home/excluir_servico/' . $value->id_servicos); ?>">
-                                                            <button type="submit" class="btn btn-danger excluir-servico" data-toggle="modal" data-target="#confirmacaoModalServico" data-id="<?php echo $value->id_servicos; ?>" style="font-size: 11px; float: right">Excluir</button>
+                                                            <button type="submit" class="btn btn-danger excluir-item" data-toggle="modal" data-target="#confirmacaoModalServico" data-id="<?php echo $value->id_servicos; ?>" style="font-size: 11px; float: right">Excluir</button>
                                                         </form>
                                                     <?php endif; ?>
                                                 </div>
@@ -399,7 +399,7 @@
 
                                                                     <?php if ($this->session->fk_usuario != '' && $this->session->profissional == 'sim'): ?>
                                                                         <form method="POST" action="<?php echo base_url('home/excluir_produto/' . $value->id_produto); ?>">
-                                                                            <button type="submit" class="btn btn-danger excluir-produto" data-toggle="modal" data-target="#confirmacaoModalProduto" data-id="<?php echo $value->id_produto; ?>" style="font-size: 11px; float: right">Excluir</button>
+                                                                            <button type="submit" class="btn btn-danger excluir-item" data-toggle="modal" data-target="#confirmacaoModalProduto" data-id="<?php echo $value->id_produto; ?>" style="font-size: 11px; float: right">Excluir</button>
                                                                         </form>
                                                                     <?php endif; ?>
                                                                 </div>

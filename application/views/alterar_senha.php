@@ -10,8 +10,6 @@
     }
 </style>
 
-<br>
-
 <div>
     <div class="container-fluid">
         <div class="card shadow mb-4">

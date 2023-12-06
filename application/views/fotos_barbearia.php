@@ -1,8 +1,9 @@
 <style>
     img {
-        width: 150px;
         border-radius: 5px;
-        height: 150px;
+        max-width: 180px;
+        width: 100%;
+        height: auto;
         margin: 15px;
     }
 </style>

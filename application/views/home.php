@@ -318,7 +318,7 @@
                                                             <form method="POST" action="<?php echo base_url('home/excluir_servico/' . $value->id_servicos); ?>">
                                                             <!-- <a title="Excluir Serviço" class="nav-link" href="#" data-toggle="modal" data-target="#confirmacaoModalServico" data-id="<?php echo $value->id_servicos; ?>"> -->
                                                                 <!-- <span class="btn btn-danger" style="font-size: 11px; float: right">Excluir</span> -->
-                                                                <span style="font-size: 11px; float: right" title="Remover" id="<?= $value->id ?>" class="btn btn-sm btn-danger remover_servico"><i class="fas fa-trash-alt"></i></span>
+                                                                <span style="font-size: 11px; float: right" title="Remover" id="<?= $value->id ?>" class="btn btn-sm btn-danger remover_usuario"><i class="fas fa-trash-alt"></i></span>
                                                             <!-- </a> -->
 
 

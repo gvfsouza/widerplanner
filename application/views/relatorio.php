@@ -53,68 +53,64 @@
                 </fieldset>
 
                 <!-- Card Usuários -->
-                <div class="row">
-                    <div class="col-xl-4 col-md-6 mb-3">
-                        <div class="card border-left-primary shadow h-100 py-2">
-                            <div class="card-body">
-                                <div class="row no-gutters align-items-center">
-                                    <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                            Usuários
-                                        </div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                            <?php echo $listar_usuarios_cadastrados[0]->quantidade_usuarios;
-                                            ?>
-                                        </div>
-                                    </div>
-                                    <div class="col-auto">
-                                        <i class="fas fa-users"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Card serviços oferecidos -->
-                    <div class="col-xl-4 col-md-6 mb-3">
-                        <div class="card border-left-primary shadow h-100 py-2">
-                            <div class="card-body">
-                                <div class="row no-gutters align-items-center">
-                                    <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                            Total de Seviços
-                                        </div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                            <?php echo $total_servicos[0]->quantidade_servicos; ?>
-                                        </div>
-                                    </div>
-                                    <div class="col-auto">
-                                        <i class="fas fa-users"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Card Produtos -->
-                    <div class="col-xl-4 col-md-6 mb-3">
-                        <div class="card border-left-primary shadow h-100 py-2">
-                            <div class="card-body">
-                                <div class="row no-gutters align-items-center">
-                                    <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                            Produtos
-                                        </div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                            <?php echo $total_produtos[0]->quantidade_produtos; ?>
-                                        </div>
-                                    </div>
-                                    <div class="col-auto">
-                                        <i class="fas fa-users"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="container-fluid">
+    <div class="card-container">
+        <!-- Card Usuários -->
+        <div class="card shadow mb-4">
+            <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                    Usuários
                 </div>
+                <div class="h5 mb-0 font-weight-bold text-gray-800">
+                    <?php echo $listar_usuarios_cadastrados[0]->quantidade_usuarios;
+                    ?>
+                </div>
+            </div>
+            <div class="col-auto">
+                <i class="fas fa-users"></i>
+            </div>
+        </div>
+
+        <!-- Card Serviços Oferecidos -->
+        <div class="card shadow mb-4">
+            <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                    Total de Seviços
+                </div>
+                <div class="h5 mb-0 font-weight-bold text-gray-800">
+                    <?php echo $total_servicos[0]->quantidade_servicos; ?>
+                </div>
+            </div>
+            <div class="col-auto">
+                <i class="fas fa-users"></i>
+            </div>
+        </div>
+
+        <!-- Card Produtos -->
+        <div class="card shadow mb-4">
+            <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                    Produtos
+                </div>
+                <div class="h5 mb-0 font-weight-bold text-gray-800">
+                    <?php echo $total_produtos[0]->quantidade_produtos; ?>
+                </div>
+            </div>
+            <div class="col-auto">
+                <i class="fas fa-users"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gráfico -->
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card shadow mb-4">
+                <div id="chart" style="background-color: white"></div>
+            </div>
+        </div>
+    </div>
+</div> 
 
                 <!-- FORMULÁRIO  -->
                 <div class="tab-content" id="myTabContent">

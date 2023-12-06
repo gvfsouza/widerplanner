@@ -485,14 +485,19 @@
         $(document).ready(function () {
     $('.excluir-servico').on('click', function () {
         var id = $(this).data('id');
-
+        
         // Exibir um alerta e confirmar a exclusão
         var confirmarExclusao = confirm('Tem certeza que deseja excluir este serviço?');
 
         // Se o usuário clicar em "OK" no alerta, realizar a exclusão
         if (confirmarExclusao) {
+            // Debug: Exibir ID e URL gerada
+            console.log('ID do serviço:', id);
+            var urlExclusao = '<?php echo base_url('home/excluir_servico/'); ?>' + id;
+            console.log('URL de exclusão:', urlExclusao);
+
             // Redirecionar para a URL de exclusão
-            window.location.href = '<?php echo base_url('home/excluir_servico/'); ?>' + id;
+            window.location.href = urlExclusao;
         }
         // Se o usuário clicar em "Cancelar" no alerta, não fazer nada
     });

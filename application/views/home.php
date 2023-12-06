@@ -320,6 +320,7 @@
                                                                 <span class="btn btn-danger" style="font-size: 11px; float: right">Excluir</span>
                                                             </a>
 
+
                                                                 <!-- <button type="submit" class="btn btn-danger excluir-item" data-toggle="modal" data-target="#confirmacaoModalServico" data-id="<?php echo $value->id_servicos; ?>" style="font-size: 11px; float: right">Excluir</button> -->
                                                             </form>
                                                         <?php endif; ?>

@@ -46,7 +46,7 @@
 
 <div>
     <div class="container-fluid">
-        <div class="card shadow mb-4">
+        <div class="card shadow mb-4" style="width: 1520px;">
             <div class="card-header py-3" style="background-color: white">
                 <div>
                     <h3 id="dados-agenda" style="font-size: 25px; font-weight: bold"></h3>
@@ -254,7 +254,8 @@ foreach ($mesesData as $mesData) {
             bar: {
                 horizontal: false,
                 borderRadius: 10,
-                barWidth: '20%',
+                columnWidth: '10%',
+                distributed: true,
                 dataLabels: {
                     total: {
                         enabled: true,

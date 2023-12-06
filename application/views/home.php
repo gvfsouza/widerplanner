@@ -332,8 +332,8 @@
                                                                     <form method="POST" action="<?php echo base_url('home/excluir_servico/' . $value->id_servicos); ?>">
                                                                     <!-- <a title="Excluir Serviço" class="nav-link" href="#" data-toggle="modal" data-target="#confirmacaoModalServico" data-id="<?php echo $value->id_servicos; ?>"> -->
                                                                         <!-- <span class="btn btn-danger" style="font-size: 11px; float: right">Excluir</span> -->
-                                                                        <?php if (isset($value->id_servicos)){ ?>
-                                                                        <span style="font-size: 11px; float: right" title="Excluir" id="<?= $value->id_servicos ?>" class="btn btn-sm btn-danger remover_servico"><i class="fas fa-trash-alt"></i></span>
+                                                                        <?php if (isset($value->id)){ ?>
+                                                                        <span style="font-size: 11px; float: right" title="Excluir" id="<?= $value->id ?>" class="btn btn-sm btn-danger remover_servico"><i class="fas fa-trash-alt"></i></span>
                                                                             <?php } ?>
                                                                         <!-- </a> -->
 
@@ -453,10 +453,10 @@
     </div>
     </div>
 
-    <?php if (isset($excluir_servico) && is_array($excluir_servico)) : ?>
+<?php if (isset($excluir_servico) && is_array($excluir_servico)) : ?>
     <?php foreach ($excluir_servico as $value) { ?>
         <!-- Modal de Confirmação para Excluir Serviço -->
-        <div class="modal fade" id="excluir<?= $value->id_servicos; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelServico" aria-hidden="true">
+        <div class="modal fade" id="excluir<?= $value->id; ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelServico" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -468,25 +468,20 @@
                     <div class="modal-body">
                         Tem certeza que deseja excluir este serviço?
                     </div>
-
-                   
-                    
                     <div class="modal-footer">
-                    <form action="" method="POST" name="excluir" class="form-excluir">
-                        <div style="text-align: center;">
-                            <!--Botão "sim" puxa a função "excluir" do controller "Usuario" -->
-                            <a title="Excluir" href="<?= base_url('home/excluir_servico/') . $value->id ?>" class="btn btn-sm btn-success" style="width: 65px;margin: 1px;border: none;height: 35px;font-size: 16px;padding: 5px;">Sim</a>
-                            <button type="button" class="btn btn-danger" data-dismiss="modal" style="width: 65px;margin: 1px;border: none;height: 35px;border-radius: 3px;">Não</button>
-                        </div>
-                    </form>
-                       
+                        <?php if (isset($value->id)): ?>
+                            <a title="Excluir" href="<?= base_url('home/excluir_servico/') . $value->id ?>" class="btn btn-secondary" data-dismiss="modal">Sim</a>
+                        <?php else: ?>
+                            <!-- Lida com o caso em que $value->id não está definido -->
+                            <span class="btn btn-secondary disabled">Sim</span>
+                        <?php endif; ?>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal" style="width: 65px; margin: 1px; border: none; height: 35px; border-radius: 3px;">Não</button>
                     </div>
                 </div>
             </div>
         </div>
     <?php } ?>
 <?php endif; ?>
-
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var cardDescriptions = document.querySelectorAll('.profile-desc');

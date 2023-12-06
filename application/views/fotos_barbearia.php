@@ -6,6 +6,27 @@
         height: auto;
         margin: 15px;
     }
+
+    .product-tumb img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .card img {
+        max-width: 250px;
+        transform: translateY(-15%);
+    }
+
+    .img-placeholder {
+        position: relative;
+        max-height: 150px;
+        max-width: 250px;
+        overflow: hidden;
+        border-radius: 15px;
+        box-shadow: 1px 1px 16px -6px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 1px 1px 16px -6px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 1px 1px 16px -6px rgba(0, 0, 0, 0.75);
+    }
 </style>
 
 <div>
@@ -68,7 +89,7 @@
                                                 <?php foreach ($listar_fotos as $value) : ?>
                                                     <div class="col-md-4 mb-3">
                                                         <?php if (!empty($value->fotos_lugar)) : ?>
-                                                            <div>
+                                                            <div class="img">
                                                                 <center><img id='base64image' src='data:image/jpeg;base64,<?php echo $value->fotos_lugar; ?>' /></center>
                                                             </div>
                                                         <?php endif; ?>

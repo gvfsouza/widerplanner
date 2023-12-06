@@ -108,7 +108,7 @@ class Agendamento_model extends CI_Model
     {
         $this->db->select('usuario.id_usuario, usuario.nome_usuario, agenda.*');
         $this->db->from('usuario');
-        $this->db->join('agenda', 'usuario.id_usuario = agenda.fk_profissional', 'left');
+        $this->db->join('agenda', 'usuario.id_usuario = agenda.fk_profissional');
     
         // Mantenha a condição WHERE para filtrar profissionais
         $this->db->where('usuario.profissional', 'sim');

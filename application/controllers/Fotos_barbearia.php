@@ -60,7 +60,7 @@ class Fotos_barbearia extends CI_Controller
 
 	public function converte_img($img, $type)
 	{
-		if ($type == 'image/png/jpg/jpeg') {
+		if ($type == 'image/png') {
 			$im = imagecreatefrompng($img);
 			ob_start();
 			imagejpeg($im);

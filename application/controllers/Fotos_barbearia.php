@@ -59,18 +59,27 @@ class Fotos_barbearia extends CI_Controller
 	}
 
 	public function converte_img($img, $type)
-	{
-		if ($type == 'image/png') {
-			$im = imagecreatefrompng($img);
-			ob_start();
-			imagejpeg($im);
-			$data = ob_get_clean();
-			imagedestroy($im);
-		} else {
-			ob_start();
-			readfile($img);
-			$data = ob_get_clean();
-		}
-		return base64_encode($data);
-	}
+{
+    $allowed_types = array('image/jpeg', 'image/png', 'image/jpg', 'image/gif');
+
+    if (!in_array($type, $allowed_types)) {
+        $this->session->set_flashdata('erro', 'Tipo de arquivo não suportado. Apenas imagens JPEG, PNG, JPG e GIF são permitidas.');
+        return null;
+    }
+
+    $image = file_get_contents($img);
+
+    if ($type == 'image/png') {
+        $im = imagecreatefrompng($img);
+        ob_start();
+        imagejpeg($im);
+        $data = ob_get_clean();
+        imagedestroy($im);
+    } else {
+        $data = base64_encode($image);
+    }
+
+    return $data;
+}
+
 }

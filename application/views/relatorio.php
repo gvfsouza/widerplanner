@@ -46,7 +46,7 @@
 
 <div>
     <div class="container-fluid">
-        <div class="card shadow mb-4" style="width: 1520px;">
+        <div class="card shadow mb-4">
             <div class="card-header py-3" style="background-color: white">
                 <div>
                     <h3 id="dados-agenda" style="font-size: 25px; font-weight: bold"></h3>
@@ -139,7 +139,7 @@
                             <div class="row">
                                 <!-- Gráfico -->
                                 <div class="col-md-5">
-                                    <div class="card shadow mb-4">
+                                    <div class="card shadow mb-4" style="width: 1520px;">
                                         <div id="chart" style="background-color: white"></div>
                                     </div>
                                 </div>

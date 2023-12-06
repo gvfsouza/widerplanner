@@ -432,6 +432,7 @@
 </div>
 
 <!-- Modal de Confirmação para Excluir Serviço -->
+<!-- Modal de Confirmação para Excluir Serviço -->
 <div class="modal fade" id="confirmacaoModalServico" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelServico" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -442,7 +443,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                Tem certeza que deseja excluir este serviço?
+                <p>Tem certeza que deseja excluir este serviço?</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
@@ -463,7 +464,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                Tem certeza que deseja excluir este produto?
+                <p>Tem certeza que deseja excluir este produto?</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
@@ -472,6 +473,7 @@
         </div>
     </div>
 </div>
+
 
 
 <script>

@@ -274,7 +274,7 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <br>
-                                        <img src="https://scontent-gru2-2.xx.fbcdn.net/v/t39.30808-6/302135953_502845391841930_8585948991976360589_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=TpFICO55swEAX9n1EQ0&_nc_ht=scontent-gru2-2.xx&oh=00_AfBT9HRfTe5yRcAsGZt3sDXK85JhzGBXzs-N63KIrkrQ-A&oe=656B55E5" alt="Logo Barbearia" style="width: 150px; height: 150px; border-radius: 15px">
+                                        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/fffee580264135.5cdc2b27345cb.png" alt="Logo Barbearia" style="width: 150px; height: 150px; border-radius: 15px">
                                     </div>
                                     <div class="col-md-6">
                                         <p style="font-size: 18px; text-align: end;">
@@ -375,7 +375,7 @@
                                                                                     <?php if (!empty($value->foto_usuario)) { ?>
                                                                                             <center><img style='display:block; width:100px;height:100px;' id='base64image' src='data:image/jpeg;base64,<?php echo $value->foto_usuario ?>' /></center>
                                                                                     <?php } else { ?>
-                                                                                            <center><img src="https://scontent-gru2-2.xx.fbcdn.net/v/t39.30808-6/302135953_502845391841930_8585948991976360589_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=TpFICO55swEAX9n1EQ0&_nc_ht=scontent-gru2-2.xx&oh=00_AfBT9HRfTe5yRcAsGZt3sDXK85JhzGBXzs-N63KIrkrQ-A&oe=656B55E5" alt="Logo Barbearia"></center>
+                                                                                            <center><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/fffee580264135.5cdc2b27345cb.png" alt="Logo Barbearia"></center>
                                                                                     <?php } ?>
                                                                                 </div>
                                                                                 <div>

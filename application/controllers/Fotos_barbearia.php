@@ -60,10 +60,10 @@ class Fotos_barbearia extends CI_Controller
 
 	public function converte_img($img, $type)
 {
-    $allowed_types = array('image/jpeg', 'image/png', 'image/jpg', 'image/gif');
+    $allowed_types = array('image/jpeg', 'image/png', 'image/gif');
 
     if (!in_array($type, $allowed_types)) {
-        $this->session->set_flashdata('erro', 'Tipo de arquivo não suportado. Apenas imagens JPEG, PNG, JPG e GIF são permitidas.');
+        $this->session->set_flashdata('erro', 'Tipo de arquivo não suportado. Apenas imagens JPEG, PNG e GIF são permitidas.');
         return null;
     }
 

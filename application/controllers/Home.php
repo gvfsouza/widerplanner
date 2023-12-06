@@ -12,7 +12,7 @@ class Home extends CI_Controller
 		if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 			$_POST = $this->clean_post_data($_POST);
 		}
-		$this->load->database();
+		$this->load->database();	
 	}
 
 	private function clean_post_data($data)

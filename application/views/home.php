@@ -313,9 +313,10 @@
                                                     <center>
                                                         <p class="status-value">R$ &nbsp;<?php echo $value->valor_servico; ?>,00<i class="fas fa-clock"></i> &nbsp;&nbsp;<?php echo $value->duracao_servico; ?></p>
                                                     </center>
+                    
                                                     <?php if ($this->session->fk_usuario != '' && $this->session->profissional == 'sim'): ?>
                                                         <form method="POST" action="<?php echo base_url('home/excluir_servico/' . $value->id_servicos); ?>">
-                                                            <button type="submit" class="btn btn-danger" style="font-size: 11px; float: right">Excluir</button>
+                                                            <button type="submit" class="btn btn-danger excluir-item" data-toggle="modal" data-target="#confirmacaoModalServico" data-id="<?php echo $value->id_servicos; ?>" style="font-size: 11px; float: right">Excluir</button>
                                                         </form>
                                                     <?php endif; ?>
                                                 </div>
@@ -334,17 +335,17 @@
                                     </fieldset>
 
                                     <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9; display: flex; flex-wrap: wrap; justify-content: space-around">
-                                        <?php if (!empty($listar_dados_estabelecimento)) : ?>
-                                            <?php foreach ($listar_dados_estabelecimento as $value) : ?>
+                                        <?php if (!empty($listar_dados_estabelecimento)): ?>
+                                            <?php foreach ($listar_dados_estabelecimento as $value): ?>
                                                 <div class="card-container" style="flex: 0 0 300px; margin: 10px;">
                                                     <div class="col">
-                                                        <?php if (!empty($value->nome_usuario)) : ?>
+                                                        <?php if (!empty($value->nome_usuario)): ?>
                                                             <div class="card usuario" style="width: 100%; height: 380px;">
                                                                 <div class="img-placeholder">
                                                                     <?php if (!empty($value->foto_usuario)) { ?>
-                                                                        <center><img style='display:block; width:100px;height:100px;' id='base64image' src='data:image/jpeg;base64,<?php echo $value->foto_usuario ?>' /></center>
+                                                                                        <center><img style='display:block; width:100px;height:100px;' id='base64image' src='data:image/jpeg;base64,<?php echo $value->foto_usuario ?>' /></center>
                                                                     <?php } else { ?>
-                                                                        <center><img src="https://scontent-gru2-2.xx.fbcdn.net/v/t39.30808-6/302135953_502845391841930_8585948991976360589_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=TpFICO55swEAX9n1EQ0&_nc_ht=scontent-gru2-2.xx&oh=00_AfBT9HRfTe5yRcAsGZt3sDXK85JhzGBXzs-N63KIrkrQ-A&oe=656B55E5" alt="Logo Barbearia"></center>
+                                                                                        <center><img src="https://scontent-gru2-2.xx.fbcdn.net/v/t39.30808-6/302135953_502845391841930_8585948991976360589_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=TpFICO55swEAX9n1EQ0&_nc_ht=scontent-gru2-2.xx&oh=00_AfBT9HRfTe5yRcAsGZt3sDXK85JhzGBXzs-N63KIrkrQ-A&oe=656B55E5" alt="Logo Barbearia"></center>
                                                                     <?php } ?>
                                                                 </div>
                                                                 <div>
@@ -358,7 +359,7 @@
                                                     </div>
                                                 </div>
                                             <?php endforeach; ?>
-                                        <?php else : ?>
+                                        <?php else: ?>
                                             <p>Nenhum produto encontrado.</p>
                                         <?php endif; ?>
                                     </fieldset>
@@ -374,11 +375,11 @@
                                     </fieldset>
 
                                     <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9; display: flex; flex-wrap: wrap; justify-content: space-around">
-                                        <?php if (!empty($listar_dados_produtos)) : ?>
-                                            <?php foreach ($listar_dados_produtos as $value) : ?>
+                                        <?php if (!empty($listar_dados_produtos)): ?>
+                                            <?php foreach ($listar_dados_produtos as $value): ?>
                                                 <div class="card-container" style="flex: 310px; margin: 10px;">
                                                     <div class="col">
-                                                        <?php if (!empty($value->nome_produto)) : ?>
+                                                        <?php if (!empty($value->nome_produto)): ?>
                                                             <div class="card usuario" style="width: 100%;">
                                                             <br>
                                                                 <div class="img">
@@ -395,9 +396,10 @@
                                                                     <center>
                                                                         <p class="status-value" style="color: #879BC9; font-weight: bold;">R$ &nbsp;<b><?php echo $value->valor_produto; ?>,00</b></p>
                                                                     </center>
+
                                                                     <?php if ($this->session->fk_usuario != '' && $this->session->profissional == 'sim'): ?>
                                                                         <form method="POST" action="<?php echo base_url('home/excluir_produto/' . $value->id_produto); ?>">
-                                                                            <button type="submit" class="btn btn-danger" style="font-size: 11px; float: right">Excluir</button>
+                                                                            <button type="submit" class="btn btn-danger excluir-item" data-toggle="modal" data-target="#confirmacaoModalProduto" data-id="<?php echo $value->id_produto; ?>" style="font-size: 11px; float: right">Excluir</button>
                                                                         </form>
                                                                     <?php endif; ?>
                                                                 </div>
@@ -406,7 +408,7 @@
                                                     </div>
                                                 </div>
                                             <?php endforeach; ?>
-                                        <?php else : ?>
+                                        <?php else: ?>
                                             <p>Nenhum produto encontrado.</p>
                                         <?php endif; ?>
                                     </fieldset>
@@ -428,6 +430,49 @@
     </div>
 </div>
 </div>
+
+<!-- Modal de Confirmação para Excluir Serviço -->
+<div class="modal fade" id="confirmacaoModalServico" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelServico" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabelServico">Confirmação de Exclusão</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Tem certeza que deseja excluir este serviço?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <a id="confirmarExclusaoServico" href="#" class="btn btn-danger">Confirmar Exclusão</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de Confirmação para Excluir Produto -->
+<div class="modal fade" id="confirmacaoModalProduto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelProduto" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabelProduto">Confirmação de Exclusão</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Tem certeza que deseja excluir este produto?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <a id="confirmarExclusaoProduto" href="#" class="btn btn-danger">Confirmar Exclusão</a>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {

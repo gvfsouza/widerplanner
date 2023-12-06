@@ -493,7 +493,7 @@
                 if (confirmarExclusao) {
                     // Debug: Exibir ID e URL gerada
                     console.log('ID do serviço:', id);
-                    var urlExclusao = '<?php echo base_url('home/excluir_servico/'); ?>' + id;
+                    var urlExclusao = '<?php echo base_url("home/excluir_servico"); ?>' + '/' + id;
                     console.log('URL de exclusão:', urlExclusao);
 
                     // Redirecionar para a URL de exclusão
@@ -502,6 +502,7 @@
                 // Se o usuário clicar em "Cancelar" no alerta, não fazer nada
             });
         });
+
 
 
     </script>

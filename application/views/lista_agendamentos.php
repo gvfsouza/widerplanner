@@ -308,9 +308,24 @@
                                         <td><?php echo $listar_servicos_agendamentos[0]->nome_servico; ?></td>
                                 <?php } ?>
                             
-                                <?php if (!empty($listar_profissionais_agendamentos)) { ?>
-                                        <td><?php echo $listar_profissionais_agendamentos[$key]->nome_usuario; ?></td>
-                                <?php } ?>
+
+                                <?php foreach ($listar_agendamentos_realizados as $key => $value) { ?>
+                                        <tr>
+                                            <?php if (!empty($listar_servicos_agendamentos[$key])) { ?>
+                                                <td><b><?php echo $listar_servicos_agendamentos[$key]->servicos; ?></b></td>
+                                            <?php } ?>
+
+                                            <td style="font-size: 11px;"><b><?php echo formata_data($value->data_agenda); ?></b></td>
+
+                                            <td style="font-size: 11px;"><b><?php echo $value->horarios_semana; ?></b></td>
+
+                                            <?php if (!empty($listar_profissionais_agendamentos)) { ?>
+                                                <td><b><?php echo $listar_profissionais_agendamentos[$key]->nome_usuario; ?></b></td>
+                                            <?php } ?>
+                                        </tr>
+                                    <?php } ?>
+
+                                
                                 </tr>
                             <?php } ?>
 

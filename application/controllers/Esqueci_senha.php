@@ -5,8 +5,7 @@ class Esqueci_senha extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		if ($this->session->userdata('cpf_usuario') == null) redirect('login'); //direciona para a página de login quando perde a sessão
-
+		
 		// Carregue o arquivo functions_helper
 		$this->load->helper('functions_helper');
 		if ($_SERVER['REQUEST_METHOD'] === 'POST') {

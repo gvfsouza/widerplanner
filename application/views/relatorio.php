@@ -88,7 +88,7 @@
                                         </div>
                                     </div>
                                     <div class="col-auto">
-                                        <i class="fas fa-users"></i>
+                                        <i class="fas fa-cut"></i>
                                     </div>
                                 </div>
                             </div>

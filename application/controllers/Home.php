@@ -57,7 +57,7 @@ class Home extends CI_Controller
 				$dados['excluir_servico'] = $this->Home_model->excluir_servico($id_servicos);
 
 				//MENSAGEM SUCESSO AO CADASTRAR
-				$this->session->set_flashdata('sucesso', 'Serviço removido com sucesso!');
+				$this->session->set_flashdata('sucesso', 'Serviço excluído com sucesso!');
 
 				redirect('/home');
 			} else {

@@ -314,6 +314,7 @@
                                                             <p class="status-value">R$ &nbsp;<?php echo $value->valor_servico; ?>,00<i class="fas fa-clock"></i> &nbsp;&nbsp;<?php echo $value->duracao_servico; ?></p>
                                                         </center>
                     
+
                                                         <?php if ($this->session->fk_usuario != '' && $this->session->profissional == 'sim'): ?>
                                                                 <form method="POST" action="<?php echo base_url('home/excluir_servico/' . $value->id_servicos); ?>">
                                                                     <button type="submit" class="btn btn-danger excluir-servico" data-toggle="modal" data-target="#confirmacaoModalServico" data-id="<?php echo $value->id_servicos; ?>" style="font-size: 11px; float: right">Excluir</button>

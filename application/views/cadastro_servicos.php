@@ -57,7 +57,7 @@
                                                         </script> 
                                                     </div> -->
 
-                                                    <div class="form-group col-md-4">
+                                                    <div class="form-group col-md-3">
                                                         <label for=""><b>Nome:</b></label>
                                                         <br>
                                                         <input style="font-size:14px" type="text" class="form-control" id="nome_servico" name="nome_servico" value="">
@@ -73,7 +73,7 @@
                                                             <div class="input-group-prepend">
                                                                 <span class="input-group-text">$</span>
                                                             </div>
-                                                            <input type="number" class="form-control col-md-4" id="valor_servico" name="valor_servico" value="" aria-label="Amount (to the nearest dollar)">
+                                                            <input type="number" class="form-control col" id="valor_servico" name="valor_servico" value="" aria-label="Amount (to the nearest dollar)">
                                                             <div class="input-group-append">
                                                                 <span class="input-group-text">.00</span>
                                                             </div>

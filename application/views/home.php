@@ -376,7 +376,7 @@
                                     <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9; display: flex; flex-wrap: wrap; justify-content: space-around">
                                         <?php if (!empty($listar_dados_produtos)) : ?>
                                             <?php foreach ($listar_dados_produtos as $value) : ?>
-                                                <div class="card-container" style="flex: 0 0 300px; margin: 10px;">
+                                                <div class="card-container" style="flex: 300px; margin: 10px;">
                                                     <div class="col">
                                                         <?php if (!empty($value->nome_produto)) : ?>
                                                             <div class="card usuario" style="width: 100%;">

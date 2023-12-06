@@ -48,22 +48,22 @@
                                             <div style="margin-left:10px;"></div>
                                             <div class="col">
                                                 <div class="row">
-                                                    <div class="form-group col-md-6">
+                                                    <div class="form-group col-md-3">
                                                         <label style="color: #4e4e4e"><b>Foto:</b></label>
                                                         <br>
                                                         <input style="font-size:14px" type="file" class="form-control" id="foto_produto" name="foto_produto" accept="image/*" required>
                                                     </div>
-                                                    <div class="form-group col-md-6">
+                                                    <div class="form-group col-md-3">
                                                         <label for="" style="color: #4e4e4e;"><b>Nome:</b></label>
                                                         <br>
                                                         <input style="font-size:14px" type="text" class="form-control" id="nome_produto" name="nome_produto" value="">
                                                     </div>
-                                                    <div class="form-group col-md-6">
+                                                    <div class="form-group col-md-3">
                                                         <label for="" style="color: #4e4e4e;"><b>Valor:</b></label>
                                                         <br>
                                                         <input type="text" class="form-control" id="valor_produto" name="valor_produto" value="">
                                                     </div>
-                                                    <div class="form-group col-md-6">
+                                                    <div class="form-group col-md-3">
                                                         <label for="" style="color: #4e4e4e;"><b>Quantidade:</b></label>
                                                         <input style="font-size:14px" type="number" class="form-control" id="qtde_produto" name="qtde_produto" value="">
                                                     </div>

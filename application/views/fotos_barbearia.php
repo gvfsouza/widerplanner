@@ -68,7 +68,7 @@
                                                     <div class="col-md-4">
                                                         <?php if (!empty($value->fotos_lugar)) : ?>
                                                             <div>
-                                                                <center><img id='base64image' src='data:image/jpeg;base64,<?php echo $value->fotos_lugar; ?>' /></center>
+                                                                <center><img id='base64image' src='data:image/jpeg;base64,<?php echo base64_encode($value->fotos_lugar); ?>' /></center>
                                                             </div>
                                                         <?php endif; ?>
                                                     </div>

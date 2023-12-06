@@ -301,7 +301,7 @@
                             <tbody>
                             <?php foreach ($listar_agendamentos_realizados as $value) { ?>
                                 <tr>
-                                <th scope="row"><?php echo $value->cliente; ?></th>
+                                <th scope="row"><?php echo $value->nome_usuario; ?></th>
                                 <td><?php echo formata_data($value->data_agenda); ?></td>
                                 <td><?php echo $value->horarios_semana; ?></td>
                                 <?php if (!empty($listar_servicos_agendamentos)) { ?>

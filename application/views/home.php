@@ -418,7 +418,9 @@
 
                                                                                     <?php if ($this->session->fk_usuario != '' && $this->session->profissional == 'sim'): ?>
                                                                                             <form method="POST" action="<?php echo base_url('home/excluir_produto/' . $value->id_produto); ?>">
-                                                                                                <button type="submit" class="btn btn-danger excluir-item" data-toggle="modal" data-target="#confirmacaoModalProduto" data-id="<?php echo $value->id_produto; ?>" style="font-size: 11px; float: right">Excluir</button>
+                                                                                            <a title="Excluir Produto" class="nav-link" href="#" data-toggle="modal" data-target="#confirmacaoModalProduto" data-id="<?php echo $value->id_produto; ?>">
+                                                                                                <span class="btn btn-danger" style="font-size: 11px; float: right">Excluir</span>
+                                                                                            </a>
                                                                                             </form>
                                                                                     <?php endif; ?>
                                                                                 </div>
@@ -471,6 +473,27 @@
     </div>
 </div>
 
+<!-- Modal de Confirmação para Excluir Produto -->
+<div class="modal fade" id="confirmacaoModalProduto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelProduto" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabelServico">Confirmação de Exclusão</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Tem certeza que deseja excluir este produto?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancelar</button>
+                <a id="confirmarExclusaoProduto" href="#" class="btn btn-danger btn-sm">Sim</a>
+            </div>
+        </div>
+    </div>
+</div>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var cardDescriptions = document.querySelectorAll('.profile-desc');
@@ -509,4 +532,15 @@
         });
     });
 
+    $(document).ready(function () {
+        $('.nav-link').on('click', function () {
+            var id = $(this).data('id');
+            $('#confirmarExclusaoProduto').attr('href', '<?php echo base_url('home/excluir_produto/'); ?>' + id);
+        });
+
+        $('#confirmarExclusaoServico').on('click', function () {
+            var url = $(this).attr('href');
+            window.location.href = url;
+        });
+    });
     </script>

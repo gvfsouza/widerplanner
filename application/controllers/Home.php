@@ -73,10 +73,33 @@ class Home extends CI_Controller
 
 	public function excluir_produto($id_produto)
 	{
-		// Conexão com o Model
 		$this->load->model('Home_model');
 
-		$this->Home_model->excluir_produto($id_produto);
-		redirect('home');
+			if (!isset($error)) {
+
+				$dados['excluir_produto'] = $this->Home_model->excluir_produto($id_produto);
+
+				//MENSAGEM SUCESSO AO CADASTRAR
+				$this->session->set_flashdata('sucesso', 'Produto excluído com sucesso!');
+
+				redirect('/home');
+			} else {
+				$this->session->set_flashdata('erro', 'Erro ao excluir produto.');
+			}
+
+		$this->load->view('layout/header');
+		$this->load->view('layout/sidebar');
+		$this->load->view('layout/navbar');
+		$this->load->view('home', $dados);
+		$this->load->view('layout/footer');
 	}
+
+	// public function excluir_produto($id_produto)
+	// {
+	// 	// Conexão com o Model
+	// 	$this->load->model('Home_model');
+
+	// 	$this->Home_model->excluir_produto($id_produto);
+	// 	redirect('home');
+	// }
 }

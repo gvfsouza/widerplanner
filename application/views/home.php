@@ -314,8 +314,8 @@
                                                         <p class="status-value">R$ &nbsp;<?php echo $value->valor_servico; ?>,00<i class="fas fa-clock"></i> &nbsp;&nbsp;<?php echo $value->duracao_servico; ?></p>
                                                     </center>
                                                     <?php if ($this->session->fk_usuario != '' && $this->session->profissional == 'sim'): ?>
-                                                        <form method="POST" action="<?php echo base_url('editar_servico/' . $value->id_servicos); ?>">
-                                                            <button type="submit" class="btn btn-danger" style="font-size: 11px; float: right">Editar</button>
+                                                        <form method="POST" action="<?php echo base_url('home/excluir_servico/' . $value->id_servicos); ?>">
+                                                            <button type="submit" class="btn btn-danger" style="font-size: 11px; float: right">Excluir</button>
                                                         </form>
                                                     <?php endif; ?>
                                                 </div>
@@ -376,7 +376,7 @@
                                     <fieldset class="form-group" style="border: 1px solid #ddd; border-radius: 4px; padding: 15px; border: 1px solid #879bc9; display: flex; flex-wrap: wrap; justify-content: space-around">
                                         <?php if (!empty($listar_dados_produtos)) : ?>
                                             <?php foreach ($listar_dados_produtos as $value) : ?>
-                                                <div class="card-container" style="flex: 310px; margin: 10px;">
+                                                <div class="card-container" style="flex: 30px; margin: 10px;">
                                                     <div class="col">
                                                         <?php if (!empty($value->nome_produto)) : ?>
                                                             <div class="card usuario" style="width: 100%;">
@@ -397,11 +397,7 @@
                                                                     </center>
                                                                     <?php if ($this->session->fk_usuario != '' && $this->session->profissional == 'sim'): ?>
                                                                         <form method="POST" action="<?php echo base_url('home/excluir_produto/' . $value->id_produto); ?>">
-<<<<<<< HEAD
                                                                             <button type="submit" class="btn btn-danger" style="font-size: 11px; float: right">Excluir</button>
-=======
-                                                                            <button type="submit" class="btn btn-danger excluir-produto" data-toggle="modal" data-target="#confirmacaoModalProduto" data-id="<?php echo $value->id_produto; ?>" style="font-size: 11px; float: right">Excluir</button>
->>>>>>> 885ff793305aaba51e84ff074ed9376b14d57844
                                                                         </form>
                                                                     <?php endif; ?>
                                                                 </div>
@@ -433,54 +429,6 @@
 </div>
 </div>
 
-<<<<<<< HEAD
-=======
-<!-- Modal de Confirmação para Excluir Serviço -->
-<div class="modal fade" id="confirmacaoModalServico" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelServico" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabelServico">Confirmar Exclusão</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                Tem certeza que deseja excluir este serviço?
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                <a id="confirmarExclusaoServico" class="btn btn-danger" href="#">Confirmar</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal de Confirmação para Excluir Produto -->
-<div class="modal fade" id="confirmacaoModalProduto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelProduto" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabelProduto">Confirmar Exclusão</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                Tem certeza que deseja excluir este produto?
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                <a id="confirmarExclusaoProduto" class="btn btn-danger" href="#">Confirmar</a>
-            </div>
-        </div>
-    </div>
-</div>
->
-
-
-
->>>>>>> 885ff793305aaba51e84ff074ed9376b14d57844
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         var cardDescriptions = document.querySelectorAll('.profile-desc');
@@ -506,22 +454,4 @@
             });
         });
     });
-<<<<<<< HEAD
-=======
-
-
-    $(document).ready(function () {
-        $('.excluir-servico').on('click', function () {
-            var id = $(this).data('id');
-            $('#confirmarExclusaoServico').attr('href', '<?php echo base_url('home/excluir_servico/'); ?>' + id);
-        });
-    });
-
-    $(document).ready(function () {
-        $('.excluir-produto').on('click', function () {
-            var id = $(this).data('id');
-            $('#confirmarExclusaoProduto').attr('href', '<?php echo base_url('home/excluir_produto/'); ?>' + id);
-        });
-    });
->>>>>>> 885ff793305aaba51e84ff074ed9376b14d57844
 </script>

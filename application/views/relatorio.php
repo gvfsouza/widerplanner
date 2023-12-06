@@ -136,9 +136,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- FORMULÁRIO  -->
+                    <!-- FORMULÁRIO  -->
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="" role="tabpanel">
                         <div class="p-3 bg-white">
@@ -164,6 +162,9 @@
                     </div>
                     <br />
                 </div>
+                </div>
+
+                
             </div>
         </div>
     </div>

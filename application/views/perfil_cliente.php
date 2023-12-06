@@ -83,7 +83,7 @@
                                                             </div>
                                                             <div class="dados-cliente col-md-6">
                                                                 <label for="" style="color: #77787a;">Celular:</label>
-                                                                <input style="font-size:14px" type="text" class="form-control" id="telefone_usuario" name="telefone_usuario" value="<?php echo $value->telefone_usuario; ?>">
+                                                                <input style="font-size:14px" type="text" class="form-control" id="telefone_usuario" name="telefone_usuario" value="<?php echo formataTelefone($value->telefone_usuario); ?>">
                                                             </div>
                                                         </div>
                                                         <div class="row">

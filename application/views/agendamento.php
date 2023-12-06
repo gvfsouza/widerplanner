@@ -106,11 +106,11 @@
                                                 </div>
                                                 <div class="col-md-3" style="margin-top: 30px;">
                                                     <div class="servicos_add">
-                                                        <button type="button" class="btn btn-primary add_novo_Servico" style="font-size: 14px;">
+                                                        <button type="button" class="btn btn-primary add_novo_Servico" style="width: 185px; height: 40px; font-size: 14px;">
                                                             <i class="fas fa-plus"></i> Adicionar Serviço
                                                         </button>
                                                     </div>
-                                                </div
+                                                </div>
                                         </fieldset>
                                     </div>
                                 </div>
@@ -138,30 +138,41 @@
 </div>
 
 <script>
-    var maxButtons = 9999;
+    $(document).ready(function () {
+        $('.add_novo_Servico').click(function (e) {
+            var container = $(this).closest('.row');
+            var element_copy = container.clone();
+            var botao_excluir = '<div class="btn btn-outline-danger botao_remover" style="width: 100px; height: 40px; font-size: 14px; margin-top: 10px;"><i class="fas fa-trash-alt"></i> Remover</div>';
 
-    $('.add_novo_Servico').click(function(e) {
-        var container = $(this).closest('.row');
-        var element_copy = container.clone();
-        var botao_excluir = '<div class="btn btn-danger botao_remover" style="font-size: 14px;"><i class="fas fa-trash-alt"></i> Remover</div>';
+            element_copy.find('select, input').val('');
+            element_copy.find('.select2').remove(); // Limpa o campo
+            element_copy.find('.add_novo_Servico').remove(); // Remove o botão "Adicionar Serviço"
 
-        element_copy.find('select, input').val('');
-        element_copy.find('.select2').remove(); // Limpa o campo
-        element_copy.find('.add_novo_Servico').remove(); // Remove o botão "Adicionar Serviço"
+            container.after(element_copy);
 
-        container.after(element_copy);
+            if (element_copy.find('.botao_remover').length === 0) {
+                element_copy.find('.col-md-3').append(botao_excluir);
+            }
 
-        if (element_copy.find('.botao_remover').length === 0) {
-            element_copy.find('.col').append(botao_excluir);
+            $('.botao_remover').click(function (e) {
+                $(this).closest('.row').remove();
+                checkRemoverButtonVisibility();
+            });
+
+            // Select picker
+            $('.servico').select2({
+                width: '100%'
+            });
+
+            checkRemoverButtonVisibility();
+        });
+
+        function checkRemoverButtonVisibility() {
+            if ($('.botao_remover').length > 0) {
+                $('.botao_remover').show();
+            } else {
+                $('.botao_remover').hide();
+            }
         }
-
-        $('.botao_remover').click(function(e) {
-            $(this).closest('.row').remove();
-        });
-
-        // Select picker
-        $('.servico').select2({
-            width: '100%'
-        });
     });
 </script>

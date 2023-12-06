@@ -61,25 +61,21 @@
                                 </div>
                                 <br><br>
                                 <div class="row">
-                                    <div class="col-12">
-                                        <div class="row">
-                                            <?php if (!empty($listar_fotos)) : ?>
-                                                <?php foreach ($listar_fotos as $value) : ?>
-                                                    <div class="col-md-4">
-                                                        <?php if (!empty($value->fotos_lugar)) : ?>
-                                                            <div>
-                                                                <center><img id='base64image' src='data:image/jpeg;base64,<?php echo $value->fotos_lugar; ?>' /></center>
-                                                            </div>
-                                                        <?php endif; ?>
+                                    <?php if (!empty($listar_fotos)) : ?>
+                                        <?php foreach ($listar_fotos as $value) : ?>
+                                            <div class="col-md-4">
+                                                <?php if (!empty($value->fotos_lugar)) : ?>
+                                                    <div>
+                                                        <center><img id='base64image' src='data:image/jpeg;base64,<?php echo $value->fotos_lugar; ?>' /></center>
                                                     </div>
-                                                <?php endforeach; ?>
-                                            <?php else : ?>
-                                                <div class="alert alert-danger" role="alert">
-                                                    Nenhuma Foto Encontrada!
-                                                </div>
-                                            <?php endif; ?>
+                                                <?php endif; ?>
+                                            </div>
+                                        <?php endforeach; ?>
+                                    <?php else : ?>
+                                        <div class="alert alert-danger" role="alert">
+                                            Nenhuma Foto Encontrada!
                                         </div>
-                                    </div>
+                                    <?php endif; ?>
                                 </div>
                             </form>
                         </div>

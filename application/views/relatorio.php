@@ -1,40 +1,28 @@
 
 <style>
-   .card-container {
+    body {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        min-height: 100vh;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
 
-    figure {
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .card {
         width: 100%;
-        aspect-ratio: 7 / 4;
-        --bg: hsl(330 80% calc(90% - (var(--hover) * 10%)));
-        transition: background 0.2s;
-        margin: 0;
-        position: relative;
-        overflow: hidden;
-        border-radius: 1.5rem;
     }
 
-    figure:after {
-        content: "";
-        position: absolute;
-        border-radius: 50%;
-        bottom: 0%;
-        left: 10%;
-    }
-
-    img {
-        position: absolute;
-    }
-
-    article {
-        --hover: 0;
-    }
-
-    article:hover {
-        --hover: 1;
+    #chart {
+        width: 100%;
     }
 </style>
 

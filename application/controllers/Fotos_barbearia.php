@@ -27,7 +27,7 @@ class Fotos_barbearia extends CI_Controller
 		$dados = array();
 
 		if (isset($_POST['salvar'])) {
-			$fotos_lugar = $this->converte_img($_FILES['fotos_lugar']['tmp_name'], $_FILES['fotos_lugar']['type']);
+			$fotos_lugar = $this->converte_img($_FILES['fotos_lugar']['tmp_name'],$_FILES['fotos_lugar']['type']);
 
 			// // FOTO - EXTENSÃO
 			$path = $_FILES['fotos_lugar']['name'];
@@ -37,9 +37,9 @@ class Fotos_barbearia extends CI_Controller
 			$config['encrypt_name'] = TRUE;
 			$this->load->library('upload', $config);
 			$this->upload->initialize($config);
-
+		
 			if (!isset($error)) {
-
+				
 				$dados['cadastro_fotos'] = $this->Fotos_barbearia_model->cadastro_fotos($fotos_lugar);
 
 				//MENSAGEM SUCESSO AO CADASTRAR
@@ -49,7 +49,7 @@ class Fotos_barbearia extends CI_Controller
 				$this->session->set_flashdata('erro', 'Erro ao efetuar cadastro de uma nova foto.');
 			}
 		}
-
+		
 		$dados['listar_fotos'] = $this->Fotos_barbearia_model->listar_fotos();
 
 		$this->load->view('layout/header');
@@ -60,25 +60,17 @@ class Fotos_barbearia extends CI_Controller
 
 	public function converte_img($img, $type)
 	{
-		$allowed_types = array('image/jpeg', 'image/png', 'image/gif');
-
-		if (!in_array($type, $allowed_types)) {
-			$this->session->set_flashdata('erro', 'Tipo de arquivo não suportado. Apenas imagens JPEG, PNG e GIF são permitidas.');
-			return null;
-		}
-
-		$image = file_get_contents($img);
-
-		if ($type == 'image/png') {
+		if ($type == 'image/png/jgp') {
 			$im = imagecreatefrompng($img);
 			ob_start();
 			imagejpeg($im);
 			$data = ob_get_clean();
 			imagedestroy($im);
 		} else {
-			$data = base64_encode($image);
+			ob_start();
+			readfile($img);
+			$data = ob_get_clean();
 		}
-
-		return $data;
+		return base64_encode($data);
 	}
 }

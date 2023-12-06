@@ -26,7 +26,7 @@
     }
 
     .border-left-roxo{
-        background-color:#af45ff;
+        border-left: 0.25rem solid #af45ff !important;
     }
 </style>
 

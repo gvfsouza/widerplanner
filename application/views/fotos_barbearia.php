@@ -3,7 +3,7 @@
         border-radius: 5px;
         max-width: 150px;
         width: 100%;
-        height: auto;
+        height: 150px;
         margin: 8px;
     }
 

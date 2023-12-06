@@ -125,7 +125,7 @@
             <?php if ($this->session->fk_usuario != '' && $this->session->profissional == 'sim'): ?>
                     <li class="nav-item">
                         <a title="Gerenciar Usuários" class="nav-link" href="<?php echo base_url(); ?>relatorio">
-                        <i class="fas fa-list-ul icon" style="color:#879bc9"></i>
+                        <i class="fas fa-chart-bar icon" style="color:#879bc9"></i>
                             <span class="link" style="color:#000000d9;font-weight: bold;font-size:17px">Relatório </span>
                         </a>
                     </li>

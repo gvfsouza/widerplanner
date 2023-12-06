@@ -453,10 +453,10 @@
     </div>
     </div>
 
-<?php if (isset($excluir_servico) && is_array($excluir_servico)) : ?>
+    <?php if (isset($excluir_servico) && is_array($excluir_servico)) : ?>
     <?php foreach ($excluir_servico as $value) { ?>
         <!-- Modal de Confirmação para Excluir Serviço -->
-        <div class="modal fade" id="excluir<?= $value->id; ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelServico" aria-hidden="true">
+        <div class="modal fade" id="excluir<?= $value->id; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelServico" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -482,6 +482,7 @@
         </div>
     <?php } ?>
 <?php endif; ?>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var cardDescriptions = document.querySelectorAll('.profile-desc');

@@ -76,7 +76,7 @@ class Login extends CI_Controller
 				$this->session->set_userdata('profissional', $profissional);
 
 				// Configura dados da sessão do usuário e redireciona para o painel
-				$this->session->set_flashdata('sucesso', 'Login efetuado com sucesso!');
+				// $this->session->set_flashdata('sucesso', 'Login efetuado com sucesso!');
 				redirect('home');
 			} else {
 				$this->session->set_flashdata('error', 'CPF do usuário ou senha inválidos');

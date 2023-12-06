@@ -80,11 +80,11 @@ class Home extends CI_Controller
 				$dados['excluir_produto'] = $this->Home_model->excluir_produto($id_produto);
 
 				//MENSAGEM SUCESSO AO CADASTRAR
-				$this->session->set_flashdata('sucesso', 'Produto excluído com sucesso!');
+				$this->session->set_flashdata('sucesso_produto', 'Produto excluído com sucesso!');
 
 				redirect('/home');
 			} else {
-				$this->session->set_flashdata('erro', 'Erro ao excluir produto.');
+				$this->session->set_flashdata('erro_produto', 'Erro ao excluir produto.');
 			}
 
 		$this->load->view('layout/header');

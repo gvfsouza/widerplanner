@@ -312,6 +312,20 @@
                                             </div>
                                         <?php endif; ?>
 
+                                        <?php if ($this->session->flashdata('sucesso_produto')) { ?>
+                                            <div class="alert alert-success" role="alert">
+                                                <?php echo $this->session->flashdata('sucesso_produto'); ?>
+                                            </div>
+                                        <?php } ?>
+
+                                        <!-- Mensagem de erro serviço -->
+                                        <?php if ($this->session->flashdata('erro_produto')): ?>
+                                            <div class="alert alert-danger">
+                                                <?php echo $this->session->flashdata('erro_produto'); ?>
+                                            </div>
+                                        <?php endif; ?>
+
+
                                         <fieldset class="form-group " style="border: 1px solid #ddd; border-radius: 4px; border: 1px solid #879bc9; display: flex; flex-wrap: wrap; justify-content: space-around;">
                                             <?php foreach ($listar_dados_servicos as $value) { ?>
                                                     <div class="card-container" style="flex: 20%;">

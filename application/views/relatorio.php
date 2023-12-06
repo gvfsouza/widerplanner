@@ -25,8 +25,16 @@
         width: 100%;
     }
 
+    .border-left-laranja{
+        border-left: 0.25rem solid #ff730f !important;
+    }
+
     .border-left-roxo{
         border-left: 0.25rem solid #af45ff !important;
+    }
+
+    .border-left-verde{
+        border-left: 0.25rem solid #00e396 !important;
     }
 </style>
 
@@ -59,11 +67,11 @@
                 <!-- Card Usuários -->
                 <div class="row">
                     <div class="col-xl-4 col-md-6 mb-3">
-                        <div class="card border-left-primary shadow h-100 py-2">
+                        <div class="card border-left-laranja shadow h-100 py-2">
                             <div class="card-body">
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                        <div class="text-xs font-weight-bold text-uppercase mb-1" style="color:#ff730f">
                                             Usuários
                                         </div>
                                         <div class="h5 mb-0 font-weight-bold text-gray-800">
@@ -100,11 +108,11 @@
                     </div>
                     <!-- Card Produtos -->
                     <div class="col-xl-4 col-md-6 mb-3">
-                        <div class="card border-left-primary shadow h-100 py-2">
+                        <div class="card border-left-verde shadow h-100 py-2">
                             <div class="card-body">
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                        <div class="text-xs font-weight-bold text-uppercase mb-1" style="color:#00e396">
                                             Produtos
                                         </div>
                                         <div class="h5 mb-0 font-weight-bold text-gray-800">

@@ -40,6 +40,12 @@
     article:hover {
         --hover: 1;
     }
+
+    .chart-container {
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+    }
 </style>
 
 <br />
@@ -139,7 +145,7 @@
                             <div class="row">
                                 <!-- Gráfico -->
                                 <div class="col-md-5">
-                                    <div class="card shadow mb-4" style="width: 1520px;">
+                                    <div class="card shadow mb-4" style="width: 100%;">
                                         <div id="chart" style="background-color: white"></div>
                                     </div>
                                 </div>

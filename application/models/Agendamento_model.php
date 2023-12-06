@@ -94,11 +94,13 @@ class Agendamento_model extends CI_Model
 
     public function listar_agendamentos_realizados()
     {
-        $this->db->select('*');
+        $this->db->select('usuario.nome_usuario as cliente, agenda.data_agenda, hora_disp.horarios_semana, servicos.nome_servico, profissional.nome_usuario as profissional');
         $this->db->from('agenda');
         $this->db->join('hora_disp', 'hora_disp.id_hora = agenda.fk_hora');
-        $this->db->join('usuario', 'usuario.id_usuario = agenda.fk_usuario');
-        $this->db->where('usuario.profissional !=', 'sim');
+        $this->db->join('usuario as cliente', 'cliente.id_usuario = agenda.fk_usuario');
+        $this->db->join('usuario as profissional', 'profissional.id_usuario = agenda.fk_profissional', 'left');
+        $this->db->join('servicos', 'servicos.id_servicos = agenda.fk_servicos', 'left');
+        $this->db->where('cliente.profissional !=', 'sim');
 
         $res = $this->db->get();
         return $res->result();
@@ -108,15 +110,13 @@ class Agendamento_model extends CI_Model
     {
         $this->db->select('usuario.id_usuario, usuario.nome_usuario, agenda.*');
         $this->db->from('usuario');
-        $this->db->join('agenda', 'usuario.id_usuario = agenda.fk_profissional');
-    
-        // Mantenha a condição WHERE para filtrar profissionais
+        $this->db->join('agenda', 'usuario.id_usuario = agenda.fk_profissional', 'left');
         $this->db->where('usuario.profissional', 'sim');
-    
+
         $res = $this->db->get();
         return $res->result();
     }
-    
+
     public function listar_servicos_agendamentos()
     {
         $this->db->select('*');

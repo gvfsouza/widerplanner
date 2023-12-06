@@ -47,6 +47,25 @@ if (!function_exists('formata_hora')) {
     }
 }
 
+if (!function_exists('formataTelefone')) {
+    function formataTelefone($numero)
+    {
+        $numero = preg_replace('/\D/', '', $numero);
+
+        if (strlen($numero) == 10) {
+            $novo = sprintf('(%s) %s-%s', substr($numero, 0, 2), substr($numero, 2, 4), substr($numero, 6));
+        } elseif (strlen($numero) == 11) {
+            $novo = sprintf('(%s) %s-%s', substr($numero, 0, 2), substr($numero, 2, 5), substr($numero, 7));
+        } elseif (strlen($numero) == 0) {
+            $novo = "";
+        } else {
+            $novo = $numero;
+        }
+
+        return $novo;
+    }
+}
+
 // function gerarSenhaAleatoria($tamanho = 8) {
 //     $caracteres = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 //     $senha = '';

@@ -1,9 +1,7 @@
 <style>
     img {
-        left:20%;
-        width: 65%;
-        border-radius: 15px;
-        height: 100%;
+        width: 30%;
+        border-radius: 05px;
     }
 </style>
 

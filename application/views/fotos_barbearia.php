@@ -5,6 +5,7 @@
         width: 100%;
         height: 150px;
         margin: 8px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
 
     .product-tumb img {

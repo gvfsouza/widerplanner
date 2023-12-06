@@ -330,12 +330,9 @@
         
                                                             <?php if ($this->session->fk_usuario != '' && $this->session->profissional == 'sim'): ?>
                                                                     <form method="POST" action="<?php echo base_url('home/excluir_servico/' . $value->id_servicos); ?>">
-                                                                    <a title="Excluir Serviço" class="nav-link" href="#" data-toggle="modal" data-target="#confirmacaoModalServico" data-id="<?php echo $value->id_servicos; ?>">
+                                                                    <a title="Excluir Serviço" class="nav-link" href="#" data-toggle="modal" data-target="#confirmacaoModalServico" data-id="<?php echo $value->id_servicos; ?>" data-nome="<?php echo $value->nome_servico; ?>">
                                                                         <span class="btn btn-danger" style="font-size: 11px; float: right">Excluir</span>
                                                                     </a>
-
-
-                                                                        <!-- <button type="submit" class="btn btn-danger excluir-item" data-toggle="modal" data-target="#confirmacaoModalServico" data-id="<?php echo $value->id_servicos; ?>" style="font-size: 11px; float: right">Excluir</button> -->
                                                                     </form>
                                                             <?php endif; ?>
                                                         </div>
@@ -450,27 +447,28 @@
     </div>
     </div>
 
+<?php foreach($excluir_servico as $value) { ?>
     <!-- Modal de Confirmação para Excluir Serviço -->
-<div class="modal fade" id="confirmacaoModalServico" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelServico" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabelServico">Confirmação de Exclusão</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                Tem certeza que deseja excluir este serviço?
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                <a id="confirmarExclusaoServico" href="#" class="btn btn-danger">Confirmar Exclusão</a>
+    <div class="modal fade" id="confirmacaoModalServico" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelServico" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabelServico">Confirmação de Exclusão</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Tem certeza que deseja excluir este serviço?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancelar</button>
+                    <a id="confirmarExclusaoServico" href="#" class="btn btn-danger btn-sm">Sim</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
-
+<?php } ?>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var cardDescriptions = document.querySelectorAll('.profile-desc');
@@ -498,8 +496,11 @@
         });
 
         $(document).ready(function () {
-        $('.nav-link').on('click', function () {
+        $('.excluir-servico').on('click', function () {
             var id = $(this).data('id');
+            var nomeServico = $(this).data('nome');
+
+            $('#confirmacaoModalServico .modal-body').html('Tem certeza que deseja excluir o serviço "' + nomeServico + '"?');
             $('#confirmarExclusaoServico').attr('href', '<?php echo base_url('home/excluir_servico/'); ?>' + id);
         });
 

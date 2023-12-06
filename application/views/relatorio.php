@@ -122,7 +122,7 @@
                         <div class="p-3 bg-white">
                             <div class="row">
                                 <!-- Gráfico -->
-                                <div class="col-md-5">
+                                <div class="col-md-5" style="display: contents;">
                                     <div class="card shadow mb-4" style="width: 100%;">
                                         <div id="chart" style="background-color: white"></div>
                                     </div>

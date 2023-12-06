@@ -138,7 +138,6 @@
 </div>
 
 <script>
-
     var maxButtons = 9999;
 
     $('.add_novo_Servico').click(function(e) {
@@ -153,7 +152,7 @@
         container.after(element_copy);
 
         if (element_copy.find('.botao_remover').length === 0) {
-            element_copy.find('.col-md-3').append(botao_excluir);
+            element_copy.find('.col').append(botao_excluir);
         }
 
         $('.botao_remover').click(function(e) {

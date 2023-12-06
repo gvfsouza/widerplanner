@@ -485,8 +485,8 @@
 
         $(document).ready(function () {
             $('.excluir-servico').on('click', function () {
-                var id = $(this).data('id');
-                $('#confirmarExclusaoServico').data('id', id);
-            });
+            var id = $(this).data('id');
+            $('#confirmarExclusaoServico').attr('href', '<?php echo base_url('home/excluir_servico/'); ?>' + id);
+        });
         });
     </script>

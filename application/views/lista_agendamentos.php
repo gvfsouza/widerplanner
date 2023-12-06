@@ -304,8 +304,8 @@
                                         <th scope="row"><?php echo $value->nome_usuario; ?></th>
                                         <td><?php echo formata_data($value->data_agenda); ?></td>
                                         <td><?php echo $value->horarios_semana; ?></td>
-                                        <?php if (!empty($historico_servicos_agendamentos[$key])) { ?>
-                                            <td><b><?php echo $historico_servicos_agendamentos[$key]->servicos; ?></b></td>
+                                        <?php if (!empty($listar_servicos_agendamentos[$key])) { ?>
+                                            <td><b><?php echo $listar_servicos_agendamentos[$key]->servicos; ?></b></td>
                                         <?php } ?>
                                         <?php if (!empty($listar_profissionais_agendamentos)) { ?>
                                                 <td><b><?php echo $listar_profissionais_agendamentos[$key]->nome_usuario; ?></b></td>

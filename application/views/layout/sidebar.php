@@ -82,37 +82,37 @@
        </li>
 
        <?php if ($this->session->fk_usuario != '' && $this->session->profissional == 'sim'): ?>
-                <li class="nav-item">
-                    <a title="Gerenciar Usuários" class="nav-link" href="<?php echo base_url(); ?>lista_agendamentos">
-                    <i class="fas fa-list-ul icon" style="color:#879bc9"></i>
-                        <span class="link" style="color:#000000d9;font-weight: bold;font-size:17px">Agendamentos Realizados </span>
-                    </a>
-                </li>
+                    <li class="nav-item">
+                        <a title="Gerenciar Usuários" class="nav-link" href="<?php echo base_url(); ?>lista_agendamentos">
+                        <i class="fas fa-list-ul icon" style="color:#879bc9"></i>
+                            <span class="link" style="color:#000000d9;font-weight: bold;font-size:17px">Agendamentos Realizados </span>
+                        </a>
+                    </li>
         <?php endif; ?>
 
         <?php if ($this->session->fk_usuario != '' && $this->session->profissional != 'sim'): ?>
-           <li class="nav-item">
-               <a title="Gerenciar Usuários" class="nav-link" href="<?php echo base_url(); ?>perfil_cliente">
-                <i class="fas fa-user icon" style="color:#879bc9"></i>
-                   <span class="link" style="color:#000000d9;font-weight: bold;font-size:17px">Perfil </span>
-               </a>
-           </li>
+               <li class="nav-item">
+                   <a title="Gerenciar Usuários" class="nav-link" href="<?php echo base_url(); ?>perfil_cliente">
+                    <i class="fas fa-user icon" style="color:#879bc9"></i>
+                       <span class="link" style="color:#000000d9;font-weight: bold;font-size:17px">Perfil </span>
+                   </a>
+               </li>
        <?php endif; ?>
 
        <?php if ($this->session->fk_usuario != '' && $this->session->profissional == 'sim'): ?>
-           <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseReports" style="color: #879bc9;">
-                    <i class="fas fa-sharp fa-solid fa-address-card icon" style="color:#879bc9"></i>
-                    <span class="link" style="color:#000000d9;font-weight: bold;font-size:17px">Cadastros </span>
-                </a>
-                <div id="collapseReports" class="collapse" aria-labelledby="headingReports" data-parent="#accordionSidebar">
-                    <div class="bg py-2 collapse-inner rounded" style="background-color: #D4DDF1;">
-                        <a class="collapse-item" href="<?php echo base_url(); ?>cadastro_servicos"><i class=" fas fa-solid fa-scissors icon" style="background-color: white;"></i><b>Cadastro de Serviços</b></a>
-                        <a class="collapse-item" href="<?php echo base_url(); ?>cadastro_produto"><b>Cadastro de Produtos</b></a>
-                        <a class="collapse-item" href="<?php echo base_url(); ?>cadastro_funcionario"><b>Cadastro de Profissionais</b></a>
+               <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseReports" style="color: #879bc9;">
+                        <i class="fas fa-sharp fa-solid fa-address-card icon" style="color:#879bc9"></i>
+                        <span class="link" style="color:#000000d9;font-weight: bold;font-size:17px">Cadastros </span>
+                    </a>
+                    <div id="collapseReports" class="collapse" aria-labelledby="headingReports" data-parent="#accordionSidebar">
+                        <div class="bg py-2 collapse-inner rounded" style="background-color: #D4DDF1;">
+                            <a class="collapse-item" href="<?php echo base_url(); ?>cadastro_servicos"><i class=" fas fa-solid fa-scissors icon" style="background-color: white;"></i><b>Cadastro de Serviços</b></a>
+                            <a class="collapse-item" href="<?php echo base_url(); ?>cadastro_produto"><b>Cadastro de Produtos</b></a>
+                            <a class="collapse-item" href="<?php echo base_url(); ?>cadastro_funcionario"><b>Cadastro de Profissionais</b></a>
+                        </div>
                     </div>
-                </div>
-            </li>
+                </li>
         <?php endif; ?>
 
            <li class="nav-item">
@@ -122,6 +122,15 @@
                </a>
            </li>
        
+            <?php if ($this->session->fk_usuario != '' && $this->session->profissional == 'sim'): ?>
+                    <li class="nav-item">
+                        <a title="Gerenciar Usuários" class="nav-link" href="<?php echo base_url(); ?>relatorio">
+                        <i class="fas fa-list-ul icon" style="color:#879bc9"></i>
+                            <span class="link" style="color:#000000d9;font-weight: bold;font-size:17px">Relatório </span>
+                        </a>
+                    </li>
+            <?php endif; ?>
+        
         <li class="nav-item">
            <a title="Gerenciar Usuários" class="nav-link" href="<?php echo base_url(); ?>alterar_senha">
                <i class="fas fa-lock icon" style="color:#879bc9"></i>

@@ -299,7 +299,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                            <?php foreach ($listar_agendamentos_realizados as $value) { ?>
+                            <?php foreach ($listar_agendamentos_realizados as $key => $value) { ?>
                                     <tr>
                                     <th scope="row"><?php echo $value->nome_usuario; ?></th>
                                     <td><?php echo formata_data($value->data_agenda); ?></td>

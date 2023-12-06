@@ -98,7 +98,6 @@
         }
 
         .card {
-            border-radius: 15px;
             padding: 20px;
             -webkit-box-shadow: 1px 1px 16px -6px rgba(0, 0, 0, 0.5);
             -moz-box-shadow: 1px 1px 16px -6px rgba(0, 0, 0, 0.5);

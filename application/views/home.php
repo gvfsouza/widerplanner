@@ -332,8 +332,10 @@
                                                                     <form method="POST" action="<?php echo base_url('home/excluir_servico/' . $value->id_servicos); ?>">
                                                                     <!-- <a title="Excluir Serviço" class="nav-link" href="#" data-toggle="modal" data-target="#confirmacaoModalServico" data-id="<?php echo $value->id_servicos; ?>"> -->
                                                                         <!-- <span class="btn btn-danger" style="font-size: 11px; float: right">Excluir</span> -->
+                                                                        <?php if (isset($value->id)){ ?>
                                                                         <span style="font-size: 11px; float: right" title="Excluir" id="<?= $value->id ?>" class="btn btn-sm btn-danger remover_servico"><i class="fas fa-trash-alt"></i></span>
-                                                                    <!-- </a> -->
+                                                                            <?php } ?>
+                                                                        <!-- </a> -->
 
 
                                                                         <!-- <button type="submit" class="btn btn-danger excluir-item" data-toggle="modal" data-target="#confirmacaoModalServico" data-id="<?php echo $value->id_servicos; ?>" style="font-size: 11px; float: right">Excluir</button> -->

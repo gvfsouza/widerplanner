@@ -96,56 +96,30 @@ class Agendamento_model extends CI_Model
     {
         $this->db->select('*');
         $this->db->from('agenda');
-        $this->db->join('hora_disp', 'hora_disp.id_hora = agenda.fk_hora', 'left');
-        $this->db->join('usuario', 'usuario.id_usuario = agenda.fk_usuario', 'left');
+        $this->db->join('hora_disp', 'hora_disp.id_hora = agenda.fk_hora');
+        $this->db->join('usuario', 'usuario.id_usuario = agenda.fk_usuario');
         $this->db->where('usuario.profissional !=', 'sim');
-        $this->db->where('fk_usuario', $this->session->userdata('fk_usuario'));
 
         $res = $this->db->get();
         return $res->result();
     }
-
-    // public function listar_profissionais_agendamentos()
-    // {
-    //     $this->db->select('usuario.id_usuario, usuario.nome_usuario, agenda.*');
-    //     $this->db->from('usuario');
-    //     $this->db->join('agenda', 'usuario.id_usuario = agenda.fk_profissional', 'left');
-    //     $this->db->where('usuario.profissional', 'sim');
-
-    //     $res = $this->db->get();
-    //     return $res->result();
-    // }
 
     public function listar_profissionais_agendamentos()
     {
-        $this->db->select('*');
-        $this->db->from('agenda');
-        $this->db->join('usuario', 'usuario.id_usuario = agenda.fk_profissional', 'left');
+        $this->db->select('usuario.id_usuario, usuario.nome_usuario, agenda.*');
+        $this->db->from('usuario');
+        $this->db->join('agenda', 'usuario.id_usuario = agenda.fk_profissional', 'left');
         $this->db->where('usuario.profissional', 'sim');
-        $this->db->where('fk_usuario', $this->session->userdata('fk_usuario')); 
 
         $res = $this->db->get();
         return $res->result();
     }
 
-    // public function listar_servicos_agendamentos()
-    // {
-    //     $this->db->select('*');
-    //     $this->db->from('agenda2');
-    //     $this->db->join('servicos', 'servicos.id_servicos = agenda2.fk_servicos', 'left');
-
-    //     $res = $this->db->get();
-    //     return $res->result();
-    // }
-
     public function listar_servicos_agendamentos()
     {
-        $this->db->select('agenda.id_agenda, GROUP_CONCAT(servicos.nome_servico) as servicos');
-        $this->db->from('agenda');
-        $this->db->join('agenda2', 'agenda.id_agenda = agenda2.fk_agenda', 'left');
+        $this->db->select('*');
+        $this->db->from('agenda2');
         $this->db->join('servicos', 'servicos.id_servicos = agenda2.fk_servicos', 'left');
-        $this->db->group_by('agenda.id_agenda'); // Agrupa por id_agenda
-        $this->db->where('fk_usuario', $this->session->userdata('fk_usuario')); 
 
         $res = $this->db->get();
         return $res->result();

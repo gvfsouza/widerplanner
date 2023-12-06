@@ -39,13 +39,36 @@ class Home extends CI_Controller
 		$this->load->view('layout/footer');
 	}
 
-	public function editar_servico($id_servicos)
+	// public function editar_servico($id_servicos)
+	// {
+	// 	// Conexão com o Model
+	// 	$this->load->model('Home_model');
+
+	// 	$this->Home_model->editar_servico($id_servicos);
+	// 	redirect('editar_servico');
+	// }
+
+	public function excluir_servico($id_servicos)
 	{
-		// Conexão com o Model
 		$this->load->model('Home_model');
 
-		$this->Home_model->editar_servico($id_servicos);
-		redirect('editar_servico');
+			if (!isset($error)) {
+
+				$dados['excluir_servico'] = $this->Home_model->excluir_servico($id_servicos);
+
+				//MENSAGEM SUCESSO AO CADASTRAR
+				$this->session->set_flashdata('sucesso', 'Serviço removido com sucesso!');
+
+				redirect('/home');
+			} else {
+				$this->session->set_flashdata('erro', 'Erro ao excluir serviço.');
+			}
+
+		$this->load->view('layout/header');
+		$this->load->view('layout/sidebar');
+		$this->load->view('layout/navbar');
+		$this->load->view('home', $dados);
+		$this->load->view('layout/footer');
 	}
 
 	public function excluir_produto($id_produto)

@@ -138,68 +138,68 @@
 </div>
 
 <script>
-    $(document).ready(function () {
-        $('.add_novo_Servico').click(function (e) {
-            var container = $(this).closest('.row');
-            var element_copy = container.clone();
-            var botao_excluir = '<div class="btn btn-danger botao_remover" style="font-size: 14px"><i class="fas fa-trash-alt"></i> Remover</div>';
+    // $(document).ready(function () {
+    //     $('.add_novo_Servico').click(function (e) {
+    //         var container = $(this).closest('.row');
+    //         var element_copy = container.clone();
+    //         var botao_excluir = '<div class="btn btn-danger botao_remover" style="font-size: 14px"><i class="fas fa-trash-alt"></i> Remover</div>';
 
-            element_copy.find('select, input').val('');
-            element_copy.find('.select2').remove(); // Limpa o campo
-            element_copy.find('.add_novo_Servico').remove(); // Remove o botão "Adicionar Serviço"
+    //         element_copy.find('select, input').val('');
+    //         element_copy.find('.select2').remove(); // Limpa o campo
+    //         element_copy.find('.add_novo_Servico').remove(); // Remove o botão "Adicionar Serviço"
 
-            container.after(element_copy);
+    //         container.after(element_copy);
 
-            if (element_copy.find('.botao_remover').length === 0) {
-                element_copy.find('.col').append(botao_excluir);
-            }
+    //         if (element_copy.find('.botao_remover').length === 0) {
+    //             element_copy.find('.col').append(botao_excluir);
+    //         }
 
-            $('.botao_remover').click(function (e) {
-                $(this).closest('.row').remove();
-                checkRemoverButtonVisibility();
-            });
+    //         $('.botao_remover').click(function (e) {
+    //             $(this).closest('.row').remove();
+    //             checkRemoverButtonVisibility();
+    //         });
 
-            // Select picker
-            $('.servico').select2({
-                width: '100%'
-            });
+    //         // Select picker
+    //         $('.servico').select2({
+    //             width: '100%'
+    //         });
 
-            checkRemoverButtonVisibility();
+    //         checkRemoverButtonVisibility();
+    //     });
+
+    //     function checkRemoverButtonVisibility() {
+    //         if ($('.botao_remover').length > 0) {
+    //             $('.botao_remover').show();
+    //         } else {
+    //             $('.botao_remover').hide();
+    //         }
+    //     }
+    // });
+
+    var maxButtons = 9999;
+
+    $('.add_novo_Servico').click(function(e) {
+        var container = $(this).closest('.row');
+        var element_copy = container.clone();
+        var botao_excluir = '<div class="btn btn--danger botao_remover" style="font-size: 14px;"><i class="fas fa-trash-alt"></i> Remover</div>';
+
+        element_copy.find('select, input').val('');
+        element_copy.find('.select2').remove(); // Limpa o campo
+        element_copy.find('.add_novo_Servico').remove(); // Remove o botão "Adicionar Serviço"
+
+        container.after(element_copy);
+
+        if (element_copy.find('.botao_remover').length === 0) {
+            element_copy.find('.col-md-3').append(botao_excluir);
+        }
+
+        $('.botao_remover').click(function(e) {
+            $(this).closest('.row').remove();
         });
 
-        function checkRemoverButtonVisibility() {
-            if ($('.botao_remover').length > 0) {
-                $('.botao_remover').show();
-            } else {
-                $('.botao_remover').hide();
-            }
-        }
+        // Select picker
+        $('.servico').select2({
+            width: '100%'
+        });
     });
-
-    // var maxButtons = 9999;
-
-    // $('.add_novo_Servico').click(function(e) {
-    //     var container = $(this).closest('.row');
-    //     var element_copy = container.clone();
-    //     var botao_excluir = '<div class="btn btn--danger botao_remover" style="font-size: 14px;"><i class="fas fa-trash-alt"></i> Remover</div>';
-
-    //     element_copy.find('select, input').val('');
-    //     element_copy.find('.select2').remove(); // Limpa o campo
-    //     element_copy.find('.add_novo_Servico').remove(); // Remove o botão "Adicionar Serviço"
-
-    //     container.after(element_copy);
-
-    //     if (element_copy.find('.botao_remover').length === 0) {
-    //         element_copy.find('.col-md-3').append(botao_excluir);
-    //     }
-
-    //     $('.botao_remover').click(function(e) {
-    //         $(this).closest('.row').remove();
-    //     });
-
-    //     // Select picker
-    //     $('.servico').select2({
-    //         width: '100%'
-    //     });
-    // });
 </script>

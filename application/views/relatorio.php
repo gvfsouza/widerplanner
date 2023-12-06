@@ -255,7 +255,6 @@ foreach ($mesesData as $mesData) {
                 horizontal: false,
                 borderRadius: 10,
                 columnWidth: '50%',
-                distributed: true,
                 dataLabels: {
                     total: {
                         enabled: true,

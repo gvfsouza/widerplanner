@@ -306,7 +306,7 @@
                                         <?php } ?>
                                         <!----------------FIM-----MENSAGEM DE SUCESSO AO CADASTRAR ---------------->
 
-                                        <!-- mensagem de erro serviço -->
+                                        <!-- mensagem de erro -->
                                         <?php if ($this->session->flashdata('erro')) : ?>
                                             <div class="alert alert-danger">
                                                 <?php echo $this->session->flashdata('erro'); ?>

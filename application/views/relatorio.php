@@ -76,7 +76,7 @@
                     </div>
                     <!-- Card serviços oferecidos -->
                     <div class="col-xl-4 col-md-6 mb-3">
-                        <div class="card border-left-primary shadow h-100 py-2">
+                        <div class="card border-left-primary shadow h-100 py-2" style="background-color:#af45ff">
                             <div class="card-body">
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">

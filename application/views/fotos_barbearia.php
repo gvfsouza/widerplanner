@@ -1,11 +1,10 @@
 <style>
     img {
-        width: 30%;
-        border-radius: 05px;
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 15px; /* Adicionando espaço entre as imagens */
     }
 </style>
-
-<br>
 
 <div>
     <div class="container-fluid">
@@ -57,7 +56,9 @@
                                         <button type="submit" name="salvar" class="btn-lg btn" style="border: none;background-color: #82a4ef;color: white;">Salvar</button>
                                     </div>
                                 </div>
+
                                 <br><br>
+                                
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="row">
@@ -72,8 +73,10 @@
                                                     </div>
                                                 <?php endforeach; ?>
                                             <?php else : ?>
-                                                <div class="alert alert-danger" role="alert">
-                                                    Nenhuma Foto Encontrada!
+                                                <div class="col-12">
+                                                    <div class="alert alert-danger" role="alert">
+                                                        Nenhuma Foto Encontrada!
+                                                    </div>
                                                 </div>
                                             <?php endif; ?>
                                         </div>

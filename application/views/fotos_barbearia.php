@@ -4,7 +4,7 @@
         max-width: 180px;
         width: 100%;
         height: auto;
-        margin: 15px;
+        margin: 8px;
     }
 
     .product-tumb img {

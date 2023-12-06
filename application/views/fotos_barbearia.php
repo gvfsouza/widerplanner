@@ -81,9 +81,9 @@
                                             <button type="submit" name="salvar" class="btn-lg btn" style="border: none;background-color: #82a4ef;color: white;">Salvar</button>
                                         </div>
                                     </div>
-
-                                    <br><br>
                                 <?php endif; ?>
+                                
+                                <br><br>
 
                                 <div class="row">
                                     <div class="col-12">

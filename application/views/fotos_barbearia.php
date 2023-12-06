@@ -1,7 +1,7 @@
 <style>
     img {
         border-radius: 5px;
-        max-width: 180px;
+        max-width: 150px;
         width: 100%;
         height: auto;
         margin: 8px;

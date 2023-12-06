@@ -30,7 +30,7 @@ class Lista_agendamentos extends CI_Controller
 		$this->load->model('Agendamento_model');
 
 		$dados['listar_agendamentos_realizados'] = $this->Agendamento_model->listar_agendamentos_realizados();
-		$dados['listar_profissionais_agendamentos'] = $this->Agendamento_model->listar_profissionais_agendamentos();
+		$dados['listar_profissionais_agendamentos'] = $this->Agendamento_model->listar_profissionais_agendamentos($);
 		$dados['listar_servicos_agendamentos'] = $this->Agendamento_model->listar_servicos_agendamentos();
 
 		$this->load->view('layout/header');

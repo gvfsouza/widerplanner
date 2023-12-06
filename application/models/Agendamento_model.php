@@ -105,19 +105,23 @@ class Agendamento_model extends CI_Model
     }
 
     public function listar_profissionais_agendamentos()
-{
-    $this->db->select('usuario.id_usuario, usuario.nome_usuario, agenda.*');
-    $this->db->from('usuario');
-    $this->db->join('agenda', 'usuario.id_usuario = agenda.fk_profissional', 'left');
-    
-    // Mantenha a condição WHERE para filtrar profissionais
-    $this->db->where('usuario.profissional', 'sim');
+    {
+        $this->db->select('usuario.id_usuario, usuario.nome_usuario, agenda.*');
+        $this->db->from('usuario');
+        $this->db->join('agenda', 'usuario.id_usuario = agenda.fk_profissional', 'left');
 
-    $res = $this->db->get();
-    return $res->result();
-}
+        // Mantenha a condição WHERE para filtrar profissionais
+        $this->db->where('usuario.profissional', 'sim');
 
-    
+        // Adicione a condição para a correspondência do fk_usuario na tabela agenda
+        $this->db->where('agenda.fk_usuario', $this->session->userdata('id_usuario'));
+
+        // Adicione a condição para a data_agenda
+        $this->db->where('agenda.data_agenda >=', date('Y-m-d')); // Ou ajuste conforme necessário
+
+        $res = $this->db->get();
+        return $res->result();
+    }
 
     public function listar_servicos_agendamentos()
     {

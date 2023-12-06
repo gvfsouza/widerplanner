@@ -504,9 +504,9 @@
             });
         });
 
-        $(".remover_servico").click(function() {
-            var id = $(this).attr('id');
-            $('#remover' + id).modal('show');
+        $(".remover_usuario").click(function() {
+        var id = $(this).attr('id');
+        $('#remover' + id).modal('show');
         });
 
     </script>

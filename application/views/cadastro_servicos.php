@@ -69,6 +69,7 @@
                                                         <input style="font-size:14px" type="time" class="form-control" id="duracao_servico" name="duracao_servico" value="">
                                                     </div>
                                                     <div class="form-group col-md-6">
+                                                        <label for=""><b>Valor:</b></label>
                                                         <div class="input-group" style="margin-top: 30px;">
                                                             <div class="input-group-prepend">
                                                                 <span class="input-group-text">$</span>

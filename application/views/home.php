@@ -316,10 +316,10 @@
         
                                                         <?php if ($this->session->fk_usuario != '' && $this->session->profissional == 'sim'): ?>
                                                             <form method="POST" action="<?php echo base_url('home/excluir_servico/' . $value->id_servicos); ?>">
-                                                            <!-- <a title="Excluir Serviço" class="nav-link" href="#" data-toggle="modal" data-target="#confirmacaoModalServico" data-id="<?php echo $value->id_servicos; ?>"> -->
-                                                                <!-- <span class="btn btn-danger" style="font-size: 11px; float: right">Excluir</span> -->
+                                                            <a title="Excluir Serviço" class="nav-link" href="#" data-toggle="modal" data-target="#confirmacaoModalServico" data-id="<?php echo $value->id_servicos; ?>">
+                                                                <span class="btn btn-danger" style="font-size: 11px; float: right">Excluir</span>
                                                                 <span style="width: 45px; margin: 1px;" title="Remover" id="<?= $value->id ?>" class="btn btn-sm btn-danger remover_usuario"><i class="fas fa-trash-alt"></i></span>
-                                                            <!-- </a> -->
+                                                            </a>
 
 
                                                                 <!-- <button type="submit" class="btn btn-danger excluir-item" data-toggle="modal" data-target="#confirmacaoModalServico" data-id="<?php echo $value->id_servicos; ?>" style="font-size: 11px; float: right">Excluir</button> -->

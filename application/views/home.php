@@ -437,25 +437,25 @@
     </div>
 
     <!-- Modal de Confirmação para Excluir Serviço -->
-    <div class="modal fade" id="confirmacaoModalServico" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelServico" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabelServico">Confirmação de Exclusão</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    Tem certeza que deseja excluir este serviço?
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                    <a id="confirmarExclusaoServico" href="#" class="btn btn-danger">Confirmar Exclusão</a>
-                </div>
+<div class="modal fade" id="confirmacaoModalServico" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelServico" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabelServico">Confirmação de Exclusão</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Tem certeza que deseja excluir este serviço?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <a id="confirmarExclusaoServico" href="#" class="btn btn-danger">Confirmar Exclusão</a>
             </div>
         </div>
     </div>
+</div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -484,13 +484,13 @@
         });
 
         $(document).ready(function () {
-        $('.excluir-servico').on('click', function () {
+        $('.nav-link').on('click', function () {
             var id = $(this).data('id');
-            $('#confirmarExclusaoServico').data('url', '<?php echo base_url('home/excluir_servico/'); ?>' + id);
+            $('#confirmarExclusaoServico').attr('href', '<?php echo base_url('home/excluir_servico/'); ?>' + id);
         });
 
-        $('#btnConfirmarExclusaoServico').on('click', function () {
-            var url = $('#confirmarExclusaoServico').data('url');
+        $('#confirmarExclusaoServico').on('click', function () {
+            var url = $(this).attr('href');
             window.location.href = url;
         });
     });

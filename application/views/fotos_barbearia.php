@@ -1,13 +1,12 @@
-<!-- <style>
+<style>
     img {
-        left:20%;
-        width: 65%;
+        max-width: 100%;
+        height: auto;
         border-radius: 15px;
-        height: 100%;
+        display: block;
+        margin: 0 auto;
     }
-</style> -->
-
-<br>
+</style>
 
 <div>
     <div class="container-fluid">
@@ -59,39 +58,39 @@
                                         <button type="submit" name="salvar" class="btn-lg btn" style="border: none;background-color: #82a4ef;color: white;">Salvar</button>
                                     </div>
                                 </div>
+
                                 <br><br>
+
                                 <div class="row">
-                                    <div class="col-12">
-                                        <div class="row">
-                                            <?php if (!empty($listar_fotos)) : ?>
-                                                <?php foreach ($listar_fotos as $value) : ?>
-                                                    <div class="col-md-4">
-                                                        <?php if (!empty($value->fotos_lugar)) : ?>
-                                                            <div>
-                                                                <center><img id='base64image' src='data:image/jpeg;base64,<?php echo base64_encode($value->fotos_lugar); ?>' /></center>
-                                                            </div>
-                                                        <?php endif; ?>
+                                    <?php if (!empty($listar_fotos)) : ?>
+                                        <?php foreach ($listar_fotos as $value) : ?>
+                                            <div class="col-md-4 mb-3">
+                                                <?php if (!empty($value->fotos_lugar)) : ?>
+                                                    <div>
+                                                        <center>
+                                                            <img class='img-fluid' src='data:image/jpeg;base64,<?php echo base64_encode($value->fotos_lugar); ?>' alt='Barbearia Photo'>
+                                                        </center>
                                                     </div>
-                                                <?php endforeach; ?>
-                                            <?php else : ?>
-                                                <div class="alert alert-danger" role="alert">
-                                                    Nenhuma Foto Encontrada!
-                                                </div>
-                                            <?php endif; ?>
+                                                <?php endif; ?>
+                                            </div>
+                                        <?php endforeach; ?>
+                                    <?php else : ?>
+                                        <div class="col-12">
+                                            <div class="alert alert-danger" role="alert">
+                                                Nenhuma Foto Encontrada!
+                                            </div>
                                         </div>
-                                    </div>
+                                    <?php endif; ?>
                                 </div>
                             </form>
                         </div>
-
                     </div>
+
                     <br><br>
+
                     <div class="col-12 text-center">
-                        <span style="text-align: center">Sistema desenvolvido para cunho estudantil <br>
-                            Projeto de Conclusão de Curso - Superior de Tecnologia em Análise e Deselvolvimento de Sistemas
-                        <br>
-                            Centro Universitário Nossa Senhora do Patrocínio <br>
-                            Endereço: R. José Weissohn, 153 - Centro, Salto - SP, 13328-300</span>
+                        <span style="text-align: center">Sistema desenvolvido para cunho estudantil <br> Projeto de Conclusão de Curso - Superior de Tecnologia em Análise e Deselvolvimento de Sistemas <br> Centro Universitário Nossa Senhora do Patrocínio <br> Endereço: R. José Weissohn, 153 - Centro, Salto - SP, 13328-300
+                        </span>
                     </div>
                     <br>
                 </div>

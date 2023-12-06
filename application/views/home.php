@@ -442,7 +442,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <p>Tem certeza que deseja excluir este serviço?</p>
+                Tem certeza que deseja excluir este serviço?
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
@@ -463,7 +463,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <p>Tem certeza que deseja excluir este produto?</p>
+                Tem certeza que deseja excluir este produto?
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
@@ -472,7 +472,6 @@
         </div>
     </div>
 </div>
-
 
 
 <script>

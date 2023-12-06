@@ -137,13 +137,12 @@
     </div>
 </div>
 
-
 <script>
     $(document).ready(function () {
         $('.add_novo_Servico').click(function (e) {
             var container = $(this).closest('.row');
             var element_copy = container.clone();
-            var botao_excluir = '<div class="btn btn-danger botao_remover" style="font-size: 14px;"><i class="fas fa-trash-alt"></i> Remover</div>';
+            var botao_excluir = '<div class="btn btn-danger botao_remover" style="font-size: 14px"><i class="fas fa-trash-alt"></i> Remover</div>';
 
             element_copy.find('select, input').val('');
             element_copy.find('.select2').remove(); // Limpa o campo
@@ -152,7 +151,7 @@
             container.after(element_copy);
 
             if (element_copy.find('.botao_remover').length === 0) {
-                element_copy.find('.col-md-3').append(botao_excluir);
+                element_copy.find('.col').append(botao_excluir);
             }
 
             $('.botao_remover').click(function (e) {

@@ -7,4 +7,4 @@ Os resultados obtidos permitem mostrar um sistema Web capaz de otimizar a intera
 
 A motivação partiu de uma pesquisa sobre como os empreendedores de barbearia, se comunicavam com seus clientes. É certo que a procura por profissionais que atuam nessa área é grande, porém, a forma de comunicação ainda é antiquada e pouco prática.
 
->> **Concluído** <<
+ >> **Concluído** <<
